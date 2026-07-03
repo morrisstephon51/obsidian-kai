@@ -1,0 +1,23 @@
+{
+  "id": "conv-1781145088472-qrd732gof",
+  "providerId": "claude",
+  "title": "Create me.md with Obsidian file linking",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781145088615,
+  "updatedAt": 1782958887159,
+  "lastResponseAt": 1782956417941,
+  "sessionId": "66dab606-67c2-4fe3-ac5d-0dce9f3af2c8",
+  "providerState": {
+    "providerSessionId": "66dab606-67c2-4fe3-ac5d-0dce9f3af2c8"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 8,
+    "cacheCreationInputTokens": 508,
+    "cacheReadInputTokens": 136107,
+    "contextWindow": 200000,
+    "contextTokens": 136623,
+    "percentage": 68,
+    "contextWindowIsAuthoritative": true
+  }
+}
