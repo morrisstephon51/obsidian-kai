@@ -10,6 +10,7 @@
 
 ⚡ **Quick Access to Active Work:**
 
+- [[09-SYSTEM/Command Center|🎛️ Command Center]] — All live sites, repos, agents & 233 subagents in one hub
 - [[_ops/master-tracker|📊 Master Tracker]] — Today's focus and active projects
 - [[_ops/daily-template|📝 Daily Template]] — Daily check-in template (copy daily)
 - [[_ops/grant-research-log|🔍 Grant Research Log]] — Funding opportunities tracker
@@ -20,13 +21,14 @@
 
 ## 🔗 Critical External Links
 
-**Your important URLs (always accessible):**
+**Your important URLs (always accessible) — full detail in [[09-SYSTEM/Command Center|Command Center]]:**
 
 | Resource | Link | Check Status |
 |---|---|---|
 | **Link-in-Bio** | https://morrisstephon51.github.io/Link-inbio/ | [[_ops/link-health-checker|Status]] |
 | **Command Center** | https://morrisstephon51.github.io/Link-inbio/dashboard.html | [[_ops/link-health-checker|Status]] |
 | **Living Resume** | https://morrisstephon51.github.io/Link-inbio/dashboard.html | [[_ops/link-health-checker|Status]] |
+| **MUNDI Agent Dashboard** | https://agent-world-olive.vercel.app | [[_ops/link-health-checker|Status]] |
 
 ---
 
@@ -75,6 +77,7 @@
 | [[Projects/The Plug AI/\|Projects]] | Active work with a deadline or goal |
 | [[Areas/\|Areas]] | Ongoing responsibilities (Dev, Finance) |
 | [[Resources/\|Resources]] | Reference material, prompts, brand assets |
+| [[07-AI/MUNDI System Reference\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
 | [[Archive/\|Archive]] | Completed or inactive material |
 | [[Daily Notes/\|Daily Notes]] | Day-by-day notes and reflections |
 | [[Attachments/\|Attachments]] | Images, PDFs, and other files |
@@ -166,4 +169,4 @@ Open any note → Follow connections → Discover relationships
 
 ---
 
-*Last updated: 2026-06-13*
+*Last updated: 2026-07-04*
