@@ -45,9 +45,9 @@ last-checked: 2026-07-04
   - Repo: `Stefan-Portfolio`
   - Status: 🟢 Live
 - **MUNDI Agent Dashboard**
-  - URL: `https://agent-world-olive.vercel.app` — **corrected 2026-07-04:** this IS publicly deployed on Vercel, not local-only as previously noted. Local dev still at `~/Desktop/agent-dashboard`, `./start.sh` for a tunnel
-  - Repo: `mundi-agent-dashboard` (private)
-  - Status: 🟢 Live
+  - Public URL: `https://agent-world-olive.vercel.app` — **is publicly deployed**, but ⚠️ **serves a stale build** from archived repo `studious-umbrella`, not the current `mundi-agent-dashboard` Next.js app. Reconnect the Vercel project's Git source to get today's Links panel live — not done yet, needs Stefan's go-ahead since it changes what a live public URL serves
+  - Current code: repo `mundi-agent-dashboard` (private), local dev at `~/Desktop/agent-dashboard` (`npm run dev` or `./start.sh` for a tunnel)
+  - Status: 🟡 Public URL live, but out of date
 
 ---
 
