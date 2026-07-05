@@ -3,12 +3,12 @@ agent: perplexity-agent
 display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
-status: not-provisioned
-last_run: null
-current_task: null
-runs_completed: 0
-items_processed: 0
-last_error: null
+status: "running"
+last_run: "2026-07-04T23:42:36.945Z"
+current_task: "Check for AI literacy grant deadlines in Cook County this week"
+runs_completed: 4
+items_processed: 4
+last_error: "Command failed: node /Users/abdoulayemundow/clawd/.bus/busctl.js post --from perplexity-agent --topic loop-start --msg Loop starting: Check for AI literacy grant deadlines in Cook County this week /Users/abdoulayemundow/clawd/.bus/busctl.js:35 db.exec('PRAGMA journal_mode = WAL;'); ^ Error: database…"
 color: "#20808D"
 house: "providers"
 ---

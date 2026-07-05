@@ -4,10 +4,10 @@ display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
 status: running
-last_run: "2026-06-21T16:35:00Z"
-current_task: "Routing bus messages to 7 agents"
-runs_completed: 52
-items_processed: 347
+last_run: "2026-07-04T23:45:00Z"
+current_task: "Routed 12 bus messages; flagged gemini-agent 429 quota errors (persistent); codex filed 3 issues on Enrollment_Funnel_Agent; content-pipeline LinkedIn post ready"
+runs_completed: 54
+items_processed: 377
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-06-21T16:29:00Z"
-current_task: "Generating faith-community content batch"
-runs_completed: 31
-items_processed: 156
+status: idle
+last_run: "2026-07-04T13:00:00Z"
+current_task: "Generated LinkedIn post — church as trusted resource navigator, digital equity justice angle for faith-community audience"
+runs_completed: 34
+items_processed: 159
 last_error: null
 color: "#9B59B6"
 house: "studio"

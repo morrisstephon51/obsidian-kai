@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-06-21T16:31:00Z"
-current_task: "Scanning context for active priorities"
-runs_completed: 18
-items_processed: 74
+status: idle
+last_run: "2026-07-04T23:59:00Z"
+current_task: "Scanned context files and summarized active priorities"
+runs_completed: 20
+items_processed: 80
 last_error: null
 color: "#F4B942"
 house: "launchpad"

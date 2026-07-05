@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-06-21T16:33:00Z"
-current_task: "Reviewing Enrollment_Funnel_Agent repo"
-runs_completed: 24
-items_processed: 91
+status: idle
+last_run: "2026-07-05T03:48:00Z"
+current_task: "Fixed Enrollment_Funnel_Agent issues #2 and #3 — lazy Supabase init + env-var model ID"
+runs_completed: 27
+items_processed: 97
 last_error: null
 color: "#00FF88"
 house: "dev-lab"

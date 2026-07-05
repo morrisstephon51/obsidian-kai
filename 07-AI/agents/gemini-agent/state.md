@@ -3,12 +3,12 @@ agent: gemini-agent
 display_name: "Gemini"
 emoji: "♊"
 role: "Long-Context / Multimodal Research Assistant"
-status: not-provisioned
-last_run: null
+status: "running"
+last_run: "2026-07-05T03:45:46.175Z"
 current_task: null
 runs_completed: 0
 items_processed: 0
-last_error: null
+last_error: "Gemini API error 429: { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. …"
 color: "#4285F4"
 house: "providers"
 ---
