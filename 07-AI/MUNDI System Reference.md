@@ -31,14 +31,14 @@ Full reference for the agent fleet, infrastructure, and websites built/audited/f
 | `codex` | running | `bash ~/Desktop/run-agents.sh` | Per-task coding agent, fires `claude -p` |
 | `antigravity` | running | `bash ~/Desktop/run-agents.sh` | Per-task general agent |
 | `content-pipeline` | running | `bash ~/Desktop/run-agents.sh` | Real logic lives in `psychic-bassoon/content-engine/server/agents/quality/` |
-| `gemini-agent` | not-provisioned | `node ~/clawd/agents/gemini-agent/run.js "<task>"` | Needs `GEMINI_API_KEY` in `~/clawd/.env` — get one free at aistudio.google.com/apikey |
-| `perplexity-agent` | not-provisioned | `node ~/clawd/agents/perplexity-agent/run.js "<task>"` | Needs `PERPLEXITY_API_KEY` in `~/clawd/.env` — perplexity.ai/settings/api (requires billing) |
+| `gemini-agent` | keyed but blocked | `node ~/clawd/agents/gemini-agent/run.js "<task>"` | Key is set, but every call gets HTTP 429 with `limit: 0` on all free-tier quota metrics — confirmed via direct API test, the underlying Google Cloud project has zero free-tier quota. Needs a billing decision in Google Cloud Console, not new code |
+| `perplexity-agent` | running | `node ~/clawd/agents/perplexity-agent/run.js "<task>"` | Fixed and verified 2026-07-04 — see Known Issues Fixed below |
 | `tools` | archived | — | No implementation exists anywhere |
 | `job-scanner` | archived | — | Real code exists but dormant/unwired: [job_opportunity_scanner](https://github.com/morrisstephon51/job_opportunity_scanner) |
 | `community-intake` | archived | — | Real code exists but dormant/unwired: [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) |
 | `enrollment-funnel` | archived | — | Real code exists but dormant/unwired: [Enrollment_Funnel_Agent](https://github.com/morrisstephon51/Enrollment_Funnel_Agent) — Track 2 (BigHeart) |
 
-**Fleet scheduling:** a `launchd` job (`~/Library/LaunchAgents/ai.mundi.fleet.plist`, fires `run-agents.sh` every 4h) exists but is currently blocked on a macOS Full Disk Access grant. Until that's resolved, run the fleet manually: `bash ~/Desktop/run-agents.sh`.
+**Fleet scheduling:** resolved 2026-07-04 — Stefan granted Full Disk Access to `/bin/bash`, and the `launchd` job (`~/Library/LaunchAgents/ai.mundi.fleet.plist`) now fires `run-agents.sh` every 4h successfully (`launchctl list | grep mundi` shows last exit code 0). Manual run still available: `bash ~/Desktop/run-agents.sh`.
 
 ---
 
@@ -93,3 +93,9 @@ Full categorized roster already documented at [[07-AI/agency-agents|Agency Agent
 - **`busctl.js` `KNOWN_AGENTS` gate:** hardcoded to 4 names, silently rejecting `content-pipeline` and any new agent's bus calls. Fixed to include all real personas.
 - **YAML-corruption + shell-injection bugs** in the new `gemini-agent`/`perplexity-agent`/router scripts — found via deliberate testing, fixed, re-verified.
 - **"Zero implementation" claim for job-scanner/community-intake/enrollment-funnel was wrong** — real code exists in GitHub repos that were never cloned locally. Corrected in each persona's state.md.
+
+## Known Issues Fixed (2026-07-04)
+
+- **`busctl.js` SQLite lock contention:** `DatabaseSync` had no busy-timeout, so concurrent writers (e.g. multiple agents posting around the same moment via the launchd fleet job) could collide — one gets an immediate `database is locked` error instead of waiting. This is what broke perplexity-agent's first real run. Root-caused by reproducing it on demand (8 concurrent writers → 3 failures at the exact file/line perplexity-agent's error pointed to), fixed with `PRAGMA journal_mode = WAL` + `PRAGMA busy_timeout = 5000` in `openDb()`, verified with a 20-concurrent-writer stress test (zero failures, `PRAGMA integrity_check` clean). Then re-ran perplexity-agent's actual queued task for real — completed end-to-end.
+- **Gemini's 429 root-caused, not fixed (external):** direct API test shows `limit: 0` on every free-tier quota metric — the Google Cloud project behind the key has zero free-tier quota allocated, not a "too many requests" rate limit. This needs Stefan to enable billing on that project or issue a fresh key from a project that gets real free-tier quota — not a code fix.
+- **`~/clawd` git-initialized:** the whole workspace had never been committed. Initialized and committed locally (root commit `f6ecd09`) — `.env`, `bus.sqlite` (mutable runtime state), and `router/dashboard.log` are gitignored; not yet pushed to a remote.

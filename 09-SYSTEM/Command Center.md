@@ -2,7 +2,7 @@
 type: hub
 category: command-center
 created: 2026-07-04
-last-updated: 2026-07-04
+last-updated: 2026-07-05
 ---
 
 # 🎛️ Command Center
@@ -10,6 +10,16 @@ last-updated: 2026-07-04
 **Single hub for every live site, repo, agent, and subagent across Stefan's systems.** This is the source of truth — the [public dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) and the [[project-agent-world|MUNDI Agent Dashboard]] both mirror what's here; update this page first, then propagate.
 
 ← [[05-MAPS/00 Home|Home]]
+
+---
+
+## 🐾 Active Projects
+
+| Project | Track | Stage | Notes |
+|---|---|---|---|
+| **The Plug AI** | Track 1 | Live, in development | See [[02-PROJECTS/The Plug AI/project-overview\|project overview]]. Repo `psychic-bassoon` |
+| **BigHeart / Puppy Power** | Day job / Track 2 funding bridge | Active campaign | Docs at `~/clawd/puppy-power/` |
+| **Forming Paws** | Track 2 | Phase 0+1 spec approved 2026-07-05, Phase 2 plan next | Health-first nonprofit dog-breeding matchmaking platform, $0 capital, Chicago IL launch. Repo `~/forming-paws` (local, not yet pushed to GitHub). Spec: `docs/superpowers/specs/2026-07-04-forming-paws-foundation-design.md` |
 
 ---
 
@@ -68,12 +78,15 @@ Full detail: [[07-AI/MUNDI System Reference|MUNDI System Reference]] · [[projec
 | **codex** | 🟢 running | Per-task coding agent, ad hoc `claude -p` via `run-agents.sh` |
 | **antigravity** | 🟢 running | Per-task general agent, same invocation pattern as codex |
 | **content-pipeline** | 🟢 running | Real work lives in `psychic-bassoon/content-engine` |
-| **gemini-agent** | 🟡 not-provisioned | Code ready at `~/clawd/agents/gemini-agent/run.js`. Needs `GEMINI_API_KEY` from aistudio.google.com/apikey (free tier) |
-| **perplexity-agent** | 🟡 not-provisioned | Code ready at `~/clawd/agents/perplexity-agent/run.js`. Needs `PERPLEXITY_API_KEY` from perplexity.ai/settings/api (paid) |
+| **gemini-agent** | 🔴 keyed but blocked | Key is provisioned, but every real call gets HTTP 429 with `limit: 0` on all free-tier quota metrics — the Google Cloud project behind the key has zero free-tier quota allocated. Needs a billing decision in Google Cloud Console, not a code fix |
+| **perplexity-agent** | 🟢 running | Keyed and working — fixed 2026-07-04 (see below) |
 | **MUNDI Router** | 🟢 built 2026-07-03 | `~/clawd/router/` — classifies tasks, routes to cheapest qualified agent among the above + chatgpt/groq/llama (those 3 are `not_provisioned` placeholders). Cooldown/probation failure-recovery state machine |
 
 ### Archived personas (audited 2026-07-03, zero real implementation)
 `tools`, `job-scanner`, `community-intake`, `enrollment-funnel` — state files remain at `~/Desktop/kai/07-AI/agents/` marked `status: archived` for the record.
+
+### Fixed 2026-07-04: shared bus lock contention
+`busctl.js`'s SQLite connection had no busy-timeout, so concurrent writes from multiple agents (e.g. the launchd fleet job firing several at once) could collide with a `database is locked` error — this is what broke perplexity-agent's first real run. Fixed with `PRAGMA journal_mode = WAL` + `PRAGMA busy_timeout = 5000`; verified with a 20-concurrent-writer stress test (zero failures, DB integrity clean).
 
 ---
 
@@ -113,7 +126,7 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]]
 
 **Update cadence:** review after every agent-fleet audit, new deployment, or repo archive/creation — this page, the [[07-AI/Subagent Registry|Subagent Registry]], `_ops/important-links.md`, the public `dashboard.html`, and the MUNDI dashboard links panel should all move together.
 
-**Automation status:** local scheduling (launchd, `ai.mundi.fleet.plist`) is blocked on a macOS Full Disk Access grant — see [[project-agent-world]] for detail. Once granted, the periodic fleet-state refresh will also be the trigger point for refreshing this page's status table. Until then, treat this as manually maintained — ask Claude Code to re-run the audit + refresh whenever something changes.
+**Automation status:** resolved 2026-07-04 — Stefan granted Full Disk Access to `/bin/bash`, and the `ai.mundi.fleet.plist` launchd job now fires `run-agents.sh` every 4 hours successfully (`launchctl list` shows last exit code 0). This page is still manually maintained, not auto-refreshed — ask Claude Code to re-run the audit whenever something changes.
 
 ---
 
@@ -124,6 +137,7 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]]
 - [[project-agent-world]]
 - [[reference-agent-system]]
 - [[09-SYSTEM/domains-and-email|Domains & Email]]
+- [[02-PROJECTS/Forming Paws/project-overview|Forming Paws]]
 - [[05-MAPS/00 Home|Home]]
 
-*Last updated: 2026-07-04*
+*Last updated: 2026-07-05*
