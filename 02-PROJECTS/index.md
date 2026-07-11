@@ -50,4 +50,4 @@ Weekly Reviews (patterns)
   ↓
 Back to Vision (refinement)
 
-See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for full architecture and [[../Areas/index|Areas index]] for area hubs.
+See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for full architecture.

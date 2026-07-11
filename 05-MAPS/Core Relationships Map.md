@@ -38,11 +38,11 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 - Updated quarterly
 
 **[[../Areas/Personal Growth/index|Personal Growth]]**
-- [[../Areas/Personal Growth/Core Values|Core Values]] ← START HERE
-- [[../Areas/Personal Growth/Life Vision|Life Vision]] ← North Star
-- [[../Areas/Personal Growth/Strengths|Strengths]] ← Your assets
-- [[../Areas/Personal Growth/Weaknesses|Weaknesses]] ← Areas to watch
-- [[../Areas/Personal Growth/Motivations|Motivations]] ← What drives you
+- [[../02-PROJECTS/Personal Growth/Core Values|Core Values]] ← START HERE
+- [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] ← North Star
+- [[../02-PROJECTS/Personal Growth/Strengths|Strengths]] ← Your assets
+- [[../02-PROJECTS/Personal Growth/Weaknesses|Weaknesses]] ← Areas to watch
+- [[../02-PROJECTS/Personal Growth/Motivations|Motivations]] ← What drives you
 
 ---
 
@@ -50,9 +50,9 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 **[[../Areas/Career/index|Career]]** ← Enabled by values + education
 - Goal: [[../02-PROJECTS/Career/Career Goals|Career Goals]]
-- Support: [[../Areas/Development/Skills|Skill development]]
+- Support: [[../02-PROJECTS/Development/Skills|Skill development]]
 - Measured by: [[../02-PROJECTS/The Plug AI Progress|Projects]]
-- Financial impact: [[../Areas/Finance/Financial Goals|Financial goals]]
+- Financial impact: [[../02-PROJECTS/Finance/Financial Goals|Financial goals]]
 
 **[[../Areas/Finance/index|Finance]]** ← Enabled by career + education
 - Goal: [[../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
@@ -86,9 +86,9 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 ## 💡 Opportunities Layer
 
 **[[../Opportunities/index|Opportunities Hub]]**
-- Evaluated against: [[../Areas/Personal Growth/Core Values|Core Values]]
+- Evaluated against: [[../02-PROJECTS/Personal Growth/Core Values|Core Values]]
 - Aligned with: [[../02-PROJECTS/Career/Career Goals|Career Goals]] + [[../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
-- Leverages: [[../Areas/Personal Growth/Strengths|Strengths]]
+- Leverages: [[../02-PROJECTS/Personal Growth/Strengths|Strengths]]
 
 ---
 
@@ -141,7 +141,7 @@ Back to Daily Work (updated)
 
 ### **Pattern A: Top-Down** (Planning)
 1. Start at [[../03-NOTES/Identity/me|Personal Profile]]
-2. Review [[../Areas/Personal Growth/Core Values|Core Values]] + [[../Areas/Personal Growth/Life Vision|Life Vision]]
+2. Review [[../02-PROJECTS/Personal Growth/Core Values|Core Values]] + [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]]
 3. Check progress on [[../02-PROJECTS/Career/Career Goals|Career]], [[../02-PROJECTS/Finance/Financial Goals|Finance]], [[../02-PROJECTS/Education/Education Goals|Education]]
 4. Look at [[../02-PROJECTS/The Plug AI Progress|Projects]] advancing goals
 5. Decide [[../_ops/daily-template|daily actions]]
@@ -151,7 +151,7 @@ Back to Daily Work (updated)
 2. Execute [[../02-PROJECTS/The Plug AI Progress|project work]]
 3. Reflect in [[../_ops/daily-template|daily notes]]
 4. Aggregate in [[../01-DAILY/Weekly Reviews/index|weekly reviews]]
-5. Bubble up insights to update [[../Areas/Personal Growth/Life Vision|Life Vision]]
+5. Bubble up insights to update [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]]
 
 ### **Pattern C: Network** (Discovery)
 1. Open any note
@@ -174,8 +174,8 @@ Back to Daily Work (updated)
 ## 📍 Hot Spots (Most Connected)
 
 **Most central nodes:**
-1. **[[../Areas/Personal Growth/Core Values|Core Values]]** ← Everything flows from here
-2. **[[../Areas/Personal Growth/Life Vision|Life Vision]]** ← Guiding star
+1. **[[../02-PROJECTS/Personal Growth/Core Values|Core Values]]** ← Everything flows from here
+2. **[[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]]** ← Guiding star
 3. **[[../02-PROJECTS/Career/Career Goals|Career Goals]]** ← Enables multiple downstream goals
 4. **[[../02-PROJECTS/Finance/Financial Goals|Financial Goals]]** ← Critical for independence
 5. **[[../01-DAILY/Weekly Reviews/index|Weekly Reviews]]** ← Aggregates all insights
@@ -185,7 +185,7 @@ Back to Daily Work (updated)
 ## 🔍 Search This Map
 
 **Looking for connections between:**
-- Values & Goals? → Check [[../Areas/Personal Growth/Life Vision|Life Vision]]
+- Values & Goals? → Check [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]]
 - Goals & Projects? → Check [[../01-DAILY/Progress Dashboard|Progress Dashboard]]
 - Daily work & Goals? → Check [[../01-DAILY/Weekly Reviews/index|Weekly Reviews]]
 - Skills & Opportunities? → Check [[../Opportunities/index|Opportunities]]

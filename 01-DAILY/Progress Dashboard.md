@@ -16,26 +16,26 @@ created: 2026-06-13
 
 | Area | Status | Progress | Next Milestone | Last Review |
 |---|---|---|---|---|
-| **[[../../Areas/Career/index|Career]]** | 🟡 | Foundation building | Define target role | 2026-07-11 |
-| **[[../../Areas/Finance/index|Finance]]** | 🟡 | Foundation building | Set independence number | 2026-07-11 |
-| **[[../../Areas/Education/index|Education]]** | 🟢 | Foundation building | Set graduation target | 2026-07-11 |
-| **[[../../Areas/Personal Growth/index|Personal Growth]]** | 🟢 | Self-knowledge system active | Refine from weekly insights | 2026-07-11 |
-| **[[../../Areas/Development/index|Development]]** | 🟡 | Foundation building | Choose primary skill | 2026-07-11 |
+| **[[../Areas/Career/index|Career]]** | 🟡 | Foundation building | Define target role | 2026-07-11 |
+| **[[../Areas/Finance/index|Finance]]** | 🟡 | Foundation building | Set independence number | 2026-07-11 |
+| **[[../Areas/Education/index|Education]]** | 🟢 | Foundation building | Set graduation target | 2026-07-11 |
+| **[[../Areas/Personal Growth/index|Personal Growth]]** | 🟢 | Self-knowledge system active | Refine from weekly insights | 2026-07-11 |
+| **[[../Areas/Development/index|Development]]** | 🟡 | Foundation building | Choose primary skill | 2026-07-11 |
 
 ---
 
 ## 🎯 Goal Status
 
 ### Career
-- **Goal:** [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
+- **Goal:** [[../02-PROJECTS/Career/Career Goals|Career Goals]]
 - **Current focus:** [What you're working on]
 - **Progress:** [Specific metrics]
-- **Projects supporting:** [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]], [Other projects]
+- **Projects supporting:** [[../02-PROJECTS/The Plug AI Progress|The Plug AI]], [Other projects]
 - **Blockers:** [If any]
 - **Next step:** [What's next]
 
 ### Finance
-- **Goal:** [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
+- **Goal:** [[../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
 - **Current focus:** [Income, savings, or independence work]
 - **Progress:** [Specific metrics]
 - **Timeline:** [On track / At risk / Behind]
@@ -43,7 +43,7 @@ created: 2026-06-13
 - **Next step:** [What's next]
 
 ### Education
-- **Goal:** [[../../02-PROJECTS/Education/Education Goals|Education Goals]]
+- **Goal:** [[../02-PROJECTS/Education/Education Goals|Education Goals]]
 - **Current focus:** [Degree progress or learning]
 - **Progress:** [Completion %, timeline]
 - **Timeline:** [On track / At risk / Behind]
@@ -51,13 +51,13 @@ created: 2026-06-13
 - **Next step:** [What's next]
 
 ### Personal Growth
-- **Focus areas:** [[../../02-PROJECTS/Personal Growth/Core Values|Values]], [[../../02-PROJECTS/Personal Growth/Strengths|Strengths]], [[../../02-PROJECTS/Personal Growth/Life Vision|Vision]]
+- **Focus areas:** [[../02-PROJECTS/Personal Growth/Core Values|Values]], [[../02-PROJECTS/Personal Growth/Strengths|Strengths]], [[../02-PROJECTS/Personal Growth/Life Vision|Vision]]
 - **Current work:** [Self-understanding, pattern recognition]
 - **Progress:** [Insights, clarity, evolution]
 - **Key insights:** [What you've learned about yourself]
 
 ### Development
-- **Focus skill:** [[../../02-PROJECTS/Development/Skills|[Skill being developed]]]
+- **Focus skill:** [[../02-PROJECTS/Development/Skills|[Skill being developed]]]
 - **Current progress:** [Learning phase]
 - **Practice:** [How often, what projects]
 - **Milestone:** [Target proficiency level]
@@ -68,7 +68,7 @@ created: 2026-06-13
 
 | Project | Goal | Status | Progress | Next |
 |---|---|---|---|---|
-| [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]] | [[../../02-PROJECTS/Career/Career Goals|Career]] + [[../../02-PROJECTS/Finance/Financial Goals|Finance]] | 🟡 | Foundation | Fill in specifics |
+| [[../02-PROJECTS/The Plug AI Progress|The Plug AI]] | [[../02-PROJECTS/Career/Career Goals|Career]] + [[../02-PROJECTS/Finance/Financial Goals|Finance]] | 🟡 | Foundation | Fill in specifics |
 
 ---
 
@@ -112,9 +112,9 @@ created: 2026-06-13
 ## 🔗 See Also
 
 - [[Weekly Reviews/index|Weekly Reviews]] — Aggregate insights
-- [[../../_ops/master-tracker|Master Tracker]] — Daily focus
-- [[../../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] — North star
-- [[../../03-NOTES/Identity/me|Personal Profile]] — Full context
+- [[../_ops/master-tracker|Master Tracker]] — Daily focus
+- [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] — North star
+- [[../03-NOTES/Identity/me|Personal Profile]] — Full context
 
 ---
 
