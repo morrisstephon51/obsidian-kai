@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-10T12:00:00Z"
-current_task: "Generated LinkedIn post — faith communities already own the most powerful distribution network in their zip code; The Plug AI goes where the trust already is; workshops in churches not conference rooms"
-runs_completed: 54
-items_processed: 179
+status: idle
+last_run: "2026-07-11T00:00:00Z"
+current_task: "Generated LinkedIn post — first generation students in every congregation; AI tools are free but nobody told them; The Plug AI closes the gap by bringing workshops where the trust already lives"
+runs_completed: 55
+items_processed: 180
 last_error: null
 color: "#9B59B6"
 house: "studio"
