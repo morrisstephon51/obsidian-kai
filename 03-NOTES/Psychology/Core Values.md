@@ -21,3 +21,4 @@ Related:
 - [[Motivations]]
 - [[Communication Style]]
 - [[Success Definition]]
+- [[../../02-PROJECTS/Personal Growth/Core Values|Core Values (Active Area)]]

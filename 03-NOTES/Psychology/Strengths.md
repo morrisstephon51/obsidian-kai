@@ -23,3 +23,4 @@ Related:
 - [[Skills]]
 - [[Work Experience]]
 - [[Knowledge Areas]]
+- [[../../02-PROJECTS/Personal Growth/Strengths|Strengths (Active Project)]]
