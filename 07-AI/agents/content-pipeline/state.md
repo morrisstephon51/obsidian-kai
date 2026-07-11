@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-11T00:00:00Z"
 current_task: "Generated LinkedIn post — woman at food pantry paying $40/wk at print shop not knowing ChatGPT was free; one workshop changed that; The Plug AI brings AI where trust already lives"
 runs_completed: 56

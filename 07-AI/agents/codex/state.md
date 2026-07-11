@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-11T13:34:00Z"
 current_task: "Scanned all repos — 1 open issue (skills-introduction-to-git#1: GitHub Skills tutorial, not a real bug). 6 PRs still open: ai-video-reel-generator#4 (Vercel CI green, merge-ready), aeos#1, content-machine#3/#4/#5/#10 — all await Stef review."
 runs_completed: 50
