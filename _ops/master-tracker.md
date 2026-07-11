@@ -38,21 +38,30 @@ Central hub for tracking all active work, projects, and progress.
 
 ---
 
-## How This Connects
+## How This Tracker Serves Everything
 
 ```
-Life Vision & Career Goals (guides)
+Life Vision & Values (foundation)
   ↓
-Master Tracker (today's focus)
+Goals ([[../02-PROJECTS/Career/Career Goals|Career]], [[../02-PROJECTS/Finance/Financial Goals|Finance]], etc.)
   ↓
-Daily Template (daily work)
+Projects ([[../02-PROJECTS/The Plug AI Progress|The Plug AI]], etc.)
   ↓
-Weekly Reviews (pattern aggregation)
+Master Tracker (YOUR FOCUS TODAY)
   ↓
-Progress Dashboard (bird's eye view)
+Daily Notes (reflection & learning)
   ↓
-Feedback to Life Vision (continuous refinement)
+Weekly Reviews (patterns)
+  ↓
+Back to Goals (refinement)
 ```
+
+## What You're Working On Today
+
+- [ ] Daily task 1 → Advances [[../02-PROJECTS/The Plug AI Progress|The Plug AI]] → Supports [[../02-PROJECTS/Career/Career Goals|Career Goals]]
+- [ ] Daily task 2 → ...
+
+[Fill in with real tasks]
 
 ---
 

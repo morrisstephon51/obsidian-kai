@@ -87,6 +87,25 @@ related: [[../Areas/Career/index|Career]], [[../Areas/Development/index|Developm
 
 ---
 
+## Goals This Project Advances
+
+- [[./Career/Career Goals|Career Goals]]
+  - Builds: Full-stack development skills, fundraising, nonprofit operations
+- [[./Finance/Financial Goals|Financial Goals]]
+  - Path: Revenue/grant income → Bootstrap independence
+
+## Daily Work
+
+- Current focus: [[../_ops/master-tracker|Master Tracker]]
+- Daily reflection: [[../01-DAILY/index|Daily Notes]]
+- Weekly synthesis: [[../01-DAILY/Weekly Reviews/index|Weekly Reviews]]
+
+## Progress
+
+- See [[../01-DAILY/Progress Dashboard|Progress Dashboard]] for overall status
+
+---
+
 ## 🔗 How This Project Connects
 
 ```
@@ -104,10 +123,10 @@ Supports: Financial Goals, Competitive Advantages
 ## Related
 
 **Goals this serves:**
-- [[../Areas/Career/Career Goals|Career Goals]] — Builds professional capabilities
-- [[../Areas/Finance/Financial Goals|Financial Goals]] — Income/independence contribution
-- [[../Areas/Personal Growth/Life Vision|Life Vision]] — Meaningful work
-- [[../Areas/Personal Growth/Strengths|Strengths]] — Leverages your strengths
+- [[../Career/Career Goals|Career Goals]] — Builds professional capabilities
+- [[../Finance/Financial Goals|Financial Goals]] — Income/independence contribution
+- [[../Personal Growth/Life Vision|Life Vision]] — Meaningful work
+- [[../Personal Growth/Strengths|Strengths]] — Leverages your strengths
 
 **Skills built:**
 - [[../Areas/Development/Skills|Skills]] — Technical capabilities acquired
