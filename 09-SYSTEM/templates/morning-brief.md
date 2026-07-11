@@ -26,4 +26,4 @@ What single outcome would make today successful?
 - 
 
 ---
-*Generated from: [[{{date:YYYY-MM-DD}}]] and recent vault notes.*
+*Generated from: {{date:YYYY-MM-DD}} and recent vault notes.*

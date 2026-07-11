@@ -30,8 +30,7 @@ What does this shift in my understanding?
 - 
 
 ## Connections
-- [[Related Note]] — why it connects
-- [[Related Note]] — why it connects
+[Add connections to related notes as you discover them]
 
 ## Worth a Permanent Note?
 Yes / No — If yes, what would the title be?

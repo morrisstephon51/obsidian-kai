@@ -21,8 +21,7 @@ What makes this idea complicated?
 What is the opposite view?
 
 ## Connections
-- [[Related Note 1]] — why it connects
-- [[Related Note 2]] — why it connects
+[Add connections to related notes as you discover them]
 
 ## Source
 Where did this idea come from?

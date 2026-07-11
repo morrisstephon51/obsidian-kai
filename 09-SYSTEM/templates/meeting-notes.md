@@ -37,5 +37,4 @@ Paste messy notes here first.
 One paragraph for the project file.
 
 ## Links
-- [[Project File]] — parent project
-- [[Related Note]] — context
+[Link to project file and related notes as needed]
