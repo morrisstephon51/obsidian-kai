@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-11T00:00:00Z"
+status: idle
+last_run: "2026-07-11T14:00:00Z"
 current_task: "Context scan 2026-07-11: T1 hard-blocked on Vasser church details (legal name, address, pastor, workshop date) for IL Digital Equity $75K grant; mundi-agent-dashboard 3 lint fixes confirmed by Codex awaiting write-access auth; no Cook County AI literacy deadlines July 11-17; LinkedIn faith-community post queued; Forming Paws Indiegogo not launched; Gemini quota fix needs human action"
-runs_completed: 42
-items_processed: 164
+runs_completed: 43
+items_processed: 169
 last_error: null
 color: "#F4B942"
 house: "launchpad"
