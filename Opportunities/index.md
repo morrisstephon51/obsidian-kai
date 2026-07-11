@@ -25,3 +25,14 @@ When assessing opportunities:
 4. Time commitment vs. Track 1/Track 2 balance?
 
 See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for how opportunities fit your system.
+
+## Decision Process
+
+For each opportunity, create a decision journal entry:
+- Template: [[../../09-SYSTEM/templates/decision-journal|Decision Journal]]
+- File location: `02-PROJECTS/[relevant-area]/decisions/[opportunity-name].md`
+- Link back to this hub when you decide
+
+## Tracking Decisions
+
+See [[../../01-DAILY/index|Daily Notes]] for how opportunities are evaluated daily.

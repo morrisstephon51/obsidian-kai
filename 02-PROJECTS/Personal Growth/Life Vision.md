@@ -125,6 +125,24 @@ Daily Work (daily steps toward vision)
 Weekly Insights (feedback that refines vision)
 ```
 
+## How Daily Decisions Shape Vision
+
+```
+Daily Work & Opportunities
+    ↓
+Evaluate against Core Values & Goals
+    ↓
+Make Decision (record in decision journal)
+    ↓
+Reflect in [[../../01-DAILY/index|Weekly Reviews]]
+    ↓
+Update Vision Understanding
+    ↓
+Refine Goals & Projects
+```
+
+See [[../../Opportunities/index|Opportunities Hub]] for active evaluation framework.
+
 ---
 
 ## Related
