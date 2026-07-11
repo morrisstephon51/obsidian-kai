@@ -7,9 +7,6 @@ created: 2026-07-11
 
 Aggregate insights, pattern recognition, and feedback loop hub.
 
-## Template
-See [[../09-SYSTEM/templates/weekly-review|Weekly Review Template]]
-
 ## How Weekly Reviews Work
 
 Monday–Friday: Daily Notes
@@ -26,9 +23,9 @@ Next Week: Updated daily work
 
 ## Related Hubs
 - [[../Progress Dashboard|Progress Dashboard]] — Bird's-eye status
-- [[../_ops/master-tracker|Master Tracker]] — Daily focus
-- [[../05-MAPS/Core Relationships Map|Core Relationships Map]] — System architecture
-- [[../02-PROJECTS/index|Projects Index]] — Active work
+- [[../../_ops/master-tracker|Master Tracker]] — Daily focus
+- [[../../05-MAPS/Core Relationships Map|Core Relationships Map]] — System architecture
+- [[../../02-PROJECTS/index|Projects Index]] — Active work
 
 ## Structure
 - Each week gets one review note: `YYYY-WXX-review.md`

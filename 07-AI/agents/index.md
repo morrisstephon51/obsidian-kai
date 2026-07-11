@@ -22,9 +22,9 @@ created: 2026-07-11
 
 ## Integration
 - Agents coordinate The Plug AI project work
-- Outputs integrated into [[../02-PROJECTS/The Plug AI Progress|The Plug AI Progress]]
-- Strategy and research feed into [[../02-PROJECTS/Career/Career Goals|Career Goals]]
+- Outputs integrated into [[../../02-PROJECTS/The Plug AI Progress|The Plug AI Progress]]
+- Strategy and research feed into [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
 
 ## Related
-- [[../05-MAPS/Core Relationships Map|Core Relationships Map]] — How agents fit the system
-- [[../02-PROJECTS/index|Projects Index]] — Active work
+- [[../../05-MAPS/Core Relationships Map|Core Relationships Map]] — How agents fit the system
+- [[../../02-PROJECTS/index|Projects Index]] — Active work
