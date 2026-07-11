@@ -73,5 +73,5 @@ For example:
 This separation lets you:
 - **03-NOTES:** Capture raw self-knowledge as it emerges
 - **02-PROJECTS:** Refine and action that knowledge
-
+[[index#🌱 Personal Growth]]
 See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for how everything connects.
