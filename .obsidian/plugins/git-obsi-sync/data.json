@@ -1,0 +1,14 @@
+{
+  "githubToken": "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",
+  "githubUsername": "morrisstephon51",
+  "repoName": "obsidian-kai",
+  "autoSync": true,
+  "syncIntervalMs": 3000,
+  "excludePatterns": [
+    ".obsidian/workspace",
+    ".obsidian/workspace.json",
+    ".obsidian/plugins/*/data.json"
+  ],
+  "lastSyncTime": 1783751538720,
+  "commitMessageTemplate": "sync: {{datetime}}"
+}
