@@ -123,12 +123,10 @@ Why: Unlocks better career opportunities and credibility
 
 **Friday evening (10 min):**
 
-1. **Open these 5 files in order:**
-   - [[Daily Notes/2026-06-13|Today (your first note)]]
+1. **Open these files in order:**
+   - A daily note (see how work is tracked)
    - [[_ops/master-tracker|Master Tracker]] (see how work connects)
-   - [[Progress Dashboard|Progress Dashboard]] (see compound effect)
-   - [[Core Relationships Map|Core Relationships Map]] (see the system)
-   - [[Areas/Personal Growth/Life Vision|Life Vision]] (why it matters)
+   - [[02-PROJECTS/Personal Growth/Life Vision|Life Vision]] (why it matters)
 
 2. **Notice the connections:**
    - Your daily work → Master Tracker → Projects → Goals → Vision
