@@ -24,6 +24,10 @@ When assessing opportunities:
 3. Leverage of existing [[../02-PROJECTS/Personal Growth/Strengths|Strengths]]?
 4. Time commitment vs. Track 1/Track 2 balance?
 
+## Related Areas
+- See [[../Areas/Career/index|Career Area]] for career-related decisions
+- See [[../Areas/Finance/index|Finance Area]] for financial opportunities
+
 See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for how opportunities fit your system.
 
 ## Decision Process

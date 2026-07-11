@@ -8,7 +8,7 @@ created: 2026-07-11
 Financial independence and wealth-building goals.
 
 ## Core Goals
-- [[Financial Goals|Financial Goals]] — Path to independence
+- [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]] — Path to independence
 
 ## Key Milestones
 - [Independence number] ← To be filled in

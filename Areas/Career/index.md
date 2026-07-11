@@ -9,8 +9,8 @@ Central hub for all career-related notes, goals, and projects.
 
 ## Core Goals
 - [[../../02-PROJECTS/Career/Career Goals|Career Goals]] — Long-term career direction
-- [[Competitive Advantages]] — What sets you apart
-- Enabled by: [[../Education/index|Education]] + [[../Development/index|Skills]]
+- [[../../02-PROJECTS/Career/Competitive Advantages|Competitive Advantages]] — What sets you apart
+- Enabled by: [[../Education/index|Education]] + [[../Development/index|Development]]
 
 ## Related Areas
 - [[../Education/index|Education]] — Unlocks opportunities

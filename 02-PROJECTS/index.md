@@ -21,14 +21,17 @@ All active and inactive projects. Projects are how you advance goals.
 ### [[Personal Growth/Strengths|Strengths]]
 - Status: 🟢 Active
 - Purpose: Self-knowledge foundation
+- Links to: [[../Areas/Personal Growth/index|Personal Growth Area]]
 
 ### [[Personal Growth/Weaknesses|Weaknesses]]
 - Status: 🟢 Active
 - Purpose: Self-awareness
+- Links to: [[../Areas/Personal Growth/index|Personal Growth Area]]
 
 ### [[Career/Competitive Advantages|Competitive Advantages]]
 - Status: 🟡 Foundation building
 - Purpose: Differentiator development
+- Links to: [[../Areas/Career/index|Career Area]]
 
 ## Archived Projects
 [Will add as projects complete]
@@ -47,4 +50,4 @@ Weekly Reviews (patterns)
   ↓
 Back to Vision (refinement)
 
-See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for full architecture.
+See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for full architecture and [[../Areas/index|Areas index]] for area hubs.

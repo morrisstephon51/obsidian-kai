@@ -8,7 +8,7 @@ created: 2026-07-11
 Resources, guides, and knowledge about systems that support your work.
 
 ## Guides
-- [[Claude Code Guide]] — How to work with Claude Code in your vault
+- Learning guides for Claude Code integration (coming soon)
 
 ## Resources
 - [[../../04-RESOURCES/Prompts/index|Prompts Library]] — AI prompts and templates

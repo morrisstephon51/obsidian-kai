@@ -10,11 +10,11 @@ Tracking research on grants and funding opportunities.
 
 ## How This Supports Your Goals
 
-All grants discovered here support [[../Areas/Finance/Financial Goals|Financial Goals]]
-and [[../02-PROJECTS/The Plug AI Progress|The Plug AI]].
+All grants discovered here support [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
+and [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]].
 
 Current live opportunity: Illinois Digital Divide grant (up to $75K)
-See [[../Opportunities/index|Opportunities Hub]] for evaluation.
+See [[../../Opportunities/index|Opportunities Hub]] for evaluation.
 
 ---
 
@@ -59,6 +59,7 @@ See [[../Opportunities/index|Opportunities Hub]] for evaluation.
 - [[master-tracker|Master Tracker]]
 - [[daily-template|Daily Template]]
 - [[../../Areas/Finance/index|Finance Area]]
+- [[../../Opportunities/index|Opportunities Hub]]
 
 ---
 

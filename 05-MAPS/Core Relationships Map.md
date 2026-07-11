@@ -140,18 +140,18 @@ Back to Daily Work (updated)
 ## 🧠 Navigation Patterns
 
 ### **Pattern A: Top-Down** (Planning)
-1. Start at [[me|Personal Profile]]
-2. Review [[Areas/Personal Growth/Core Values|Core Values]] + [[Areas/Personal Growth/Life Vision|Life Vision]]
-3. Check progress on [[Areas/Career/Career Goals|Career]], [[Areas/Finance/Financial Goals|Finance]], [[Areas/Education/Education Goals|Education]]
-4. Look at [[Projects/The Plug AI Progress|Projects]] advancing goals
-5. Decide [[_ops/daily-template|daily actions]]
+1. Start at [[../../03-NOTES/Identity/me|Personal Profile]]
+2. Review [[../../Areas/Personal Growth/Core Values|Core Values]] + [[../../Areas/Personal Growth/Life Vision|Life Vision]]
+3. Check progress on [[../../02-PROJECTS/Career/Career Goals|Career]], [[../../02-PROJECTS/Finance/Financial Goals|Finance]], [[../../02-PROJECTS/Education/Education Goals|Education]]
+4. Look at [[../../02-PROJECTS/The Plug AI Progress|Projects]] advancing goals
+5. Decide [[../../_ops/daily-template|daily actions]]
 
 ### **Pattern B: Bottom-Up** (Execution)
-1. Start at [[_ops/master-tracker|Master Tracker]]
-2. Execute [[Projects/The Plug AI Progress|project work]]
-3. Reflect in [[_ops/daily-template|daily notes]]
-4. Aggregate in [[Weekly Reviews/index|weekly reviews]]
-5. Bubble up insights to update [[Areas/Personal Growth/Life Vision|Life Vision]]
+1. Start at [[../../_ops/master-tracker|Master Tracker]]
+2. Execute [[../../02-PROJECTS/The Plug AI Progress|project work]]
+3. Reflect in [[../../_ops/daily-template|daily notes]]
+4. Aggregate in [[../../01-DAILY/Weekly Reviews/index|weekly reviews]]
+5. Bubble up insights to update [[../../Areas/Personal Growth/Life Vision|Life Vision]]
 
 ### **Pattern C: Network** (Discovery)
 1. Open any note
@@ -174,21 +174,21 @@ Back to Daily Work (updated)
 ## 📍 Hot Spots (Most Connected)
 
 **Most central nodes:**
-1. **[[Areas/Personal Growth/Core Values|Core Values]]** ← Everything flows from here
-2. **[[Areas/Personal Growth/Life Vision|Life Vision]]** ← Guiding star
-3. **[[Areas/Career/Career Goals|Career Goals]]** ← Enables multiple downstream goals
-4. **[[Areas/Finance/Financial Goals|Financial Goals]]** ← Critical for independence
-5. **[[Weekly Reviews/index|Weekly Reviews]]** ← Aggregates all insights
+1. **[[../../Areas/Personal Growth/Core Values|Core Values]]** ← Everything flows from here
+2. **[[../../Areas/Personal Growth/Life Vision|Life Vision]]** ← Guiding star
+3. **[[../../02-PROJECTS/Career/Career Goals|Career Goals]]** ← Enables multiple downstream goals
+4. **[[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]** ← Critical for independence
+5. **[[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]]** ← Aggregates all insights
 
 ---
 
 ## 🔍 Search This Map
 
 **Looking for connections between:**
-- Values & Goals? → Check [[Areas/Personal Growth/Life Vision|Life Vision]]
-- Goals & Projects? → Check [[Progress Dashboard|Progress Dashboard]]
-- Daily work & Goals? → Check [[Weekly Reviews/index|Weekly Reviews]]
-- Skills & Opportunities? → Check [[Opportunities/index|Opportunities]]
+- Values & Goals? → Check [[../../Areas/Personal Growth/Life Vision|Life Vision]]
+- Goals & Projects? → Check [[../../01-DAILY/Progress Dashboard|Progress Dashboard]]
+- Daily work & Goals? → Check [[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]]
+- Skills & Opportunities? → Check [[../../Opportunities/index|Opportunities]]
 - Everything? → Start at [[00 Home|Home]]
 
 ---

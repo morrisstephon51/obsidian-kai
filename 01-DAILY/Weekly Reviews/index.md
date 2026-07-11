@@ -28,6 +28,7 @@ Next Week: Updated daily work
 - [[../Progress Dashboard|Progress Dashboard]] — Bird's-eye status
 - [[../../_ops/master-tracker|Master Tracker]] — Daily focus
 - [[../../05-MAPS/Core Relationships Map|Core Relationships Map]] — System architecture
+- [[../../02-PROJECTS/index|Projects Index]] — Active work
 
 ## Structure
 - Each week gets one review note: `YYYY-WXX-review.md`

@@ -43,9 +43,9 @@ Central hub for tracking all active work, projects, and progress.
 ```
 Life Vision & Values (foundation)
   ↓
-Goals ([[../02-PROJECTS/Career/Career Goals|Career]], [[../02-PROJECTS/Finance/Financial Goals|Finance]], etc.)
+Goals ([[../../02-PROJECTS/Career/Career Goals|Career]], [[../../02-PROJECTS/Finance/Financial Goals|Finance]], etc.)
   ↓
-Projects ([[../02-PROJECTS/The Plug AI Progress|The Plug AI]], etc.)
+Projects ([[../../02-PROJECTS/The Plug AI Progress|The Plug AI]], etc.)
   ↓
 Master Tracker (YOUR FOCUS TODAY)
   ↓
@@ -58,7 +58,7 @@ Back to Goals (refinement)
 
 ## What You're Working On Today
 
-- [ ] Daily task 1 → Advances [[../02-PROJECTS/The Plug AI Progress|The Plug AI]] → Supports [[../02-PROJECTS/Career/Career Goals|Career Goals]]
+- [ ] Daily task 1 → Advances [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]] → Supports [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
 - [ ] Daily task 2 → ...
 
 [Fill in with real tasks]
@@ -68,23 +68,23 @@ Back to Goals (refinement)
 ## Related
 
 **Strategic context:**
-- [[../../Core Relationships Map|Core Relationships Map]] — How everything connects
-- [[../../Progress Dashboard|Progress Dashboard]] — Bird's eye view
-- [[../../Areas/Personal Growth/Life Vision|Life Vision]] — Today serves this
-- [[../../Areas/Career/Career Goals|Career Goals]] — Today advances this
-- [[../../Areas/Finance/Financial Goals|Financial Goals]] — Progress toward independence
+- [[../../05-MAPS/Core Relationships Map|Core Relationships Map]] — How everything connects
+- [[../../01-DAILY/Progress Dashboard|Progress Dashboard]] — Bird's eye view
+- [[../../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] — Today serves this
+- [[../../02-PROJECTS/Career/Career Goals|Career Goals]] — Today advances this
+- [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]] — Progress toward independence
 
 **Daily execution:**
 - [[daily-template|Daily Template]] — Details of today's work
-- [[../../Projects/The Plug AI Progress|The Plug AI Progress]] — Main project
+- [[../../02-PROJECTS/The Plug AI Progress|The Plug AI Progress]] — Main project
 - [[grant-research-log|Grant Research Log]] — Opportunities tracker
 
 **Weekly synthesis:**
-- [[../../Weekly Reviews/index|Weekly Reviews]] — Aggregate insights
+- [[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]] — Aggregate insights
 - [[important-links|Important Links]] — Quick access
 
 **Home:**
-- [[../../00 Home|Home]] — Master dashboard
+- [[../../05-MAPS/00 Home|Home]] — Master dashboard
 
 ---
 
