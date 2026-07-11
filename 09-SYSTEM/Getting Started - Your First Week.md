@@ -144,10 +144,10 @@ Why: Unlocks better career opportunities and credibility
 | Day | Action | Time |
 |---|---|---|
 | **Friday (today)** | ✅ System built, first note created | Done |
-| **Saturday** | Edit [[Areas/Career/Career Goals|Career Goals]] | 10 min |
-| **Sunday** | Edit [[Areas/Finance/Financial Goals|Finance Goals]] + [[Areas/Education/Education Goals|Education Goals]] | 15 min |
+| **Saturday** | Edit [[02-PROJECTS/Career/Career Goals|Career Goals]] | 10 min |
+| **Sunday** | Edit [[02-PROJECTS/Finance/Financial Goals|Finance Goals]] + [[02-PROJECTS/Education/Education Goals|Education Goals]] | 15 min |
 | **Mon-Thu** | Daily notes + master tracker check | 5-10 min/day |
-| **Sunday** | Review the system, see connections | 10 min |
+| **Next Sunday** | Review the system, see connections | 10 min |
 
 ---
 
@@ -163,9 +163,9 @@ Why: Unlocks better career opportunities and credibility
 
 ### **By Next Week**
 
-- ✅ First [[Weekly Reviews/TEMPLATE-Weekly-Review|weekly review]] created
+- ✅ First weekly review created
 - ✅ You can see patterns across days
-- ✅ [[Progress Dashboard|Dashboard]] shows real progress
+- ✅ System shows real progress
 - ✅ You're thinking in connected terms
 
 ### **By Month 1**
