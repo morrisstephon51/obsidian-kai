@@ -245,4 +245,12 @@ Weekly Progress (tracking momentum)
 
 ---
 
+## Grounded In
+
+See [[../Personal Growth/Core Values|Core Values]] — this goal flows from: **Competence**, **Continuous Learning**, **Freedom**
+
+Education builds mastery and capability while enabling the freedom and independence that comes from having valuable credentials and deep knowledge.
+
+---
+
 *Last reviewed: 2026-06-12*
