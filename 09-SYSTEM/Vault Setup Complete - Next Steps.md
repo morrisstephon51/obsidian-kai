@@ -122,16 +122,16 @@ Congratulations! Your personal knowledge vault is now set up with **proper struc
    - What challenges remain?
 
 2. **Update relevant goal notes**
-   - [[Areas/Career/Career Goals]] — Progress? Adjust?
-   - [[Areas/Finance/Financial Goals]] — On track?
-   - [[Areas/Education/Education Goals]] — Milestones?
+   - [[02-PROJECTS/Career/Career Goals]] — Progress? Adjust?
+   - [[02-PROJECTS/Finance/Financial Goals]] — On track?
+   - [[02-PROJECTS/Education/Education Goals]] — Milestones?
 
 3. **Check Area hubs**
-   - [[Areas/Personal Growth/index|Personal Growth]]
-   - [[Areas/Education/index|Education]]
-   - [[Areas/Career/index|Career]]
-   - [[Areas/Finance/index|Finance]]
-   - [[Areas/Development/index|Development]]
+   - [[02-PROJECTS/Personal Growth/index|Personal Growth]]
+   - [[02-PROJECTS/Education/index|Education]]
+   - [[02-PROJECTS/Career/index|Career]]
+   - [[02-PROJECTS/Finance/index|Finance]]
+   - [[02-PROJECTS/Development/index|Development]]
 
 ### Monthly Review (30-45 minutes)
 
