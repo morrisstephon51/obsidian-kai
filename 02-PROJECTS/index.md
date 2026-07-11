@@ -1,77 +1,50 @@
 ---
-type: area-index
-status: active
-created: 2026-06-13
-related: [[../Areas/Career/index|Career]], [[../Areas/Finance/index|Finance]], [[../me|Personal Profile]]
+type: hub
+created: 2026-07-11
 ---
 
-# 💡 Opportunities
+# 🚀 Projects
 
-**Ideas, ventures, and possibilities evaluated against your values, goals, and strengths.**
+All active and inactive projects. Projects are how you advance goals.
 
----
+## Track 1: Primary Mission
 
-## 🎯 Quick Evaluation
+### [[The Plug AI Progress]]
+- **Mission:** AI literacy for underserved communities (faith leaders, community health workers, first-gen students)
+- **Target:** South suburban Cook County
+- **Status:** 🟡 Seeking fiscal sponsor
+- **Supports:** [[../Areas/Career/index|Career]] + [[../Areas/Finance/index|Finance]]
+- **Skills Built:** Full-stack development, fundraising, nonprofit strategy
 
-**When you discover an opportunity, ask:**
+## Track 2: Instrumental & Side Projects
 
-1. **Values alignment:** Does this align with my [[../Areas/Personal Growth/Core Values|core values]]?
-2. **Goals support:** Does this help me achieve [[../Areas/Career/Career Goals|career goals]] or [[../Areas/Finance/Financial Goals|financial goals]]?
-3. **Strengths:** Does this leverage my [[../Areas/Personal Growth/Strengths|strengths]] and [[../Areas/Development/Skills|skills]]?
-4. **Timeline:** Fits [[../Areas/Education/Education Goals|education timeline]]?
+### [[Personal Growth/Strengths|Strengths]]
+- Status: 🟢 Active
+- Purpose: Self-knowledge foundation
 
----
+### [[Personal Growth/Weaknesses|Weaknesses]]
+- Status: 🟢 Active
+- Purpose: Self-awareness
 
-## 🚀 Active Opportunities
+### [[Career/Competitive Advantages|Competitive Advantages]]
+- Status: 🟡 Foundation building
+- Purpose: Differentiator development
 
-[Opportunities being actively evaluated]
+## Archived Projects
+[Will add as projects complete]
 
----
+## How Projects Connect to Everything Else
 
-## 💼 Business Ideas
+Values & Vision (foundation)
+  ↓
+Goals (what to achieve)
+  ↓
+Projects (how you achieve it)
+  ↓
+Daily Work (execution)
+  ↓
+Weekly Reviews (patterns)
+  ↓
+Back to Vision (refinement)
 
-[Business concepts and ventures]
-
----
-
-## 🎓 Learning Paths
-
-[New skills and education opportunities]
-
----
-
-## 🤝 Partnership/Collaboration
-
-[People, teams, companies to partner with]
-
----
-
-## 📊 Evaluation Template
-
-**Use this for each opportunity:**
-
-- **Opportunity:** [Name/Description]
-- **Discovered:** [Date/Source]
-- **Initial appeal:** [Why it caught your attention]
-- **Values alignment:** [[../Areas/Personal Growth/Core Values]] — ✅/⚠️/❌
-- **Goals support:** [[../Areas/Career/Career Goals]] / [[../Areas/Finance/Financial Goals]] — ✅/⚠️/❌
-- **Strengths leverage:** [[../Areas/Personal Growth/Strengths]] — [Which ones]
-- **Skills needed:** [[../Areas/Development/Skills]] — [What you need to learn]
-- **Timeline:** Fits or conflicts with [[../Areas/Education/Education Goals]]?
-- **Decision:** Pursue / Explore Further / Pass
-- **Next step:** [If pursuing]
-
----
-
-## 🔗 Related
-
-- [[../Areas/Career/Competitive Advantages|Your Competitive Advantages]]
-- [[../Areas/Personal Growth/Life Vision|Life Vision]]
-- [[../Areas/Career/Potential Career Paths|Potential Career Paths]]
-- [[me|Personal Profile]]
-
----
-
-**New opportunities should connect to your values, goals, and strengths before pursuing.**
-
-*Last updated: 2026-06-13*
+See [[../05-MAPS/Core Relationships Map|Core Relationships Map]] for full architecture.
