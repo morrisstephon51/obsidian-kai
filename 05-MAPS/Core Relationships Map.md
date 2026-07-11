@@ -32,7 +32,7 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 💎 Foundation Layer
 
-**[[../03-NOTES/Identity/me|Personal Profile]]** (Master reference)
+**[[../03-NOTES/Identity/me|[[Personal]] Profile]]** (Master reference)
 - Your identity, patterns, motivations
 - Informs all decisions
 - Updated quarterly
