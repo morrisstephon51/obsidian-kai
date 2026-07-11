@@ -17,7 +17,7 @@ What single outcome would make today successful?
 |      |      |
 
 ## Active Work
-- [[Project Name]]
+[Link to current project as needed]
 
 ## Captures
 Drop everything here during the day.

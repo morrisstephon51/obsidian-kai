@@ -30,8 +30,7 @@ What is the book really saying? One or two sentences.
 > 
 
 ## Connections
-- [[Related Note]] — why it connects
-- [[Related Note]] — why it connects
+[Add connections to related notes as you discover them]
 
 ## What I Will Do Differently
 - 
