@@ -21,3 +21,4 @@ Related:
 - [[Internal Conflicts]]
 - [[Blind Spots]]
 - [[Risks]]
+- [[../../02-PROJECTS/Personal Growth/Weaknesses|Weaknesses (Active Project)]]
