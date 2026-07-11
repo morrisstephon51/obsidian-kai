@@ -134,10 +134,10 @@ Supports: Financial Goals, Competitive Advantages
 - [[../../Areas/Career/Competitive Advantages|Competitive Advantages]] — Differentiates you
 
 **In action:**
-- [[../Areas/Career/index|Career Hub]] — Career strategy
-- [[../_ops/master-tracker|Master Tracker]] — Weekly project focus
-- [[../_ops/daily-template|Daily Template]] — Daily project work
-- [[../Weekly Reviews/index|Weekly Reviews]] — Project progress patterns
+- [[../../Areas/Career/index|Career Hub]] — Career strategy
+- [[../../_ops/master-tracker|Master Tracker]] — Weekly project focus
+- [[../../_ops/daily-template|Daily Template]] — Daily project work
+- [[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]] — Project progress patterns
 
 **Reference:**
 - [[The Plug AI/|Project Folder]] — Project files
