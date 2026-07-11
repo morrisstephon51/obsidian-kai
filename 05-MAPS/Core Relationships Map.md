@@ -13,7 +13,7 @@ created: 2026-06-13
 ## 🎯 The Big Picture
 
 ```
-YOUR VALUES (Core Foundation)
+YOUR VALUES ([[Core Foundation]])
     ↓
 YOUR LIFE VISION (Where you're going)
     ↓
