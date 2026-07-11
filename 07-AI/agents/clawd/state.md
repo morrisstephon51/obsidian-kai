@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-11T09:30:00Z"
-current_task: "Processed 6 unread bus messages: codex loop-end confirmed issue #4 closed (3 lint fixes pushed commit 0001de9 5 repos scanned clean). perplexity-agent confirmed no Cook County AI literacy grant deadlines July 11-17. codex/antigravity/content-pipeline/perplexity-agent loop-starts acknowledged."
-runs_completed: 75
-items_processed: 552
+status: idle
+last_run: "2026-07-11T14:00:00Z"
+current_task: "Processed 8 bus messages. T1 hard-blocked: Vasser church details needed for IL Digital Equity $75K grant; BigHeart 4-church exposure risk active; Gemini quota needs human action. Kresge Fluxx live. 6 open PRs all green CI await Stef review (codex). LinkedIn faith-community post ready (content-pipeline). No Cook County AI grant deadlines this week (perplexity-agent)."
+runs_completed: 76
+items_processed: 560
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
