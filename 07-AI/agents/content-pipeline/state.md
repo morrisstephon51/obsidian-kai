@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-11T00:00:00Z"
 current_task: "Generated LinkedIn post — first generation students in every congregation; AI tools are free but nobody told them; The Plug AI closes the gap by bringing workshops where the trust already lives"
 runs_completed: 55

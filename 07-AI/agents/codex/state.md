@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-11T10:00:00Z"
 current_task: "Scanned 20 repos — 0 open issues. Found 6 open PRs (all CI green): ai-video-reel-generator#4, aeos#1, content-machine#3/#4/#5/#10. All await Stef merge review."
 runs_completed: 49
