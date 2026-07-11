@@ -29,21 +29,21 @@ Your vault system is fully built:
 
 These goal notes have placeholders. Replace them with YOUR specifics:
 
-#### Edit [[Areas/Career/Career Goals|Career Goals]]
+#### Edit [[02-PROJECTS/Career/Career Goals|Career Goals]]
 - [ ] **Target role:** [What's your ideal next role?]
 - [ ] **Timeline:** [When would you like to move?]
 - [ ] **Specific goal:** [What exactly are you working toward?]
-- [ ] **How The Plug AI helps:** [What skills does this project build?]
+- [ ] **How your projects help:** [What skills do they build?]
 
 **Example:** 
 ```
 Target role: Technical Operations Manager at healthcare tech company
 Timeline: 12 months
 Why: Combines systems thinking, tech skills, healthcare knowledge
-How Plug AI helps: Builds full-stack technical skills and project management
+How projects help: Builds full-stack technical skills and project management
 ```
 
-#### Edit [[Areas/Finance/Financial Goals|Financial Goals]]
+#### Edit [[02-PROJECTS/Finance/Financial Goals|Financial Goals]]
 - [ ] **Independence number:** [How much per month do you need to be independent?]
 - [ ] **Current income:** [What are you earning now?]
 - [ ] **Target income:** [What income level enables independence?]
@@ -57,7 +57,7 @@ Target income: $7,500/month (covers independence + reinvestment)
 Timeline: 2 years through career growth + side income
 ```
 
-#### Edit [[Areas/Education/Education Goals|Education Goals]]
+#### Edit [[02-PROJECTS/Education/Education Goals|Education Goals]]
 - [ ] **Degree:** [What degree? From where?]
 - [ ] **Current progress:** [When did you start? What year are you in?]
 - [ ] **Target graduation:** [When do you want to finish?]
