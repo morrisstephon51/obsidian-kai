@@ -236,4 +236,12 @@ Weekly Progress (tracking momentum)
 
 ---
 
+## Grounded In
+
+See [[../Personal Growth/Core Values|Core Values]] — this goal flows from: **Freedom**, **Self-Reliance**
+
+Financial independence is perhaps your most core aspiration, directly enabling the freedom and autonomy to live according to your values while reducing dependence on external systems.
+
+---
+
 *Last reviewed: 2026-06-12*
