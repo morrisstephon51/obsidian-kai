@@ -93,7 +93,7 @@ Every goal and project flows from these values:
 **Freedom** → [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]]
 - Independence requires both career growth and financial stability
 
-**Competence** → [[../Development/Skills|Development]] + [[../Education/Education Goals|Education Goals]]
+**Competence** → [[../../Areas/Development/Skills|Development]] + [[../Education/Education Goals|Education Goals]]
 - Mastery requires both formal learning and practice
 
 **Truth** → All decisions
