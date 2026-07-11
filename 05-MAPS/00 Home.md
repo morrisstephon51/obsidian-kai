@@ -67,12 +67,12 @@
 
 | Folder | Purpose |
 |---|---|
-| [[Projects/The Plug AI/\|Projects]] | Active work with a deadline or goal |
+| [[02-PROJECTS/\|02-PROJECTS]] | Active work with a deadline or goal |
 | [[Areas/\|Areas]] | Ongoing responsibilities (Dev, Finance) |
 | [[Resources/\|Resources]] | Reference material, prompts, brand assets |
-| [[07-AI/MUNDI System Reference\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
+| [[07-AI/\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
 | [[Archive/\|Archive]] | Completed or inactive material |
-| [[Daily Notes/\|Daily Notes]] | Day-by-day notes and reflections |
+| [[01-DAILY/\|01-DAILY]] | Day-by-day notes and reflections |
 | [[Attachments/\|Attachments]] | Images, PDFs, and other files |
 
 ---
