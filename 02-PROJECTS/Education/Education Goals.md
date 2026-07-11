@@ -199,8 +199,8 @@ Weekly Progress (tracking momentum)
 - [[Financial Goals|Financial Goals]] — Increases earning potential
 
 **Skills & development:**
-- [[../Development/Skills|Skills]] — Build while pursuing degree
-- [[../Development/index|Development]] — Technical growth in parallel
+- [[../../Areas/Development/Skills|Skills]] — Build while pursuing degree
+- [[../../Areas/Development/index|Development]] — Technical growth in parallel
 
 **In action:**
 - [[../../Projects/The Plug AI Progress|The Plug AI Project]] — Apply learning
@@ -223,10 +223,10 @@ Weekly Progress (tracking momentum)
 - Credential enables advancement paths
 - Opens consulting/entrepreneurship opportunities
 
-**Skills Development:** [[../Development/Skills|Skills]]
+**Skills Development:** [[../../Areas/Career/Competitive Advantages|Competitive Advantages]]
 - Formal education complements practical skill-building
 - B.S. Computer Science supports technical depth
-- Creates foundation for [[../Development/Competitive Advantages|Competitive Advantages]]
+- Creates foundation for competitive career positioning
 
 **Financial Independence:** [[../Finance/index|Finance]]
 - Education → Better income → Financial independence
