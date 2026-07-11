@@ -181,7 +181,7 @@ Frequently referenced hub notes:
 - **`07-AI/`** is managed by AI agents and synced automatically — edit `state.md` files only via the loop-update convention documented in each, not by hand otherwise.
 - **`.obsidian/copilot`-style plugin config folders are not personal notes** — skip when scanning for content.
 - **Track discipline still applies for prioritization, not for exclusion:** The Plug AI is Track 1 and gets first call on ambiguous effort tradeoffs, but every other folder above is now in-scope for Kai to read, organize, and act on — see `07-AI/context/world.md`.
-
+[[07-AI/index]]
 ---
 
 *Last updated: 2026-07-05 — corrected to match actual on-disk structure and recorded the full-vault authority grant; previous version (2026-06-23) described a stale pre-restructure folder layout.*
