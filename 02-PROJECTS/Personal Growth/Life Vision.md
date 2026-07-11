@@ -72,7 +72,7 @@ Your desired future: the life you're working toward.
 
 Built on: [[Core Values]]
 
-Enabled by: [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]] + [[../Education/Education Goals|Education Goals]] + [[../Development/Skills|Skills Development]]
+Enabled by: [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]] + [[../Education/Education Goals|Education Goals]] + [[../../Areas/Development/Skills|Skills Development]]
 
 Expressed through: [[../../02-PROJECTS/index|Projects]]
 
@@ -155,7 +155,7 @@ See [[../../Opportunities/index|Opportunities Hub]] for active evaluation framew
 - [[../Career/Career Goals|Career Goals]] — How career supports vision
 - [[../Finance/Financial Goals|Financial Goals]] — How finances support vision
 - [[../Education/Education Goals|Education Goals]] — How education supports vision
-- [[../Development/index|Development]] — Skills to build vision
+- [[../../02-PROJECTS/Development/index|Development]] — Skills to build vision
 
 **Pursuing vision:**
 - [[../../Projects/The Plug AI Progress|The Plug AI Project]] — Building toward vision
