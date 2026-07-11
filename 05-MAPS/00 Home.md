@@ -41,17 +41,11 @@
   - See the system work (Friday walkthrough)
   - One week to master it
 
-- [[Areas/Learning/Claude Code Guide|📚 How to Work With Claude Code]]
+- [[02-PROJECTS/Learning/Claude Code Guide|📚 How to Work With Claude Code]]
   - Communication methods
   - Best practices
   - Common commands
   - Real-world examples
-
-**REFERENCE:**
-- [[Claude Code + Obsidian Master Guide|📚 Master Guide: Claude Code + Obsidian]]
-  - How to direct me effectively
-  - Building your second brain
-  - Workflows and best practices
 
 - [[Vault Setup Complete - Next Steps|🚀 Vault Setup Complete]]
   - What was created for you
@@ -64,8 +58,7 @@
 ## 🎯 Your System at a Glance
 
 **See how everything connects:**
-- 🗺️ [[Core Relationships Map|Core Relationships Map]] — Visual guide to all connections
-- 📊 [[Progress Dashboard|Progress Dashboard]] — Status of all areas & goals
+- 📊 Progress tracking — Status of all areas & goals
 - 💡 [[Opportunities/index|Opportunities Hub]] — Ideas evaluated against values/goals
 
 ---
