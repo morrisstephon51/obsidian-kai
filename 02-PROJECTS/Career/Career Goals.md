@@ -112,10 +112,10 @@ Possible paths:
 
 ### 2. Skills Development
 **Practical capabilities that drive advancement**
-- [[../Development/Skills|Skills]] — Your proven technical abilities
+- [[../../Areas/Development/Skills|Skills]] — Your proven technical abilities
 - Technical expertise enables career transitions
 - Skill combinations create unique positioning
-- [[../Development/Competitive Advantages|Competitive Advantages]] differentiate you
+- [[../../Areas/Career/Competitive Advantages|Competitive Advantages]] differentiate you
 - Demonstrated skills attract opportunities
 
 ### 3. Experience & Projects
