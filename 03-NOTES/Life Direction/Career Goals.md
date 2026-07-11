@@ -21,3 +21,5 @@ Related:
 - [[Work Experience]]
 - [[Financial Goals]]
 - [[Potential Career Paths]]
+- [[../../02-PROJECTS/Career/Career Goals|Career Goals (Active Area)]]
+- [[../../02-PROJECTS/Career/index|Career Hub]]
