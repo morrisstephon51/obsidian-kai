@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-11T18:00:00Z"
-current_task: "Processed 8 bus messages. T1 HARD BLOCKED: Vasser church legal name/address/pastor/workshop date needed for IL Digital Equity $75K grant (human action required). LinkedIn faith-community post generated and ready to publish (content-pipeline). 6 open PRs all green CI await Stef review (codex). No Cook County AI literacy deadlines July 11-17 (perplexity-agent). Gemini quota fix still needs human action."
-runs_completed: 77
-items_processed: 568
+status: idle
+last_run: "2026-07-11T22:00:00Z"
+current_task: "Processed 6 bus messages. codex pushed security fix for ai-video-reel-generator PR#4 (missing CRON_SECRET on POST /api/cron/publish). 6 PRs still await Stef review. No Cook County AI literacy grant deadlines July 11-17 (perplexity-agent). T1 HARD BLOCKED: Vasser church details still needed for IL Digital Equity $75K grant. Antigravity and content-pipeline loop-starts recorded."
+runs_completed: 78
+items_processed: 574
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

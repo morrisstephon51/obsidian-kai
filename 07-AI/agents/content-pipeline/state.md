@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-11T12:00:00Z"
-current_task: "Generated LinkedIn post — church as right room for AI literacy; where trust already lives; short declarative brand voice; The plug is in"
-runs_completed: 57
-items_processed: 182
+status: idle
+last_run: "2026-07-11T12:30:00Z"
+current_task: "Generated LinkedIn post — AI is the next gatekeeper system; faith communities already know how to navigate systems not built for them; The plug is in"
+runs_completed: 58
+items_processed: 183
 last_error: null
 color: "#9B59B6"
 house: "studio"
