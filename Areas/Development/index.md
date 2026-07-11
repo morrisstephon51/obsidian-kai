@@ -8,8 +8,9 @@ created: 2026-07-11
 Skill development, technical mastery, and continuous learning.
 
 ## Core Skills
-- [[Skills]] — Active skill stack
+- [[../../02-PROJECTS/Development/Skills|Skills]] — Active skill stack
 - [[Competitive Advantages]] — How skills differentiate you
+- How skills enable: [[../Career/index|Career]], [[../Education/index|Education]]
 
 ## Related Areas
 - [[../Career/index|Career]] — Skills enable career advancement

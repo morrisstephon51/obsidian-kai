@@ -100,6 +100,33 @@ Possible paths:
 
 ---
 
+## What Enables Career Goals
+
+### 1. Education
+**Foundation for credibility and opportunities**
+- [[../Education/Education Goals|Education Goals]] — B.S. Computer Science degree
+- Degree enables technical credibility
+- Credential required for many opportunities
+- Certifications differentiate from peers
+- Unlocks higher-tier roles and advancement paths
+
+### 2. Skills Development
+**Practical capabilities that drive advancement**
+- [[../Development/Skills|Skills]] — Your proven technical abilities
+- Technical expertise enables career transitions
+- Skill combinations create unique positioning
+- [[../Development/Competitive Advantages|Competitive Advantages]] differentiate you
+- Demonstrated skills attract opportunities
+
+### 3. Experience & Projects
+**Building a portfolio and track record**
+- [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]] — Demonstrating capabilities
+- Real-world projects build credibility
+- Portfolio proves skills to employers
+- Project experience enables transitions
+
+---
+
 ## Key Success Factors
 
 ### 1. Choose the Right Role Now

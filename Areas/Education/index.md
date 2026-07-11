@@ -8,7 +8,8 @@ created: 2026-07-11
 Educational goals and learning milestones.
 
 ## Core Goals
-- [[Education Goals]] — Degree timeline and milestones
+- [[../../02-PROJECTS/Education/Education Goals|Education Goals]] — Degree timeline and milestones
+- How education enables: [[../Career/index|Career]], [[../Development/index|Skills]], [[../Finance/index|Finance]]
 
 ## Degree Progress
 - Program: B.S. Computer Science
