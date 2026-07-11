@@ -53,12 +53,11 @@ Congratulations! Your personal knowledge vault is now set up with **proper struc
 
 ```
 📁 Vault Root
-├── [[[[00 Home]]]].md                    [Main dashboard]
+├── 00 Home.md                    [Main dashboard]
 ├── me.md                         [Personal profile]
-├── Claude Code + Obsidian Master Guide.md [How to use me + vault]
-├── 📁 Areas/
+├── 📁 02-PROJECTS/
 │   ├── Personal Growth/
-│   │   ├── [[01-DAILY/[[02-PROJECTS/index|index]]|index]].md
+│   │   ├── index.md
 │   │   ├── Core Values.md
 │   │   ├── Life Vision.md
 │   │   ├── Strengths.md
@@ -78,11 +77,10 @@ Congratulations! Your personal knowledge vault is now set up with **proper struc
 │   └── Development/
 │       ├── index.md
 │       └── Skills.md
-├── 📁 Templates/
-│   └── Daily Note.md [Use this for daily reflections]
-├── 📁 Projects/
+├── 📁 09-SYSTEM/
+│   └── templates/daily-note.md
+├── 📁 01-DAILY/
 ├── 📁 Resources/
-├── 📁 Daily Notes/
 └── 📁 Archive/
 ```
 
