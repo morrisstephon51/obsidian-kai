@@ -168,6 +168,18 @@ Possible paths:
 
 ---
 
+## Active Projects Supporting This Goal
+
+- [[../The Plug AI Progress|The Plug AI]] — Building full-stack skills + entrepreneurship
+- [Other projects as they emerge]
+
+## How Daily Work Advances This
+
+See [[../../01-DAILY/index|Daily Notes]] for daily execution.
+Track progress in [[../../01-DAILY/Progress Dashboard|Progress Dashboard]].
+
+---
+
 ## Reflection Questions
 
 - What type of work energizes you most?
