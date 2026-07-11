@@ -31,9 +31,9 @@ WHY:
 
 If evaluating an opportunity today, check:
 - [[../../Opportunities/index|Opportunities Hub]] — Frame and evaluate
-- [[../../../Areas/Personal Growth/Core Values|Core Values]] — Align with?
-- [[../../../Areas/Career/Career Goals|Career Goals]] — Support?
-- [[../../../Areas/Finance/Financial Goals|Finance Goals]] — Support?
+- [[../../02-PROJECTS/Personal Growth/Core Values|Core Values]] — Align with?
+- [[../../02-PROJECTS/Career/Career Goals|Career Goals]] — Support?
+- [[../../02-PROJECTS/Finance/Financial Goals|Finance Goals]] — Support?
 
 Link your decision in the appropriate Goals file.
 
