@@ -86,6 +86,35 @@ When values conflict, your likely priority:
 
 ---
 
+## How Values Guide Decisions
+
+Every goal and project flows from these values:
+
+**Freedom** → [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]]
+- Independence requires both career growth and financial stability
+
+**Competence** → [[../Development/Skills|Development]] + [[../Education/Education Goals|Education Goals]]
+- Mastery requires both formal learning and practice
+
+**Truth** → All decisions
+- Seek evidence, challenge assumptions, build systems grounded in reality
+
+**Self-Reliance** → [[../Finance/Financial Goals|Financial Goals]]
+- Reduce dependence on employers, institutions, debt
+
+**Helping Others** → [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]]
+- Help others, especially underserved communities
+
+**Continuous Learning** → [[../Education/Education Goals|Education Goals]] + [[../Development/Skills|Development]]
+- Continuous growth in all areas
+
+### How to Use This
+Before making any decision or starting new work, check:
+1. Does it align with at least one of these values?
+2. Which value is most important for this choice?
+
+---
+
 ## How These Cascade
 
 Your values inform everything downstream:
