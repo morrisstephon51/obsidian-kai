@@ -79,20 +79,20 @@
 
 ## 🚀 Projects
 
-- [[Projects/The Plug AI/ThePlugAI WoodsFund AppPrep.pdf|The Plug AI — WoodsFund App Prep]]
+- [[02-PROJECTS/The Plug AI Progress|The Plug AI — Progress Tracking]]
 
 ---
 
-## 📌 Areas
+## 📌 Development Areas
 
 **Your ongoing responsibilities and development areas:**
 
-- [[Areas/Personal Growth/index|🌱 Personal Growth]] — Values, strengths, patterns, growth
-- [[Areas/Education/index|🎓 Education]] — Degree and learning strategy  
-- [[Areas/Learning/index|📚 Learning]] — Knowledge acquisition and skill development
-- [[Areas/Career/index|💼 Career]] — Professional direction and opportunities
-- [[Areas/Finance/index|💰 Finance]] — Money and independence strategy
-- [[Areas/Development/index|🛠️ Development]] — Technical skills and projects
+- [[02-PROJECTS/Personal Growth/index|🌱 Personal Growth]] — Values, strengths, patterns, growth
+- [[02-PROJECTS/Education/index|🎓 Education]] — Degree and learning strategy  
+- [[02-PROJECTS/Learning/index|📚 Learning]] — Knowledge acquisition and skill development
+- [[02-PROJECTS/Career/index|💼 Career]] — Professional direction and opportunities
+- [[02-PROJECTS/Finance/index|💰 Finance]] — Money and independence strategy
+- [[02-PROJECTS/Development/index|🛠️ Development]] — Technical skills and projects
 
 ---
 
