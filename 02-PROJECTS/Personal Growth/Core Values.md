@@ -105,7 +105,7 @@ Every goal and project flows from these values:
 **Helping Others** → [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]]
 - Help others, especially underserved communities
 
-**Continuous Learning** → [[../Education/Education Goals|Education Goals]] + [[../Development/Skills|Development]]
+**Continuous Learning** → [[../Education/Education Goals|Education Goals]] + [[../../Areas/Development/Skills|Development]]
 - Continuous growth in all areas
 
 ### How to Use This
