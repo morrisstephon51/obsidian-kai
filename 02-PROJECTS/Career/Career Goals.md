@@ -267,4 +267,12 @@ Financial Goals (enabled)
 
 ---
 
+## Grounded In
+
+See [[../Personal Growth/Core Values|Core Values]] — this goal flows from: **Freedom**, **Competence**, **Self-Reliance**
+
+Career growth directly serves these values by building the skills and income needed for independence, expanding your capabilities, and creating options for self-determination.
+
+---
+
 *Last reviewed: 2026-06-12*
