@@ -10,7 +10,7 @@ Source material, reference docs, and learning resources that support your work.
 ## Prompts Library
 - [[Prompts/index|Prompts]]
   - AI prompt templates for content, analysis, and automation
-  - Used by: [[../02-PROJECTS/The Plug AI|The Plug AI]], [[../_ops/grant-research-log|Grant Research]]
+  - Used by: [[../02-PROJECTS/The Plug AI Progress|The Plug AI]], [[../_ops/grant-research-log|Grant Research]]
 
 ## Guides & Reference
 - [Will add as resources emerge]
@@ -20,4 +20,4 @@ Source material, reference docs, and learning resources that support your work.
 2. **When learning:** Save articles/videos to `04-RESOURCES/`
 3. **When needed:** Reference from `02-PROJECTS/` or daily notes
 
-See [[../02-PROJECTS/Learning/index|Learning Area]] for active learning resources.
+See [[../Areas/Learning/index|Learning Area]] for active learning resources.

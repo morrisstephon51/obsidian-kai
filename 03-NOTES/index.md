@@ -13,7 +13,7 @@ Permanent notes about identity, psychology, patterns, and self-knowledge.
 - [[Identity/Personal Evolution|Personal Evolution]] — How you've changed
 
 ## Psychology
-- [[Psychology/Core Values|Core Values]] → See [[../02-PROJECTS/Personal Growth/Core Values|Core Values (Area)]]
+- [[Psychology/Core Values|Core Values]] → See [[../02-PROJECTS/Personal Growth/Core Values|Core Values (Project)]]
 - [[Psychology/Personality Traits|Personality Traits]]
 - [[Psychology/Thinking Patterns|Thinking Patterns]]
 - [[Psychology/Mental Models|Mental Models]]
@@ -25,11 +25,11 @@ Permanent notes about identity, psychology, patterns, and self-knowledge.
 - [[Psychology/Decision-Making Style|Decision-Making Style]]
 
 ## Life Direction
-- [[Life Direction/Life Vision|Life Vision]] → See [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision (Area)]]
+- [[Life Direction/Life Vision|Life Vision]] → See [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision (Project)]]
 - [[Life Direction/Long-Term Goals|Long-Term Goals]]
-- [[Life Direction/Career Goals|Career Goals]] → See [[../02-PROJECTS/Career/Career Goals|Career Goals (Area)]]
-- [[Life Direction/Financial Goals|Financial Goals]] → See [[../02-PROJECTS/Finance/Financial Goals|Finance Goals (Area)]]
-- [[Life Direction/Educational Goals|Educational Goals]] → See [[../02-PROJECTS/Education/Education Goals|Education Goals (Area)]]
+- [[Life Direction/Career Goals|Career Goals]] → See [[../02-PROJECTS/Career/Career Goals|Career Goals (Project)]]
+- [[Life Direction/Financial Goals|Financial Goals]] → See [[../02-PROJECTS/Finance/Financial Goals|Finance Goals (Project)]]
+- [[Life Direction/Educational Goals|Educational Goals]] → See [[../02-PROJECTS/Education/Education Goals|Education Goals (Project)]]
 - [[Life Direction/Success Definition|Success Definition]]
 
 ## Behavioral Patterns
@@ -48,11 +48,11 @@ Permanent notes about identity, psychology, patterns, and self-knowledge.
 - [[Challenges/Risks|Risks]]
 
 ## Assets
-- [[Assets/Skills|Skills]] → See [[../02-PROJECTS/Development/Skills|Skills (Area)]]
+- [[Assets/Skills|Skills]] → See [[../02-PROJECTS/Development/Skills|Skills (Project)]]
 - [[Assets/Knowledge Areas|Knowledge Areas]]
 - [[Assets/Work Experience|Work Experience]]
 - [[Assets/Resources|Resources]]
-- [[Assets/Competitive Advantages|Competitive Advantages]] → See [[../02-PROJECTS/Career/Competitive Advantages|Competitive Advantages (Area)]]
+- [[Assets/Competitive Advantages|Competitive Advantages]] → See [[../02-PROJECTS/Career/Competitive Advantages|Competitive Advantages (Project)]]
 
 ## Opportunities
 - [[Opportunities/Potential Career Paths|Potential Career Paths]]

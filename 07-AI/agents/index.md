@@ -11,25 +11,20 @@ created: 2026-07-11
 
 | Agent | Role | Bus Name | State |
 |-------|------|----------|-------|
-| **Kai / clawd** | Coordinating hub — always-on, Telegram-connected | `clawd` | [[../../09-SYSTEM/CLAUDE.md|CLAUDE.md]] |
-| **Orchestrator** | Pipeline management — decomposes goals, sequences tasks | `orchestrator` | state.md |
-| **Architect** | System design — Full mode (Plug AI) / Lite mode (BigHeart) | `architect` | state.md |
-| **Codex** | Code generation, PRs, bug fixes | `codex` | state.md |
-| **Antigravity** | Content, LinkedIn, strategy drafts | `antigravity` | state.md |
-| **Perplexity** | Real-time research, citations | `perplexity-agent` | state.md |
-| **Aexis** | Execution accountability, open loops, overdue follow-ups | `aexis` | state.md |
-| **Aeos** | Strategic intelligence, synthesizes research into briefs | `aeos` | state.md |
+| **Kai / clawd** | Coordinating hub — always-on, Telegram-connected | `clawd` | Managed remotely |
+| **Orchestrator** | Pipeline management — decomposes goals, sequences tasks | `orchestrator` | Managed remotely |
+| **Architect** | System design — Full mode (Plug AI) / Lite mode (BigHeart) | `architect` | Managed remotely |
+| **Codex** | Code generation, PRs, bug fixes | `codex` | Managed remotely |
+| **Antigravity** | Content, LinkedIn, strategy drafts | `antigravity` | Managed remotely |
+| **Perplexity** | Real-time research, citations | `perplexity-agent` | Managed remotely |
+| **Aexis** | Execution accountability, open loops, overdue follow-ups | `aexis` | Managed remotely |
+| **Aeos** | Strategic intelligence, synthesizes research into briefs | `aeos` | Managed remotely |
 
-## Agent State
-Each agent maintains state in: `~/clawd/agents/<name>-agent/state.md`
-
-## Communication
-- Feed: `../chatroom/feed.md` — Cross-agent visibility
-- Commands: Orchestrator dispatches via bus name
-
-## Build Pipeline
-Standard: `Orchestrator → Architect → Codex`
+## Integration
+- Agents coordinate The Plug AI project work
+- Outputs integrated into [[../../02-PROJECTS/The Plug AI Progress|The Plug AI Progress]]
+- Strategy and research feed into [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
 
 ## Related
-- [[../../09-SYSTEM/CLAUDE.md|System Instructions (CLAUDE.md)]]
-- [[../../02-PROJECTS/Learning/Claude Code Guide|How to Work With Agents]]
+- [[../../05-MAPS/Core Relationships Map|Core Relationships Map]] — How agents fit the system
+- [[../../02-PROJECTS/index|Projects Index]] — Active work

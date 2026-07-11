@@ -35,5 +35,6 @@ AI tools are **not** replacements for permanent knowledge.
 4. **Save outputs** to `07-AI/` for reference
 
 ## Related
-- [[../02-PROJECTS/Learning/Claude Code Guide|Claude Code Guide]]
+- [[../Areas/Learning/index|Learning Area]]
 - [[../04-RESOURCES/index|Resources Hub]]
+- [[../05-MAPS/Core Relationships Map|Core Relationships Map]]

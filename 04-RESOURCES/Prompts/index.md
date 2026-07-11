@@ -28,5 +28,5 @@ AI prompts and templates for content generation, analysis, and automation.
 4. Save results to `02-PROJECTS/` or `07-AI/`
 
 ## Related
-- [[../02-PROJECTS/Learning/index|Learning Area]]
-- [[../07-AI/index|AI Systems]]
+- [[../../Areas/Learning/index|Learning Area]]
+- [[../../07-AI/index|AI Systems]]
