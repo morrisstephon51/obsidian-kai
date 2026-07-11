@@ -26,3 +26,5 @@ Related:
 - [[Business Opportunities]]
 - [[Career Goals]]
 - [[Risks]]
+- [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals (Active Area)]]
+- [[../../02-PROJECTS/Finance/index|Finance Hub]]
