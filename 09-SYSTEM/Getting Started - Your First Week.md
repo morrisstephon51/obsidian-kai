@@ -14,11 +14,11 @@ created: 2026-06-13
 
 Your vault system is fully built:
 
-- ✅ [[Core Relationships Map|Smart connections]] created
-- ✅ [[Progress Dashboard|Progress dashboard]] set up
-- ✅ [[Weekly Reviews/index|Weekly review system]] ready
-- ✅ [[Opportunities/index|Opportunity tracking]] system ready
-- ✅ Your first daily note created: [[Daily Notes/2026-06-13|Today's note]]
+- ✅ Smart connections created
+- ✅ Progress dashboard set up
+- ✅ Weekly review system ready
+- ✅ Opportunity tracking system ready
+- ✅ Your first daily note created
 - ✅ All goal notes linked to larger system
 
 ---
