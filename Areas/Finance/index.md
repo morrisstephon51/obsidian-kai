@@ -14,9 +14,9 @@ Financial independence and wealth-building goals.
 - [Independence number] ← To be filled in
 
 ## Related Areas
-- [[../Career/index|Career]] — Primary income driver
-- [[../Education/index|Education]] — Invests in future earning power
-- [[../Personal Growth/index|Personal Growth]] — Values guide financial decisions
+- [[../../02-PROJECTS/Career/index|Career]] — Primary income driver
+- [[../../02-PROJECTS/Education/index|Education]] — Invests in future earning power
+- [[../../02-PROJECTS/Personal Growth/index|Personal Growth]] — Values guide financial decisions
 
 ## Cross-Links
 - See [[../../01-DAILY/Progress Dashboard|Progress Dashboard]] for current status

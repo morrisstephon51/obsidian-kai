@@ -10,12 +10,12 @@ Skill development, technical mastery, and continuous learning.
 ## Core Skills
 - [[../../02-PROJECTS/Development/Skills|Skills]] — Active skill stack
 - [[../../02-PROJECTS/Career/Competitive Advantages|Competitive Advantages]] — How skills differentiate you
-- How skills enable: [[../Career/index|Career]], [[../Education/index|Education]]
+- How skills enable: [[../../02-PROJECTS/Career/index|Career]], [[../../02-PROJECTS/Education/index|Education]]
 
 ## Related Areas
-- [[../Career/index|Career]] — Skills enable career advancement
-- [[../Education/index|Education]] — Formal learning complements skill-building
-- [[../Personal Growth/index|Personal Growth]] — Learning aligns with values
+- [[../../02-PROJECTS/Career/index|Career]] — Skills enable career advancement
+- [[../../02-PROJECTS/Education/index|Education]] — Formal learning complements skill-building
+- [[../../02-PROJECTS/Personal Growth/index|Personal Growth]] — Learning aligns with values
 
 ## Active Projects (Skill Practice)
 - [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]] — Full-stack development practice
