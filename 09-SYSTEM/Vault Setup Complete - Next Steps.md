@@ -199,13 +199,13 @@ or missing connections"
 
 ### ✅ Do These Tasks:
 
-- [ ] **Day 1:** Read [[Areas/Personal Growth/index|Personal Growth hub]]
-- [ ] **Day 2:** Read [[Areas/Career/index|Career hub]] and [[Areas/Career/Career Goals]]
-- [ ] **Day 3:** Read [[Areas/Finance/index|Finance hub]] and [[Areas/Finance/Financial Goals]]
-- [ ] **Day 4:** Review [[Areas/Education/index|Education hub]]
-- [ ] **Day 5:** Create first daily note using [[Templates/Daily Note|template]]
+- [ ] **Day 1:** Read [[02-PROJECTS/Personal Growth/index|Personal Growth hub]]
+- [ ] **Day 2:** Read [[02-PROJECTS/Career/index|Career hub]] and [[02-PROJECTS/Career/Career Goals]]
+- [ ] **Day 3:** Read [[02-PROJECTS/Finance/index|Finance hub]] and [[02-PROJECTS/Finance/Financial Goals]]
+- [ ] **Day 4:** Review [[02-PROJECTS/Education/index|Education hub]]
+- [ ] **Day 5:** Create first daily note using [[09-SYSTEM/templates/daily-note|template]]
 - [ ] **Day 6:** Review your week, update goals
-- [ ] **Day 7:** Plan next week in [[Daily Notes]]
+- [ ] **Day 7:** Plan next week in [[01-DAILY/]]
 
 ### 📌 During First Week:
 
