@@ -331,7 +331,7 @@ with timeline and milestones"*
 
 **Next steps:**
 
-1. **Today:** Review [[Areas/Personal Growth/index|Personal Growth hub]]
+1. **Today:** Review [[02-PROJECTS/Personal Growth/index|Personal Growth hub]]
 2. **Tomorrow:** Create first daily note
 3. **This week:** Fill in specific information in your goals
 4. **Next week:** Tell me what to build next
