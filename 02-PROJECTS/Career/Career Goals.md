@@ -260,7 +260,7 @@ Financial Goals (enabled)
 - [[../../_ops/master-tracker|Master Tracker]] — Weekly career focus
 
 **Reference:**
-- [[../index|Career Hub]] — Overall strategy
+- [[../../Areas/Career/index|Career Hub]] — Overall strategy
 - [[Potential Career Paths]] — Detailed exploration
 - [[Competitive Advantages]] — Your unique edge
 - [[me|Personal Profile]] — Full context

@@ -3,7 +3,7 @@ type: project-progress
 status: active
 created: 2026-06-13
 repo: https://github.com/morrisstephon51/psychic-bassoon
-related: [[../Areas/Career/index|Career]], [[../Areas/Development/index|Development]]
+related: [[../../Areas/Career/index|Career]], [[../../Areas/Development/index|Development]]
 ---
 
 # The Plug AI Progress
