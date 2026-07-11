@@ -145,7 +145,7 @@ Refined Direction
 ```
 Open any note → Follow connections → Discover relationships
 ```
-
+[[02-PROJECTS/Personal Growth/index]]
 ---
 
 ## 🗺️ Your Navigation Paths
