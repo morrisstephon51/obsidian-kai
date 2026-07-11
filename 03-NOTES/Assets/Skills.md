@@ -24,3 +24,5 @@ Related:
 - [[Work Experience]]
 - [[Competitive Advantages]]
 - [[Strengths]]
+- [[../../02-PROJECTS/Development/Skills|Skills Development (Area)]]
+- [[../../02-PROJECTS/Career/Career Goals|How Skills Enable Career Goals]]
