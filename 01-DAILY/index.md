@@ -1,12 +1,43 @@
 ---
-type: review-hub
+type: hub
 status: active
 created: 2026-06-13
 ---
 
-# 📊 Weekly Reviews
+# 📅 Daily Notes
 
 **Aggregate daily insights into bigger patterns. See how daily work advances goals.**
+
+## Today's Focus
+- See [[../_ops/master-tracker|Master Tracker]] for today's priorities
+
+## Template
+- Use [[../09-SYSTEM/templates/daily-note|Daily Note Template]] when creating new daily notes
+
+## Daily Work Flow
+
+Morning: Check [[../_ops/master-tracker|Master Tracker]]
+   ↓
+Execute: Work on [[../02-PROJECTS/index|Projects]]
+   ↓
+Evening: Reflect in Daily Note (what, how, what next?)
+   ↓
+Weekly: Aggregate in [[Weekly Reviews/index|Weekly Review]]
+   ↓
+Monthly: Update [[Progress Dashboard|Progress Dashboard]]
+
+## Key Practices
+
+1. **Link to projects:** When you work on something, link to the project
+2. **Link to goals:** When you make progress, note which goal it advances
+3. **Capture decisions:** Record key choices and reasoning
+4. **Reflect:** What did you learn? What surprised you?
+
+## Related Hubs
+- [[../_ops/master-tracker|Master Tracker]] — Daily priorities
+- [[Weekly Reviews/index|Weekly Reviews]] — Pattern aggregation
+- [[Progress Dashboard|Progress Dashboard]] — Status across all areas
+- [[../05-MAPS/Core Relationships Map|Core Relationships Map]] — How daily work serves everything
 
 ---
 
@@ -67,6 +98,6 @@ created: 2026-06-13
 
 ---
 
-**Template location:** `Weekly Reviews/YYYY-WXX-Review.md`
+**Start here each morning.** Your daily work is how you advance your goals and vision.
 
-*Last updated: 2026-06-13*
+*Last updated: 2026-07-11*
