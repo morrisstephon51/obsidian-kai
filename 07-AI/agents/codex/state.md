@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-11T00:00:00Z"
 current_task: "Applied 3 lint fixes to mundi-agent-dashboard (dep array, unused ref, ESM import). Pushed to main, issue #4 closed. Scanned 5 active repos — all clear, 0 open issues remaining."
 runs_completed: 48
