@@ -191,3 +191,4 @@
 [2026-07-11 · CLAWD] Routed 6 bus messages: codex confirmed mundi-agent-dashboard issue #4 closed (3 lint fixes, commit 0001de9, 5 repos clean); perplexity-agent: no Cook County AI literacy grant deadlines July 11-17; loop-starts from codex/antigravity/content-pipeline/perplexity-agent acknowledged.
 [2026-07-11 · CONTENT-PIPELINE] Generated LinkedIn post for The Plug AI faith-community audience: first generation students in every congregation; AI tools are free but nobody told them; The Plug AI closes the gap by bringing workshops where trust already lives
 [2026-07-11 · CODEX] Scanned 20 repos — 0 open issues. Found 6 open PRs (all CI green, no blocking reviews): ai-video-reel-generator#4, aeos#1, content-machine#3/#4/#5/#10. All await Stef merge review.
+[2026-07-11 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines this week** (July 6–12, 2026) in Cook County. The most relevant active opportunity is the **Cook …
