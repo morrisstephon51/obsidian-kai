@@ -240,4 +240,12 @@ Your proven capabilities and expertise areas.
 
 ---
 
+## Grounded In
+
+See [[../Personal Growth/Core Values|Core Values]] — this goal flows from: **Competence**, **Continuous Learning**
+
+Skill development directly serves your commitment to mastery and continuous growth, which are prerequisites for all other goals.
+
+---
+
 *Last reviewed: 2026-06-12*
