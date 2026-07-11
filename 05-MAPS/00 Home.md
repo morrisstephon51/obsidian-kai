@@ -147,7 +147,7 @@ Open any note → Follow connections → Discover relationships
 ```
 [[02-PROJECTS/Personal Growth/index]]
 ---[[02-PROJECTS/Finance/index]]
-[[02-PROJECTS/Education/index]][[02-PROJECTS/Development/index]]
+[[02-PROJECTS/Education/index]][[02-PROJECTS/Development/index]][[02-PROJECTS/Career/index]]
 ## 🗺️ Your Navigation Paths
 
 **Start with your preferred entry point:**
