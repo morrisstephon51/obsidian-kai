@@ -1,7 +1,7 @@
 ---
 type: area-goal
 created: 2026-07-11
-related: [[Career Goals]], [[../Personal Growth/Life Vision]], [[../Personal Growth/Core Values]]
+related: [[../../02-PROJECTS/Career/Career Goals]], [[../../02-PROJECTS/Personal Growth/Life Vision]], [[../../02-PROJECTS/Personal Growth/Core Values]]
 ---
 
 # Financial Goals
@@ -249,9 +249,9 @@ Weekly Progress (tracking momentum)
 ## Related
 
 **Foundation (guides this goal):**
-- [[../Personal Growth/Life Vision|Life Vision]] — Independence is your north star
-- [[../Personal Growth/Core Values|Core Values]] — Freedom matters most
-- [[../Personal Growth/Motivations|Motivations]] — Freedom & security drive you
+- [[../../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] — Independence is your north star
+- [[../../02-PROJECTS/Personal Growth/Core Values|Core Values]] — Freedom matters most
+- [[../../02-PROJECTS/Personal Growth/Motivations|Motivations]] — Freedom & security drive you
 
 **Supporting goals:**
 - [[../../02-PROJECTS/Career/Career Goals|Career Goals]] — Increases income
