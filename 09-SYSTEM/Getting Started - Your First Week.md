@@ -81,22 +81,22 @@ Why: Unlocks better career opportunities and credibility
    - Check [[_ops/master-tracker|Master Tracker]] — What's the focus?
    
 2. **Evening (5-10 min):**
-   - Create new daily note from [[_ops/daily-template|template]]
+   - Create new daily note from [[09-SYSTEM/templates/daily-note|template]]
    - Copy this structure:
      ```
      ---
      type: daily-note
      date: 2026-06-[DATE]
-     related-goals: [[../Areas/Career/Career Goals]], [[../Areas/Finance/Financial Goals]]
+     related-goals: [[../../02-PROJECTS/Career/Career Goals]], [[../../02-PROJECTS/Finance/Financial Goals]]
      ---
      ```
    - Fill in: Focus, Learning, Decisions, Reflections
    - **Most important:** Link your work to a goal
-     - Example: "Worked on [[Projects/The Plug AI Progress|Plug AI]], which builds [skill], advancing [[../Areas/Career/Career Goals|career goal]]"
+     - Example: "Worked on [[../../02-PROJECTS/The Plug AI Progress|Plug AI]], which builds [skill], advancing [[../../02-PROJECTS/Career/Career Goals|career goal]]"
 
 **Where to create:**
-- `Daily Notes/2026-06-14.md`
-- `Daily Notes/2026-06-15.md`
+- `01-DAILY/2026-06-14.md`
+- `01-DAILY/2026-06-15.md`
 - etc.
 
 **Pattern to follow:**
