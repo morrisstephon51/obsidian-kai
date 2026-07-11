@@ -22,3 +22,5 @@ Related:
 - [[Knowledge Areas]]
 - [[Long-Term Goals]]
 - [[Decision-Making Style]]
+- [[../../02-PROJECTS/Education/Education Goals|Education Goals (Active Area)]]
+- [[../../02-PROJECTS/Education/index|Education Hub]]
