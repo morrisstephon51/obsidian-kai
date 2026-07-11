@@ -219,7 +219,7 @@ In each goal note, add:
 
 **Example — Education Goals:**
 
-Edit [[Areas/Education/Education Goals]] and fill in:
+Edit [[02-PROJECTS/Education/Education Goals]] and fill in:
 - Target graduation date
 - Current progress
 - Next milestone
