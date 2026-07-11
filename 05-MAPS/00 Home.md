@@ -154,11 +154,11 @@ Open any note → Follow connections → Discover relationships
 
 | Path | Best for | Start here |
 |---|---|---|
-| **Strategic Planning** | Aligning actions to values | [[me\|Personal Profile]] → [[Areas/Personal Growth/Life Vision\|Life Vision]] |
-| **Daily Execution** | Today's work | [[_ops/master-tracker\|Master Tracker]] → [[_ops/daily-template\|Daily Template]] |
-| **Progress Overview** | Seeing the big picture | [[Progress Dashboard\|Progress Dashboard]] → [[Core Relationships Map\|Relationships Map]] |
-| **Weekly Synthesis** | Learning from patterns | [[Weekly Reviews/index\|Weekly Reviews]] → Create review |
-| **Exploration** | Following connections | [[Opportunities/index\|Opportunities]] → Evaluate against goals |
+| **Strategic Planning** | Aligning actions to values | [[me|Personal Profile]] → [[02-PROJECTS/Personal Growth/Life Vision|Life Vision]] |
+| **Daily Execution** | Today's work | [[_ops/master-tracker|Master Tracker]] → [[09-SYSTEM/templates/daily-note|Daily Template]] |
+| **Progress Overview** | Seeing the big picture | Your goal notes → Track progress |
+| **Weekly Synthesis** | Learning from patterns | [[01-DAILY/Weekly Reviews/index|Weekly Reviews]] → Create review |
+| **Exploration** | Following connections | [[Opportunities/index|Opportunities]] → Evaluate against goals |
 
 ---
 
