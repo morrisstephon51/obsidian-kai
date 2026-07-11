@@ -56,13 +56,13 @@ Last reviewed: 2026-06-13
 
 **Purpose:** Intentional learning aligned with [[../Career/Career Goals|Career Goals]] and [[../Education/Education Goals|Education Goals]]
 
-**Review cadence:** Weekly during [[../../Weekly Reviews/index|weekly reviews]]
+**Review cadence:** Weekly during [[../../01-DAILY/Weekly Reviews/index|weekly reviews]]
 
 **Key question:** "What am I learning and how does it serve my goals?"
 
 ---
 
-See also: [[../Education/index|Education Area]] | [[../Development/index|Development Area]]
+See also: [[../../02-PROJECTS/Education/index|Education Area]] | [[../../02-PROJECTS/Development/index|Development Area]]
 
 ---
 
