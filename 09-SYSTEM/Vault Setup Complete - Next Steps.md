@@ -45,7 +45,6 @@ Congratulations! Your personal knowledge vault is now set up with **proper struc
 ### 4. ✅ Updated Home Page
 
 - Linked to all Area hubs
-- Linked to [[Claude Code + Obsidian Master Guide]]
 - Central navigation for your vault
 
 ---
