@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-11T00:00:00Z"
+status: idle
+last_run: "2026-07-11T09:30:00Z"
 current_task: "Processed 6 unread bus messages: codex loop-end (mundi-agent-dashboard#4 has 3 lint fixes ready, write access not yet granted — flagged for MUNDI). perplexity-agent confirmed no Cook County AI literacy grant deadlines July 11-17. codex/antigravity/content-pipeline/perplexity-agent loop-starts acknowledged."
-runs_completed: 74
-items_processed: 546
+runs_completed: 75
+items_processed: 552
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
