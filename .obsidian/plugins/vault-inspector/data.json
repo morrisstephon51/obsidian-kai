@@ -10,8 +10,8 @@
     "large-files": true
   },
   "enableFixActions": true,
-  "largeMarkdownBytes": 102400,
-  "largeAttachmentBytes": 5242880,
+  "largeMarkdownBytes": 460800,
+  "largeAttachmentBytes": 24117248,
   "ignoredLargeMarkdownFrontmatterKeys": [
     "excalidraw-plugin"
   ],

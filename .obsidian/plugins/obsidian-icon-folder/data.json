@@ -2,11 +2,11 @@
   "settings": {
     "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
-    "fontSize": 16,
+    "fontSize": 27,
     "emojiStyle": "native",
-    "iconColor": null,
+    "iconColor": "#ad46b4",
     "recentlyUsedIcons": [],
-    "recentlyUsedIconsSize": 5,
+    "recentlyUsedIconsSize": 17,
     "rules": [],
     "extraMargin": {
       "top": 0,
@@ -25,7 +25,7 @@
     "iconsInLinksEnabled": true,
     "iconIdentifier": ":",
     "lucideIconPackType": "native",
-    "debugMode": false,
-    "useInternalPlugins": false
+    "debugMode": true,
+    "useInternalPlugins": true
   }
 }

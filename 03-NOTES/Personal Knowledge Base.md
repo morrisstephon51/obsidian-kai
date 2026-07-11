@@ -6,7 +6,7 @@ The home page for Stefan's PKB. This vault was built from patterns, statements, 
 - [[Who I Am]]
 - [[Executive Summary]]
 - [[Personal Evolution]]
-- [[The Person Behind the Questions]]
+- [[The Person Behind the Questions]][[The Person Behind the Questions#Evidence]]
 
 ## Psychology
 - [[Core Values]]

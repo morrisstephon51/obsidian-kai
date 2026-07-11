@@ -4,8 +4,8 @@
   "title": "Create me.md with Obsidian file linking",
   "titleGenerationStatus": "success",
   "createdAt": 1781145088615,
-  "updatedAt": 1782958887159,
-  "lastResponseAt": 1782956417941,
+  "updatedAt": 1783505658079,
+  "lastResponseAt": 1783486277383,
   "sessionId": "66dab606-67c2-4fe3-ac5d-0dce9f3af2c8",
   "providerState": {
     "providerSessionId": "66dab606-67c2-4fe3-ac5d-0dce9f3af2c8"
@@ -13,11 +13,11 @@
   "usage": {
     "model": "haiku",
     "inputTokens": 8,
-    "cacheCreationInputTokens": 508,
-    "cacheReadInputTokens": 136107,
+    "cacheCreationInputTokens": 892,
+    "cacheReadInputTokens": 194912,
     "contextWindow": 200000,
-    "contextTokens": 136623,
-    "percentage": 68,
+    "contextTokens": 195812,
+    "percentage": 98,
     "contextWindowIsAuthoritative": true
   }
 }

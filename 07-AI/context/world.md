@@ -2,17 +2,30 @@
 
 *Read this at the start of every loop. This is the world state all agents share.*
 
-Last updated: 2026-06-21
+Last updated: 2026-07-05
+
+---
+
+## Scope — read this first
+
+**As of 2026-07-05, Kai's world is the whole vault, not just The Plug AI.** This file's Mission section previously named only The Plug AI, so any agent following "read world.md" literally never saw Career, Finance, Education, Personal Growth, the PKB (Identity/Psychology/Challenges/etc.), Daily Notes, or Resources as in-scope. That was the actual mechanism behind "Kai can only manage The Plug AI" — fixed here.
+
+Full folder map: `05-MAPS/000 Index.md`. Full vault-wide instructions: `09-[[CLAUDE.md - Claude Code Project Template]]/CLAUDE.md`. Read both alongside this file, every loop.
+
+**Authority:** full read/write autonomy across every folder in the vault — no standing approval required, same grant The Plug AI repos already had, now extended vault-wide per Stef's decision on 2026-07-05. Track discipline below governs *prioritization* when work is ambiguous or effort-constrained, not a restriction on what Kai is allowed to touch.
 
 ---
 
 ## Mission
 
-**The Plug AI** — closing the AI literacy gap for faith communities, community health workers, and first-gen students in south suburban Cook County, Chicago.
+**Primary (Track 1):** The Plug AI — closing the AI literacy gap for faith communities, community health workers, and first-gen students in south suburban Cook County, Chicago. Tagline: "Get Connected. Get Skilled. Get into AI."
 
-**Tagline:** "Get Connected. Get Skilled. Get into AI."
+**Also in scope, always, not just when asked:**
+- **Vault management** — process inbound captures in `00-INBOX`, write atomic notes, keep `05-MAPS/000 Index.md` current, maintain `[[wikilinks]]`, apply the tag taxonomy. Standing responsibility, not a side task.
+- **Every PARA area** — 02-PROJECTS (Career, Development, Education, Finance, Forming Paws, Learning, Personal Growth, The Plug AI), 03-NOTES (PKB: Identity, Psychology, Behavioral Patterns, Challenges, Life Direction, Opportunities, Assets), 04-RESOURCES, 01-DAILY, 06-OUTPUTS, 08-ARCHIVE.
+- **BigHeart** and **Forming Paws / Puppy Power** — Track 2, real and active, not a footnote.
 
-**Priority order:** Track 1 = The Plug AI. Track 2 = BigHeart, Puppy Power, side projects.
+**Priority order when work is ambiguous or effort-constrained:** Track 1 = The Plug AI gets first call. Track 2 = BigHeart, Forming Paws. Everything else (vault upkeep, personal notes, daily capture) isn't a deprioritized "Track 3" — it's ongoing maintenance Kai does continuously, flagged only when it would genuinely compete with Track 1 effort.
 
 ---
 
@@ -35,7 +48,8 @@ Last updated: 2026-06-21
 
 1. The Plug AI — brand, funding, launch
 2. BigHeart — content automation + title/comp ask
-3. Puppy Power — execution phase (Track 2, managed in clawd)
+3. Puppy Power / Forming Paws — execution phase (Track 2, managed in clawd)
+4. Vault management — ongoing, every loop: inbox processing, atomic notes, index upkeep, tag/link hygiene across all PARA areas
 
 ---
 

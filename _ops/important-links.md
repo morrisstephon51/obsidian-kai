@@ -2,93 +2,76 @@
 type: operations
 category: links-registry
 created: 2026-06-13
-last-checked: 2026-07-04
+last-checked: 2026-07-10
 ---
 
 # Important Links Registry
 
-**Safe access to critical resources**
-
-> For the full cross-linked hub (all live sites, all repos, real agent fleet, all 233 subagents, domains) see **[[09-SYSTEM/Command Center|Command Center]]**. This page stays as the quick weekly-check registry.
+> For the full cross-linked hub see **[[09-SYSTEM/Command Center|Command Center]]**. This page is the quick-reference table for all live sites and repos.
 
 ---
 
-## 🌐 Active Links
+## 🌐 All Sites — Master Table
 
-### Personal Branding & Bio
-- **Link-in-Bio Dashboard**
-  - URL: `https://morrisstephon51.github.io/Link-inbio/`
-  - Purpose: Main link aggregator
-  - Status: ✅ [Check daily]
-
-### Command & Control
-- **Command Center (public dashboard)**
-  - URL: `https://morrisstephon51.github.io/Link-inbio/dashboard.html`
-  - Purpose: PIN-locked dashboard hub — links, live apps, agents
-  - Status: ✅ [Check daily]
-  - **Also see:** [[09-SYSTEM/Command Center|vault Command Center]] (source of truth, cross-linked to public dashboard + MUNDI dashboard) and [[project-agent-world|MUNDI Agent Dashboard]]
-
-### Professional
-- **Living Resume**
-  - URL: `https://morrisstephon51.github.io/Link-inbio/dashboard.html`
-  - Purpose: Interactive resume
-  - Status: ✅ [Check daily]
-  - **Note:** Same URL as Command Center — may be combined
-
-### The Plug AI / MUNDI (updated 2026-07-04 — full detail in [[09-SYSTEM/Command Center|Command Center]] and [[07-AI/MUNDI System Reference]])
-- **The Plug AI (live site)**
-  - URL: `https://psychic-bassoon-psi.vercel.app` (the `-cam6stef` domain hits a Vercel SSO wall — use `-psi` for sharing)
-  - Repo: `psychic-bassoon`
-  - Status: 🟢 Live
-- **Stefan's Portfolio**
-  - URL: `https://stefan-portfolio-eight.vercel.app`
-  - Repo: `Stefan-Portfolio`
-  - Status: 🟢 Live
-- **MUNDI Agent Dashboard**
-  - Public URL: `https://agent-world-olive.vercel.app` — **fixed 2026-07-05**, now serves the current `mundi-agent-dashboard` Next.js app (Links panel included). Root Directory/Framework Preset were stuck on old `studious-umbrella` settings; corrected in Vercel dashboard, then deployed via `vercel --prod` from `~/Desktop/agent-dashboard`
-  - Repo: `mundi-agent-dashboard` (private), local dev at `~/Desktop/agent-dashboard` (`npm run dev` or `./start.sh` for a tunnel)
-  - Status: 🟢 Live and current
+| # | Name | Live URL | GitHub Repo | Purpose | Status |
+|---|---|---|---|---|---|
+| 1 | **The Plug AI** | [psychic-bassoon-psi.vercel.app](https://psychic-bassoon-psi.vercel.app) | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | AI literacy platform | 🟢 Live |
+| 2 | **MUNDI Agent Dashboard** | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-agent-dashboard](https://github.com/morrisstephon51/mundi-agent-dashboard) | Agent fleet control panel | 🟢 Live |
+| 3 | **Stefan's Portfolio** | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan_portfolio](https://github.com/morrisstephon51/Stefan_portfolio) | Personal portfolio / resume | 🟢 Live |
+| 4 | **Link-in-Bio** | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | 🟢 Live |
+| 5 | **Command Center** | [morrisstephon51.github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | PIN-locked hub (apps, agents, links) | 🟢 Live |
+| 6 | **Content Machine** | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | [content-machine](https://github.com/morrisstephon51/content-machine) | Content pipeline agent UI | 🟢 Live |
+| 7 | **AI Video Reel Generator** | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | [ai-video-reel-generator](https://github.com/morrisstephon51/ai-video-reel-generator) | Auto video reel builder | 🟢 Live |
+| 8 | **Psychic Octo Engine** | [psychic-octo-engine-psi.vercel.app](https://psychic-octo-engine-psi.vercel.app) | [psychic-octo-engine](https://github.com/morrisstephon51/psychic-octo-engine) | Link-in-bio variant | 🟢 Live |
+| 9 | **Puppy Power (Breeding App)** | [breeding-community-pets.deploypad.app](https://breeding-community-pets.deploypad.app/) | — | Dog breeding matchmaking prototype | 🟡 Prototype |
+| 10 | **Community Intake & Routing** | [community-intake-routing.vercel.app](https://community-intake-routing.vercel.app) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | Intake routing agent | 🔴 404 / Retired |
 
 ---
 
-## 📋 Link Health Check
+## 🗂️ Repos Without Live Sites
 
-**Last Verified:** 2026-06-13
+| Repo | Purpose | Notes |
+|---|---|---|
+| [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Git-based agent world state store | New — replaces Vercel write quota usage |
+| [aeos](https://github.com/morrisstephon51/aeos) | Aeos execution agent | Local: `~/clawd/agents/aeos-agent` |
+| [Enrollment_Funnel_Agent](https://github.com/morrisstephon51/Enrollment_Funnel_Agent) | Enrollment funnel agent | Vault: `07-AI/agents/enrollment-funnel` |
+| [kai-obsidian-vault](https://github.com/morrisstephon51/kai-obsidian-vault) | Obsidian vault backup | Synced from `~/Desktop/kai` |
+| [agent-II](https://github.com/morrisstephon51/agent-II) | Agent II project | — |
+| [agent_I_content](https://github.com/morrisstephon51/agent_I_content) | Content pipeline agent (v1) | Superseded by content-machine |
+| [job_opportunity_scanner](https://github.com/morrisstephon51/job_opportunity_scanner) | Job & opportunity scanner agent | Vault: `07-AI/agents/job-scanner` |
 
-| Link | Status | Last Checked | Next Check |
+---
+
+## 📋 Link Health — Last Verified 2026-07-10
+
+| Site | Status | Last Checked | Next Check |
 |---|---|---|---|
-| Link-in-Bio | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| Command Center | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| Living Resume | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| The Plug AI | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| Stefan's Portfolio | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| MUNDI Agent Dashboard | 🟢 Live | 2026-07-04 | 2026-07-11 |
-| Community Intake & Routing | 🔴 Dead (404) | 2026-07-04 | — retired, matches archived status |
-
----
-
-## 🚨 If Links Break
-
-1. **Check GitHub:** https://github.com/morrisstephon51
-2. **Rebuild:** May need to rebuild site or fix deployment
-3. **Alternative:** Check local backups
-
----
-
-## 🔐 Backup Resources
-
-[Add any backup locations or alternative URLs]
+| The Plug AI | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| MUNDI Agent Dashboard | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Stefan's Portfolio | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Link-in-Bio | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Command Center | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Content Machine | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| AI Video Reel Generator | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Psychic Octo Engine | 🟢 Live | 2026-07-10 | 2026-07-17 |
+| Puppy Power | 🟡 Prototype | 2026-07-10 | — |
+| Community Intake & Routing | 🔴 Retired | 2026-07-04 | — |
 
 ---
 
 ## 📝 Quick Copy-Paste
 
-### All Links in One Place
-
 ```
-Link-in-Bio: https://morrisstephon51.github.io/Link-inbio/
-Command Center: https://morrisstephon51.github.io/Link-inbio/dashboard.html
-Living Resume: https://morrisstephon51.github.io/Link-inbio/dashboard.html
+The Plug AI:            https://psychic-bassoon-psi.vercel.app
+MUNDI Dashboard:        https://agent-world-olive.vercel.app
+Stefan's Portfolio:     https://stefan-portfolio-eight.vercel.app
+Link-in-Bio:            https://morrisstephon51.github.io/Link-inbio/
+Command Center:         https://morrisstephon51.github.io/Link-inbio/dashboard.html
+Content Machine:        https://content-machine-wine.vercel.app
+AI Video Reel:          https://ai-video-reel-generator.vercel.app
+Psychic Octo Engine:    https://psychic-octo-engine-psi.vercel.app
+Puppy Power:            https://breeding-community-pets.deploypad.app/
+GitHub:                 https://github.com/morrisstephon51
 ```
 
 ---
@@ -96,13 +79,9 @@ Living Resume: https://morrisstephon51.github.io/Link-inbio/dashboard.html
 ## 🔗 Related
 
 - [[09-SYSTEM/Command Center|Command Center]] — full cross-linked hub
+- [[link-health-checker|Link Health Checker]] — weekly verification checklist
 - [[master-tracker|Master Tracker]]
-- [[../../Projects/The Plug AI Progress|The Plug AI Progress]]
-- [[../../00 Home|Home]]
 
 ---
 
-**Check these links weekly!**
-*Add reminders to your calendar for monthly verification*
-
-*Last updated: 2026-07-04*
+*Last updated: 2026-07-10*

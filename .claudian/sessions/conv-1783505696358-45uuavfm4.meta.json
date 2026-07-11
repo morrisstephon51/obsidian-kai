@@ -1,0 +1,23 @@
+{
+  "id": "conv-1783505696358-45uuavfm4",
+  "providerId": "claude",
+  "title": "Build Obsidian smart connections",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783505696359,
+  "updatedAt": 1783572047482,
+  "lastResponseAt": 1783572047482,
+  "sessionId": "0c8f2aa2-16ab-4c2e-a68d-f938b15ac0d7",
+  "providerState": {
+    "providerSessionId": "0c8f2aa2-16ab-4c2e-a68d-f938b15ac0d7"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 10,
+    "cacheCreationInputTokens": 51940,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 51950,
+    "percentage": 26,
+    "contextWindowIsAuthoritative": true
+  }
+}

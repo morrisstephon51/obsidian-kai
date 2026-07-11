@@ -4,10 +4,10 @@ display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
 status: idle
-last_run: "2026-07-04T13:00:00Z"
-current_task: "Generated LinkedIn post — church as trusted resource navigator, digital equity justice angle for faith-community audience"
-runs_completed: 34
-items_processed: 159
+last_run: "2026-07-10T12:00:00Z"
+current_task: "Generated LinkedIn post — faith communities already own the most powerful distribution network in their zip code; The Plug AI goes where the trust already is; workshops in churches not conference rooms"
+runs_completed: 54
+items_processed: 179
 last_error: null
 color: "#9B59B6"
 house: "studio"

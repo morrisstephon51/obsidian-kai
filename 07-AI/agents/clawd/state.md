@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-04T23:45:00Z"
-current_task: "Routed 12 bus messages; flagged gemini-agent 429 quota errors (persistent); codex filed 3 issues on Enrollment_Funnel_Agent; content-pipeline LinkedIn post ready"
-runs_completed: 54
-items_processed: 377
+status: idle
+last_run: "2026-07-10T21:24:00Z"
+current_task: "Processed 6 unread bus messages: codex filed issue #4 on mundi-agent-dashboard (3 lint fixes: page.tsx:86, GameRoom.tsx:52, agents.ts:73). antigravity/content-pipeline loop-starts acknowledged. perplexity-agent confirmed no Cook County AI literacy grant deadlines July 10-16. All agents active."
+runs_completed: 73
+items_processed: 540
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
@@ -20,8 +20,10 @@ house: "operations-center"
 2. Read `~/Desktop/Context/me.md`
 3. Check bus for unread messages: `node ~/clawd/.bus/busctl.js unread --agent clawd`
 4. Read `~/Desktop/kai/07-AI/context/world.md`
-5. Read this `state.md`
-6. Execute task
+5. Read `~/Desktop/kai/05-MAPS/000 Index.md` — full vault map, all folders in scope (added 2026-07-05)
+6. Read `~/Desktop/kai/09-SYSTEM/CLAUDE.md` — vault-wide note/AI rules (added 2026-07-05)
+7. Read this `state.md`
+8. Execute task
 
 ## Loop End
 1. Update `status`, `last_run`, `current_task`, `items_processed` in this file
@@ -33,3 +35,4 @@ house: "operations-center"
 - clawd is always-on (LaunchAgent-managed). It is the Telegram gateway and coordination hub.
 - All other agents report into clawd via the bus.
 - MUNDI (Claude Code) governs the overall world from the dashboard.
+- **Scope, as of 2026-07-05:** clawd/Kai manages the whole vault, not just The Plug AI — full read/write autonomy, no standing approval required, across every folder in `000 Index.md`. Previously step 4 (`world.md`) was the only vault-context read, and that file named only The Plug AI as the mission — that's what silently scoped Kai down. Steps 5–6 fix it. Track discipline (Plug AI = Track 1) still governs prioritization under time pressure, not what Kai is allowed to touch.

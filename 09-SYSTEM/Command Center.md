@@ -20,6 +20,7 @@ last-updated: 2026-07-05
 | **The Plug AI** | Track 1 | Live, in development | See [[02-PROJECTS/The Plug AI/project-overview\|project overview]]. Repo `psychic-bassoon` |
 | **BigHeart / Puppy Power** | Day job / Track 2 funding bridge | Active campaign | Docs at `~/clawd/puppy-power/` |
 | **Forming Paws** | Track 2 | Phase 0+1 spec approved 2026-07-05, Phase 2 plan next | Health-first nonprofit dog-breeding matchmaking platform, $0 capital, Chicago IL launch. Repo `~/forming-paws` (local, not yet pushed to GitHub). Spec: `docs/superpowers/specs/2026-07-04-forming-paws-foundation-design.md` |
+| **Vault management** (Kai, whole vault) | Standing / all tracks | Active — expanded 2026-07-05 | Kai now reads and manages every PARA folder (Career, Finance, Education, Personal Growth, PKB, Daily Notes, Resources), not just The Plug AI. Full autonomy, no standing approval. Fixed same day: stale `[[05-MAPS/000 Index]]`, Plug-AI-only `07-AI/context/world.md`, and clawd's loop rules. |
 
 ---
 

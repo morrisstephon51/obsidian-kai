@@ -4,7 +4,7 @@ display_name: "Gemini"
 emoji: "♊"
 role: "Long-Context / Multimodal Research Assistant"
 status: "running"
-last_run: "2026-07-05T03:45:46.175Z"
+last_run: "2026-07-08T07:51:05.599Z"
 current_task: null
 runs_completed: 0
 items_processed: 0
