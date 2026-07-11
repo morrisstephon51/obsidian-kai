@@ -89,9 +89,9 @@ related: [[../../Areas/Career/index|Career]], [[../../Areas/Development/index|De
 
 ## Goals This Project Advances
 
-- [[./Career/Career Goals|Career Goals]]
+- [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
   - Builds: Full-stack development skills, fundraising, nonprofit operations
-- [[./Finance/Financial Goals|Financial Goals]]
+- [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
   - Path: Revenue/grant income → Bootstrap independence
 
 ## Daily Work
@@ -129,9 +129,9 @@ Supports: Financial Goals, Competitive Advantages
 - [[../Personal Growth/Strengths|Strengths]] — Leverages your strengths
 
 **Skills built:**
-- [[../Areas/Development/Skills|Skills]] — Technical capabilities acquired
-- [[../Areas/Development/index|Development Area]] — Overall development strategy
-- [[../Areas/Career/Competitive Advantages|Competitive Advantages]] — Differentiates you
+- [[../../Areas/Development/Skills|Skills]] — Technical capabilities acquired
+- [[../../Areas/Development/index|Development Area]] — Overall development strategy
+- [[../../Areas/Career/Competitive Advantages|Competitive Advantages]] — Differentiates you
 
 **In action:**
 - [[../Areas/Career/index|Career Hub]] — Career strategy
