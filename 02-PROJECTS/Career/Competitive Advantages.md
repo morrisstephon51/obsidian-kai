@@ -2,7 +2,7 @@
 type: atomic-note
 category: assets
 created: 2026-06-12
-related: [[me]], [[../Personal Growth/Strengths]], [[../Development/Skills]]
+related: [[me]], [[../Personal Growth/Strengths]], [[../../Areas/Development/Skills]]
 ---
 
 # Competitive Advantages
@@ -218,7 +218,7 @@ Build business around your advantages:
 ## Related
 
 - [[../Personal Growth/Strengths]] — The foundation
-- [[../Development/Skills]] — Technical skills amplify advantages
+- [[../../Areas/Development/Skills]] — Technical skills amplify advantages
 - [[../Career/Career Goals]] — Where to apply
 - [[../Career/Potential Career Paths]] — Opportunities
 - [[me|Personal Profile]] — Full context
