@@ -140,7 +140,7 @@ Supports: Financial Goals, Competitive Advantages
 - [[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]] — Project progress patterns
 
 **Reference:**
-- [[The Plug AI/|Project Folder]] — Project files
+- [[The Plug AI Progress|Project Progress]] — Tracked work
 - [[me|Personal Profile]] — Full context
 
 ---
