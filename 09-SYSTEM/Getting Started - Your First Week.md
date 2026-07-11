@@ -180,11 +180,10 @@ Why: Unlocks better career opportunities and credibility
 ## 🔗 Quick Reference
 
 **Need to:**
-- **Create daily note?** Copy [[_ops/daily-template|template]]
-- **See how connected?** Check [[Core Relationships Map|relationships map]]
-- **Track progress?** Update [[Progress Dashboard|dashboard]]
+- **Create daily note?** Copy [[09-SYSTEM/templates/daily-note|template]]
+- **Track progress?** Update your goal notes
 - **Understand goal?** Read goal note's "How This Connects" section
-- **Lost?** Go to [[00 Home|Home]]
+- **Lost?** Go to [[05-MAPS/00 Home|Home]]
 
 ---
 
@@ -216,9 +215,9 @@ That's it. One daily note per day for a week. That will show you:
 
 **Tomorrow, create your second daily note.**
 
-Use [[_ops/daily-template|this template]].
+Use [[09-SYSTEM/templates/daily-note|this template]].
 
-Link it to [[Areas/Career/Career Goals|one of your goals]].
+Link it to [[02-PROJECTS/Career/Career Goals|one of your goals]].
 
 Watch it connect.
 
