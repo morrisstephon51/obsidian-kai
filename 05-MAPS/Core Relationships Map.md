@@ -32,48 +32,51 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 💎 Foundation Layer
 
-**[[me|Personal Profile]]** (Master reference)
+**[[../../03-NOTES/Identity/me|Personal Profile]]** (Master reference)
 - Your identity, patterns, motivations
 - Informs all decisions
 - Updated quarterly
 
-**[[Areas/Personal Growth/index|Personal Growth]]**
-- [[Areas/Personal Growth/Core Values|Core Values]] ← START HERE
-- [[Areas/Personal Growth/Life Vision|Life Vision]] ← North Star
-- [[Areas/Personal Growth/Strengths|Strengths]] ← Your assets
-- [[Areas/Personal Growth/Weaknesses|Weaknesses]] ← Areas to watch
-- [[Areas/Personal Growth/Motivations|Motivations]] ← What drives you
+**[[../../Areas/Personal Growth/index|Personal Growth]]**
+- [[../../Areas/Personal Growth/Core Values|Core Values]] ← START HERE
+- [[../../Areas/Personal Growth/Life Vision|Life Vision]] ← North Star
+- [[../../Areas/Personal Growth/Strengths|Strengths]] ← Your assets
+- [[../../Areas/Personal Growth/Weaknesses|Weaknesses]] ← Areas to watch
+- [[../../Areas/Personal Growth/Motivations|Motivations]] ← What drives you
 
 ---
 
 ## 🎯 Goals Layer
 
-**[[Areas/Career/Career Goals|Career Goals]]** ← Enabled by values + education
-- Support: [[Areas/Development/Skills|Skill development]]
-- Measured by: [[Projects/The Plug AI Progress|Projects]]
-- Financial impact: [[Areas/Finance/Financial Goals|Financial goals]]
+**[[../../Areas/Career/index|Career]]** ← Enabled by values + education
+- Goal: [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
+- Support: [[../../Areas/Development/Skills|Skill development]]
+- Measured by: [[../../02-PROJECTS/The Plug AI Progress|Projects]]
+- Financial impact: [[../../Areas/Finance/Financial Goals|Financial goals]]
 
-**[[Areas/Finance/Financial Goals|Financial Goals]]** ← Enabled by career + education
+**[[../../Areas/Finance/index|Finance]]** ← Enabled by career + education
+- Goal: [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
 - Requires: Income growth
 - Blocked by: Current constraints
 - Goal: Independence
 
-**[[Areas/Education/Education Goals|Education Goals]]** ← Enables both career & finance
+**[[../../Areas/Education/index|Education]]** ← Enables both career & finance
+- Goal: [[../../02-PROJECTS/Education/Education Goals|Education Goals]]
 - High leverage activity
 - Opens doors
 
-**[[Areas/Development/index|Development]]** ← Supports career goals
-- [[Areas/Development/Skills|Skills]]
-- [[Areas/Career/Competitive Advantages|Competitive advantages]]
+**[[../../Areas/Development/index|Development]]** ← Supports career goals
+- [[../../02-PROJECTS/Development/Skills|Skills]]
+- [[../../02-PROJECTS/Career/Competitive Advantages|Competitive advantages]]
 
 ---
 
 ## 🚀 Projects Layer
 
-**[[Projects/The Plug AI Progress|The Plug AI]]**
-- Builds: [[Areas/Development/Skills|[specific skills]]]
-- Supports: [[Areas/Career/Career Goals|Career goals]]
-- Contributes to: [[Areas/Finance/Financial Goals|Financial independence]]
+**[[../../02-PROJECTS/The Plug AI Progress|The Plug AI]]**
+- Builds: [[../../02-PROJECTS/Development/Skills|[specific skills]]]
+- Supports: [[../../02-PROJECTS/Career/Career Goals|Career goals]]
+- Contributes to: [[../../02-PROJECTS/Finance/Financial Goals|Financial independence]]
 - Status: [linked to tracker]
 
 *Additional projects layer in as you create them*
@@ -82,21 +85,21 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 💡 Opportunities Layer
 
-**[[Opportunities/index|Opportunities Hub]]**
-- Evaluated against: [[Areas/Personal Growth/Core Values|Core Values]]
-- Aligned with: [[Areas/Career/Career Goals|Career Goals]] + [[Areas/Finance/Financial Goals|Financial Goals]]
-- Leverages: [[Areas/Personal Growth/Strengths|Strengths]]
+**[[../../Opportunities/index|Opportunities Hub]]**
+- Evaluated against: [[../../Areas/Personal Growth/Core Values|Core Values]]
+- Aligned with: [[../../02-PROJECTS/Career/Career Goals|Career Goals]] + [[../../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
+- Leverages: [[../../Areas/Personal Growth/Strengths|Strengths]]
 
 ---
 
 ## 📅 Daily Work Layer
 
-**[[_ops/master-tracker|Master Tracker]]** (Daily focus)
+**[[../../_ops/master-tracker|Master Tracker]]** (Daily focus)
 - Shows: Today's priorities
 - Linked to: Active projects + goals
 - Connects to: Weekly reviews
 
-**[[_ops/daily-template|Daily Notes]]** (Daily reflection)
+**[[../../_ops/daily-template|Daily Notes]]** (Daily reflection)
 - Record: Focus, learning, decisions, reflections
 - Link to: Relevant goals + projects
 - Feed into: Weekly reviews
@@ -105,13 +108,13 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 📊 Synthesis Layer
 
-**[[Weekly Reviews/index|Weekly Reviews]]** (Pattern recognition)
+**[[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]]** (Pattern recognition)
 - Aggregate: Daily insights
 - Identify: Patterns across goals
 - Surface: Ideas that bubble up
 - Inform: Adjustments to goals/vision
 
-**[[Progress Dashboard|Progress Dashboard]]** (Bird's-eye view)
+**[[../../01-DAILY/Progress Dashboard|Progress Dashboard]]** (Bird's-eye view)
 - Shows: Status of all areas
 - Tracks: Quarterly progress
 - Identifies: Cross-area synergies
