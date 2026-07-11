@@ -68,6 +68,16 @@ Your desired future: the life you're working toward.
 
 ---
 
+## Foundation
+
+Built on: [[Core Values]]
+
+Enabled by: [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]] + [[../Education/Education Goals|Education Goals]] + [[../Development/Skills|Skills Development]]
+
+Expressed through: [[../../02-PROJECTS/index|Projects]]
+
+---
+
 ## Alignment Check
 
 Your [[Core Values]] support this vision:
