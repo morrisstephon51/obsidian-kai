@@ -12,7 +12,7 @@ Your path to financial independence and autonomy.
 
 ## What Enables Financial Independence
 
-1. **Career Growth** → [[../Career/Career Goals|Career Goals]]
+1. **Career Growth** → [[../../02-PROJECTS/Career/Career Goals|Career Goals]]
    - Better role = higher income
    - Increased earning potential accelerates timeline
 
@@ -254,8 +254,8 @@ Weekly Progress (tracking momentum)
 - [[../Personal Growth/Motivations|Motivations]] — Freedom & security drive you
 
 **Supporting goals:**
-- [[../Career/Career Goals|Career Goals]] — Increases income
-- [[../Education/Education Goals|Education Goals]] — Enables better jobs
+- [[../../02-PROJECTS/Career/Career Goals|Career Goals]] — Increases income
+- [[../../02-PROJECTS/Education/Education Goals|Education Goals]] — Enables better jobs
 
 **In action:**
 - [[../../02-PROJECTS/The Plug AI Progress|The Plug AI Project]] — Building income/skills
@@ -263,7 +263,7 @@ Weekly Progress (tracking momentum)
 - [[../../01-DAILY/Progress Dashboard|Progress Dashboard]] — Financial progress tracking
 
 **Refinement:**
-- [[../../Weekly Reviews/index|Weekly Reviews]] — Financial progress patterns
+- [[../../01-DAILY/Weekly Reviews/index|Weekly Reviews]] — Financial progress patterns
 - [[../../_ops/grant-research-log|Grant Research Log]] — Funding opportunities
 
 **Reference:**
