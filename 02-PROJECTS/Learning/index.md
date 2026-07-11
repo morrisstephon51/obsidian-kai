@@ -43,6 +43,13 @@ This area tracks how you learn, what you're learning, and how to work with your 
 
 ---
 
+## 📖 Resources
+
+- [[../../04-RESOURCES/Prompts/index|Prompts Library]] — AI templates for your work
+- [[../../04-RESOURCES/index|Resources Hub]] — All source material
+
+---
+
 ## 📈 Meta-Notes
 
 Last reviewed: 2026-06-13
