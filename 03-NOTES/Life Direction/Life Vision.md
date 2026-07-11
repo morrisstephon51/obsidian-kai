@@ -20,3 +20,5 @@ Related:
 - [[Success Definition]]
 - [[Career Goals]]
 - [[Motivations]]
+- [[../../02-PROJECTS/Personal Growth/Life Vision|Life Vision (Active Area)]]
+- [[../../02-PROJECTS/Personal Growth/index|Personal Growth Hub]]
