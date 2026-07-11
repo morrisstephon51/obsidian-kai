@@ -92,8 +92,8 @@ Congratulations! Your personal knowledge vault is now set up with **proper struc
 
 **Each morning or evening:**
 
-1. **Duplicate** `Templates/Daily Note.md` 
-   - Name it: `Daily Notes/2026-06-12.md`
+1. **Duplicate** `09-SYSTEM/templates/daily-note.md` 
+   - Name it: `01-DAILY/2026-06-12.md`
    - Fill in the date
 
 2. **Fill sections:**
