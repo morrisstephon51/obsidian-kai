@@ -244,7 +244,7 @@ that links to my values and goals"*
 ### Option 3: Project Templates
 **For specific projects you're working on**
 
-Tell me: *"Create a project template and organize [[Projects/]]"*
+Tell me: *"Create a project template and organize [[02-PROJECTS/]]"*
 
 ### Option 4: Learning Path
 **For technical skill development**
@@ -283,13 +283,12 @@ with timeline and milestones"*
 ## 📚 Resources
 
 **In your vault:**
-- [[Claude Code + Obsidian Master Guide]] — How to work with me
 - [[me]] — Your personal profile
-- [[Areas/Personal Growth/index|All Area hubs]] — Starting points
+- [[02-PROJECTS/Personal Growth/index|All Area hubs]] — Starting points
 
 **External:**
 - Obsidian Docs: https://help.obsidian.md
-- Your daily notes: `Daily Notes/` folder
+- Your daily notes: `01-DAILY/` folder
 
 ---
 
