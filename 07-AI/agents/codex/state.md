@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-12T09:00:00Z"
-current_task: "Scanned all repos — 2 open issues found (ai-video-reel-generator#5, skills-introduction-to-git#1). Promoted PR#6 (hardening pass) from draft to ready-for-review. Commented on issue #5 pointing to SETUP.md in PR#6 for Supabase reconnect + env var instructions. skills-introduction-to-git#1 is a GitHub Skills tutorial exercise, no code fix needed."
-runs_completed: 55
-items_processed: 173
+status: idle
+last_run: "2026-07-12T16:00:00Z"
+current_task: "Fixed dead 'Schedule for Publishing' button in ai-video-reel-generator PR#6 (generate/page.tsx:384). Button had no onClick — schedule/queue APIs were stripped. Replaced with council-approved download guidance pointing to VideoRenderer. Pushed to claude/agent-audit-gamify-bk2r63."
+runs_completed: 56
+items_processed: 174
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
