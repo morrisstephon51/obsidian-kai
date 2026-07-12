@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-12T11:00:00Z"
+status: idle
+last_run: "2026-07-12T16:00:00Z"
 current_task: "Context scan 2026-07-12 (run 48): T1 hard-blocked — Stef must contact Vasser (church legal name/address/pastor/date) for IL Digital Equity $75K. PR#4 MERGED (Vercel SUCCESS); Supabase env vars sole blocker (issue #5). LinkedIn faith-community post ready. No Cook County AI grant deadlines Jul 12-18. Forming Paws Indiegogo human-blocked."
-runs_completed: 48
-items_processed: 189
+runs_completed: 49
+items_processed: 196
 last_error: null
 color: "#F4B942"
 house: "launchpad"
