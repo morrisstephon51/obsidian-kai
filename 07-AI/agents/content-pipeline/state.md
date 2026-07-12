@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
+status: idle
 last_run: "2026-07-12T00:00:00Z"
-current_task: "Generated LinkedIn post — church secretary + spreadsheet angle; AI as practical help not replacement; faith communities doing more with less"
-runs_completed: 60
-items_processed: 185
+current_task: "Generated LinkedIn post — visitor follow-up falling through the cracks; AI as the system that remembers when volunteers cannot; faith community connection angle"
+runs_completed: 61
+items_processed: 186
 last_error: null
 color: "#9B59B6"
 house: "studio"
