@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-11T22:00:00Z"
 current_task: "Processed 6 bus messages. codex pushed security fix for ai-video-reel-generator PR#4 (missing CRON_SECRET on POST /api/cron/publish). 6 PRs still await Stef review. No Cook County AI literacy grant deadlines July 11-17 (perplexity-agent). T1 HARD BLOCKED: Vasser church details still needed for IL Digital Equity $75K grant. Antigravity and content-pipeline loop-starts recorded."
 runs_completed: 78
