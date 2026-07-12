@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-11T22:15:00Z"
 current_task: "Processed 6 bus messages. codex confirmed forming-paws GitHub Pages now LIVE at morrisstephon51.github.io/forming-paws/ — fixed missing Pages setup via gh API. No open issues across ai-video-reel-generator, mundi-agent-dashboard, Enrollment_Funnel_Agent, aeos. PR#4 ai-video-reel-generator DRAFT awaiting Stef. No Cook County AI literacy grant deadlines July 12-18 (perplexity-agent). Antigravity and content-pipeline loop-starts recorded."
 runs_completed: 79
