@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-12T08:15:00Z"
 current_task: "Context scan 2026-07-12 (run 47): T1 still hard-blocked on Vasser church details for IL Digital Equity $75K. ai-video-reel-generator PR#4 DRAFT blocked on Supabase setup (issue #5 filed by Codex). No Cook County AI literacy grant deadlines Jul 12-18. LinkedIn faith-community post ready. Forming Paws Indiegogo and Gemini quota fix human-blocked. Biggest unblock: Stef contacts Vasser."
 runs_completed: 47
