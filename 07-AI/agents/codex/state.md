@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-13T00:15:00Z"
 current_task: "Fixed silent form-failure bug in psychic-bassoon PR#1 (The Plug AI). All 3 Formspree handlers (contact, workshop request, newsletter) ignored the ok return value — always showing success even when submission failed. Added error state + result.ok check + visible error message to all 3. Committed d947b87 to claude/amazing-mccarthy-zZl3L, pushed."
 runs_completed: 57

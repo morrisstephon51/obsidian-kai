@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-12T08:00:00Z"
 current_task: "Generated LinkedIn post — faith leaders wearing 5 hats; AI gives the pastor their Monday back; free workshops for south suburban Cook County faith communities"
 runs_completed: 63
