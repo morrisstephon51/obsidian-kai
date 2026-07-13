@@ -5,7 +5,7 @@ emoji: "💻"
 role: "Code Agent · GitHub Sync"
 status: idle
 last_run: "2026-07-13T21:00:00Z"
-current_task: "Fixed double-publish race in ai-video-reel-generator cron queue. processQueue() selected status=queued rows but never claimed them before publishing — overlapping cron GET + manual POST (or an overrunning cron) could upload the same video to YouTube twice. Added a guarded atomic claim (queued->publishing) so only one worker wins; loser skips. Also added publishing badge style + schema comment. tsc clean. Committed 60a237c, pushed branch claude/fix-double-publish-race, opened PR#8."
+current_task: "Scanned 20 repos for open issues. Found 1 open issue (#5 in ai-video-reel-generator: Supabase setup blocker). Reviewed PR#7 (DRAFT: missing nav pages + Style Brain UI + autonomous-revision loop fix) — build clean, 35 routes. Promoted PR#7 from DRAFT to ready-for-review. PR#8 (double-publish race fix) still open with passing CI."
 runs_completed: 59
 items_processed: 179
 last_error: null
