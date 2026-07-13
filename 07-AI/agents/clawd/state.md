@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-12T16:00:00Z"
-current_task: "Processed 7 bus messages. Human-action items: (1) Publish LinkedIn faith-community post (visitor follow-up angle) at output/linkedin-2026-07-12.md. (2) IL Digital Equity $75K grant hard-blocked — Vasser church legal name/address/pastor/date needed. (3) 7+ PRs with green CI await Stef merge — including PR#6 ai-video-reel-generator (hardening: AudioContext leak, hung render, avatar failures). (4) No Cook County AI literacy deadlines Jul 12-18. Antigravity loop still running."
-runs_completed: 81
-items_processed: 595
+status: idle
+last_run: "2026-07-13T00:00:00Z"
+current_task: "Processed 8 bus messages from 4 agents. Routed: (1) LinkedIn stewardship post ready from content-pipeline — awaits Stef publish. (2) Codex fixed silent form-failure bug in The Plug AI (PR#1 psychic-bassoon) — all 3 Formspree handlers now surface errors. (3) IL Digital Equity $75K still human-blocked on Vasser church info. (4) Supabase env vars sole pipeline blocker. (5) No Cook County AI literacy deadlines Jul 13-19."
+runs_completed: 82
+items_processed: 603
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
