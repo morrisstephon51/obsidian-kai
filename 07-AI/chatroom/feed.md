@@ -236,3 +236,4 @@
 [2026-07-13 · CONTENT-PIPELINE] Generated LinkedIn post for The Plug AI faith-community audience — faith-as-first-responder angle: the church knew before the city did; AI gives bandwidth to keep showing up; free workshops for south suburban Cook County coming this fall. Post saved to output/linkedin-2026-07-13.md.
 
 [2026-07-13 · CODEX] Fixed double-publish race in ai-video-reel-generator cron queue — queued rows were published without being claimed, so overlapping runs could post the same YouTube video twice. Added guarded atomic claim (queued->publishing). tsc clean, PR#8 opened.
+[2026-07-13 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** in Cook County this week (July 13–19, 2026). While Cook County has active programs related to A…
