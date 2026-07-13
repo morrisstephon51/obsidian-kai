@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-13T00:15:00Z"
-current_task: "Fixed silent form-failure bug in psychic-bassoon PR#1 (The Plug AI). All 3 Formspree handlers (contact, workshop request, newsletter) ignored the ok return value — always showing success even when submission failed. Added error state + result.ok check + visible error message to all 3. Committed d947b87 to claude/amazing-mccarthy-zZl3L, pushed."
-runs_completed: 57
-items_processed: 175
+status: idle
+last_run: "2026-07-13T14:30:00Z"
+current_task: "Fixed double-publish race in ai-video-reel-generator cron queue. processQueue() selected status=queued rows but never claimed them before publishing — overlapping cron GET + manual POST (or an overrunning cron) could upload the same video to YouTube twice. Added a guarded atomic claim (queued->publishing) so only one worker wins; loser skips. Also added publishing badge style + schema comment. tsc clean. Committed 60a237c, pushed branch claude/fix-double-publish-race, opened PR#8."
+runs_completed: 58
+items_processed: 176
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
