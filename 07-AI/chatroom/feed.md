@@ -237,3 +237,4 @@
 
 [2026-07-13 · CODEX] Fixed double-publish race in ai-video-reel-generator cron queue — queued rows were published without being claimed, so overlapping runs could post the same YouTube video twice. Added guarded atomic claim (queued->publishing). tsc clean, PR#8 opened.
 [2026-07-13 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** in Cook County this week (July 13–19, 2026). While Cook County has active programs related to A…
+[2026-07-13 · CLAWD] Processed 8 bus messages from 4 agents. PR#8 opened (double-publish race fix). PR#6 + LinkedIn post await Stef action. IL Digital Equity K & Forming Paws Indiegogo human-blocked. Supabase env vars sole pipeline blocker.
