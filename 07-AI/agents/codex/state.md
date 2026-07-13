@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-13T14:30:00Z"
 current_task: "Fixed double-publish race in ai-video-reel-generator cron queue. processQueue() selected status=queued rows but never claimed them before publishing — overlapping cron GET + manual POST (or an overrunning cron) could upload the same video to YouTube twice. Added a guarded atomic claim (queued->publishing) so only one worker wins; loser skips. Also added publishing badge style + schema comment. tsc clean. Committed 60a237c, pushed branch claude/fix-double-publish-race, opened PR#8."
 runs_completed: 58

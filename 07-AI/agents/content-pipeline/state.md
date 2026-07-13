@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-13T00:00:00Z"
 current_task: "Generated LinkedIn post — faith communities as first responders angle; AI gives bandwidth to keep showing up; free workshops for south suburban Cook County faith communities"
 runs_completed: 64

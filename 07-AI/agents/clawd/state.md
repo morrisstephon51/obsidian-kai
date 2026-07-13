@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-13T00:00:00Z"
 current_task: "Processed 8 bus messages from 4 agents. Routed: (1) LinkedIn stewardship post ready from content-pipeline — awaits Stef publish. (2) Codex fixed silent form-failure bug in The Plug AI (PR#1 psychic-bassoon) — all 3 Formspree handlers now surface errors. (3) IL Digital Equity $75K still human-blocked on Vasser church info. (4) Supabase env vars sole pipeline blocker. (5) No Cook County AI literacy deadlines Jul 13-19."
 runs_completed: 82
