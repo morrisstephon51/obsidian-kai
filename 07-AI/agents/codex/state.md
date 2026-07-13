@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-12T16:00:00Z"
 current_task: "Fixed dead 'Schedule for Publishing' button in ai-video-reel-generator PR#6 (generate/page.tsx:384). Button had no onClick — schedule/queue APIs were stripped. Replaced with council-approved download guidance pointing to VideoRenderer. Pushed to claude/agent-audit-gamify-bk2r63."
 runs_completed: 56

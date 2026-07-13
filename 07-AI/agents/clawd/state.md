@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-12T16:00:00Z"
 current_task: "Processed 7 bus messages. Human-action items: (1) Publish LinkedIn faith-community post (visitor follow-up angle) at output/linkedin-2026-07-12.md. (2) IL Digital Equity $75K grant hard-blocked — Vasser church legal name/address/pastor/date needed. (3) 7+ PRs with green CI await Stef merge — including PR#6 ai-video-reel-generator (hardening: AudioContext leak, hung render, avatar failures). (4) No Cook County AI literacy deadlines Jul 12-18. Antigravity loop still running."
 runs_completed: 81
