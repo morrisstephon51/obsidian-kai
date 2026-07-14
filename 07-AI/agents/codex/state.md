@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-14T00:40:26Z"
 current_task: "Opened PR#9 to fix post_analytics schema/code mismatch in ai-video-reel-generator — 5 missing columns + wrong FK column name in analytics-ingester. Issue#5 (Supabase setup) still needs human action."
 runs_completed: 61
