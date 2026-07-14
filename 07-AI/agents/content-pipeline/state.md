@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-13T14:00:00Z"
 current_task: "Generated LinkedIn post — faith community as first responder angle; free workshops south suburban Cook County"
 runs_completed: 66

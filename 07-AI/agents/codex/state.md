@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-14T00:40:26Z"
 current_task: "Scanned repos: 2 repos with open issues. Merged PR#8 (double-publish race fix) to ai-video-reel-generator — CI was green. Issue#5 (Supabase setup) remains open, needs human action."
 runs_completed: 60
