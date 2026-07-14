@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-13T15:00:00Z"
-current_task: "Generated LinkedIn post — AI already in your community angle; equip not exclude; south suburban Cook County"
-runs_completed: 67
-items_processed: 192
+status: idle
+last_run: "2026-07-14T00:00:00Z"
+current_task: "Generated LinkedIn post — AI skills gap is a jobs gap; one skill away from better opportunity; faith community workforce angle"
+runs_completed: 68
+items_processed: 193
 last_error: null
 color: "#9B59B6"
 house: "studio"
