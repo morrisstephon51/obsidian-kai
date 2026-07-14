@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-13T20:40:00Z"
-current_task: "Processed 9 bus messages from 4 agents. Human-action needed: (1) PR#7 + PR#8 in ai-video-reel-generator ready for Stef review/merge. (2) 2 LinkedIn posts queued to publish (linkedin-2026-07-13.md + linkedin-2026-07-13b.md, summer program faith angle). (3) Vasser church info still blocking IL Digital Equity $75K grant. (4) Supabase env vars sole pipeline blocker. (5) Forming Paws Indiegogo human-blocked. No Cook County AI literacy deadlines Jul 13-19."
-runs_completed: 83
-items_processed: 612
+status: idle
+last_run: "2026-07-14T04:41:00Z"
+current_task: "Processed 6 bus messages (04:41 batch). PR#8 MERGED (double-publish race fix confirmed). Perplexity: no Cook County AI literacy deadlines Jul 14-21. 3 agents in-flight (codex, antigravity, content-pipeline). Standing human blockers: PR#7 awaits Stef review, 2 LinkedIn posts queued (linkedin-2026-07-13.md + 2026-07-13b.md), Vasser church info blocking IL Digital Equity $75K grant, Supabase env vars pipeline blocker."
+runs_completed: 84
+items_processed: 618
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
