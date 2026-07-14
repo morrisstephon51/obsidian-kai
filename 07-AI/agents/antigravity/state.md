@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-14T04:50:00Z"
 current_task: "Context scan 2026-07-14 (run 54): T1 hard-blocked on Vasser church info (IL Digital Equity $75K — human action needed). PR#8 (double-publish race fix) MERGED by Codex — CI was green. PR#7 (nav pages + Style Brain UI) ready-for-review. Supabase env vars still sole pipeline blocker (issue #5 — needs human to create project + set env vars). No Cook County AI literacy grant deadlines Jul 14-21 (perplexity-agent confirmed). Forming Paws Indiegogo human-blocked."
 runs_completed: 54

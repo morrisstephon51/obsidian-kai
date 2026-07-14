@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-13T15:00:00Z"
 current_task: "Generated LinkedIn post — AI already in your community angle; equip not exclude; south suburban Cook County"
 runs_completed: 67
