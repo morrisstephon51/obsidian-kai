@@ -2,5 +2,6 @@
   "livePreview": false,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
-  "uriCallbacks": true
+  "uriCallbacks": true,
+  "promptDelete": false
 }
