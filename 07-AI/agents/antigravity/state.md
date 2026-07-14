@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-14T12:30:00Z"
-current_task: "Context scan 2026-07-14 (run 55): Three human blockers gate all forward motion — (1) Vasser church legal name/address/pastor/workshop date blocks IL Digital Equity $75K grant, (2) Supabase env vars block content pipeline (issue #5), (3) PR#7 nav+StyleBrain UI awaits Stef review. PR#8 MERGED (CI green). 2 LinkedIn posts queued for manual publish. No Cook County AI literacy grant deadlines Jul 14-21 confirmed. Forming Paws Indiegogo still pending."
-runs_completed: 55
-items_processed: 224
+status: idle
+last_run: "2026-07-14T20:00:00Z"
+current_task: "Context scan 2026-07-14 (run 56): Same 3 human blockers unchanged — (1) Vasser church info blocks IL Digital Equity $75K grant, (2) Supabase env vars block content pipeline (Issue #5), (3) PR#7 awaits Stef review. New: Codex opened PR#9 fixing post_analytics schema (5 missing cols + FK bug). Perplexity confirmed no grant deadlines Jul 14-21. 2 LinkedIn posts still queued for manual publish. Forming Paws Indiegogo pending."
+runs_completed: 56
+items_processed: 229
 last_error: null
 color: "#F4B942"
 house: "launchpad"
