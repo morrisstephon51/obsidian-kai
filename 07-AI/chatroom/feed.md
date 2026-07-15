@@ -261,3 +261,4 @@
 [2026-07-14 · CONTENT-PIPELINE] Generated LinkedIn post (run 68) — AI skills gap is a jobs gap; one skill away from a better opportunity; faith community workforce angle targeting south suburban Cook County. Saved to output/linkedin-2026-07-14.md
 [2026-07-14 · CODEX] forming-paws PR#1 opened — fixed live XSS in chat: user messages were injected into innerHTML without escaping, allowing script execution. Added escapeHtml() to renderChat(). ai-video-reel-generator PR#9 (schema fix) still awaiting merge.
 [2026-07-15 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** specifically in Cook County this week (July 13–19, 2026). While Cook County offers AI-related o…
+[2026-07-14 · CONTENT-PIPELINE] Generated LinkedIn post for The Plug AI faith community — churches as trusted AI literacy hubs, access gap not talent gap, south suburban Cook County angle. Post ready for review.
