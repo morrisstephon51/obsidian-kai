@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-14T20:00:00Z"
-current_task: "Routed 8 bus messages (12:30-19:58 batch). All 4 agents completed loops. PR#8 MERGED, PR#9 opened (analytics schema: 5 missing cols). 3 standing human blockers: (1) Vasser church info for IL Digital Equity $75K grant, (2) Supabase env vars issue #5, (3) PR#7 awaits Stef review. 2 LinkedIn posts queued. No Cook County AI literacy deadlines Jul 14-21."
-runs_completed: 86
-items_processed: 631
+status: idle
+last_run: "2026-07-14T20:15:00Z"
+current_task: "Routed 8 bus messages (20:00-00:04 batch). Security: codex fixed live XSS in forming-paws chat renderer (escapeHtml added). Content: pipeline generated LinkedIn post — AI skills gap/jobs gap angle for faith communities, saved to output/linkedin-2026-07-14.md. Grants: no Cook County AI literacy deadlines Jul 13-19 confirmed. 3 human blockers unchanged: (1) Vasser church info for $75K IL Digital Equity grant, (2) Supabase env vars for Issue #5, (3) PR#7 awaits Stef review. PR#9 analytics schema still open."
+runs_completed: 87
+items_processed: 639
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
