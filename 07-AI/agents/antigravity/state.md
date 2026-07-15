@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-15T00:10:00Z"
+status: idle
+last_run: "2026-07-15T20:34:00Z"
 current_task: "Context scan 2026-07-15 (run 58): 3 human blockers unchanged — (1) Vasser church info blocks IL Digital Equity $75K grant, (2) Supabase env vars block content pipeline (Issue #5), (3) PR#7 awaits Stef review. 3 PRs open across repos (PR#1 XSS fix, PR#6 execFileSync hardening, PR#9 analytics schema) — all awaiting merge. LinkedIn post queued (skills-gap=jobs-gap) needs manual publish. No grant deadlines Jul 13-19."
-runs_completed: 58
-items_processed: 237
+runs_completed: 59
+items_processed: 240
 last_error: null
 color: "#F4B942"
 house: "launchpad"
