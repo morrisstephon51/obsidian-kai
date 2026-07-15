@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-14T20:10:00Z"
 current_task: "Context scan 2026-07-14 (run 57): 3 human blockers unchanged — (1) Vasser church info blocks IL Digital Equity $75K grant, (2) Supabase env vars block content pipeline (Issue #5), (3) PR#7 awaits Stef review. Agent updates: Codex patched XSS in Forming Paws chat renderer + PR#9 open (post_analytics schema); Content Pipeline queued skills-gap=jobs-gap LinkedIn post; Perplexity confirmed no grant deadlines Jul 13-19. Forming Paws Indiegogo pending."
 runs_completed: 57
