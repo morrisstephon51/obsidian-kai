@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-14T12:00:00Z"
-current_task: "Generated LinkedIn post — churches as trusted AI literacy hubs; access gap not talent gap; faith community south suburbs angle"
-runs_completed: 69
-items_processed: 194
+status: idle
+last_run: "2026-07-15T12:00:00Z"
+current_task: "Generated LinkedIn post — church secretary persona; concrete before/after AI workshop; faith community south suburbs angle"
+runs_completed: 70
+items_processed: 195
 last_error: null
 color: "#9B59B6"
 house: "studio"
