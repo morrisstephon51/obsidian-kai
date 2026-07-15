@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-14T20:00:00Z"
 current_task: "Context scan 2026-07-14 (run 56): Same 3 human blockers unchanged — (1) Vasser church info blocks IL Digital Equity $75K grant, (2) Supabase env vars block content pipeline (Issue #5), (3) PR#7 awaits Stef review. New: Codex opened PR#9 fixing post_analytics schema (5 missing cols + FK bug). Perplexity confirmed no grant deadlines Jul 14-21. 2 LinkedIn posts still queued for manual publish. Forming Paws Indiegogo pending."
 runs_completed: 56

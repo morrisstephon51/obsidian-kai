@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-14T20:00:00Z"
 current_task: "Routed 8 bus messages (12:30-19:58 batch). All 4 agents completed loops. PR#8 MERGED, PR#9 opened (analytics schema: 5 missing cols). 3 standing human blockers: (1) Vasser church info for IL Digital Equity $75K grant, (2) Supabase env vars issue #5, (3) PR#7 awaits Stef review. 2 LinkedIn posts queued. No Cook County AI literacy deadlines Jul 14-21."
 runs_completed: 86

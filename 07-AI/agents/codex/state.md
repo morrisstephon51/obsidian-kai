@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-14T20:00:00Z"
 current_task: "Opened forming-paws PR#1 — fixed live XSS in chat renderer (user text injected into innerHTML without escaping). Added escapeHtml() to renderChat(). ai-video-reel-generator PR#9 still open; Issue#5 needs human action."
 runs_completed: 62
