@@ -20,11 +20,11 @@ last-checked: 2026-07-10
 | 3 | **Stefan's Portfolio** | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan_portfolio](https://github.com/morrisstephon51/Stefan_portfolio) | Personal portfolio / resume | 🟢 Live |
 | 4 | **Link-in-Bio** | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | 🟢 Live |
 | 5 | **Command Center** | [morrisstephon51.github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | PIN-locked hub (apps, agents, links) | 🟢 Live |
-| 6 | **Content Machine** | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | [content-machine](https://github.com/morrisstephon51/content-machine) | Content pipeline agent UI | 🟢 Live |
+| 6 | **Content Machine** | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | — (archived) | Content pipeline agent UI | 🟢 Live |
 | 7 | **AI Video Reel Generator** | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | [ai-video-reel-generator](https://github.com/morrisstephon51/ai-video-reel-generator) | Auto video reel builder | 🟢 Live |
 | 8 | **Psychic Octo Engine** | [psychic-octo-engine-psi.vercel.app](https://psychic-octo-engine-psi.vercel.app) | [psychic-octo-engine](https://github.com/morrisstephon51/psychic-octo-engine) | Link-in-bio variant | 🟢 Live |
 | 9 | **Puppy Power (Breeding App)** | [breeding-community-pets.deploypad.app](https://breeding-community-pets.deploypad.app/) | — | Dog breeding matchmaking prototype | 🟡 Prototype |
-| 10 | **Community Intake & Routing** | [community-intake-routing.vercel.app](https://community-intake-routing.vercel.app) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | Intake routing agent | 🔴 404 / Retired |
+| 10 | **Community Intake & Routing** | — (404) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | Intake routing agent | 🔴 Archived |
 
 ---
 
