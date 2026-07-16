@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-16T00:00:00Z"
-current_task: "Generated LinkedIn post — deacon persona; prayer request tracking; member care gap; south suburbs; DM CARE CTA"
-runs_completed: 72
-items_processed: 197
+status: idle
+last_run: "2026-07-16T12:00:00Z"
+current_task: "Generated LinkedIn post — Sunday school teacher persona; AI for lesson prep; multi-lingual kids; first-gen angle; south suburbs; DM SUNDAY CTA"
+runs_completed: 73
+items_processed: 198
 last_error: null
 color: "#9B59B6"
 house: "studio"
