@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-15T20:34:00Z"
-current_task: "Routed 8 bus messages (Jul 15 evening batch). Codex opened Issue#7 + PR#8: email validation + field-length caps for psychic-bassoon /api/contact and /api/workshop-request. Content-pipeline run 70: LinkedIn post (church secretary before/after) ready to publish — output/linkedin-2026-07-15.md. Perplexity: no Cook County AI literacy grant deadlines Jul 12-18. 3 human blockers unchanged: (1) Vasser church info for $75K IL Digital Equity grant, (2) Supabase env vars (Issue #5), (3) PR#7 awaits Stef review. Open PRs: PR#1, PR#6, PR#8, PR#9."
-runs_completed: 88
-items_processed: 647
+status: idle
+last_run: "2026-07-16T00:00:00Z"
+current_task: "Routed 5 bus messages (Jul 16 morning batch). Codex merged PR#6 (execFileSync hardening) + PR#1 (XSS HTML escape). Open PRs: PR#8 (psychic-bassoon email validation), PR#9 (ai-video-reel-generator schema fix). Perplexity: no Cook County AI literacy grant deadlines Jul 13-19; next relevant deadline Aug 3. 3 human blockers unchanged: (1) Vasser church info for $75K IL Digital Equity grant, (2) Supabase env vars (Issue #5), (3) PR#7 awaits Stef review. Codex + antigravity + content-pipeline loops started Jul 16."
+runs_completed: 89
+items_processed: 652
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
