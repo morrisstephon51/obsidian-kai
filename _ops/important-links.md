@@ -35,7 +35,7 @@ last-checked: 2026-07-10
 | [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Git-based agent world state store | New — replaces Vercel write quota usage |
 | [aeos](https://github.com/morrisstephon51/aeos) | Aeos execution agent | Local: `~/clawd/agents/aeos-agent` |
 | [Enrollment_Funnel_Agent](https://github.com/morrisstephon51/Enrollment_Funnel_Agent) | Enrollment funnel agent | Vault: `07-AI/agents/enrollment-funnel` |
-| [kai-obsidian-vault](https://github.com/morrisstephon51/kai-obsidian-vault) | Obsidian vault backup | Synced from `~/Desktop/kai` |
+| — (see [[00 Home\|kai vault]]) | Obsidian vault backup | Local: `~/Desktop/kai` — no separate GitHub repo |
 | [agent-II](https://github.com/morrisstephon51/agent-II) | Agent II project | — |
 | [agent_I_content](https://github.com/morrisstephon51/agent_I_content) | Content pipeline agent (v1) | Superseded by content-machine |
 | [job_opportunity_scanner](https://github.com/morrisstephon51/job_opportunity_scanner) | Job & opportunity scanner agent | Vault: `07-AI/agents/job-scanner` |
