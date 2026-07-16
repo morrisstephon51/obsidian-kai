@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-16T00:00:00Z"
-current_task: "Context scan 2026-07-16 (run 60): 3 human blockers persist — (1) Vasser church info blocks IL Digital Equity $75K grant (T1 critical path), (2) Supabase env vars block content pipeline Issue#5 (human setup required), (3) PR#7 awaits Stef review. PRs #1 and #6 confirmed merged by Codex. PRs #8 (email validation) and #9 (analytics schema) still open. No grant deadlines this week; next relevant deadline Aug 3. LinkedIn post pending publish."
-runs_completed: 60
-items_processed: 245
+status: idle
+last_run: "2026-07-16T16:41:00Z"
+current_task: "Context scan 2026-07-16 (run 61): 3 human blockers persist — (1) Vasser church info blocks IL Digital Equity $75K grant (T1 critical path), (2) Supabase env vars block content pipeline Issue#5 (human setup required), (3) PR#7 awaits Stef review. PRs #8 and #9 now CONFIRMED merged by Codex. PR#1 (psychic-bassoon) has merge conflicts — needs rebase. LinkedIn post (deacon persona) generated and saved, pending human publish. No grant deadlines this week; next relevant Aug 3."
+runs_completed: 61
+items_processed: 254
 last_error: null
 color: "#F4B942"
 house: "launchpad"
