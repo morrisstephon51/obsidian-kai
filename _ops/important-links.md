@@ -16,7 +16,7 @@ last-checked: 2026-07-10
 | # | Name | Live URL | GitHub Repo | Purpose | Status |
 |---|---|---|---|---|---|
 | 1 | **The Plug AI** | [psychic-bassoon-psi.vercel.app](https://psychic-bassoon-psi.vercel.app) | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | AI literacy platform | 🟢 Live |
-| 2 | **MUNDI Agent Dashboard** | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-agent-dashboard](https://github.com/morrisstephon51/mundi-agent-dashboard) | Agent fleet control panel | 🟢 Live |
+| 2 | **MUNDI Agent Dashboard** | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Agent fleet control panel | 🟢 Live |
 | 3 | **Stefan's Portfolio** | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan_portfolio](https://github.com/morrisstephon51/Stefan_portfolio) | Personal portfolio / resume | 🟢 Live |
 | 4 | **Link-in-Bio** | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | 🟢 Live |
 | 5 | **Command Center** | [morrisstephon51.github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | PIN-locked hub (apps, agents, links) | 🟢 Live |
