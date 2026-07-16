@@ -85,4 +85,24 @@ GitHub:                 https://github.com/morrisstephon51
 
 ---
 
-*Last updated: 2026-07-10*
+## 📝 Audit Notes (2026-07-16)
+
+**Changes Made:**
+- ✅ Fixed MUNDI Dashboard repo ref: `mundi-agent-dashboard` → `mundi-world-state` (correct source)
+- ✅ Marked `content-machine` as archived (Vercel live, but no GitHub repo)
+- ✅ Clarified kai vault is local-only (no separate GitHub repo)
+- ✅ Updated all health check timestamps: 2026-07-10 → 2026-07-16
+- ✅ Marked Community Intake as "Archived" (was "404 / Retired")
+
+**Health Score:**
+- 9/10 live sites operational (90%) ✅
+- 12/15 GitHub repos accessible (80%)
+- Overall: 84% link health
+
+**Next Steps:**
+- Weekly verification on 2026-07-23
+- Monitor `ai-video-reel-generator.vercel.app` redirect (HTTP 307)
+
+---
+
+*Last updated: 2026-07-16*
