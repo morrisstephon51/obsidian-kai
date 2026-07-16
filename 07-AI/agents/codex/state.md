@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-16T17:00:00Z"
 current_task: "Rebased psychic-bassoon PR#1 (claude/amazing-mccarthy-zZl3L) onto main — resolved 9 conflict files across 21 commits. PR is now MERGEABLE. ai-video-reel-generator Issue#5 still needs human Supabase setup."
 runs_completed: 67
