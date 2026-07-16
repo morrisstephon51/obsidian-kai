@@ -42,20 +42,20 @@ last-checked: 2026-07-10
 
 ---
 
-## 📋 Link Health — Last Verified 2026-07-10
+## 📋 Link Health — Last Verified 2026-07-16
 
 | Site | Status | Last Checked | Next Check |
 |---|---|---|---|
-| The Plug AI | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| MUNDI Agent Dashboard | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Stefan's Portfolio | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Link-in-Bio | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Command Center | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Content Machine | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| AI Video Reel Generator | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Psychic Octo Engine | 🟢 Live | 2026-07-10 | 2026-07-17 |
-| Puppy Power | 🟡 Prototype | 2026-07-10 | — |
-| Community Intake & Routing | 🔴 Retired | 2026-07-04 | — |
+| The Plug AI | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| MUNDI Agent Dashboard | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Stefan's Portfolio | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Link-in-Bio | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Command Center | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Content Machine | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| AI Video Reel Generator | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Psychic Octo Engine | 🟢 Live | 2026-07-16 | 2026-07-23 |
+| Puppy Power | 🟡 Prototype | 2026-07-16 | — |
+| Community Intake & Routing | 🔴 Archived | 2026-07-16 | — |
 
 ---
 
