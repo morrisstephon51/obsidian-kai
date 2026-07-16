@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-15T14:00:00Z"
-current_task: "Generated LinkedIn post — faith community leaders angle; gap framing; deacon/pastor/secretary personas; south suburbs Chicago; DM CTA"
-runs_completed: 71
-items_processed: 196
+status: idle
+last_run: "2026-07-16T00:00:00Z"
+current_task: "Generated LinkedIn post — deacon persona; prayer request tracking; member care gap; south suburbs; DM CARE CTA"
+runs_completed: 72
+items_processed: 197
 last_error: null
 color: "#9B59B6"
 house: "studio"
