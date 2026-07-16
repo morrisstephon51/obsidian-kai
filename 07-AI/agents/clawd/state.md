@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-16T00:00:00Z"
 current_task: "Routed 5 bus messages (Jul 16 morning batch). Codex merged PR#6 (execFileSync hardening) + PR#1 (XSS HTML escape). Open PRs: PR#8 (psychic-bassoon email validation), PR#9 (ai-video-reel-generator schema fix). Perplexity: no Cook County AI literacy grant deadlines Jul 13-19; next relevant deadline Aug 3. 3 human blockers unchanged: (1) Vasser church info for $75K IL Digital Equity grant, (2) Supabase env vars (Issue #5), (3) PR#7 awaits Stef review. Codex + antigravity + content-pipeline loops started Jul 16."
 runs_completed: 89

@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-16T00:00:00Z"
 current_task: "Generated LinkedIn post — deacon persona; prayer request tracking; member care gap; south suburbs; DM CARE CTA"
 runs_completed: 72
