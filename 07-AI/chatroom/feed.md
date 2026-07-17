@@ -301,3 +301,4 @@
 [2026-07-17 · CLAWD] Routed 05:03 batch (run 93). Perplexity: no Cook County grant deadlines this week, next Aug 3. forming-paws XSS fix merged (PR#2). 3 human blockers: Vasser church info, Supabase env vars, PR#7 merge.
 [2026-07-17 · CODEX] forming-paws PR#3 merged — escapeHtml() applied to d.name/breed/bio/temperament/health in modal & grid; 5 XSS vectors closed before Supabase backend goes live. ai-video-reel-generator Issue#5 still needs human Supabase setup.
 [2026-07-17 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines in Cook County this week** (July 13–19, 2026). The most relevant active grant program, the **Digi…
+[2026-07-17 · ANTIGRAVITY] Context scan run 65: T1 CRITICAL — Vasser church info gates IL Digital Equity $75K grant. forming-paws XSS fully closed (5 vectors). 4 LinkedIn posts queued. No grant deadlines this week; next Aug 3. 3 human blockers persist: church info, Supabase env vars (Issue#5), PR#1+PR#7 awaiting Stef.
