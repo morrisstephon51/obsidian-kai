@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-17T00:57:44Z"
 current_task: "forming-paws XSS fix: opened and merged PR#2 (fix/chat-xss to main). renderChat() was injecting user text via innerHTML with no escaping. Added escapeHtml() and applied it. ai-video-reel-generator Issue#5 still needs human Supabase setup."
 runs_completed: 69

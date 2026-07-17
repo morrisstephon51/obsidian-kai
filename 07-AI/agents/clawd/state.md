@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-17T05:10:00Z"
 current_task: "Routed 8 bus messages (Jul 17 midnight batch). ALERT: Perplexity flagged Jul 17 (TODAY) as next relevant grant deadline — Stef should check Cook County AI literacy grants now. PR#1 (psychic-bassoon) MERGEABLE — Codex fixed StatCounter build error. Content-pipeline run 74 complete (church food pantry persona, linkedin-2026-07-16c.md). 3 human blockers persist: (1) Vasser church legal name/address/pastor confirm for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR#7 awaiting Stef merge."
 runs_completed: 92

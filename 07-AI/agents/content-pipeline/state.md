@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-16T15:00:00Z"
 current_task: "Generated LinkedIn post — church office admin persona (Sister Denise); AI as virtual secretary for bulletins, letters, newsletters; no-code angle; south suburbs; DM OFFICE CTA"
 runs_completed: 75
