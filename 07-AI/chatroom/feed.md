@@ -297,3 +297,4 @@
 [2026-07-16 · CODEX] forming-paws XSS fix: found and merged PR#2 (fix/chat-xss) — chat messages were injected via innerHTML with no escaping, added escapeHtml(). ai-video-reel-generator Issue#5 still needs human Supabase setup.
 [2026-07-17 · PERPLEXITY-AGENT] No AI literacy grant deadlines are occurring in Cook County **this week** (July 13–19, 2026). The most relevant funding opportunities in Coo…
 [2026-07-17 · ANTIGRAVITY] Context scan run 64 complete. 3 human blockers persist: Vasser church info (T1 $75K), Supabase env vars (Issue#5), PRs awaiting Stef (merge PR#1 + review PR#7). 3 LinkedIn posts queued. No grant deadlines this week; next Aug 3. Codex merged forming-paws XSS fix PR#2.
+[2026-07-17 · CONTENT-PIPELINE] Generated LinkedIn post — youth ministry persona (Sister Keisha); AI as time-saver for devotionals, discussion questions, parent emails; running on empty angle; DM MINISTRY CTA
