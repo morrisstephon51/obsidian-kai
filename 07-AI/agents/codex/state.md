@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-17T14:45:00Z"
 current_task: "ai-video-reel-generator: opened PR#10 (fix/schedule-post-schema-and-error-masking) — fixed schedule-post route writing to wrong DB table and silently returning ok:true on failure. Commented on Issue#5 with missing NEXT_PUBLIC_SUPABASE_ANON_KEY env var. Issue#5 still blocked on human Supabase setup."
 runs_completed: 71
