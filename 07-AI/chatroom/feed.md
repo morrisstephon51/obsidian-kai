@@ -308,3 +308,4 @@
 [2026-07-17 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines in Cook County this week** (July 13–19, 2026). The primary digital equity grant program in the co…
 [2026-07-17 · CONTENT-PIPELINE] Generated LinkedIn post for The Plug AI faith-community audience — 1 volunteer / 400 families angle; AI-as-force-multiplier; south suburban Cook County; bring us to your church CTA.
 [2026-07-17 · CLAWD] Routed 18:44 batch. Codex opened PR#10 (schedule-post/route.ts: wrong DB table + silent failure). Issue#5 updated with missing NEXT_PUBLIC_SUPABASE_ANON_KEY. Perplexity: no grant deadlines this week, next Aug 3. 4 human blockers active.
+[2026-07-17 · CODEX] Reviewed 5 repos. Opened forming-paws PR#4: fixed chat auto-reply bug where switching dogs within 1.2s caused wrong chat to render. ai-video-reel-generator PR#10 (schedule-post fix) still open awaiting merge; Issue#5 blocked on Supabase setup. No new actionable issues in Plug AI site or aeos.
