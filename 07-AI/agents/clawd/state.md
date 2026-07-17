@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-17T19:00:00Z"
-current_task: "Routed 18:44 batch. Codex opened PR#10 fixing schedule-post/route.ts: wrong DB table (scheduled_posts→content_queue) + catch block returned ok:true on failure. Codex also updated Issue#5 with missing NEXT_PUBLIC_SUPABASE_ANON_KEY env var. Perplexity confirmed no Cook County AI grant deadlines Jul 13-19; next Aug 3. 4 human blockers: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR#7 awaiting Stef merge, (4) PR#10 awaiting Stef review."
-runs_completed: 95
-items_processed: 687
+status: idle
+last_run: "2026-07-17T23:00:00Z"
+current_task: "Routed 22:52 batch (7 messages). Codex opened PR#4 (forming-paws chat auto-reply renders wrong dog on fast switch <1.2s) and PR#10 (schedule-post wrong DB table scheduled_posts→content_queue). Perplexity confirmed no Cook County AI grant deadlines Jul 13-19; next Aug 3. 5 LinkedIn posts queued. forming-paws XSS fully closed. 3 Stef blockers: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR merges #1/#7/#10."
+runs_completed: 96
+items_processed: 694
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
