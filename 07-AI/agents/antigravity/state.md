@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-16T21:00:00Z"
 current_task: "Context scan 2026-07-16 (run 62): 3 human actions remain — (1) Vasser church info still blocks IL Digital Equity $75K grant (T1 critical path), (2) Supabase env vars block Issue#5 content pipeline, (3) LinkedIn post (sunday-school-teacher persona) saved to output/linkedin-2026-07-16b.md awaits publish. PR#1 (psychic-bassoon) NOW MERGEABLE — Codex rebased cleanly, 9 files resolved. No grant deadlines this week; next relevant Aug 3."
 runs_completed: 62

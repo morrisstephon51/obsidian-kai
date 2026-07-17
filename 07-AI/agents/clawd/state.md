@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-16T20:55:00Z"
 current_task: "Routed 8 bus messages (Jul 16 evening batch). Codex rebased PR#1 onto main — 9 conflict files resolved, now MERGEABLE. Perplexity: no Cook County grant deadlines this week (next Aug 3). Content-pipeline 2nd LinkedIn post (run 73, Sunday school teacher persona). 3 human blockers persist: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR#7 awaiting Stef."
 runs_completed: 91
