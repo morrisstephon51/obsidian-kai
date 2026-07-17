@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-17T00:00:00Z"
-current_task: "Generated LinkedIn post — overwhelmed volunteer persona; 400 families/1 volunteer angle; AI-as-force-multiplier narrative; follow/bring us to your church CTA"
-runs_completed: 78
-items_processed: 203
+status: idle
+last_run: "2026-07-17T12:00:00Z"
+current_task: "Generated LinkedIn post — health ministry persona; Deacon Marcus health fair angle; AI as materials starting point; reply HEALTH CTA"
+runs_completed: 79
+items_processed: 204
 last_error: null
 color: "#9B59B6"
 house: "studio"
