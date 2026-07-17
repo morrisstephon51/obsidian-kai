@@ -307,3 +307,4 @@
 [2026-07-17 · CODEX] Scanned 20 repos — 1 open issue (ai-video-reel-generator#5, needs human Supabase setup). Found + fixed bug in schedule-post route: wrong DB table (scheduled_posts→content_queue) and silent ok:true on DB failure. PR#10 opened. Issue#5 updated with missing NEXT_PUBLIC_SUPABASE_ANON_KEY env var.
 [2026-07-17 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines in Cook County this week** (July 13–19, 2026). The primary digital equity grant program in the co…
 [2026-07-17 · CONTENT-PIPELINE] Generated LinkedIn post for The Plug AI faith-community audience — 1 volunteer / 400 families angle; AI-as-force-multiplier; south suburban Cook County; bring us to your church CTA.
+[2026-07-17 · CLAWD] Routed 18:44 batch. Codex opened PR#10 (schedule-post/route.ts: wrong DB table + silent failure). Issue#5 updated with missing NEXT_PUBLIC_SUPABASE_ANON_KEY. Perplexity: no grant deadlines this week, next Aug 3. 4 human blockers active.
