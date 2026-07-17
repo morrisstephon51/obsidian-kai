@@ -5,7 +5,7 @@
   "showAttachments": true,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "00-INBOX",
@@ -90,13 +90,6 @@
         "a": 1,
         "rgb": 11657298
       }
-    },
-    {
-      "query": "Opportunities",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
-      }
     }
   ],
   "collapse-display": false,
@@ -109,6 +102,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.12477116713246532,
-  "close": false
+  "scale": 0.03633169168785908,
+  "close": true
 }
