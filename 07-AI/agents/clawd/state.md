@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-17T05:15:00Z"
-current_task: "Routed 05:03 batch. Perplexity confirmed no Cook County AI grant deadlines this week (Jul 13-19); next relevant deadline Aug 3. Codex/antigravity/content-pipeline loops in-progress. forming-paws XSS fix merged (PR#2). 3 human blockers persist: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR#7 awaiting Stef merge."
-runs_completed: 93
-items_processed: 677
+status: idle
+last_run: "2026-07-17T14:40:00Z"
+current_task: "Routed 14:39 batch. Codex merged forming-paws PR#3: 5 more XSS vectors closed in openModal()/render() (escapeHtml on name/breed/bio/temperament/health). Perplexity confirmed no Cook County AI grant deadlines Jul 13-19; next relevant Aug 3. 3 human blockers persist: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PR#7 awaiting Stef merge."
+runs_completed: 94
+items_processed: 682
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
