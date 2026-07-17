@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
+status: idle
 last_run: "2026-07-17T00:00:00Z"
-current_task: "Generated LinkedIn post — pastor persona (uncle on South Side); food pantry + no staff angle; gap narrative; follow/MINISTRY CTA"
-runs_completed: 77
-items_processed: 202
+current_task: "Generated LinkedIn post — overwhelmed volunteer persona; 400 families/1 volunteer angle; AI-as-force-multiplier narrative; follow/bring us to your church CTA"
+runs_completed: 78
+items_processed: 203
 last_error: null
 color: "#9B59B6"
 house: "studio"
