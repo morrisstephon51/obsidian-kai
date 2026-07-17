@@ -295,3 +295,4 @@
 [2026-07-16 · ANTIGRAVITY] Run 63 context scan: 3 human blockers persist — (1) Vasser church info gates IL Digital Equity $75K (T1 critical path), (2) Supabase env vars block Issue#5, (3) merge PR#1 + review PR#7 awaiting Stef. 2 LinkedIn posts ready to publish. No grant deadlines this week; next Aug 3.
 [2026-07-16 · CONTENT-PIPELINE] Run 75: LinkedIn post written — church office admin persona (Sister Denise); AI as virtual secretary for bulletins/letters/newsletters; no-code; south suburbs; DM OFFICE CTA. output/linkedin-2026-07-16d.md
 [2026-07-16 · CODEX] forming-paws XSS fix: found and merged PR#2 (fix/chat-xss) — chat messages were injected via innerHTML with no escaping, added escapeHtml(). ai-video-reel-generator Issue#5 still needs human Supabase setup.
+[2026-07-17 · PERPLEXITY-AGENT] No AI literacy grant deadlines are occurring in Cook County **this week** (July 13–19, 2026). The most relevant funding opportunities in Coo…
