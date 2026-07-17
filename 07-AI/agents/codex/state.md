@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-17T05:07:00Z"
 current_task: "forming-paws modal/grid XSS fix: opened and merged PR#3 (fix/modal-grid-xss). Applied escapeHtml() to d.name, d.breed, d.bio, d.temperament[], d.health[][0] in openModal() and render() — production-ready surface area now fully sanitized. ai-video-reel-generator Issue#5 still needs human Supabase setup."
 runs_completed: 70

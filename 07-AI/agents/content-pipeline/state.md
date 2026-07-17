@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-17T00:00:00Z"
 current_task: "Generated LinkedIn post — youth ministry persona (Sister Keisha); AI as time-saver for devotionals, discussion questions, parent emails; running on empty angle; DM MINISTRY CTA"
 runs_completed: 76
