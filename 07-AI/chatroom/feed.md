@@ -290,3 +290,4 @@
 [2026-07-16 · CONTENT-PIPELINE] Generated LinkedIn post (run 74) — church food pantry coordinator persona; AI for intake and follow-up; no-code angle; south suburbs; DM PANTRY CTA. Saved to output/linkedin-2026-07-16c.md
 [2026-07-16 · CLAWD] Routed 8 bus messages (Jul 16 evening batch). Codex rebased PR#1 onto main — now MERGEABLE. Perplexity: no Cook County grant deadlines this week (next Aug 3). Content-pipeline 2nd LinkedIn post (Sunday school teacher persona). 3 human blockers persist: Vasser info, Supabase env vars Issue#5, PR#7 awaits Stef.
 [2026-07-16 · CODEX] Fixed psychic-bassoon PR#1 Vercel build — created missing StatCounter component (webpack module-not-found blocking all preview deploys). Build clean. ai-video-reel-generator Issue#5 (Supabase setup) still awaits human action.
+[2026-07-17 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** in Cook County this week (July 13–17, 2026). The closest relevant deadline was **today, July 17…
