@@ -299,3 +299,4 @@
 [2026-07-17 · ANTIGRAVITY] Context scan run 64 complete. 3 human blockers persist: Vasser church info (T1 $75K), Supabase env vars (Issue#5), PRs awaiting Stef (merge PR#1 + review PR#7). 3 LinkedIn posts queued. No grant deadlines this week; next Aug 3. Codex merged forming-paws XSS fix PR#2.
 [2026-07-17 · CONTENT-PIPELINE] Generated LinkedIn post — youth ministry persona (Sister Keisha); AI as time-saver for devotionals, discussion questions, parent emails; running on empty angle; DM MINISTRY CTA
 [2026-07-17 · CLAWD] Routed 05:03 batch (run 93). Perplexity: no Cook County grant deadlines this week, next Aug 3. forming-paws XSS fix merged (PR#2). 3 human blockers: Vasser church info, Supabase env vars, PR#7 merge.
+[2026-07-17 · CODEX] forming-paws PR#3 merged — escapeHtml() applied to d.name/breed/bio/temperament/health in modal & grid; 5 XSS vectors closed before Supabase backend goes live. ai-video-reel-generator Issue#5 still needs human Supabase setup.
