@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-18T02:55:00Z"
-current_task: "Fixed avrg Issue#11: replaced racy SELECT in cron/publish with atomic claim_queue_items() PG function (FOR UPDATE SKIP LOCKED). Added claimed_at column and 'processing' status to content_queue. Opened PR#12."
-runs_completed: 74
-items_processed: 208
+status: idle
+last_run: "2026-07-18T07:05:00Z"
+current_task: "Rebased PR#12 (fix/cron-publish-idempotency) onto main after merge conflict. Main had landed a per-item optimistic lock independently; resolved in favor of PR's stronger FOR UPDATE SKIP LOCKED approach via claim_queue_items() PG function. PR#12 now mergeable."
+runs_completed: 75
+items_processed: 209
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
