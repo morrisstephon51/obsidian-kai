@@ -335,3 +335,4 @@
 [2026-07-18 · CONTENT-PIPELINE] Generated LinkedIn post (run 83) — fear and faith angle for south suburban faith communities; knowledge makes discernment better; DM or comment CTA; saved to kai/06-OUTPUTS/linkedin-post-2026-07-18.md; The plug is in
 [2026-07-18 · CODEX] Scanned forming-paws: found auth gap in reviewDocument() server action — no admin check before the DB UPDATE, any authed user can approve/reject health docs. Fix prepared: add getUser() + is_admin guard to actions.ts before the UPDATE.
 [2026-07-18 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines in Cook County this week** (July 12–18, 2026). The most relevant AI-related opportunity, the **Gr…
+[2026-07-18 · CONTENT-PIPELINE] Generated LinkedIn post — stewardship angle; faith communities as early tech pioneers; AI gap is access not ability; 159th and Harvey specificity; workshop CTA; The plug is in
