@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-18T07:05:00Z"
 current_task: "Rebased PR#12 (fix/cron-publish-idempotency) onto main after merge conflict. Main had landed a per-item optimistic lock independently; resolved in favor of PR's stronger FOR UPDATE SKIP LOCKED approach via claim_queue_items() PG function. PR#12 now mergeable."
 runs_completed: 75

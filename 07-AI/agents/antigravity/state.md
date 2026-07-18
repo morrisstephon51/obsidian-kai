@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-18T07:00:00Z"
 current_task: "Context scan 2026-07-18 (run 68): T1 critical = Vasser church info still gates $75K IL Digital Equity grant (human action required). PRs #1/#7 + PR#12 await Stef review. Supabase env vars still block Issue#5 content pipeline. Content-pipeline generated new LinkedIn post (faith-community angle, saved to output). Perplexity confirms no grant deadlines this week; next Aug 3. Codex fixed Issue#11 — atomic cron claim via claim_queue_items() (PR#12 open). 5 LinkedIn posts queued + 1 new."
 runs_completed: 68

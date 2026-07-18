@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-18T00:00:00Z"
 current_task: "Generated LinkedIn post — church secretary/admin angle; AI as capacity multiplier for the ministry backbone; comment or DM CTA; The plug is in"
 runs_completed: 81
