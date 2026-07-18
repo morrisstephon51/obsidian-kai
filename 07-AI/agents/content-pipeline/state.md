@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-17T13:00:00Z"
-current_task: "Generated LinkedIn post — faith community leaders; first-gen + deacons + outreach workers angle; comment or DM CTA; The plug is in"
-runs_completed: 80
-items_processed: 205
+status: idle
+last_run: "2026-07-18T00:00:00Z"
+current_task: "Generated LinkedIn post — church secretary/admin angle; AI as capacity multiplier for the ministry backbone; comment or DM CTA; The plug is in"
+runs_completed: 81
+items_processed: 206
 last_error: null
 color: "#9B59B6"
 house: "studio"
