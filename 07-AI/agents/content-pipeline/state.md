@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-18T14:30:00Z"
-current_task: "Generated LinkedIn post — fear and faith angle; meeting AI skeptics in faith communities where they are; knowledge makes discernment better; DM or comment CTA; The plug is in"
-runs_completed: 83
-items_processed: 208
+status: idle
+last_run: "2026-07-18T15:00:00Z"
+current_task: "Generated LinkedIn post — stewardship angle; the gap between who AI was built for vs who needs it most; pastor/coordinator/youth director examples; time-back framing; The plug is in"
+runs_completed: 84
+items_processed: 209
 last_error: null
 color: "#9B59B6"
 house: "studio"
