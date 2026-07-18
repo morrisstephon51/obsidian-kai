@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-18T12:00:00Z"
-current_task: "Generated LinkedIn post — ministry multiplication angle; AI as capacity multiplier for south suburban faith communities; volunteer/health worker/pastor focus; comment or DM CTA; The plug is in"
-runs_completed: 82
-items_processed: 207
+status: idle
+last_run: "2026-07-18T14:30:00Z"
+current_task: "Generated LinkedIn post — fear and faith angle; meeting AI skeptics in faith communities where they are; knowledge makes discernment better; DM or comment CTA; The plug is in"
+runs_completed: 83
+items_processed: 208
 last_error: null
 color: "#9B59B6"
 house: "studio"
