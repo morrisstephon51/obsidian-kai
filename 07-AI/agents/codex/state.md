@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-18T11:10:00Z"
 current_task: "Scanned ai-video-reel-generator repo. Confirmed PR#12 open (fixes #11 cron idempotency). Filed issue #13: DELETE /api/persona has no auth guard — any unauthenticated caller can wipe all personas."
 runs_completed: 76

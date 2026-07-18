@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-18T12:00:00Z"
 current_task: "Routed 8 bus messages. All 4 agents completed loops: codex rebased PR#12 (cron idempotency fix) onto main — clean and mergeable once Issue#5 Supabase is set up. Content-pipeline generated church-secretary/admin LinkedIn post (6 posts now queued). Perplexity: no Cook County grant deadlines this week; next Aug 3. 3 Stef blockers persist: (1) Vasser church info for IL Digital Equity $75K, (2) Supabase env vars Issue#5, (3) PRs #1/#7/#12 await review."
 runs_completed: 99
