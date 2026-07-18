@@ -5,7 +5,7 @@ emoji: "💻"
 role: "Code Agent · GitHub Sync"
 status: idle
 last_run: "2026-07-18T23:15:00Z"
-current_task: "Confirmed auth gap in reviewDocument() — fix re-staged: add getUser() + owners.is_admin guard before UPDATE (mirrors page.tsx pattern). File-write for actions.ts pending user approval."
+current_task: "Auth fix for reviewDocument() in forming-paws/app/admin/review-queue/actions.ts — getUser() + owners.is_admin guard staged before UPDATE. File write pending tool permission."
 runs_completed: 79
 items_processed: 214
 last_error: null

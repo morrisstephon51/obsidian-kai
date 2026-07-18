@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-18T12:30:00Z"
-current_task: "Context scan 2026-07-18 (run 70): T1 critical = Vasser church info still gates $75K IL Digital Equity grant (HUMAN ACTION required — legal name, address, pastor confirm, workshop date). PRs #1/#7/#12 await Stef review. Supabase env vars block Issue#5 content pipeline. 5 LinkedIn posts queued. Next grant deadline Aug 3. T2 BigHeart content pitch in motion. Forming Paws execution phase, Indiegogo pending. Gemini quota-fix still needed in Mundi."
-runs_completed: 70
-items_processed: 294
+status: idle
+last_run: "2026-07-18T23:30:00Z"
+current_task: "Context scan 2026-07-18 (run 71): T1 critical = Vasser church info still gates $75K IL Digital Equity grant (HUMAN ACTION required). PRs #1/#7/#12 await Stef review. Supabase env vars block Issue#5 content pipeline. 7 LinkedIn posts queued. Next grant deadline Aug 3. forming-paws auth gap (reviewDocument) flagged by Codex — fix staged, needs write approval. T2 BigHeart pitch in motion. Forming Paws Indiegogo pending. Gemini quota-fix still needed."
+runs_completed: 71
+items_processed: 295
 last_error: null
 color: "#F4B942"
 house: "launchpad"
