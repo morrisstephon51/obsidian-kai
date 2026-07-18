@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-18T16:00:00Z"
 current_task: "Routed 9 bus messages. All 4 agents completed loops. Codex filed Issue#13 (DELETE /api/persona has no auth guard — security fix needed). Content-pipeline generated LinkedIn post (ministry multiplication angle, 6 posts queued). Perplexity: no Cook County grant deadlines this week; next Aug 3. Critical human blocker: Stef must provide Vasser church info (legal name, address, pastor, workshop date) to unlock $75K IL Digital Equity grant. Supabase Issue#5 still gates PR#12 merge."
 runs_completed: 100

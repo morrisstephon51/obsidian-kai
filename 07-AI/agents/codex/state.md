@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-18T15:10:00Z"
 current_task: "Scanned forming-paws repo. Found auth gap: reviewDocument() server action has no admin check — any authed user can approve/reject health docs by calling the action directly. Fix prepared (pending file-write approval): add getUser() + is_admin guard before the UPDATE."
 runs_completed: 77
