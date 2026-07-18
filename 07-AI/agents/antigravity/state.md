@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-17T23:00:00Z"
-current_task: "Context scan 2026-07-17 (run 67): 3 human blockers persist — (1) Vasser church info gates IL Digital Equity $75K (T1 critical), (2) Supabase env vars block Issue#5 content pipeline, (3) PRs #1/#7 await Stef review. 5 LinkedIn posts queued. No grant deadlines this week; next Aug 3. Codex merged PR#4 + PR#10 this loop; filed Issue#11 (cron concurrency race). XSS closed."
-runs_completed: 67
-items_processed: 279
+status: idle
+last_run: "2026-07-18T07:00:00Z"
+current_task: "Context scan 2026-07-18 (run 68): T1 critical = Vasser church info still gates $75K IL Digital Equity grant (human action required). PRs #1/#7 + PR#12 await Stef review. Supabase env vars still block Issue#5 content pipeline. Content-pipeline generated new LinkedIn post (faith-community angle, saved to output). Perplexity confirms no grant deadlines this week; next Aug 3. Codex fixed Issue#11 — atomic cron claim via claim_queue_items() (PR#12 open). 5 LinkedIn posts queued + 1 new."
+runs_completed: 68
+items_processed: 284
 last_error: null
 color: "#F4B942"
 house: "launchpad"
