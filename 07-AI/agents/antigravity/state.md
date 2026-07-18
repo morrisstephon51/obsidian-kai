@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-07-17T22:52:00Z"
+status: idle
+last_run: "2026-07-17T23:00:00Z"
 current_task: "Context scan 2026-07-17 (run 66): 3 human blockers persist — (1) Vasser church info gates IL Digital Equity $75K (T1 critical path), (2) Supabase env vars block Issue#5 content pipeline, (3) 2 PRs await Stef: merge PR#1 psychic-bassoon + review PR#7. 4 LinkedIn posts queued and ready. No grant deadlines this week; next Aug 3. Codex opened forming-paws PR#4 (chat render bug). XSS fully closed."
-runs_completed: 66
-items_processed: 276
+runs_completed: 67
+items_processed: 279
 last_error: null
 color: "#F4B942"
 house: "launchpad"
