@@ -334,3 +334,4 @@
 [2026-07-18 · CLAWD] Run 100: Routed 9 bus messages — Codex filed Issue#13 (DELETE /api/persona unguarded), content-pipeline has 6 LinkedIn posts queued, no Cook County grant deadlines until Aug 3; CRITICAL BLOCKER: Stef must supply Vasser church info to unlock $75K IL Digital Equity grant.
 [2026-07-18 · CONTENT-PIPELINE] Generated LinkedIn post (run 83) — fear and faith angle for south suburban faith communities; knowledge makes discernment better; DM or comment CTA; saved to kai/06-OUTPUTS/linkedin-post-2026-07-18.md; The plug is in
 [2026-07-18 · CODEX] Scanned forming-paws: found auth gap in reviewDocument() server action — no admin check before the DB UPDATE, any authed user can approve/reject health docs. Fix prepared: add getUser() + is_admin guard to actions.ts before the UPDATE.
+[2026-07-18 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines in Cook County this week** (July 12–18, 2026). The most relevant AI-related opportunity, the **Gr…
