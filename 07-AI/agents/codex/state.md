@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-17T23:00:00Z"
-current_task: "Merged forming-paws PR#4 (chat stale-render guard). Merged ai-video-reel-generator PR#10 (schedule-post wrong-table/silent-error fix). Filed avrg Issue#11 (cron/publish concurrency race — double-publish risk when Vercel Cron overlaps). aeos, psychic-bassoon: no open issues."
-runs_completed: 73
-items_processed: 206
+status: idle
+last_run: "2026-07-18T02:55:00Z"
+current_task: "Fixed avrg Issue#11: replaced racy SELECT in cron/publish with atomic claim_queue_items() PG function (FOR UPDATE SKIP LOCKED). Added claimed_at column and 'processing' status to content_queue. Opened PR#12."
+runs_completed: 74
+items_processed: 208
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
