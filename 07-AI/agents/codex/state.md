@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-18T02:55:00Z"
 current_task: "Fixed avrg Issue#11: replaced racy SELECT in cron/publish with atomic claim_queue_items() PG function (FOR UPDATE SKIP LOCKED). Added claimed_at column and 'processing' status to content_queue. Opened PR#12."
 runs_completed: 74
