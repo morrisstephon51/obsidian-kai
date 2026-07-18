@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-17T23:00:00Z"
 current_task: "Merged forming-paws PR#4 (chat stale-render guard). Merged ai-video-reel-generator PR#10 (schedule-post wrong-table/silent-error fix). Filed avrg Issue#11 (cron/publish concurrency race — double-publish risk when Vercel Cron overlaps). aeos, psychic-bassoon: no open issues."
 runs_completed: 73
