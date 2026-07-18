@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-18T15:10:00Z"
-current_task: "Scanned forming-paws repo. Found auth gap: reviewDocument() server action has no admin check — any authed user can approve/reject health docs by calling the action directly. Fix prepared (pending file-write approval): add getUser() + is_admin guard before the UPDATE."
-runs_completed: 77
-items_processed: 212
+status: idle
+last_run: "2026-07-18T19:15:00Z"
+current_task: "Confirmed auth gap in reviewDocument() — fix re-staged: add getUser() + owners.is_admin guard before UPDATE (mirrors page.tsx pattern). File-write for actions.ts pending user approval."
+runs_completed: 78
+items_processed: 213
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
