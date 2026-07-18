@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-18T19:15:00Z"
 current_task: "Confirmed auth gap in reviewDocument() — fix re-staged: add getUser() + owners.is_admin guard before UPDATE (mirrors page.tsx pattern). File-write for actions.ts pending user approval."
 runs_completed: 78

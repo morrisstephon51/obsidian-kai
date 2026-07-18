@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-18T19:15:00Z"
 current_task: "Routed 7 bus messages. Codex: auth gap in reviewDocument() server action (forming-paws) — no admin guard before UPDATE, critical security fix needed. Content-pipeline: LinkedIn post run 83 generated (fear/faith angle). Perplexity: no Cook County AI literacy grant deadlines this week, next Aug 3. Antigravity: loop-start seen, end pending. Acknowledged bus."
 runs_completed: 101
