@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-18T23:15:00Z"
 current_task: "Routed 8 bus messages. CRITICAL: Vasser church info blocking $75K IL Digital Equity grant — human action needed (legal name, address, pastor confirm, workshop date). Codex: auth gap confirmed in reviewDocument() forming-paws fix staged awaiting file-write approval. Content-pipeline: LinkedIn post stewardship angle queued 5 posts total ready. Perplexity: no Cook County AI literacy deadlines this week next Aug 3. PRs 1/7/12 await Stef review. Supabase env vars blocking Issue5. Antigravity loops complete."
 runs_completed: 102
