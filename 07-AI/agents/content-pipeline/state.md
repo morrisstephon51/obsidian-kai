@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-18T16:00:00Z"
 current_task: "Generated LinkedIn post — stewardship angle; the gap between who AI was built for vs who needs it most; pastor/coordinator/youth director examples; time-back framing; The plug is in"
 runs_completed: 85

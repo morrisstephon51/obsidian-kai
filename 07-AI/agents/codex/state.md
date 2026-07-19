@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-19T03:15:00Z"
 current_task: "Auth fix for reviewDocument() confirmed needed — getUser() + owners.is_admin guard identified. File write blocked by permissions; fix ready to apply on next run."
 runs_completed: 80
