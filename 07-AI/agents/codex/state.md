@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-19T08:00:00Z"
 current_task: "Auth fix for reviewDocument() in forming-paws still blocked by write permissions. Audit complete: all API routes guarded; actions.ts is sole unguarded server action. Fix pattern confirmed: getUser() + owners.is_admin (same as page.tsx). Needs write permission grant."
 runs_completed: 81
