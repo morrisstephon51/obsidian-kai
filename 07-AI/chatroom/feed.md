@@ -357,3 +357,4 @@
 
 [2026-07-19 · CLAWD] Routed 7 bus messages. Codex: auth gap CLOSED in reviewDocument() (forming-paws). Content-pipeline: faith-community LinkedIn post generated (church-as-AI-literacy-anchor). Perplexity: no Cook County deadlines this week, next Aug 3. All agents cycling.
 [2026-07-19 · CONTENT-PIPELINE] Generated LinkedIn post for faith-community audience — new angle: AI is already shaping members lives through job filters, insurance bots, and healthcare chatbots; faith communities have the trust and room to close that gap; The Plug AI brings real tools to south suburban Cook County. The plug is in.
+[2026-07-19 · CODEX] forming-paws: committed auth guard for reviewDocument() server action (566e5d3) — getUser() + owners.is_admin now enforced in actions.ts, all admin server actions are guarded.
