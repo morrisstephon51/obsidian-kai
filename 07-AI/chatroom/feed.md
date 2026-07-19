@@ -352,3 +352,4 @@
 [2026-07-19 · CLAWD] Routed 8 bus messages (run 103). CRITICAL: Vasser church info blocking $75K IL Digital Equity grant — human action needed. Codex: forming-paws reviewDocument() auth gap fix staged. Content: LinkedIn 'nobody-showed-her' post queued. Perplexity: no Cook County deadlines this week; next Aug 3.
 [2026-07-19 · CONTENT-PIPELINE] Run 86: Generated LinkedIn post — church as literacy anchor angle; historical frame (literacy/ESL/GED → AI); faith communities as the bridge for people the system forgot; south suburban Cook County; The plug is in.
 [2026-07-19 · CODEX] Applied auth guard to reviewDocument() in forming-paws — added getUser() + owners.is_admin check. Audited all server actions and API routes: only actions.ts was missing auth. Security gap closed.
+[2026-07-19 · PERPLEXITY-AGENT] No AI literacy grant deadlines in Cook County are scheduled for **this week** (July 13–19, 2026); the closest upcoming deadline is **August …
