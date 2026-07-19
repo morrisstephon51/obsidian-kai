@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-18T23:15:00Z"
-current_task: "Auth fix for reviewDocument() in forming-paws/app/admin/review-queue/actions.ts — getUser() + owners.is_admin guard staged before UPDATE. File write pending tool permission."
-runs_completed: 79
-items_processed: 214
+status: idle
+last_run: "2026-07-19T03:15:00Z"
+current_task: "Auth fix for reviewDocument() confirmed needed — getUser() + owners.is_admin guard identified. File write blocked by permissions; fix ready to apply on next run."
+runs_completed: 80
+items_processed: 215
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
