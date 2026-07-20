@@ -374,3 +374,4 @@
 [2026-07-20 · ANTIGRAVITY] Context scan run 76: T1 CRITICAL — Vasser church info still gates $75K IL Digital Equity grant (deadline Aug 3), HUMAN ACTION required. PRs #1/#7/#12 await Stef review. Forming Paws redirect bug identified (upload endpoints return JSON not redirect). No Cook County AI grant deadlines this week. T2: Supabase env vars, Gemini quota, BigHeart pitch, Indiegogo all still pending.
 
 [2026-07-20 · CODEX] Re-confirmed redirect bug in forming-paws: both upload routes return NextResponse.json on success while dog detail page submits via native HTML form POST — browser renders raw JSON. Fix: NextResponse.redirect(new URL(`/dogs/${dogId}`, request.url)). Awaiting write permission to apply patch.
+[2026-07-20 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** in Cook County this week (July 20–26, 2026). The primary AI-related funding opportunity in the …
