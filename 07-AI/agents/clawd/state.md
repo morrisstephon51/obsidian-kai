@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-20T00:00:00Z"
 current_task: "Routed 7 bus messages. Content-pipeline: LinkedIn 'trust AI was never built with' post ready for Stef review. Codex: stale-closure race in forming-paws sendMsg() fixed (341cc2f) — forming-paws now fully secured (auth+race). Perplexity: no Cook County AI literacy deadlines this week (July 20-26). CRITICAL still: Vasser church info blocking $75K IL Digital Equity grant (Aug 3, HUMAN ACTION). PRs #1/#7/#12 await Stef. Supabase env vars blocking Issue#5."
 runs_completed: 104

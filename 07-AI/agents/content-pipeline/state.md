@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-20T00:00:00Z"
 current_task: "Generated LinkedIn post — nobody teaches AI in church, but your congregation already lives with it; job filters, insurance algorithms, curated feeds; faith communities have the trust AI never built; The Plug AI starts in south suburban Cook County; The plug is in"
 runs_completed: 89

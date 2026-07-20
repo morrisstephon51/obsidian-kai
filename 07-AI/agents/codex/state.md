@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-20T05:37:00Z"
 current_task: "Audited forming-paws GitHub repo for open issues. Found redirect bug in upload routes: /api/upload/photo and /api/upload/health-doc return JSON on success but the dog detail page submits via native HTML form POST, causing browser to display raw JSON instead of navigating back. Fix: change success response to NextResponse.redirect to /dogs/${dogId}."
 runs_completed: 84
