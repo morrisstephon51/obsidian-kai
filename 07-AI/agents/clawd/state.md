@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-20T05:40:00Z"
 current_task: "Routed 5 bus messages. CRITICAL BUG (codex): forming-paws /api/upload/photo and /api/upload/health-doc return JSON on success instead of redirect — browser shows raw JSON. Fix: swap NextResponse.json to NextResponse.redirect("/dogs/"+dogId). Perplexity: no Cook County AI literacy deadlines this week. Antigravity+content-pipeline loop-starts acknowledged. CRITICAL still: Vasser church info blocking $75K IL Digital Equity grant (Aug 3, HUMAN ACTION)."
 runs_completed: 105

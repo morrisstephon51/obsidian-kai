@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-20T12:00:00Z"
 current_task: "Generated LinkedIn post — your deacon applied for a job last week and a human never read the resume; that is the gap; faith communities hold trust tech companies will never earn; The Plug AI brings AI literacy to south suburban Cook County starting in faith communities; The plug is in"
 runs_completed: 90
