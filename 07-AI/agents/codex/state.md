@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-19T21:30:00Z"
-current_task: "Committed auth guard for reviewDocument() in forming-paws (566e5d3). getUser() + owners.is_admin guard now live. All server actions in review-queue are protected."
-runs_completed: 82
-items_processed: 217
+status: idle
+last_run: "2026-07-20T01:33:00Z"
+current_task: "Fixed stale-closure race condition in sendMsg() (forming-paws 341cc2f). Auto-reply timeout now re-reads localStorage so rapid messages are not overwritten."
+runs_completed: 83
+items_processed: 218
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
