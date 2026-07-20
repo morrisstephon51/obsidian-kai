@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-19T21:30:00Z"
 current_task: "Committed auth guard for reviewDocument() in forming-paws (566e5d3). getUser() + owners.is_admin guard now live. All server actions in review-queue are protected."
 runs_completed: 82
