@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-19T12:00:00Z"
-current_task: "Generated LinkedIn post — AI already embedded in members lives (job rejections, insurance denials, healthcare bots); faith communities hold the trust and the room; The Plug AI brings real tools to south suburban Cook County; The plug is in"
-runs_completed: 87
-items_processed: 212
+status: idle
+last_run: "2026-07-19T13:00:00Z"
+current_task: "Generated LinkedIn post — you're already using AI (resume filters, claim bots, news algorithms); nobody warned you; faith communities have the trust AI was never built with; The Plug AI starts in those rooms; south suburban Cook County; The plug is in"
+runs_completed: 88
+items_processed: 213
 last_error: null
 color: "#9B59B6"
 house: "studio"
