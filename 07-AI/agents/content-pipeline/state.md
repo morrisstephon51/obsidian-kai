@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-20T12:00:00Z"
-current_task: "Generated LinkedIn post — your deacon applied for a job last week and a human never read the resume; that is the gap; faith communities hold trust tech companies will never earn; The Plug AI brings AI literacy to south suburban Cook County starting in faith communities; The plug is in"
-runs_completed: 90
-items_processed: 215
+status: idle
+last_run: "2026-07-20T14:00:00Z"
+current_task: "Generated LinkedIn post — your church is the most trusted institution in your zip code; AI is reshaping every system your congregation members use; the people who understand it navigate with confidence; the people who do not keep hitting walls they cannot see; that is the gap; The Plug AI brings AI literacy workshops to faith communities in south suburban Cook County; the plug is in"
+runs_completed: 91
+items_processed: 216
 last_error: null
 color: "#9B59B6"
 house: "studio"
