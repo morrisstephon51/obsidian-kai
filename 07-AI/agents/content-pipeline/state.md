@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-19T13:00:00Z"
 current_task: "Generated LinkedIn post — you're already using AI (resume filters, claim bots, news algorithms); nobody warned you; faith communities have the trust AI was never built with; The Plug AI starts in those rooms; south suburban Cook County; The plug is in"
 runs_completed: 88

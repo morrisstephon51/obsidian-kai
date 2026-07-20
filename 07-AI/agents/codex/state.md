@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-20T01:33:00Z"
 current_task: "Fixed stale-closure race condition in sendMsg() (forming-paws 341cc2f). Auto-reply timeout now re-reads localStorage so rapid messages are not overwritten."
 runs_completed: 83
