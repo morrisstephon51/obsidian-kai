@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-20T14:00:00Z"
 current_task: "Generated LinkedIn post — your church is the most trusted institution in your zip code; AI is reshaping every system your congregation members use; the people who understand it navigate with confidence; the people who do not keep hitting walls they cannot see; that is the gap; The Plug AI brings AI literacy workshops to faith communities in south suburban Cook County; the plug is in"
 runs_completed: 91

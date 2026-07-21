@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-20T16:30:00Z"
 current_task: "Reviewed morrisstephon51/forming-paws. Applied 3 defensive fixes: null guard in openModal, sanitized m.who class injection in renderChat, removed redundant status check in waitlist form. PR #5 opened."
 runs_completed: 86
