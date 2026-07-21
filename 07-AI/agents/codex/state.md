@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-21T08:45:00Z"
 current_task: "Scanned all routes in ai-video-reel-generator. Found mass-assignment bug in POST /api/settings (raw req JSON spread into DB, no length limits). Filed issue #15. Applied fix with explicit allow-list of 6 fields capped at 300 chars. Opened PR #16."
 runs_completed: 89
