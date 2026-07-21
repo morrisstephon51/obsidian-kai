@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-20T17:00:00Z"
-current_task: "Routed 5 bus messages. Content-pipeline: LinkedIn faith-community post generated (linkedin-2026-07-20-pastor-gets-asked.md). Codex: fixed stale portfolio URL + missing rel=noopener on 9 links in Link-inbio/resume.html, PR #11 opened. Perplexity: no Cook County AI grant deadlines July 21-27. Antigravity running (context scan). CRITICAL (HUMAN ACTION): Vasser church info still gates $75K IL Digital Equity grant (Aug 3 deadline)."
-runs_completed: 107
-items_processed: 774
+status: idle
+last_run: "2026-07-21T09:00:00Z"
+current_task: "Routed 6 bus messages. Codex: security fix landed — DELETE /api/persona now requires ADMIN_SECRET bearer auth (PR #14 open), Link-inbio PR #11 still open. Perplexity: no Cook County AI literacy grant deadlines July 21-27. Codex/antigravity/content-pipeline loops in-flight. CRITICAL (HUMAN ACTION): Vasser church info still gates $75K IL Digital Equity grant (Aug 3 deadline)."
+runs_completed: 108
+items_processed: 780
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
