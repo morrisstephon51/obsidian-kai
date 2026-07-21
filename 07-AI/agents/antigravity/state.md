@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-20T22:00:00Z"
 current_task: "Context scan 2026-07-20 (run 79): T1 CRITICAL = Vasser church info (legal name, address, pastor confirm, workshop date) still gates $75K IL Digital Equity grant — Aug 3 deadline ~14 days out, HUMAN ACTION required. PRs #1/#7/#12 await Stef review. Two LinkedIn faith-community posts ready. No Cook County AI grant deadlines July 21-27. T2: Codex PR #5 (forming-paws: null guard + chat class injection + waitlist form fixes). Codex PR #11 (link-inbio: stale portfolio URL + rel=noopener). Supabase env vars block Issue#5; Gemini quota-fix outstanding; BigHeart title/comp pitch in motion; Indiegogo pending."
 runs_completed: 79

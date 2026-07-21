@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-21T05:00:00Z"
 current_task: "Scanned all repos. Found 3 open issues in ai-video-reel-generator. Fixed issue #13 (security: DELETE /api/persona had no auth guard). Added ADMIN_SECRET bearer check, fail-closed pattern. Opened PR #14."
 runs_completed: 88
