@@ -2,8 +2,8 @@
 type: operations
 category: links-registry
 created: 2026-06-13
-last-checked: 2026-07-16
-last-audit: 2026-07-16
+last-checked: 2026-07-20
+last-audit: 2026-07-20
 ---
 
 # Important Links Registry
@@ -14,18 +14,18 @@ last-audit: 2026-07-16
 
 ## 🌐 All Sites — Master Table
 
-| # | Name | Live URL | GitHub Repo | Purpose | Status |
-|---|---|---|---|---|---|
-| 1 | **The Plug AI** | [psychic-bassoon-psi.vercel.app](https://psychic-bassoon-psi.vercel.app) | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | AI literacy platform | 🟢 Live |
-| 2 | **MUNDI Agent Dashboard** | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Agent fleet control panel | 🟢 Live |
-| 3 | **Stefan's Portfolio** | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan_portfolio](https://github.com/morrisstephon51/Stefan_portfolio) | Personal portfolio / resume | 🟢 Live |
-| 4 | **Link-in-Bio** | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | 🟢 Live |
-| 5 | **Command Center** | [morrisstephon51.github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | PIN-locked hub (apps, agents, links) | 🟢 Live |
-| 6 | **Content Machine** | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | — (archived) | Content pipeline agent UI | 🟢 Live |
-| 7 | **AI Video Reel Generator** | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | [ai-video-reel-generator](https://github.com/morrisstephon51/ai-video-reel-generator) | Auto video reel builder | 🟢 Live |
-| 8 | **Psychic Octo Engine** | [psychic-octo-engine-psi.vercel.app](https://psychic-octo-engine-psi.vercel.app) | [psychic-octo-engine](https://github.com/morrisstephon51/psychic-octo-engine) | Link-in-bio variant | 🟢 Live |
-| 9 | **Puppy Power (Breeding App)** | [breeding-community-pets.deploypad.app](https://breeding-community-pets.deploypad.app/) | — | Dog breeding matchmaking prototype | 🟡 Prototype |
-| 10 | **Community Intake & Routing** | — (404) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | Intake routing agent | 🔴 Archived |
+| # | Name | Custom Domain | Fallback URL | GitHub Repo | Purpose | Status |
+|---|---|---|---|---|---|---|
+| 1 | **The Plug AI** | [theplugai.info](https://theplugai.info) | [psychic-bassoon-psi.vercel.app](https://psychic-bassoon-psi.vercel.app) | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | AI literacy platform | 🟢 Live |
+| 2 | **MUNDI Agent Dashboard** | [theplugai.live](https://theplugai.live) | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-agent-dashboard](https://github.com/morrisstephon51/mundi-agent-dashboard) | Agent fleet control panel | 🟢 Live |
+| 3 | **Stefan's Portfolio** | [theplugai.life](https://theplugai.life) | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan_portfolio](https://github.com/morrisstephon51/Stefan_portfolio) | Personal portfolio / resume | 🟢 Live |
+| 4 | **Link-in-Bio** | [theplugai.net](https://theplugai.net) | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | ⏳ Propagating |
+| 5 | **Command Center** | [theplugai.online](https://theplugai.online) | [morrisstephon51.github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [command-center-redirect](https://github.com/morrisstephon51/command-center-redirect) | PIN-locked hub (apps, agents, links) | 🟢 Live |
+| 6 | **Content Machine** | — | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | — (archived) | Content pipeline agent UI | 🟢 Live |
+| 7 | **AI Video Reel Generator** | — | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | [ai-video-reel-generator](https://github.com/morrisstephon51/ai-video-reel-generator) | Auto video reel builder | 🟢 Live |
+| 8 | **Psychic Octo Engine** | — | [psychic-octo-engine-psi.vercel.app](https://psychic-octo-engine-psi.vercel.app) | [psychic-octo-engine](https://github.com/morrisstephon51/psychic-octo-engine) | Link-in-bio variant | 🟢 Live |
+| 9 | **Puppy Power (Breeding App)** | theplugai.xyz *(pending deploypad DNS)* | [breeding-community-pets.deploypad.app](https://breeding-community-pets.deploypad.app/) | — | Dog breeding matchmaking prototype | 🟡 Prototype |
+| 10 | **Community Intake & Routing** | — | — (404) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | Intake routing agent | 🔴 Archived |
 
 ---
 
@@ -33,7 +33,7 @@ last-audit: 2026-07-16
 
 | Repo | Purpose | Notes |
 |---|---|---|
-| [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Git-based agent world state store | New — replaces Vercel write quota usage |
+| [mundi-world-state](https://github.com/morrisstephon51/mundi-world-state) | Git-based agent world state store | Replaces Vercel write quota usage |
 | [aeos](https://github.com/morrisstephon51/aeos) | Aeos execution agent | Local: `~/clawd/agents/aeos-agent` |
 | [Enrollment_Funnel_Agent](https://github.com/morrisstephon51/Enrollment_Funnel_Agent) | Enrollment funnel agent | Vault: `07-AI/agents/enrollment-funnel` |
 | — (see [[00 Home\|kai vault]]) | Obsidian vault backup | Local: `~/Desktop/kai` — no separate GitHub repo |
@@ -43,34 +43,54 @@ last-audit: 2026-07-16
 
 ---
 
-## 📋 Link Health — Last Verified 2026-07-16
+## 🌐 Domain Registry
 
-| Site | Status | Last Checked | Next Check |
-|---|---|---|---|
-| The Plug AI | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| MUNDI Agent Dashboard | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Stefan's Portfolio | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Link-in-Bio | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Command Center | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Content Machine | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| AI Video Reel Generator | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Psychic Octo Engine | 🟢 Live | 2026-07-16 | 2026-07-23 |
-| Puppy Power | 🟡 Prototype | 2026-07-16 | — |
-| Community Intake & Routing | 🔴 Archived | 2026-07-16 | — |
+| Domain | Pointed To | Status |
+|---|---|---|
+| theplugai.info | The Plug AI (Vercel) | ✅ Live |
+| theplugai.life | Stefan's Portfolio (Vercel) | ✅ Live |
+| theplugai.live | MUNDI Dashboard (Vercel) | ✅ Live |
+| theplugai.net | Link-in-Bio (GitHub Pages) | ⏳ Propagating |
+| theplugai.online | Command Center (GitHub Pages redirect) | ✅ Live |
+| theplugai.xyz | Puppy Power (pending deploypad DNS) | 🔲 Not set |
+| theplugai.world | Unassigned | 🔲 Available |
+| theplugai.store | Unassigned | 🔲 Available |
+| zenat.us | Unassigned | 🔲 Available |
+| usego.us | Unassigned | 🔲 Available |
+| segaa.co.uk | Unassigned | 🔲 Available |
+| abebo.co.uk | Unassigned | 🔲 Available |
+| fanuk.net | Unassigned | 🔲 Available |
+| fanuk.uk | Unassigned | 🔲 Available |
+
+---
+
+## 📋 Link Health — Last Verified 2026-07-20
+
+| Site | Custom Domain | Status | Last Checked | Next Check |
+|---|---|---|---|---|
+| The Plug AI | theplugai.info | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| MUNDI Dashboard | theplugai.live | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| Stefan's Portfolio | theplugai.life | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| Link-in-Bio | theplugai.net | ⏳ Propagating | 2026-07-20 | 2026-07-21 |
+| Command Center | theplugai.online | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| Content Machine | — | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| AI Video Reel Generator | — | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| Psychic Octo Engine | — | 🟢 Live | 2026-07-20 | 2026-07-27 |
+| Puppy Power | theplugai.xyz (pending) | 🟡 Prototype | 2026-07-20 | — |
+| Community Intake & Routing | — | 🔴 Archived | — | — |
 
 ---
 
 ## 📝 Quick Copy-Paste
 
 ```
-The Plug AI:            https://psychic-bassoon-psi.vercel.app
-MUNDI Dashboard:        https://agent-world-olive.vercel.app
-Stefan's Portfolio:     https://stefan-portfolio-eight.vercel.app
-Link-in-Bio:            https://morrisstephon51.github.io/Link-inbio/
-Command Center:         https://morrisstephon51.github.io/Link-inbio/dashboard.html
+The Plug AI:            https://theplugai.info
+MUNDI Dashboard:        https://theplugai.live
+Stefan's Portfolio:     https://theplugai.life
+Link-in-Bio:            https://theplugai.net (propagating) → morrisstephon51.github.io/Link-inbio/
+Command Center:         https://theplugai.online
 Content Machine:        https://content-machine-wine.vercel.app
 AI Video Reel:          https://ai-video-reel-generator.vercel.app
-Psychic Octo Engine:    https://psychic-octo-engine-psi.vercel.app
 Puppy Power:            https://breeding-community-pets.deploypad.app/
 GitHub:                 https://github.com/morrisstephon51
 ```
@@ -82,27 +102,8 @@ GitHub:                 https://github.com/morrisstephon51
 - [[09-SYSTEM/Command Center|Command Center]] — full cross-linked hub
 - [[link-health-checker|Link Health Checker]] — weekly verification checklist
 - [[master-tracker|Master Tracker]]
+- [[09-SYSTEM/domains-and-email|Domains & Email]] — full domain registry
 
 ---
 
-## 📝 Audit Notes (2026-07-16)
-
-**Changes Made:**
-- ✅ Fixed MUNDI Dashboard repo ref: `mundi-agent-dashboard` → `mundi-world-state` (correct source)
-- ✅ Marked `content-machine` as archived (Vercel live, but no GitHub repo)
-- ✅ Clarified kai vault is local-only (no separate GitHub repo)
-- ✅ Updated all health check timestamps: 2026-07-10 → 2026-07-16
-- ✅ Marked Community Intake as "Archived" (was "404 / Retired")
-
-**Health Score:**
-- 9/10 live sites operational (90%) ✅
-- 12/15 GitHub repos accessible (80%)
-- Overall: 84% link health
-
-**Next Steps:**
-- Weekly verification on 2026-07-23
-- Monitor `ai-video-reel-generator.vercel.app` redirect (HTTP 307)
-
----
-
-*Last updated: 2026-07-16*
+*Last updated: 2026-07-20*
