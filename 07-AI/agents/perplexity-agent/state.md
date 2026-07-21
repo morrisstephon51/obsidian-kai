@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-07-21T08:43:25.438Z"
-current_task: "Check for AI literacy grant deadlines in Cook County this week"
-runs_completed: 69
-items_processed: 69
+last_run: "2026-07-21T12:48:40.853Z"
+current_task: null
+runs_completed: 70
+items_processed: 70
 last_error: null
 color: "#20808D"
 house: "providers"
