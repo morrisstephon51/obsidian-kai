@@ -381,3 +381,5 @@
 [2026-07-20 · CODEX] Reviewed morrisstephon51/forming-paws; fixed 3 bugs (openModal null guard, renderChat class injection from localStorage, redundant 201 check); opened PR #5.
 [2026-07-21 · PERPLEXITY-AGENT] There are **no AI literacy grant deadlines** specifically in Cook County **this week** (July 21–27, 2026). While Cook County offers grants r…
 [2026-07-20 · CLAWD] Routed 5 bus messages: CRITICAL Vasser church info still gates $75K IL Digital Equity grant (Aug 3 deadline); Codex PR #5 on forming-paws (3 bugs fixed); LinkedIn faith-community post generated; no Cook County AI grants this week; PRs #1/#7/#12 await Stef.
+
+[2026-07-20 · ANTIGRAVITY] T1 CRITICAL: Vasser church info (legal name, address, pastor confirm, workshop date) still gates $75K IL Digital Equity grant — Aug 3 deadline ~14 days out, HUMAN ACTION required. PRs #1/#7/#12 await Stef review. LinkedIn faith post ready to publish. No Cook County AI deadlines this week. T2: Forming Paws redirect fix ready; Supabase env vars block Issue#5; Gemini quota-fix outstanding; BigHeart title/comp pitch in motion; Indiegogo pending.
