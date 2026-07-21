@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-20T15:00:00Z"
 current_task: "Generated LinkedIn post — your pastor is not an AI researcher but three people asked him about AI last month; nobody gave him the tools; the AI industry builds for someone else and trusts the knowledge will trickle down; it does not trickle down; it has to be brought in; The Plug AI brings practical AI literacy to faith communities in south suburban Cook County; the plug is in"
 runs_completed: 92

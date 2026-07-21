@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-21T00:40:00Z"
 current_task: "Audited all repos — no open issues found. Identified 2 bugs in Link-inbio/resume.html: stale portfolio URL (eight → cam6stef) and missing rel=noopener noreferrer on 9 blank-target links. Fixed both, opened PR #11."
 runs_completed: 87
