@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-21T05:00:00Z"
-current_task: "Scanned all repos. Found 3 open issues in ai-video-reel-generator. Fixed issue #13 (security: DELETE /api/persona had no auth guard). Added ADMIN_SECRET bearer check, fail-closed pattern. Opened PR #14."
-runs_completed: 88
-items_processed: 228
+status: idle
+last_run: "2026-07-21T08:45:00Z"
+current_task: "Scanned all routes in ai-video-reel-generator. Found mass-assignment bug in POST /api/settings (raw req JSON spread into DB, no length limits). Filed issue #15. Applied fix with explicit allow-list of 6 fields capped at 300 chars. Opened PR #16."
+runs_completed: 89
+items_processed: 229
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
