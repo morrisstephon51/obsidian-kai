@@ -1,3 +1,10 @@
+---
+created: 2026-02-11
+type: archived-note
+status: archived
+tags: [web-dev, learning]
+---
+
 # HTML Structure Practice
 *Notes from February 11, 2025*
 

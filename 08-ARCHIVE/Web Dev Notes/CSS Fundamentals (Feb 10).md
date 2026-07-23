@@ -1,3 +1,10 @@
+---
+created: 2026-02-11
+type: archived-note
+status: archived
+tags: [web-dev, learning]
+---
+
 # CSS Fundamentals
 *Notes from February 10, 2025*
 
