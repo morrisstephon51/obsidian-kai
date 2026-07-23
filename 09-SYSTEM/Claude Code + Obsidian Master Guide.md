@@ -31,7 +31,7 @@ I (Claude Code) have direct access to your Obsidian vault at `/Users/abdoulayemu
 Tell me exactly what you want done with file paths:
 
 ```
-Create a note at "Areas/Learning/Claude Code Guide.md" with sections on:
+Create a note at "02-PROJECTS/Learning/Claude Code Guide.md" with sections on:
 - How to work with me
 - Best practices
 - Common commands
