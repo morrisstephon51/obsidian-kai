@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Vault index — built 2026-07-18
 <!-- FOR AI AGENTS: read this file first, then open the note you need. Rebuild with /remote-control index. Format: path — gist (modified) -->
 

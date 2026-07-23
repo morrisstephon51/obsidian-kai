@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Educational Goals
 
 Stefan is pursuing a B.S. in Computer Science at Maestro University while simultaneously holding (or pursuing) Google IT Support, IBM IT Support, Google UX Design, and Python certifications. This is a deliberate "credential the existing skills" strategy — he's already building production systems (My Health My Power, content automation pipelines, multi-agent orchestration) and the formal education adds legitimacy and fills theoretical gaps.

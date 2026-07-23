@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Work Experience
 
 **BigHeart Health** — current role in training development and design. Has deployed AI-assisted outreach systems across four church partnerships (MOFEC, All Nations, Faith Mission, Holy City) under the "My Health My Power" initiative. Produced a 15-campaign church invitation video bible, branded QR code business cards for named church specialists (Rina, Tajuane, Laporsha, Erika), a social media content calendar with strategic polls, and a visual slide deck. Currently pitching leadership for formal recognition (title: "Digital Content and AI Systems Specialist") and compensation adjustment based on internally-built content automation tooling.

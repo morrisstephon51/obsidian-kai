@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Leverage Points
 
 Ranked by speed-to-impact, these are the moves that would do the most with the least additional effort:

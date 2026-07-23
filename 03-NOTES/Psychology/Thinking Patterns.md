@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Thinking Patterns
 
 **Frameworks-first.** Before building anything, Stefan tends to build the system that will govern the building — the LLM Council, the five-document pre-development framework (PRD, System Design, Wireframes, Feature Breakdown, Master Prompt), structured multi-month plans. This is process-oriented thinking applied even to early-stage, resource-constrained work where speed often matters more than process maturity.

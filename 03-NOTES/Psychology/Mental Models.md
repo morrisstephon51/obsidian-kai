@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Mental Models
 
 **"The gap" as a unifying frame.** Stefan repeatedly returns to the idea of a gap — between underserved communities and emerging tech, between his own background and traditional tech credentials, between where he is and where the funding is. This single metaphor structures both his brand messaging and, likely, his self-concept.

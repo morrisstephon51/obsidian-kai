@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Risks
 
 **Burnout risk from sustained high-output, low-feedback execution.** Producing a brand system, content calendar, LOI, fiscal sponsorship, scholarship essay, and multiple software prototypes in "recent months" while also working a job and pursuing a degree is an extremely high pace. Without external validation (funding, title change) arriving on a similarly fast timeline, the gap between effort and reward could become demoralizing.

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Who I Am
 
 Stefan is the founder of The Plug AI, an AI literacy education platform aimed at underserved communities in Chicago's south suburban Cook County area — specifically faith leaders, community health workers, and first-generation students. He simultaneously holds a training development and design role at BigHeart Health, where he has built and deployed AI-assisted outreach systems across four church partnerships under the "My Health My Power" initiative. He is pursuing a B.S. in Computer Science at Maestro University while stacking IT and design certifications (Google IT Support, IBM IT Support, Google UX Design, Python).

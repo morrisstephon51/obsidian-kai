@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Personal Evolution
 
 The trajectory across conversations shows a clear arc: from "person with diverse work history exploring options" to "founder running a structured operation with frameworks, governance, and a defined voice."

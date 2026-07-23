@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Growth Opportunities
 
 **Personal: narrowing without abandoning.** The biggest growth opportunity isn't a new skill or project — it's the meta-skill of *sequencing and stopping*. Stefan has more than enough capability and more than enough good ideas. The growth edge is in choosing 1-2 things to finish completely before starting the next, and getting comfortable that not-yet-started ideas are still safe (they don't disappear by waiting).

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Knowledge Areas
 
 - **AI literacy education** — curriculum design for non-technical audiences (faith leaders, community health workers, first-gen students).

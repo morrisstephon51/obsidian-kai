@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Potential Career Paths
 
 **1. BigHeart Health, formalized role — "Digital Content and AI Systems Specialist" (or similar).** This is already in motion and is the lowest-risk path: same employer, work already proven, recognition + comp adjustment as the ask. Highest near-term probability of success.

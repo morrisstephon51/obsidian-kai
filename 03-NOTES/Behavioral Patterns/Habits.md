@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Habits
 
 **Documenting before doing.** Voice guidelines, brand identity systems, the five-document pre-development framework, the LLM Council charter — Stefan habitually writes down the rules/structure for an activity before (or instead of, in some cases) doing the activity itself.

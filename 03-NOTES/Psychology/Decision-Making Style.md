@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Decision-Making Style
 
 Stefan's decision-making is **structure-mediated** — he rarely seems to make a significant decision without first building or invoking a framework to make it (the LLM Council, the five-document pre-development process, structured multi-month plans). This produces well-reasoned individual decisions but can also function as a delay mechanism: building the decision-making system becomes a task in itself, deferring the actual decision.

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Blind Spots
 
 **Mistaking system-building for progress.** This is the big one. Building the LLM Council, the five-document framework, the Architect Agent, the Grant Research Agent — all of this *feels* like progress because it's tangible output. But none of it is the same as a signed grant, a closed BigHeart title change, or a paying client. The blind spot is treating "I built infrastructure to do X" as equivalent to "I did X."

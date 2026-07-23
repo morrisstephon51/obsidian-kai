@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Fears
 
 No fear has been stated explicitly. What follows is inferred from behavior, and should be read as more speculative than most of this vault.

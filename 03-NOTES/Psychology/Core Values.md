@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Core Values
 
 **Community over abstraction.** Stefan's brand language explicitly centers "the gap" and "people the tech world forgot" — not as marketing abstraction but as the actual people in his Cook County network: church leaders, health workers, first-gen students. He's chosen to build for a specific, named, geographically-rooted population rather than a generic addressable market.

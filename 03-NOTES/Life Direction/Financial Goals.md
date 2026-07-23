@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Financial Goals
 
 The dominant, explicitly stated financial fact is **zero current budget** for The Plug AI — described as a "hard constraint." Everything built so far (brand system, content automation, fiscal sponsorship, agents) has been built without spending money, using free/low-cost tools (Open Collective for fiscal sponsorship, Vercel/Supabase free tiers presumably, Composio for automation).

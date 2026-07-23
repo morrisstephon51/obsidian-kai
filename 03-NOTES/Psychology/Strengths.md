@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Strengths
 
 **Real, deployed proof of concept.** Most early-stage founders have a deck. Stefan has four church partnerships running an AI-assisted outreach system in production (My Health My Power). That's a massive differentiator and most people in his position don't realize how rare that is.

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Executive Summary
 
 Stefan is a builder running two parallel tracks — a job (BigHeart Health) and a startup/nonprofit (The Plug AI) — with the explicit goal of using the job as a bridge while the venture becomes self-sustaining through grant funding. He has, in a relatively short window, produced a brand identity system, a 30-day content calendar, a Kresge Foundation LOI, fiscal sponsorship setup through Open Collective, a scholarship essay, multiple AI agent prototypes, and a deployed content automation pipeline (Next.js/Supabase/Remotion/FAL/Pexels on Vercel).

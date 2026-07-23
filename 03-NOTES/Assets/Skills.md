@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Skills
 
 **Training/curriculum design** — core professional skill, applied at BigHeart (training development and design role) and at the heart of The Plug AI's AI literacy mission.

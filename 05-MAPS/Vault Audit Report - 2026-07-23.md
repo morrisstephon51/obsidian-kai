@@ -44,17 +44,17 @@ last-checked: 2026-07-23T18:51:58
 - `[[Progress Dashboard.md]]` → should be `[[01-DAILY/Progress Dashboard.md]]`
 
 #### Old Areas/ folder structure (should point to 02-PROJECTS/):
-- `[[Areas/Learning/Claude Code Guide.md]]` → should be `[[02-PROJECTS/Learning/Claude Code Guide.md]]`
-- `[[Areas/Personal Growth/Core Values.md]]` → should be `[[02-PROJECTS/Personal Growth/Core Values.md]]`
-- `[[Areas/Personal Growth/Life Vision.md]]` → should be `[[02-PROJECTS/Personal Growth/Life Vision.md]]`
+- `[[02-PROJECTS/Learning/Claude Code Guide.md]]` → should be `[[02-PROJECTS/Learning/Claude Code Guide.md]]`
+- `[[02-PROJECTS/Personal Growth/Core Values.md]]` → should be `[[02-PROJECTS/Personal Growth/Core Values.md]]`
+- `[[02-PROJECTS/Personal Growth/Life Vision.md]]` → should be `[[02-PROJECTS/Personal Growth/Life Vision.md]]`
 
 #### Archive links with wrong paths:
-- `[[Archive/Web Dev Notes/CSS Fundamentals (Feb 10).md|CSS Fundamentals]]`
-- `[[Archive/Web Dev Notes/HTML Structure Practice (Feb 11).md|HTML Structure Practice]]`
+- `[[08-ARCHIVE/Web Dev Notes/CSS Fundamentals (Feb 10).md|CSS Fundamentals]]`
+- `[[08-ARCHIVE/Web Dev Notes/HTML Structure Practice (Feb 11).md|HTML Structure Practice]]`
 
 #### Old folder structure:
-- `[[Projects/The Plug AI Progress.md|The Plug AI]]` → should be `[[02-PROJECTS/...]]`
-- `[[Resources/Prompts/...]]` → should be `[[04-RESOURCES/Prompts/...]]`
+- `[[02-PROJECTS/The Plug AI Progress.md|The Plug AI]]` → should be `[[02-PROJECTS/...]]`
+- `[[04-RESOURCES/Prompts/...]]` → should be `[[04-RESOURCES/Prompts/...]]`
 - `[[Weekly Reviews/index.md|weekly review]]` → should be `[[01-DAILY/Weekly Reviews/index.md]]`
 
 #### Other broken references:
@@ -249,9 +249,9 @@ However:
 
 - [ ] Fix `[[00 Home.md]]` → `[[05-MAPS/00 Home.md]]`
 - [ ] Fix `[[me.md]]` references
-- [ ] Fix all `[[Areas/...]]` → `[[02-PROJECTS/...]]` replacements
-- [ ] Fix `[[Projects/...]]` → `[[02-PROJECTS/...]]`
-- [ ] Fix `[[Resources/...]]` → `[[04-RESOURCES/...]]`
+- [ ] Fix all `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]` replacements
+- [ ] Fix `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]`
+- [ ] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
 - [ ] Fix Archive/ paths
 - [ ] Fix relative path depths (../../../../ corrections)
 - [ ] Test all links in Home and Core Relationships Map

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Limiting Beliefs
 
 **"I need to build the system before I can act."** This belief shows up everywhere — frameworks before decisions, agents before processes are validated, multi-document plans before development. It's not wrong as a general principle, but applied universally it can become a belief that *unstructured action is invalid*, which slows down exactly the kind of fast, scrappy validation that early-stage, zero-budget work usually needs most.

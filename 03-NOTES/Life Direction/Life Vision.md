@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Life Vision
 
 The vision, pieced together from stated goals and patterns: Stefan wants to be the bridge between AI/emerging technology and the communities — faith networks, health workers, first-generation students — in Chicago's south suburban Cook County area that the broader tech industry doesn't reach. He wants this to be sustainable as an actual organization (The Plug AI, with fiscal sponsorship and grant funding), not a side project, and he wants to be personally recognized — financially and in title — for the technical and educational work he's already capable of and already doing.

@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Motivations
 
 **Being a spark for young minds** — stated directly as a source of deep fulfillment. This is likely a primary emotional driver behind the educational mission of The Plug AI, separate from any financial or career calculus.

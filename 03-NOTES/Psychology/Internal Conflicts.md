@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Internal Conflicts
 
 **Mission vs. money, unresolved.** Stefan wants the money to come from the mission (fund The Plug AI through grants and recognition for community work), but the fastest money likely comes from monetizing his *general* skills (training package sales, freelance automation/agent-building, the BigHeart comp adjustment). These aren't mutually exclusive, but the instinct to keep them fused may be slowing both down.

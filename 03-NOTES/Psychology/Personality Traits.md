@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Personality Traits
 
 **High agency, high output.** In a short window Stefan produced a brand system, content calendar, grant LOI, fiscal sponsorship setup, scholarship essay, and multiple software prototypes. This isn't someone waiting for permission or resources — he builds with what he has.

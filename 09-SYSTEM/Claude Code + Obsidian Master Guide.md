@@ -230,9 +230,9 @@ type: daily-note
 
 Navigate down through your organization:
 ```markdown
-[[Areas/Development/|Development]] 
-→ [[Areas/Development/architect-agent|Architect Agent]]
-→ [[Areas/Development/architect-agent/performance-notes|Performance]]
+[[02-PROJECTS/Development/|Development]] 
+→ [[02-PROJECTS/Development/architect-agent|Architect Agent]]
+→ [[02-PROJECTS/Development/architect-agent/performance-notes|Performance]]
 ```
 
 #### 2. **Semantic Links** (Meaning)
@@ -540,7 +540,7 @@ Create a decision framework note that:
 ### Link Operations
 
 ```
-"Create reciprocal links between [[me.md]] and [[Areas/]]"
+"Create reciprocal links between [[me.md]] and [[02-PROJECTS/]]"
 → I'll build connection map
 
 "Show me orphaned notes (no links)"
@@ -679,8 +679,8 @@ and it should link to [[me.md]], [[career-goals]], and [[long-term-goals]].
 ### Internal (in your vault)
 - [[00 Home.md]] — Your vault entrance
 - [[me]] — Your personal profile
-- [[Projects/]] — Active work
-- [[Areas/]] — Ongoing responsibilities
+- [[02-PROJECTS/]] — Active work
+- [[02-PROJECTS/]] — Ongoing responsibilities
 
 ### External (to learn more)
 - Obsidian Docs: https://help.obsidian.md

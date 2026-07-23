@@ -297,7 +297,7 @@ All in Areas/Personal Growth/
 
 **Add section:**
 ```
-Add a "Next Steps" section to [[Areas/Career/Career Goals]]
+Add a "Next Steps" section to [[02-PROJECTS/Career/Career Goals]]
 with: [content]
 ```
 
@@ -309,7 +309,7 @@ Career status from [old] to [new]
 
 **Add links:**
 ```
-Link [[Projects/The Plug AI Progress|Plug AI project]]
+Link [[02-PROJECTS/The Plug AI Progress|Plug AI project]]
 to: [[Career Goals]], [[Financial Goals]], [[Strengths]]
 ```
 
@@ -395,7 +395,7 @@ Link to: [[Career Goals]], [[Skills]]
 
 **Command structure:**
 ```
-Edit [[Projects/The Plug AI Progress]]
+Edit [[02-PROJECTS/The Plug AI Progress]]
 - Update status to: [current]
 - Add this week's progress: [details]
 - Update next steps: [actions]

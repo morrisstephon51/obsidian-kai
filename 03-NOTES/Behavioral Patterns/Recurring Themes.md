@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Recurring Themes
 
 1. **The gap** — between underserved communities and tech, between Stefan's background and traditional credentials, between current resources and goals. The unifying metaphor of his work and likely his self-narrative.

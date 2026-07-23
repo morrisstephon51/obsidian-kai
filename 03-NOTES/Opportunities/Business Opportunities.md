@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Business Opportunities
 
 **Reviving the done-for-you training package model ($350-750/package).** This was already designed (Training Asset Studio app, Claude-powered) and directly leverages Stefan's strongest professional skill (training design) plus his automation capability. Selling to nonprofits/churches adjacent to his existing network could generate near-term revenue without competing with The Plug AI's grant-funded mission — and could even become a feeder channel (clients become future Plug AI partners or referral sources).

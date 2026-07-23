@@ -86,10 +86,10 @@ date:
 - [[Education Goals]] — Learning and credentials
 
 **Project or area this relates to:**
-- [[Areas/Career/index|Career]]
-- [[Areas/Finance/index|Finance]]
-- [[Areas/Education/index|Education]]
-- [[Areas/Personal Growth/index|Personal Growth]]
+- [[02-PROJECTS/Career/index|Career]]
+- [[02-PROJECTS/Finance/index|Finance]]
+- [[02-PROJECTS/Education/index|Education]]
+- [[02-PROJECTS/Personal Growth/index|Personal Growth]]
 
 ---
 

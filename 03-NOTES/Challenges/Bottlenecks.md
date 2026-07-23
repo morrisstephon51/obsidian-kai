@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Bottlenecks
 
 This is the most important note in the vault. If you fix one thing, fix this.

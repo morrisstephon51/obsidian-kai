@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Weaknesses
 
 **Workstream sprawl.** At any given moment, Stefan appears to have 5+ active major workstreams: grant pipeline, content automation, agent-building (Architect Agent, Grant Research Agent), BigHeart internal pitch, job-search automation (JobScout), scholarship applications, brand/content production. None of these are individually unreasonable. Together, with zero budget and presumably one person's hours, they create a denominator problem — every individual project gets a fraction of the attention it would get if it were 1 of 2 priorities instead of 1 of 7.

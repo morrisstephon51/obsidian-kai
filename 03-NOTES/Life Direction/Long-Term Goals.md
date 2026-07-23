@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Long-Term Goals
 
 1. **Establish The Plug AI as a funded, recognized organization** — moving from LOI to secured grant funding (Kresge, Illinois DCEO, eventually Woods Fund and others), with fiscal sponsorship via Open Collective as the current legal/financial vehicle.

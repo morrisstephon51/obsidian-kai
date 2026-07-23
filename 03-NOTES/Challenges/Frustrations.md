@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Frustrations
 
 **Technical friction during builds.** Specific, named frustrations are visible in the troubleshooting history: Supabase migration conflicts and cron job frequency limits during the content automation pipeline build. These are normal development frustrations but were significant enough to require dedicated troubleshooting sessions.

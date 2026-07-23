@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Problem-Solving Style
 
 Stefan's default approach to a new problem: (1) frame it within the existing mission/brand if possible, (2) build or invoke a structured framework to think it through (LLM Council, five-document process), (3) build a tool or agent if the problem recurs, (4) research extensively if external knowledge is needed (grant landscapes, dev workflows).

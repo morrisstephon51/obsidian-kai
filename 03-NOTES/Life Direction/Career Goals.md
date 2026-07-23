@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Career Goals
 
 The near-term career goal, stated explicitly in earlier mentorship work, was to land a role in AI/Tech Education within three months specifically to fund The Plug AI. Multiple resume tracks were built for this: IT Support, EdTech/Training, AI/Tech Education, and Healthcare IT, plus an ATS-optimized version for a specific OSS Shift Lead contract role. He also applied to roles at O'Hare Airport.

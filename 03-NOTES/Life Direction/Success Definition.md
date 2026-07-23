@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Success Definition
 
 Success, as it can be reconstructed from Stefan's choices rather than any single statement, looks like: **The Plug AI operating as a real, funded organization serving its named communities, with Stefan recognized (in title, compensation, and reputation) as the person who built the bridge** — not as a side hustle or a "nice mission project," but as legitimate, fundable, scalable work.

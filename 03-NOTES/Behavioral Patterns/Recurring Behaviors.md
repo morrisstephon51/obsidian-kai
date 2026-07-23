@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Recurring Behaviors
 
 **Building agents to manage agents/work.** First the content automation pipeline, then the Architect Agent (multi-agent orchestration), then the Grant Research Agent, then JobScout. Each new domain of work tends to get its own AI agent built for it relatively early, before the underlying process has necessarily been validated manually.

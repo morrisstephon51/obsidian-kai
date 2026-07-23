@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Competitive Advantages
 
 **Deployed proof of concept beats deck.** Most early-stage AI-literacy/edu founders pitching to funders have plans. Stefan has a live, four-church AI outreach deployment with named contacts and real campaigns. In any grant or partnership conversation, this is the single biggest unfair advantage he has and should be leading with everywhere.

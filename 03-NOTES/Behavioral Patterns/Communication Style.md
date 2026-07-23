@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Communication Style
 
 Stefan's defined brand voice — short declarative sentences, community-rooted, no corporate language, no dashes or hyphens, plain English, emotionally grounded in community impact — is explicit and consistently applied. This isn't a generic "professional tone" request; it's a specific, almost literary constraint set (notably, no dashes/hyphens is unusual and shows real attention to rhythm and readability for his audience).

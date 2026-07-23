@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Common Questions
 
 Recurring types of requests Stefan brings to AI collaboration:

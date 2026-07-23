@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # The Person Behind the Questions
 
 This is the note that says what the others soften.
