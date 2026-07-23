@@ -32,12 +32,12 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 💎 Foundation Layer
 
-**[[../03-NOTES/Identity/me|[[Areas/Personal Growth/index|index]] Profile]]** (Master reference)
+**[[../03-NOTES/Identity/me|Personal Profile]]** (Master reference)
 - Your identity, patterns, motivations
 - Informs all decisions
 - Updated quarterly
 
-**[[../Areas/Personal Growth/index|Personal Growth]]**
+**[[../02-PROJECTS/Personal Growth/index|Personal Growth]]**
 - [[../02-PROJECTS/Personal Growth/Core Values|Core Values]] ← START HERE
 - [[../02-PROJECTS/Personal Growth/Life Vision|Life Vision]] ← North Star
 - [[../02-PROJECTS/Personal Growth/Strengths|Strengths]] ← Your assets
@@ -48,24 +48,24 @@ FEEDBACK LOOPS (Update understanding of goals/vision)
 
 ## 🎯 Goals Layer
 
-**[[../Areas/Career/index|Career]]** ← Enabled by values + education
+**[[../02-PROJECTS/Career/index|Career]]** ← Enabled by values + education
 - Goal: [[../02-PROJECTS/Career/Career Goals|Career Goals]]
 - Support: [[../02-PROJECTS/Development/Skills|Skill development]]
 - Measured by: [[../02-PROJECTS/The Plug AI Progress|Projects]]
 - Financial impact: [[../02-PROJECTS/Finance/Financial Goals|Financial goals]]
 
-**[[../Areas/Finance/index|Finance]]** ← Enabled by career + education
+**[[../02-PROJECTS/Finance/index|Finance]]** ← Enabled by career + education
 - Goal: [[../02-PROJECTS/Finance/Financial Goals|Financial Goals]]
 - Requires: Income growth
 - Blocked by: Current constraints
 - Goal: Independence
 
-**[[../Areas/Education/index|Education]]** ← Enables both career & finance
+**[[../02-PROJECTS/Education/index|Education]]** ← Enables both career & finance
 - Goal: [[../02-PROJECTS/Education/Education Goals|Education Goals]]
 - High leverage activity
 - Opens doors
 
-**[[../Areas/Development/index|Development]]** ← Supports career goals
+**[[../02-PROJECTS/Development/index|Development]]** ← Supports career goals
 - [[../02-PROJECTS/Development/Skills|Skills]]
 - [[../02-PROJECTS/Career/Competitive Advantages|Competitive advantages]]
 

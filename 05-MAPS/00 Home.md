@@ -100,16 +100,16 @@
 
 - **Brand Assets** → `Resources/Brand Assets/`
 - **AI Prompts** → `Resources/Prompts/`
-  - [[Resources/Prompts/claude_code_prompt_content_automation.md|Content Automation Prompt]]
-  - [[Resources/Prompts/complete_and_deploy_prompt.md|Complete & Deploy Prompt]]
-  - [[Resources/Prompts/content_automation_machine_prompt.md|Content Automation Machine]]
+  - [[04-RESOURCES/Prompts/claude_code_prompt_content_automation.md|Content Automation Prompt]]
+  - [[04-RESOURCES/Prompts/complete_and_deploy_prompt.md|Complete & Deploy Prompt]]
+  - [[04-RESOURCES/Prompts/content_automation_machine_prompt.md|Content Automation Machine]]
 
 ---
 
 ## 🗄 Archive
 
-- [[Archive/Web Dev Notes/CSS Fundamentals (Feb 10).md|CSS Fundamentals]]
-- [[Archive/Web Dev Notes/HTML Structure Practice (Feb 11).md|HTML Structure Practice]]
+- [[08-ARCHIVE/Web Dev Notes/CSS Fundamentals (Feb 10).md|CSS Fundamentals]]
+- [[08-ARCHIVE/Web Dev Notes/HTML Structure Practice (Feb 11).md|HTML Structure Practice]]
 
 ---
 
