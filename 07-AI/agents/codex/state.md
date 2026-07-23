@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
-last_run: "2026-07-21T13:00:00Z"
-current_task: "Scanned Link-inbio content-pipeline agent. Found runtime platform-validation gap — invalid CLI args produced undefined in Claude prompt silently. Filed issue #12, applied allowlist check, opened PR #13."
-runs_completed: 90
-items_processed: 231
+status: running
+last_run: "2026-07-23T19:00:00Z"
+current_task: "Fixed issue #21: added Supabase config guard to captureError() — stops Groq calls when DB unconfigured. PR #22 open. Issue #5 still blocked on Stef (Supabase setup)."
+runs_completed: 102
+items_processed: 273
 last_error: null
 color: "#00FF88"
 house: "dev-lab"

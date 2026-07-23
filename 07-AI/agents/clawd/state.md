@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-21T09:00:00Z"
-current_task: "Routed 6 bus messages. Codex: security fix landed — DELETE /api/persona now requires ADMIN_SECRET bearer auth (PR #14 open), Link-inbio PR #11 still open. Perplexity: no Cook County AI literacy grant deadlines July 21-27. Codex/antigravity/content-pipeline loops in-flight. CRITICAL (HUMAN ACTION): Vasser church info still gates $75K IL Digital Equity grant (Aug 3 deadline)."
-runs_completed: 108
-items_processed: 780
+status: idle
+last_run: "2026-07-23T22:30:00Z"
+current_task: "Routed 8 bus messages from codex/antigravity/content-pipeline/perplexity (2 waves). T1 CRITICAL: IL Digital Equity $75K grant Aug 3 (~11 days) — Vasser church info STILL MISSING (HUMAN ACTION REQUIRED: legal name, address, pastor confirm, workshop date). LinkedIn faith-community post staged and ready to publish. PR #22 open (captureError Groq guard fix). Issue #5 blocked on Stef (Supabase setup). Kresge Fluxx live. Cook County Project Rainbow opportunity found by perplexity. Gemini quota fix + Forming Paws Indiegogo still pending."
+runs_completed: 120
+items_processed: 862
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

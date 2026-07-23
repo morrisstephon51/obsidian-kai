@@ -4,10 +4,10 @@ display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
 status: idle
-last_run: "2026-07-21T00:00:00Z"
-current_task: "Generated LinkedIn post -- your church group chat is full of questions about AI and nobody is answering them; the bank call that sounded too smooth; the job application that disappeared; the kids up at midnight with ChatGPT; people in south suburban Cook County are figuring this out alone; The Plug AI brings practical AI literacy to faith communities with no jargon and no corporate speak; people the tech world forgot; the plug is in"
-runs_completed: 94
-items_processed: 219
+last_run: "2026-07-23T15:00:00Z"
+current_task: "Generated LinkedIn post -- the gap is real and your church is on the wrong side of it; AI training is built for tech workers not pastors and church admins in south suburban Cook County; The Plug AI shows up in the building with Monday morning tools not theory; the plug is in"
+runs_completed: 106
+items_processed: 231
 last_error: null
 color: "#9B59B6"
 house: "studio"
