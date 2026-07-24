@@ -5,7 +5,7 @@ emoji: "🚀"
 role: "General Agent · Explorer"
 status: idle
 last_run: "2026-07-24T00:00:00Z"
-current_task: "Context scan 2026-07-23 (run 94): CRITICAL = IL Digital Equity $75K grant due Aug 3 (10 days), Vasser church info STILL MISSING — HUMAN ACTION required. Codex merged PR #22 (Groq guard), Forming Paws Supabase missing profiles table → Issue #6 filed. Cook County grant active this week. BigHeart church-access risk ongoing. Gemini quota fix pending. Forming Paws Indiegogo pending."
+current_task: "Context scan 2026-07-24 (run 95): CRITICAL = IL Digital Equity $75K grant due Aug 3 (10 days), Vasser church info STILL MISSING — HUMAN ACTION required. Codex opened PR #7 (Forming Paws migrations 001+002, 12 dogs seeded), next step live Supabase fetch in app.js. Cook County Digital Equity IMPACT grant active. BigHeart church-access risk ongoing. Gemini quota fix pending. Forming Paws Indiegogo pending."
 runs_completed: 95
 items_processed: 419
 last_error: null
