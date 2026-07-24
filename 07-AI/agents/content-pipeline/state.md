@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
+status: idle
 last_run: "2026-07-24T00:00:00Z"
-current_task: "Generated LinkedIn post -- church secretary types bulletins by hand every Friday; pastor answers same 20 questions across 10 calls; deacon board coordinates volunteers through group text nobody checks; AI tools exist free or close to free; The Plug AI shows faith community leaders the same Monday morning tools large organizations use; no IT department required; the plug is in"
-runs_completed: 108
-items_processed: 233
+current_task: "Generated LinkedIn post -- new visitor shows up Sunday, nobody follows up by Monday; visitor card sits in a stack; large churches have CRM onboarding systems; small faith communities have good intentions and not enough hours; The Plug AI shows the same free follow-up tools; fifteen minutes of setup; no IT department required; the plug is in"
+runs_completed: 109
+items_processed: 234
 last_error: null
 color: "#9B59B6"
 house: "studio"
