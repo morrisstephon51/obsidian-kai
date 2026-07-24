@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-23T19:00:00Z"
-current_task: "Fixed issue #21: added Supabase config guard to captureError() — stops Groq calls when DB unconfigured. PR #22 open. Issue #5 still blocked on Stef (Supabase setup)."
-runs_completed: 102
-items_processed: 273
+status: idle
+last_run: "2026-07-23T22:30:00Z"
+current_task: "forming-paws issue #6: SQL migrations for profiles table + dogs seed (PR #7 open). Step 4 (live Supabase fetch in app.js) pending. Issue #5 (ai-video-reel-generator) still blocked on Stef."
+runs_completed: 103
+items_processed: 275
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
