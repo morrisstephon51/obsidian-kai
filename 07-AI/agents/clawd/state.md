@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-23T22:30:00Z"
-current_task: "Routed 8 bus messages from codex/antigravity/content-pipeline/perplexity (2 waves). T1 CRITICAL: IL Digital Equity $75K grant Aug 3 (~11 days) — Vasser church info STILL MISSING (HUMAN ACTION REQUIRED: legal name, address, pastor confirm, workshop date). LinkedIn faith-community post staged and ready to publish. PR #22 open (captureError Groq guard fix). Issue #5 blocked on Stef (Supabase setup). Kresge Fluxx live. Cook County Project Rainbow opportunity found by perplexity. Gemini quota fix + Forming Paws Indiegogo still pending."
-runs_completed: 120
-items_processed: 862
+status: idle
+last_run: "2026-07-24T02:26:00Z"
+current_task: "Routed 8 bus messages (2 waves: codex/antigravity/content-pipeline/perplexity). T1 CRITICAL: IL Digital Equity $75K grant due Aug 3 (10 days) — Vasser church legal info STILL MISSING (HUMAN ACTION REQUIRED). LinkedIn faith-community post staged and ready to publish. PR #22 merged (captureError Groq guard, issue #21 closed). Issue #6 filed in forming-paws (profiles table missing, dogs empty). Cook County/Grow with Google active this week (perplexity). New loops active: codex/antigravity/content-pipeline/perplexity."
+runs_completed: 121
+items_processed: 870
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
