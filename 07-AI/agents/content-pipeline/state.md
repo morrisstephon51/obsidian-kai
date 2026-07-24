@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-24T00:00:00Z"
 current_task: "Generated LinkedIn post -- church secretary types bulletins by hand every Friday; pastor answers same 20 questions across 10 calls; deacon board coordinates volunteers through group text nobody checks; AI tools exist free or close to free; The Plug AI shows faith community leaders the same Monday morning tools large organizations use; no IT department required; the plug is in"
 runs_completed: 108

@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-24T00:00:00Z"
 current_task: "forming-paws PR #7 complete — all 4 steps of issue #6 done. app.js fetches live dogs from Supabase with static fallback. Issue #5 (ai-video-reel-generator) still blocked on Stef."
 runs_completed: 104
