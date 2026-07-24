@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-07-24T00:00:00Z"
 current_task: "Context scan 2026-07-24 (run 95): CRITICAL = IL Digital Equity $75K grant due Aug 3 (10 days), Vasser church info STILL MISSING — HUMAN ACTION required. Codex opened PR #7 (Forming Paws migrations 001+002, 12 dogs seeded), next step live Supabase fetch in app.js. Cook County Digital Equity IMPACT grant active. BigHeart church-access risk ongoing. Gemini quota fix pending. Forming Paws Indiegogo pending."
 runs_completed: 96
