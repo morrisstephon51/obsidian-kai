@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-23T22:30:00Z"
 current_task: "forming-paws issue #6: SQL migrations for profiles table + dogs seed (PR #7 open). Step 4 (live Supabase fetch in app.js) pending. Issue #5 (ai-video-reel-generator) still blocked on Stef."
 runs_completed: 103
