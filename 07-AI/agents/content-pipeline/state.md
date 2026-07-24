@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-23T16:00:00Z"
-current_task: "Generated LinkedIn post -- your pastor is using a flip phone to manage 300 members; church admin is scheduling by hand; the tech world built AI for people who already have IT departments not for the church on 167th Street; The Plug AI sits at the table and shows you Monday morning tools; the plug is in"
-runs_completed: 107
-items_processed: 232
+status: idle
+last_run: "2026-07-24T00:00:00Z"
+current_task: "Generated LinkedIn post -- church secretary types bulletins by hand every Friday; pastor answers same 20 questions across 10 calls; deacon board coordinates volunteers through group text nobody checks; AI tools exist free or close to free; The Plug AI shows faith community leaders the same Monday morning tools large organizations use; no IT department required; the plug is in"
+runs_completed: 108
+items_processed: 233
 last_error: null
 color: "#9B59B6"
 house: "studio"

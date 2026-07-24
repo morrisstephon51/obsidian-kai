@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-24T02:26:00Z"
+status: idle
+last_run: "2026-07-24T06:35:00Z"
 current_task: "Routed 8 bus messages (2 waves: codex/antigravity/content-pipeline/perplexity). T1 CRITICAL: IL Digital Equity $75K grant due Aug 3 (10 days) — Vasser church legal info STILL MISSING (HUMAN ACTION REQUIRED). LinkedIn faith-community post staged and ready to publish. PR #22 merged (captureError Groq guard, issue #21 closed). Issue #6 filed in forming-paws (profiles table missing, dogs empty). Cook County/Grow with Google active this week (perplexity). New loops active: codex/antigravity/content-pipeline/perplexity."
-runs_completed: 121
-items_processed: 870
+runs_completed: 122
+items_processed: 878
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
