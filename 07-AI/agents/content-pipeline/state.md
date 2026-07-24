@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-23T15:00:00Z"
 current_task: "Generated LinkedIn post -- the gap is real and your church is on the wrong side of it; AI training is built for tech workers not pastors and church admins in south suburban Cook County; The Plug AI shows up in the building with Monday morning tools not theory; the plug is in"
 runs_completed: 106
