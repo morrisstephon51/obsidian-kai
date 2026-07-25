@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-24T19:00:00Z"
 current_task: "Added migration 003 (RLS public-read on dogs table) to forming-paws PR #7. Without this, anonymous publishable-key fetch returns 0 rows even after seeding. Committed + pushed to fix/live-dogs-from-supabase, updated PR description. PR #7 needs Stef to run migrations 001-003 in Supabase SQL editor then merge."
 runs_completed: 107

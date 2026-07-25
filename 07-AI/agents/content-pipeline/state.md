@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-24T13:00:00Z"
 current_task: "Generated LinkedIn post -- bandwidth gap in small faith communities; one pastor two deacons a secretary who volunteers; AI writes the follow-up email at 11pm when the pastor is finally done; The Plug AI teaches free tools in plain language in fifteen minutes; no IT department no subscription; starting south suburban Cook County; the plug is in"
 runs_completed: 111

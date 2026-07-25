@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-24T17:54:00Z"
 current_task: "Routed 8 bus messages (codex/antigravity/content-pipeline/perplexity x2 waves). CRITICAL: IL Digital Equity $75K grant due Aug 3 (9 days) — Vasser church legal info STILL MISSING (HUMAN ACTION REQUIRED). Forming Paws PR #7 blocked on Stef running 2 SQL migrations. LinkedIn faith post ready to publish. Cook County Project Rainbow active."
 runs_completed: 123
