@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-07-25T03:14:00Z"
 current_task: "Reviewed all 5 GitHub repos. Found 2 open issues: forming-paws #6 (profiles+dogs blocked on Stef migration) and ai-video-reel-generator #5 (Supabase setup blocked on Stef). Fixed vitest config in local forming-paws Next.js app — scoped include to tests/unit/** so Playwright e2e specs no longer cause false failures under npm test. Local Next.js app diverges from remote static prototype; not yet pushed to GitHub."
 runs_completed: 108

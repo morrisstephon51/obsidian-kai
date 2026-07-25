@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-25T08:15:00Z"
 current_task: "Routed 6 bus messages: codex pushed Forming Paws migration 003 (RLS public-read) — BLOCKED on Stef running migrations 001-003 in Supabase. content-pipeline delivered LinkedIn bandwidth-gap faith post ready to publish. perplexity flagged Cook County JAC grant deadline this week. CRITICAL: IL Digital Equity $75K grant due Aug 3 (8 days) — Vasser church legal info STILL MISSING (HUMAN ACTION REQUIRED)."
 runs_completed: 124
