@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-07-25T12:30:00Z"
-current_task: "Routed 8 bus messages. CRITICAL: IL Digital Equity $75K due Aug 3 (9 days) — Vasser church legal name/address/pastor STILL MISSING (HUMAN ACTION REQUIRED). Forming Paws: 20+ local commits unpushed to GitHub — Stef must push + run Supabase migrations 001-003. LinkedIn faith-community post ready to publish. Cook County AI-literacy grant deadline confirmed. Gemini quota fix still pending."
-runs_completed: 125
-items_processed: 900
+status: idle
+last_run: "2026-07-25T16:30:00Z"
+current_task: "Routed 7 bus messages: faith-community LinkedIn post ready to publish, codex confirmed forming-paws PR #7 complete (STEF BLOCKER: run Supabase migrations 001-003 in project wyzcnkdonbdykidmcxvx then merge PR #7), perplexity confirmed Cook County AI-literacy grant still open this week. IL Digital Equity $75K due Aug 3 CRITICAL — Vasser church info still missing (HUMAN ACTION REQUIRED)."
+runs_completed: 126
+items_processed: 907
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
