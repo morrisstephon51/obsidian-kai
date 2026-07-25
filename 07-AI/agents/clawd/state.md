@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-25T12:30:00Z"
 current_task: "Routed 8 bus messages. CRITICAL: IL Digital Equity $75K due Aug 3 (9 days) — Vasser church legal name/address/pastor STILL MISSING (HUMAN ACTION REQUIRED). Forming Paws: 20+ local commits unpushed to GitHub — Stef must push + run Supabase migrations 001-003. LinkedIn faith-community post ready to publish. Cook County AI-literacy grant deadline confirmed. Gemini quota fix still pending."
 runs_completed: 125

@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-25T00:00:00Z"
 current_task: "Generated LinkedIn post -- pastor knows 300 names but has a stack of followup notes he has not touched; AI does not replace the shepherd it clears the pen so the shepherd can shepherd; letter to family in crisis volunteer schedule grant draft; free tools plain language fifteen minutes; the plug is in"
 runs_completed: 113
