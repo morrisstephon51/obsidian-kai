@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
+status: idle
 last_run: "2026-07-25T00:00:00Z"
-current_task: "Generated LinkedIn post -- church bulletin took the secretary four hours Saturday night; not because she is slow because she has a full time job three kids and volunteers her weekend; AI can write that bulletin draft in four minutes; not to replace her to give her Saturday night back; The Plug AI teaches free tools plain language fifteen minutes; no IT department no subscription; the plug is in"
-runs_completed: 112
-items_processed: 237
+current_task: "Generated LinkedIn post -- pastor knows 300 names but has a stack of followup notes he has not touched; AI does not replace the shepherd it clears the pen so the shepherd can shepherd; letter to family in crisis volunteer schedule grant draft; free tools plain language fifteen minutes; the plug is in"
+runs_completed: 113
+items_processed: 238
 last_error: null
 color: "#9B59B6"
 house: "studio"
