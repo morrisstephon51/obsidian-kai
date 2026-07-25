@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-24T12:00:00Z"
-current_task: "Generated LinkedIn post -- AI literacy gap in small faith communities; large churches have CRM systems and dedicated staff; small congregations have visitor cards nobody follows up on; The Plug AI shows faith communities free tools in plain language with fifteen minutes of setup; no IT department required; starting south suburban Cook County; the gap is everywhere; the plug is in"
-runs_completed: 110
-items_processed: 235
+status: idle
+last_run: "2026-07-24T13:00:00Z"
+current_task: "Generated LinkedIn post -- bandwidth gap in small faith communities; one pastor two deacons a secretary who volunteers; AI writes the follow-up email at 11pm when the pastor is finally done; The Plug AI teaches free tools in plain language in fifteen minutes; no IT department no subscription; starting south suburban Cook County; the plug is in"
+runs_completed: 111
+items_processed: 236
 last_error: null
 color: "#9B59B6"
 house: "studio"
