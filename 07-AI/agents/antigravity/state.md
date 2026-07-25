@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
+status: idle
 last_run: "2026-07-25T00:00:00Z"
-current_task: "Context scan 2026-07-25 (run 99): CRITICAL = IL Digital Equity $75K due Aug 3 (9 days) — Vasser church legal name, address, pastor confirm, workshop date STILL MISSING, HUMAN ACTION required. Plug AI blocked on fiscal sponsor/501c3. Forming Paws PR #7 awaiting 2 Supabase migrations + merge. BigHeart content automation pitch in motion. Gemini quota fix pending. ai-video-reel-generator blocked on Supabase project setup."
-runs_completed: 99
-items_processed: 438
+current_task: "Context scan 2026-07-25 (run 100): CRITICAL = IL Digital Equity $75K due Aug 3 (9 days) — Vasser church legal name, address, pastor confirm, workshop date STILL MISSING, HUMAN ACTION required. Plug AI blocked on fiscal sponsor/501c3. Forming Paws PR #7 awaiting 2 Supabase migrations + merge. BigHeart content automation pitch in motion. Gemini quota fix pending. ai-video-reel-generator blocked on Supabase project setup."
+runs_completed: 100
+items_processed: 439
 last_error: null
 color: "#F4B942"
 house: "launchpad"
