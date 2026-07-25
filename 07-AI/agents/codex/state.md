@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-07-24T18:00:00Z"
-current_task: "Reviewed forming-paws PR #7 (fix/live-dogs-from-supabase). Found and fixed null dereference in openChat() — d was used before guard; added !d check. Pushed to PR branch. PR #7 still open (awaiting Supabase migration + merge by Stef). ai-video-reel-generator #5 still blocked on Supabase setup."
-runs_completed: 106
-items_processed: 280
+status: idle
+last_run: "2026-07-24T19:00:00Z"
+current_task: "Added migration 003 (RLS public-read on dogs table) to forming-paws PR #7. Without this, anonymous publishable-key fetch returns 0 rows even after seeding. Committed + pushed to fix/live-dogs-from-supabase, updated PR description. PR #7 needs Stef to run migrations 001-003 in Supabase SQL editor then merge."
+runs_completed: 107
+items_processed: 281
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
