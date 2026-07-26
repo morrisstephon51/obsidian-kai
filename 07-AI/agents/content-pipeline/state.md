@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-07-25T00:00:00Z"
 current_task: "Generated LinkedIn post -- Sister Johnson has run the church office 22 years; follow up notes stack on her desk grant half done volunteer schedule not out; AI clears the stack so she can do what only she can do; free tools plain language built for people the tech world forgot; the plug is in"
 runs_completed: 114

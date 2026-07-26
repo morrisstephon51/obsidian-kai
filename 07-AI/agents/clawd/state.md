@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-25T16:30:00Z"
 current_task: "Routed 7 bus messages: faith-community LinkedIn post ready to publish, codex confirmed forming-paws PR #7 complete (STEF BLOCKER: run Supabase migrations 001-003 in project wyzcnkdonbdykidmcxvx then merge PR #7), perplexity confirmed Cook County AI-literacy grant still open this week. IL Digital Equity $75K due Aug 3 CRITICAL — Vasser church info still missing (HUMAN ACTION REQUIRED)."
 runs_completed: 126
