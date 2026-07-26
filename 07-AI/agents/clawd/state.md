@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-07-25T17:00:00Z"
 current_task: "Routed 8 bus messages. Codex: Forming Paws IL articles of incorporation + bylaws drafted (committed, issue #8 opened). Content Pipeline: Sister Johnson LinkedIn post ready. Perplexity: no AI literacy grant deadlines this week. 2 STEF BLOCKERS: IL Digital Equity $75K due Aug 3 (Vasser church info missing) + PR #7 blocked on Supabase migrations 001-003 in wyzcnkdonbdykidmcxvx."
 runs_completed: 127
