@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-07-25T00:00:00Z"
-current_task: "Generated LinkedIn post -- church administrator manages 200 people notebook and prayer; AI clears stack not replaces her; grant formatted follow up drafted volunteer schedule out Friday; free tools real training plain language south suburban Cook County; the tech world forgot people like her we did not; the plug is in"
-runs_completed: 115
-items_processed: 240
+status: idle
+last_run: "2026-07-26T00:00:00Z"
+current_task: "Generated LinkedIn post -- pastor manages 400 members on a legal pad; AI cuts workload in half but nobody ever showed him; plain language real tools no jargon faith communities south suburban Cook County; the gap is the problem The Plug AI is the fix; the plug is in"
+runs_completed: 116
+items_processed: 241
 last_error: null
 color: "#9B59B6"
 house: "studio"
