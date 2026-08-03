@@ -10,6 +10,14 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-03 — Client launch package: onboarding LIVE, flyer chosen, invoice out, domain bought
+- **Member onboarding is live**: https://morrisstephon51.github.io/forming-paws/join.html — real account + dog profile creation against the production database, email-confirmation flow tested end-to-end
+- **Flyer final**: QR-code design #1 in Canva, edited by Stefan (larger fonts, spacing) — QR scans straight to the join page; no printed URL
+- **Invoice FP-001** issued to client "Sky / Ivan": $138.99 operating (Claude Max $100/mo + Supabase Pro $25/mo + domain $13.99/yr), dev fee TBD, $125/mo ongoing
+- **Domain purchased: theplugai.xyz** — DNS setup pending, see [[Domain Setup — theplugai.xyz]] (2 steps, Stefan's court). QR/github.io links auto-redirect once live, no reprint needed
+- **Architecture note**: main branch now carries the full Next.js app (login/browse/matching/admin review queue) from the parallel session — unhosted until Vercel unblocks; the static site + onboarding lives on the gh-pages branch, deployed via a manual workflow on main (the Pages environment only allows main deploys). Both front-ends share one Supabase project
+- **Incident**: Supabase free-tier project paused and restored mid-work (2026-08-03), briefly wiping the schema before full recovery — the reason Supabase Pro ($25/mo, no pausing + daily backups) is now on the client invoice
+
 ## 2026-07-20 — Chicago locked, outreach kit delivered
 - Launch market confirmed: **Chicago metro**
 - Researched 5 vet clinic targets (Midwest Animal Hospital Orland Park is #1 — dedicated breeder reproduction services) + 7 breed clubs/owner groups
