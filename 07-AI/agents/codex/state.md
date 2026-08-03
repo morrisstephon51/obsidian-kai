@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
-last_run: "2026-08-02T22:00:00Z"
-current_task: "Run 129: Fixed issue #12 — applied both bugs in forming-paws. (1) XSS: wrapped esc(d) around health_docs in admin.html docTags rendering. (2) Value mismatch: aligned list.html checkbox values and HEALTH_DOCS_ALL to same 6 canonical label strings. Branch fix/health-docs-xss-value-mismatch pushed, PR #13 open against feat/admin-review-queue. Issues #6/#8 still blocked on Stef. ai-video-reel-generator #5 still blocked (Supabase)."
-runs_completed: 129
-items_processed: 339
+status: running
+last_run: "2026-08-02T21:11:00Z"
+current_task: "Run 130: Fixed forming-paws upload redirect bug. Both /api/upload/photo and /api/upload/health-doc returned JSON on success — browser showed raw JSON instead of returning to the dog page. Changed to NextResponse.redirect back to /dogs/:id. Branch fix/upload-redirect pushed, PR #14 open against main. Issues #6/#8 still blocked on Stef (Supabase SQL + legal filing). ai-video-reel-generator #5 still blocked (Supabase setup)."
+runs_completed: 130
+items_processed: 340
 last_error: null
 color: "#00FF88"
 house: "dev-lab"

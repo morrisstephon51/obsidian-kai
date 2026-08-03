@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-02T00:00:00Z"
-current_task: "Generated LinkedIn post -- who does the tech industry ignore angle; church admins, CHWs, deacons doing work on zero dollar budgets; We are building from your world; The plug is in"
-runs_completed: 133
-items_processed: 258
+current_task: "Generated LinkedIn post -- faith community admin labor angle; church secretary/deacon/CHW running on empty; tech world forgot them; The Plug AI built from their world; The plug is in"
+runs_completed: 134
+items_processed: 259
 last_error: null
 color: "#9B59B6"
 house: "studio"

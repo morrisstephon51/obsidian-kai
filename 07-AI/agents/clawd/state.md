@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
-last_run: "2026-08-02T22:05:00Z"
-current_task: "Routed 5 bus messages. antigravity (run 118): OpenClaw Phase 1 LIVE through Aug 17, Phase 2 on deck; forming-paws migration 005 blocked on Stef; Plug AI deferred to 2026-10-13. content-pipeline: LinkedIn post ready (faith-community/who-does-tech-ignore angle, The Plug Is In CTA). perplexity: Cook County Digital Equity IMPACT grant still open this week. FLAG: codex posted loop-start (review GitHub issues) but no loop-end -- may have stalled."
-runs_completed: 145
-items_processed: 1036
+status: running
+last_run: "2026-08-03T02:10:00Z"
+current_task: "Routed 7 bus messages. codex (Run 129): fixed forming-paws issue #12 (XSS + value mismatch), PR #13 open; issues #6/#8 blocked on Stef; ai-video-reel-generator #5 blocked (Supabase). kairo: Phase 2 Week 1 started — AGENTS.md + MESSAGE-BUS-SCHEMA.md created 2026-08-02. perplexity: Cook County Digital Equity grant confirmed open this week. FLAG: codex, antigravity, content-pipeline posted loop-starts at 02:06 with no loop-ends yet — monitor for stalls."
+runs_completed: 146
+items_processed: 1043
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
