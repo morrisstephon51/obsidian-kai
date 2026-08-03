@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-08-03T06:55:29.385Z"
+last_run: "2026-08-03T10:55:47.550Z"
 current_task: null
-runs_completed: 114
-items_processed: 114
+runs_completed: 115
+items_processed: 115
 last_error: null
 color: "#20808D"
 house: "providers"
