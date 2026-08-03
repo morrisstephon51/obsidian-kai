@@ -8,7 +8,7 @@ tags:
 
 # Forming Paws — Status Log
 
-Newest first. Maintained by Claude sessions; each entry links the artifact it describes.
+Newest first.  each entry links the artifact it describes.
 
 ## 2026-07-20 — Chicago locked, outreach kit delivered
 - Launch market confirmed: **Chicago metro**
