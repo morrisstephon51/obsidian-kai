@@ -51,7 +51,7 @@ Rule: **join, participate for a week, then post** — cold-posting a link gets d
 >
 > That's where you come in. We're building a small network of trusted Chicago clinics we refer owners to when their dogs need exams or screenings to qualify. There's no cost and nothing to install — you see new clients; our members get quality care; fewer poorly-bred litters end up in shelters.
 >
-> We're launching in Chicago now (formingpaws site: https://morrisstephon51.github.io/forming-paws/). Could I have 15 minutes by phone to show you how the referral flow works and hear what you'd want a "verified" standard to include?
+> We're launching in Chicago now (https://theplugai.xyz/). Could I have 15 minutes by phone to show you how the referral flow works and hear what you'd want a "verified" standard to include?
 >
 > Thank you,
 > Morris Stephon
@@ -62,7 +62,7 @@ Rule: **join, participate for a week, then post** — cold-posting a link gets d
 
 > Hey everyone — Chicago dog owner here. I'm building a nonprofit called **Forming Paws**: think of it as careful matchmaking for dogs, where matching only unlocks after a vet-verified health check (OFA, vaccinations, breed-specific screens). The goal is healthier litters and keeping puppy-mill breeding out.
 >
-> We're launching in Chicago first, and the **first 20 Chicago dogs get health verification free for life** as Founding Members. If you've ever thought about breeding your dog the right way — or been burned by sketchy listings — I'd love your feedback more than anything: https://morrisstephon51.github.io/forming-paws/
+> We're launching in Chicago first, and the **first 20 Chicago dogs get health verification free for life** as Founding Members. If you've ever thought about breeding your dog the right way — or been burned by sketchy listings — I'd love your feedback more than anything: https://theplugai.xyz/
 >
 > (Mods — delete if not allowed, no hard feelings 🐾)
 

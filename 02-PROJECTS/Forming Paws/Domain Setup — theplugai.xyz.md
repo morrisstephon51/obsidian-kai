@@ -40,7 +40,7 @@ Delete any pre-existing A or CNAME on `@` (registrars often park one there). Lea
 
 ## Status
 - [x] Domain purchased (2026-08-03)
-- [ ] DNS records added ← **Stefan, Step 1**
-- [ ] Custom domain saved in GitHub Pages settings ← **Stefan, Step 2**
-- [ ] HTTPS enforced
-- [ ] Claude verifies live + updates flyer/QR targets if ever needed
+- [x] DNS records added (verified 2026-08-04: all four A records + www CNAME correct)
+- [x] Custom domain saved in GitHub Pages settings
+- [ ] HTTPS enforced ← last remaining step: Settings → Pages → tick "Enforce HTTPS" (cert already issued; http currently serves without redirect)
+- [x] Claude verified live: landing, join, demo, assets, waitlist API, and old-URL redirects (QR keeps working) — see Status Log 2026-08-04

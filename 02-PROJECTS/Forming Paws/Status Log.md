@@ -10,6 +10,17 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-04 — DOMAIN LIVE: https://theplugai.xyz ✅
+Full verification sweep after Stefan completed GoDaddy DNS + GitHub Pages setup:
+- DNS: all four GitHub Pages A records + www CNAME → correct
+- https://theplugai.xyz serves the site with a valid certificate; www redirects to apex
+- Pages verified: landing (/), member onboarding (/join.html — signup form live), demo (/app.html), styles/app assets all 200
+- QR continuity confirmed: old github.io URLs 301-redirect to theplugai.xyz — printed flyers keep working forever
+- Waitlist API: signup POST → 201 (test row cleaned up after)
+- Outreach kit links updated to the branded domain ([[Chicago Outreach Kit]])
+- ⚠️ One remaining click for Stefan: Settings → Pages → tick **Enforce HTTPS** (http currently serves unredirected)
+- Note: repo copies of PLAN.md / marketing kit were removed when main became the Next.js app — the vault mirrors ([[Execution Plan]], [[Chicago Outreach Kit]]) are now the canonical copies
+
 ## 2026-08-03 — Client launch package: onboarding LIVE, flyer chosen, invoice out, domain bought
 - **Member onboarding is live**: https://morrisstephon51.github.io/forming-paws/join.html — real account + dog profile creation against the production database, email-confirmation flow tested end-to-end
 - **Flyer final**: QR-code design #1 in Canva, edited by Stefan (larger fonts, spacing) — QR scans straight to the join page; no printed URL
