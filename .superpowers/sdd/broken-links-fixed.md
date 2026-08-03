@@ -79,24 +79,24 @@
 - **Status:** ✅ Fixed
 
 #### 2. 09-SYSTEM/Vault Setup Complete - Next Steps.md (12 links)
-- **Before:** Multiple instances of `[[Areas/...]]` pointing to wrong locations
+- **Before:** Multiple instances of `[[02-PROJECTS/...]]` pointing to wrong locations
 - **After:** Updated to `[[02-PROJECTS/...]]` with correct paths
 - **Example fixes:**
-  - `[[Areas/Personal Growth/index]]` → `[[02-PROJECTS/Personal Growth/index]]`
-  - `[[Areas/Career/Career Goals]]` → `[[02-PROJECTS/Career/Career Goals]]`
+  - `[[02-PROJECTS/Personal Growth/index]]` → `[[02-PROJECTS/Personal Growth/index]]`
+  - `[[02-PROJECTS/Career/Career Goals]]` → `[[02-PROJECTS/Career/Career Goals]]`
   - `[[Templates/Daily Note.md]]` → `[[09-SYSTEM/templates/daily-note]]`
   - `[[Daily Notes/]]` → `[[01-DAILY/]]`
 - **Status:** ✅ Fixed (12 links)
 
 #### 3. 09-SYSTEM/Getting Started - Your First Week.md (3 links)
-- **Before:** `[[Areas/Career/Career Goals]]`
+- **Before:** `[[02-PROJECTS/Career/Career Goals]]`
 - **After:** `[[02-PROJECTS/Career/Career Goals]]`
 - **Before:** `[[_ops/daily-template]]`
 - **After:** `[[09-SYSTEM/templates/daily-note]]`
 - **Status:** ✅ Fixed
 
 #### 4. 05-MAPS/00 Home.md (2 links)
-- **Before:** `[[Areas/Learning/Claude Code Guide]]`
+- **Before:** `[[02-PROJECTS/Learning/Claude Code Guide]]`
 - **After:** `[[02-PROJECTS/Learning/Claude Code Guide]]`
 - **Before:** Removed dead references to non-existent files
 - **Status:** ✅ Fixed
@@ -192,7 +192,7 @@ AFTER:   [Add connections to related notes as you discover them]
 
 ### Example 4: 09-SYSTEM/Vault Setup Complete - Next Steps.md
 ```
-BEFORE:  - [[Areas/Personal Growth/Core Values]]
+BEFORE:  - [[02-PROJECTS/Personal Growth/Core Values]]
 AFTER:   - [[02-PROJECTS/Personal Growth/Core Values]]
 ```
 

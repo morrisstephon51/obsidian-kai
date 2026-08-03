@@ -96,8 +96,8 @@ Complete audit of vault linking structure:
 **Root Cause:** Links referred to Area organizational hubs instead of actual Project/Goal files
 
 **Examples:**
-- `[[Areas/Personal Growth/Core Values]]` should be `[[02-PROJECTS/Personal Growth/Core Values]]`
-- `[[Areas/Development/Skills]]` should be `[[02-PROJECTS/Development/Skills]]`
+- `[[02-PROJECTS/Personal Growth/Core Values]]` should be `[[02-PROJECTS/Personal Growth/Core Values]]`
+- `[[02-PROJECTS/Development/Skills]]` should be `[[02-PROJECTS/Development/Skills]]`
 
 **Solution Applied:** Redirected references to actual project files where work happens
 

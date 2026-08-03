@@ -3,7 +3,12 @@
     "openTabs": [
       {
         "tabId": "tab-1781144957948-sipx4lt",
-        "conversationId": "conv-1783995783942-dmtt8rk5v"
+        "conversationId": "conv-1784850627685-k9a6el8x6"
+      },
+      {
+        "draftModel": "haiku",
+        "tabId": "tab-1784850605840-52yyig5",
+        "conversationId": null
       }
     ],
     "activeTabId": "tab-1781144957948-sipx4lt"

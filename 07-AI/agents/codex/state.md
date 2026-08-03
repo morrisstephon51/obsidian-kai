@@ -4,10 +4,10 @@ display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
 status: idle
-last_run: "2026-07-26T21:00:00Z"
-current_task: "Day 15+ (Plan Week 3): built list.html — dog listing & health doc submission flow (PR #9 open). PR #7 still blocked on Stef running Supabase migrations 001-003. ai-video-reel-generator issue #5 blocked on Stef creating Supabase project."
-runs_completed: 112
-items_processed: 294
+last_run: "2026-08-02T22:00:00Z"
+current_task: "Run 129: Fixed issue #12 — applied both bugs in forming-paws. (1) XSS: wrapped esc(d) around health_docs in admin.html docTags rendering. (2) Value mismatch: aligned list.html checkbox values and HEALTH_DOCS_ALL to same 6 canonical label strings. Branch fix/health-docs-xss-value-mismatch pushed, PR #13 open against feat/admin-review-queue. Issues #6/#8 still blocked on Stef. ai-video-reel-generator #5 still blocked (Supabase)."
+runs_completed: 129
+items_processed: 339
 last_error: null
 color: "#00FF88"
 house: "dev-lab"

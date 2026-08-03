@@ -90,7 +90,7 @@ Both index files were found to already exist in the git history, committed as pa
 
 ## Concerns & Notes
 
-1. **Core Relationships Map Reference:** The Core Relationships Map uses `[[Projects/The Plug AI Progress|...` references which may be a simplified link pattern or future alias. The actual project path is `02-PROJECTS/The Plug AI Progress.md`. This doesn't affect the hub indexes created.
+1. **Core Relationships Map Reference:** The Core Relationships Map uses `[[02-PROJECTS/The Plug AI Progress|...` references which may be a simplified link pattern or future alias. The actual project path is `02-PROJECTS/The Plug AI Progress.md`. This doesn't affect the hub indexes created.
 
 2. **Optional Backlinks:** The Areas could be enhanced to backlink to `02-PROJECTS/index` for complete bidirectional linking, but this was not required by the task scope.
 

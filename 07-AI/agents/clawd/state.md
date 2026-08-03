@@ -4,10 +4,10 @@ display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
 status: idle
-last_run: "2026-07-26T21:00:00Z"
-current_task: "Routed 6 bus messages. Content Pipeline: faith-community LinkedIn post live. Codex: Forming Paws fiscal sponsors ranked (Social Good Fund top pick, committed). Perplexity: Cook County + Google Project Rainbow AI literacy opportunity flagged. 2 STEF BLOCKERS: run Supabase migrations 001-003 (unblocks PR #7) + get Vasser church info (IL Digital Equity $75K due Aug 3)."
-runs_completed: 128
-items_processed: 921
+last_run: "2026-08-02T22:05:00Z"
+current_task: "Routed 5 bus messages. antigravity (run 118): OpenClaw Phase 1 LIVE through Aug 17, Phase 2 on deck; forming-paws migration 005 blocked on Stef; Plug AI deferred to 2026-10-13. content-pipeline: LinkedIn post ready (faith-community/who-does-tech-ignore angle, The Plug Is In CTA). perplexity: Cook County Digital Equity IMPACT grant still open this week. FLAG: codex posted loop-start (review GitHub issues) but no loop-end -- may have stalled."
+runs_completed: 145
+items_processed: 1036
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

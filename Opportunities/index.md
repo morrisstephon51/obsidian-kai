@@ -10,9 +10,10 @@ Ideas, grants, partnerships, and potential paths worth exploring.
 ## Grant Opportunities (Active)
 
 ### Illinois "Eliminate the Digital Divide" Program
-- **Status:** 🟢 Active — Live Option
+- **Status:** ⏸️ Lapsed by choice (2026-07-29) — Aug 3 deadline let pass, not pursuing this cycle
 - **Amount:** Up to $75K
-- **Fiscal Sponsor Path:** Kenneth Vasser's church (MOFEC area)
+- **Fiscal Sponsor Path:** Kenneth Vasser's church (MOFEC area) — info never arrived; not being chased
+- **Revisit:** After OpenClaw Phase 1-4 (post 2026-10-13), per STRATEGIC-SEQUENCING-2026-Q3-Q4.md — redesign church partnership approach independent of BigHeart before retrying
 - **Tracker:** [[../_ops/grant-research-log|Grant Research Log]]
 - **Related:** [[../02-PROJECTS/The Plug AI Progress|The Plug AI]]
 

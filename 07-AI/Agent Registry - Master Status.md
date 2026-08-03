@@ -165,7 +165,7 @@ Output: 07-AI/morning-briefs/ (scheduled)
 Status: ⏸️ ON-HOLD
 Last Active: 2026-06-15
 Reason: Awaiting Plug AI intake workflow finalization
-Restart Condition: When Kenneth Vasser + church partnerships confirmed
+Restart Condition: Post-2026-10-13, once Plug AI execution resumes and church partnership approach is redesigned independent of BigHeart (Vasser path lapsed 2026-07-29, not being chased)
 Responsibilities: Route church inquiries to appropriate handler
 ```
 

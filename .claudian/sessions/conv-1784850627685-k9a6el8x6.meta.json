@@ -1,0 +1,23 @@
+{
+  "id": "conv-1784850627685-k9a6el8x6",
+  "providerId": "claude",
+  "title": "Audit Obsidian vault",
+  "titleGenerationStatus": "success",
+  "createdAt": 1784850627685,
+  "updatedAt": 1784851129727,
+  "lastResponseAt": 1784851129727,
+  "sessionId": "4946d0d4-29d3-4688-8e07-b84b460d6bf1",
+  "providerState": {
+    "providerSessionId": "4946d0d4-29d3-4688-8e07-b84b460d6bf1"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 8,
+    "cacheCreationInputTokens": 4026,
+    "cacheReadInputTokens": 105193,
+    "contextWindow": 200000,
+    "contextTokens": 109227,
+    "percentage": 55,
+    "contextWindowIsAuthoritative": true
+  }
+}
