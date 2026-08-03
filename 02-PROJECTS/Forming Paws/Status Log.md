@@ -56,8 +56,9 @@ Full verification sweep after Stefan completed GoDaddy DNS + GitHub Pages setup:
 ## Live infrastructure
 | Thing | Where |
 |---|---|
-| Public site + waitlist | https://morrisstephon51.github.io/forming-paws/ |
-| Code | github.com/morrisstephon51/forming-paws (`main` auto-deploys) |
+| Public site + onboarding | **https://theplugai.xyz** (github.io URLs redirect here) |
+| Member signup | https://theplugai.xyz/join.html |
+| Code | github.com/morrisstephon51/forming-paws (static site on `gh-pages`, Next.js app on `main`; deploy via "Deploy static site" workflow) |
 | Database | Supabase project `forming-paws` (wyzcnkdonbdykidmcxvx) — waitlist, owners, dogs, breeds, dog_photos, health_documents |
 | Plan | PLAN.md in repo · [[Execution Plan]] |
 
