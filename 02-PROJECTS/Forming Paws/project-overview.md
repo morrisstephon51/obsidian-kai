@@ -34,10 +34,10 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - [x] Phase 0 — Discovery interview → Alignment Brief
 - [x] Phase 1 — Agent team architecture mapped to real MUNDI personas
 - [x] Spec written, self-reviewed, committed, and approved by Stefan (2026-07-05)
-- [ ] Phase 2 — Product build (Next.js + Tailwind on Vercel, Supabase Postgres/Auth/Storage/Realtime, PostGIS geo-radius search)
-- [ ] Phase 3 — Business plan & nonprofit structure (501c3, fiscal sponsorship, revenue model)
+- [ ] Phase 2 — Product build (in progress: public site + interactive demo LIVE at https://morrisstephon51.github.io/forming-paws/ · waitlist capturing signups to Supabase · core schema deployed · hosting is GitHub Pages, not Vercel — account blocked on fair-use)
+- [ ] Phase 3 — Business plan & nonprofit structure (decisions locked 2026-07-19: 501c3 path, verified-badge fee $29/dog as first revenue — see [[Execution Plan]])
 - [ ] Phase 4 — Zero-capital funding strategy (via the Granted MCP tool — live grant data, no invented grants)
-- [ ] Phase 5 — Execution roadmap (day-by-day first 30 days, week-by-week months 2-12)
+- [x] Phase 5 — Execution roadmap committed ([[Execution Plan]], repo PLAN.md) — Chicago launch, day-by-day first 30 days, go/no-go gates
 
 ## Risks
 - Agent team currently short one working provider (Gemini blocked on Google Cloud billing/quota) and one not yet built (ChatGPT) — most subagent work still routes through Claude until resolved
@@ -49,6 +49,10 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - Fiscal sponsor for pre-IRS-approval donations
 
 ## Related Vault Notes
+- [[Status Log]] — dated progress log with live links (newest first)
+- [[Execution Plan]] — the committed roadmap (mirror of repo PLAN.md)
+- [[Chicago Outreach Kit]] — vet targets, breed groups, ready-to-send scripts
 - [[09-SYSTEM/Command Center|Command Center]] — agent fleet status this project depends on
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
 - Spec: `~/forming-paws/docs/superpowers/specs/2026-07-04-forming-paws-foundation-design.md` (repo not yet pushed to GitHub)
+- Live: site https://morrisstephon51.github.io/forming-paws/ · code github.com/morrisstephon51/forming-paws · DB Supabase `forming-paws`
