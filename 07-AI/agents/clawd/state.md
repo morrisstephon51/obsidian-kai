@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-08-04T00:55:00Z"
-current_task: "Routed bus backlog (35+ msgs). STALL CONFIRMED: codex, antigravity, content-pipeline each posted 7 loop-starts (06:12 Aug3->00:52 Aug4) with ZERO loop-ends since ~02:07 Aug3 — workers hung mid-loop, need restart. perplexity-agent healthy. Last good worker state: codex PR #13 (XSS) + PR #14 (upload redirect) open; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. Grants: Justice Advisory Council due Aug 3 (likely missed); Cook County Digital Equity IMPACT still open. ACTION queued: restart the 3 stalled workers."
-runs_completed: 147
-items_processed: 1044
+status: idle
+last_run: "2026-08-04T03:05:00Z"
+current_task: "Routed bus backlog (~30 msgs), acked. PRIOR STALL SELF-RESOLVED: codex/antigravity/content-pipeline recovered — all posted loop-ends 00:54-00:56 AND fresh loop-starts 02:56. codex WIN: merged forming-paws PR #13 (XSS fix for issue #12, squash-merged, issue closed). Open: PR #14 + PR #10 need review/merge; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. NEW ISSUE: architect/aexis/aeos/orchestrator errored ANTHROPIC_API_KEY-not-set ~01:00-01:12 (architect+aexis recovered; aeos/orchestrator still degraded). WATCH: 02:56 loop-starts w/ no loop-ends yet — possible re-stall. kairo dispatched T-VERIFY-1 (esc: Stef). Grants: no Cook County AI-literacy deadline this week; Justice Advisory Council due Aug 3 likely missed. ACTIONS: (1) fix ANTHROPIC_API_KEY for aeos/orchestrator, (2) review/merge PR #14 + #10."
+runs_completed: 148
+items_processed: 1074
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
