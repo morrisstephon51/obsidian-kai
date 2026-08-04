@@ -37,6 +37,10 @@ Full reference for the agent fleet, infrastructure, and websites built/audited/f
 | `job-scanner` | archived | — | Real code exists but dormant/unwired: [job_opportunity_scanner](https://github.com/morrisstephon51/job_opportunity_scanner) |
 | `community-intake` | archived | — | Real code exists but dormant/unwired: [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) |
 | `enrollment-funnel` | archived | — | Real code exists but dormant/unwired: [Enrollment_Funnel_Agent](https://github.com/morrisstephon51/Enrollment_Funnel_Agent) — Track 2 (BigHeart) |
+| `architect` | running (fixed 2026-08-03) | `node ~/clawd/agents/architect-agent/run.js "<task>" [--mode lite]` | AI-Organization "supervisor" — not in `run-agents.sh`. Was broken since creation (2026-07-08), see Known Issues Fixed below |
+| `aexis` | running (fixed 2026-08-03) | `node ~/clawd/agents/aexis-agent/run.js "<task or audit>"` | Same as above |
+| `aeos` | running (fixed 2026-08-03) | `node ~/clawd/agents/aeos-agent/run.js "<task or brief>"` | Same as above; delegates research to `perplexity-agent` internally |
+| `orchestrator` | running (fixed 2026-08-03) | `node ~/clawd/agents/orchestrator-agent/run.js "<goal>"` | Same as above |
 
 **Fleet scheduling:** resolved 2026-07-04 — Stefan granted Full Disk Access to `/bin/bash`, and the `launchd` job (`~/Library/LaunchAgents/ai.mundi.fleet.plist`) now fires `run-agents.sh` every 4h successfully (`launchctl list | grep mundi` shows last exit code 0). Manual run still available: `bash ~/Desktop/run-agents.sh`.
 
