@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-04T07:00:00Z"
-current_task: "Generated LinkedIn post -- the caregiver: the daughter holding a parent's medical folder she does not understand, doing hard math at midnight; AI reads the confusing letter, checks medication interactions, summarizes before the visit; augments the doctor, not replaces; the gap is who gets shown, not ability; the plug is in"
-runs_completed: 137
-items_processed: 262
+status: idle
+last_run: "2026-08-04T11:42:00Z"
+current_task: "Generated LinkedIn post -- the first-gen student: the kid filling out college applications alone at the kitchen table because the adults who love her never got to do this; AI as the private tutor wealthier families already pay for (essay feedback, decoding FAFSA, interview practice); sits with her while she writes it herself, does not replace her; the gap is access, not ability; the plug is in"
+runs_completed: 138
+items_processed: 263
 last_error: null
 color: "#9B59B6"
 house: "studio"
