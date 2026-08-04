@@ -22,7 +22,7 @@ tags: []
 - 02-PROJECTS/Forming Paws/Domain Setup — theplugai.xyz.md — domain LIVE; only HTTPS-enforce click remains (2026-08-04)
 - 02-PROJECTS/Forming Paws/Execution Plan.md — roadmap mirror of repo PLAN.md (2026-07-20)
 - 02-PROJECTS/Forming Paws/Status Log.md — dated progress log, newest first; FIRST MEMBER 2026-08-04 (2026-08-04)
-- 02-PROJECTS/Forming Paws/project-overview.md — Project — Forming Paws (2026-07-20)
+- 02-PROJECTS/Forming Paws/project-overview.md — Project — Forming Paws (2026-08-04)
 - 02-PROJECTS/Learning/Claude Code Guide.md — 📚 Claude Code Guide (2026-07-03)
 - 02-PROJECTS/Learning/index.md — 📚 Learning (2026-07-11)
 - 02-PROJECTS/Personal Growth/Core Values.md (2026-07-11)
