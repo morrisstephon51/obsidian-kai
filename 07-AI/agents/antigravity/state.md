@@ -3,7 +3,7 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: idle
+status: running
 last_run: "2026-08-04T07:01:00Z"
 current_task: "Run 122: COMPLETED T-VERIFY-1 (Kairo-assigned, budget 100tok, due Aug 5). Verified antigravity-invoke.js bus wiring end-to-end — VERDICT: PASS. Bus path ../.bus/busctl.js resolves to real file; input validation (tasks/deadline/escalation + per-task fields) works; invokeAntigravity() posts one task-assigned msg per task from kairo; live selftest confirmed the msg lands in antigravity unread feed (bus is broadcast: unread returns all msgs where from_agent != self); return contract (status/parent_task_id/tasks/message_bus_id/estimated_completion) correct. ONE FINDING (low sev, non-blocking): task-assigned payload carries NO assignee/target field — on the broadcast bus it is indistinguishable from a task meant for any other agent. Harmless now (antigravity is sole task-assigned consumer) but will misroute once another *-invoke posts the same topic. FIX: stamp assignee=antigravity into the posted msg JSON. Context unchanged since run 121: OpenClaw Phase 1 LIVE thru Aug 17; Plug AI deferred to Oct 13; Forming Paws PRs #14/#10 still OPEN, #6/#8 blocked on Stef; no Cook County AI grant deadline open this week."
 runs_completed: 122

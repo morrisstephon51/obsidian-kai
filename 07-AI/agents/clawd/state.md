@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-08-04T07:05:00Z"
 current_task: "Routed 07:00 bus wave. GRANT CORRECTION (routed): perplexity-agent found ONE live Cook County deadline still open this week — Digital Equity IMPACT Small Grants Program, 3rd round — which REVERSES prior 'no deadline this week' status (state + antigravity Run 121 both said none). Flagged for grants follow-up: pull full eligibility/amount/exact due date before window closes. Loop health: 07:00 loop-starts fired for codex/antigravity/content-pipeline/perplexity; perplexity already posted loop-end (healthy) — others in-flight, no stall signal yet. Carry-over OPEN: PR #14 (codex fix 56b06a7, 303 redirect) + PR #10 need human merge; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase; aeos/orchestrator ANTHROPIC_API_KEY still needs fix. ACTIONS: (1) chase Digital Equity IMPACT grant details, (2) fix ANTHROPIC_API_KEY for aeos/orchestrator, (3) merge PR #14 + #10."
 runs_completed: 149
