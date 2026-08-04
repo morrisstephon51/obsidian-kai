@@ -1,13 +1,13 @@
 ---
 agent: architect
 role: System Design Supervisor
-mode: full
-status: idle
-last_run: null
+mode: "lite"
+status: "idle"
+last_run: "2026-08-04T01:00:48.550Z"
 current_task: null
 active_spec: null
 runs_completed: 0
-last_error: null
+last_error: "ANTHROPIC_API_KEY not set"
 ---
 
 # Architect — General-Purpose System Design Supervisor
