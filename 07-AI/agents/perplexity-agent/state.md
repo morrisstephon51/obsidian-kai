@@ -5,7 +5,7 @@ emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
 last_run: "2026-08-04T16:41:56.888Z"
-current_task: null
+current_task: "Check for AI literacy grant deadlines in Cook County this week"
 runs_completed: 125
 items_processed: 125
 last_error: null
