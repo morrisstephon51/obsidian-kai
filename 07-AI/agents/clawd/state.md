@@ -36,3 +36,5 @@ house: "operations-center"
 - All other agents report into clawd via the bus.
 - MUNDI (Claude Code) governs the overall world from the dashboard.
 - **Scope, as of 2026-07-05:** clawd/Kai manages the whole vault, not just The Plug AI — full read/write autonomy, no standing approval required, across every folder in `000 Index.md`. Previously step 4 (`world.md`) was the only vault-context read, and that file named only The Plug AI as the mission — that's what silently scoped Kai down. Steps 5–6 fix it. Track discipline (Plug AI = Track 1) still governs prioritization under time pressure, not what Kai is allowed to touch.
+
+[2026-08-04T01:44:52.408Z] Design a REST API for a user authentication system (OAuth2) via claude-haiku-4-5-20251001: OK ($0.0008)
