@@ -10,6 +10,14 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-04 (later) — FIRST REAL MEMBER 🎉 + member ops built
+- **Terrell Anderson (terrella031@icloud.com) joined via the live site** — first organic member; confirmed their email (the automatic confirmation email works in the wild). Their dog profile didn't complete (confirmed on a different device than they signed up on) — join page now handles that: resubmitting the form logs them in and finishes the profile
+- **Admin dashboard live: https://theplugai.xyz/admin.html** — running member roster (name, email, location, dogs, joined date), waitlist list, stat tiles, CSV export. Sign-in required; only accounts with is_admin=true see data (RLS-enforced)
+- **Daily member report Routine** — every day 9am Chicago, Claude checks for new members/dogs/waitlist, pushes a phone notification when there's news, stays quiet otherwise. Also auto-promotes the founder account to admin once it exists
+- **DB changes**: owners.email column added (captured on signup, backfilled), is_admin() helper + admin read policies on owners/dogs/waitlist
+- **Stefan's one task → to see the dashboard: sign up at https://theplugai.xyz/join.html with morrisstephon51@gmail.com** (any dog is fine), confirm the email. Admin access activates automatically within a day (or ask Claude to do it instantly)
+- Data note: 4 e2e-fixture accounts from the parallel session's tests remain in the DB (excluded from reports); left in place since that session's test suite may rely on them
+
 ## 2026-08-04 — DOMAIN LIVE: https://theplugai.xyz ✅
 Full verification sweep after Stefan completed GoDaddy DNS + GitHub Pages setup:
 - DNS: all four GitHub Pages A records + www CNAME → correct
