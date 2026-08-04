@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-04T11:42:00Z"
 current_task: "Generated LinkedIn post -- the first-gen student: the kid filling out college applications alone at the kitchen table because the adults who love her never got to do this; AI as the private tutor wealthier families already pay for (essay feedback, decoding FAFSA, interview practice); sits with her while she writes it herself, does not replace her; the gap is access, not ability; the plug is in"
 runs_completed: 138
