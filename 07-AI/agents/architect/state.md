@@ -2,12 +2,12 @@
 agent: architect
 role: System Design Supervisor
 mode: "lite"
-status: "running"
-last_run: "2026-08-04T01:07:15.380Z"
-current_task: "health check retest lite"
-active_spec: "health check retest lite"
-runs_completed: 0
-last_error: "claude -p failed: Error: Input must be provided either through stdin or as a prompt argument when using --print"
+status: "idle"
+last_run: "2026-08-04T01:07:53.055Z"
+current_task: null
+active_spec: null
+runs_completed: 1
+last_error: null
 ---
 
 # Architect — General-Purpose System Design Supervisor
@@ -32,4 +32,22 @@ Core question: **"What exactly are we building and why, before a single line of 
 <!-- Architect writes the current design here -->
 
 ## Last Architecture Decision
-<!-- Written after each design loop -->
+*2026-08-04 (lite)*
+
+To design this task effectively, I need a few clarifications:
+
+1. **What system does this relate to?** Is this for an API, database, microservice, frontend testing, deployment pipeline, or something else?
+
+2. **What does "lite" mean?** Is it:
+   - A simplified/minimal version of full health checks?
+   - Only retesting failed checks from a previous run?
+   - Fast-path checks without deep diagnostics?
+
+3. **What are you retesting?** What did the original health check do, and what failed?
+
+4. **What's the output format?** Do you need a report, metrics, pass/fail status, or detailed logs?
+
+Once I understand the context, I can give you a proper design with the three-section format:
+- **What** (one sentence)
+- **Steps** (numbered concrete actions)
+- **Done When** (3 testable bullets)
