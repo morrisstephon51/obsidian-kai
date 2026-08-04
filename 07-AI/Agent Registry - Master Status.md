@@ -2,12 +2,14 @@
 created: 2026-07-23
 type: system-reference
 status: active
-last-updated: 2026-07-23
+last-updated: 2026-08-03
 ---
 
 # Agent Registry — Master Status Dashboard
 
-**Authoritative registry of all AI agents, their status, configuration, and governance.**
+**Authoritative registry of all AI agents, their status, configuration, and governance.** This doc owns supervisor *status* (healthy/broken); [[07-AI/MUNDI System Reference|MUNDI System Reference]] owns fleet *mechanics* (invoke commands, scheduling). Cross-check both when either changes — see 2026-08-03 correction below, which is exactly the kind of drift that happens when they aren't.
+
+**2026-08-03 correction:** Orchestrator, Architect, Aexis, and Aeos were listed below as "✅ Active" since this doc's creation (2026-07-23) — that was never actually true. All 4 had been failing instantly on every invocation since they were written (2026-07-08/09) with `ANTHROPIC_API_KEY not set` (they called the raw Anthropic API directly; this system only has OAuth via the `claude` CLI, no pay-as-you-go API key) and had never once posted a successful result to the bus. Nobody had actually run them until tested today. Fixed by rewiring each to shell out to `claude -p` instead — verified live, all 4 now genuinely active. Lesson: "✅ Active" in this table means someone actually invoked it, not that it was configured correctly at creation — the monthly review below didn't catch this because a broken agent that's never run also generates no "hasn't run in 30 days" alert.
 
 ---
 
