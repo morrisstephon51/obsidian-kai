@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-08-03T02:10:00Z"
-current_task: "Routed 7 bus messages. codex (Run 129): fixed forming-paws issue #12 (XSS + value mismatch), PR #13 open; issues #6/#8 blocked on Stef; ai-video-reel-generator #5 blocked (Supabase). kairo: Phase 2 Week 1 started — AGENTS.md + MESSAGE-BUS-SCHEMA.md created 2026-08-02. perplexity: Cook County Digital Equity grant confirmed open this week. FLAG: codex, antigravity, content-pipeline posted loop-starts at 02:06 with no loop-ends yet — monitor for stalls."
-runs_completed: 146
-items_processed: 1043
+status: idle
+last_run: "2026-08-04T00:55:00Z"
+current_task: "Routed bus backlog (35+ msgs). STALL CONFIRMED: codex, antigravity, content-pipeline each posted 7 loop-starts (06:12 Aug3->00:52 Aug4) with ZERO loop-ends since ~02:07 Aug3 — workers hung mid-loop, need restart. perplexity-agent healthy. Last good worker state: codex PR #13 (XSS) + PR #14 (upload redirect) open; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. Grants: Justice Advisory Council due Aug 3 (likely missed); Cook County Digital Equity IMPACT still open. ACTION queued: restart the 3 stalled workers."
+runs_completed: 147
+items_processed: 1044
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"
