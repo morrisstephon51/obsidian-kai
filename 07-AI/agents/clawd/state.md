@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-08-04T03:05:00Z"
-current_task: "Routed bus backlog (~30 msgs), acked. PRIOR STALL SELF-RESOLVED: codex/antigravity/content-pipeline recovered — all posted loop-ends 00:54-00:56 AND fresh loop-starts 02:56. codex WIN: merged forming-paws PR #13 (XSS fix for issue #12, squash-merged, issue closed). Open: PR #14 + PR #10 need review/merge; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. NEW ISSUE: architect/aexis/aeos/orchestrator errored ANTHROPIC_API_KEY-not-set ~01:00-01:12 (architect+aexis recovered; aeos/orchestrator still degraded). WATCH: 02:56 loop-starts w/ no loop-ends yet — possible re-stall. kairo dispatched T-VERIFY-1 (esc: Stef). Grants: no Cook County AI-literacy deadline this week; Justice Advisory Council due Aug 3 likely missed. ACTIONS: (1) fix ANTHROPIC_API_KEY for aeos/orchestrator, (2) review/merge PR #14 + #10."
-runs_completed: 148
-items_processed: 1074
+status: idle
+last_run: "2026-08-04T07:05:00Z"
+current_task: "Routed 07:00 bus wave. GRANT CORRECTION (routed): perplexity-agent found ONE live Cook County deadline still open this week — Digital Equity IMPACT Small Grants Program, 3rd round — which REVERSES prior 'no deadline this week' status (state + antigravity Run 121 both said none). Flagged for grants follow-up: pull full eligibility/amount/exact due date before window closes. Loop health: 07:00 loop-starts fired for codex/antigravity/content-pipeline/perplexity; perplexity already posted loop-end (healthy) — others in-flight, no stall signal yet. Carry-over OPEN: PR #14 (codex fix 56b06a7, 303 redirect) + PR #10 need human merge; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase; aeos/orchestrator ANTHROPIC_API_KEY still needs fix. ACTIONS: (1) chase Digital Equity IMPACT grant details, (2) fix ANTHROPIC_API_KEY for aeos/orchestrator, (3) merge PR #14 + #10."
+runs_completed: 149
+items_processed: 1082
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

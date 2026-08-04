@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-03T00:00:00Z"
-current_task: "Generated LinkedIn post -- the elder who says 'AI is not for people like me'; she already uses it (autocomplete, fraud alerts, music apps) and was never told; showed her one plain-language win in the room; the gap is who gets shown, not ability; the plug is in"
-runs_completed: 136
-items_processed: 261
+status: idle
+last_run: "2026-08-04T07:00:00Z"
+current_task: "Generated LinkedIn post -- the caregiver: the daughter holding a parent's medical folder she does not understand, doing hard math at midnight; AI reads the confusing letter, checks medication interactions, summarizes before the visit; augments the doctor, not replaces; the gap is who gets shown, not ability; the plug is in"
+runs_completed: 137
+items_processed: 262
 last_error: null
 color: "#9B59B6"
 house: "studio"
