@@ -2,10 +2,10 @@
 agent: architect
 role: System Design Supervisor
 mode: "full"
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:46:34.374Z"
-current_task: null
-active_spec: null
+current_task: "Design a REST API for OAuth2"
+active_spec: "Design a REST API for OAuth2"
 runs_completed: 2
 last_error: null
 ---
