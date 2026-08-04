@@ -1,12 +1,12 @@
 ---
 agent: aeos
 role: Strategic Signal Supervisor
-status: "running"
-last_run: null
-current_task: "health check test"
+status: "idle"
+last_run: "2026-08-04T01:01:17.148Z"
+current_task: null
 runs_completed: 0
 items_processed: 0
-last_error: null
+last_error: "ANTHROPIC_API_KEY not set"
 ---
 
 # Aeos — Strategic Signal Supervisor
