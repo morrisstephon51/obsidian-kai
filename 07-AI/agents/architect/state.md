@@ -2,10 +2,10 @@
 agent: architect
 role: System Design Supervisor
 mode: "lite"
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:07:15.380Z"
-current_task: null
-active_spec: null
+current_task: "health check retest lite"
+active_spec: "health check retest lite"
 runs_completed: 0
 last_error: "claude -p failed: Error: Input must be provided either through stdin or as a prompt argument when using --print"
 ---
