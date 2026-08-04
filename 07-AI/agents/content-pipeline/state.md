@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-02T00:00:00Z"
-current_task: "Generated LinkedIn post -- faith community admin labor angle; church secretary/deacon/CHW running on empty; tech world forgot them; The Plug AI built from their world; The plug is in"
-runs_completed: 134
-items_processed: 259
+status: idle
+last_run: "2026-08-03T00:00:00Z"
+current_task: "Generated LinkedIn post -- someone in your congregation is fighting a system this week; denied benefits, housing letters, forms with deadlines; AI reads the letter and drafts the appeal; the gap is access not tech; The system was not built for you, the plug is"
+runs_completed: 135
+items_processed: 260
 last_error: null
 color: "#9B59B6"
 house: "studio"
