@@ -1,9 +1,9 @@
 ---
 agent: aexis
 role: Execution Intelligence Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:01:12.431Z"
-current_task: null
+current_task: "audit"
 runs_completed: 0
 items_processed: 0
 last_error: "ANTHROPIC_API_KEY not set"
