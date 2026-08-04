@@ -5,7 +5,7 @@ emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
 last_run: "2026-08-04T00:52:58.548Z"
-current_task: null
+current_task: "health check test"
 runs_completed: 119
 items_processed: 119
 last_error: null

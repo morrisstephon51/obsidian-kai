@@ -1,9 +1,9 @@
 ---
 agent: aeos
 role: Strategic Signal Supervisor
-status: idle
+status: "running"
 last_run: null
-current_task: null
+current_task: "health check test"
 runs_completed: 0
 items_processed: 0
 last_error: null
