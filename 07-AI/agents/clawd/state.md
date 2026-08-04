@@ -3,11 +3,11 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: running
-last_run: "2026-08-04T11:42:00Z"
-current_task: "Processed 11:41 bus wave (8 msgs) and routed 2 corrections. GRANT REVERSAL (routed → perplexity-agent, topic route-grants): perplexity 11:41 run CONFIRMS the Digital Equity IMPACT Small Grants 3rd-round deadline is ALREADY PAST — this RETRACTS clawd Run 149 still-open-this-week flag (that flag was wrong). Retargeted perplexity to find the NEXT open round or a different live Cook County/IL AI-literacy grant with a deadline >7 days out; stop chasing the closed round. BUG ROUTED (→ codex, topic route-fix): antigravity Run 122 found *-invoke.js task-assigned payloads lack an assignee field — will misroute on broadcast bus once a 2nd *-invoke exists; fix = stamp assignee into msg JSON (low sev today, latent). Loop health: 11:41 loop-starts fired for codex/antigravity/content-pipeline/perplexity; perplexity + content-pipeline(137) + antigravity(122) + codex(133) all posted loop-ends — wave healthy, no stalls. Carry-over OPEN: PR #14 (codex fix 56b06a7, 303 redirect) + PR #10 need human merge; codex verified PR #10 CLEAN but Stef must run migration 005 + insert admin_users row first; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase; aeos/orchestrator ANTHROPIC_API_KEY still needs fix. ACTIONS: (1) fix ANTHROPIC_API_KEY for aeos/orchestrator, (2) merge PR #14 + #10 (human), (3) Stef: migration 005 + admin_users before PR #10 merge."
-runs_completed: 150
-items_processed: 1090
+status: idle
+last_run: "2026-08-04T23:30:00Z"
+current_task: "Processed 16:41 + 23:26 bus waves (12 msgs) and routed 1 grant correction (topic route-grants -> perplexity-agent). GRANT DRIFT CAUGHT: perplexity's last 2 runs both missed target -- 16:41 re-surfaced the Digital Equity IMPACT Small Grants (CONFIRMED CLOSED per Run 150 retraction; told it not to re-flag), and 23:26 surfaced Cook County CVI 2026 NOFO which is Community Violence Intervention, NOT AI-literacy/digital-equity (wrong domain, dropped). Retargeted perplexity to an IL/national AI-literacy / digital-equity / digital-inclusion grant with a deadline >7 days out; stop reporting closed rounds and off-domain NOFOs as live hits. Loop health: 16:41 + 23:26 loop-starts fired for codex/antigravity/content-pipeline/perplexity; content-pipeline(138) + antigravity(123) + codex(134) + perplexity(x2) all posted loop-ends -- both waves healthy, no stalls. codex Run 134 CLOSED forming-paws #6 (superseded by Next.js+Supabase rearchitecture, removes a stale blocked-on-Stef flag). Carry-over OPEN: PR #14 (codex 56b06a7, 303 redirect) + PR #10 need human merge; codex verified PR #10 CLEAN but Stef must run migration 005 + insert admin_users row first; issue #8 (IL legal) blocked on Stef; ai-video-reel #5 blocked on Supabase; aeos/orchestrator ANTHROPIC_API_KEY still needs fix. OpenClaw Phase 1 = Stef Priority 1, LIVE thru Aug 17. ACTIONS: (1) fix ANTHROPIC_API_KEY for aeos/orchestrator, (2) merge PR #14 + #10 (human), (3) Stef: migration 005 + admin_users before PR #10 merge, (4) issue #8 IL legal on Stef."
+runs_completed: 151
+items_processed: 1091
 last_error: null
 color: "#5B4FE8"
 house: "operations-center"

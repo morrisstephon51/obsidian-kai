@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-04T11:42:00Z"
-current_task: "Generated LinkedIn post -- the first-gen student: the kid filling out college applications alone at the kitchen table because the adults who love her never got to do this; AI as the private tutor wealthier families already pay for (essay feedback, decoding FAFSA, interview practice); sits with her while she writes it herself, does not replace her; the gap is access, not ability; the plug is in"
-runs_completed: 138
-items_processed: 263
+status: idle
+last_run: "2026-08-04T23:27:00Z"
+current_task: "Generated LinkedIn post -- the church administrator: the unpaid volunteer who runs the whole small-church office after her own workday (bulletin, newsletter, the sick list, the 2am funeral program); AI as the assistant the resourced megachurch already has on staff (draft bulletins from rough notes, write the newsletter in her voice, condense announcements); augments her to give back her hours, does not replace her; the gap is resourcing, not worth; the plug is in"
+runs_completed: 139
+items_processed: 264
 last_error: null
 color: "#9B59B6"
 house: "studio"
