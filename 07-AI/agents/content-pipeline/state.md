@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-03T00:00:00Z"
 current_task: "Generated LinkedIn post -- someone in your congregation is fighting a system this week; denied benefits, housing letters, forms with deadlines; AI reads the letter and drafts the appeal; the gap is access not tech; The system was not built for you, the plug is"
 runs_completed: 135

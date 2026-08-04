@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-08-04T00:55:00Z"
 current_task: "Routed bus backlog (35+ msgs). STALL CONFIRMED: codex, antigravity, content-pipeline each posted 7 loop-starts (06:12 Aug3->00:52 Aug4) with ZERO loop-ends since ~02:07 Aug3 — workers hung mid-loop, need restart. perplexity-agent healthy. Last good worker state: codex PR #13 (XSS) + PR #14 (upload redirect) open; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. Grants: Justice Advisory Council due Aug 3 (likely missed); Cook County Digital Equity IMPACT still open. ACTION queued: restart the 3 stalled workers."
 runs_completed: 147
