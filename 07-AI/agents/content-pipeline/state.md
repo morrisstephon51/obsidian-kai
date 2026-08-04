@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-03T00:00:00Z"
 current_task: "Generated LinkedIn post -- the elder who says 'AI is not for people like me'; she already uses it (autocomplete, fraud alerts, music apps) and was never told; showed her one plain-language win in the room; the gap is who gets shown, not ability; the plug is in"
 runs_completed: 136

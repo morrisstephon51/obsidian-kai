@@ -3,7 +3,7 @@ agent: clawd
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-08-04T03:05:00Z"
 current_task: "Routed bus backlog (~30 msgs), acked. PRIOR STALL SELF-RESOLVED: codex/antigravity/content-pipeline recovered — all posted loop-ends 00:54-00:56 AND fresh loop-starts 02:56. codex WIN: merged forming-paws PR #13 (XSS fix for issue #12, squash-merged, issue closed). Open: PR #14 + PR #10 need review/merge; issues #6/#8 blocked on Stef; ai-video-reel #5 blocked on Supabase. NEW ISSUE: architect/aexis/aeos/orchestrator errored ANTHROPIC_API_KEY-not-set ~01:00-01:12 (architect+aexis recovered; aeos/orchestrator still degraded). WATCH: 02:56 loop-starts w/ no loop-ends yet — possible re-stall. kairo dispatched T-VERIFY-1 (esc: Stef). Grants: no Cook County AI-literacy deadline this week; Justice Advisory Council due Aug 3 likely missed. ACTIONS: (1) fix ANTHROPIC_API_KEY for aeos/orchestrator, (2) review/merge PR #14 + #10."
 runs_completed: 148

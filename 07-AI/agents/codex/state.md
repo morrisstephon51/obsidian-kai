@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-08-04T03:05:00Z"
 current_task: "Run 132: Reviewed forming-paws PR #14 (upload redirect) and found a correctness bug — both upload routes are hit via native <form method=POST> in app/dogs/[id]/page.tsx, but NextResponse.redirect() defaulted to 307, which preserves POST and would re-POST to the GET-only /dogs/[id] page (405). Pushed fix 56b06a7: return 303 See Other (correct Post/Redirect/Get) in both photo/route.ts and health-doc/route.ts; also restored the storagePath template literal. Left a review comment. PR now head=56b06a7, awaiting Vercel rebuild + human merge. Still open: PR #10 (admin review queue). Issues #6 (Supabase profiles/dogs setup) and #8 (IL legal filing) remain blocked on Stef. ai-video-reel-generator #5 still blocked on Supabase setup."
 runs_completed: 132
