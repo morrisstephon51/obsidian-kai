@@ -39,8 +39,20 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - [ ] Phase 4 — Zero-capital funding strategy (via the Granted MCP tool — live grant data, no invented grants)
 - [x] Phase 5 — Execution roadmap committed ([[Execution Plan]], repo PLAN.md) — Chicago launch, day-by-day first 30 days, go/no-go gates
 
+## Hosting — three things, easy to confuse (verified 2026-08-06)
+
+| What | Where | Contains |
+|---|---|---|
+| **Public static site** | [theplugai.xyz](https://theplugai.xyz) — GitHub Pages, `gh-pages` branch | Landing, `/join.html`, `/admin.html`. **The shareable link** |
+| Vercel project `forming-paws` | forming-paws.vercel.app | Serves the static landing only — `/browse` and `/join.html` both 404. Not the real app |
+| **The Next.js app** | `~/forming-paws`, branch `main` — **local only** | Owner accounts, dog profiles, health-doc verification + admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018 |
+
+The app being unhosted is a **decision, not a blocker** (2026-07-22): Stefan chose to keep iterating locally rather than carry deploy-platform overhead, after the project hit a Vercel billing cap once. Don't propose Vercel/Netlify deploys unless he reopens it. Task 11 in the foundation plan is SKIPPED for this reason — closed, not pending.
+
+The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
+
 ## Risks
-- Agent team currently short one working provider (Gemini blocked on Google Cloud billing/quota) and one not yet built (ChatGPT) — most subagent work still routes through Claude until resolved
+- Agent team lost its Gemini provider entirely — `gemini-agent` was **archived** to `~/clawd/agents/_archived/` after every call returned HTTP 429 with `limit: 0` (the Google Cloud project had zero free-tier quota; needed a billing decision, not a code fix). ChatGPT provider still not built. Subagent work routes through Claude
 - 30 min/day constraint means scope creep is the biggest execution risk — stay disciplined about what Phase 2 actually needs for an MVP
 
 ## Resources to Gather
