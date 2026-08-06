@@ -1,9 +1,9 @@
 ---
 agent: aexis
 role: Execution Intelligence Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:09:35.222Z"
-current_task: null
+current_task: "Reply with exactly: AEXIS_INVOCATION_OK and nothing else."
 runs_completed: 1
 items_processed: 0
 last_error: null
