@@ -34,7 +34,7 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - [x] Phase 0 — Discovery interview → Alignment Brief
 - [x] Phase 1 — Agent team architecture mapped to real MUNDI personas
 - [x] Spec written, self-reviewed, committed, and approved by Stefan (2026-07-05)
-- [x] Phase 2 — MVP live at **https://theplugai.xyz**: onboarding (join.html), waitlist, admin member dashboard (admin.html), daily member-report notifications. FIRST REAL MEMBER joined 2026-08-04 🎉 (full Next.js app sits on `main` awaiting hosting — Vercel blocked)
+- [x] Phase 2 — MVP live at **https://theplugai.xyz**: onboarding (join.html), waitlist, admin member dashboard (admin.html), daily member-report notifications. FIRST REAL MEMBER joined 2026-08-04 🎉
 - [ ] Phase 3 — Business plan & nonprofit structure (decisions locked 2026-07-19: 501c3 path, verified-badge fee $29/dog as first revenue — see [[Execution Plan]])
 - [ ] Phase 4 — Zero-capital funding strategy (via the Granted MCP tool — live grant data, no invented grants)
 - [x] Phase 5 — Execution roadmap committed ([[Execution Plan]], repo PLAN.md) — Chicago launch, day-by-day first 30 days, go/no-go gates
