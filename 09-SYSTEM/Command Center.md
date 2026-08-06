@@ -166,8 +166,8 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
 ## 🔴 Open Items
 
 1. **Fix `theplugai.online` HTTPS** — cert never issued. The public Command Center link is effectively broken for anyone using `https://`.
-2. **Fix `ai-video-reel-generator`** — 307 redirect loop.
-3. **Back up the three unbacked directories** (consulting business, AI-Organization, run-agents.sh).
+2. **Merge [PR #23](https://github.com/morrisstephon51/ai-video-reel-generator/pull/23)** — fixes the `ai-video-reel-generator` 307. Root cause: `redirect('/dashboard')` in `src/app/page.tsx` gets statically prerendered and edge-cached *without a Location header*, so `/` is a cached dead end. Fix moves it to a `redirects()` rule in `next.config.mjs` (routing layer, runs before render). Found and authored by codex; flagged for human merge.
+3. ~~Back up the three unbacked directories~~ — **partially done 2026-08-06.** `ai-consulting-business` is now a private repo and pushed. `~/clawd` (which contains AI-Organization and the backed-up `run-agents.sh` + launchd plists in `scripts/`) is committed locally but **still has no remote** — the push was blocked pending review, since the repo also carries personal context (`SOUL.md`, `IDENTITY.md`, `USER.md`, `memory/`) beyond the governance docs.
 4. **Reconcile `psychic-octo-engine`** — archived repo, live deploy.
 5. **Delete dead Vercel projects** — `community-intake-routing`, `content-machine-migh`.
 6. **Commit `~/ai-consulting-business/`** — built 2026-07-17, still zero commits.
