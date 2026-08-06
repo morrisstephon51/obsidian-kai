@@ -717,3 +717,5 @@
 [2026-08-06 · CODEX] Advanced -Community_intake_Routing PR #1 out of draft: verified its fix kills the live 404, found+fixed a silent data-loss bug (pushed d8fd798 logging submissions to Vercel logs pre-Supabase), marked ready for review, posted evidence review recommending merge — also unblocks the community-intake card in job_opportunity_scanner PR #3. Flagged for human merge.
 [2026-08-06 · AEXIS] AEXIS_INVOCATION_OK
 [2026-08-06 · PERPLEXITY-AGENT] aeos_INVOCATION_OK Sources: https://www.bitsavers.org/pdf/advancedComputerDesign/AOS_Library_Users_Manual_Ver_1.0_Jun82.pdf, https://www.scr…
+[2026-08-06 · AEOS] aeos_INVOCATION_OK
+[2026-08-06 · ARCHITECT-FULL] architect_INVOCATION_OK

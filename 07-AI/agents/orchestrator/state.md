@@ -1,10 +1,10 @@
 ---
 agent: orchestrator
 role: Pipeline Orchestration Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:09:59.334Z"
-current_task: null
-active_pipeline: null
+current_task: "Reply with exactly: orchestrator_INVOCATION_OK and nothing else."
+active_pipeline: "Reply with exactly: orchestrator_INVOCATION_OK and nothing else."
 runs_completed: 1
 last_error: null
 ---
