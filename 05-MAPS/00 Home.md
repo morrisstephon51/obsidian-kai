@@ -82,7 +82,9 @@
 | [[07-AI/\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
 | [[08-ARCHIVE/\|Archive]] | Completed or inactive material |
 | [[01-DAILY/\|01-DAILY]] | Day-by-day notes and reflections |
-| [[Attachments/\|Attachments]] | Images, PDFs, and other files |
+| [[03-NOTES/\|03-NOTES]] | Permanent notes — one idea each, e.g. [[03-NOTES/two-track-rule\|the two-track rule]] |
+| [[05-MAPS/\|05-MAPS]] | Maps of content, audits, this page |
+| [[_ops/\|_ops]] | [[_ops/important-links\|Links registry]], trackers, templates |
 
 ---
 
