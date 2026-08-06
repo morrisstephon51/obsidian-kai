@@ -41,11 +41,11 @@ Outreach is **semi-autonomous**. Low-stakes first-touch drafts can be agent-assi
 
 Also published as a Claude Artifact: [Field Ledger — AI Implementation Consulting](https://claude.ai/code/artifact/b02e34fa-1e71-442d-a450-5a445495a6c9)
 
-## ⚠️ Not backed up
-Verified 2026-08-06: the repo is git-initialized but has **zero commits and no GitHub remote**. Everything above exists only on this machine. Committing and pushing it is the cheapest risk reduction available on this project.
+## ✅ Backed up 2026-08-06
+Was git-initialized with **zero commits and no remote** — everything existed only on this machine. Now committed and pushed to the private repo **[morrisstephon51/ai-consulting-business](https://github.com/morrisstephon51/ai-consulting-business)** (15 files). Private rather than public because `prospects/` holds targeting research on named local firms. A `.gitignore` blocks `.env`, `*.key`, and `*credentials*` so a future API key can't be committed by accident.
 
 ## Open blockers
-- [ ] **Back it up** — commit and push to GitHub
+- [x] ~~Back it up~~ — done 2026-08-06
 - [ ] **Perplexity MCP not added** — needs API key: `claude mcp add perplexity --env PERPLEXITY_API_KEY=... -- npx -y @perplexity-ai/mcp-server`
 - [ ] **Gmail MCP connector not authorized** — blocks any autonomous Touch-1 sending. Authorize via claude.ai connector settings
 - [ ] **Law firm ranking unverified** — current Tier 1/2/3 is a first-pass web-search ranking by firm size/tenure, not checked against live Google review patterns
