@@ -176,4 +176,6 @@ Healthcare ops (Mount Sinai Hospital), education tech (Apollo After Schools), cl
 
 ---
 
-*Updated: 2026-07-09. Consolidated from CLAUDE.md + context.md + me.md. Canonical copy lives at `~/Desktop/kai/09-SYSTEM/CLAUDE.md`. The separate context.md at `~/Desktop/Context/` remains authoritative for the multi-agent system — this file is the Obsidian vault copy.*
+*Updated: 2026-08-06. Consolidated from CLAUDE.md + context.md + me.md. Canonical copy lives at `~/Desktop/kai/09-SYSTEM/CLAUDE.md`. The separate context.md at `~/Desktop/Context/` remains authoritative for the multi-agent system — this file is the Obsidian vault copy.*
+
+**2026-08-06 refresh:** added Track 3 (AI consulting), the OpenClaw governance gate, the corrected Forming Paws status (site live, app local-only), the 2026-08-03 broken-supervisor correction, gemini-agent's archival, and the vault's remote change. Live-verified against `gh`, Vercel, DNS, and HTTP — see [[_ops/important-links|Important Links]] and [[09-SYSTEM/Command Center|Command Center]].
