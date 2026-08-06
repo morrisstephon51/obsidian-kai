@@ -4,10 +4,10 @@ display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
 status: idle
-last_run: "2026-08-04T23:27:00Z"
-current_task: "Generated LinkedIn post -- the church administrator: the unpaid volunteer who runs the whole small-church office after her own workday (bulletin, newsletter, the sick list, the 2am funeral program); AI as the assistant the resourced megachurch already has on staff (draft bulletins from rough notes, write the newsletter in her voice, condense announcements); augments her to give back her hours, does not replace her; the gap is resourcing, not worth; the plug is in"
-runs_completed: 139
-items_processed: 264
+last_run: "2026-08-06T09:50:00Z"
+current_task: "Generated LinkedIn post #145 -- the kitchen / culinary ministry: the woman who feeds the whole church out of a small kitchen (repast, revival, anniversary, Sunday fellowship), scaling by feel and coordinating who-brings-what with no staff and no budget; AI as the catering-and-event help a big-budget church pays a team for (scale her own recipe to a large count with grocery list and rough cost, build a who-is-bringing-what sheet, generate a cooking/serving timeline so food is hot at once, draft the sympathy-and-coordination text to a grieving family in her voice, one message to the whole crew); augments her, the recipes and hands and love stay hers, gives back the hours and makes sure the grieving family gets fed without her carrying every number alone at midnight; the gap is resourcing, not care or skill; funeral-repast emotional anchor, distinct from church-mother prayer-list care; bridges Track 1 faith AI literacy with a hospitality/culinary-ministry frame; the plug is in"
+runs_completed: 145
+items_processed: 270
 last_error: null
 color: "#9B59B6"
 house: "studio"
