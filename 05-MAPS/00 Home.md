@@ -23,12 +23,17 @@
 
 **Your important URLs (always accessible) — full detail in [[09-SYSTEM/Command Center|Command Center]]:**
 
-| Resource | Link | Check Status |
+*All verified live 2026-08-06. Prefer the custom domains — they're the ones to share.*
+
+| Resource | Link | Status |
 |---|---|---|
-| **Link-in-Bio** | https://morrisstephon51.github.io/Link-inbio/ | [[_ops/link-health-checker|Status]] |
-| **Command Center** | https://morrisstephon51.github.io/Link-inbio/dashboard.html | [[_ops/link-health-checker|Status]] |
-| **Living Resume** | https://morrisstephon51.github.io/Link-inbio/dashboard.html | [[_ops/link-health-checker|Status]] |
-| **MUNDI Agent Dashboard** | https://agent-world-olive.vercel.app | [[_ops/link-health-checker|Status]] |
+| **The Plug AI** | https://theplugai.info | 🟢 Live |
+| **Forming Paws** | https://theplugai.xyz | 🟢 Live |
+| **MUNDI Agent Dashboard** | https://theplugai.live | 🟢 Live |
+| **Stefan's Portfolio** | https://theplugai.life | 🟢 Live |
+| **Link-in-Bio** | https://theplugai.net | 🟢 Live |
+| **Command Center** | https://morrisstephon51.github.io/Link-inbio/dashboard.html | 🟢 Live — ⚠️ use this, **not** `https://theplugai.online` (cert broken) |
+| **Living Resume** | https://morrisstephon51.github.io/Link-inbio/resume.html | 🟢 Live — *link here was wrong, pointed at dashboard.html* |
 
 ---
 
