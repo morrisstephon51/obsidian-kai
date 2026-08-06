@@ -7,7 +7,7 @@ last-updated: 2026-08-06
 
 # 🎛️ Command Center
 
-**Single hub for every live site, repo, agent, and subagent across Stefan's systems.** This is the source of truth — the [public dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) and the [[project-agent-world|MUNDI Agent Dashboard]] both mirror what's here; update this page first, then propagate.
+**Single hub for every live site, repo, agent, and subagent across Stefan's systems.** This is the source of truth — the [public dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) and the [[07-AI/MUNDI System Reference|MUNDI Agent Dashboard]] both mirror what's here; update this page first, then propagate.
 
 ← [[05-MAPS/00 Home|Home]]
 
@@ -94,7 +94,7 @@ If this machine dies, all three are gone. Worth a repo each.
 
 ## 🤖 Real Agent Fleet
 
-Status authority: [[07-AI/Agent Registry - Master Status|Agent Registry]] · mechanics: [[07-AI/MUNDI System Reference|MUNDI System Reference]] · [[project-agent-world]] · [[reference-agent-system]]
+Status authority: [[07-AI/Agent Registry - Master Status|Agent Registry]] · mechanics: [[07-AI/MUNDI System Reference|MUNDI System Reference]]
 
 **8 active supervisors** (was listed as 7 here — the four AI-Organization supervisors were missing from this page entirely).
 
@@ -185,8 +185,6 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
 - [[07-AI/Agent Registry - Master Status|Agent Registry — Master Status]]
 - [[07-AI/Subagent Registry|Subagent Registry]]
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
-- [[project-agent-world]]
-- [[reference-agent-system]]
 - [[09-SYSTEM/domains-and-email|Domains & Email]]
 - [[02-PROJECTS/Forming Paws/project-overview|Forming Paws]]
 - [[02-PROJECTS/AI Consulting Business/project-overview|AI Consulting Business]]

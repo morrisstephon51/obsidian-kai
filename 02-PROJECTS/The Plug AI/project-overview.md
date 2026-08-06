@@ -70,7 +70,7 @@ Stefan's church access (MOFEC, All Nations, Faith Mission, Holy City) was built 
 Two paths: **(1)** fold Plug AI into BigHeart as a formal internal initiative, or **(2)** build proof-of-concept with churches that have zero BigHeart overlap. Not yet decided.
 
 ## Content
-The faith-community angle is the best-performing LinkedIn content by a wide margin — outperforms general AI content significantly. Drafts land in [[06-OUTPUTS/index|06-OUTPUTS]].
+The faith-community angle is the best-performing LinkedIn content by a wide margin — outperforms general AI content significantly. Drafts land in `06-OUTPUTS/` — see [[06-OUTPUTS/linkedin-post-2026-07-18|the most recent post]].
 
 ## Timing note
 Per the [[09-SYSTEM/Command Center|OpenClaw AI Organization]] plan, formal **Track 1 execution is gated on Oct 13**, after governance Phases 2–4 complete. Work continues before then, but the full-court press has a date.
