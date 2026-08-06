@@ -78,13 +78,24 @@ This vault is Stefan's second brain. Goal: connection, synthesis, and better out
 - "My Health My Power" initiative — AI-assisted outreach across four church partnerships.
 - Stefan built and pitched a content automation machine (videos, flyers, social, training materials) to leadership — seeking title change to "Digital Content and AI Systems Specialist" plus comp adjustment.
 
-### Tools Built
-- Content automation pipeline (Next.js, Supabase, Remotion, FAL, Pexels, Vercel, Composio) — live at content-machine-wine.vercel.app
-- Five AI agents: Content Pipeline, Grant Research & Fit-Score, Community Intake/Routing, BigHeart Enrollment Funnel, JobScout (ZipRecruiter MCP)
-- Training Asset Studio — done-for-you training packages for nonprofits ($350–$750/package)
-- Mundi — task router, outputs to `07-AI/chatroom/feed.md`
+### Forming Paws (Track 2)
+Health-first nonprofit platform for documented, responsible dog breeding. Chicago, IL, built on $0 capital.
+- **Public site:** [theplugai.xyz](https://theplugai.xyz) — GitHub Pages static site + `/join.html` signup. This is the shareable link.
+- **Repo:** [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws) — public. Static site on `gh-pages`, Next.js app on `main`.
+- **The real app is local-only** at `~/forming-paws` — Next.js 15 + Supabase (`wyzcnkdonbdykidmcxvx`). Owner accounts, dog profiles, health-doc verification with admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018. Slice 1 complete. Unhosted deliberately per the 2026-07-22 decision — **don't propose deploys unless Stefan reopens it.**
+- **Recurring bug pattern:** PostgREST embedded-selects get silently RLS-filtered by an unrelated table. Has bitten three times. Any new query joining through `dogs` for a non-owner viewer must go through `dogs_browsable`, not the base table.
 
-### Agent System — 8 Supervisors (updated 2026-07-09)
+### Tools Built
+- Content automation pipeline (Next.js, Supabase, Remotion, FAL, Pexels, Vercel, Composio) — live at content-machine-wine.vercel.app (legacy; repo archived, agents ported to `psychic-bassoon/content-engine`)
+- Training Asset Studio — done-for-you training packages for nonprofits ($350–$750/package)
+- MUNDI — task router (`~/clawd/router/`), outputs to `07-AI/chatroom/feed.md`
+- MUNDI Agent Dashboard — live at [theplugai.live](https://theplugai.live), status-only Edge Config sync from this Mac every 5 min
+
+### Agent System — 8 Supervisors (roster 2026-07-09, statuses corrected 2026-08-03)
+
+⚠️ **Orchestrator, Architect, Aexis, and Aeos were listed "active" for six weeks while completely broken** — all four called the raw Anthropic API and failed instantly with `ANTHROPIC_API_KEY not set`. This system has **OAuth only** via the `claude` CLI; there is no API key. Fixed 2026-08-03 by rewiring each to shell out to `claude -p`. Verified live. Treat "active" as meaning *someone ran it and saw output*, nothing less.
+
+**Archived:** `gemini-agent` (moved to `~/clawd/agents/_archived/` — key worked but the Google Cloud project had zero free-tier quota, HTTP 429 `limit: 0` on every call; needed a billing decision, not a code fix).
 
 | Agent | Role | Bus name |
 |-------|------|----------|
