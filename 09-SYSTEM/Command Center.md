@@ -111,6 +111,9 @@ Status authority: [[07-AI/Agent Registry - Master Status|Agent Registry]] · mec
 | **perplexity-agent** | 🟢 running | Real-time research, citations | `node ~/clawd/agents/perplexity-agent/run.js "<task>"` |
 | **MUNDI Router** | 🟢 built 2026-07-03 | `~/clawd/router/` — routes tasks to cheapest qualified agent, with cooldown/probation recovery | — |
 
+### ✅ Verified by real invocation 2026-08-06
+Every agent above was actually invoked and its output checked — not read off a table. **All 8 supervisors pass**, plus perplexity-agent. Evidence per agent in [[07-AI/Agent Registry - Master Status|Agent Registry]]. Notably, **codex independently found the `ai-video-reel-generator` 307 bug** listed in Open Items below and opened PR #23 with a one-file fix, awaiting human merge.
+
 ### The 2026-08-03 correction worth remembering
 Orchestrator, Architect, Aexis, and Aeos were marked "✅ Active" from 2026-07-23 onward and **had never once worked**. All four called the raw Anthropic API directly and failed instantly on every invocation with `ANTHROPIC_API_KEY not set` — this system only has OAuth via the `claude` CLI. Nobody had actually run them. Fixed by rewiring each to shell out to `claude -p`. A broken agent that never runs also never triggers a "hasn't run in 30 days" alert, which is why the monthly review missed it for six weeks. **"Active" in any agent table means someone invoked it and saw output — not that it was configured plausibly.**
 
