@@ -1,9 +1,9 @@
 ---
 agent: aeos
 role: Strategic Signal Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-04T01:10:44.600Z"
-current_task: null
+current_task: "Reply with exactly: aeos_INVOCATION_OK and nothing else."
 runs_completed: 1
 items_processed: 0
 last_error: null
