@@ -12,11 +12,15 @@ Full reference for the agent fleet, infrastructure, and websites built/audited/f
 
 ## Websites & Deployments
 
+> **Updated 2026-08-06.** This table was written 2026-07-03 and had gone stale in three places: custom domains now exist for everything, the MUNDI dashboard *does* have a fixed public URL, and Forming Paws was missing entirely. Canonical link registry is [[_ops/important-links|Important Links]] — check there first.
+
 | Site | URL | Repo | Status |
 |---|---|---|---|
-| **The Plug AI** (live site) | https://psychic-bassoon-cam6stef.vercel.app | `psychic-bassoon` ([github](https://github.com/morrisstephon51/psychic-bassoon)) | Live, actively developed. Deploy branch: `claude/amazing-mccarthy-zZl3L` |
-| **Stefan's Portfolio** | https://stefan-portfolio.vercel.app | `Stefan_portfolio` | Live, untouched this session |
-| **MUNDI Agent Dashboard** | `http://localhost:3131` (local) + ephemeral Cloudflare tunnel | `mundi-agent-dashboard` ([github, private](https://github.com/morrisstephon51/mundi-agent-dashboard)) | No fixed public URL — run `./start.sh` for a temporary public link |
+| **The Plug AI** (live site) | https://theplugai.info | `psychic-bassoon` ([github](https://github.com/morrisstephon51/psychic-bassoon)) | Live, actively developed. Deploy branch: `claude/amazing-mccarthy-zZl3L`. **Never share the `-cam6stef` URL** — Vercel SSO wall |
+| **Forming Paws** | https://theplugai.xyz | `forming-paws` ([github](https://github.com/morrisstephon51/forming-paws)) | Live static site on GitHub Pages (`gh-pages`). The full Next.js app on `main` runs **local-only** at `~/forming-paws` by design |
+| **MUNDI Agent Dashboard** | https://theplugai.live (fallback `agent-world-olive.vercel.app`) | `mundi-agent-dashboard` ([github, private](https://github.com/morrisstephon51/mundi-agent-dashboard)) | **Fixed public URL since 2026-07-05** — no tunnel needed. Live agent data arrives via status-only Edge Config sync from Stefan's Mac every 5 min (`ai.mundi.sync.plist`). Local dev still `http://localhost:3131` |
+| **Stefan's Portfolio** | https://theplugai.life (fallback `stefan-portfolio-eight.vercel.app`) | `Stefan-Portfolio` | Live |
+| **Link-in-Bio / Command Center / Resume** | theplugai.net · theplugai.online · `/resume.html` | `Link-inbio`, `command-center-redirect` | GitHub Pages. ⚠️ **theplugai.online HTTPS is broken** — no cert issued |
 | ~~Content Machine~~ | — | `content-machine` (archived) | Retired 2026-07-03; its 8 quality-check agents were ported into `psychic-bassoon/content-engine` before archiving |
 
 **Also archived this session** (dead tutorial repos, no live deployment): `psychic-octo-engine`, `studious-umbrella`, `scrimba-workouts`, `desktop-tutorial`. Reversible via `gh repo unarchive <name>`.
