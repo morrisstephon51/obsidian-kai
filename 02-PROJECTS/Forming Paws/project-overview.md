@@ -66,5 +66,7 @@ The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.
 - [[Chicago Outreach Kit]] — vet targets, breed groups, ready-to-send scripts
 - [[09-SYSTEM/Command Center|Command Center]] — agent fleet status this project depends on
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
-- Spec: `~/forming-paws/docs/superpowers/specs/2026-07-04-forming-paws-foundation-design.md` (repo not yet pushed to GitHub)
-- Live: site https://morrisstephon51.github.io/forming-paws/ · code github.com/morrisstephon51/forming-paws · DB Supabase `forming-paws`
+- [[_ops/important-links|Important Links]] — verified live status of every URL
+- Spec: `~/forming-paws/docs/superpowers/specs/2026-07-04-forming-paws-foundation-design.md`
+- Live: **https://theplugai.xyz** (github.io URLs redirect here) · code [github.com/morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws) (public) · DB Supabase `wyzcnkdonbdykidmcxvx`
+- Cost analysis artifact (2026-07-23): [nonprofit vs for-profit, app store, mobile build](https://claude.ai/code/artifact/23064c5f-0ca6-447d-a92b-ecbbf9ac7d86) — re-verify dollar figures before quoting; platform commission rules are still in litigation

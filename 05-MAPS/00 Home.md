@@ -88,7 +88,11 @@
 
 ## 🚀 Projects
 
-- [[02-PROJECTS/The Plug AI Progress|The Plug AI — Progress Tracking]]
+| Project | Track | Overview | Status |
+|---|---|---|---|
+| **The Plug AI** | 1 | [[02-PROJECTS/The Plug AI/project-overview\|Overview]] · [[02-PROJECTS/The Plug AI Progress\|Progress]] | Live, blocked on fiscal sponsor |
+| **Forming Paws** | 2 | [[02-PROJECTS/Forming Paws/project-overview\|Overview]] · [[02-PROJECTS/Forming Paws/Status Log\|Status Log]] | Site live, first member joined 2026-08-04 |
+| **AI Consulting Business** | 3 | [[02-PROJECTS/AI Consulting Business/project-overview\|Overview]] | Built, not launched — not backed up |
 
 ---
 
