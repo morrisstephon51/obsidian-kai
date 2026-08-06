@@ -171,10 +171,10 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
    **`~/clawd` stays local by decision, not oversight.** It's fully committed but has no remote. Stefan chose this on 2026-08-06 rather than push a repo that also carries personal context (`SOUL.md`, `IDENTITY.md`, `USER.md`, `memory/`, `puppy-power/`) alongside the governance docs. ⚠️ **Consequence: a disk failure loses AI-Organization, the agent code, and the fleet scripts.** Revisit when there's a good split between the governance docs and the personal layer.
 4. **Rotate the OpenAI key** *(decided 2026-08-06, in progress)*. A truncated key prefix was committed into `PHASE-2-BLOCKERS-DEPENDENCIES.md` as "evidence" and remains in two earlier commits. Redacted going forward. Run `bash ~/clawd/scripts/rotate-openai-key.sh` — it verifies the new key live, backs up and updates both `~/.openclaw/.env` and `~/clawd/.env`, and restarts the gateway. **The key is shared with the Telegram gateway**, so revoke the old one only after confirming the gateway still answers.
    **Rule going forward:** never paste key material into tracked docs, even truncated. Cite `.env` (gitignored) as the source instead.
-4. **Reconcile `psychic-octo-engine`** — archived repo, live deploy.
-5. **Delete dead Vercel projects** — `community-intake-routing`, `content-machine-migh`.
-6. **Commit `~/ai-consulting-business/`** — built 2026-07-17, still zero commits.
-7. **Plug AI visual redesign** — palette still doesn't match brand.
+5. **Reconcile `psychic-octo-engine`** — archived repo, live deploy.
+6. **Delete dead Vercel projects** — `community-intake-routing`, `content-machine-migh`.
+7. **Commit `~/ai-consulting-business/`** — built 2026-07-17, still zero commits.
+8. **Plug AI visual redesign** — palette still doesn't match brand.
 
 ---
 
