@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-06T17:10:00Z"
-current_task: "Generated LinkedIn post #147 -- the new-members / visitor follow-up ministry: the greeter who catches every first-time guest, gets the card, calls Tuesday, remembers the name the next Sunday, and keeps people from drifting away, with no assimilation team, no follow-up database, no system; AI as the assimilation operation a big-budget church pays a department for (turn a stack of cards into one follow-up list, draft a warm first text in her own words, track who has been reached vs missed so no double-calls and no cracks, set day-3 and week-2 nudges when people decide whether they belong, note what each guest said so it lives outside her memory); augments her, the noticing stays hers, gives back the Tuesday nights and makes sure the guest who came once still hears from somebody the week she is worn out; the gap is resourcing, not faith or skill; retention/belonging emotional anchor, distinct from transportation-ministry continuity and kitchen-ministry repast care; bridges Track 1 faith AI literacy with an assimilation/CRM frame; the plug is in"
-runs_completed: 147
-items_processed: 272
+status: idle
+last_run: "2026-08-06T18:05:00Z"
+current_task: "Generated LinkedIn post #148 -- the media / livestream tech volunteer: the one person in the dark back booth who runs the mics, builds the slides, streams the whole service to Facebook so the homebound and the woman on oxygen never miss a Sunday, then stays back to trim and post the sermon, self-taught with no media team and no producer; AI as the broadcast/media department a big-budget church pays a staff for (turn sermon audio into a searchable transcript, auto-caption the video for the hard-of-hearing and sound-off scrollers, pull short clips with titles from a full-length service, build slides from the pastor's notes, draft the post that ships with the sermon); augments him, the ear stays his, gives back the late Saturday nights and keeps the message reaching past the four walls the week he is worn thin; the gap is resourcing/access, not faith or skill; broadcast/media-operations frame with a reach-beyond-the-walls emotional anchor, distinct from minister-of-music worship production, transportation-ministry mobility continuity, and kitchen-ministry repast care; nice irony that the church's tech person was never handed AI literacy; the plug is in"
+runs_completed: 148
+items_processed: 273
 last_error: null
 color: "#9B59B6"
 house: "studio"
