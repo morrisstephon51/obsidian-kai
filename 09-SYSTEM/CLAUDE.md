@@ -49,8 +49,11 @@ This vault is Stefan's second brain. Goal: connection, synthesis, and better out
 **Education:** Pursuing B.S. Computer Science (expected 2028). Certifications: Google IT Support, IBM IT Support, Google UX Design, Python (Syracuse).
 
 **Active tracks:**
-- **Track 1 — The Plug AI:** Brand, PRD, entity-path analysis, and Kresge Foundation LOI are done. Kresge Fluxx portal live (username: The_Plug_AI). Blocked on fiscal sponsor / 501(c)(3) partner for Illinois Digital Equity grant (up to $75K). Kenneth Vasser's church is the live option — need legal name, address, pastor confirmation, workshop date before applying.
-- **Track 2 — Everything else:** BigHeart (funds Track 1), Puppy Power / Steph's Forming Paws (dog breeding matchmaking app, prototype live at breeding-community-pets.deploypad.app, Indiegogo pending), content automation tooling. Real and managed — don't expand Track 2 without naming the tradeoff.
+- **Track 1 — The Plug AI:** Brand, PRD, entity-path analysis, and Kresge Foundation LOI are done. Kresge Fluxx portal live (username: The_Plug_AI). Site live at [theplugai.info](https://theplugai.info); content-hardening pass complete 2026-07-13. Blocked on fiscal sponsor / 501(c)(3) partner for the Illinois "Eliminate the Digital Divide" grant (up to $75K). Kenneth Vasser's church is the live option — need legal name, address, pastor confirmation, workshop date before applying. Full detail: [[02-PROJECTS/The Plug AI/project-overview|project overview]].
+- **Track 2 — Everything else:** BigHeart (funds Track 1), **Forming Paws** (dog breeding matchmaking — public site now live at [theplugai.xyz](https://theplugai.xyz), repo public, full Next.js app local-only by design; "Puppy Power" is the crowdfunding name for the same product), content automation tooling. Real and managed — don't expand Track 2 without naming the tradeoff.
+- **Track 3 — AI Implementation Consulting (for-profit):** Dual-niche — law-firm intake automation + small-business apps/sites. Built out at `~/ai-consulting-business/` on 2026-07-17, not yet launched or even committed to git. Separate from Plug AI and BigHeart; don't conflate funding, branding, or docs. Full detail: [[02-PROJECTS/AI Consulting Business/project-overview|project overview]].
+
+**Governance layer:** The **OpenClaw AI Organization** plan (owner: Kairo) sits above the agent fleet — 30+ docs at `~/clawd/AI-Organization/`. Phase 2 live, all blockers resolved. **Formal Track 1 execution is gated on Oct 13**, after Phases 2–4 complete.
 
 **What's settled — don't relitigate:**
 - The security-vs-freedom conflict is over. Plug AI is the priority. BigHeart is instrumental.
