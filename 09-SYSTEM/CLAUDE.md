@@ -1,6 +1,8 @@
 # CLAUDE.md — Obsidian Vault Instructions & Stefan's Full Context
 
-*Single source of truth. Consolidates vault instructions, operating context, and identity layer. Last updated: 2026-07-08.*
+*Single source of truth. Consolidates vault instructions, operating context, and identity layer. Last updated: 2026-08-06.*
+
+**Vault sync:** `~/Desktop/kai` is a git repo whose remote is **[obsidian-kai](https://github.com/morrisstephon51/obsidian-kai)** (private), auto-committing every few minutes via `git-obsi-sync`. The older `kai-obsidian-vault` repo is **superseded** — last push 2026-07-05. Both `obsidian-git` and `git-obsi-sync` plugins are enabled on purpose; if duplicate or conflicting commits ever appear, that overlap is the first thing to check.
 
 ---
 
