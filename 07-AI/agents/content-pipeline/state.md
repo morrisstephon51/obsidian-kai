@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-06T18:05:00Z"
-current_task: "Generated LinkedIn post #148 -- the media / livestream tech volunteer: the one person in the dark back booth who runs the mics, builds the slides, streams the whole service to Facebook so the homebound and the woman on oxygen never miss a Sunday, then stays back to trim and post the sermon, self-taught with no media team and no producer; AI as the broadcast/media department a big-budget church pays a staff for (turn sermon audio into a searchable transcript, auto-caption the video for the hard-of-hearing and sound-off scrollers, pull short clips with titles from a full-length service, build slides from the pastor's notes, draft the post that ships with the sermon); augments him, the ear stays his, gives back the late Saturday nights and keeps the message reaching past the four walls the week he is worn thin; the gap is resourcing/access, not faith or skill; broadcast/media-operations frame with a reach-beyond-the-walls emotional anchor, distinct from minister-of-music worship production, transportation-ministry mobility continuity, and kitchen-ministry repast care; nice irony that the church's tech person was never handed AI literacy; the plug is in"
-runs_completed: 148
-items_processed: 273
+status: idle
+last_run: "2026-08-06T22:05:00Z"
+current_task: "Generated LinkedIn post #149 -- the intercessory prayer ministry coordinator: the woman who knows who is sick before the pastor does, keeps the prayer list from slips/texts/hallway whispers, works the phone tree, tracks the Tuesday surgery and the grieving family, and lives with the fear that a name falls through when one person tries to hold a whole church of pain by hand; AI as the member-care system a big-budget church runs on care staff and tracking software (turn a pile of handwritten cards into one clean typed list, remind her which surgery was when and who needs a call by Friday, convert scattered midnight texts into the weekly prayer sheet, catch the request before it gets lost by morning); augments her, the knowing stays hers, gives back the hours and takes the fear that someone slipped through; the gap is resourcing/access, not faith or care; member-care-coordination frame with a name-that-falls-through emotional anchor, distinct from visitor-followup assimilation, the caregiver family medical load, church-mother elder presence, and media-ministry broadcast ops; the plug is in"
+runs_completed: 149
+items_processed: 274
 last_error: null
 color: "#9B59B6"
 house: "studio"
