@@ -13,6 +13,29 @@ last-updated: 2026-08-03
 
 ---
 
+## ✅ Invocation test — 2026-08-06
+
+Every supervisor was **actually invoked** and its output verified. This is the test the 2026-08-03 correction below says should have been run all along, rather than trusting the table. **All 8 pass**, plus perplexity-agent (9th).
+
+| Agent | How it was tested | Evidence |
+|---|---|---|
+| **clawd** | `launchctl list` | `ai.openclaw.gateway` running, **PID 1495**. Fleet run completed, `runs_completed: 158` |
+| **codex** | `bash ~/Desktop/run-agents.sh` | Run 143 completed. Independently diagnosed the `ai-video-reel-generator` bare-domain 307 and opened **PR #23** (verified real: open, not draft, `next.config.mjs` +10) |
+| **antigravity** | same | `runs_completed: 131→132`, `last_error: null` |
+| **content-pipeline** | same | `runs_completed: 147`, `last_error: null` |
+| **orchestrator** | `node run.js "<sentinel>"` | Returned `orchestrator_INVOCATION_OK` |
+| **architect** | `node run.js "<sentinel>"` | Returned `architect_INVOCATION_OK` |
+| **aexis** | `node run.js "<sentinel>"` | Returned `aexis_INVOCATION_OK` |
+| **aeos** | `node run.js "<sentinel>"` | Returned `aeos_INVOCATION_OK` |
+| **perplexity-agent** | `node run.js "<sentinel>"` | `runs_completed: 137`, `last_error: null`, real citations in feed |
+
+**Two things worth knowing before the next test run:**
+
+1. **perplexity-agent prints nothing to stdout — by design.** It writes only to `state.md`, `chatroom/feed.md`, and the bus; there is no `console.log(answer)`. An empty terminal from this agent is *not* a failure. Verify it by reading `state.md` (`runs_completed` incrementing, `last_error: null`), not by watching the console. Its API key was independently confirmed live (`POST api.perplexity.ai/chat/completions` → 200).
+2. **Don't read an agent's state mid-run.** `mundi-codex.log` was 0 bytes and codex's frontmatter was missing `runs_completed`/`items_processed`/`last_error` while the fleet was still executing — both filled in normally on completion. Wait for `run-agents.sh` to exit before judging, or you'll log a bug that doesn't exist.
+
+---
+
 ## 🟢 Active Supervisors (8 Total)
 
 ### Core Coordination
