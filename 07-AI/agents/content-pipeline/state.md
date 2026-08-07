@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-07T14:22:00Z"
-current_task: "Generated LinkedIn post #153 -- the benevolence / emergency-assistance ministry: the deacon-board volunteer people call when the lights are about to go off, who works the maze of emergency rent help, LIHEAP-style utility assistance, and one-time aid applications by hand, from memory, on a phone; every so often a family falls through not from his carelessness but because one man cannot hold every program, deadline, document, and quietly-emptied fund for a whole congregation in crisis at once; AI as the benefits-navigation / case-management software funded social-service agencies already run on (eligibility matching from a plain-language household description, translating denial letters into next-action language, auto-filling the repetitive parts of applications before the window shuts, holding every family's deadline so none slips); augments him, the trust stays his, frees him to answer the phone at night and mean it; the gap is resourcing/access, not our families being less worthy or him being less capable; deliberately bridges the faith-community AND community-resource-navigation missions (ties to Community Intake); distinct from treasurer, secretary, food pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, scholarship, and health/nurse personas; the plug is in"
-runs_completed: 153
-items_processed: 278
+status: idle
+last_run: "2026-08-07T18:22:00Z"
+current_task: "Generated LinkedIn post #154 -- the bereavement / homegoing ministry: the deaconess or church mother who shows up when a family loses somebody and carries them through the homegoing, the repast, the obituary, and the after-death paperwork avalanche grief makes impossible (death certificates -- never just one, Social Security, pension/insurance claims, account closures, the mail nobody has the heart to open); something slips not from her carelessness but because one woman cannot hold a whole estate's notifications, deadlines, and denied-benefit letters for a grieving family alone; AI as the patient after-death navigator a funded family's estate attorney + advisor + funeral concierge already provide (plain-language notification checklist of who to tell and what each needs, translating benefit/insurance letters into next-action language, drafting the obituary from spoken memories, holding every estate deadline so none passes during the grief window); augments her, the presence stays hers, frees her to sit in the silence and stay; the gap is resourcing/access, not our families deserving less care or her being less capable; opens a NEW resource-navigation lane -- grief logistics / death admin -- and bridges the faith-community AND community-resource-navigation missions (ties to Community Intake); distinct from treasurer, secretary, food-pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, scholarship, health/nurse, and benevolence personas; the plug is in"
+runs_completed: 154
+items_processed: 279
 last_error: null
 color: "#9B59B6"
 house: "studio"
