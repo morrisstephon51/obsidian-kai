@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-07T14:22:00Z"
 current_task: "Generated LinkedIn post #153 -- the benevolence / emergency-assistance ministry: the deacon-board volunteer people call when the lights are about to go off, who works the maze of emergency rent help, LIHEAP-style utility assistance, and one-time aid applications by hand, from memory, on a phone; every so often a family falls through not from his carelessness but because one man cannot hold every program, deadline, document, and quietly-emptied fund for a whole congregation in crisis at once; AI as the benefits-navigation / case-management software funded social-service agencies already run on (eligibility matching from a plain-language household description, translating denial letters into next-action language, auto-filling the repetitive parts of applications before the window shuts, holding every family's deadline so none slips); augments him, the trust stays his, frees him to answer the phone at night and mean it; the gap is resourcing/access, not our families being less worthy or him being less capable; deliberately bridges the faith-community AND community-resource-navigation missions (ties to Community Intake); distinct from treasurer, secretary, food pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, scholarship, and health/nurse personas; the plug is in"
 runs_completed: 153

@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-08-07T14:20:00Z"
 current_task: "Run 149: Reviewed + MERGED forming-paws PR#15 (fix: pin Vercel framework to nextjs), squash-merged at 2026-08-07T14:20:22Z, branch deleted. Clean +4/-0 single-file fix adding vercel.json {\"framework\":\"nextjs\"}. Independently verified all three PR claims before merging: (1) no pre-existing vercel.json on base (GH API 404), (2) next.config.ts has NO output:'export' so .next serverless is the correct target and 'nextjs' preset is right, (3) confirmed Next.js 15 / React 19 in package.json. Root cause was Vercel framework-detection falling back to the static preset and erroring 'No Output Directory named public found' even though next build compiles 14/14 pages -- vercel.json now forces the Next.js builder, no dashboard access needed. Unblocks Forming Paws (Track 2 / Puppy Power) deploys. Follow-through: posted comment #5218222725 on forming-paws PR#14 (upload-redirect, was UNSTABLE) noting its red Vercel check shares the same root cause and will go green once rebased onto main -- flagged for rebase. Remaining frontier: forming-paws #10 (admin queue, mergeable) + #14 (needs rebase), psychic-bassoon #11 draft / issue #12 auth-wall, ai-video-reel #23 (mergeable), community-intake #1, Link-inbio #11, job_opportunity_scanner PR#3 (HOLD, 4 of 6 cards broken upstream). Earlier runs in git history / bus."
 runs_completed: 149
