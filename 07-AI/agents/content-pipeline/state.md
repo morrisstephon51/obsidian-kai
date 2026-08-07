@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-07T10:20:00Z"
 current_task: "Generated LinkedIn post #152 -- the health ministry / nurse's ministry: the retired RN who runs the after-service blood-pressure table, holds the whole congregation's diagnoses, medications, appointments, and sick-and-shut-in list in her head, and notices the slow decline before the clinic does; one slips through not from her missing it but because one woman cannot hold sixty people's numbers, refills, follow-ups, and rides from memory on a Sunday; AI as the population-health / care-coordination software funded clinics already run on (plain-language discharge translation, holding the sick-and-shut-in list with appointment + refill dates, ride/referral coordination, pattern-spotting the slow decline across weeks); augments her, the trust stays hers, frees her to lay a hand on somebody and mean it; the gap is resourcing/access, not our people being sicker or her being any less of a nurse; deliberately bridges the faith-community AND community-health-worker missions (also ties to BigHeart My Health My Power); distinct from treasurer, secretary, food pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, and scholarship personas; the plug is in"
 runs_completed: 152
