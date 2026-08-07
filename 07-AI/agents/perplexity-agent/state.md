@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-08-07T02:05:34.995Z"
-current_task: "Find open AI-literacy / digital-equity grants for nonprofits in Illinois or nationally with application deadlines more than 7 days out. Exclude the Cook County Digital Equity IMPACT grant and any CVI NOFOs (both closed/out of scope)."
-runs_completed: 140
-items_processed: 140
+last_run: "2026-08-07T06:10:31.252Z"
+current_task: null
+runs_completed: 141
+items_processed: 141
 last_error: null
 color: "#20808D"
 house: "providers"
