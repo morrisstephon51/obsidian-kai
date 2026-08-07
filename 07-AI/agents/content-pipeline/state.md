@@ -3,11 +3,11 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
-last_run: "2026-08-07T10:20:00Z"
-current_task: "Generated LinkedIn post #152 -- the health ministry / nurse's ministry: the retired RN who runs the after-service blood-pressure table, holds the whole congregation's diagnoses, medications, appointments, and sick-and-shut-in list in her head, and notices the slow decline before the clinic does; one slips through not from her missing it but because one woman cannot hold sixty people's numbers, refills, follow-ups, and rides from memory on a Sunday; AI as the population-health / care-coordination software funded clinics already run on (plain-language discharge translation, holding the sick-and-shut-in list with appointment + refill dates, ride/referral coordination, pattern-spotting the slow decline across weeks); augments her, the trust stays hers, frees her to lay a hand on somebody and mean it; the gap is resourcing/access, not our people being sicker or her being any less of a nurse; deliberately bridges the faith-community AND community-health-worker missions (also ties to BigHeart My Health My Power); distinct from treasurer, secretary, food pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, and scholarship personas; the plug is in"
-runs_completed: 152
-items_processed: 277
+status: idle
+last_run: "2026-08-07T14:22:00Z"
+current_task: "Generated LinkedIn post #153 -- the benevolence / emergency-assistance ministry: the deacon-board volunteer people call when the lights are about to go off, who works the maze of emergency rent help, LIHEAP-style utility assistance, and one-time aid applications by hand, from memory, on a phone; every so often a family falls through not from his carelessness but because one man cannot hold every program, deadline, document, and quietly-emptied fund for a whole congregation in crisis at once; AI as the benefits-navigation / case-management software funded social-service agencies already run on (eligibility matching from a plain-language household description, translating denial letters into next-action language, auto-filling the repetitive parts of applications before the window shuts, holding every family's deadline so none slips); augments him, the trust stays his, frees him to answer the phone at night and mean it; the gap is resourcing/access, not our families being less worthy or him being less capable; deliberately bridges the faith-community AND community-resource-navigation missions (ties to Community Intake); distinct from treasurer, secretary, food pantry, prayer, visitor-followup, media, kitchen, transportation, music, sunday-school, church-mother, scholarship, and health/nurse personas; the plug is in"
+runs_completed: 153
+items_processed: 278
 last_error: null
 color: "#9B59B6"
 house: "studio"
