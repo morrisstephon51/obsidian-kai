@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-08-07T02:06:00Z"
 current_task: "Generated LinkedIn post #150 -- the church secretary / administrative clerk: the woman who is the reason anything runs on time, types the bulletin every Saturday night, keeps the calendar so rehearsals/meetings/repasts don't collide, answers every call, writes the sympathy and welcome letters, and updates the roll -- all by hand on a desktop from 2009, always a little behind not because she's slow but because she retypes from scratch what she already typed last week; AI as the administrative-operations software a big-budget church runs the front office on (regenerate the bulletin from last week's in minutes, draft letters in her own words, turn scribbled announcements into a clean insert, de-conflict the calendar); augments her, the judgment/knowing stays hers, takes the retyping off her desk; the gap is resourcing/access, not competence or care; administrative-operations frame with a Saturday-night-retyping emotional anchor, distinct from treasurer financial stewardship, prayer-ministry member care, visitor-followup CRM, media-ministry broadcast ops, and kitchen/transportation single-event logistics; the plug is in"
 runs_completed: 150
