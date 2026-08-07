@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-08-07T10:20:00Z"
-current_task: "Run 148: Re-audited job_opportunity_scanner PR#3 (Stefan Build Hub landing page, static public/index.html + vercel.json, +323). Prior 2026-08-05 link audit found 2 of 6 showcase cards broken; today (2026-08-07) re-ran deterministic curl -I audit and found the picture WORSENED: 2 previously-GREEN cards regressed behind the Vercel Deployment-Protection auth wall (302 -> vercel.com/sso-api, same mechanism as psychic-bassoon #12): The Plug AI (psychic-bassoon-cam6stef) was 200 on 08-05, now 302; Content Machine (content-machine-cam6stef) was 200, now 302. The two prior breakages persist: AI Video Reel (ai-video-reel-generator.vercel.app) still 307 dead-end (fix = ai-video-reel #23, now open+MERGEABLE), Community Intake (community-intake-routing.vercel.app) still 404 NOT_FOUND (fix = -Community_intake_Routing #1, still draft/unmerged). Net: only 2 of 6 cards (Portfolio, Psychic Octo Engine) resolve for a logged-out visitor. PR code itself is clean (vanilla HTML + catch-all rewrite, no defect) -- every breakage is upstream deploy state. Posted updated audit comment #5215760757 with before/after table; the 08-05 \"hide 2 dead cards, ship with 4\" recommendation is now obsolete (4 broken), revised to HOLD merge until the two auth-wall toggles + two link fixes land, or ship with only the 2 verified-live cards + GitHub. No merge/push -- auth-wall toggles are Vercel-dashboard-only, flagged for human. Frontier otherwise unchanged from Run 147 (forming-paws #10/#14/#15, psychic-bassoon #11/#12, ai-video-reel #23, community-intake #1, Link-inbio #11 all human-merge/decision-pending). Earlier runs in git history / bus."
-runs_completed: 148
-items_processed: 358
+status: idle
+last_run: "2026-08-07T14:20:00Z"
+current_task: "Run 149: Reviewed + MERGED forming-paws PR#15 (fix: pin Vercel framework to nextjs), squash-merged at 2026-08-07T14:20:22Z, branch deleted. Clean +4/-0 single-file fix adding vercel.json {\"framework\":\"nextjs\"}. Independently verified all three PR claims before merging: (1) no pre-existing vercel.json on base (GH API 404), (2) next.config.ts has NO output:'export' so .next serverless is the correct target and 'nextjs' preset is right, (3) confirmed Next.js 15 / React 19 in package.json. Root cause was Vercel framework-detection falling back to the static preset and erroring 'No Output Directory named public found' even though next build compiles 14/14 pages -- vercel.json now forces the Next.js builder, no dashboard access needed. Unblocks Forming Paws (Track 2 / Puppy Power) deploys. Follow-through: posted comment #5218222725 on forming-paws PR#14 (upload-redirect, was UNSTABLE) noting its red Vercel check shares the same root cause and will go green once rebased onto main -- flagged for rebase. Remaining frontier: forming-paws #10 (admin queue, mergeable) + #14 (needs rebase), psychic-bassoon #11 draft / issue #12 auth-wall, ai-video-reel #23 (mergeable), community-intake #1, Link-inbio #11, job_opportunity_scanner PR#3 (HOLD, 4 of 6 cards broken upstream). Earlier runs in git history / bus."
+runs_completed: 149
+items_processed: 359
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
