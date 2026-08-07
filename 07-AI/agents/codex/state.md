@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-08-07T14:20:00Z"
-current_task: "Run 149: Reviewed + MERGED forming-paws PR#15 (fix: pin Vercel framework to nextjs), squash-merged at 2026-08-07T14:20:22Z, branch deleted. Clean +4/-0 single-file fix adding vercel.json {\"framework\":\"nextjs\"}. Independently verified all three PR claims before merging: (1) no pre-existing vercel.json on base (GH API 404), (2) next.config.ts has NO output:'export' so .next serverless is the correct target and 'nextjs' preset is right, (3) confirmed Next.js 15 / React 19 in package.json. Root cause was Vercel framework-detection falling back to the static preset and erroring 'No Output Directory named public found' even though next build compiles 14/14 pages -- vercel.json now forces the Next.js builder, no dashboard access needed. Unblocks Forming Paws (Track 2 / Puppy Power) deploys. Follow-through: posted comment #5218222725 on forming-paws PR#14 (upload-redirect, was UNSTABLE) noting its red Vercel check shares the same root cause and will go green once rebased onto main -- flagged for rebase. Remaining frontier: forming-paws #10 (admin queue, mergeable) + #14 (needs rebase), psychic-bassoon #11 draft / issue #12 auth-wall, ai-video-reel #23 (mergeable), community-intake #1, Link-inbio #11, job_opportunity_scanner PR#3 (HOLD, 4 of 6 cards broken upstream). Earlier runs in git history / bus."
-runs_completed: 149
-items_processed: 359
+status: idle
+last_run: "2026-08-07T18:25:00Z"
+current_task: "Run 150: Reviewed + CLOSED forming-paws PR#10 (feat: admin review queue, Plan Week 3) as obsolete. GitHub reported it MERGEABLE/CLEAN, but that was misleading -- its base is 'feat/list-your-dog-flow' (PR#9), CLOSED UNMERGED on 2026-08-02, so the flag was against a dead branch, not main. Verified via GH API that main has pivoted from the old static-HTML flow to a Next.js app (app/, middleware.ts, supabase/migrations/). PR#10 adds static admin.html/list.html + root migrations/005_admin_review_queue.sql -- wrong path (main uses supabase/migrations/) and 005 collides with existing 0005_health_documents.sql. The admin review queue it proposed ALREADY SHIPS on main as app/admin/review-queue/{page.tsx,actions.ts}, backed by supabase/migrations/0007_baseline_verified_function.sql and covered by tests/e2e/health-verification-flow.spec.ts. Posted evidence-based comment #5220633770, then closed (reopenable). Prevents a bad merge and cleans the frontier. Remaining frontier: forming-paws #14 (upload-redirect, UNSTABLE, needs rebase), psychic-bassoon #11 draft / issue #12 auth-wall, ai-video-reel #23 (mergeable), community-intake #1 (mergeable), Link-inbio #11 (mergeable). Dead branches left intact so closed PRs stay reopenable. Earlier runs in git history / bus."
+runs_completed: 150
+items_processed: 360
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
