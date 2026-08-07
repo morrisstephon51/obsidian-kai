@@ -10,6 +10,13 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-07 — Member experience shipped: login, dashboard, confirmation landing
+- **login.html** — member sign-in with working forgot-password reset flow
+- **home.html** — member dashboard (their dogs + add-dog form, verification status, community stats, Founding Member badge); root URL auto-redirects signed-in members here; marketing page unchanged for visitors
+- **confirm.html** — the email-link landing page: finishes pending dog profiles, handles password resets, forwards to dashboard (fixes the dead-end after confirming email)
+- **⚠️ ONE SETTING NEEDED from Stefan to kill the 403 on email links** — Supabase dashboard → Authentication → URL Configuration: set Site URL to https://theplugai.xyz and add https://theplugai.xyz/confirm.html to Redirect URLs. Until then, confirmation/reset emails may land on a broken address.
+- DB: community_stats() function added for dashboard tiles
+
 ## 2026-08-04 (later) — FIRST REAL MEMBER 🎉 + member ops built
 - **Terrell Anderson (terrella031@icloud.com) joined via the live site** — first organic member; confirmed their email (the automatic confirmation email works in the wild). Their dog profile didn't complete (confirmed on a different device than they signed up on) — join page now handles that: resubmitting the form logs them in and finishes the profile
 - **Admin dashboard live: https://theplugai.xyz/admin.html** — running member roster (name, email, location, dogs, joined date), waitlist list, stat tiles, CSV export. Sign-in required; only accounts with is_admin=true see data (RLS-enforced)
