@@ -2,11 +2,11 @@
 agent: architect
 role: System Design Supervisor
 mode: "full"
-status: "idle"
-last_run: "2026-08-06T17:04:29.602Z"
-current_task: null
-active_spec: null
-runs_completed: 5
+status: "running"
+last_run: "2026-08-09T20:39:32.331Z"
+current_task: "Design a caching layer for a NoSQL database"
+active_spec: "Design a caching layer for a NoSQL database"
+runs_completed: 8
 last_error: null
 ---
 
@@ -32,6 +32,22 @@ Core question: **"What exactly are we building and why, before a single line of 
 <!-- Architect writes the current design here -->
 
 ## Last Architecture Decision
-*2026-08-06 (full)*
+*2026-08-09 (lite)*
 
-architect_INVOCATION_OK
+## What
+Cache-aside pattern: application checks cache first, loads from source on miss, then populates cache.
+
+## Steps
+1. Query cache for key
+2. On hit, return value
+3. On miss, fetch from database/source
+4. Write result to cache with optional TTL
+5. Return value to caller
+
+## Done When
+- Cache hit returns data without source query
+- Cache miss fetches fresh data and stores it
+- Stale data can exist until TTL expires or manual eviction
+
+[2026-08-09T21:19:37.015Z] design via claude-sonnet-4-6: TIMEOUT cost_usd=0.000000 billing=subscription measured=false trace=20260809T211937015Z-kairo-so2
+[2026-08-09T21:20:38.210Z] design via claude-sonnet-4-6: TIMEOUT cost_usd=0.000000 billing=subscription measured=false trace=20260809T212038210Z-kairo-wck

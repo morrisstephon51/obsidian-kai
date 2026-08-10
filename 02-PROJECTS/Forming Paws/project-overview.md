@@ -38,16 +38,21 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - [ ] Phase 3 — Business plan & nonprofit structure (decisions locked 2026-07-19: 501c3 path, verified-badge fee $29/dog as first revenue — see [[Execution Plan]])
 - [ ] Phase 4 — Zero-capital funding strategy (via the Granted MCP tool — live grant data, no invented grants)
 - [x] Phase 5 — Execution roadmap committed ([[Execution Plan]], repo PLAN.md) — Chicago launch, day-by-day first 30 days, go/no-go gates
+- [ ] Phase 6 — Deploy the real app + five build slices ([[Roadmap — Deploy and Five Slices]], locked 2026-08-09) — Slice A in progress
 
-## Hosting — three things, easy to confuse (verified 2026-08-06)
+## Hosting — REVERSED 2026-08-09: the app is being deployed
+
+**The 2026-07-22 "no hosted deploy" decision is closed.** Stefan reopened it on 2026-08-09 after an audit showed that 5 of 7 email-confirmed members were stuck on the static site with no way to reach health-doc upload or matching — features that already work in the unhosted app. Foundation-plan Task 11 moves from SKIPPED back to active. See [[Roadmap — Deploy and Five Slices]].
 
 | What | Where | Contains |
 |---|---|---|
-| **Public static site** | [theplugai.xyz](https://theplugai.xyz) — GitHub Pages, `gh-pages` branch | Landing, `/join.html`, `/admin.html`. **The shareable link** |
-| Vercel project `forming-paws` | forming-paws.vercel.app | Serves the static landing only — `/browse` and `/join.html` both 404. Not the real app |
-| **The Next.js app** | `~/forming-paws`, branch `main` — **local only** | Owner accounts, dog profiles, health-doc verification + admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018 |
+| **Marketing site** | [theplugai.xyz](https://theplugai.xyz) — GitHub Pages, `gh-pages` branch | Landing + `/admin.html`. Stays put; CTAs repoint to the app |
+| **The real app** | **`app.theplugai.xyz`** — Next.js, branch `main` (deploy in progress, Slice A) | Owner accounts, dog profiles, health-doc verification + admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018 |
+| Vercel project `forming-paws` | forming-paws.vercel.app | Currently serves the static landing only. To be repurposed or replaced during Slice A |
 
-The app being unhosted is a **decision, not a blocker** (2026-07-22): Stefan chose to keep iterating locally rather than carry deploy-platform overhead, after the project hit a Vercel billing cap once. Don't propose Vercel/Netlify deploys unless he reopens it. Task 11 in the foundation plan is SKIPPED for this reason — closed, not pending.
+Domain choice: subdomain of a domain Stefan already owns — **no purchase**. `formingpaws.org` was available at $8.49/yr and declined for now.
+
+The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
 
 The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
 

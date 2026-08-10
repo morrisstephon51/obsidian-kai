@@ -10,6 +10,37 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-09 — Full audit + roadmap reset: the app gets deployed
+Audited both codebases, the live site, and the database end to end. See [[Roadmap — Deploy and Five Slices]] for the full plan.
+
+- **Core finding**: two divergent products, one database — and the real people are on the weaker one. The static site's member dashboard says *"we'll email you when your dog's health vault is ready"*, while health-doc upload, admin review, geo browse, and mutual matching **already work** in the Next.js app nobody can reach. **5 of 7 confirmed members are at a dead end**
+- **Decision reversed**: the 2026-07-22 no-hosted-deploy call is closed. App deploys to **`app.theplugai.xyz`** (subdomain — no purchase; `formingpaws.org` was available at $8.49/yr and declined)
+- **Sequence locked** — ship-first: **A** deploy & harden → **C** growth/legal → **B** in-app chat → **D** photo gallery → **E** vet referral/education. C before B because grant applications can't point at a site with no privacy policy
+- **Health check**: `tsc` clean, `next build` clean (15 routes), 27/27 unit tests pass, migrations at 0018
+- **DB census**: 7 owners · 5 dogs · 4 health docs · 2 interests · 1 match · 1 waitlist · 5/7 confirmed
+- **12 errors logged** (full list in the roadmap note). Worst three: `npm run lint` fails outright (ESLint 9, no flat config — zero lint coverage); auth fixes stranded uncommitted on `fix/upload-redirect`; `dog_photos_select_browsable` is `USING (true)` so any signed-in user can enumerate every photo row
+- **RLS re-audit passed** — owners, waitlist, health documents, and interests all correctly gated. July's hardening held
+- ⚠️ **Needs a Supabase dashboard change during Slice A**: add `app.theplugai.xyz` to Authentication → URL Configuration → Redirect URLs, or new signups' confirmation links break
+
+**Slice A progress — 5 PRs open, awaiting Stefan's merges:**
+
+| PR | Task | Verified |
+|---|---|---|
+| [#16](https://github.com/morrisstephon51/forming-paws/pull/16) | Auth: cross-device email confirmation, `x-forwarded-host` origins, `next`-param hardening | tsc 0 · 27/27 · build clean |
+| [#17](https://github.com/morrisstephon51/forming-paws/pull/17) | ESLint flat config + CI (stacked on #16) | tsc 0 · lint 0 · 27/27 |
+| [#18](https://github.com/morrisstephon51/forming-paws/pull/18) | Slice A spec + implementation plan | — |
+| [#19](https://github.com/morrisstephon51/forming-paws/pull/19) | Migration 0019 — couple photo visibility to browse. **Already applied live** | orphan-path test filtered 0; rollback clean |
+| [#20](https://github.com/morrisstephon51/forming-paws/pull/20) | Dashboard verification badge | 2 new tests · 19/19 · tsc 0 · build OK |
+
+**Three corrections to the 2026-08-09 audit, found by re-checking rather than trusting the first pass:**
+1. **Audit finding #10 was overstated.** `dogs_browsable` is `dogs JOIN breeds` with *no* verification filter, so every dog is browsable and photos being readable by signed-in members matches how `/browse` already works. Not a live leak — 0 photo rows, 0 files exist. Migration 0019 still landed, reframed as coupling: the policies expressed no relationship to browsability, so they'd silently fail to follow any future filter.
+2. **The Supabase advisor never flagged `dog_photos`** — that finding was derived by hand from `pg_policies`.
+3. **The spec contradicted itself** on `home.html` (fix its badge *and* redirect it away). The app's `/dashboard` showed only name and sex, so the redirect would have downgraded the member experience — fix moved to the app (#20).
+
+Also avoided a regression: the branch holding the stranded auth work was *behind* `main` and would have reverted the `303` on upload redirects from #14. Rebranched off `origin/main`.
+
+**Remaining in Slice A:** deploy to Vercel (blocked on #16 merging — `getRequestOrigin` is required behind the proxy), then repoint the static site.
+
 ## 2026-08-07 — Member experience shipped: login, dashboard, confirmation landing
 - **login.html** — member sign-in with working forgot-password reset flow
 - **home.html** — member dashboard (their dogs + add-dog form, verification status, community stats, Founding Member badge); root URL auto-redirects signed-in members here; marketing page unchanged for visitors
