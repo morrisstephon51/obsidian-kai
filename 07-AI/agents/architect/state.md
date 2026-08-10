@@ -4,8 +4,8 @@ role: System Design Supervisor
 mode: "full"
 status: "running"
 last_run: "2026-08-09T20:39:32.331Z"
-current_task: "Design a caching layer for a NoSQL database"
-active_spec: "Design a caching layer for a NoSQL database"
+current_task: "Design an audit logging system for compliance"
+active_spec: "Design an audit logging system for compliance"
 runs_completed: 8
 last_error: null
 ---

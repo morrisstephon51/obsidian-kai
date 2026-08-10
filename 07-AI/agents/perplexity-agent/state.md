@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-08-10T18:43:42.033Z"
+last_run: "2026-08-10T23:32:46.391Z"
 current_task: null
-runs_completed: 199
-items_processed: 199
+runs_completed: 200
+items_processed: 200
 last_error: null
 color: "#20808D"
 house: "providers"
@@ -37,3 +37,8 @@ invocation (the task comes from the caller as an argument), matching how codex/a
 
 [2026-08-09T21:46:53.687Z] research via sonar: SUCCESS cost_usd=0.005050 billing=api measured=true trace=20260809T214653687Z-kairo-16u7
 [2026-08-09T21:53:11.924Z] research via sonar: SUCCESS cost_usd=0.005040 billing=api measured=true trace=20260809T215311924Z-kairo-180i
+
+<!-- KAIRO-LEDGER -->
+## Cost Ledger (appended by Kairo — supervisors must not rewrite below this line)
+
+[2026-08-10T23:32:41.534Z] research via sonar: SUCCESS cost_usd=0.005280 billing=api measured=true trace=20260810T233241534Z-kairo-s2x
