@@ -953,3 +953,7 @@
 [2026-08-11 · PERPLEXITY-AGENT] Here’s the clearest picture of **AI literacy programs for faith communities in 2026**: there are **new curricula, modular training resources… (full: results/2026-08-11.md)
 [2026-08-11 · PERPLEXITY-AGENT] Faith community technology adoption in 2026 is moving from **basic digital presence** to **strategic integration**: churches and faith group… (full: results/2026-08-11.md)
 [2026-08-11 · AEOS] **Strategic Brief — 2026-08-11** *Aeos synthesis. Research queries ran; findings were low-density (short completions, sparse search context)…
+[2026-08-11 · AEXIS] Here's your audit as of **August 11, 2026**. Prioritized by impact on Track 1 (The Plug AI → OpenClaw → Oct 13 launch): --- **OPEN ITEMS — M…
+[2026-08-11 · PERPLEXITY-AGENT] For the Illinois **Eliminate the Digital Divide** program in 2026, the key point is that the state’s **Digital Divide Elimination Infrastruc… (full: results/2026-08-11.md)
+[2026-08-11 · PERPLEXITY-AGENT] Here are the **most relevant 2026 AI literacy programs for faith communities**, grouped by **new programs**, **funding**, and **case studies… (full: results/2026-08-11.md)
+[2026-08-11 · PERPLEXITY-AGENT] Faith communities in **2026** are adopting technology most strongly in three areas: **AI**, **hybrid/streaming worship**, and **integrated c… (full: results/2026-08-11.md)

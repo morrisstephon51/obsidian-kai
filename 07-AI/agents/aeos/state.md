@@ -1,9 +1,9 @@
 ---
 agent: aeos
 role: Strategic Signal Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-11T13:54:58.538Z"
-current_task: null
+current_task: "brief"
 runs_completed: 15
 items_processed: 0
 last_error: null
