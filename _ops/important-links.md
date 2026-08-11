@@ -176,6 +176,8 @@ All eight unassigned domains resolve to registrar parking rather than nothing â€
 
 **Next check: 2026-08-18.**
 
+> **Do not treat these five as broken.** `obsidian-kai`, `kai-obsidian-vault`, `ai-consulting-business`, `content-machine`, and `mundi-agent-dashboard` are **private repos**. They return 404 to any request that is not signed in, so an automated link checker will flag them every time. Verified against `gh repo list` on 2026-08-11 â€” all five exist and all five are private.
+
 ---
 
 ## Corrections to the previous audit
