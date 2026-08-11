@@ -85,3 +85,5 @@ house: "operations-center"
 
 [2026-08-10T23:31:59.584Z] general via claude-haiku-4-5-20251001: SUCCESS cost_usd=0.026378 billing=subscription measured=true trace=20260810T233159584Z-kairo-rfx
 [2026-08-10T23:31:59.584Z] general via claude-haiku-4-5-20251001: SUCCESS cost_usd=0.032208 billing=subscription measured=true trace=20260810T233159584Z-kairo-rg1
+[2026-08-11T13:52:12.479Z] general via claude-haiku-4-5-20251001: SUCCESS cost_usd=0.030651 billing=subscription measured=true trace=20260811T135212479Z-kairo-2277
+[2026-08-11T13:52:16.911Z] general via claude-haiku-4-5-20251001: TIMEOUT cost_usd=0.000000 billing=subscription measured=false trace=20260811T135216911Z-kairo-22c4
