@@ -10,6 +10,20 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-11 — 🚀 THE REAL APP IS LIVE AT https://theplugai.xyz
+The Next.js app now serves the apex domain. GitHub Pages is retired. **The five email-confirmed members who were stuck at "add a dog" can now reach health-doc upload, browse, and matching.**
+
+- **One site, no subdomain** — Stefan's call: "everything on theplugai.xyz, no new links or sites." The `app.theplugai.xyz` plan was dropped. Marketing content ported into `app/page.tsx` with the sign-in panel on it; `admin.html`/`app.html`/`styles.css`/`app.js`/`fp-auth.js` copied into `public/` and served verbatim; `/index.html` `/join.html` `/login.html` `/home.html` `/confirm.html` are 307 redirects, so flyers and QR codes keep working
+- **7 PRs merged** (#16 auth · #17 lint+CI · #18 docs · #19 migration 0019 · #20 dashboard badge · #21 landing sign-in · #22 single-site · #23 SEO/legal). main green throughout: tsc 0, lint 0, 36/36 tests
+- **Slice C shipped early** — Open Graph + generated 1200×630 OG card (real 127KB PNG), robots.txt, sitemap.xml, and **privacy policy + terms**. Policy written against the real schema: names `location_point` honestly, states other members see distance only, and **does not claim 501(c)(3) status** because the entity doesn't exist yet. Terms separate document review from veterinary judgement. **Both need a lawyer's review before backing a grant application**
+- **Cutover gotchas, for next time:**
+  - Missing Vercel env vars made **every** route 500 including static files in `public/` — `middleware.ts` uses `process.env.…!` non-null assertions across a matcher covering all paths. Redirects still worked, because they're evaluated before middleware. That signature = missing env vars
+  - Vercel **never auto-issued the TLS cert** for theplugai.xyz after DNS landed. Apex served HTTP 200 but HTTPS failed at the handshake. Fixed with `vercel certs issue theplugai.xyz www.theplugai.xyz` — 12 seconds
+  - A `server: GitHub.com` reading on www was a **local DNS cache**, not real DNS. Always cross-check with `dig @8.8.8.8`
+- **Supabase auth config updated**: Site URL `https://theplugai.xyz`, Redirect URLs `https://theplugai.xyz/**` + `http://localhost:3000/**` (the localhost entry keeps local dev signup working now that Site URL is production)
+- **Live verification**: valid Let's Encrypt cert; `/` `/login` `/signup` `/privacy` `/terms` `/robots.txt` `/sitemap.xml` `/opengraph-image` `/admin.html` `/app.html` all 200; www 301→apex; all legacy `.html` paths forward correctly with query strings preserved; `/auth/confirm` returns a recoverable error + resend prompt on a dead link
+- **Still open**: leaked-password toggle; `deploy-static-site.yml` workflow still on main (harmless, points at a dead host); `admin.html`/`app.html` are still the old vanilla-JS Supabase copies, now living in `public/` — drift relocated, not removed
+
 ## 2026-08-09 — Full audit + roadmap reset: the app gets deployed
 Audited both codebases, the live site, and the database end to end. See [[Roadmap — Deploy and Five Slices]] for the full plan.
 
