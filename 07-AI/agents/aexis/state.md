@@ -1,9 +1,9 @@
 ---
 agent: aexis
 role: Execution Intelligence Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-11T13:56:46.216Z"
-current_task: null
+current_task: "audit"
 runs_completed: 19
 items_processed: 0
 last_error: null
