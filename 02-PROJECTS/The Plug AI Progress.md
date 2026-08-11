@@ -43,16 +43,18 @@ related: [[../../Areas/Career/index|Career]], [[../../Areas/Development/index|De
 
 ## 📋 Outstanding TODOs
 
-### High Priority
-- [ ] [TODO 1]
-- [ ] [TODO 2]
+### High Priority (Sep 1-14: Phase 3)
+- [ ] Execute Phase 3 Week 1 (compliance monitor, cost anomaly, escalation automation)
+- [ ] Execute Phase 3 Week 2 (validation, Phase 2 sign-off, Stef approval)
+- [ ] Run Phase 2 re-verification (audit compliance before Oct 13)
 
-### Medium Priority
-- [ ] [TODO 3]
-- [ ] [TODO 4]
+### Medium Priority (Sep 15+: Final prep)
+- [ ] Week 2 sign-off (Stef approval)
+- [ ] Oct 13 launch readiness audit
+- [ ] Monitor Track 1 (parallel to Phase 2 wind-down)
 
-### Low Priority
-- [ ] [TODO 5]
+### Low Priority (Oct 13+: Post-launch)
+- [ ] Phase 4 planning (post-launch scaling)
 
 ---
 
@@ -147,9 +149,16 @@ Supports: Financial Goals, Competitive Advantages
 
 ## 📅 Timeline
 
-[Key dates and deadlines]
+| Phase | Dates | Status | Metrics |
+|-------|-------|--------|---------|
+| **Pre-staging** | Aug 10-13 | ✅ COMPLETE | 18 tasks, 6/6 criteria PASS |
+| **Week 1** | Aug 11-17 | ✅ APPROVED | 12 tasks, 3.34× speedup, Stef ✅ |
+| **Week 2** | Aug 11 (early) | ✅ 8/9 PASS | 9 tasks, 3.51× speedup |
+| **Phase 3** | Sep 1-14 | ⏳ READY | Compliance + audit infrastructure |
+| **Phase 2 sign-off** | Sep 15 | ⏳ SCHEDULED | Stef approval gate |
+| **🎯 Track 1 Launch** | Oct 13 | 🔒 LOCKED | 63 days, full infrastructure |
 
 ---
 
-*Last reviewed: 2026-06-13*
+*Last reviewed: 2026-08-11 (Phase 2 complete, 41 tasks executed, $2.51 cost, 9 peak concurrent)*
 *For daily tracking, see [[../_ops/master-tracker|Master Tracker]]*
