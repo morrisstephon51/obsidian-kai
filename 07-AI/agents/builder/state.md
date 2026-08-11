@@ -3,9 +3,9 @@ agent: builder
 display_name: "Builder"
 emoji: "🔨"
 role: "Code Generation · Multi-Provider"
-status: "idle"
+status: "running"
 last_run: "2026-08-09T21:59:51.128Z"
-current_task: null
+current_task: "Code generation: write 10+ cost-tracker test scenarios for edge cases"
 runs_completed: 2
 items_processed: 2
 last_error: null

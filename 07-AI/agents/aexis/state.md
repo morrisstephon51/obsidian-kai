@@ -1,9 +1,9 @@
 ---
 agent: aexis
 role: Execution Intelligence Supervisor
-status: "idle"
+status: "running"
 last_run: "2026-08-11T14:18:59.858Z"
-current_task: null
+current_task: "Compliance scan: detect SENSITIVE data in cost-ledger entries"
 runs_completed: 20
 items_processed: 0
 last_error: null
