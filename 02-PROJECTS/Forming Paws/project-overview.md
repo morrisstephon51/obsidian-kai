@@ -40,17 +40,20 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 - [x] Phase 5 — Execution roadmap committed ([[Execution Plan]], repo PLAN.md) — Chicago launch, day-by-day first 30 days, go/no-go gates
 - [ ] Phase 6 — Deploy the real app + five build slices ([[Roadmap — Deploy and Five Slices]], locked 2026-08-09) — Slice A in progress
 
-## Hosting — REVERSED 2026-08-09: the app is being deployed
+## Hosting — SETTLED 2026-08-11: one site, live
 
-**The 2026-07-22 "no hosted deploy" decision is closed.** Stefan reopened it on 2026-08-09 after an audit showed that 5 of 7 email-confirmed members were stuck on the static site with no way to reach health-doc upload or matching — features that already work in the unhosted app. Foundation-plan Task 11 moves from SKIPPED back to active. See [[Roadmap — Deploy and Five Slices]].
+**The app is live at [theplugai.xyz](https://theplugai.xyz).** The 2026-07-22 "no hosted deploy" rule is dead, and so is the intermediate `app.theplugai.xyz` plan — Stefan's call was "everything on theplugai.xyz, no new links or sites," so there is **no subdomain and no static site**.
 
-| What | Where | Contains |
-|---|---|---|
-| **Marketing site** | [theplugai.xyz](https://theplugai.xyz) — GitHub Pages, `gh-pages` branch | Landing + `/admin.html`. Stays put; CTAs repoint to the app |
-| **The real app** | **`app.theplugai.xyz`** — Next.js, branch `main` (deploy in progress, Slice A) | Owner accounts, dog profiles, health-doc verification + admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018 |
-| Vercel project `forming-paws` | forming-paws.vercel.app | Currently serves the static landing only. To be repurposed or replaced during Slice A |
+| What | Where |
+|---|---|
+| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel project `forming-paws`, branch `main`, auto-deploys on push. Marketing page *and* sign-in on `/`, plus dashboard, browse, matches, chat, admin. Migrations at **0021** |
+| Fallback URL | [forming-paws.vercel.app](https://forming-paws.vercel.app) — the same deployment |
+| Retired | GitHub Pages / the `gh-pages` branch. No longer served by anything |
+| Carried over | `/admin.html` and `/app.html` still served from `public/` — still vanilla JS hitting Supabase directly. Known debt |
 
-Domain choice: subdomain of a domain Stefan already owns — **no purchase**. `formingpaws.org` was available at $8.49/yr and declined for now.
+Legacy `/join.html`, `/login.html`, `/home.html`, `/confirm.html` all 307 to their app equivalents, so printed flyers and QR codes keep working.
+
+Domain: no purchase — `formingpaws.org` was available at $8.49/yr and declined. TLS is Let's Encrypt, issued 2026-08-11; Vercel did **not** auto-issue it, it needed `vercel certs issue`.
 
 The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
 

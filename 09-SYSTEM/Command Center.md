@@ -20,7 +20,7 @@ last-updated: 2026-08-06
 | Project | Track | Stage | Notes |
 |---|---|---|---|
 | **The Plug AI** | Track 1 | Live, in development | See [[02-PROJECTS/The Plug AI/project-overview\|project overview]]. Repo `psychic-bassoon`, deploys from branch `claude/amazing-mccarthy-zZl3L` (not `main`). Content-hardening pass done 2026-07-13 — all fabricated content removed, dead CTAs wired to `NotifyModal`. Visual redesign still deferred; current lavender/green palette does **not** match the Deep Space / Amber Gold brand |
-| **Forming Paws** | Track 2 | Slice 1 complete, hosted site live | Public site live at **[theplugai.xyz](https://theplugai.xyz)**. Repo now public: [forming-paws](https://github.com/morrisstephon51/forming-paws). Full Next.js app (accounts, health-doc verification, browse, matching, migrations to 0018) is **local-only by design**. See [[02-PROJECTS/Forming Paws/project-overview\|project overview]] and the two-deployment warning below |
+| **Forming Paws** | Track 2 | **The real app is live** | **[theplugai.xyz](https://theplugai.xyz)** now serves the full Next.js app — accounts, health-doc verification, browse, matching, and owner chat. Migrations at **0021**. GitHub Pages retired 2026-08-11; the "local-only" rule is dead. Repo: [forming-paws](https://github.com/morrisstephon51/forming-paws). See [[02-PROJECTS/Forming Paws/project-overview\|project overview]] and [[02-PROJECTS/Forming Paws/Status Log\|Status Log]] |
 | **BigHeart / Puppy Power** | Day job / Track 2 funding bridge | Active campaign | Docs at `~/clawd/puppy-power/`. "Puppy Power" is the crowdfunding name for Forming Paws — same product, different label |
 | **AI Consulting Business** | Track 3 (for-profit) | Built, not launched | `~/ai-consulting-business/` — dual-niche (law-firm intake automation + small-business apps/sites). **Backed up 2026-08-06** to private repo [ai-consulting-business](https://github.com/morrisstephon51/ai-consulting-business). Blocked on Perplexity MCP key + Gmail connector auth. See [[02-PROJECTS/AI Consulting Business/project-overview\|project overview]] |
 | **OpenClaw AI Organization** | Standing / governance | Phase 2 live | Governance layer above the agent fleet, owned by Kairo. 30+ docs at `~/clawd/AI-Organization/`. All three Phase 2 blockers resolved. Track 1 execution gated on **Oct 13** |
@@ -35,7 +35,7 @@ last-updated: 2026-08-06
 | Site | URL | Status | Notes |
 |---|---|---|---|
 | **The Plug AI** | [theplugai.info](https://theplugai.info) | 🟢 Live | Vercel. Fallback `psychic-bassoon-psi.vercel.app`. The `-cam6stef` domain hits a Vercel SSO wall — never share that one |
-| **Forming Paws** | [theplugai.xyz](https://theplugai.xyz) | 🟢 Live | **New since last update.** GitHub Pages, `gh-pages` branch. Signup at `/join.html` |
+| **Forming Paws** | [theplugai.xyz](https://theplugai.xyz) | 🟢 Live | **Vercel** (project `forming-paws`, branch `main`). The whole app. Signup at `/signup`; old `/join.html` 307s there |
 | **MUNDI Agent Dashboard** | [theplugai.live](https://theplugai.live) | 🟢 Live | Vercel. Fallback `agent-world-olive.vercel.app`. Live agent data arrives via Edge Config sync from Stefan's Mac every 5 min |
 | **Stefan's Portfolio** | [theplugai.life](https://theplugai.life) | 🟢 Live | Vercel, repo `Stefan-Portfolio` |
 | **Link-in-Bio** | [theplugai.net](https://theplugai.net) | 🟢 Live | GitHub Pages. **Was marked "propagating" — DNS has since finished** |
@@ -44,15 +44,18 @@ last-updated: 2026-08-06
 | **Content Machine** | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | 🟡 Live, repo archived | Quality agents ported to `psychic-bassoon/content-engine`; treat as legacy |
 | **AI Video Reel Generator** | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | ⚠️ **307 redirect loop** | Never lands on a page. **Was marked 🟢 Live** — only the root had been spot-checked |
 | **Psychic Octo Engine** | [psychic-octo-engine-psi.vercel.app](https://psychic-octo-engine-psi.vercel.app) | 🟢 Live | Repo archived but deploy still serving — inconsistent |
-| **Community Intake & Routing** | community-intake-routing.vercel.app | 🔴 404 | Confirms the 2026-07-03 audit: archived, no real implementation |
+| **Community Intake & Routing** | [community-intake-routing.vercel.app](https://community-intake-routing.vercel.app) | 🟢 200 | **Correction 2026-08-11:** not 404. Serves a live "Join The Plug AI Community" signup page. Do not delete |
 
-### 🐾 Forming Paws has two deployments — don't confuse them
+### 🐾 Forming Paws — ONE site now (the three-way split is gone)
 
-| What | Where | Contains |
-|---|---|---|
-| Public static site | **[theplugai.xyz](https://theplugai.xyz)** (GitHub Pages) | Landing + `/join.html`. **This is the one to share** |
-| Vercel project `forming-paws` | forming-paws.vercel.app | Static landing only — `/browse` and `/join.html` both 404. Not the real app |
-| The actual Next.js app | `~/forming-paws` — **local only** | Accounts, dog profiles, health-doc verification, `/browse`, `/matches`. Unhosted deliberately per the 2026-07-22 decision |
+Resolved 2026-08-11. There is no static site, no `gh-pages`, and no `app.` subdomain — that was considered and rejected.
+
+| What | Where |
+|---|---|
+| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel, branch `main`, auto-deploys on push. Marketing page, sign-in, dashboard, browse, matches, chat, admin |
+| Fallback URL | [forming-paws.vercel.app](https://forming-paws.vercel.app) — same deployment |
+| Carried-over static files | `/admin.html` (roster + CSV) and `/app.html` (sample view) still served from `public/`. Known debt — still vanilla JS talking to Supabase directly |
+| Legacy URLs | `/join.html` `/login.html` `/home.html` `/confirm.html` all 307 to their app equivalents, so flyers and QR codes keep working |
 
 ---
 
@@ -63,8 +66,8 @@ Verified against `gh repo list` on 2026-08-06.
 ### Active
 | Repo | Visibility | Purpose |
 |---|---|---|
-| [obsidian-kai](https://github.com/morrisstephon51/obsidian-kai) | Private | ⭐ **This vault's actual remote** — auto-syncs every few minutes |
-| [forming-paws](https://github.com/morrisstephon51/forming-paws) | Public | Forming Paws — static site on `gh-pages`, Next.js app on `main`. **Previously logged as "local, not yet pushed" — that's obsolete** |
+| [obsidian-kai](https://github.com/morrisstephon51/obsidian-kai) | Private | ⭐ **This vault's actual remote.** `git-obsi-sync` commits only **while Obsidian is running** — not on a timer. Check `git status` after CLI edits |
+| [forming-paws](https://github.com/morrisstephon51/forming-paws) | Public | Forming Paws — the live app deploys from `main`. `gh-pages` is retired and no longer served |
 | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | Public | The Plug AI website — live |
 | [command-center-redirect](https://github.com/morrisstephon51/command-center-redirect) | Public | Redirect shim for theplugai.online (created 2026-08-01) |
 | [mundi-agent-dashboard](https://github.com/morrisstephon51/mundi-agent-dashboard) | Private | MUNDI Agent World dashboard source |
@@ -155,7 +158,7 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
 | Tool | Link | Purpose |
 |---|---|---|
 | GitHub | [github.com/morrisstephon51](https://github.com/morrisstephon51) | All repos |
-| Vercel | [vercel.com/cam6stef](https://vercel.com/cam6stef) | 9 projects. `community-intake-routing` and `content-machine-migh` are dead weight |
+| Vercel | [vercel.com/cam6stef](https://vercel.com/cam6stef) | 9 projects. Only `content-machine-migh` is dead weight — `community-intake-routing` is live (verified 2026-08-11) |
 | Supabase — Plug AI | [dashboard](https://supabase.com/dashboard/project/fqdrvhpdntflfkqxlvkq) | morrisstephon51's Project (us-west-1) |
 | Supabase — Forming Paws | project `wyzcnkdonbdykidmcxvx` | Separate project. Email confirmation required; low free-tier signup rate limit |
 | Anthropic Console | [console.anthropic.com](https://console.anthropic.com/) | Usage. **Note:** Claude auth here is OAuth-only via the `claude` CLI — there is no `ANTHROPIC_API_KEY` |

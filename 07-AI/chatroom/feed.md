@@ -982,3 +982,4 @@
 [2026-08-11 · PERPLEXITY-AGENT] Several **new 2026 AI literacy efforts for faith communities** are underway, with the clearest funding-backed examples coming from denominat… (full: results/2026-08-11.md)
 [2026-08-11 · PERPLEXITY-AGENT] Faith communities in 2026 are adopting technology more broadly and more strategically, with the biggest shifts around **AI**, **hybrid worsh… (full: results/2026-08-11.md)
 [2026-08-11 · AEOS] **Strategic Brief — The Plug AI | 2026-08-11** --- - **IL Digital Equity next cycle is the real target, not the lapsed Aug 3 deadline.** DCE…
+[2026-08-11 · PERPLEXITY-AGENT] I found **one clearly in-scope open grant** from the results, plus **one national AI-literacy fund that is open only if the deadline is stil… (full: results/2026-08-11.md)

@@ -70,7 +70,8 @@ Still served as real files from `public/`: [/admin.html](https://theplugai.xyz/a
 
 | What | Link |
 |---|---|
-| Supabase project | [dashboard](https://supabase.com/dashboard/project/wyzcnkdonbdykidmcxvx) |
+| Supabase — **Forming Paws** | [dashboard](https://supabase.com/dashboard/project/wyzcnkdonbdykidmcxvx) · ref `wyzcnkdonbdykidmcxvx` |
+| Supabase — **The Plug AI** | [dashboard](https://supabase.com/dashboard/project/fqdrvhpdntflfkqxlvkq) · ref `fqdrvhpdntflfkqxlvkq` (us-west-1) — **a separate project, don't mix them up** |
 | Supabase → auth URL config | [URL Configuration](https://supabase.com/dashboard/project/wyzcnkdonbdykidmcxvx/auth/url-configuration) |
 | Supabase → users | [Users](https://supabase.com/dashboard/project/wyzcnkdonbdykidmcxvx/auth/users) |
 | Supabase → SQL editor | [SQL](https://supabase.com/dashboard/project/wyzcnkdonbdykidmcxvx/sql) |
