@@ -10,6 +10,23 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-12 — 💬 Slice B live: owners can actually talk to each other
+The core loop no longer dead-ends at a match. Shipped and deployed to https://theplugai.xyz.
+
+- **Conversations** at `/matches/[id]` — server-rendered, polling every 5s from the client, gated on `document.visibilityState` so background tabs stop asking. Polling not Realtime: the `supabase_realtime` publication was empty, so Realtime would be net-new infrastructure *and* a second RLS surface, on a repo already bitten three times by RLS filtering. Schema is identical either way, so upgrading later needs no migration.
+- **Unread badges** on the matches list and the dashboard — the dashboard matters because that's where members land, and unread is the only notification (no email, by decision).
+- **Block** closes the thread for both. Blocker sees "You closed this conversation"; the other sees "This conversation is no longer available" — deliberately not naming who, so blocking doesn't invite an offline confrontation. Messages stay visible, because hiding them would destroy the evidence a report depends on.
+- **Report + `/admin/reports` queue.** Admin access to message content is granted by RLS *only* while a report is open or reviewing, and ends when it closes.
+- **Privacy policy + terms amended in the same PR** — the policy said nothing about messages and would have been inaccurate on day one.
+
+**Migration 0020** — `messages`, `match_reads`, `match_blocks`, `match_reports`, plus `owner_in_match()` and `match_is_blocked()`. Verified live in rolled-back transactions: stranger 0 · participant 1 · admin-before-report 0 · admin-with-open-report 1 · **admin-after-resolved 0** · blocked insert rejected · sender spoofing rejected. The three admin numbers matter together — the middle alone wouldn't prove access *ends*.
+
+**Design call worth remembering:** participants are identified by their **dog**, never by owner name. `owners` is RLS'd to your own row, so `display_name` for the other party comes back empty — the same trap as the dogs join. Rather than add an owner-name view, the thread reads "Luna ↔ Duke". Keeps a member's real name off a surface shared with someone they haven't met.
+
+**Two of my own errors caught by running things rather than trusting them:** the plan's RLS steps used `set local request.jwt.claims = json_build_object(...)`, but `SET LOCAL` takes a literal not an expression — every verification step would have failed with a syntax error (fixed, PR #26). And the plan's admin probe invented an `owners` row with a synthetic uuid, which risks an FK failure that reads as a *policy pass* — rewritten to promote one of the 4 real dogless owners.
+
+**Still open:** Playwright e2e written but not run (needs both fixture owners to share a match) · leaked-password toggle · `deploy-static-site.yml` still on main · `admin.html`/`app.html` still vanilla-JS copies in `public/`.
+
 ## 2026-08-11 — 🚀 THE REAL APP IS LIVE AT https://theplugai.xyz
 The Next.js app now serves the apex domain. GitHub Pages is retired. **The five email-confirmed members who were stuck at "add a dog" can now reach health-doc upload, browse, and matching.**
 
