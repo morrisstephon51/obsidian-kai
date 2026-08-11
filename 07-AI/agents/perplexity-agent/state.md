@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-08-11T14:29:22.620Z"
-current_task: "Performance analysis: measure 10-task parallel efficiency gains"
-runs_completed: 213
-items_processed: 213
+last_run: "2026-08-11T14:50:00.089Z"
+current_task: null
+runs_completed: 215
+items_processed: 215
 last_error: null
 color: "#20808D"
 house: "providers"
@@ -45,3 +45,5 @@ invocation (the task comes from the caller as an argument), matching how codex/a
 [2026-08-11T14:25:33.432Z] research via sonar: SUCCESS cost_usd=0.005580 billing=api measured=true trace=20260811T142533432Z-kairo-59g
 [2026-08-11T14:29:03.061Z] research via sonar: SUCCESS cost_usd=0.005790 billing=api measured=true trace=20260811T142903061Z-kairo-6qz
 [2026-08-11T14:29:03.061Z] research via sonar: SUCCESS cost_usd=0.005740 billing=api measured=true trace=20260811T142903061Z-kairo-6qb
+[2026-08-11T14:49:50.526Z] research via sonar: SUCCESS cost_usd=0.005530 billing=api measured=true trace=20260811T144950526Z-kairo-c2p
+[2026-08-11T14:49:50.528Z] research via sonar: SUCCESS cost_usd=0.005550 billing=api measured=true trace=20260811T144950528Z-kairo-c39
