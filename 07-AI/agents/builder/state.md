@@ -3,9 +3,9 @@ agent: builder
 display_name: "Builder"
 emoji: "🔨"
 role: "Code Generation · Multi-Provider"
-status: "idle"
+status: "running"
 last_run: "2026-08-11T14:30:26.674Z"
-current_task: null
+current_task: "Fallback handler: implement Claude→ChatGPT override logic (ADR-008)"
 runs_completed: 4
 items_processed: 4
 last_error: null

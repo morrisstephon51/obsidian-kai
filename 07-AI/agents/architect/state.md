@@ -2,10 +2,10 @@
 agent: architect
 role: System Design Supervisor
 mode: "full"
-status: "idle"
+status: "running"
 last_run: "2026-08-11T14:30:25.683Z"
-current_task: null
-active_spec: null
+current_task: "Authority Matrix enforcement: log all model selection decisions (§8-9)"
+active_spec: "Authority Matrix enforcement: log all model selection decisions (§8-9)"
 runs_completed: 13
 last_error: null
 ---
