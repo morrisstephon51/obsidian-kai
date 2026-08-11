@@ -4,9 +4,9 @@
   "title": "Audit Obsidian vault",
   "titleGenerationStatus": "success",
   "createdAt": 1784850627685,
-  "updatedAt": 1784851129727,
-  "lastResponseAt": 1784851129727,
+  "lastActivityAt": 1784851129727,
   "sessionId": "4946d0d4-29d3-4688-8e07-b84b460d6bf1",
+  "selectedModel": "claude-code/claude-haiku-4-5-20251001",
   "providerState": {
     "providerSessionId": "4946d0d4-29d3-4688-8e07-b84b460d6bf1"
   },
