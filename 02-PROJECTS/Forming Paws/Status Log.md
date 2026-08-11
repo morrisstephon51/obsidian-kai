@@ -25,7 +25,15 @@ The core loop no longer dead-ends at a match. Shipped and deployed to https://th
 
 **Two of my own errors caught by running things rather than trusting them:** the plan's RLS steps used `set local request.jwt.claims = json_build_object(...)`, but `SET LOCAL` takes a literal not an expression — every verification step would have failed with a syntax error (fixed, PR #26). And the plan's admin probe invented an `owners` row with a synthetic uuid, which risks an FK failure that reads as a *policy pass* — rewritten to promote one of the 4 real dogless owners.
 
-**Still open:** Playwright e2e written but not run (needs both fixture owners to share a match) · leaked-password toggle · `deploy-static-site.yml` still on main · `admin.html`/`app.html` still vanilla-JS copies in `public/`.
+**⚠️ Then a verification pass found the moderation feature had NEVER worked** (PR #27, fixed + deployed). Two faults in already-shipped code, both found by exercising the admin route instead of re-reading it:
+1. **Admin got a 404 before reaching a single message.** Migration 0020 let an admin read the *messages* of a reported conversation but left the *`matches` row* restricted to participants — and `/matches/[id]` loads the match first, then `notFound()`s. Verified: `admin_can_see_match_row = 0` while `admin_can_see_messages = 1`.
+2. **Past that, `markRead()` threw** — its upsert requires `owner_in_match`, which an admin fails. The page would have 500'd.
+
+So `report` — the whole reason block and report shipped together — had no working review path. **Lesson: an RLS policy that grants access to a table's *contents* is useless if the page's *first* query hits a different table with narrower RLS.** Migration 0021 adds `matches_select_admin_reported`, scoped identically to the messages policy so visibility begins at the report and ends when it closes. `markRead` is now non-throwing (bookkeeping must never break a page). Admins get a read-only view with an amber banner.
+
+**Now genuinely verified end to end:** Playwright suite run, **5/5 passing** (2 new conversation tests + 3 pre-existing). The block test asserts the party who did *not* close it never sees who did. Fixture restored afterwards — 0 blocks left behind, 2 read markers written. Plus tsc 0, lint 0, 43 unit tests, build clean.
+
+**Still open:** leaked-password toggle · `deploy-static-site.yml` still on main · `admin.html`/`app.html` still vanilla-JS copies in `public/`.
 
 ## 2026-08-11 — 🚀 THE REAL APP IS LIVE AT https://theplugai.xyz
 The Next.js app now serves the apex domain. GitHub Pages is retired. **The five email-confirmed members who were stuck at "add a dog" can now reach health-doc upload, browse, and matching.**
