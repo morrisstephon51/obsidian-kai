@@ -4,10 +4,10 @@ display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
 status: "running"
-last_run: "2026-08-11T13:57:08.255Z"
-current_task: "Market research: competitor cost models and pricing strategies"
-runs_completed: 210
-items_processed: 210
+last_run: "2026-08-11T14:25:39.032Z"
+current_task: null
+runs_completed: 211
+items_processed: 211
 last_error: null
 color: "#20808D"
 house: "providers"
@@ -42,3 +42,4 @@ invocation (the task comes from the caller as an argument), matching how codex/a
 ## Cost Ledger (appended by Kairo — supervisors must not rewrite below this line)
 
 [2026-08-10T23:32:41.534Z] research via sonar: SUCCESS cost_usd=0.005280 billing=api measured=true trace=20260810T233241534Z-kairo-s2x
+[2026-08-11T14:25:33.432Z] research via sonar: SUCCESS cost_usd=0.005580 billing=api measured=true trace=20260811T142533432Z-kairo-59g
