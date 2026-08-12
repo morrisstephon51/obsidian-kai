@@ -24,3 +24,7 @@ _4 members · 1 needs a nudge · synced 2026-08-12_
 | 2026-08-06 | Stephon Morris | morrisstephon51@gmail.com | ✅ active | 1 | 2026-08-12 |
 | 2026-08-04 | Terrell Anderson | terrella031@icloud.com | · signed in, no dog yet | 0 | 2026-08-04 |
 <!-- members:end -->
+
+## My notes
+
+- Ronald: hit the broken confirm link on 8/12 — follow up personally.
