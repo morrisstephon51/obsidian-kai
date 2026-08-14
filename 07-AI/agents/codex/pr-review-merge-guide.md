@@ -55,8 +55,10 @@ File-disjoint from each other and from #1/#11. Verified no shared file. Merge fr
 
 Everything else in #1 vs #11 is disjoint (#1 = `content-engine/`, `lib/data/resources.ts`, resource SVGs; #11 = `app/api/grants/*`, `app/grants/*`, grants migration).
 
-### Config-consistency note (flag for after both merge)
-Canonical-site-URL env var name is inconsistent: **#15's code** (`lib/site.ts`) reads `NEXT_PUBLIC_APP_URL`, but **#11's `.env.example`** documents `NEXT_PUBLIC_SITE_URL` for the same concept. A custom-domain deploy following #11's template would be silently ignored by #15's canonical logic. Pick ONE name in both the code and the env template when both merge.
+### Config-consistency note — RESOLVED 2026-08-13 (Run 180)
+Canonical-site-URL env var name was inconsistent: **#15's code** (`lib/site.ts`) read only `NEXT_PUBLIC_APP_URL`, but **#11's `.env.example`** documents (and #11's grant code reads) `NEXT_PUBLIC_SITE_URL` for the same concept — so a custom-domain deploy following #11's template would have been silently ignored by #15's canonical/sitemap/robots/OG logic.
+
+**Fixed in #15** (commit `04cb45a`): `lib/site.ts` now resolves `SITE_URL` from `NEXT_PUBLIC_APP_URL` **then** `NEXT_PUBLIC_SITE_URL` **then** the Vercel default. Set EITHER name to a custom domain and every canonical/OG/sitemap/robots/grant-email URL agrees. Backward compatible (neither set -> byte-identical current prod; `_APP_URL` wins when both set). Verified `tsc --noEmit` clean + runtime-proved all four env states. No action needed at merge time now — just merge #15 as normal.
 
 ---
 
