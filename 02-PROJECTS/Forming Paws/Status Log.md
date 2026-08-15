@@ -10,6 +10,13 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-15 — Brand system shipped + breed catalog tripled
+- **Forming Paws now has a real brand**: vector logo (pine-green paw, terracotta heart pad — favicon + nav sitewide), formalized palette (pine #2F6B5C primary / terracotta #E8734A accent / warm ivory), Fraunces display + Nunito body type. Fixed the old two-brand clash (landing was orange, app pages green). Footer: "Built by The Plug AI"
+- Design verified twice per Stefan's instruction: code-consistency scan (no stray hex colors) + real-browser screenshots at 1280px and 390px (no overflow, mobile clean). Deployed and confirmed via pipeline
+- **Breeds: 52 → 112** — added American Pit Bull Terrier, AmStaff, Staffy, American Bully, Pit Bull Mix + ~50 more mixes/doodles/missing breeds (Pug, Cocker Spaniel, Shiba Inu…), synced across join/dashboard/admin
+- Fixed the double-save bug that duplicated Torrence's dogs (guard added; existing duplicate rows left pending Stefan's OK to delete)
+- Brand decisions (interview): own warm identity (not Plug AI dark/amber), logo designed in-house, full-site rollout in one pass
+
 ## 2026-08-12 — 💬 Slice B live: owners can actually talk to each other
 The core loop no longer dead-ends at a match. Shipped and deployed to https://theplugai.xyz.
 
