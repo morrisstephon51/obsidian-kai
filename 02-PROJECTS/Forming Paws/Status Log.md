@@ -10,6 +10,13 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-15 (later) — Course correction: brand landed on the REAL app (Vercel main)
+- Mid-work discovery: theplugai.xyz has served the **Next.js app from Vercel since 08-11** — the gh-pages pipeline this session had been deploying to is retired. Today's earlier gh-pages deploys were dead-ends
+- **Breeds were never at risk**: the app reads breeds from the database at runtime, so all 112 (incl. pit bull types) were live in the real app the moment the DB insert ran
+- **Brand foundation shipped to main** (verified: tsc clean, next build clean, 86/86 tests, Vercel deploy READY, aliased to theplugai.xyz): logo.svg favicon + asset, Tailwind brand/accent/ivory/ink tokens + display/body font families (additive), Fraunces headings + Nunito body site-wide, public/ legacy copies (admin.html, styles.css) synced to the redesigned versions — admin gains the review queue there
+- **Remaining design work**: the app's React components still use stock Tailwind grays — applying the brand tokens page-by-page (landing hero, dashboard, browse cards) is the next pass and MUST be coordinated with the session actively developing main (PRs #31–#41, some open)
+- ⚠️ Process lesson recorded: this session must stop deploying to gh-pages; main + Vercel is the only pipeline
+
 ## 2026-08-15 — Brand system shipped + breed catalog tripled
 - **Forming Paws now has a real brand**: vector logo (pine-green paw, terracotta heart pad — favicon + nav sitewide), formalized palette (pine #2F6B5C primary / terracotta #E8734A accent / warm ivory), Fraunces display + Nunito body type. Fixed the old two-brand clash (landing was orange, app pages green). Footer: "Built by The Plug AI"
 - Design verified twice per Stefan's instruction: code-consistency scan (no stray hex colors) + real-browser screenshots at 1280px and 390px (no overflow, mobile clean). Deployed and confirmed via pipeline
