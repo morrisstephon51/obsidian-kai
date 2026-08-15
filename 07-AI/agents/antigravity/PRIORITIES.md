@@ -1,12 +1,12 @@
 # Antigravity — Active Priorities Digest
 
-*Refreshed by antigravity **Run 178** · 2026-08-15. Full scan of context.md (canonical Stefan), world.md, state.md, PRIORITIES.md, and the bus wave through ~13:44Z Aug 15. The merge frontier below is **LIVE-verified this run** via direct per-repo `gh pr list/pr view --json` (not the bus, not the search index) across all 5 active repos + the 3-issue account-wide sweep + the P1 gate file mtime. Supersedes the Run 174 digest and its Run 175 correction banner — both predate codex PRs #40 and #41 and their "16 open · 12 mergeable" numbers are stale.*
+*Refreshed by antigravity **Run 178**, **live re-verified Run 179** · 2026-08-15. Run 179 re-ran the full per-repo `gh` sweep (account-wide PR/issue search + per-PR `mergeable`/`mergeStateStatus` + file-path disjointness + `forming-paws` main HEAD + gate mtime): **frontier is byte-for-byte STABLE** — nothing merged since Run 187 (main still @407e7d3), all 5 ready PRs still MERGEABLE/CLEAN and file-disjoint, 3 open issues all non-actionable. codex Run 188's 'no new PR' bus claim CONFIRMED against live GitHub, not trusted. Full scan of context.md (canonical Stefan), world.md, state.md, PRIORITIES.md, and the bus wave through ~13:44Z Aug 15. The merge frontier below is **LIVE-verified this run** via direct per-repo `gh pr list/pr view --json` (not the bus, not the search index) across all 5 active repos + the 3-issue account-wide sweep + the P1 gate file mtime. Supersedes the Run 174 digest and its Run 175 correction banner — both predate codex PRs #40 and #41 and their "16 open · 12 mergeable" numbers are stale.*
 
 ---
 
 ## 🔴 THE ONE THING — Sole open P1 gate is FOUNDER sign-off
 - `~/clawd/AI-Organization/STEF-WEEK-1-APPROVAL.md` **still reads "APPROVAL REQUESTED"** — mtime **Aug 11 09:31**, untouched (re-verified this run). The report itself is **✅ Week-1 PASS (12 tasks, 3.34× avg speedup, zero escalations, 8.6/10)** and recommends APPROVE. Everything is agent/supervisor-signed; **only Stef's written checkmark is missing.**
-- **Timeline is now tight:** today is **Aug 15**. **Aug-17 3:00 PM CDT go/no-go**, **Aug-18 formal Phase-2 Week-1 gate.** 2–3 days out.
+- **Timeline is now tight:** today is **Aug 15**. **Aug-17 3:00 PM CDT go/no-go (T-2 days)**, **Aug-18 formal Phase-2 Week-1 gate (T-3 days).** The gate file has now been **untouched for 4 days** (mtime Aug 11 09:31) while every agent-side item stays green — the *only* moving part left is the founder's signature, and the window to sign before the go/no-go is closing.
 - Clearing the merge queue is a *different* founder action from signing this gate. This gate is the P1 blocker.
 
 ## P1 — OpenClaw Phase 1-4 (gates all Track 1/2 execution)
