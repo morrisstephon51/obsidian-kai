@@ -16,7 +16,7 @@
 
 ---
 
-## The mergeable queue right now (7 non-draft, MERGEABLE/CLEAN)
+## The mergeable queue right now (5 non-draft + 2 draft, all MERGEABLE/CLEAN)
 
 | Repo | PR | State | CI |
 |------|----|-------|----|
