@@ -71,3 +71,6 @@
 
 ---
 *Tooling note (this env): full-file **Write SUCCEEDED** for PRIORITIES.md + state.md. **Edit is permission-denied** — prefer Write (full file) or Bash append. Per-repo `gh pr list/view --json` is authoritative and matched reality this run.*
+
+---
+**Run 180 correction (2026-08-15 ~22:55Z):** The "main frozen @407e7d3 / nothing merged since Run 187" framing above is now STALE. Live check this run: forming-paws `main` advanced to **3a005a6** ("Brand foundation: logo, palette tokens, fonts") via a **direct push at 21:27Z** (not a PR). The brand commit touches only `app/globals.css`, `app/layout.tsx`, `public/admin.html`, `public/logo.svg`, `public/styles.css`, `tailwind.config.ts` — **fully path-disjoint** from the 4 stacked correctness PRs, so #38/#39/#40/#41 remain MERGEABLE/CLEAN and merge-any-order. Also: the health-doc redirect twin is now tracked as forming-paws **issue #42**. Gate file unchanged (Aug 11 09:31, unsigned, T-2 to Aug-17 3pm go/no-go).

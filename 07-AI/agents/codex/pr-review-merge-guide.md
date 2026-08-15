@@ -1,17 +1,18 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 188 · 2026-08-15 (supersedes Run 179)*
-*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus,statusCheckRollup` / `gh pr diff --name-only`), not assumed.*
+*Author: Codex · Run 190 · 2026-08-15 (supersedes Run 188)*
+*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus,baseRefOid` / `gh api compare`), not assumed.*
 
 ---
 
-## What changed vs the Run 179 guide (read this first)
+## What changed since the Run 188 guide (read this first)
 
-The founder cleared a big chunk of the queue since Run 179 — this guide reflects the new reality:
+**`main` MOVED.** forming-paws `main` advanced **407e7d3 -> 3a005a6** — the founder pushed a **"Brand foundation"** commit (logo, palette tokens, Fraunces/Nunito fonts) **directly to main**, NOT by merging the PR queue. So:
 
-1. **psychic-bassoon Phase 1 is DONE.** PRs **#13, #14, #15, #16, #17, #18 all MERGED 2026-08-14.** The old "Phase 1 — six small quality fixes" section is retired. Only **#1** (non-draft) and **#11** (draft) remain open in psychic-bassoon.
-2. **forming-paws #32 MERGED**, along with #33/#34/#35/#36/#37 (a11y, browse-age, email templates, login canonical, date formatting). `main` is now **@407e7d3**.
-3. **New forming-paws review backlog: PRs #38, #39, #40, #41** — the largest ready-to-merge queue account-wide. All four are **non-draft, MERGEABLE, CLEAN, and CI-green (SUCCESS)** as of 2026-08-15, and **mutually file-disjoint** (verified below) → merge in ANY order, zero stacking hazard.
+1. **The 4-PR queue is still the bottleneck** — none of #38/#39/#40/#41 merged; the founder is working branding directly on main instead. Re-verified THIS run: all four are still **OPEN + MERGEABLE + CLEAN against the NEW main @3a005a6** — no conflict decay.
+2. **The brand commit is file-disjoint from every open PR.** It touched only `app/globals.css`, `app/layout.tsx`, `public/admin.html`, `public/logo.svg`, `public/styles.css`, `tailwind.config.ts` — none of which appear in #38-#41. That's why they stay CLEAN.
+3. **ai-video-reel-generator #24 MERGED** (2026-08-14 19:04Z) — removed from the open list below.
+4. **The health-doc redirect twin is now tracked as forming-paws ISSUE #42** (filed Run 189) — re-verified this run: `app/api/upload/health-doc/route.ts:61` on `main @3a005a6` STILL ends with the proxy-unsafe `NextResponse.redirect(new URL(\`/dogs/${dogId}\`, request.url), 303)`. Fold-in path unchanged (see follow-up section).
 
 ---
 
@@ -85,7 +86,6 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 
 | PR | Draft? | State | Note |
 |----|--------|-------|------|
-| ai-video-reel-generator #24 | no | MERGEABLE/CLEAN | Clear error when Supabase env unconfigured (refs #5). Safe standalone; improves the founder-blocked #5 experience. |
 | Link-inbio #5 | DRAFT | MERGEABLE/CLEAN | Obsidian ops-vault docs. |
 | Link-inbio #6 | DRAFT | MERGEABLE/CLEAN | Binary resume PDF add (the `+0/-0` is git not line-counting a binary — NOT empty). |
 
@@ -96,4 +96,18 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 - **ai-video-reel-generator #5** — Supabase project must be created by the founder (paid/founder-gated).
 - **skills-introduction-to-git #1** — git learning exercise, not a code task.
 
-There are **NO agent-actionable open issues account-wide.** With `main` unchanged since Run 187 and four clean forming-paws PRs already stacked, the highest-leverage move is **clearing this queue**, not opening a fifth PR (that would be inventory, not throughput). This guide is the throughput.
+There are **NO agent-actionable open issues account-wide** (the health-doc twin is now tracked as **forming-paws #42**, an agent-filed but founder-fold-in item — see the follow-up section). `main` DID move this run (407e7d3 -> 3a005a6, brand foundation) but the founder pushed it directly rather than draining the queue, so the four clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41**, not opening a fifth PR (that would be inventory, not throughput). This guide is the throughput.
+
+---
+
+## Documented follow-up from the brand commit (founder decision — NOT agent-shipped)
+
+The Run 190 brand commit loads Fraunces + Nunito via a **render-blocking remote `@import`** at the top of `app/globals.css`:
+```css
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:...&family=Nunito:...&display=swap');
+```
+No `next/font` is used (`app/layout.tsx` has no font import). Two non-urgent considerations for the founder — **left un-touched on purpose because this is the founder's active brand work and a PR here would collide with it**:
+- **Performance:** a remote CSS `@import` blocks first paint on a round-trip to Google. `next/font/google` self-hosts the files, removes the extra request, and eliminates layout shift.
+- **Privacy:** loading Google Fonts from Google's CDN leaks visitor IPs to Google — relevant given the app's legal/consent posture. Self-hosting via `next/font` keeps fonts first-party.
+
+Flagged for the founder to decide, not shipped.
