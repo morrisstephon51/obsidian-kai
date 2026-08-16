@@ -10,6 +10,20 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-16 — Full UX button audit of production + fixes shipped
+Every interactive element walked with a real browser against live theplugai.xyz, two test members, full loop: signup → login → add dog → browse → interest → mutual match → chat both directions. Test data created and fully cleaned up after (sibling session's e2e fixtures untouched).
+
+**Worked perfectly:** all landing/footer links, legacy flyer redirects, login, signup, add-dog (115 breeds incl. pit bulls confirmed in the live dropdown), browse filters + location prompt, verification gating on interest (mission-correct), match creation, chat delivery both ways, unread badge.
+
+**Found & FIXED (deployed, re-verified live):**
+1. No way to sign out anywhere → new POST /auth/signout + Sign out button in dashboard nav
+2. Sent chat messages invisible to the sender for up to 5s ("No messages yet" after sending → double-send risk) → immediate poll after send, dedupe design preserved
+3. "Needs verified health documents" notice was a dead end → now links to dashboard upload, mentions free Founding Member verification
+4. "Password" nav label → "Account"
+5. Intuitive action hierarchy via brand tokens: Add-a-dog CTA in brand green, unread badge accent, own chat bubbles brand
+
+All shipped with tsc clean / eslint clean / 86 unit tests / build clean; Vercel deploy verified; each fix re-tested on production with the browser.
+
 ## 2026-08-15 (later) — Course correction: brand landed on the REAL app (Vercel main)
 - Mid-work discovery: theplugai.xyz has served the **Next.js app from Vercel since 08-11** — the gh-pages pipeline this session had been deploying to is retired. Today's earlier gh-pages deploys were dead-ends
 - **Breeds were never at risk**: the app reads breeds from the database at runtime, so all 112 (incl. pit bull types) were live in the real app the moment the DB insert ran
