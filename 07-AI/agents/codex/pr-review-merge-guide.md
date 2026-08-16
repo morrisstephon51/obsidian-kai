@@ -1,22 +1,22 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 193 · 2026-08-16 (supersedes Run 190)*
+*Author: Codex · Run 195 · 2026-08-16 (supersedes Run 193)*
 *Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus`, `gh pr checks`, GraphQL `closingIssuesReferences`), not assumed.*
 
 ---
 
-## What changed since the Run 190 guide (read this first)
+## What changed since the Run 193 guide (read this first)
 
-**`main` is UNCHANGED at `3a005a6`** (the "Brand foundation" commit). Nothing merged since Run 190; the four forming-paws PRs are still stacked and unreviewed. What *did* change is the queue got cleaner and one open issue is now self-closing:
+**`main` is UNCHANGED at `3a005a6`** (the "Brand foundation" commit). Nothing merged since Run 190; the forming-paws PRs are still stacked and unreviewed. One thing changed that this guide MUST reflect:
 
-1. **All four PRs re-verified fully CI-GREEN today** — not just MERGEABLE/CLEAN. `gh pr checks` on each shows **both** the `verify` GitHub Action **and** the Vercel deployment passing (Supabase Preview "skipping" is expected — no branch DB). Merge-safe on the build, not just on conflict state.
-2. **PR #39 now carries TWO fixes and auto-closes ISSUE #42 on merge.** The health-doc redirect twin that Run 190's guide listed as a *pending* fold-in was **already folded into #39** (Run 191, commit `986a2d7`), and Run 192 corrected #39's body to register the close. Verified this run via GraphQL: **#42 is a registered `closingIssuesReferences` on #39 → it auto-closes on merge, no manual cleanup.** The "redirect twin follow-up" section below is therefore **RESOLVED**, not outstanding.
-3. **#39's real footprint is now 4 files / +201 / −3 / 2 commits / 98 tests** (was the "+110/−2, 3f" of the future-date-only version). Row updated below.
-4. **The brand commit is still file-disjoint from every open PR** (`app/globals.css`, `app/layout.tsx`, `public/admin.html`, `public/logo.svg`, `public/styles.css`, `tailwind.config.ts` — none appear in #38-#41), so all four remain CLEAN against `main @3a005a6` with zero conflict decay.
+1. **A FIFTH forming-paws PR is now open: #43 (`docs(robots)`).** Run 194 shipped the `app/robots.ts` comment fix that the Run 193 guide had logged as *"deliberately NOT shipped."* It is now **PR #43 — MERGEABLE/CLEAN, CI-green** (`verify` + Vercel pass), `+3/-2`, one file (`app/robots.ts`), one commit. The old "cosmetic — NOT shipped" section at the bottom is therefore **RESOLVED / shipped**, not an outstanding follow-up. If you were reading the prior guide, do not treat that robots note as un-done — it is a real open PR awaiting your review.
+2. **#43 is file-disjoint from #38–#41** (only touches `app/robots.ts`, which no other PR touches), so all **five** forming-paws PRs remain mutually conflict-free — merge in ANY order, no rebase.
+3. **#39 still carries TWO fixes and auto-closes ISSUE #42 on merge** — re-verified this run via GraphQL: **#42 is a registered `closingIssuesReferences` on #39**. No manual issue cleanup.
+4. **The brand commit is still file-disjoint from every open PR**, so nothing has decayed to CONFLICTING.
 
 ---
 
-## The mergeable queue right now (5 non-draft + 2 draft, all MERGEABLE/CLEAN)
+## The mergeable queue right now (6 non-draft + 4 draft, all MERGEABLE/CLEAN)
 
 | Repo | PR | State | CI |
 |------|----|-------|----|
@@ -24,17 +24,20 @@
 | forming-paws | #39 | MERGEABLE/CLEAN | ✅ green |
 | forming-paws | #40 | MERGEABLE/CLEAN | ✅ green |
 | forming-paws | #41 | MERGEABLE/CLEAN | ✅ green |
+| forming-paws | #43 | MERGEABLE/CLEAN | ✅ green |
 | psychic-bassoon | #1 | MERGEABLE/CLEAN | (large feature PR — see Phase 2) |
-| command-center-redirect | #1 | **DRAFT** | gated — see cross-repo constraint |
 | psychic-bassoon | #11 | **DRAFT** | un-draft before merging |
+| command-center-redirect | #1 | **DRAFT** | gated — see cross-repo constraint |
+| Link-inbio | #5 | **DRAFT** | MERGEABLE/CLEAN |
+| Link-inbio | #6 | **DRAFT** | MERGEABLE/CLEAN |
 
-Drafts that cannot merge until un-drafted: **psychic-bassoon #11**, **command-center-redirect #1**, **Link-inbio #5**, **Link-inbio #6**.
+Drafts cannot merge until un-drafted: **psychic-bassoon #11**, **command-center-redirect #1**, **Link-inbio #5**, **Link-inbio #6**.
 
 ---
 
 ## forming-paws — the current backlog (Track 2, Steph's Forming Paws)
 
-**All four are calendar/proxy-correctness fixes on core member flows. Verified mutually file-disjoint — merge in ANY order, no rebase needed.**
+**All five are correctness / docs fixes on core member flows or their metadata. Verified mutually file-disjoint — merge in ANY order, no rebase needed.**
 
 | PR | Type | Size | Files | What it fixes |
 |----|------|------|-------|---------------|
@@ -42,13 +45,15 @@ Drafts that cannot merge until un-drafted: **psychic-bassoon #11**, **command-ce
 | #39 | validation + proxy-safety | +201/-3, 4f (2 commits) | `app/api/upload/health-doc/route.ts`, `lib/dates.ts`, `tests/unit/dates.test.ts`, `tests/unit/health-doc-upload-route.test.ts` | **Two fixes on the same route.** (1) Future **health-document date** slips past a UTC-instant guard west of UTC → inflates the "Baseline health verified" badge + browse eligibility; anchors "today" to America/Chicago. (2) The **post-upload 303 redirect** built from `request.url` leaked the internal Vercel host (twin of #41's photo-route bug), now routed through `getRequestOrigin`. **Closes #42 on merge** (registered closing ref). 98 tests pass. |
 | #40 | data (migration) | +97/-0, 1f | `supabase/migrations/0024_browse_dogs_max_age_calendar_band.sql` | Browse **max-age filter is off by a full year** vs the age label on each card (a 3y6mo dog labelled "3yo" is hidden by a "max age 3" search). New migration mirrors the calendar-correct min-age predicate. **Founder must APPLY the migration** (PR body has a read-only SQL-editor snippet to confirm live). |
 | #41 | proxy-safety | +66/-1, 3f | `app/api/upload/photo/route.ts`, `lib/http.ts`, `tests/unit/http.test.ts` | After a **successful photo upload**, the 303 redirect built from `request.url` points at the internal Vercel deploy host, not the address-bar custom domain — on a protected preview that's a login wall, so a success looks like a failure. New `lib/http.ts` `redirectToPath()` builds the redirect from `getRequestOrigin(request)` (the repo's own tested helper). |
+| #43 | docs (comment only) | +3/-2, 1f | `app/robots.ts` | The `/account/` **disallow** carried a comment describing *confirmation* pages ("crawlable on purpose so the noindex tag is read") — the opposite of what the line does, and a maintainer trap: a reader could believe the comment and REMOVE the disallow, leaking member-only URLs into the crawl budget. Comment rewritten to describe `/account/` accurately (member-only settings, redirects to `/login`). **robots.txt output is byte-identical — zero behavior change, zero test impact.** |
 
 ### File-overlap matrix (verified this run)
 ```
 #38  NewDogForm.tsx            lib/dogBirthDate.ts   tests/.../dogBirthDate.test.ts
-#39  api/upload/health-doc     lib/dates.ts          tests/.../dates.test.ts
+#39  api/upload/health-doc     lib/dates.ts          tests/.../dates.test.ts   tests/.../health-doc-upload-route.test.ts
 #40  migrations/0024_...sql
 #41  api/upload/photo          lib/http.ts           tests/.../http.test.ts
+#43  app/robots.ts
 ```
 No file appears in two PRs. Zero add/add or edit/edit collisions. (#38's base is an older commit `550aaae` but still MERGEABLE/CLEAN against current `main`.)
 
@@ -93,7 +98,7 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 - **ai-video-reel-generator #5** — Supabase project must be created by the founder (paid/founder-gated).
 - **skills-introduction-to-git #1** — git learning exercise, not a code task.
 
-There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` has NOT moved since Run 190 (still `3a005a6`), so the four clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41**, not opening a fifth PR (that would be inventory, not throughput). A Run 193 fresh full-source review of forming-paws found **no new high-severity defect** worth a fifth PR (one cosmetic note logged below). This guide is the throughput.
+There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` has NOT moved since Run 190 (still `3a005a6`), so the five clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41 and #43**, not opening a sixth PR (that would be inventory, not throughput). A Run 195 fresh source review across the subsystems the PRs do NOT touch (contact-message flow + RLS `0023`, waitlist `0015`, `lib/actions/location` + validator, `useShareLocation`, `/admin/messages` handling, `lib/promise`) found them **well-hardened — no new defect worth a sixth PR**. This guide is the throughput.
 
 ---
 
@@ -108,9 +113,3 @@ No `next/font` is used (`app/layout.tsx` has no font import). Two non-urgent con
 - **Privacy:** loading Google Fonts from Google's CDN leaks visitor IPs to Google — relevant given the app's legal/consent posture. Self-hosting via `next/font` keeps fonts first-party.
 
 Flagged for the founder to decide, not shipped.
-
----
-
-## Documented follow-up from the Run 193 source review (cosmetic — NOT agent-shipped)
-
-A fresh full read of the forming-paws source this run found the codebase well-hardened (auth-link handling, upload validation, calendar-date logic, browse RPC all sound). One cosmetic note: `app/robots.ts` disallows `/account/` under a comment reading *"Confirmation pages. Crawlable on purpose so the noindex tag on them is actually read; a disallow here would hide that tag instead."* — but `/account/` holds only the **member-only** `/account/password` page (redirects to `/login` when signed out; already sets `index: false`). The confirmation pages that comment describes (`/thank-you`, `/auth/confirm`) live elsewhere and are handled correctly. So the **behavior is fine** (a member-only page is right to disallow, matching `/dashboard`), but the **comment is misplaced** and reads as a self-contradiction. One-line comment fix; deliberately NOT shipped as a fifth PR to avoid adding a cosmetic item to the review pile — logged here, foldable into any future robots/SEO change.
