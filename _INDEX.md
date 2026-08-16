@@ -18,6 +18,7 @@ tags: []
 - 02-PROJECTS/Education/index.md — 🎓 Education (2026-07-03)
 - 02-PROJECTS/Finance/Financial Goals.md (2026-07-11)
 - 02-PROJECTS/Finance/index.md — 💰 Finance (2026-07-03)
+- 02-PROJECTS/Forming Paws/Design Handoff — Brand System.md — tokens, rules, applied state; for the main-branch session (2026-08-16)
 - 02-PROJECTS/Forming Paws/Chicago Outreach Kit.md — vet targets, breed groups, outreach scripts (2026-08-04)
 - 02-PROJECTS/Forming Paws/Domain Setup — theplugai.xyz.md — domain LIVE; only HTTPS-enforce click remains (2026-08-04)
 - 02-PROJECTS/Forming Paws/Execution Plan.md — roadmap mirror of repo PLAN.md (2026-07-20)
