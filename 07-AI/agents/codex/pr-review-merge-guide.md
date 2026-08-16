@@ -1,18 +1,18 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 190 · 2026-08-15 (supersedes Run 188)*
-*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus,baseRefOid` / `gh api compare`), not assumed.*
+*Author: Codex · Run 193 · 2026-08-16 (supersedes Run 190)*
+*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus`, `gh pr checks`, GraphQL `closingIssuesReferences`), not assumed.*
 
 ---
 
-## What changed since the Run 188 guide (read this first)
+## What changed since the Run 190 guide (read this first)
 
-**`main` MOVED.** forming-paws `main` advanced **407e7d3 -> 3a005a6** — the founder pushed a **"Brand foundation"** commit (logo, palette tokens, Fraunces/Nunito fonts) **directly to main**, NOT by merging the PR queue. So:
+**`main` is UNCHANGED at `3a005a6`** (the "Brand foundation" commit). Nothing merged since Run 190; the four forming-paws PRs are still stacked and unreviewed. What *did* change is the queue got cleaner and one open issue is now self-closing:
 
-1. **The 4-PR queue is still the bottleneck** — none of #38/#39/#40/#41 merged; the founder is working branding directly on main instead. Re-verified THIS run: all four are still **OPEN + MERGEABLE + CLEAN against the NEW main @3a005a6** — no conflict decay.
-2. **The brand commit is file-disjoint from every open PR.** It touched only `app/globals.css`, `app/layout.tsx`, `public/admin.html`, `public/logo.svg`, `public/styles.css`, `tailwind.config.ts` — none of which appear in #38-#41. That's why they stay CLEAN.
-3. **ai-video-reel-generator #24 MERGED** (2026-08-14 19:04Z) — removed from the open list below.
-4. **The health-doc redirect twin is now tracked as forming-paws ISSUE #42** (filed Run 189) — re-verified this run: `app/api/upload/health-doc/route.ts:61` on `main @3a005a6` STILL ends with the proxy-unsafe `NextResponse.redirect(new URL(\`/dogs/${dogId}\`, request.url), 303)`. Fold-in path unchanged (see follow-up section).
+1. **All four PRs re-verified fully CI-GREEN today** — not just MERGEABLE/CLEAN. `gh pr checks` on each shows **both** the `verify` GitHub Action **and** the Vercel deployment passing (Supabase Preview "skipping" is expected — no branch DB). Merge-safe on the build, not just on conflict state.
+2. **PR #39 now carries TWO fixes and auto-closes ISSUE #42 on merge.** The health-doc redirect twin that Run 190's guide listed as a *pending* fold-in was **already folded into #39** (Run 191, commit `986a2d7`), and Run 192 corrected #39's body to register the close. Verified this run via GraphQL: **#42 is a registered `closingIssuesReferences` on #39 → it auto-closes on merge, no manual cleanup.** The "redirect twin follow-up" section below is therefore **RESOLVED**, not outstanding.
+3. **#39's real footprint is now 4 files / +201 / −3 / 2 commits / 98 tests** (was the "+110/−2, 3f" of the future-date-only version). Row updated below.
+4. **The brand commit is still file-disjoint from every open PR** (`app/globals.css`, `app/layout.tsx`, `public/admin.html`, `public/logo.svg`, `public/styles.css`, `tailwind.config.ts` — none appear in #38-#41), so all four remain CLEAN against `main @3a005a6` with zero conflict decay.
 
 ---
 
@@ -39,7 +39,7 @@ Drafts that cannot merge until un-drafted: **psychic-bassoon #11**, **command-ce
 | PR | Type | Size | Files | What it fixes |
 |----|------|------|-------|---------------|
 | #38 | validation | +100/-1, 3f | `app/dogs/new/NewDogForm.tsx`, `lib/dogBirthDate.ts`, `tests/unit/dogBirthDate.test.ts` | Future **birth date** slips past the guard west of UTC (evening Chicago) → could save a dog with a negative age. Fix compares calendar components in the member's local frame. |
-| #39 | validation | +110/-2, 3f | `app/api/upload/health-doc/route.ts`, `lib/dates.ts`, `tests/unit/dates.test.ts` | Future **health-document date** slips past a UTC-instant guard west of UTC → inflates the "Baseline health verified" badge + browse eligibility. Anchors "today" to America/Chicago. |
+| #39 | validation + proxy-safety | +201/-3, 4f (2 commits) | `app/api/upload/health-doc/route.ts`, `lib/dates.ts`, `tests/unit/dates.test.ts`, `tests/unit/health-doc-upload-route.test.ts` | **Two fixes on the same route.** (1) Future **health-document date** slips past a UTC-instant guard west of UTC → inflates the "Baseline health verified" badge + browse eligibility; anchors "today" to America/Chicago. (2) The **post-upload 303 redirect** built from `request.url` leaked the internal Vercel host (twin of #41's photo-route bug), now routed through `getRequestOrigin`. **Closes #42 on merge** (registered closing ref). 98 tests pass. |
 | #40 | data (migration) | +97/-0, 1f | `supabase/migrations/0024_browse_dogs_max_age_calendar_band.sql` | Browse **max-age filter is off by a full year** vs the age label on each card (a 3y6mo dog labelled "3yo" is hidden by a "max age 3" search). New migration mirrors the calendar-correct min-age predicate. **Founder must APPLY the migration** (PR body has a read-only SQL-editor snippet to confirm live). |
 | #41 | proxy-safety | +66/-1, 3f | `app/api/upload/photo/route.ts`, `lib/http.ts`, `tests/unit/http.test.ts` | After a **successful photo upload**, the 303 redirect built from `request.url` points at the internal Vercel deploy host, not the address-bar custom domain — on a protected preview that's a login wall, so a success looks like a failure. New `lib/http.ts` `redirectToPath()` builds the redirect from `getRequestOrigin(request)` (the repo's own tested helper). |
 
@@ -52,12 +52,8 @@ Drafts that cannot merge until un-drafted: **psychic-bassoon #11**, **command-ce
 ```
 No file appears in two PRs. Zero add/add or edit/edit collisions. (#38's base is an older commit `550aaae` but still MERGEABLE/CLEAN against current `main`.)
 
-### One documented follow-up — the health-doc redirect twin (do NOT open as a separate PR yet)
-`app/api/upload/health-doc/route.ts:61` on `main` still ends with the **same proxy-unsafe pattern** #41 fixes for the photo route:
-```ts
-return NextResponse.redirect(new URL(`/dogs/${dogId}`, request.url), 303)
-```
-It was left untouched on purpose: that file is **already edited by PR #39**, so a second branch touching it would risk an add/add-adjacent conflict. **Recommended:** once #41 (which introduces `lib/http.ts`) and #39 both merge, fold the one-line swap into the health-doc route (`return redirectToPath(request, \`/dogs/${dogId}\`)`) as a trivial follow-up. Flagged, not silently half-fixed.
+### ~~Follow-up — health-doc redirect twin~~ — RESOLVED (folded into #39)
+The health-doc route's proxy-unsafe `NextResponse.redirect(new URL(…, request.url), 303)` — the twin of #41's photo-route bug — was **folded directly into PR #39** (Run 191, commit `986a2d7`): the route now builds its redirect from `getRequestOrigin(request)`, and #39 adds 3 route-level tests (`tests/unit/health-doc-upload-route.test.ts`) asserting the 303 `Location` lands on the public forwarded host and never the internal deploy host. It uses the on-`main` `getRequestOrigin` helper, so it has **no dependency on #41** — #39 stands alone in any merge order. Tracking issue **#42 auto-closes on #39 merge** (verified closing ref). Nothing outstanding here.
 
 ---
 
@@ -91,12 +87,13 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 
 ---
 
-## Frontier status (unchanged — 3 open issues, all non-actionable by an agent)
+## Frontier status — 4 open issues account-wide, none needing a NEW agent PR
+- **forming-paws #42** — health-doc redirect twin. **Fix already in PR #39; auto-closes on merge.** No action beyond merging #39.
 - **forming-paws #8** — IL-SOS incorporation filing (non-automatable founder steps).
 - **ai-video-reel-generator #5** — Supabase project must be created by the founder (paid/founder-gated).
 - **skills-introduction-to-git #1** — git learning exercise, not a code task.
 
-There are **NO agent-actionable open issues account-wide** (the health-doc twin is now tracked as **forming-paws #42**, an agent-filed but founder-fold-in item — see the follow-up section). `main` DID move this run (407e7d3 -> 3a005a6, brand foundation) but the founder pushed it directly rather than draining the queue, so the four clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41**, not opening a fifth PR (that would be inventory, not throughput). This guide is the throughput.
+There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` has NOT moved since Run 190 (still `3a005a6`), so the four clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41**, not opening a fifth PR (that would be inventory, not throughput). A Run 193 fresh full-source review of forming-paws found **no new high-severity defect** worth a fifth PR (one cosmetic note logged below). This guide is the throughput.
 
 ---
 
@@ -111,3 +108,9 @@ No `next/font` is used (`app/layout.tsx` has no font import). Two non-urgent con
 - **Privacy:** loading Google Fonts from Google's CDN leaks visitor IPs to Google — relevant given the app's legal/consent posture. Self-hosting via `next/font` keeps fonts first-party.
 
 Flagged for the founder to decide, not shipped.
+
+---
+
+## Documented follow-up from the Run 193 source review (cosmetic — NOT agent-shipped)
+
+A fresh full read of the forming-paws source this run found the codebase well-hardened (auth-link handling, upload validation, calendar-date logic, browse RPC all sound). One cosmetic note: `app/robots.ts` disallows `/account/` under a comment reading *"Confirmation pages. Crawlable on purpose so the noindex tag on them is actually read; a disallow here would hide that tag instead."* — but `/account/` holds only the **member-only** `/account/password` page (redirects to `/login` when signed out; already sets `index: false`). The confirmation pages that comment describes (`/thank-you`, `/auth/confirm`) live elsewhere and are handled correctly. So the **behavior is fine** (a member-only page is right to disallow, matching `/dashboard`), but the **comment is misplaced** and reads as a self-contradiction. One-line comment fix; deliberately NOT shipped as a fifth PR to avoid adding a cosmetic item to the review pile — logged here, foldable into any future robots/SEO change.
