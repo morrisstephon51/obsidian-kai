@@ -10,6 +10,25 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-17 — Site-wide navigation, rotating member tab bar, four new pages
+Stefan: "more pages… a navigation bar at the top… buttons along the bottom on a rotating carousel… every page should have a home button." [PR #46](https://github.com/morrisstephon51/forming-paws/pull/46) — **open, needs merge**.
+
+**The finding that shaped it: 15 of 21 pages rendered no header at all.** `/dogs/[id]`, `/matches/[id]`, `/dogs/new`, `/login`, `/signup`, `/faq`, `/contact`, `/privacy`, `/terms`, `/thank-you` and every admin page were dead ends — back button only. A home button on *every* page is only true if a page cannot forget one, so `SiteHeader` + tab bar moved into `app/layout.tsx`. Trade: every route is now dynamic. It also collapsed three separate per-page unread RPCs into one.
+
+**The two requirements conflicted.** A rotating home button rotates away. Resolved by pinning Home on the left and rotating `CAROUSEL_LINKS` beside it, with a test asserting Home survives rotation. Auto-rotate was explicitly chosen by Stefan over my recommendation, so it ships — with the mitigations that keep a moving tap target usable: stops permanently on first interaction, pauses on hover/focus/hidden-tab, honours `prefers-reduced-motion`, arrows + a dot per destination, `aria-live` off.
+
+**`/` now redirects signed-in members to `/home`**, which made every `signedIn` branch below unreachable — deleted rather than left as dead code. The redirect sits after `getUser()` deliberately: implicit-flow auth links carry the session in the URL *fragment*, so those requests look signed-out server-side and need `HashSessionRecovery` to run.
+
+**Four new pages, notable for what they refuse to claim** — this project has a documented history of stripped fabrications, so:
+- `/about` — states plainly Forming Paws is **not an IRS-approved 501(c)(3)**
+- `/vets` — **no directory**, because there are no partner vets; said above the fold
+- `/donate` — **no donate button**. Soliciting donations while implying tax-deductible status you don't hold is a legal problem
+- `/education` + 3 prerendered guides — process/safety only, each flagged **not veterinary advice** since no vet reviewed them
+
+**This caught a live false claim:** the landing page's roadmap card promised "expert-reviewed guides on responsible breeding." Aspirational when nothing existed; checkable and false the moment `/education` shipped. Reworded.
+
+Verified: tsc clean · **149 unit tests** (30 new) · eslint clean · build clean with guides prerendered · all 14 public routes 200 locally · all 15 previously header-less pages confirmed serving logo + nav · sitemap at 15 URLs.
+
 ## 2026-08-17 — Brand *system*, member home at /home, and account settings
 Requested directly by Stefan: "we need to create a landing/home page for forming paws as well as a settings page." Spec at `docs/superpowers/specs/2026-08-17-brand-home-settings-design.md`, decomposed into three increments so the only DB-touching work lands last.
 
