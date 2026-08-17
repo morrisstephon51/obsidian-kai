@@ -51,11 +51,21 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 | Retired | GitHub Pages / the `gh-pages` branch. No longer served by anything |
 | Carried over | `/admin.html` and `/app.html` still served from `public/` — still vanilla JS hitting Supabase directly. Known debt |
 
-Legacy `/join.html`, `/login.html`, `/home.html`, `/confirm.html` all 307 to their app equivalents, so printed flyers and QR codes keep working.
+Legacy `/join.html`, `/login.html`, `/home.html`, `/confirm.html` all 307 to their app equivalents, so printed flyers and QR codes keep working. As of 2026-08-17 `/home.html` and `/dashboard` both point at **`/home`**, the member home that replaced the old dashboard.
+
+## Routes, as of 2026-08-17
+
+| Route | What it is |
+|---|---|
+| `/` | Marketing page + member sign-in panel |
+| `/home` | Member home — one "next action", your dogs, location. Replaced `/dashboard` |
+| `/browse` `/matches` `/matches/[id]` `/dogs/[id]` `/dogs/new` | The product |
+| `/settings` | Profile, location, email, notifications, sign out, delete account |
+| `/account/password` `/account/reactivate` | Password (also where recovery links land); restore a deleted account |
+| `/app` `/faq` `/contact` `/privacy` `/terms` | Public |
+| `/admin/review-queue` `/admin/reports` `/admin/messages` | Admin |
 
 Domain: no purchase — `formingpaws.org` was available at $8.49/yr and declined. TLS is Let's Encrypt, issued 2026-08-11; Vercel did **not** auto-issue it, it needed `vercel certs issue`.
-
-The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
 
 The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws).
 
