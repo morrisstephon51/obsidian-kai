@@ -1,17 +1,18 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 196 · 2026-08-17 (supersedes Run 195)*
-*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus`, GraphQL mergeable poll, a real local merge simulation + `tsc --noEmit`), not assumed.*
+*Author: Codex · Run 198 · 2026-08-17 (supersedes Run 196)*
+*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe.*
+*Provenance note (Run 198): a **GitHub API outage (HTTP 503 across all endpoints)** blocked live re-polling this run. Rather than leave the guide asserting a superseded `main` (`bf2b233`), it was **reconciled from the Run 197 handoff** — whose facts WERE live-verified last run (`gh`/GraphQL mergeable poll, rebase, `tsc`/`eslint`/`vitest`/`build`). Re-poll PR mergeable/CI state once GitHub recovers before merging.*
 
 ---
 
-## What changed since the Run 195 guide (read this first)
+## What changed since the Run 196 guide (read this first)
 
-**`main` MOVED: `3a005a6` → `bf2b233`** — the founder pushed **"Apply brand system across all app surfaces"** (20 files: login/signup/waitlist/contact forms, browse, dashboard, dogs pages, matches, faq, thank-you, StickyJoinBar, and **`app/dogs/new/NewDogForm.tsx`**) DIRECTLY to `main`, not by merging the PR queue. This is a big commit, so the whole queue was re-verified against the new `main` this run:
+**`main` MOVED AGAIN: `bf2b233` → `65b01d1`** — the founder **merged PR #45** ("Member home, full brand sweep, and account settings (Increments 2+3)", ~54 files incl. NEW `app/home`, `app/settings`, `app/account/reactivate`, `app/robots.ts`) into `main`. Still not clearing the stacked queue — a large founder-authored feature landed alongside it. The queue was re-verified against the new `main` (Run 197):
 
-1. **All FIVE forming-paws PRs (#38, #39, #40, #41, #43) re-polled MERGEABLE/CLEAN against `bf2b233`** — no textual conflict decay from the brand commit.
-2. **The brand commit is NO LONGER fully file-disjoint from the queue.** It now touches **`app/dogs/new/NewDogForm.tsx`**, which **PR #38 also edits** — the one real overlap. Verified safe by a **local merge simulation**: `git merge pr38` into `bf2b233` auto-merged with **0 conflict markers**, #38's `isBirthDateNotInFuture` guard stayed intact, the brand restyle coexists, and **`tsc --noEmit` exited 0** on the merged tree. No cosmetic regression either — the brand commit only branded the submit CTA (`bg-brand`); all form inputs (incl. `birthDate`) stayed uniformly `border p-2`. **#38 is genuinely mergeable and correct on the new `main`.**
-3. **#43 remains file-disjoint from #38–#41** (only touches `app/robots.ts`). All five forming-paws PRs remain mutually conflict-free — merge in ANY order, no rebase.
+1. **All FIVE forming-paws PRs (#38, #39, #40, #41, #43) re-verified OPEN + MERGEABLE against `65b01d1`** — no textual conflict decay from #45.
+2. **#45-vs-queue file overlap:** #39/#40/#41 are **fully file-disjoint** from #45. **TWO overlaps:** **#38** (#45 brand-swept `app/dogs/new/NewDogForm.tsx` again) and **#43** (both touch `app/robots.ts`). Git reports CLEAN, but treat these two as the semantic-review points.
+3. **#43 grew a real behavior fix (was docs-only).** #45 added `/home` to the `robots.ts` disallow list but **MISSED its functional twin `/settings`** — `app/settings/page.tsx` does `redirect('/login')` when signed out + `metadata index:false`, the identical member-only pattern to `/home`, `/dashboard`, `/account/` which ARE disallowed. Left out, crawlers waste budget on it and can leak stray `/login` URLs into the index. **A defect #45 itself introduced.** Fix (conflict-safe throughput) was **folded INTO already-open PR #43** rather than opening a colliding sixth PR: #43 rebased onto `65b01d1` (`fix/robots-account-comment`, commit `e2f7ff6`), added `/settings` to the member-only disallow group, and refined the `/account/` comment to cover both `/account/password` AND the new `#45-era /account/reactivate` page. Verified: `tsc --noEmit` 0, `eslint app/robots.ts` 0, `vitest` 128 passed, `build` now emits `Disallow: /settings` in `/robots.txt`.
 4. **#39 still carries TWO fixes and auto-closes ISSUE #42 on merge** (registered `closingIssuesReferences` on #39). No manual issue cleanup.
 5. **Open ISSUES unchanged:** only forming-paws #42 is agent-actionable and is fixed-on-merge by #39; the rest are founder-gated (forming-paws #8 IL filing, ai-video-reel #5 Supabase, skills-introduction-to-git #1 exercise).
 
