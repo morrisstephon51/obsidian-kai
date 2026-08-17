@@ -99,4 +99,6 @@ Fixed in Slice A unless noted.
 
 Existing members carry over automatically — the deployed app hits the same Supabase project, so their accounts and dogs are already there. What they gain is access to health-doc upload and matching.
 
-**Requires a Supabase dashboard change**: `app.theplugai.xyz` must be added to Authentication → URL Configuration → Redirect URLs, or email confirmation links will break for new signups.
+**Supabase redirect URLs — done 2026-08-11.** Site URL is `https://theplugai.xyz`; redirect URLs are `https://theplugai.xyz/**` and `http://localhost:3000/**`. The localhost entry is required for local-dev signup once Site URL points at production.
+
+**Still outstanding:** Supabase leaked-password protection is still disabled (item 11 above).
