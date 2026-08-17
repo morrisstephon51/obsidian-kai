@@ -15,17 +15,15 @@ Contains real member email addresses. This vault syncs to a private repo —
 keep it that way.
 
 <!-- members:start -->
-_8 members · 1 needs a nudge · synced 2026-08-16_
+_6 members · 1 needs a nudge · synced 2026-08-17_
 
 | Joined | Name | Email | Status | Dogs | Last seen |
 | --- | --- | --- | --- | --- | --- |
-| 2026-08-15 | QA bravo | formingpaws.qa.uxtest.bravo@gmail.com | ✅ active | 1 | 2026-08-15 |
-| 2026-08-15 | QA alpha | formingpaws.qa.uxtest.alpha@gmail.com | ✅ active | 1 | 2026-08-15 |
 | 2026-08-14 | Torrence Holmes  | mr.debonairs531@gmail.com | ✅ active | 4 | 2026-08-14 |
 | 2026-08-14 | Michael Johnson  | chimes4905@gmail.com | ✅ active | 1 | 2026-08-14 |
 | 2026-08-12 | Trendsetter 💰💰💰💰 | ronaldhenderson639@gmail.com | ⚠️ confirmed, never signed in | 0 | — |
 | 2026-08-06 | Kenneth Vasser | kennethvasser@mail.com | · signed in, no dog yet | 0 | 2026-08-06 |
-| 2026-08-06 | Stephon Morris | morrisstephon51@gmail.com | ✅ active | 1 | 2026-08-12 |
+| 2026-08-06 | Stephon Morris | morrisstephon51@gmail.com | ✅ active | 1 | 2026-08-17 |
 | 2026-08-04 | Terrell Anderson | terrella031@icloud.com | · signed in, no dog yet | 0 | 2026-08-04 |
 <!-- members:end -->
 
