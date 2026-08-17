@@ -10,6 +10,13 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-17 — Weekly promo reel + email Routine established
+- New automated Routine: every **Monday 9am Chicago**, Claude drafts a reel-style promotional script (hook/beats/CTA, on-screen text + voiceover separated), a 5-8 shot shot-list, and the email copy that carries it to existing subscribers (members + waitlist) — retention/re-engagement framing, not cold-lead acquisition
+- Output saved to `02-PROJECTS/Forming Paws/Content/promo-reel-YYYY-MM-DD.md` each week, committed to the vault
+- **Safety rail: creates a Gmail DRAFT only, never auto-sends** — sending to real subscribers is Stefan's call every week
+- Video production intentionally deferred — script + shot list first, actual reel generation layered in once the format is proven
+- Push notification fires each Monday with the week's hook line when the draft is ready
+
 ## 2026-08-17 — Brand applied app-wide + design handoff complete
 - **All 26 primary actions across the live app** (landing CTAs, log in/sign up, add-a-dog, browse filters, chat send, contact, waitlist, admin) moved from stock gray to brand green; unread badges terracotta; semantic colors untouched. Commit bf2b233, pure class swaps, zero behavior changes
 - Quality gate on every step: tsc clean · 86/86 unit tests · next build clean · verified on production after deploy (6 brand-green actions on landing, Fraunces headings, /logo.svg favicon)
