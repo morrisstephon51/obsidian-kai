@@ -1,12 +1,23 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 198 · 2026-08-17 (supersedes Run 196)*
+*Author: Codex · Run 199 · 2026-08-17 (supersedes Run 198)*
 *Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe.*
-*Provenance note (Run 198): a **GitHub API outage (HTTP 503 across all endpoints)** blocked live re-polling this run. Rather than leave the guide asserting a superseded `main` (`bf2b233`), it was **reconciled from the Run 197 handoff** — whose facts WERE live-verified last run (`gh`/GraphQL mergeable poll, rebase, `tsc`/`eslint`/`vitest`/`build`). Re-poll PR mergeable/CI state once GitHub recovers before merging.*
+*Provenance note (Run 199): the GitHub API has **recovered** from the Run-198 HTTP-503 outage. Every fact below was **live-re-polled this run** (`gh pr list --json mergeable,mergeStateStatus`, `gh api .../commits/main`, `gh pr diff --name-only`, `gh api contents`). The Run-198 "re-poll before merging" caveat is now discharged: `main` is confirmed `65b01d1` and all stacked PRs are **CLEAN/MERGEABLE** (upgraded from UNSTABLE — Vercel previews finished building).*
 
 ---
 
-## What changed since the Run 196 guide (read this first)
+## What changed since the Run 198 guide (read this first)
+
+**A NEW large founder-authored PR appeared: forming-paws #46** ("Site-wide navigation, rotating member tab bar, and four new pages", created 2026-08-17 10:36Z, base `main` `65b01d1`, 24 files). It is **OPEN + MERGEABLE/CLEAN**. Scope: moves `SiteHeader` + tab bar into `app/layout.tsx` (fixes 15 header-less pages), pins a Home button + rotating bottom bar, redirects signed-in `/` → `/home`, and adds four honest public pages (`/about`, `/vets`, `/donate`, `/education` + 3 prerendered guides). Verified in its body: `tsc` clean, `npm test` 149 pass (30 new), `lint` clean, `build` clean.
+
+**This run's verification of #46 against the stacked queue:**
+1. **#46 is file-disjoint from ALL FIVE stacked PRs (#38/#39/#40/#41/#43).** #46's 24 files (`app/about|app|browse|contact|donate|education|faq|home|matches|settings|vets`, `app/layout.tsx`, `app/page.tsx`, `app/sitemap.ts`, `app/account/reactivate`, `components/AppChrome|MemberTabBar|SiteFooter`, `lib/education.ts`, `lib/nav.ts`, 3 tests) share **zero** paths with the queue (`NewDogForm.tsx`, `lib/dogBirthDate.ts`, `api/upload/health-doc`, `lib/dates.ts`, `migrations/0024`, `api/upload/photo`, `lib/http.ts`, `app/robots.ts`). All six open PRs are mutually conflict-free — **merge in ANY order.**
+2. **Unlike #45, #46 does NOT introduce a robots/sitemap gap.** #45 added `/home` but forgot member-only `/settings` (the defect #43 fixes). #46 was checked for the same class of bug and is **clean**: its new route `/app` is a **public** marketing page (`pageMetadata`, `path:'/app'`, example dogs labelled as examples) — correctly indexed, correctly listed in `app/sitemap.ts`, and already anticipated by the on-`main` `robots.ts` comment. The `#46` sitemap lists only public pages (`/`, `/signup`, `/about`, `/education` + 3 guides, `/app`, `/vets`, `/faq`, `/donate`, `/contact`, `/login`, `/privacy`, `/terms`); **no member-only page leaks in.** No new crawl-hygiene fix is needed.
+3. **#43 is still valid and still needed after #46.** #46 edits `app/settings/page.tsx` but keeps it member-only, so #43's `Disallow: /settings` remains correct; #46 does not touch `app/robots.ts`, so there is no conflict.
+
+---
+
+## What changed since the Run 196 guide
 
 **`main` MOVED AGAIN: `bf2b233` → `65b01d1`** — the founder **merged PR #45** ("Member home, full brand sweep, and account settings (Increments 2+3)", ~54 files incl. NEW `app/home`, `app/settings`, `app/account/reactivate`, `app/robots.ts`) into `main`. Still not clearing the stacked queue — a large founder-authored feature landed alongside it. The queue was re-verified against the new `main` (Run 197):
 
@@ -18,10 +29,11 @@
 
 ---
 
-## The mergeable queue right now (6 non-draft + 4 draft, all MERGEABLE/CLEAN)
+## The mergeable queue right now (7 non-draft + 4 draft, all MERGEABLE/CLEAN)
 
 | Repo | PR | State | CI |
 |------|----|-------|----|
+| forming-paws | #46 | MERGEABLE/CLEAN | ✅ green (149 tests) — NEW founder PR, nav + 4 pages, file-disjoint from #38-#43 |
 | forming-paws | #38 | MERGEABLE/CLEAN | ✅ green |
 | forming-paws | #39 | MERGEABLE/CLEAN | ✅ green |
 | forming-paws | #40 | MERGEABLE/CLEAN | ✅ green |
@@ -100,7 +112,7 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 - **ai-video-reel-generator #5** — Supabase project must be created by the founder (paid/founder-gated).
 - **skills-introduction-to-git #1** — git learning exercise, not a code task.
 
-There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` moved again in Run 197 (`bf2b233` → `65b01d1`, the founder-merged PR #45 member-home/settings feature), but the five forming-paws PRs were re-verified OPEN + MERGEABLE against it; #43 was rebased onto `65b01d1` and gained the `/settings` crawl-hygiene fix for a defect #45 introduced. The two files #45 also touched (`NewDogForm.tsx` → #38, `app/robots.ts` → #43) are git-CLEAN but are the semantic-review points. The highest-leverage move is still **founder review of #38-#41 and #43**, not opening a sixth PR (that would be inventory, not throughput). A Run 195 fresh source review across the subsystems the PRs do NOT touch (contact-message flow + RLS `0023`, waitlist `0015`, `lib/actions/location` + validator, `useShareLocation`, `/admin/messages` handling, `lib/promise`) found them **well-hardened — no new defect worth a sixth PR**. This guide is the throughput.
+There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` moved again in Run 197 (`bf2b233` → `65b01d1`, the founder-merged PR #45 member-home/settings feature), but the five forming-paws PRs were re-verified OPEN + MERGEABLE against it; #43 was rebased onto `65b01d1` and gained the `/settings` crawl-hygiene fix for a defect #45 introduced. The two files #45 also touched (`NewDogForm.tsx` → #38, `app/robots.ts` → #43) are git-CLEAN but are the semantic-review points. The highest-leverage move is still **founder review of #38-#41 and #43** (and now the new founder PR **#46**), not opening another agent PR (that would be inventory, not throughput). #46 was live-verified this run as file-disjoint from the whole queue and free of the robots/sitemap gap that #45 introduced. A Run 195 fresh source review across the subsystems the PRs do NOT touch (contact-message flow + RLS `0023`, waitlist `0015`, `lib/actions/location` + validator, `useShareLocation`, `/admin/messages` handling, `lib/promise`) found them **well-hardened — no new defect worth a sixth PR**. This guide is the throughput.
 
 ---
 
