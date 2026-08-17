@@ -1,18 +1,19 @@
 # PR Review & Merge-Order Guide — ACCOUNT-WIDE
 
-*Author: Codex · Run 195 · 2026-08-16 (supersedes Run 193)*
-*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus`, `gh pr checks`, GraphQL `closingIssuesReferences`), not assumed.*
+*Author: Codex · Run 196 · 2026-08-17 (supersedes Run 195)*
+*Purpose: the founder-review backlog is the ecosystem's #1 open bottleneck. This guide makes clearing it fast and safe. Every claim below was verified THIS run against live GitHub (`gh pr view --json mergeable,mergeStateStatus`, GraphQL mergeable poll, a real local merge simulation + `tsc --noEmit`), not assumed.*
 
 ---
 
-## What changed since the Run 193 guide (read this first)
+## What changed since the Run 195 guide (read this first)
 
-**`main` is UNCHANGED at `3a005a6`** (the "Brand foundation" commit). Nothing merged since Run 190; the forming-paws PRs are still stacked and unreviewed. One thing changed that this guide MUST reflect:
+**`main` MOVED: `3a005a6` → `bf2b233`** — the founder pushed **"Apply brand system across all app surfaces"** (20 files: login/signup/waitlist/contact forms, browse, dashboard, dogs pages, matches, faq, thank-you, StickyJoinBar, and **`app/dogs/new/NewDogForm.tsx`**) DIRECTLY to `main`, not by merging the PR queue. This is a big commit, so the whole queue was re-verified against the new `main` this run:
 
-1. **A FIFTH forming-paws PR is now open: #43 (`docs(robots)`).** Run 194 shipped the `app/robots.ts` comment fix that the Run 193 guide had logged as *"deliberately NOT shipped."* It is now **PR #43 — MERGEABLE/CLEAN, CI-green** (`verify` + Vercel pass), `+3/-2`, one file (`app/robots.ts`), one commit. The old "cosmetic — NOT shipped" section at the bottom is therefore **RESOLVED / shipped**, not an outstanding follow-up. If you were reading the prior guide, do not treat that robots note as un-done — it is a real open PR awaiting your review.
-2. **#43 is file-disjoint from #38–#41** (only touches `app/robots.ts`, which no other PR touches), so all **five** forming-paws PRs remain mutually conflict-free — merge in ANY order, no rebase.
-3. **#39 still carries TWO fixes and auto-closes ISSUE #42 on merge** — re-verified this run via GraphQL: **#42 is a registered `closingIssuesReferences` on #39**. No manual issue cleanup.
-4. **The brand commit is still file-disjoint from every open PR**, so nothing has decayed to CONFLICTING.
+1. **All FIVE forming-paws PRs (#38, #39, #40, #41, #43) re-polled MERGEABLE/CLEAN against `bf2b233`** — no textual conflict decay from the brand commit.
+2. **The brand commit is NO LONGER fully file-disjoint from the queue.** It now touches **`app/dogs/new/NewDogForm.tsx`**, which **PR #38 also edits** — the one real overlap. Verified safe by a **local merge simulation**: `git merge pr38` into `bf2b233` auto-merged with **0 conflict markers**, #38's `isBirthDateNotInFuture` guard stayed intact, the brand restyle coexists, and **`tsc --noEmit` exited 0** on the merged tree. No cosmetic regression either — the brand commit only branded the submit CTA (`bg-brand`); all form inputs (incl. `birthDate`) stayed uniformly `border p-2`. **#38 is genuinely mergeable and correct on the new `main`.**
+3. **#43 remains file-disjoint from #38–#41** (only touches `app/robots.ts`). All five forming-paws PRs remain mutually conflict-free — merge in ANY order, no rebase.
+4. **#39 still carries TWO fixes and auto-closes ISSUE #42 on merge** (registered `closingIssuesReferences` on #39). No manual issue cleanup.
+5. **Open ISSUES unchanged:** only forming-paws #42 is agent-actionable and is fixed-on-merge by #39; the rest are founder-gated (forming-paws #8 IL filing, ai-video-reel #5 Supabase, skills-introduction-to-git #1 exercise).
 
 ---
 
@@ -98,7 +99,7 @@ Phase 1 (#13–#18) is merged. Two PRs remain:
 - **ai-video-reel-generator #5** — Supabase project must be created by the founder (paid/founder-gated).
 - **skills-introduction-to-git #1** — git learning exercise, not a code task.
 
-There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` has NOT moved since Run 190 (still `3a005a6`), so the five clean forming-paws PRs remain stacked. The highest-leverage move is still **founder review of #38-#41 and #43**, not opening a sixth PR (that would be inventory, not throughput). A Run 195 fresh source review across the subsystems the PRs do NOT touch (contact-message flow + RLS `0023`, waitlist `0015`, `lib/actions/location` + validator, `useShareLocation`, `/admin/messages` handling, `lib/promise`) found them **well-hardened — no new defect worth a sixth PR**. This guide is the throughput.
+There are **NO agent-actionable open issues account-wide** — #42's fix is already in #39 and auto-closes on merge; the other three are founder / manual / exercise items. `main` moved this run (`3a005a6` → `bf2b233`, the brand-system commit) but the five forming-paws PRs were re-verified MERGEABLE/CLEAN against it (incl. a local merge simulation of #38, which overlaps the brand commit on `NewDogForm.tsx`), so they remain stacked and conflict-free. The highest-leverage move is still **founder review of #38-#41 and #43**, not opening a sixth PR (that would be inventory, not throughput). A Run 195 fresh source review across the subsystems the PRs do NOT touch (contact-message flow + RLS `0023`, waitlist `0015`, `lib/actions/location` + validator, `useShareLocation`, `/admin/messages` handling, `lib/promise`) found them **well-hardened — no new defect worth a sixth PR**. This guide is the throughput.
 
 ---
 
