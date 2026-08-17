@@ -40,7 +40,30 @@ Warm, trustworthy, dog-family — deliberately NOT The Plug AI's dark/amber tech
 - ✅ UX fixes shipped from the production button audit: POST /auth/signout + dashboard Sign out, instant chat-send feedback (immediate poll, dedupe preserved), verification notice links to upload, "Password"→"Account"
 - Verified each step: tsc / eslint / 86 unit tests / next build / live production re-test
 
-## Suggested next design increments (not done)
+## Update 2026-08-17 — the tokens now have a component layer
+
+The state above described a *colour swap*, not a system: `bf2b233` moved 26 primary actions to `bg-brand` but left **111 other gray classes** across 24 files, no shared header, `logo.svg` unused outside the favicon, and `body` never picking up Fraunces/Nunito. There was nothing to swap *to*. PRs #44/#45 add it.
+
+### Use these first, before reaching for raw tokens
+
+| Class | What it is |
+|---|---|
+| `.fp-btn` | Primary action — brand green fill, ivory text, focus ring |
+| `.fp-btn-ghost` | Outlined secondary. This is the "never a second solid green" answer to rule 1 |
+| `.fp-btn-accent` | Terracotta. Exists, currently used nowhere — see the note below |
+| `.fp-card` | Bordered white content block |
+| `.fp-band` | Emphasis section — `brand-soft`, **not** ivory |
+| `.fp-link` | Inline link |
+| `.fp-badge` | Small pill — verification status, unread counts |
+
+Defined in `app/globals.css` under `@layer components`. Rebranding a page is now a class swap; adding a colour to a page is usually a sign the class you want is missing here.
+
+### Three corrections to the guidance above
+
+1. **`.fp-band` is `brand-soft`, not ivory.** The suggestion to use `bg-ivory` page grounds was taken — `body` is ivory now — which means an ivory section band on an ivory page is invisible. Three surfaces read distinctly: ivory page, white cards, pale-green bands.
+2. **Rule 2 held up under pressure and I got it wrong first.** The delete-account button was built with `.fp-btn-accent`, which broke both rule 2 (terracotta is never a big button) and rule 3 (destructive is the red family). It is `bg-red-700` now. `.fp-btn-accent` is defined but deliberately unused; Tailwind purges it until something needs it.
+3. **The paw stays, both ways.** Stefan's call: `logo.svg` is the mark (header, footer, favicon) *and* 🐾 remains a playful accent in section headings and empty states. Not either/or.
+
+### Still not done
 - Card hover/elevation language on browse dog cards (see gh-pages `styles.css` `.dog-card` for the reference feel)
-- `bg-ivory` page ground on marketing routes (`/`, `/faq`, `/contact`) for warmth; app routes can stay white
-- Empty states with the paw mark instead of bare text
+- Empty states with the paw mark — partially done on `/home`, not elsewhere
