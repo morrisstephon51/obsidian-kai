@@ -46,7 +46,7 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 
 | What | Where |
 |---|---|
-| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel project `forming-paws`, branch `main`, auto-deploys on push. Marketing page *and* sign-in on `/`, plus dashboard, browse, matches, chat, admin. Migrations at **0021** |
+| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel project `forming-paws`, branch `main`, auto-deploys on push. Marketing page *and* sign-in on `/`, plus member home, browse, matches, chat, settings, admin. Migrations at **0021** live; **0022 written but not applied** |
 | Fallback URL | [forming-paws.vercel.app](https://forming-paws.vercel.app) — the same deployment |
 | Retired | GitHub Pages / the `gh-pages` branch. No longer served by anything |
 | Carried over | `/admin.html` and `/app.html` still served from `public/` — still vanilla JS hitting Supabase directly. Known debt |

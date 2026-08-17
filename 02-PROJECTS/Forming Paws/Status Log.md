@@ -10,6 +10,32 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-17 — Brand *system*, member home at /home, and account settings
+Requested directly by Stefan: "we need to create a landing/home page for forming paws as well as a settings page." Spec at `docs/superpowers/specs/2026-08-17-brand-home-settings-design.md`, decomposed into three increments so the only DB-touching work lands last.
+
+**Why a brand system when the brand was "applied" the day before:** `bf2b233` swapped `bg-gray-900` → `bg-brand` in 22 files. It left **111 other gray classes**, no shared header, `logo.svg` unused outside the favicon, and `body` never picking up Fraunces/Nunito at all. There was nothing to *swap to*. Increment 1 supplies it.
+
+- **[PR #44](https://github.com/morrisstephon51/forming-paws/pull/44)** — `.fp-btn` / `.fp-card` / `.fp-band` / `.fp-link` / `.fp-badge` in `@layer components`; `components/Logo.tsx` (paw mark inline); `components/SiteHeader.tsx` in public + member variants; `lib/nav.ts` as testable data; landing, footer and sticky bar rebranded. Rebranding a page is now a class swap, not a redesign.
+- **[PR #45](https://github.com/morrisstephon51/forming-paws/pull/45)** — `/home` replaces `/dashboard` (307 redirect, `/home.html` repointed); `lib/home/nextAction.ts` picks one next action as a pure function; **111 gray classes across 24 files → zero**; `/settings` with profile, location, email, notifications, danger zone; `/account/reactivate`.
+
+**Deletion is deactivate-then-purge, and that's the whole point.** `messages.sender_owner_id` is `on delete cascade` (0020), so a hard delete erases the messages that are the *evidence in an open harassment report*. Someone reported for bad behaviour could delete their account and wipe the record. Migration 0022's purge skips anyone whose dog is in a match named by an open/reviewing report — **both parties**, since a purging reporter leaves the admin reviewing a one-sided thread.
+
+**Three findings worth keeping:**
+1. `deactivated_at` **cannot** be protected by an RLS policy. `USING` sees the old row, `WITH CHECK` the new one, and neither can reference the other — "this column is unchanged" is not expressible. Column-level `GRANT` instead. My own spec said RLS; it was wrong.
+2. `dogs_browsable` deliberately does **not** filter deactivated owners. It also resolves dog *names* for `/matches`, `/matches/[id]` and the admin queue — filtering it would blank those names in every existing conversation. Fifth instance of this repo's recurring bug family.
+3. `/dogs/[id]` first got a plain `select deactivated_at from owners where id = <other owner>` — which under `owners_select_own` returns nothing, so the check would have read null and concluded "active" for every dog on the site. Now `owner_is_active()`, security definer, boolean-only. Caught before commit.
+
+**Also found: real schema drift.** `owners.email` exists in production with no migration, and the live `handle_new_user()` writes it while committed `0001` doesn't — replaying the repo into an empty DB produced a different schema than live. Reconciled in 0022, same as 0015 did for `waitlist`.
+
+Notification toggles store real preferences and say plainly that nothing sends email yet.
+
+Verified: tsc clean · 128 unit tests · eslint clean · `next build` clean · live routing confirmed (`/dashboard`→`/home` 307, `/home.html`→`/home` 307, `/home`→`/login` 307 signed out, `/` 200) · compiled CSS confirms `.fp-btn` = `rgb(47 107 92)`.
+
+⚠️ **Two things need Stefan's hand** — both blocked by the permission classifier, correctly:
+- **Migration 0022 is not applied.** `/settings` and `/account/reactivate` will error until it runs.
+- **PRs #44 and #45 are unmerged.** #45 is stacked on #44.
+Then run `supabase/tests/0022_deactivation_assertions.sql` (asserts in a transaction that rolls back).
+
 ## 2026-08-17 — Weekly promo reel + email Routine established
 - New automated Routine: every **Monday 9am Chicago**, Claude drafts a reel-style promotional script (hook/beats/CTA, on-screen text + voiceover separated), a 5-8 shot shot-list, and the email copy that carries it to existing subscribers (members + waitlist) — retention/re-engagement framing, not cold-lead acquisition
 - Output saved to `02-PROJECTS/Forming Paws/Content/promo-reel-YYYY-MM-DD.md` each week, committed to the vault
