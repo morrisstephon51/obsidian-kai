@@ -53,19 +53,19 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 
 Legacy `/join.html`, `/login.html`, `/home.html`, `/confirm.html` all 307 to their app equivalents, so printed flyers and QR codes keep working.
 
-## Routes
+## Routes — all live, verified 2026-08-17
 
-**Live now** (verified 2026-08-17): `/` · `/signup` · `/login` · `/dashboard` · `/browse` · `/matches` · `/matches/[id]` · `/dogs/new` · `/dogs/[id]` · `/account/password` · `/app` · `/faq` · `/contact` · `/privacy` · `/terms` · `/admin/review-queue` · `/admin/reports` · `/admin/messages`
+`/` · `/signup` · `/login` · `/browse` · `/matches` · `/matches/[id]` · `/dogs/new` · `/dogs/[id]` · `/account/password` · `/app` · `/faq` · `/contact` · `/privacy` · `/terms` · `/admin/review-queue` · `/admin/reports` · `/admin/messages`
 
-**Built but not merged** — PRs [#44](https://github.com/morrisstephon51/forming-paws/pull/44) and [#45](https://github.com/morrisstephon51/forming-paws/pull/45); these 404 on production today:
+Added 2026-08-17 (PRs [#44](https://github.com/morrisstephon51/forming-paws/pull/44) + [#45](https://github.com/morrisstephon51/forming-paws/pull/45), migration 0022):
 
 | Route | What it is |
 |---|---|
-| `/home` | Member home — one "next action", your dogs, location. Replaces `/dashboard`, which then 307s here |
+| `/home` | Member home — one "next action", your dogs, location. **Replaced `/dashboard`**, which now 307s here |
 | `/settings` | Profile, location, email, notifications, sign out, delete account |
 | `/account/reactivate` | Restore an account inside the 30-day deletion window |
 
-`/settings` and `/account/reactivate` also need **migration 0022 applied**, or they render and then error on columns that do not exist yet. See [[Status Log]] 2026-08-17.
+See [[Status Log]] 2026-08-17.
 
 Domain: no purchase — `formingpaws.org` was available at $8.49/yr and declined. TLS is Let's Encrypt, issued 2026-08-11; Vercel did **not** auto-issue it, it needed `vercel certs issue`.
 
