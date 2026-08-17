@@ -44,20 +44,34 @@ The live static site ([theplugai.xyz](https://theplugai.xyz)) lets someone sign 
 
 Each gets its own spec → plan → build cycle. Nothing is built ahead of its slice.
 
-### Slice A — Ship & harden `← STARTING NOW`
-Deploy to `app.theplugai.xyz` and clear the error backlog. Nothing else ships until this does.
+### Slice A — Ship & harden ✅ **DONE 2026-08-11**
+Deployed to **`theplugai.xyz`** — the apex, not the subdomain. Error backlog cleared, ESLint restored, CI added.
 
-### Slice C — Growth & legal
-SEO, Open Graph, `robots.txt`, sitemap, privacy policy, terms. ~1 session. **Sequenced second because grant applications can't point at a site with no privacy policy.**
+### Slice C — Growth & legal ✅ **DONE 2026-08-11**
+SEO, Open Graph, `robots.txt`, sitemap, privacy policy, terms. Merged in PR #23.
 
-### Slice B — Real in-app chat
-The homepage promises "in-app chat"; the demo fakes it with canned replies. A mutual match currently leads nowhere. Messages table + match-scoped RLS + Supabase Realtime + UI. Multi-session.
+### Slice B — Real in-app chat ✅ **DONE 2026-08-11**
+Messages table, match-scoped RLS, unread counts, block, report, admin moderation queue. PRs #24–28. Migration 0021 fixed a moderation path that 404'd silently.
 
-### Slice D — Photo gallery & profile polish
+### Slice D — Photo gallery & profile polish ⬜ next
 Multiple photos, primary-photo selection, richer dog detail page.
 
-### Slice E — Vet referral network + education hub
+### Slice E — Vet referral network + education hub ⬜
 The "Next" and "Later" items on the public roadmap. **Last because it's gated on real vet partners existing**, not on code.
+
+---
+
+## Added 2026-08-17 — brand system, member home, settings
+
+Not in the original five slices; requested directly by Stefan ("we need a landing/home page as well as a settings page"). Three increments, spec at `docs/superpowers/specs/2026-08-17-brand-home-settings-design.md`.
+
+| # | Scope | State |
+|---|---|---|
+| 1 | `fp-*` component classes, `Logo`, shared `SiteHeader`, landing rebrand | PR #44 — open |
+| 2 | Member home at `/home`, brand across all remaining pages | PR #45 — open |
+| 3 | `/settings`, deactivate-then-purge deletion, `/account/reactivate` | PR #45 — open, **migration 0022 not yet applied** |
+
+The brand work exists because `bf2b233` swapped `bg-gray-900` → `bg-brand` in 22 files but left 111 other gray classes, no shared header, and `logo.svg` unused outside the favicon. Increment 1 supplies the system that swap was reaching for.
 
 ## Error backlog found in the 2026-08-09 audit
 
