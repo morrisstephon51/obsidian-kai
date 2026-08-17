@@ -49,33 +49,24 @@ last-audit: 2026-08-11
 
 ### App routes
 
-**Live in production right now** (re-verified 2026-08-17):
+**All live in production** — PRs #44 and #45 merged 2026-08-17, migration 0022 applied the same day. Every route below re-verified against production on 2026-08-17.
 
 | Public | Members only | Admin |
 |---|---|---|
-| `/` — landing, marketing **and sign-in** | `/dashboard` | `/admin/review-queue` — health docs |
+| `/` — landing, marketing **and sign-in** | `/home` — member home ⭐ | `/admin/review-queue` — health docs |
 | `/signup` · `/login` | `/browse` · `/matches` | `/admin/reports` — reported conversations |
 | `/app` · `/faq` · `/contact` | `/matches/[id]` — conversation | `/admin/messages` — contact inbox |
 | `/privacy` · `/terms` | `/dogs/new` · `/dogs/[id]` | |
-| `/robots.txt` · `/sitemap.xml` | `/account/password` | |
+| `/robots.txt` · `/sitemap.xml` | `/settings` — profile, email, notifications, delete | |
+| | `/account/password` · `/account/reactivate` | |
 
-**Pending on branches, NOT live** — PRs [#44](https://github.com/morrisstephon51/forming-paws/pull/44) and [#45](https://github.com/morrisstephon51/forming-paws/pull/45) are unmerged, so these 404 on production today (checked 2026-08-17):
-
-| Route | Becomes |
-|---|---|
-| `/home` | The member home. Replaces `/dashboard`, which will 307 here |
-| `/settings` | Profile, location, email, notifications, sign out, delete account |
-| `/account/reactivate` | Restore an account inside the 30-day deletion window |
-
-`/settings` and `/account/reactivate` additionally need **migration 0022 applied** — they read columns that do not exist in production yet. Merging the PRs without the migration gets you a page that renders and then errors.
+`/dashboard` is **retired** — it 307s to `/home`. Signed-out requests to `/home`, `/settings` and `/account/reactivate` all 307 to `/login`, as they should.
 
 ### Legacy URLs — all still work
 
-Printed on flyers and in QR codes, so they are kept alive as 307s:
+Printed on flyers and in QR codes, so they are kept alive as 307s (all re-checked 2026-08-17):
 
-`/index.html` → `/` · `/join.html` → `/signup` · `/login.html` → `/login` · `/home.html` → `/dashboard` · `/confirm.html?token_hash=…` → `/auth/confirm` *(query preserved)*
-
-After #45 merges, `/home.html` and `/dashboard` both point at `/home` instead.
+`/index.html` → `/` · `/join.html` → `/signup` · `/login.html` → `/login` · `/home.html` → **`/home`** · `/dashboard` → **`/home`** · `/confirm.html?token_hash=…` → `/auth/confirm` *(query preserved)*
 
 Still served as real files from `public/`: [/admin.html](https://theplugai.xyz/admin.html) (member roster + waitlist + CSV export) and [/app.html](https://theplugai.xyz/app.html) (sample-data preview). **Both are still the old vanilla-JS pages talking to Supabase directly** — known debt, not yet ported into the app.
 
