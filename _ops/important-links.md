@@ -62,6 +62,8 @@ last-audit: 2026-08-11
 
 `/dashboard` is **retired** — it 307s to `/home`. Signed-out requests to `/home`, `/settings` and `/account/reactivate` all 307 to `/login`, as they should.
 
+**Pending in [PR #46](https://github.com/morrisstephon51/forming-paws/pull/46)** — built and verified locally, **not live until merged**: `/about`, `/education`, `/education/health-documents`, `/education/questions-for-your-vet`, `/education/meeting-safely`, `/vets`, `/donate`. Also in that PR: a header on all 21 pages (15 had none), a rotating member tab bar, and `/` redirecting signed-in members to `/home`.
+
 ### Legacy URLs — all still work
 
 Printed on flyers and in QR codes, so they are kept alive as 307s (all re-checked 2026-08-17):
