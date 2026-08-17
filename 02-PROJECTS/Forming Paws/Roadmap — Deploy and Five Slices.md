@@ -67,9 +67,9 @@ Not in the original five slices; requested directly by Stefan ("we need a landin
 
 | # | Scope | State |
 |---|---|---|
-| 1 | `fp-*` component classes, `Logo`, shared `SiteHeader`, landing rebrand | PR #44 — open |
-| 2 | Member home at `/home`, brand across all remaining pages | PR #45 — open |
-| 3 | `/settings`, deactivate-then-purge deletion, `/account/reactivate` | PR #45 — open, **migration 0022 not yet applied** |
+| 1 | `fp-*` component classes, `Logo`, shared `SiteHeader`, landing rebrand | ✅ PR #44 merged `8214bc9` |
+| 2 | Member home at `/home`, brand across all remaining pages | ✅ PR #45 merged `65b01d1` |
+| 3 | `/settings`, deactivate-then-purge deletion, `/account/reactivate` | ✅ PR #45 + migration 0022 applied, 7/7 assertions pass |
 
 The brand work exists because `bf2b233` swapped `bg-gray-900` → `bg-brand` in 22 files but left 111 other gray classes, no shared header, and `logo.svg` unused outside the favicon. Increment 1 supplies the system that swap was reaching for.
 
