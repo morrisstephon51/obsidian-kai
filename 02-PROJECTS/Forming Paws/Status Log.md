@@ -10,6 +10,12 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-17 — Brand applied app-wide + design handoff complete
+- **All 26 primary actions across the live app** (landing CTAs, log in/sign up, add-a-dog, browse filters, chat send, contact, waitlist, admin) moved from stock gray to brand green; unread badges terracotta; semantic colors untouched. Commit bf2b233, pure class swaps, zero behavior changes
+- Quality gate on every step: tsc clean · 86/86 unit tests · next build clean · verified on production after deploy (6 brand-green actions on landing, Fraunces headings, /logo.svg favicon)
+- **[[Design Handoff — Brand System]] written and indexed** for the main-branch session: token table, five usage rules, current state, three suggested next increments (browse-card hover language, ivory marketing grounds, paw-mark empty states)
+- The platform is now visually one product from flyer QR → landing → dashboard → chat
+
 ## 2026-08-16 — Full UX button audit of production + fixes shipped
 Every interactive element walked with a real browser against live theplugai.xyz, two test members, full loop: signup → login → add dog → browse → interest → mutual match → chat both directions. Test data created and fully cleaned up after (sibling session's e2e fixtures untouched).
 
