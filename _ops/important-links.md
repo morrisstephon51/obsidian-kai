@@ -49,22 +49,33 @@ last-audit: 2026-08-11
 
 ### App routes
 
+**Live in production right now** (re-verified 2026-08-17):
+
 | Public | Members only | Admin |
 |---|---|---|
-| `/` — landing, marketing **and sign-in** | `/home` — member home ⭐ | `/admin/review-queue` — health docs |
+| `/` — landing, marketing **and sign-in** | `/dashboard` | `/admin/review-queue` — health docs |
 | `/signup` · `/login` | `/browse` · `/matches` | `/admin/reports` — reported conversations |
 | `/app` · `/faq` · `/contact` | `/matches/[id]` — conversation | `/admin/messages` — contact inbox |
 | `/privacy` · `/terms` | `/dogs/new` · `/dogs/[id]` | |
-| `/robots.txt` · `/sitemap.xml` | `/settings` — profile, email, notifications, delete | |
-| | `/account/password` · `/account/reactivate` | |
+| `/robots.txt` · `/sitemap.xml` | `/account/password` | |
 
-**Changed 2026-08-17:** `/dashboard` is retired. The member home is **`/home`**, and `/dashboard` 307s to it. `/settings` and `/account/reactivate` are new and **will error until migration 0022 is applied** — they read columns that do not exist in production yet.
+**Pending on branches, NOT live** — PRs [#44](https://github.com/morrisstephon51/forming-paws/pull/44) and [#45](https://github.com/morrisstephon51/forming-paws/pull/45) are unmerged, so these 404 on production today (checked 2026-08-17):
+
+| Route | Becomes |
+|---|---|
+| `/home` | The member home. Replaces `/dashboard`, which will 307 here |
+| `/settings` | Profile, location, email, notifications, sign out, delete account |
+| `/account/reactivate` | Restore an account inside the 30-day deletion window |
+
+`/settings` and `/account/reactivate` additionally need **migration 0022 applied** — they read columns that do not exist in production yet. Merging the PRs without the migration gets you a page that renders and then errors.
 
 ### Legacy URLs — all still work
 
 Printed on flyers and in QR codes, so they are kept alive as 307s:
 
-`/index.html` → `/` · `/join.html` → `/signup` · `/login.html` → `/login` · `/home.html` → **`/home`** · `/dashboard` → **`/home`** · `/confirm.html?token_hash=…` → `/auth/confirm` *(query preserved)*
+`/index.html` → `/` · `/join.html` → `/signup` · `/login.html` → `/login` · `/home.html` → `/dashboard` · `/confirm.html?token_hash=…` → `/auth/confirm` *(query preserved)*
+
+After #45 merges, `/home.html` and `/dashboard` both point at `/home` instead.
 
 Still served as real files from `public/`: [/admin.html](https://theplugai.xyz/admin.html) (member roster + waitlist + CSV export) and [/app.html](https://theplugai.xyz/app.html) (sample-data preview). **Both are still the old vanilla-JS pages talking to Supabase directly** — known debt, not yet ported into the app.
 
