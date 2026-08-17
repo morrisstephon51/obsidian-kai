@@ -26,8 +26,8 @@ The live static site ([theplugai.xyz](https://theplugai.xyz)) lets someone sign 
 | Decision | Choice |
 |---|---|
 | Close the gap by | Deploying the Next.js app — the static site stops being the product |
-| Domain | **`app.theplugai.xyz`** — subdomain, no purchase. (`formingpaws.org` was available at $8.49/yr; declined for now) |
-| Marketing site | Stays at `theplugai.xyz` root on GitHub Pages; CTAs repoint to the app |
+| Domain | ~~`app.theplugai.xyz`~~ — **reversed 2026-08-10**. Everything serves from `theplugai.xyz` itself; Stefan's call was "no new links or sites". (`formingpaws.org` was available at $8.49/yr; declined) |
+| Marketing site | ~~GitHub Pages~~ — **retired 2026-08-11**. The marketing page is now `app/page.tsx` in the Next app, sign-in panel included |
 | Sequence | **Ship-first**: A → C → B → D → E |
 
 ## Verified state as of 2026-08-09
