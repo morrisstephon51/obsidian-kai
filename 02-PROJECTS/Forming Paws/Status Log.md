@@ -31,10 +31,11 @@ Notification toggles store real preferences and say plainly that nothing sends e
 
 Verified: tsc clean · 128 unit tests · eslint clean · `next build` clean · live routing confirmed (`/dashboard`→`/home` 307, `/home.html`→`/home` 307, `/home`→`/login` 307 signed out, `/` 200) · compiled CSS confirms `.fp-btn` = `rgb(47 107 92)`.
 
-⚠️ **Two things need Stefan's hand** — both blocked by the permission classifier, correctly:
-- **Migration 0022 is not applied.** `/settings` and `/account/reactivate` will error until it runs.
-- **PRs #44 and #45 are unmerged.** #45 is stacked on #44.
-Then run `supabase/tests/0022_deactivation_assertions.sql` (asserts in a transaction that rolls back).
+✅ **All shipped the same day.** Migration 0022 applied by Stefan, then PR #44 (`8214bc9`) and PR #45 (`65b01d1`) merged. Production verified: `/` 200 · `/home` 307→`/login` · `/dashboard` 307→`/home` · `/settings` 307→`/login` · `/home.html` 307→`/home` · `/join.html` 307→`/signup` · `/admin.html` 200. Live CSS confirms `.fp-btn` = `rgb(47 107 92)`; **zero gray classes remain on the landing page**; all six section anchors intact.
+
+All seven assertions from `supabase/tests/0022_deactivation_assertions.sql` were run against production inside rolled-back transactions and **pass** — including the three-state browse check and the guard proving `dogs_browsable` keeps resolving names while deactivated. 12 owners / 16 dogs untouched, no fixtures left behind.
+
+**Squash-merge gotcha, for next time:** #44 was squash-merged while #45 was stacked on it. `delete_branch_on_merge` is **false** on this repo, so GitHub did *not* retarget #45 — it silently kept pointing at `design/brand-home-settings`, and merging it would have merged into that dead branch instead of `main`. Fixed with `git rebase --onto origin/main design/brand-home-settings`, which replayed only the three Increment 2/3 commits and dropped the six duplicated ones with zero conflicts. **If a PR is stacked, either merge the base with a merge commit, or expect to rebase and retarget the child.**
 
 ## 2026-08-17 — Weekly promo reel + email Routine established
 - New automated Routine: every **Monday 9am Chicago**, Claude drafts a reel-style promotional script (hook/beats/CTA, on-screen text + voiceover separated), a 5-8 shot shot-list, and the email copy that carries it to existing subscribers (members + waitlist) — retention/re-engagement framing, not cold-lead acquisition
