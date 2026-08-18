@@ -62,7 +62,9 @@ last-audit: 2026-08-11
 
 `/dashboard` is **retired** — it 307s to `/home`. Signed-out requests to `/home`, `/settings` and `/account/reactivate` all 307 to `/login`, as they should.
 
-**Pending in [PR #46](https://github.com/morrisstephon51/forming-paws/pull/46)** — built and verified locally, **not live until merged**: `/about`, `/education`, `/education/health-documents`, `/education/questions-for-your-vet`, `/education/meeting-safely`, `/vets`, `/donate`. Also in that PR: a header on all 21 pages (15 had none), a rotating member tab bar, and `/` redirecting signed-in members to `/home`.
+**All live as of 2026-08-18** — `/about`, `/education` (+3 guides), `/vets`, `/donate`, a header on all 21 pages, the rotating member tab bar, and `/` redirecting signed-in members to `/home`. PR #46 merged.
+
+**Open and green, awaiting merge:** [#38](https://github.com/morrisstephon51/forming-paws/pull/38) dog birth date · [#39](https://github.com/morrisstephon51/forming-paws/pull/39) health-doc date · [#40](https://github.com/morrisstephon51/forming-paws/pull/40) browse max-age · [#41](https://github.com/morrisstephon51/forming-paws/pull/41) upload redirect host · [#43](https://github.com/morrisstephon51/forming-paws/pull/43) robots `/settings` · [#48](https://github.com/morrisstephon51/forming-paws/pull/48) public nav anchors · [#49](https://github.com/morrisstephon51/forming-paws/pull/49) **security: anon-readable moderation RPCs + sharp CVEs**. Migration **0025** applies after #49.
 
 ### Legacy URLs — all still work
 
