@@ -10,6 +10,24 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-18 — Audit: CI red herring, an anon-readable moderation leak, and a near-miss regression
+
+Stefan reported "all jobs failed". **Production was never broken** — all 8 routes correct, `main` CI green. The failure was PR #47 alone: a duplicate of #48 that changed `lib/nav.ts` without updating the two tests asserting the old value. Closed #47; #48 is the complete fix.
+
+**The regression #47/#48 were fixing is mine.** Making the header global in #46 left the public nav on bare `#how`/`#health`, which resolve against the *current* path — so on `/about` they pointed at `/about#how`, a section that only exists on the homepage. Dead links on every non-home page. #48 also fixes `isActive`, whose `href.startsWith('#')` guard stops matching once hrefs become `/#how`.
+
+**Worse finding — anon could enumerate who is under moderation review.** Migration 0022 revoked EXECUTE on `purge_deactivated_accounts()` but not the two helpers it calls, so PostgREST published them to `anon`. Verified live with only the public key: `owners_locked_by_open_report` and `owners_due_for_purge` both returned HTTP 200, while `purge_deactivated_accounts` correctly returned 401. They returned `[]` only because there were zero open reports at that moment — the first harassment report would have made both parties' owner ids anonymously readable. Fixed in **migration 0025** (renumbered from 0023, which was already taken), [PR #49](https://github.com/morrisstephon51/forming-paws/pull/49).
+
+**4 high-severity libvips CVEs in `sharp`**, on the member-upload path — `lib/image.ts` runs sharp over uploaded bytes. Upgraded 0.33.5 → 0.35.3 and verified resize, EXIF-stripping and garbage-rejection all still work. Remaining `npm audit` highs are all inside `next@15.5.20`'s own tree; clearing them needs Next 16. **Deferred by decision** — the app imports `next/image` nowhere, so Next's bundled sharp is never invoked on a request.
+
+**Near-miss caught in the PR backlog.** PR #40 restates `browse_dogs()` via CREATE OR REPLACE and, having been branched before 0022, omitted `and o.deactivated_at is null`. Merging it would have silently un-hidden every deleted member's dogs in browse — migration succeeds, tests pass, no error anywhere. Filter restored on that branch.
+
+**Migration numbering is colliding.** `main` already carries two `0022_*` files. Mine was renumbered to 0025 to avoid a third collision at 0023. Worth a convention before it bites.
+
+Backlog re-verified — all five bugs still real on current main, all now CLEAN: #38 dog birth date (UTC-midnight), #39 health-doc date (same class), #40 browse max-age off-by-a-year, #41 upload redirect uses `request.url` (internal Vercel host behind the proxy), #43 robots doesn't disallow `/settings`.
+
+**Open and green: #38 #39 #40 #41 #43 #48 #49.** Migration 0025 to be applied after #49 merges.
+
 ## 2026-08-17 — Site-wide navigation, rotating member tab bar, four new pages
 Stefan: "more pages… a navigation bar at the top… buttons along the bottom on a rotating carousel… every page should have a home button." [PR #46](https://github.com/morrisstephon51/forming-paws/pull/46) — **open, needs merge**.
 
