@@ -44,7 +44,7 @@ last-audit: 2026-08-11
 | **Live app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel, `main` branch, auto-deploys on push |
 | Vercel project | `forming-paws` · `prj_AM2ABCIeP8UtZ8DDFEVVo7FF7kW3` · team `cam6stef` |
 | Repo | [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws) (public) |
-| Database | Supabase `wyzcnkdonbdykidmcxvx` — migrations at **0021** |
+| Database | Supabase `wyzcnkdonbdykidmcxvx` — migrations at **0023** live (0025 pending) |
 | TLS | Let's Encrypt, issued 2026-08-11. Vercel did **not** auto-issue it; it needed `vercel certs issue` |
 
 ### App routes
