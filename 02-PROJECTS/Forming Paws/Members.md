@@ -15,7 +15,7 @@ Contains real member email addresses. This vault syncs to a private repo —
 keep it that way.
 
 <!-- members:start -->
-_6 members · 1 needs a nudge · synced 2026-08-17_
+_6 members · 1 needs a nudge · synced 2026-08-18_
 
 | Joined | Name | Email | Status | Dogs | Last seen |
 | --- | --- | --- | --- | --- | --- |
