@@ -10,6 +10,29 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-26 — Admin console: the AI Organization's first real dispatch, and three bugs that return empty sets
+
+`feat/admin-console-role-system` is **9 commits / 18 files / +2,109 −44** ahead of `main`. Not merged. **Migrations 0026 and 0027 are written but NOT applied** — the Supabase MCP write tools are refused by the Claude Code permission classifier, so this needs a permission change from Stefan, not a code fix. Full write-up: [[Admin Console — Build Log]].
+
+**"Build an admin panel" was already half-done.** `app/admin/` had three working sections — messages, review-queue, reports — each gated on `is_admin` at both page and server action. The real job was a role model and a shell, not a panel.
+
+**Kairo produced a genuinely useful spec and three wrong table names.** First governed dispatch in 14 days (trace `20260826T003353762Z-kairo-uja`, architect/Sonnet, $0.259306 measured, $0 real on the Max subscription). The architecture reasoning was sound; the bindings referenced `review_queue_items` and a `conversations` table, **neither of which exists**. `builder`'s own system prompt explains why: *"You cannot read or write files."* **A Kairo spec is a draft to verify, not a spec to implement.** The `--timeout` override was load-bearing — `architecture` inherits the 30s default and the previous such dispatch (Aug 11) timed out there.
+
+**Three defects, all with the same signature.** A permission bug does not throw, it returns an empty set:
+
+1. 11 RLS policies gate on admin status. Freezing `owners.is_admin` without redefining `public.is_admin()` would have given a console-granted admin a **fully rendered, entirely empty console**. Fixed by pointing `is_admin()` at `has_role('admin')` — one swap, 9 policies migrated, no policy edits.
+2. `user_roles_select_own` would have filtered `/admin/users`' nested embed to the admin's own row, rendering all 36 members as "no roles."
+3. The fix for #2 declared a policy calling `is_admin()` before `is_admin()` was redefined — worked here by accident, broken on a fresh database.
+
+**`gokai status` reports success it never measures.** Proven, not argued: with `HOME` pointed at an empty directory it prints byte-identical output and exits 0. Its numbers are also wrong, and how they are wrong found a second bug — every count is exactly **half** the file contents, because the Phase-3 monitors re-scan the whole ledger each run and re-append with no idempotency key (13 rows Aug 11, the same 13 again Aug 23). **Anything reading these ledgers must count `distinct task_id`, not lines.**
+
+**⚠️ `spatial_ref_sys` is writable by anon and cannot be fixed from our role.** Confirmed live — a read with the anon key returns rows, and the ACL grants anon `arwd` on all 8,500 projection rows that `browse_dogs` distance search depends on. The table is owned by `supabase_admin` via the `postgis` extension, so **neither `ALTER TABLE … ENABLE RLS` nor `REVOKE` works as `postgres`** — Supabase's own suggested fix would error. Needs Supabase support. Measured counterpart: RLS *is* working everywhere it matters — anon reads return 0 rows from owners, dogs, messages, match_reports, contact_messages, health_documents and waitlist.
+
+**Selling puppies is deferred, deliberately.** No payment library is installed, live-animal sales are a restricted category for most processors, and Illinois PA 102-0227 constrains retail pet sales. Scoped to listings-with-inquiries first, no checkout.
+
+Verification: `tsc` clean · `eslint` clean · **200/200 unit tests** · `next build` green with all five `/admin/*` routes.
+
+
 ## 2026-08-21 — Visual refresh: five PRs, two audits, and a security assumption that expired
 
 `feat/visual-refresh` is **16 commits / 85 files / +2,664 −274** ahead of `main` and has not been merged — Stefan reviews first. Preview runs locally; the Vercel branch previews are behind deployment protection and only load for a signed-in account.
