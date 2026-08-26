@@ -10,6 +10,41 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-08-21 — Visual refresh: five PRs, two audits, and a security assumption that expired
+
+`feat/visual-refresh` is **16 commits / 85 files / +2,664 −274** ahead of `main` and has not been merged — Stefan reviews first. Preview runs locally; the Vercel branch previews are behind deployment protection and only load for a signed-in account.
+
+**⚠️ A deferral in the 2026-08-18 entry below is now invalid.** That entry deferred the Next.js `sharp` CVEs on the reasoning that *"the app imports `next/image` nowhere, so Next's bundled sharp is never invoked on a request."* This refresh uses `next/image` in `HeroScene`, `BannerArt` and `guideArt`, and turns the optimizer **on** (`images.formats: ['image/avif','image/webp']`). Verified live: `/_next/image` returns `200 image/avif`, so sharp 0.35.3 runs per request. `npm audit` still reports **4 highs** — `next`, `sharp`, `postcss`, `nanoid` — and `sharp`'s are fresh libvips CVEs (33327/33328/35590/35591), not the ones fixed in #49. The Next.js set includes *DoS in the Image Optimization API using SVGs*, which is now a reachable path. **Not fixed here; needs a decision.**
+
+**2026-08-22 — #59, the landing splash.** Stefan flagged that the mascot was nowhere on the landing page, which was true and which two audits had missed. `/` now opens on a full-viewport splash: Sage popping out from a Z-plane above the meadow, a glass card with the headline, and a scroll cue down to the rest. Also added the **"Log in" link the public nav never had** — without it a splash leaves returning members no way in. `feat/visual-refresh` is now 18 commits ahead of `main`.
+
+### What shipped
+
+| PR | | Cost |
+|---|---|---|
+| #51 | AI imagery on public pages | +24–31 KB/page |
+| #52 | Design system adapted from three refero systems (see below) | +1.2 KB gzip CSS, 0 JS |
+| #53 | Scroll motion — Framer Motion **removed**, not added | +1.03 kB route, 0 shared |
+| #54 | Sage, a six-state mascot | ~0 except `/signup` +1.27 kB |
+| #55 | AVIF (a brief requirement silently unmet) | −21% image bytes |
+| #57 | WebGL hero — **reverses the brief's "no WebGL"**, Stefan's call | +137 KB after load event |
+| #56, #58 | The two audit-fix passes | — |
+
+### Against main
+
+LCP **~320ms → ~56ms** · CLS **0.0035 → 0** · 0 dropped frames at 4× CPU · transfer +225 KB. `main`'s LCP swings 260–472ms because it fetches fonts from Google; self-hosting via `next/font` is most of the win.
+
+### Two audits found 30 defects. Most were mine.
+
+The worst two were both regressions I introduced and neither was visible without measuring:
+
+1. **Content disappeared.** `Reveal` hid sections already on screen at hydration, and the observer's −12% rootMargin then excluded them — so a 1440×900 visitor watched "How Forming Paws works" vanish and not return until they scrolled. Measured 1.00 → 0.00, still 0.00 100 frames later.
+2. **Auth redirects were downgraded.** Adding `loading.tsx` created Suspense boundaries on segments gated by a server-side `redirect()`, so logged-out `/browse` and `/matches` went from `307 → /login` to `200` + a client-side redirect. This broke the presentation-only claim the whole refresh rests on.
+
+Two more worth remembering because the *method* caused them: a heading migration keyed on an exact regex missed 17 `<h2>`s that write `id=` before `className`, **and the grep meant to audit it had the same blind spot** — so the check agreed with the migration instead of testing it. The same mistake recurred with CTA class strings.
+
+See [[Visual Refresh — Build Log]], [[../../04-RESOURCES/Design/Verification Playbook|Verification Playbook]] and [[../../04-RESOURCES/Design/Refero Styles — Design Reference|Refero Styles]].
+
 ## 2026-08-18 — Audit: CI red herring, an anon-readable moderation leak, and a near-miss regression
 
 Stefan reported "all jobs failed". **Production was never broken** — all 8 routes correct, `main` CI green. The failure was PR #47 alone: a duplicate of #48 that changed `lib/nav.ts` without updating the two tests asserting the old value. Closed #47; #48 is the complete fix.

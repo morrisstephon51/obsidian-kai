@@ -15,16 +15,18 @@ Contains real member email addresses. This vault syncs to a private repo —
 keep it that way.
 
 <!-- members:start -->
-_7 members · 2 need a nudge · synced 2026-08-19_
+_9 members · 2 need a nudge · synced 2026-08-25_
 
 | Joined | Name | Email | Status | Dogs | Last seen |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-24 | Ivan Walton Jr. | ivan.walton.1992@gmail.com | ✅ active | 1 | 2026-08-24 |
+| 2026-08-20 | Alexander Torres  | alexcastor56@gmail.com | ✅ active | 1 | 2026-08-20 |
 | 2026-08-19 | Stephon Washington | stephonjwashington27@gmail.com | ⚠️ never confirmed | 0 | — |
 | 2026-08-14 | Torrence Holmes  | mr.debonairs531@gmail.com | ✅ active | 4 | 2026-08-14 |
 | 2026-08-14 | Michael Johnson  | chimes4905@gmail.com | ✅ active | 1 | 2026-08-14 |
 | 2026-08-12 | Trendsetter 💰💰💰💰 | ronaldhenderson639@gmail.com | ⚠️ confirmed, never signed in | 0 | — |
 | 2026-08-06 | Kenneth Vasser | kennethvasser@mail.com | · signed in, no dog yet | 0 | 2026-08-06 |
-| 2026-08-06 | Stephon Morris | morrisstephon51@gmail.com | ✅ active | 1 | 2026-08-17 |
+| 2026-08-06 | Stephon Morris | morrisstephon51@gmail.com | ✅ active | 1 | 2026-08-20 |
 | 2026-08-04 | Terrell Anderson | terrella031@icloud.com | · signed in, no dog yet | 0 | 2026-08-04 |
 <!-- members:end -->
 

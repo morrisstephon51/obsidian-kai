@@ -3,10 +3,10 @@ agent: architect
 role: System Design Supervisor
 mode: "full"
 status: "idle"
-last_run: "2026-08-11T14:51:02.699Z"
+last_run: "2026-08-26T00:36:18.776Z"
 current_task: null
 active_spec: null
-runs_completed: 14
+runs_completed: 15
 last_error: null
 ---
 
@@ -32,20 +32,24 @@ Core question: **"What exactly are we building and why, before a single line of 
 <!-- Architect writes the current design here -->
 
 ## Last Architecture Decision
-*2026-08-11 (full)*
+*2026-08-26 (full)*
 
 ## What We're Building
-A Phase 3 audit infrastructure compliance tracking system that provides a unified control library mapped across multiple regulatory frameworks (SOC 2, ISO 27001, HIPAA, PCI-DSS), automates evidence ingestion from integrated systems, tracks audit findings through remediation closure, and produces auditor-ready posture reports — replacing manual spreadsheet-driven audit preparation with a continuous, real-time compliance posture.
+
+Two layered additions to Forming Paws: (1) a full **Admin Console** that replaces the single `is_admin` boolean with a fine-grained role model (admin / moderator / breeder), adds a nav shell over the existing admin routes, and introduces user management, listing moderation, and an immutable audit log; (2) a **Puppy Listings** surface where users holding the `breeder` role post litters through a draft → pending_review → active lifecycle, public visitors browse and view detail pages, and inquiries are routed into the existing messages/conversations system with a foreign key linking the thread to the originating listing. No payment or checkout logic is in scope.
 
 ---
 
 ## Key Decisions
 
-1. **Unified control library over per-framework silos.** Controls from all frameworks are normalized into a single registry with cross-framework mappings (e.g., SOC 2 CC6.1 ↔ ISO 27001 A.9.4.1). This eliminates duplicate evidence collection and lets a single piece of evidence satisfy controls across frameworks simultaneously. The alternative — per-framework tables — causes exponential evidence overhead as frameworks multiply.
+**1. RBAC via `user_roles` junction table, not an expanded boolean set.**
+Adding `is_moderator`, `is_breeder`, etc. as more booleans repeats the existing mistake and makes policy combinatorics unmanageable. A `roles` + `user_roles` join is slightly more complex to query but gives a single `has_role(name)` SQL function usable everywhere — RLS policies, server-action guards, and nav rendering — and is cleanly extensible. The existing `is_admin` column is backfilled into `user_roles` in migration 0026 and soft-deprecated (dropped in a later cleanup migration not in scope here).
 
-2. **Append-only, hash-chained evidence store.** Evidence records are immutable once ingested; updates create new versions linked to the prior record via SHA-256 hash. This produces a tamper-evident chain required for auditor trust and regulatory defensibility. A mutable store would require expensive reconstruction of "what did we have at audit time."
+**2. Listing inquiries piggyback the existing message system via a `listing_inquiries` bridge table.**
+Building a parallel messaging channel would duplicate auth, notification, and UI code. Instead, `submitInquiry` creates a normal conversation thread and writes one row to `listing_inquiries(listing_id, conversation_id, inquirer_id)`. The existing thread UI gains a listing-context header; the existing `app/admin/messages` surface requires no changes. The bridge table also enforces `UNIQUE(listing_id, inquirer_id)` to prevent duplicate inquiries.
 
-3. **Event-driven ingestion over scheduled polling.** Integrations push evidence via webhooks or stream connectors (not nightly batch jobs). This keeps compliance posture current, enables real-time gap detection, and reduces the 30–90 day "evidence scramble" window before audits. Batch polling is acceptable only as a fallback for systems that cannot push.
+**3. Listing moderation routes into the existing `review-queue` via a discriminated `item_type` column.**
+Rather than a second queue surface, migration 0027 adds `item_type text NOT NULL DEFAULT 'dog'` to whatever `review_queue_items` table exists, so submitted listings appear there automatically. Admin actions (`approveListing`, `rejectListing`) are new server actions that update `listings.status` and write to `audit_log`. This respects the existing moderation workflow the team already owns.
 
 ---
 
@@ -53,86 +57,353 @@ A Phase 3 audit infrastructure compliance tracking system that provides a unifie
 
 ### Data Models / Schema
 
+**Migration 0026 — Role system**
+```sql
+-- Seed roles
+CREATE TABLE roles (
+  id   uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  name text NOT NULL UNIQUE,   -- 'admin' | 'moderator' | 'breeder'
+  created_at timestamptz DEFAULT now()
+);
+INSERT INTO roles(name) VALUES ('admin'),('moderator'),('breeder');
+
+-- Junction
+CREATE TABLE user_roles (
+  user_id    uuid REFERENCES auth.users(id) ON DELETE CASCADE,
+  role_id    uuid REFERENCES roles(id)       ON DELETE CASCADE,
+  granted_by uuid REFERENCES auth.users(id),
+  granted_at timestamptz DEFAULT now(),
+  PRIMARY KEY (user_id, role_id)
+);
+
+-- Backfill
+INSERT INTO user_roles (user_id, role_id, granted_by)
+SELECT p.id, r.id, p.id
+FROM   profiles p
+JOIN   roles r ON r.name = 'admin'
+WHERE  p.is_admin = true
+ON CONFLICT DO NOTHING;
+
+-- Reusable SQL helper (called from RLS + server actions via rpc)
+CREATE OR REPLACE FUNCTION has_role(role_name text)
+RETURNS boolean LANGUAGE sql SECURITY DEFINER STABLE AS $
+  SELECT EXISTS (
+    SELECT 1 FROM user_roles ur
+    JOIN   roles r ON r.id = ur.role_id
+    WHERE  ur.user_id = auth.uid() AND r.name = role_name
+  );
+$;
+
+CREATE OR REPLACE FUNCTION has_any_role(role_names text[])
+RETURNS boolean LANGUAGE sql SECURITY DEFINER STABLE AS $
+  SELECT EXISTS (
+    SELECT 1 FROM user_roles ur
+    JOIN   roles r ON r.id = ur.role_id
+    WHERE  ur.user_id = auth.uid() AND r.name = ANY(role_names)
+  );
+$;
 ```
-Framework       { id, name, version, effective_date }
-Control         { id, framework_id, code, title, description, category, evidence_ttl_days }
-ControlMapping  { id, source_control_id, target_control_id, confidence }  -- cross-framework links
-Evidence        { id, control_ids[], source_system, collected_at, payload_hash,
-                  content_url, status(valid|expired|superseded), prev_evidence_id }
-Assessment      { id, framework_id, start_date, end_date, auditor, status }
-Finding         { id, assessment_id, control_id, severity(crit|high|med|low),
-                  description, evidence_ids[], status(open|in_remediation|closed) }
-Remediation     { id, finding_id, owner, due_date, action_plan, closed_at, evidence_id }
-AuditEvent      { id, actor, action, resource_type, resource_id, timestamp, payload_hash }
+
+**RLS — `user_roles`**
+```sql
+ALTER TABLE user_roles ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "own roles visible"   ON user_roles FOR SELECT USING (user_id = auth.uid() OR has_role('admin'));
+CREATE POLICY "admin grants roles"  ON user_roles FOR INSERT WITH CHECK (has_role('admin'));
+CREATE POLICY "admin revokes roles" ON user_roles FOR DELETE USING  (has_role('admin'));
 ```
 
 ---
 
-### API Contracts
+**Migration 0027 — Audit log + review-queue discriminator**
+```sql
+CREATE TABLE audit_log (
+  id          bigserial PRIMARY KEY,
+  actor_id    uuid REFERENCES auth.users(id),
+  action      text NOT NULL,       -- 'user.ban' | 'listing.approve' | 'role.grant' …
+  target_type text NOT NULL,       -- 'user' | 'dog' | 'listing' | 'report'
+  target_id   text NOT NULL,
+  payload     jsonb,
+  created_at  timestamptz DEFAULT now()
+);
+CREATE INDEX audit_actor_time  ON audit_log(actor_id, created_at DESC);
+CREATE INDEX audit_target      ON audit_log(target_type, target_id, created_at DESC);
 
-| Method | Path | Purpose |
-|--------|------|---------|
-| `GET` | `/controls?framework=&status=` | List controls with current evidence status |
-| `POST` | `/evidence` | Ingest evidence (internal + webhook) |
-| `GET` | `/controls/{id}/evidence` | Evidence chain for a control |
-| `POST` | `/findings` | Create finding from assessment |
-| `PATCH` | `/findings/{id}` | Update finding status |
-| `POST` | `/remediations` | Open remediation ticket |
-| `GET` | `/posture?framework=&as_of=` | Point-in-time compliance posture report |
-| `GET` | `/gaps` | Controls missing valid evidence |
-| `POST` | `/integrations/{source}/ingest` | Signed webhook receiver per source |
+-- SECURITY DEFINER writer; server actions call this, not direct INSERT
+CREATE OR REPLACE FUNCTION log_audit_event(
+  p_action text, p_target_type text, p_target_id text, p_payload jsonb DEFAULT '{}'
+) RETURNS void LANGUAGE sql SECURITY DEFINER AS $
+  INSERT INTO audit_log(actor_id, action, target_type, target_id, payload)
+  VALUES (auth.uid(), p_action, p_target_type, p_target_id, p_payload);
+$;
 
-All mutating endpoints emit to the `AuditEvent` ledger. `GET /posture` accepts an `as_of` timestamp to reconstruct historical state.
+ALTER TABLE audit_log ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "admins/mods read log" ON audit_log FOR SELECT
+  USING (has_any_role(ARRAY['admin','moderator']));
+-- No INSERT/UPDATE/DELETE policies — only log_audit_event() can write.
+
+-- Discriminate existing review queue (add column; default keeps existing rows valid)
+ALTER TABLE review_queue_items
+  ADD COLUMN IF NOT EXISTS item_type text NOT NULL DEFAULT 'dog'
+    CHECK (item_type IN ('dog','listing'));
+```
+
+---
+
+**Migration 0028 — Breeder profiles + listings**
+```sql
+CREATE TABLE breeder_profiles (
+  id           uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  display_name text NOT NULL,
+  bio          text,
+  location     text,
+  website_url  text,
+  akc_number   text,
+  verified     boolean DEFAULT false,
+  created_at   timestamptz DEFAULT now(),
+  updated_at   timestamptz DEFAULT now()
+);
+
+CREATE TABLE listings (
+  id               uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  breeder_id       uuid NOT NULL REFERENCES breeder_profiles(id) ON DELETE CASCADE,
+  title            text NOT NULL,
+  breed            text NOT NULL,
+  description      text,
+  litter_date      date,
+  available_date   date,
+  num_available    integer DEFAULT 0,
+  price_range_min  integer,          -- cents; null = contact for price
+  price_range_max  integer,
+  location         text,
+  status           text NOT NULL DEFAULT 'draft'
+    CHECK (status IN ('draft','pending_review','active','closed','rejected')),
+  moderation_note  text,             -- shown to breeder on rejection
+  expires_at       timestamptz,
+  created_at       timestamptz DEFAULT now(),
+  updated_at       timestamptz DEFAULT now()
+);
+
+CREATE TABLE listing_images (
+  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  listing_id    uuid NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+  storage_path  text NOT NULL,
+  display_order integer DEFAULT 0,
+  alt_text      text,
+  created_at    timestamptz DEFAULT now()
+);
+
+-- Bridge to existing messages system
+CREATE TABLE listing_inquiries (
+  id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  listing_id      uuid NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+  conversation_id uuid NOT NULL,     -- FK to existing conversations table
+  inquirer_id     uuid NOT NULL REFERENCES auth.users(id),
+  created_at      timestamptz DEFAULT now(),
+  UNIQUE(listing_id, inquirer_id)    -- one inquiry per user per listing
+);
+
+CREATE INDEX listings_status_breed   ON listings(status, breed);
+CREATE INDEX listings_breeder        ON listings(breeder_id, status);
+CREATE INDEX listing_inquiries_conv  ON listing_inquiries(conversation_id);
+```
+
+**RLS — listings**
+```sql
+ALTER TABLE listings ENABLE ROW LEVEL SECURITY;
+
+-- Public reads only active listings
+CREATE POLICY "public active listings" ON listings FOR SELECT
+  USING (status = 'active');
+
+-- Owner sees all their own listings
+CREATE POLICY "breeder owns listing" ON listings FOR SELECT
+  USING (breeder_id = auth.uid());
+
+-- Admin/mod see everything
+CREATE POLICY "staff see all listings" ON listings FOR SELECT
+  USING (has_any_role(ARRAY['admin','moderator']));
+
+-- Breeder inserts own listings only
+CREATE POLICY "breeder inserts" ON listings FOR INSERT
+  WITH CHECK (has_role('breeder') AND breeder_id = auth.uid());
+
+-- Breeder edits only draft/rejected listings
+CREATE POLICY "breeder edits draft" ON listings FOR UPDATE
+  USING (breeder_id = auth.uid() AND status IN ('draft','rejected'))
+  WITH CHECK (status IN ('draft','pending_review'));  -- can submit but not self-approve
+
+-- Admin/mod full update (approve, reject, close)
+CREATE POLICY "staff update listing" ON listings FOR UPDATE
+  USING (has_any_role(ARRAY['admin','moderator']));
+
+ALTER TABLE breeder_profiles ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "public reads profiles"   ON breeder_profiles FOR SELECT USING (true);
+CREATE POLICY "breeder owns profile"    ON breeder_profiles FOR INSERT WITH CHECK (auth.uid() = id AND has_role('breeder'));
+CREATE POLICY "breeder updates profile" ON breeder_profiles FOR UPDATE USING (auth.uid() = id OR has_role('admin'));
+
+ALTER TABLE listing_inquiries ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "inquirer sees own"  ON listing_inquiries FOR SELECT USING (inquirer_id = auth.uid());
+CREATE POLICY "breeder sees inquiries" ON listing_inquiries FOR SELECT
+  USING (EXISTS (SELECT 1 FROM listings l WHERE l.id = listing_id AND l.breeder_id = auth.uid()));
+CREATE POLICY "staff sees inquiries" ON listing_inquiries FOR SELECT USING (has_any_role(ARRAY['admin','moderator']));
+CREATE POLICY "authenticated inquires" ON listing_inquiries FOR INSERT
+  WITH CHECK (auth.uid() = inquirer_id AND EXISTS (
+    SELECT 1 FROM listings WHERE id = listing_id AND status = 'active'
+  ));
+```
+
+---
+
+### API Contracts (Server Actions)
+
+All server actions follow this pattern:
+1. Create authenticated Supabase server client (`createServerClient`)
+2. Call `requireRole(supabase, ...allowedRoles)` — redirects or throws on failure
+3. Validate input (zod schema)
+4. Perform DB mutation
+5. Call `supabase.rpc('log_audit_event', ...)` for any state-changing admin action
+6. `revalidatePath` / `redirect`
+
+**`lib/auth/require-role.ts`** — shared guard
+```typescript
+export async function requireRole(
+  supabase: SupabaseClient,
+  ...roles: Role[]
+): Promise<User> {
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) redirect('/login');
+  const { data: ok } = await supabase.rpc('has_any_role', { role_names: roles });
+  if (!ok) notFound();       // 404 > 403 to avoid enumeration
+  return user;
+}
+```
+
+**Admin actions** (`app/admin/_actions/`):
+
+| Action | Required role | Audit event | Notes |
+|---|---|---|---|
+| `grantRole(userId, role)` | admin | `role.grant` | Cannot grant 'admin' to self |
+| `revokeRole(userId, role)` | admin | `role.revoke` | |
+| `banUser(userId, reason)` | admin, moderator | `user.ban` | Sets `profiles.banned_at` |
+| `unbanUser(userId)` | admin | `user.unban` | |
+| `approveListing(listingId)` | admin, moderator | `listing.approve` | status → active; adds to review_queue resolution |
+| `rejectListing(listingId, note)` | admin, moderator | `listing.reject` | status → rejected; note written to breeder |
+| `closeListing(listingId)` | admin | `listing.close` | |
+| `deleteContent(type, id)` | admin | `content.delete` | Soft-delete or hard depending on type |
+
+**Breeder actions** (`app/account/listings/_actions/`):
+
+| Action | Guard | Transitions |
+|---|---|---|
+| `createListing(data)` | has_role('breeder') | → draft |
+| `updateListing(id, data)` | owns listing AND status ∈ {draft, rejected} | stays in current status |
+| `submitListing(id)` | owns listing AND status = 'draft' | → pending_review; inserts review_queue_items row |
+| `closeListing(id)` | owns listing | → closed |
+
+**Inquiry action** (`app/listings/_actions/`):
+
+| Action | Guard | Side effects |
+|---|---|---|
+| `submitInquiry(listingId, message)` | authenticated; listing is active; no existing inquiry | Creates conversation + first message (existing system); inserts `listing_inquiries` row |
 
 ---
 
 ### Components
 
-| Component | Responsibility | Interface |
-|-----------|---------------|-----------|
-| **Control Registry** | Single source of truth for all controls and cross-framework mappings; seeds from OSCAL-formatted framework definitions | REST + internal SDK |
-| **Evidence Collector** | Receives push events (webhooks) and pulls from integrations; validates signatures, hashes payload, writes to evidence store | Webhook endpoints + polling scheduler |
-| **Compliance Engine** | Evaluates which controls have valid, non-expired evidence; computes per-control and aggregate posture scores; triggers gap alerts | Internal service, called by Posture API |
-| **Finding & Remediation Tracker** | Manages finding lifecycle from open → remediation → closed; links remediation evidence back to finding | REST API + event hooks |
-| **Reporting Service** | Generates point-in-time posture snapshots, auditor-export packages (PDF/CSV), and continuous dashboards | REST + scheduled jobs |
-| **Integration Hub** | Adapters per source (AWS CloudTrail, Datadog, Jira, GitHub, Okta); normalizes events into canonical evidence format | Plugin architecture; per-adapter config |
-| **Notification Service** | Emits alerts on expiring evidence, missed remediation deadlines, new findings, posture drops below threshold | Email / Slack / webhook |
-| **Audit Ledger** | Append-only `AuditEvent` log; all writes are hash-chained; exposed read-only to auditors | Write-through from all components |
+| Name | Responsibility | Interface |
+|---|---|---|
+| `AdminLayout` | Shell: sidebar nav, breadcrumb bar, top bar with user chip | `children: ReactNode` |
+| `AdminNav` | Role-aware link list; hides User Management for moderators | Reads roles from layout context |
+| `RoleManager` | Assign/revoke roles for a user; optimistic UI | `userId, currentRoles` |
+| `AuditLogTable` | Paginated, filterable log; actor avatar + action badge | `filters?: AuditFilters` |
+| `ListingForm` | Create/edit form for breeders; multi-image upload | `listing?: Listing; action: ServerAction` |
+| `ListingCard` | Public-facing card; breed, location, available date, breeder name | `listing: Listing` |
+| `ListingGrid` | Filtered/sorted browseable grid | `initialListings; searchParams` |
+| `ListingStatusBadge` | Color-coded status chip | `status: ListingStatus` |
+| `InquiryButton` | Auth-gate; disabled + tooltip if already inquired | `listingId; hasExistingInquiry` |
+| `ModerationPanel` | Approve/reject controls + note field for pending listings | `listing: Listing` (admin view) |
+| `BreederProfileCard` | Public breeder bio, verified badge, listings count | `profile: BreederProfile` |
+
+---
+
+### Route Map
+
+```
+app/
+├── admin/
+│   ├── layout.tsx                  ← requireRole('admin','moderator') gate
+│   ├── page.tsx                    ← dashboard stats
+│   ├── users/
+│   │   ├── page.tsx                ← paginated user table
+│   │   └── [id]/
+│   │       ├── page.tsx            ← profile + role manager
+│   │       └── activity/page.tsx   ← audit log filtered to user
+│   ├── dogs/
+│   │   ├── page.tsx
+│   │   └── [id]/page.tsx
+│   ├── listings/
+│   │   ├── page.tsx                ← all listings any status (mod view)
+│   │   └── [id]/page.tsx           ← detail + ModerationPanel
+│   ├── audit-log/
+│   │   └── page.tsx
+│   ├── messages/          ← EXISTING (unchanged)
+│   ├── review-queue/      ← EXISTING + listing items via item_type
+│   └── reports/           ← EXISTING
+│
+├── listings/
+│   ├── page.tsx                    ← public browse (active only)
+│   └── [id]/
+│       ├── page.tsx                ← detail + InquiryButton
+│       └── inquire/page.tsx        ← auth-required inquiry form
+│
+├── breeders/
+│   ├── page.tsx                    ← public breeder directory
+│   └── [id]/page.tsx              ← breeder profile + their active listings
+│
+└── account/
+    └── listings/
+        ├── page.tsx                ← breeder dashboard (own listings)
+        ├── new/page.tsx
+        └── [id]/
+            ├── page.tsx            ← edit (draft/rejected only)
+            └── inquiries/page.tsx  ← view inquiry threads for this listing
+```
 
 ---
 
 ### Integration Points
 
-- **SIEM / Observability**: Datadog, Splunk — push log/metric evidence for operational controls  
-- **Cloud Providers**: AWS CloudTrail, Azure Monitor, GCP Audit Logs — IAM, config, and access evidence  
-- **Identity Provider**: Okta, Azure AD — access review and MFA evidence  
-- **Ticketing**: Jira, ServiceNow — remediation lifecycle sync; bi-directional status updates  
-- **SCM**: GitHub/GitLab — code review, branch protection, and SAST scan evidence  
-- **OSCAL**: Import/export control catalogs and assessment results in NIST OSCAL JSON format  
+| System | How it connects |
+|---|---|
+| Existing `messages` | `submitInquiry` creates a conversation row + first message via existing action, then inserts `listing_inquiries` bridge row. Thread UI reads `listing_inquiries` to show listing context header. |
+| Existing `review-queue` | `submitListing` inserts a `review_queue_items` row with `item_type='listing'`. Existing queue page gains a type filter; `approveListing`/`rejectListing` resolve the queue item. |
+| Existing `reports` | Reports table gets `target_type='listing'` added to its CHECK constraint if one exists. No other changes. |
+| Supabase Storage | New bucket `listing-images` (public read). Image upload in `ListingForm` uses `supabase.storage.from('listing-images').upload(...)`. RLS on bucket: insert if `has_role('breeder')`, delete if owner or `has_role('admin')`. |
+| Supabase Auth | No changes. `requireRole` reads from `user_roles` joined through `auth.uid()`. |
 
 ---
 
 ## Risks
 
 | # | Risk | Mitigation |
-|---|------|-----------|
-| 1 | **Evidence staleness invalidates posture at audit time** — TTL misconfiguration leaves expired evidence counted as valid | Enforce TTL checks at read time in Compliance Engine, not write time; alert at 80% of TTL, not expiry |
-| 2 | **Framework regulatory change breaks existing control mappings** — new ISO 27001:2022 controls silently leave gaps | Version-lock `Framework` records; require explicit migration job when a new version is ingested; diff report surfaced to compliance owner |
-| 3 | **Integration webhook authentication failure causes evidence gaps** — misconfigured HMAC secrets let events silently drop | Dead-letter queue for rejected webhooks with ops alert; nightly gap report compares expected evidence frequency to actual receipts |
+|---|---|---|
+| 1 | Existing admin pages break after role migration because they still read `is_admin` | Keep `is_admin` column populated (backfill keeps it in sync) and update `requireRole` util before touching any page; deprecate column after all call sites are confirmed migrated. |
+| 2 | Dual-SELECT pattern (page gate + server action gate) drifts — a new action skips `requireRole` | Enforce via a shared module: every `app/admin/_actions/*.ts` file imports from the same `requireRole` path; add an ESLint custom rule or CI grep to flag admin action files that don't import it. |
+| 3 | `listing_inquiries.UNIQUE(listing_id, inquirer_id)` constraint raises uncaught error if user double-submits | Wrap `submitInquiry` in a `try/catch` for `unique_violation` PostgreSQL code `23505`; return early with the existing `conversation_id` rather than an error. |
 
 ---
 
 ## Done When
 
-1. **Posture API returns a framework-complete compliance score** — given SOC 2 Type II, `GET /posture?framework=soc2` returns per-control evidence status and an aggregate % with zero manual data entry.
-2. **End-to-end evidence chain is auditor-verifiable** — an auditor can call `GET /controls/{id}/evidence` and cryptographically verify the hash chain from current evidence back to initial ingestion, with no gaps.
-3. **Finding lifecycle closes with linked evidence** — a finding opened from an assessment can be transitioned to `closed` only when a `Remediation` record with a valid `evidence_id` is attached, enforced by the API.
+1. All users who had `is_admin = true` before 0026 can still access every existing `/admin/*` route and perform every existing admin server action without modification to those routes.
+2. A user with the `breeder` role can create a listing, submit it for review, have an admin approve it, and a second authenticated user can send an inquiry that appears as a conversation thread in the existing messages UI for both parties.
+3. Every call to `approveListing`, `rejectListing`, `banUser`, `grantRole`, or `revokeRole` produces a row in `audit_log` visible to admins at `/admin/audit-log`, containing the actor, action name, target type/id, and timestamp.
 
 ---
 
 ## Handoff
 
-**Build the Control Registry first.** Define the `Framework`, `Control`, and `ControlMapping` schema, seed it with SOC 2 Type II controls from the AICPA trust services criteria (in OSCAL JSON), and expose `GET /controls?framework=soc2` returning controls with a placeholder `evidence_status: no_evidence`. Everything else — evidence collection, posture scoring, findings — is blocked on a populated, queryable control library.
+**Build migration 0026 first** — the `roles` table, `user_roles` junction, `has_role` / `has_any_role` SQL functions, the `is_admin` backfill, and the `requireRole` TypeScript utility that replaces the current boolean check. Gate every subsequent task on this: the breeder role, listing RLS policies, and all admin action guards all call `has_role`/`requireRole`. Nothing else can safely start until the auth model is on the new foundation.
 
 <!-- KAIRO-LEDGER -->
 ## Cost Ledger (appended by Kairo — supervisors must not rewrite below this line)
@@ -144,3 +415,4 @@ All mutating endpoints emit to the `AuditEvent` ledger. `GET /posture` accepts a
 [2026-08-11T14:29:03.067Z] design via claude-sonnet-4-6: SUCCESS cost_usd=0.282689 billing=subscription measured=true trace=20260811T142903067Z-kairo-6qj
 [2026-08-11T14:49:50.527Z] design via claude-sonnet-4-6: SUCCESS cost_usd=0.116213 billing=subscription measured=true trace=20260811T144950527Z-kairo-c35
 [2026-08-11T14:49:50.516Z] architecture via claude-sonnet-4-6: TIMEOUT cost_usd=0.000000 billing=subscription measured=false trace=20260811T144950516Z-kairo-c2t
+[2026-08-26T00:33:53.762Z] architecture via claude-sonnet-4-6: SUCCESS cost_usd=0.259306 billing=subscription measured=true trace=20260826T003353762Z-kairo-uja

@@ -21,3 +21,9 @@ Source material, reference docs, and learning resources that support your work.
 3. **When needed:** Reference from `02-PROJECTS/` or daily notes
 
 See [[../Areas/Learning/index|Learning Area]] for active learning resources.
+
+## Design
+- [[Design/Refero Styles — Design Reference|Refero Styles]]
+  - Standing design-system reference for all website/app builds (styles.refero.design)
+- [[Design/Verification Playbook|Verification Playbook]]
+  - How to verify a visual refresh empirically — distilled from 30 real defects
