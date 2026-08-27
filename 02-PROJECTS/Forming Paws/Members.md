@@ -15,10 +15,11 @@ Contains real member email addresses. This vault syncs to a private repo —
 keep it that way.
 
 <!-- members:start -->
-_9 members · 2 need a nudge · synced 2026-08-26_
+_10 members · 2 need a nudge · synced 2026-08-27_
 
 | Joined | Name | Email | Status | Dogs | Last seen |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-26 | Skud Mack | mackskud@gmail.com | · signed in, no dog yet | 0 | 2026-08-26 |
 | 2026-08-24 | Ivan Walton Jr. | ivan.walton.1992@gmail.com | ✅ active | 1 | 2026-08-24 |
 | 2026-08-20 | Alexander Torres  | alexcastor56@gmail.com | ✅ active | 1 | 2026-08-20 |
 | 2026-08-19 | Stephon Washington | stephonjwashington27@gmail.com | ⚠️ never confirmed | 0 | — |
