@@ -13,7 +13,8 @@ Source material, reference docs, and learning resources that support your work.
   - Used by: [[../02-PROJECTS/The Plug AI Progress|The Plug AI]], [[../_ops/grant-research-log|Grant Research]]
 
 ## Guides & Reference
-- [Will add as resources emerge]
+- [[External Repos & Tools|External Repos & Tools]]
+  - Registry of third-party open-source repos to reach for on relevant builds (video, browser automation, avatars, generation, finance)
 
 ## How to Use
 1. **When writing:** Check [[Prompts/index|Prompts]] for templates

@@ -87,6 +87,7 @@ tags: []
 - 03-NOTES/index.md — 📖 Personal Notes (2026-07-11)
 
 ## 04-RESOURCES/
+- 04-RESOURCES/External Repos & Tools.md — External Repos & Tools (2026-08-28)
 - 04-RESOURCES/Prompts/claude_code_prompt_content_automation.md — -- (2026-07-03)
 - 04-RESOURCES/Prompts/complete_and_deploy_prompt.md — CONTENT AUTOMATION MACHINE — COMPLETION + DEPLOYMENT PROMPT (2026-07-03)
 - 04-RESOURCES/Prompts/content_automation_machine_prompt.md — CONTENT AUTOMATION MACHINE — CLAUDE CODE MASTER PROMPT (2026-07-03)
