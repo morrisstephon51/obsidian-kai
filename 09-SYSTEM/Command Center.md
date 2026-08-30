@@ -199,6 +199,7 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
 5. **Delete dead Vercel project `content-machine-migh`.** ~~`community-intake-routing`~~ — **correction 2026-08-30:** this contradicted the live-sites table above, which already marks that project 'do not delete' as of the 2026-08-11 correction. It's a real signup page, not dead weight; dropped from this list.
 6. **Commit `~/ai-consulting-business/`** — built 2026-07-17, still zero commits.
 7. **Plug AI visual redesign** — palette still doesn't match brand.
+8. **Repoint the `agent-world` Vercel project's Git integration from `studious-umbrella` to `mundi-agent-dashboard`.** Found 2026-08-30 — see the section above. theplugai.live has been serving a 2026-07-05 build for almost two months; two merged PRs (#7, #8) are sitting on `main` with no way to reach production until this is fixed.
 
 ---
 
