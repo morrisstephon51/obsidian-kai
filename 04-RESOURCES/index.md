@@ -23,6 +23,12 @@ Source material, reference docs, and learning resources that support your work.
 
 See [[../Areas/Learning/index|Learning Area]] for active learning resources.
 
+## Skills & Tools
+- [[Skills/ultimate-scroll-craft|Ultimate: Scroll-Craft]]
+  - Premium scroll-driven website builder (invoke with `/ultimate`)
+  - 8 page grammars, craft standards, auto-verification
+  - Use for: landing pages, product experiences, brand journeys
+
 ## Design
 - [[Design/Refero Styles — Design Reference|Refero Styles]]
   - Standing design-system reference for all website/app builds (styles.refero.design)
