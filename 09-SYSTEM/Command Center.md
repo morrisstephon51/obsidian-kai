@@ -141,6 +141,16 @@ Passive `.claude/agents/*.md` definitions, invoked directly or dispatched via MU
 
 ---
 
+## 🛠️ Claude Code Skills
+
+**→ [[07-AI/Skills Inventory|Skills Inventory — 12 personal skills]]**
+
+On-demand instruction packs at `~/.claude/skills/`, loaded when a task matches or invoked as `/<name>`. Not agents — nothing here runs on its own.
+
+Newest: **`/ultimate`** — scroll-driven landing pages, vendored 2026-08-30 from [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) (MIT). Preflight passes on this Mac; generated imagery needs a kie.ai key, bring-your-own-assets builds need nothing.
+
+---
+
 ## 🌐 Domains
 
 Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_ops/important-links|Important Links]]
@@ -193,6 +203,7 @@ Full detail: [[09-SYSTEM/domains-and-email|Domains & Email]] · live status: [[_
 - [[_ops/important-links|Important Links Registry]]
 - [[07-AI/Agent Registry - Master Status|Agent Registry — Master Status]]
 - [[07-AI/Subagent Registry|Subagent Registry]]
+- [[07-AI/Skills Inventory|Skills Inventory — 12 personal skills]]
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
 - [[09-SYSTEM/domains-and-email|Domains & Email]]
 - [[02-PROJECTS/Forming Paws/project-overview|Forming Paws]]

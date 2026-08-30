@@ -17,6 +17,7 @@ Master index for all AI-related work, agents, and generated outputs.
 |---|---|---|
 | **[[agents/index\|Agent Fleet]]** | 8 supervisor agents + command center | `agents/` |
 | **[[Registry\|Agent Registry]]** | Master status & configuration | `Registry.md` |
+| **[[Skills Inventory\|Skills Inventory]]** | 12 personal Claude Code skills, incl. `/ultimate` | `~/.claude/skills/` |
 | **Content Pipeline** | LinkedIn posts, marketing outputs | `agents/content-pipeline/` |
 | **Copilot Prompts** | Custom Claude prompts for this vault | `copilot-custom-prompts/` |
 | **Chatroom Feed** | Real-time task router output | `chatroom/feed.md` |
