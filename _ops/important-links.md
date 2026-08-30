@@ -2,8 +2,8 @@
 type: operations
 category: links-registry
 created: 2026-06-13
-last-checked: 2026-08-11
-last-audit: 2026-08-11
+last-checked: 2026-08-30
+last-audit: 2026-08-30
 ---
 
 # Important Links Registry
@@ -97,7 +97,7 @@ Still served as real files from `public/`: [/admin.html](https://theplugai.xyz/a
 
 ## ⚠️ Open problems
 
-**`theplugai.online` — HTTPS still broken.** Unchanged since 2026-08-06. DNS is correct (GitHub Pages `185.199.108–111.153`), `http://` returns 200, `https://` fails TLS outright — no certificate issued. **Fix:** repo `command-center-redirect` → Settings → Pages → re-save the custom domain to retrigger issuance, then tick *Enforce HTTPS*. Until then don't share the `https://` form; it looks dead to anyone who clicks it.
+**`theplugai.online` — HTTPS still broken.** Unchanged since 2026-08-06. DNS is correct (GitHub Pages `185.199.108–111.153`), `http://` returns 200, `https://` fails TLS outright — the cert served is GitHub's own `*.github.io` wildcard, not one issued for this domain. **Root cause confirmed 2026-08-30** via `gh api repos/morrisstephon51/command-center-redirect/pages`: `https_enforced: false`, `protected_domain_state: null` — Pages never actually attempted issuance despite the CNAME being set since 2026-08-01. **Fix:** repo `command-center-redirect` → Settings → Pages → clear the custom domain field, save, re-enter `theplugai.online`, save again to retrigger issuance, then tick *Enforce HTTPS* once the cert appears (can take up to 24h). Attempted via `gh api -X PUT .../pages -f cname=...` on 2026-08-30 but auto mode declined it as a live-domain config change — needs a human-run session. Until then don't share the `https://` form; it looks dead to anyone who clicks it.
 
 **Leaked-password protection is off** in Supabase. One toggle, Authentication settings.
 
@@ -200,6 +200,8 @@ Three entries from 2026-08-06 were **wrong**, not stale. Recording them so the s
 3. **`~/ai-consulting-business/` was logged "not on GitHub at all, zero commits."** The repo exists, is private, and was last pushed 2026-08-06.
 
 Also corrected: `mundi-agent-dashboard` is **private**, and the vault remote `obsidian-kai` does **not** sync "every few minutes" — `git-obsi-sync` only commits while Obsidian is running.
+
+**2026-08-30 follow-up.** PR #23 (the fix for the `ai-video-reel-generator` 307, referenced in item 1 above and in [[09-SYSTEM/Command Center|Command Center]]) was checked directly via `gh pr view` — it is **merged**, not merely open and reviewed as both docs previously implied. And [[09-SYSTEM/Command Center|Command Center]]'s Open Items list had drifted into contradicting item 2 above: it told Stefan to delete `community-intake-routing` as dead weight, four sections after its own table said the opposite. Fixed there; flagging here so the same drift doesn't get re-introduced from this file.
 
 ---
 
