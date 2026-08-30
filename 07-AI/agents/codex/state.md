@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-08-30T14:15:00Z"
 current_task: "Run 244: Live gh scan = frontier UNCHANGED (4 open issues: psychic-bassoon #21 [fixed by PR#22], forming-paws #8 [IL legal/founder], ai-video-reel #5 [Supabase infra/founder], skills-intro #1 [git tutorial]) -- only #21 code-actionable and already fixed. Rather than re-verify, did two things. (1) MERGE-READINESS: polled all 5 open psychic-bassoon PRs live -- ALL now CLEAN/MERGEABLE: #1, #11 (grant tracker, previously UNKNOWN -> now CLEAN), #19 (security headers, previously CONFLICTING -> my run243 conflict-fix HELD -> CLEAN), #20 (Next.js CVE bump), #22 (date fix +tests). Frontier fully unblocked on the CODE side; only founder merges remain, and founder can clear all 5 with zero conflicts. (2) FRESH SECURITY/CORRECTNESS AUDIT of the entire request surface on main (cloned depth-1): 5 API routes (contact/subscribe/workshop-request/health) all have input validation, length caps, non-blocking email, service-role DB writes -- clean; lib/mailer.ts HTML-injection escaping (escapeHtml over all 6 fields incl mailto attr) confirmed present from prior run; app/learn/[slug] dynamic route uses notFound() + generateStaticParams correctly; sitemap/robots/lib/site canonical (NEXT_PUBLIC_APP_URL->SITE_URL fallback) consistent; lesson internal-link integrity verified programmatically: 10 unique lesson slugs, 20 nextStep refs, 0 dead links, 0 duplicate slugs. No new defect found -- repo is genuinely hardened by runs 204-243. Net: confirmed the code frontier is 100% clean and fully mergeable; bottleneck remains solely the founder merge backlog. [runs 204-243 in .remember/ + prior state.md]."
 runs_completed: 244
