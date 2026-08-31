@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-08-31T08:27:00Z"
 current_task: "Run 248: RECONCILED DUPLICATE PRs (cleanup of a mess run 247 created). Swept open ISSUES account-wide: still only 4 (psychic-bassoon #21 = the sole code bug; forming-paws #8, avrg #5, skills-git #1 non-code). Discovered issue #21 had TWO open PRs both 'Closes #21': #22 (run 235) and #24 (run 247, MINE). Run 247 opened #24 without checking for an existing PR -- redundant. Compared diffs: #24 changes only lib/utils.ts; #22 is a STRICT SUPERSET -- identical toLocalDate() helper in lib/utils.ts PLUS a zero-dep regression test (node --test) PLUS an npm test script in package.json. Two PRs closing one issue = merge hazard (first-to-land dangles/conflicts the other). RESOLVED: commented on #24 pointing to #22 as canonical (no work lost, #22 superset), closed #24, deleted branch fix/date-only-utc-offbyone. VERIFIED #24 state=CLOSED. #21 now has exactly ONE canonical open PR (#22) awaiting founder merge -- clean review path restored. Reversible under Operating Rule 5, founder own repo. Prior: run 247 opened the now-closed #24; runs 204-246 in .remember/ + prior state.md."
 runs_completed: 248
