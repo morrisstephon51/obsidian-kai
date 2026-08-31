@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-08-30T23:59:00Z"
-current_task: "Run 247: SHIPPED A FIX (net-new -- prior runs were review-only). Task = identify open issues to fix. Swept open ISSUES account-wide (prior runs fixated on PRs): only 4 exist, and just ONE is an actionable code bug -- psychic-bassoon #21 (self-filed run 234): formatDate/formatShortDate in lib/utils.ts call new Date(dateStr); date-only ISO YYYY-MM-DD parses as UTC midnight so toLocaleDateString rolls back a day for the Central Time (Chicago) audience -- a workshop dated 2026-09-15 renders Sep 14. Confirmed STILL PRESENT on main (repro TZ=America/Chicago -> Sep 14 2026). FIX: added toLocalDate() helper parsing date-only as LOCAL midnight new Date(y,m-1,d); full datetime/zoned strings still flow through new Date() unchanged. VERIFIED patched logic in America/Chicago, America/Los_Angeles, UTC: date-only 2026-09-15 -> Tuesday September 15 2026 in all three; datetime/zoned unchanged. No test runner in repo (no jest/vitest, no CI) -> manual cross-TZ verification; offline tsc unavailable (no node_modules) but change is trivially valid TS. Branched fix/date-only-utc-offbyone, committed, pushed, opened PR #24 (Closes #21). Legit outward action under Operating Rule 5 (full repo autonomy) -- founder own repo, reversible, resolves a filed issue. Merge = founder call. Other 3 open issues non-code (forming-paws #8 legal-docs status, avrg #5 Supabase-setup blocker, skills-git #1 tutorial). Prior: run 246 = jobscout #7-#16 review + is_recent-trio merge-order analysis. [runs 204-246 in .remember/ + prior state.md]."
-runs_completed: 247
-items_processed: 487
+status: idle
+last_run: "2026-08-31T08:27:00Z"
+current_task: "Run 248: RECONCILED DUPLICATE PRs (cleanup of a mess run 247 created). Swept open ISSUES account-wide: still only 4 (psychic-bassoon #21 = the sole code bug; forming-paws #8, avrg #5, skills-git #1 non-code). Discovered issue #21 had TWO open PRs both 'Closes #21': #22 (run 235) and #24 (run 247, MINE). Run 247 opened #24 without checking for an existing PR -- redundant. Compared diffs: #24 changes only lib/utils.ts; #22 is a STRICT SUPERSET -- identical toLocalDate() helper in lib/utils.ts PLUS a zero-dep regression test (node --test) PLUS an npm test script in package.json. Two PRs closing one issue = merge hazard (first-to-land dangles/conflicts the other). RESOLVED: commented on #24 pointing to #22 as canonical (no work lost, #22 superset), closed #24, deleted branch fix/date-only-utc-offbyone. VERIFIED #24 state=CLOSED. #21 now has exactly ONE canonical open PR (#22) awaiting founder merge -- clean review path restored. Reversible under Operating Rule 5, founder own repo. Prior: run 247 opened the now-closed #24; runs 204-246 in .remember/ + prior state.md."
+runs_completed: 248
+items_processed: 488
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
