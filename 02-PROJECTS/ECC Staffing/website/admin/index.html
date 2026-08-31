@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owner Console | Elite Career Compass</title>
+<meta name="description" content="Management console for the eccstaffing.com owner: platform sign-ins and site tasks.">
+<link rel="canonical" href="https://eccstaffing.com/admin/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="utility"><div class="wrap">
+  <a href="tel:+17374233422">(737) 423-3422</a>
+  <a href="mailto:info@eccstaffing.com">info@eccstaffing.com</a>
+</div></div>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">
+    <img src="/assets/img/logo.png" alt="Elite Career Compass logo — a compass rose and quill over an open book" width="46" height="57">
+    <span class="bn">Elite Career Compass<span class="bt">Staffing &amp; Recruiting</span></span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav class="primary" id="primary-nav" aria-label="Primary">
+    <div><a class="top" href="/clients/">For Clients</a><div class="menu">
+      <a href="/clients/">Clients Overview</a>
+      <p class="mh">Services</p>
+      <a href="/clients/contract-staffing/">Contract Staffing</a>
+      <a href="/clients/contract-to-hire/">Contract-to-Hire</a>
+      <a href="/clients/direct-placement/">Direct Placement</a>
+      <p class="mh">Industries</p>
+      <a href="/industries/healthcare/">Healthcare</a>
+      <a href="/industries/administrative/">Administrative</a>
+      <a href="/industries/light-industrial/">Light Industrial</a>
+      <a href="/industries/finance-accounting/">Finance &amp; Accounting</a>
+      <a href="/industries/technology/">Technology</a>
+    </div></div>
+    <div><a class="top" href="/applicants/">For Applicants</a><div class="menu">
+      <a href="/applicants/">Applicants Overview</a>
+      <a href="/applicants/how-it-works/">How It Works</a>
+      <a href="/applicants/open-roles/">Open Roles</a>
+      <a href="/apply/">Apply Now</a>
+    </div></div>
+    <div><a class="top" href="/insights/">Insights</a></div>
+    <div><a class="top" href="/about/">About ECC</a></div>
+  </nav>
+  <div class="hdr-ctas">
+    <a class="btn dark" href="/request-talent/">Request Talent</a>
+    <a class="btn outline" href="/applicants/open-roles/">Find Your Next Role</a>
+  </div>
+</div></header>
+<main id="main">
+
+<section class="hero short"><div class="wrap">
+  <p class="eyebrow">Owner console</p>
+  <h1>Manage eccstaffing.com</h1>
+  <p class="lead">Every platform that runs this site, in one place. Each link below goes to that platform&rsquo;s own secure sign-in &mdash; this page stores no passwords and grants no access by itself.</p>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="note"><strong>Keep this page private.</strong> It isn&rsquo;t linked from the site and is excluded from search engines, but the real protection is at your host: enable password protection (Deployment Protection on Vercel, password protection on Netlify, or HTTP basic auth) for <code>/admin/</code> &mdash; or simply bookmark the platform links and delete this page.</div>
+
+  <h2 style="margin-top:34px">Sign in to your platforms</h2>
+  <div class="grid c3" style="margin-top:20px">
+    <a class="card linked" href="https://mail.google.com/" rel="noopener"><h3 class="mt0">Lead inbox</h3><p>Every form on the site delivers to <strong>info@eccstaffing.com</strong>. Sign in to your mail provider to triage <code>[Talent Request]</code>, <code>[Application]</code>, and <code>[Contact]</code> messages.</p><span class="more">Open webmail &rarr;</span></a>
+    <a class="card linked" href="https://formsubmit.co/" rel="noopener"><h3 class="mt0">Form delivery</h3><p>FormSubmit relays the three site forms to your inbox. Manage or reset the connection for info@eccstaffing.com here.</p><span class="more">Open FormSubmit &rarr;</span></a>
+    <a class="card linked" href="https://vercel.com/login" rel="noopener"><h3 class="mt0">Hosting &amp; deploys</h3><p>Where the site is served. Redeploy, view traffic, set the custom domain, and turn on password protection for this page.</p><span class="more">Open hosting dashboard &rarr;</span></a>
+    <a class="card linked" href="https://search.google.com/search-console" rel="noopener"><h3 class="mt0">Google Search Console</h3><p>How the site appears in Google. Submit <code>/sitemap.xml</code> once after launch, then watch queries and indexing here.</p><span class="more">Open Search Console &rarr;</span></a>
+    <a class="card linked" href="https://business.google.com/" rel="noopener"><h3 class="mt0">Google Business Profile</h3><p>Your listing on Google Maps and local search &mdash; and where client reviews accumulate. Decide the Texas/Austin geo question here.</p><span class="more">Open Business Profile &rarr;</span></a>
+    <a class="card linked" href="https://www.linkedin.com/company/setup/new/" rel="noopener"><h3 class="mt0">LinkedIn</h3><p>The channel where staffing clients actually look. Keep the company page pointing at eccstaffing.com.</p><span class="more">Open LinkedIn &rarr;</span></a>
+  </div>
+
+  <h2 style="margin-top:44px">Manage the site</h2>
+  <div class="split" style="margin-top:20px">
+    <div>
+      <h3>Routine tasks</h3>
+      <ul class="checklist">
+        <li><strong>Test the forms monthly:</strong> submit <a href="/request-talent/">Request Talent</a>, <a href="/apply/">Apply</a>, and <a href="/contact/">Contact</a>, and confirm each lands at info@eccstaffing.com</li>
+        <li><strong>Answer within the promise:</strong> the site tells clients one business day and candidates one business day &mdash; the inbox SLA is the brand</li>
+        <li><strong>Add real proof as it arrives:</strong> approved testimonials go into <a href="/about/results/">Results</a> (template is in the page&rsquo;s HTML comments)</li>
+        <li><strong>Post roles when public:</strong> real openings replace the &ldquo;apply anyway&rdquo; state on <a href="/applicants/open-roles/">Open Roles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Editing pages</h3>
+      <p>The site is plain HTML &mdash; any developer (or Claude) can edit it. Source of truth lives in the project repo; <code>_build/generate.py</code> regenerates every page and <code>_build/audit.py</code> re-verifies links, email routing, and accessibility before deploying.</p>
+      <h3>Launch checklist</h3>
+      <ul class="checklist">
+        <li>info@eccstaffing.com mailbox live and monitored</li>
+        <li>One test submission per form; FormSubmit activation email clicked</li>
+        <li>Custom domain pointed at the host; HTTPS on</li>
+        <li>Privacy &amp; Terms drafts reviewed by counsel</li>
+        <li>Sitemap submitted in Search Console</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div>
+      <div class="fbrand"><img src="/assets/img/logo.png" alt="" width="44" height="55"><span>Elite Career Compass&nbsp;LLC</span></div>
+      <p>Guiding talent. Empowering employers. A people-first staffing and recruiting partner built on direction, knowledge, and trust.</p>
+    </div>
+    <div><h4>For Clients</h4><ul>
+      <li><a href="/clients/contract-staffing/">Contract Staffing</a></li>
+      <li><a href="/clients/contract-to-hire/">Contract-to-Hire</a></li>
+      <li><a href="/clients/direct-placement/">Direct Placement</a></li>
+      <li><a href="/request-talent/">Request Talent</a></li>
+    </ul></div>
+    <div><h4>For Applicants</h4><ul>
+      <li><a href="/applicants/how-it-works/">How It Works</a></li>
+      <li><a href="/applicants/open-roles/">Open Roles</a></li>
+      <li><a href="/apply/">Apply Now</a></li>
+      <li><a href="/insights/">Insights</a></li>
+    </ul></div>
+    <div><h4>Contact</h4>
+      <div class="contact-line"><a href="mailto:info@eccstaffing.com">info@eccstaffing.com</a></div>
+      <div class="contact-line"><a href="tel:+17374233422">(737) 423-3422</a></div>
+      <div class="contact-line"><span>Serving clients nationwide</span></div>
+    </div>
+  </div>
+  <div class="legal">
+    <span>&copy; 2026 Elite Career Compass LLC. All rights reserved.</span>
+    <ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/accessibility/">Accessibility</a></li></ul>
+  </div>
+</div></footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>
