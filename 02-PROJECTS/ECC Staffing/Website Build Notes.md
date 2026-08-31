@@ -43,3 +43,9 @@ Complete static rebuild of eccstaffing.com implementing the strategy — 28 page
 ## Addendum — Owner console (added 2026-08-31)
 
 `/admin/` — an unlinked, noindexed management hub for the owner: sign-in links to each platform (lead inbox for info@eccstaffing.com, FormSubmit, hosting dashboard, Search Console, Business Profile, LinkedIn), routine tasks, editing instructions, and the launch checklist. It stores no credentials — each platform authenticates itself. For true privacy, enable the host's password protection on `/admin/` (noted on the page itself). Excluded from sitemap.xml and disallowed in robots.txt.
+
+## Addendum — Client preview (added 2026-08-31)
+
+Shareable preview of the full site (all 29 pages, navigable, forms disabled):
+**https://claude.ai/code/artifact/9779ff0d-5c23-4490-a754-49679eb266a4**
+The link is private until shared — open it and use the page's share menu to send it to the client. Regenerate after edits with `python3 _build/preview.py` and republish. (Direct Vercel deployment was attempted but the Vercel–GitHub integration doesn't have access to this repo; linking it in the Vercel dashboard would enable auto-deploy from `02-PROJECTS/ECC Staffing/website/`.)

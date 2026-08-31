@@ -231,7 +231,7 @@ written.append(shell("/", "Elite Career Compass | Staffing & Recruiting",
       <a class="btn ghost-dark" href="/applicants/">For Applicants</a>
     </div>
   </div>
-  <img class="photo" src="/assets/img/hero-team.jpg" alt="The kind of teams we help build: professionals gathered in a bright office lobby" width="1396" height="960">
+  <img class="photo" src="/assets/img/hero-team.jpg" alt="The kind of teams we help build: professionals gathered in a bright office lobby" width="1100" height="756">
 </div></section>
 
 <section class="band alt"><div class="wrap">{pillars()}</div></section>
