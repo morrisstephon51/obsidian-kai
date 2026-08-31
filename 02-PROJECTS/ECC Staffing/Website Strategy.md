@@ -1,6 +1,7 @@
 # Elite Career Compass LLC — Complete Website Strategy
 
 **Prepared:** 2026-08-31 · **Site:** eccstaffing.com · **Brand:** Elite Career Compass LLC (ECC), Staffing & Recruiting
+**Status:** ✅ Built and audited — see [[Website Build Notes]] and the `website/` folder (28 pages, deploy-ready).
 **Hard constraints:**
 1. Existing branding stays exactly as-is: the compass-and-quill logo, the navy/ink + gold palette, the current typography, and the brand voice ("Guiding Talent. Empowering Employers.").
 2. The only functional change to communications: **every email touchpoint on the site (all forms, all mailto links, all notification recipients) routes to `info@eccstaffing.com`.**
