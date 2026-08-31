@@ -90,7 +90,7 @@ for page in pages:
     rel = "/" + str(page.relative_to(ROOT))
     if rel.endswith("/index.html"):
         loc = rel[: -len("index.html")]
-        if loc.startswith("/thanks/"):
+        if loc.startswith(("/thanks/", "/admin/")):
             continue
         if f"<loc>https://eccstaffing.com{loc}</loc>" not in sitemap:
             errors.append(f"sitemap.xml: missing {loc}")

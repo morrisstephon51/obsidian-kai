@@ -812,15 +812,65 @@ written.append(shell("/404.html", "Page Not Found | Elite Career Compass",
   </div>
 </div></section>''', band=False))
 
+# ---- Admin console (unlinked from nav; noindex; see README for host-level protection)
+written.append(shell("/admin/", "Owner Console | Elite Career Compass",
+  "Management console for the eccstaffing.com owner: platform sign-ins and site tasks.",
+  f'''
+<section class="hero short"><div class="wrap">
+  {eyebrow("Owner console")}
+  <h1>Manage eccstaffing.com</h1>
+  <p class="lead">Every platform that runs this site, in one place. Each link below goes to that platform&rsquo;s own secure sign-in &mdash; this page stores no passwords and grants no access by itself.</p>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="note"><strong>Keep this page private.</strong> It isn&rsquo;t linked from the site and is excluded from search engines, but the real protection is at your host: enable password protection (Deployment Protection on Vercel, password protection on Netlify, or HTTP basic auth) for <code>/admin/</code> &mdash; or simply bookmark the platform links and delete this page.</div>
+
+  <h2 style="margin-top:34px">Sign in to your platforms</h2>
+  <div class="grid c3" style="margin-top:20px">
+    <a class="card linked" href="https://mail.google.com/" rel="noopener"><h3 class="mt0">Lead inbox</h3><p>Every form on the site delivers to <strong>info@eccstaffing.com</strong>. Sign in to your mail provider to triage <code>[Talent Request]</code>, <code>[Application]</code>, and <code>[Contact]</code> messages.</p><span class="more">Open webmail &rarr;</span></a>
+    <a class="card linked" href="https://formsubmit.co/" rel="noopener"><h3 class="mt0">Form delivery</h3><p>FormSubmit relays the three site forms to your inbox. Manage or reset the connection for info@eccstaffing.com here.</p><span class="more">Open FormSubmit &rarr;</span></a>
+    <a class="card linked" href="https://vercel.com/login" rel="noopener"><h3 class="mt0">Hosting &amp; deploys</h3><p>Where the site is served. Redeploy, view traffic, set the custom domain, and turn on password protection for this page.</p><span class="more">Open hosting dashboard &rarr;</span></a>
+    <a class="card linked" href="https://search.google.com/search-console" rel="noopener"><h3 class="mt0">Google Search Console</h3><p>How the site appears in Google. Submit <code>/sitemap.xml</code> once after launch, then watch queries and indexing here.</p><span class="more">Open Search Console &rarr;</span></a>
+    <a class="card linked" href="https://business.google.com/" rel="noopener"><h3 class="mt0">Google Business Profile</h3><p>Your listing on Google Maps and local search &mdash; and where client reviews accumulate. Decide the Texas/Austin geo question here.</p><span class="more">Open Business Profile &rarr;</span></a>
+    <a class="card linked" href="https://www.linkedin.com/company/setup/new/" rel="noopener"><h3 class="mt0">LinkedIn</h3><p>The channel where staffing clients actually look. Keep the company page pointing at eccstaffing.com.</p><span class="more">Open LinkedIn &rarr;</span></a>
+  </div>
+
+  <h2 style="margin-top:44px">Manage the site</h2>
+  <div class="split" style="margin-top:20px">
+    <div>
+      <h3>Routine tasks</h3>
+      <ul class="checklist">
+        <li><strong>Test the forms monthly:</strong> submit <a href="/request-talent/">Request Talent</a>, <a href="/apply/">Apply</a>, and <a href="/contact/">Contact</a>, and confirm each lands at info@eccstaffing.com</li>
+        <li><strong>Answer within the promise:</strong> the site tells clients one business day and candidates one business day &mdash; the inbox SLA is the brand</li>
+        <li><strong>Add real proof as it arrives:</strong> approved testimonials go into <a href="/about/results/">Results</a> (template is in the page&rsquo;s HTML comments)</li>
+        <li><strong>Post roles when public:</strong> real openings replace the &ldquo;apply anyway&rdquo; state on <a href="/applicants/open-roles/">Open Roles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Editing pages</h3>
+      <p>The site is plain HTML &mdash; any developer (or Claude) can edit it. Source of truth lives in the project repo; <code>_build/generate.py</code> regenerates every page and <code>_build/audit.py</code> re-verifies links, email routing, and accessibility before deploying.</p>
+      <h3>Launch checklist</h3>
+      <ul class="checklist">
+        <li>info@eccstaffing.com mailbox live and monitored</li>
+        <li>One test submission per form; FormSubmit activation email clicked</li>
+        <li>Custom domain pointed at the host; HTTPS on</li>
+        <li>Privacy &amp; Terms drafts reviewed by counsel</li>
+        <li>Sitemap submitted in Search Console</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+''', band=False, head_extra='<meta name="robots" content="noindex,nofollow">'))
+
 # ---- sitemap + robots
-pages_for_sitemap = [p for p in written if not p.endswith(".html") and not p.startswith("/thanks/")]
+pages_for_sitemap = [p for p in written if not p.endswith(".html") and not p.startswith(("/thanks/", "/admin/"))]
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for p in pages_for_sitemap:
     sm.append(f"  <url><loc>{SITE}{p}</loc></url>")
 sm.append("</urlset>")
 (ROOT / "sitemap.xml").write_text("\n".join(sm) + "\n", encoding="utf-8")
-(ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+(ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /admin/\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
 print(f"Generated {len(written)} pages + sitemap.xml + robots.txt")
 for p in written: print("  ", p)

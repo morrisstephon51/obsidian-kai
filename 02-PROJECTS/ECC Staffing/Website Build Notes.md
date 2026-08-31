@@ -39,3 +39,7 @@ Complete static rebuild of eccstaffing.com implementing the strategy — 28 page
 ## Editing
 
 `python3 _build/generate.py` regenerates all pages from one source; `python3 _build/audit.py` re-verifies. Direct HTML edits work too (regeneration overwrites them). Details in `website/README.md`.
+
+## Addendum — Owner console (added 2026-08-31)
+
+`/admin/` — an unlinked, noindexed management hub for the owner: sign-in links to each platform (lead inbox for info@eccstaffing.com, FormSubmit, hosting dashboard, Search Console, Business Profile, LinkedIn), routine tasks, editing instructions, and the launch checklist. It stores no credentials — each platform authenticates itself. For true privacy, enable the host's password protection on `/admin/` (noted on the page itself). Excluded from sitemap.xml and disallowed in robots.txt.
