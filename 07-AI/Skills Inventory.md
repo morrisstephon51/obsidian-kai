@@ -73,7 +73,7 @@ To make it global across every Plug AI property, set `SCROLLCRAFT_HOME` to one s
 | Command Center | Live surface (real fetch reachability checks) | [Link-inbio#15](https://github.com/morrisstephon51/Link-inbio/pull/15) | Open — needs a real-device check |
 | Forming Paws homepage | Worldflight opening → act-mode body hybrid | [forming-paws#63](https://github.com/morrisstephon51/forming-paws/pull/63) | Open — needs Stefan's visual review + e2e |
 
-Both builds live in different repos, so per the per-project workspace note above, neither was ever actually checked against the other by the fingerprint gate — confirmed in practice, not just in theory. Full engine/harness bugs found and worked around (a `position:sticky` cascade break, worldflight's fixed stage never releasing, the verification harness skipping half a hybrid page) are in [[reference-ultimate-skill]] in memory, not duplicated here.
+Both builds live in different repos, so per the per-project workspace note above, neither was ever actually checked against the other by the fingerprint gate — confirmed in practice, not just in theory. Real engine/harness bugs found and worked around while building these (a `position:sticky` cascade break, worldflight's fixed stage never releasing once real content follows it, the verification harness skipping half a hybrid page) are recorded in Claude's own memory system (not this vault) for reuse next time — ask Claude directly rather than looking for a note here.
 
 ---
 
