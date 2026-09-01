@@ -66,6 +66,15 @@ Builds land in `<git root>/scrollcraft/`, and `FINGERPRINTS.md` — the record t
 
 To make it global across every Plug AI property, set `SCROLLCRAFT_HOME` to one shared path, or drop a `.scrollcraft.json` with a `workspace` key pointing at it. Not done yet — flagged as a decision, not an oversight.
 
+### Builds so far
+
+| Build | Grammar | Shipped as | Status |
+|---|---|---|---|
+| Command Center | Live surface (real fetch reachability checks) | [Link-inbio#15](https://github.com/morrisstephon51/Link-inbio/pull/15) | Open — needs a real-device check |
+| Forming Paws homepage | Worldflight opening → act-mode body hybrid | [forming-paws#63](https://github.com/morrisstephon51/forming-paws/pull/63) | Open — needs Stefan's visual review + e2e |
+
+Both builds live in different repos, so per the per-project workspace note above, neither was ever actually checked against the other by the fingerprint gate — confirmed in practice, not just in theory. Full engine/harness bugs found and worked around (a `position:sticky` cascade break, worldflight's fixed stage never releasing, the verification harness skipping half a hybrid page) are in [[reference-ultimate-skill]] in memory, not duplicated here.
+
 ---
 
 ## Full inventory — 12 personal skills
