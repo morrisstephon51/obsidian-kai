@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-02T14:40:00Z"
-current_task: "Run 260: De-duplicated the Community_intake merge queue instead of filing yet another merge-blocked bug PR (bottleneck is founder merge-authority, not bug supply). Two OVERLAPPING open PRs existed for the same substring-misroute bug (issue #3): PR #2 (fix/classify-substring-misroute, Aug 28) fixes BOTH api/intake.js (serverless endpoint the public form POSTs to) AND intake.js (CLI) with the word-boundary matchesKeyword regex, plus adds export{classify}+isMainModule guard for testability. PR #4 (Sep 2) fixes api/intake.js ONLY with the IDENTICAL matchesKeyword body -- a strict subset; its own description was factually wrong (claimed #2 left api/intake.js untouched, but #2 already includes it). Merging both = overlapping-hunk conflict for zero added coverage. ACTION: closed PR #4 as superseded (diff-proof comment), left recommend-merge comment on PR #2 (CLEAN/MERGEABLE, closes #3). Community_intake queue now 1 clean PR instead of 2 conflicting. Also verified job_opportunity_scanner has 11 open PRs, most touching scorer.py/reporter.py -- all MERGEABLE now but LATENT-CONFLICTING (first merge breaks the rest); PR #18 has scope creep (.claude/, public/index.html, vercel.json beyond the salary fix). Bottleneck UNCHANGED = 100pct founder merge-authority. NEXT: founder merges PR #2 (Community_intake), then sequences scorer PRs in one branch to avoid cascade conflicts. 204-259 in .remember/."
-runs_completed: 260
-items_processed: 500
+status: idle
+last_run: "2026-09-02T19:05:00Z"
+current_task: "Run 261: Executed the NEXT action from run 260 -- consolidated the cascade-conflicting job_opportunity_scanner scorer PRs into ONE mergeable branch so the founder merges once instead of resolving 7+ sequential rebase conflicts. Verified the conflict claim by diff: PRs #11/#12/#13 ALL edit is_recent() (line-offset collisions on sequential merge); PRs #9 and #18 BOTH rewrite _salary_score() (direct overlapping-hunk conflict). Built branch fix/scorer-consolidated integrating 8 fixes coherently: #7 IL whole-token location match, #8 title whole-word match (stops 'ai' matching retAIl/repAIr), #9 $85k thousands notation, #10 add 'trainer' to TITLE_SIGNALS, #11 weeks/months recency, #12 ISO posted_date honored (was dead code -- truncated slice + lowercased T/Z), #13 30+ days ago filter, plus #17 weekly/monthly salary-period normalization pulled from PR #18 MINUS its .claude/public/vercel.json scope-creep files. Added tests/test_scorer_consolidated.py: 28 self-contained checks (pytest OR plain python3, no deps since repo has no CI) -- ALL GREEN. End-to-end filter_and_score smoke test confirms stale 30+ days ago job filtered + $85k Chicago AI-training role scores 8. Pushed + opened PR #19 (supersedes #7-#13+#18, closes #17) with full mapping table; commented on PR #18 (scope-creep files excluded) and issue #17. Bottleneck UNCHANGED = founder merge-authority, but merge burden for scorer queue cut from ~8 conflict-prone merges to 1 clean merge. NEXT: founder merges PR #19 (job_scanner) + PR #2 (Community_intake); reporter PRs #14/#15/#16 remain separately mergeable. 204-260 in .remember/."
+runs_completed: 261
+items_processed: 501
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
