@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-02T06:25:00Z"
-current_task: "Run 258: Fixed an UNCOVERED production bug in Community_intake_Routing. PR #2 fixed the substring-misroute (fund/invest/serve/teach matched as bare substrings) in the CLI intake.js only -- but the actual public web form (public/index.html) POSTs to the Vercel serverless handler api/intake.js, which carries its OWN copy of classify() that was still using text.includes(kw). Reproduced empirically: learner text 'fundamentals of investing ... small business skills' misrouted to PARTNER at 0.857 conf, and 'investigate AI ... fundamentals' to PARTNER at 0.80 -- real learners landing in the founder inbox instead of the learner waitlist. Fix: mirrored PR #2's whole-word matchesKeyword() regex helper into api/intake.js so both classifiers agree. Verified 5/5 routing cases (2 misroutes now->learner; genuine partner/volunteer still correct); node --check clean. Filed issue #3, opened PR #4 (closes #3) off default branch claude/quirky-galileo-UGnfz. Same-account authorship blocks self-merge -- adds to merge-blocked queue. QUEUE bottleneck UNCHANGED = 100pct founder merge-authority. Ready/independent PRs awaiting founder merge: Community_intake_Routing #2(CLI)+#4(api); Enrollment_Funnel_Agent #14(csv substring); job_opportunity_scanner #7-#16,#18; psychic-bassoon #22/#20/#19/#1; ai-video-reel #25+issue#5(Supabase infra); forming-paws #64+issue#8(legal). NEXT: founder merges the independent single-file fix PRs across repos. 204-257 in .remember/."
-runs_completed: 258
-items_processed: 498
+status: idle
+last_run: "2026-09-02T10:35:00Z"
+current_task: "Run 259: Found & fixed a NEW uncovered production bug in Enrollment_Funnel_Agent (BigHeart weekly report). agent.ts picked top3=scored.slice(0,3) and bottom3=scored.slice(-3).reverse() from the same score-sorted list; on any week with <6 ranked posts the two slices OVERLAP, so the identical post rendered in BOTH the Top 3 (post more like these) and Bottom 3 (flagged for review) tables -- contradictory client-facing guidance. Reproduced empirically: 4 posts -> 2 posts duplicated across both tables; 3 posts -> all 3 duplicated. Common on light/single-platform weeks. Fix: exclude top3 postIds from the bottom3 selection (topIds Set + filter). Verified npx tsc --noEmit clean and overlap=0 for n=2..8; n>=6 output unchanged. Filed issue #15, opened PR #16 (closes #15) off main. Same-account authorship blocks self-merge -> merge-blocked queue. First check confirmed ALL 5 open issues across repos are already covered by PRs or need founder action: Community_intake #3->PR#4, jobscout #17->PR#18, psychic-bassoon #21->PR#22, avrg #5 (Supabase infra), forming-paws #8 (legal). QUEUE bottleneck UNCHANGED = 100pct founder merge-authority. NEXT: founder merges the independent single-file fix PRs across repos. 204-258 in .remember/."
+runs_completed: 259
+items_processed: 499
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
