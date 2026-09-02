@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-09-02T10:35:00Z"
 current_task: "Run 259: Found & fixed a NEW uncovered production bug in Enrollment_Funnel_Agent (BigHeart weekly report). agent.ts picked top3=scored.slice(0,3) and bottom3=scored.slice(-3).reverse() from the same score-sorted list; on any week with <6 ranked posts the two slices OVERLAP, so the identical post rendered in BOTH the Top 3 (post more like these) and Bottom 3 (flagged for review) tables -- contradictory client-facing guidance. Reproduced empirically: 4 posts -> 2 posts duplicated across both tables; 3 posts -> all 3 duplicated. Common on light/single-platform weeks. Fix: exclude top3 postIds from the bottom3 selection (topIds Set + filter). Verified npx tsc --noEmit clean and overlap=0 for n=2..8; n>=6 output unchanged. Filed issue #15, opened PR #16 (closes #15) off main. Same-account authorship blocks self-merge -> merge-blocked queue. First check confirmed ALL 5 open issues across repos are already covered by PRs or need founder action: Community_intake #3->PR#4, jobscout #17->PR#18, psychic-bassoon #21->PR#22, avrg #5 (Supabase infra), forming-paws #8 (legal). QUEUE bottleneck UNCHANGED = 100pct founder merge-authority. NEXT: founder merges the independent single-file fix PRs across repos. 204-258 in .remember/."
 runs_completed: 259
