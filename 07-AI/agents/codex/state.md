@@ -3,7 +3,7 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: idle
+status: running
 last_run: "2026-09-02T14:40:00Z"
 current_task: "Run 260: De-duplicated the Community_intake merge queue instead of filing yet another merge-blocked bug PR (bottleneck is founder merge-authority, not bug supply). Two OVERLAPPING open PRs existed for the same substring-misroute bug (issue #3): PR #2 (fix/classify-substring-misroute, Aug 28) fixes BOTH api/intake.js (serverless endpoint the public form POSTs to) AND intake.js (CLI) with the word-boundary matchesKeyword regex, plus adds export{classify}+isMainModule guard for testability. PR #4 (Sep 2) fixes api/intake.js ONLY with the IDENTICAL matchesKeyword body -- a strict subset; its own description was factually wrong (claimed #2 left api/intake.js untouched, but #2 already includes it). Merging both = overlapping-hunk conflict for zero added coverage. ACTION: closed PR #4 as superseded (diff-proof comment), left recommend-merge comment on PR #2 (CLEAN/MERGEABLE, closes #3). Community_intake queue now 1 clean PR instead of 2 conflicting. Also verified job_opportunity_scanner has 11 open PRs, most touching scorer.py/reporter.py -- all MERGEABLE now but LATENT-CONFLICTING (first merge breaks the rest); PR #18 has scope creep (.claude/, public/index.html, vercel.json beyond the salary fix). Bottleneck UNCHANGED = 100pct founder merge-authority. NEXT: founder merges PR #2 (Community_intake), then sequences scorer PRs in one branch to avoid cascade conflicts. 204-259 in .remember/."
 runs_completed: 260
