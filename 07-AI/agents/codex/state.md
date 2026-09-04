@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-04T03:30:54Z"
-current_task: "Run 269: Task = review GitHub repos + fix open issues. Moved off the job_scanner queue (blocked on founder merge of #19) to a fresh Track-relevant repo: independently VERIFIED -Community_intake_Routing PR #2 (substring keyword misroute fix) against issue #3. Cloned PR#2 head 79f9fcf, npm install, ran the REAL exported classify() from BOTH api/intake.js (live web path) and intake.js (CLI) under Node v25.6.1. RESULT: 0 misroutes/6 on both paths (was 2/6 pre-fix) -- all 4 substring-trap learners (fundamentals/investigate/deserve/teacher/reserve) route to learner; genuine partner->partner 0.909, volunteer->volunteer 0.889. npm test passes all 3 fixtures. PROVEN CORRECTION: issue #3 claims PR #2 'did not touch api/intake.js so live web path still broken' -- FALSE against current head; diff patches BOTH files (api/intake.js +11/-1 matchesKeyword L21-26@35; intake.js +20/-6 L74-79@92&108 + export classify). So merging #2 fixes live path AND closes #3. BRANCH TOPOLOGY CLEAN (unlike job_scanner #19): PR #2 AND #6 both target claude/quirky-galileo-UGnfz which IS the repo default branch -> merging advances default, no ambiguity. mergeable/CLEAN. RESIDUAL: no-signal learners still report conf 0.99 = issue #5, addressed by stacked PR #6 (independent). Posted evidence+merge rec on PR #2 (issuecomment-5535253608) + stale-premise note on issue #3 (issuecomment-5535253784). Recommend order: merge #2 (closes #3 + substring bug) then #6 (fixes #5). Did NOT merge (founder authority). NEXT: founder merges Community_intake #2 then #6; job_scanner #19 still pending; then Enrollment #16/#18/#20, psychic-bassoon #20/#22. 204-268 in .remember/."
-runs_completed: 269
-items_processed: 510
+status: idle
+last_run: "2026-09-04T07:40:00Z"
+current_task: "Run 270: Task = review GitHub repos + fix open issues. Moved to next unverified Track item: independently VERIFIED psychic-bassoon PR #22 (date-only off-by-one) against issue #21. Cloned PR#22 head a41fc91, ran the REAL exported formatDate/formatShortDate from lib/utils.ts on BOTH main (pre-fix fe575d4) and PR head under TZ=America/Chicago, Node v25.6.1. RESULT pre-fix: all 4 date-only inputs roll back exactly one calendar day (Sep15->14, Jul4->3, Aug30->29, and Jan1 2026->Dec31 2025 = a YEAR rollback, strictly worse than reported). Post-fix: all 4 render the correct day. CRITICAL non-tautology check: full-datetime pass-through formatShortDate('2026-08-30T02:00:00Z') renders IDENTICALLY (Aug 29) on both versions -> toLocalDate regex only redirects date-only strings and still respects explicit UTC/zone. npm test on PR head = 5/5 pass (node --test lib/**/*.test.ts). TOPOLOGY CLEAN: base main = repo default branch; gh reports MERGEABLE / mergeStateStatus CLEAN -> merge advances default, no ambiguity (unlike job_scanner #19). Posted evidence+merge rec on PR #22 (issuecomment-5537279157). Did NOT merge (founder authority). PRIOR run 269: Community_intake #2/#6 verified. NEXT: founder merges Community_intake #2 then #6, then psychic-bassoon #22; job_scanner #19 still pending; Enrollment #16/#18/#20 remain unverified. 204-269 in .remember/."
+runs_completed: 270
+items_processed: 511
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
