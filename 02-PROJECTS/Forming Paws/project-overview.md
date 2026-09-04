@@ -20,6 +20,10 @@ Track 2 (per the [[03-NOTES/two-track-rule|two-track rule]], everything besides 
 ## Structure
 501(c)(3) nonprofit, no separate for-profit arm, open to fiscal sponsorship to accept donations pre-IRS-approval. Revenue model (donations, listing boosts, vet-referral partnerships, sponsored education, membership tiers) phased during Phase 2/3 planning, not fixed yet.
 
+**Vet-referral, concretely, as of 2026-09-03:** not a formal partnership — dogs that fail health verification are pointed to PAWS Chicago's Medical Center (real, public-facing low-cost clinic, verified independently, not an agreement between the two orgs) as the current stopgap while a dedicated vetted network is built. See [[Status Log]] 2026-09-03 and `docs/superpowers/specs/2026-09-03-puppy-marketplace-design.md` in the repo.
+
+**Puppy marketplace is planned, not built** — see the same spec. Reuses the `dogs`/`dog_interests` model (a new `litters` table, two nullable columns on `dogs`), listings + in-app inquiries only, no checkout — live-animal sales are a restricted category for most payment processors and Illinois PA 102-0227 needs a real legal read before this goes further. Also where the gap between the "1 litter/dog/12mo" anti-mill policy below and zero implementing code was re-confirmed.
+
 ## Trust & Safety (non-negotiable)
 - Matching/chat unlocked only after baseline health docs (vet wellness exam ≤12mo + core vaccinations)
 - Automated **plausibility-checking** at launch, not automated medical judgment — anything questionable routes to manual review
