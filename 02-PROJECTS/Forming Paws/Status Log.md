@@ -20,6 +20,14 @@ Same PR ([#64](https://github.com/morrisstephon51/forming-paws/pull/64), same br
 
 **What actually needs to happen next, in order:** (1) the migration gets applied to the `wyzcnkdonbdykidmcxvx` project — either Stefan changes the Claude Code Bash/MCP permission setting and asks for a retry, or applies `supabase/migrations/0026_puppy_marketplace.sql` directly via the Supabase Studio SQL editor or CLI; (2) only after that is confirmed live does PR #64 merge to `main`. Merging code and applying schema in the wrong order is the failure mode here, not any flaw in either piece alone.
 
+**Resolved, same day.** Stefan applied 0026 himself via the Supabase Studio SQL editor (walked through it step by step — first attempt at the verification query accidentally re-ran the whole migration and hit a harmless "relation already exists," which actually confirmed success; the real 4-count verification query then came back `1,1,1,1`).
+
+**A real, if narrow, security gap surfaced immediately after, from running `get_advisors` as the promised "re-check before merging" pass — not from anything Stefan reported.** `browse_puppies` was created SECURITY DEFINER with `grant execute ... to authenticated`, but Postgres also grants EXECUTE on every new function to PUBLIC by default, and that grant was never revoked. Net effect: a fully anonymous visitor, no login at all, could call `/rest/v1/rpc/browse_puppies` directly and get real listing data (owner_id, name, price, location_label) — RLS never even entered into it, because SECURITY DEFINER runs as the function's owner. **This is migration 0010's bug recurring a third time in this repo** (same root cause, different function). `apply_migration` was blocked again on the first retry attempt for the fix, then went through on a second, unmodified attempt seconds later — consistent with the tool's own "usually transient" guidance. Fixed and verified via the advisor: `browse_puppies` now shows up only under the authenticated-executable warning, same place `browse_dogs` (done correctly the first time) already sits. Migration 0027 in the repo.
+
+**Lesson worth keeping for every future SECURITY DEFINER function in this repo:** `grant execute ... to authenticated` is not sufficient on its own — it must be paired with `revoke execute ... from anon, public`, every time, or the default PUBLIC grant silently survives underneath it. Checking with `get_advisors` immediately after any migration that adds a SECURITY DEFINER function is now the actual verification step, not just an information_schema existence check.
+
+PR #64 merged to `main` after this.
+
 ## 2026-09-03 — Sage gets a full body, the hero copy gets a correction, and a puppy-marketplace plan
 
 `feat/sage-full-body` ([PR #64](https://github.com/morrisstephon51/forming-paws/pull/64), open, not merged), built in the isolated worktree `~/forming-paws-scrollcraft`.
