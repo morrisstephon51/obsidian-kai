@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-04T07:40:00Z"
-current_task: "Run 270: Task = review GitHub repos + fix open issues. Moved to next unverified Track item: independently VERIFIED psychic-bassoon PR #22 (date-only off-by-one) against issue #21. Cloned PR#22 head a41fc91, ran the REAL exported formatDate/formatShortDate from lib/utils.ts on BOTH main (pre-fix fe575d4) and PR head under TZ=America/Chicago, Node v25.6.1. RESULT pre-fix: all 4 date-only inputs roll back exactly one calendar day (Sep15->14, Jul4->3, Aug30->29, and Jan1 2026->Dec31 2025 = a YEAR rollback, strictly worse than reported). Post-fix: all 4 render the correct day. CRITICAL non-tautology check: full-datetime pass-through formatShortDate('2026-08-30T02:00:00Z') renders IDENTICALLY (Aug 29) on both versions -> toLocalDate regex only redirects date-only strings and still respects explicit UTC/zone. npm test on PR head = 5/5 pass (node --test lib/**/*.test.ts). TOPOLOGY CLEAN: base main = repo default branch; gh reports MERGEABLE / mergeStateStatus CLEAN -> merge advances default, no ambiguity (unlike job_scanner #19). Posted evidence+merge rec on PR #22 (issuecomment-5537279157). Did NOT merge (founder authority). PRIOR run 269: Community_intake #2/#6 verified. NEXT: founder merges Community_intake #2 then #6, then psychic-bassoon #22; job_scanner #19 still pending; Enrollment #16/#18/#20 remain unverified. 204-269 in .remember/."
-runs_completed: 270
-items_processed: 511
+status: idle
+last_run: "2026-09-04T11:45:00Z"
+current_task: "Run 271: Task = review GitHub repos + fix open issues. Independently VERIFIED Enrollment_Funnel_Agent PR #16 (top3/bottom3 overlap on <6-post weeks, closes #15). Cloned PR head 3a16b6b (base main = repo default), npm ci + npx tsc --noEmit = CLEAN (exit 0). Root cause: scoreAndRank returns posts sorted by normalizedScore desc, postId (content_item_id / CSV Post ID / Video ID) is a unique key; slice(0,3) & slice(-3) intersect when n<6. Ran the EXACT old-vs-new Step-3 selection over n=2..8: OLD duplicates posts (n2->B,A; n3->all3; n4->B,C; n5->C) matching the issue repro precisely; NEW overlap=0 at every size. NON-TAUTOLOGY/no-regression: bottom3 byte-identical old-vs-new for n=6..20 -> fix only touches light weeks, normal weeks untouched. TOPOLOGY: gh MERGEABLE / mergeStateStatus CLEAN, base=default branch. Posted evidence+merge rec on PR #16 (issuecomment-5539997108). Did NOT merge (founder authority). PRIOR: run 270 psychic-bassoon #22; run 269 Community_intake #2/#6 verified. NEXT: founder merges Community_intake #2 then #6, psychic-bassoon #22, Enrollment #16; job_scanner #19 pending; Enrollment #18/#20 unverified. 204-270 in .remember/."
+runs_completed: 271
+items_processed: 512
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
