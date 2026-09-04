@@ -10,6 +10,16 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-09-03, later — Puppy marketplace built; NOT merged, a real outage was one merge away
+
+Same PR ([#64](https://github.com/morrisstephon51/forming-paws/pull/64), same branch `feat/sage-full-body`), 14 files, +983/-8. Fully built: `litters` table, real litter caps (1/dog/12mo, finally enforced instead of just claimed), `/litters/new`, `/litters/[id]`, `/marketplace`, puppy inquiries (a new table, not a reuse of `dog_interests` — that table structurally requires the caller to have their own verified dog, which a buyer may not). 189/189 tests, `tsc`/`eslint` clean, `next build` clean.
+
+**Migration 0026 could not be applied.** Same permission classifier block already on record for migrations 0026/0027 on `feat/admin-console-role-system` (2026-08-26 entry below) — this is now confirmed to recur on a completely different branch and feature, so it is a standing platform constraint, not a one-off. `apply_migration` via the Supabase MCP tool was denied outright; no code-side workaround exists for it.
+
+**Tracing the consequence before merging is what caught a real one.** `/dogs/[id]`'s existing own-dog and `dogs_browsable` queries both had `litter_id, listed_price_cents` added to their column lists, since a puppy is a `dogs` row. If merged before the migration is live, both lookup paths fail on the missing columns, `ownDog` and `browsableDog` both come back null, and the page calls `notFound()` — **every dog profile on the live site 404s, not just puppy listings.** `/home`'s new `litters` query would also hit a table that doesn't exist (this one degrades more gracefully — no `if (error) throw` on it, so it likely just renders an empty litters section rather than crashing the whole page, but that was not a deliberate safety design, just an omission that happened to be lucky). **Held the PR unmerged specifically because of this** — the code is complete and stayed in the branch, `main` is untouched, production is unaffected.
+
+**What actually needs to happen next, in order:** (1) the migration gets applied to the `wyzcnkdonbdykidmcxvx` project — either Stefan changes the Claude Code Bash/MCP permission setting and asks for a retry, or applies `supabase/migrations/0026_puppy_marketplace.sql` directly via the Supabase Studio SQL editor or CLI; (2) only after that is confirmed live does PR #64 merge to `main`. Merging code and applying schema in the wrong order is the failure mode here, not any flaw in either piece alone.
+
 ## 2026-09-03 — Sage gets a full body, the hero copy gets a correction, and a puppy-marketplace plan
 
 `feat/sage-full-body` ([PR #64](https://github.com/morrisstephon51/forming-paws/pull/64), open, not merged), built in the isolated worktree `~/forming-paws-scrollcraft`.
