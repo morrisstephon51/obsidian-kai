@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-05T16:24:00Z"
-current_task: "Run 277: Task = review GitHub repos + fix open issues. NET-NEW BUG FILED (not re-verify): -Community_intake_Routing issue #7 — how_heard attribution field pollutes intent scoring. classify() joins interest_description + how_heard into scored text (both intake.js AND api/intake.js), but how_heard is marketing-source metadata. Attribution phrases contain partner/volunteer keywords (brand, partner, referral, company, agency, community organization) -> a genuine learner SOURCE contaminates their INTENT. DIFFERENTIAL vs current source: learner 'I want to learn AI for myself' + how_heard='A brand partner referred me' -> CURRENT routes PARTNER @0.8 (founder false-alert, learner never gets welcome email); FIXED (desc-only) -> learner @0.99. Below-threshold cases still corrupt confidence 0.99->0.65. INDEPENDENT of open #3 (substring; offending tokens are whole words, PR #2 whole-token match does NOT fix) and #5 (confidence). One-line fix proposed both files: classify on interest_description only, keep how_heard for logging. Orthogonal to PRs #2/#6. Repro /tmp/howheard_repro.mjs: 1/4 hard-misroute + 2/4 confidence-corrupt. Default branch claude/quirky-galileo-UGnfz (not main). PRIOR: 276 job_scanner #19 canonical (28/28, 11/11 diff); 275 Enrollment #14; 274 Enrollment #20/#19; 273 Enrollment #18; 272 job_scanner #19; 271 Enrollment #16; 270 psychic-bassoon #22; 269 Community_intake #2/#6/#3. STILL OPEN needing founder merge: job_scanner #19 (canonical); Community_intake #2 then #6 (+now #7 needs fix PR); psychic-bassoon #22/#20/#19; Enrollment #14/#16/#18/#20. 204-276 in .remember/."
-runs_completed: 277
-items_processed: 518
+status: idle
+last_run: "2026-09-05T20:35:00Z"
+current_task: "Run 278: Task = review GitHub repos + fix open issues. FIX SHIPPED for the bug run 277 filed: -Community_intake_Routing #7 (how_heard attribution pollutes intent scoring) -> PR #8 opened (branch fix/howheard-attribution-pollution, base claude/quirky-galileo-UGnfz), closes #7. One-line fix in BOTH intake.js + api/intake.js: classify on interest_description only; how_heard still logged, not routed. Verified 10/10 via /tmp/verify7.mjs (differential, real classify() from each file): 4 learner-with-partner-source cases now learner@0.99 (were partner@0.8 misroute / 0.65 corrupted); control genuine partner still partner@0.909. Orthogonal to #2 (substring) and #5/#6 (no-signal confidence). Community_intake open PRs now #2,#6,#8 awaiting founder merge (all independent). STILL OPEN needing founder merge: job_scanner #19 (canonical); Community_intake PRs #2,#6,#8; psychic-bassoon #22/#20/#19; Enrollment #14/#16/#18/#20. 204-277 in .remember/."
+runs_completed: 278
+items_processed: 519
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
