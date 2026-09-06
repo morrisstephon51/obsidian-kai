@@ -10,6 +10,41 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-09-06 — The Open File shipped, then the landing page was reversed back to scrollcraft, and the auth pages finally got the design system
+
+Three merges to `main` in one day, all live on theplugai.xyz.
+
+**1. The Open File shipped** (`f9e4b49`, 24 files, +1398/-2387). The record-sheet redesign from the 2026-09-05 spec: a three-mark status vocabulary (`VERIFIED` / `PENDING` / `NOT YET`) applied site-wide, which turns the project's existing content-honesty rule into a visual system. Page height 9,834px to 6,047px.
+
+**2. Then Stefan reversed the landing page** (`d40dd2d`, merge `f11a4be`, 12 files, +2597/-430). *"merge and commit but i want the scrollcraft on the landing page."* The worldflight went back on `/`; the Open File design moved to `/about`. Both now share `lib/journey.ts` so the steps and roadmap cannot drift between them.
+
+**The reversal is the lesson, not the scrollcraft.** Stefan rejected scrollcraft outright on 2026-09-04 ("i really dont like the scrollcraft or the mascot at all"), which drove three days of replacement work, and then asked for it back on the sixth. A strong aesthetic rejection can reverse inside a week. **Park superseded work on a branch instead of deleting it** — see the branch note below, where exactly that saved a day of work.
+
+**The restored file was byte-identical to the version Stefan had called illegible.** `git diff` against the commit it came from confirmed it, so committing the restore as-is would have shipped that complaint straight back. **Diff a restored file against its origin commit before assuming a revert is safe.** Two defects were fixed on the way in rather than restored with it:
+
+- **Copy legibility.** The original had a scrim plate behind 1 of 4 copy blocks and a `text-shadow` that was mobile-only — applied where a contrast number happened to dip, not by rule. Measured contrast was never the failure: the ink reads **10:1** against the wash at every scroll position and still could not be read, because the risograph line art has contour strokes at the same weight and darkness as the type. All four blocks now plate at `--sc-canvas` 88% with the shadow at every width, each verified legible on full-resolution crops. **A prior note claiming "scrims and plates cannot fix edge competition" was too strong** — applied by rule they do; applied to one block in four they do not.
+- **Four hydration errors on every frame.** The `[data-sc-in]` reveal gate used `next/script` with `strategy="beforeInteractive"`, which renders as a direct child of `<html>`. That is invalid nesting, React 19 refuses to hydrate it, and it threw on every render. Now a plain inline `<script>` in `<head>`, with `suppressHydrationWarning` on `<html>` because the gate deliberately adds `sc-js` before hydration. The gate still removes itself after 2.5s if the engine never mounts, so no-JS visitors and crawlers get no hidden text.
+
+**3. The auth pages finally got the design system** (`bf3d759`, merge `93dc579`, 7 files, +185/-35). `/login` and `/signup` were the last two pages still on raw utility classes, and they are not minor: **every gated route in the app redirects to `/login`.**
+
+**The real defect was that `/login` was a dead end.** It offered no route to signup at all, so anyone following a shared link to a gated page without an account arrived at a form they could not use with nowhere to go — "Join free" in the header does not read as the answer to "you must log in". Both pages now cross-link. Also fixed: `/login`, `/signup`, `/privacy` and `/terms` rendered no footer (four public pages that were navigational dead ends for anyone arriving directly); signup rendered a **second `<main>` landmark**; both forms used `border border-hairline p-2` inputs and Tailwind `red-600`/`green-700`, the only cold colours on an otherwise warm site.
+
+**Two measurement traps, both of which produced confident wrong readings in a single session.** Worth keeping because both instruments *looked* authoritative:
+
+1. **A scrollcraft contact sheet cannot judge body copy.** Each tile is a ~5.5x downscale, rendering 19px copy at ~3px. The sheet showed "no readable text at 16 of 18 scroll positions" and I nearly reported it as a finding. The text was present and fine. Use the sheet for composition and motion; crop full-resolution frames to judge type.
+2. **`shoot.mjs` mis-reads any `color-mix()` background.** Its regex pulls `[\d.]+` from the serialized value, and browsers serialize `color-mix` as `oklab(0.977 0.0015 0.010 / 0.88)`. Those 0-1 numbers go to a function expecting 0-255, so a near-white plate reads as near-black and it reported a false `CONTRAST FAIL 1.33:1` on every plated block *immediately after the fix that made them legible*. The harness is vendored skill code; the page was correct. **Do not contort product code to satisfy a broken instrument** — same discipline as [[Verify by property]].
+
+**`scripts/verify-open-file.mjs` now covers `/login` and `/signup`.** They were the only pages the instrument could not have caught a regression on, which is a large part of how they drifted this far. 9 pages became 11; **55/55 page+width combinations pass**, `noJsHidden: 0` everywhere. `/app` and `/thank-you` are still uncovered and are the remaining gap.
+
+**A near-miss on the merge, and the branch that prevented it.** `main` is checked out in the `~/forming-paws-scrollcraft` worktree, and it held **16 uncommitted files** — a whole auth redesign, Sage redraw and photo hero from 2026-09-04 — while also sitting one commit behind `origin/main`. Merging into it would have destroyed all of that. Committed to `wip/auth-redesign-and-photo-hero` (`8aa5827`) first; the auth two-thirds of it became `bf3d759` above, and the photo hero and Sage redraw remain parked there, superseded. **Check `git status` in whichever worktree holds `main` before any operation targeting it.** Note the Sage redraw is still only on that branch, not on `main`.
+
+**Verification actually run**, on merged `main` and again against the live site after each deploy: `tsc --noEmit`, `eslint`, **197/197 unit tests**, `next build` 38/38 pages, `verify-open-file.mjs` 55/55, plus an independent sweep of all 29 routes at desktop and mobile (0 console errors, 0 failed requests, 0 overflow, one `<main>` and one `<h1>` per page, all 9 gated routes correctly redirecting to `/login`). Production re-checked after both pushes: `.fp-input` confirmed genuinely styled live (`rgb(242,237,227)`, the wash token) rather than purged into a no-op, which is the exact silent failure mode the Open File rebuild hit with Tailwind purging composed class names.
+
+**One flag investigated rather than waved away:** the landing page reports 4 text nodes at `opacity: 0` with JS running. They are the below-fold body sections awaiting scroll reveal — walking the full page confirmed **all four reach opacity 1.00**, and the no-JS gate means crawlers get them unhidden. Working as designed, but it was worth the two minutes to prove rather than assume.
+
+**Gotcha, hit twice:** `npm run build` clobbers a running `next dev` server's `.next` and then produces `__webpack_modules__[moduleId] is not a function` with errors citing the *original* repo path rather than the worktree. That signature is a stale dev cache, not a code fault. Kill dev, `rm -rf .next`, restart.
+
+
 ## 2026-09-03, later — Puppy marketplace built; NOT merged, a real outage was one merge away
 
 Same PR ([#64](https://github.com/morrisstephon51/forming-paws/pull/64), same branch `feat/sage-full-body`), 14 files, +983/-8. Fully built: `litters` table, real litter caps (1/dog/12mo, finally enforced instead of just claimed), `/litters/new`, `/litters/[id]`, `/marketplace`, puppy inquiries (a new table, not a reuse of `dog_interests` — that table structurally requires the caller to have their own verified dog, which a buyer may not). 189/189 tests, `tsc`/`eslint` clean, `next build` clean.

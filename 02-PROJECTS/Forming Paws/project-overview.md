@@ -50,7 +50,7 @@ Stefan has ~30 min/day for this. The agent system carries nearly all execution �
 
 | What | Where |
 |---|---|
-| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel project `forming-paws`, branch `main`, auto-deploys on push. Marketing page *and* sign-in on `/`, plus member home, browse, matches, chat, settings, admin. Migrations at **0021** live; **0022 written but not applied** |
+| **The app** | **[theplugai.xyz](https://theplugai.xyz)** — Vercel project `forming-paws`, branch `main`, auto-deploys on push. Marketing page *and* sign-in on `/`, plus member home, browse, matches, chat, settings, admin. Migrations at **0027** live (0022 applied 2026-08-17; 0026/0027 applied 2026-09-03) |
 | Fallback URL | [forming-paws.vercel.app](https://forming-paws.vercel.app) — the same deployment |
 | Retired | GitHub Pages / the `gh-pages` branch. No longer served by anything |
 | Carried over | `/admin.html` and `/app.html` still served from `public/` — still vanilla JS hitting Supabase directly. Known debt |
@@ -70,6 +70,21 @@ Added 2026-08-17 (PRs [#44](https://github.com/morrisstephon51/forming-paws/pull
 | `/account/reactivate` | Restore an account inside the 30-day deletion window |
 
 See [[Status Log]] 2026-08-17.
+
+Added since (PR [#46](https://github.com/morrisstephon51/forming-paws/pull/46) and later):
+
+| Route | What it is |
+|---|---|
+| `/about` | Why the project exists. **Carries "The Open File" record-sheet design as of 2026-09-06** |
+| `/education` + `/education/[slug]` | Guides, flagged not-veterinary-advice because no vet has reviewed them |
+| `/vets` | Vet partners. No directory, because no partner vets exist yet |
+| `/donate` | No donate button, since soliciting while implying tax-deductible status is a legal problem |
+| `/thank-you` | Post-signup and post-contact confirmation |
+| `/marketplace`, `/litters/new`, `/litters/[id]` | Puppy listings and in-app inquiries. No checkout |
+
+**29 routes total as of 2026-09-06** (`find app -name page.tsx`). `scripts/verify-open-file.mjs` sweeps 11 of the public ones at 5 widths each.
+
+**The landing page is the scrollcraft worldflight again** as of 2026-09-06 — Stefan rejected it on the 4th and asked for it back on the 6th, and the Open File design moved to `/about`. The two share `lib/journey.ts` so their steps and roadmap cannot drift. See [[Status Log]] 2026-09-06.
 
 Domain: no purchase — `formingpaws.org` was available at $8.49/yr and declined. TLS is Let's Encrypt, issued 2026-08-11; Vercel did **not** auto-issue it, it needed `vercel certs issue`.
 
