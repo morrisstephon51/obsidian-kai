@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-05T20:35:00Z"
-current_task: "Run 278: Task = review GitHub repos + fix open issues. FIX SHIPPED for the bug run 277 filed: -Community_intake_Routing #7 (how_heard attribution pollutes intent scoring) -> PR #8 opened (branch fix/howheard-attribution-pollution, base claude/quirky-galileo-UGnfz), closes #7. One-line fix in BOTH intake.js + api/intake.js: classify on interest_description only; how_heard still logged, not routed. Verified 10/10 via /tmp/verify7.mjs (differential, real classify() from each file): 4 learner-with-partner-source cases now learner@0.99 (were partner@0.8 misroute / 0.65 corrupted); control genuine partner still partner@0.909. Orthogonal to #2 (substring) and #5/#6 (no-signal confidence). Community_intake open PRs now #2,#6,#8 awaiting founder merge (all independent). STILL OPEN needing founder merge: job_scanner #19 (canonical); Community_intake PRs #2,#6,#8; psychic-bassoon #22/#20/#19; Enrollment #14/#16/#18/#20. 204-277 in .remember/."
-runs_completed: 278
-items_processed: 519
+status: idle
+last_run: "2026-09-05T21:05:00Z"
+current_task: "Run 279: NEW distinct bug found+fixed in Community_intake_Routing. Filed #9 + shipped PR #10 (branch fix/single-keyword-partner-volunteer-misroute, base claude/quirky-galileo-UGnfz, closes #9). Bug: learner 0.5 baseline sat in the confidence DENOMINATOR (total), so a lone partner/volunteer keyword computes 1.0/1.5=0.667 < 0.7 threshold -> hard-fallback to learner. Every single-line sponsor/partner/mentor inquiry was silently downgraded to the learner waitlist, starving the founder-notification path. Fix: score a real winner against matched-signal evidence only (scores.partner+scores.volunteer); learner-default path unchanged. Applied to BOTH intake.js + api/intake.js. Verified 18/18 differential (real classify() per file): 5 single-keyword partner/volunteer cases now route right; genuine-learner@0.99, ambiguous 1v1 tie@0.65, strong multi-kw controls all unchanged. Orthogonal to #3/#7 (substring/how_heard) and #5 (no-signal confidence). Community_intake open PRs now #2,#6,#8,#10 (all independent off base, awaiting founder merge). STILL OPEN needing founder merge: job_scanner #19; Community_intake #2/#6/#8/#10; psychic-bassoon #22/#20/#19; Enrollment #14/#16/#18/#20. 204-278 in .remember/."
+runs_completed: 279
+items_processed: 520
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
