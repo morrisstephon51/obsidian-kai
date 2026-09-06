@@ -42,6 +42,12 @@ Three merges to `main` in one day, all live on theplugai.xyz.
 
 **One flag investigated rather than waved away:** the landing page reports 4 text nodes at `opacity: 0` with JS running. They are the below-fold body sections awaiting scroll reveal — walking the full page confirmed **all four reach opacity 1.00**, and the no-JS gate means crawlers get them unhidden. Working as designed, but it was worth the two minutes to prove rather than assume.
 
+**A fourth merge, and the best finding of the day: a validated token can still fail when the ground under it changes.** The triple-check sweep flagged the 11px finale eyebrow. `DESIGN.md` validates `accent.dark` (#AD4727) as the text-safe accent and records it clearing 4.5:1 on **ivory 5.30, paper 5.53, accent.soft 5.01, wash 4.85** — but the copy plate added earlier that day is *none of those grounds*. Sampling the real composited pixels behind the text gave **4.46:1 against the darkest one, four hundredths under the floor** for small text. Plate raised 88% to 94% (`dc41220`); the eyebrow now measures **4.85:1** and every one of the six lines across the four copy blocks clears AA at its darkest pixel, verified again on the live site after deploy.
+
+**The lesson is not the four hundredths, it is the method.** The token was correct, its documentation was correct, and the page still failed — because a new surface was introduced and nothing re-measured the token against it. **When you add a translucent layer between text and its background, you have created a ground the palette was never validated on.** Re-measure on composited pixels; do not reason from the token's documented ratio.
+
+**It also caught my own checker repeating a bug I had diagnosed an hour earlier.** The first production sweep reported four `1.33:1` failures on the landing page. That is the identical `oklab` mis-parse described above — my sweep script used the same naive `[\d.]+` regex as `shoot.mjs`. Four of the five flags were phantom; the fifth was real. **A sweep that reports a suspiciously uniform number across unrelated elements is measuring itself, not the page.**
+
 **Gotcha, hit twice:** `npm run build` clobbers a running `next dev` server's `.next` and then produces `__webpack_modules__[moduleId] is not a function` with errors citing the *original* repo path rather than the worktree. That signature is a stale dev cache, not a code fault. Kill dev, `rm -rf .next`, restart.
 
 
