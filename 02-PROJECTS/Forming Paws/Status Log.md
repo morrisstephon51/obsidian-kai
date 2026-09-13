@@ -10,6 +10,35 @@ tags:
 
 Newest first.  Each entry links the artifact it describes.
 
+## 2026-09-13 — Admin dashboard live, Ivan made admin, the "Safari" lockout fixed, and a critical Next.js patch
+
+Seven commits pushed to `main`, all live on theplugai.xyz, plus three production migrations (0032, 0033, 0034), each dry-run tested on production before it was applied.
+
+**1. Admin Overview dashboard** (`9687c91`). `/admin` is now an Overview: needs-attention queues, an activation funnel, eight weeks of signups, and engagement, all from one admin-only RPC `admin_dashboard_stats()` (migration 0033). Test accounts are excluded by a shared `is_test_account()` rule, which `community_stats()` now uses too, so the public numbers and the dashboard cannot drift.
+
+**2. Migration 0032 had been merged but never applied.** It was found by probing for the trigger while shipping 0033. Email changes had not been reaching `owners.email`, which silently blocks that member's puppy inquiries. The migration was locked down so only the trigger can run its function (`5c5106f`), then applied. **Merged is not applied: confirm a migration by looking at the schema, not the migration ledger.**
+
+**3. Ivan's account is now an admin**, alongside Stefan's. The grant was made acting as Stefan, so `granted_by` records him.
+
+**4. "The admin panel is inaccessible from Safari" was not a Safari bug** (`87464fc`). Production logs plus a reproduction in Playwright's WebKit found the real cause. Every gated page redirected to a bare `/login`, signing in always went to `/home`, and nothing on the site linked to `/admin`. In any browser without a session, the console was unreachable unless you typed the URL again. Fixed:
+- all 12 gated pages and `requireRole` now send you to `/login?next=<page>`, and signing in returns you there (same-origin paths only, never back to `/login` or `/signup`)
+- admins get an **Admin** link in the header
+
+Verified on production in WebKit desktop, WebKit iPhone and Chromium: 39 checks covering every admin section. The e2e test account was given admin temporarily for that run and revoked afterwards, leaving 2 admins.
+
+- **Testing lesson:** in WebKit, "Fetch API cannot load … due to access control checks" plus "Failed to fetch RSC payload" came from pre-loads cancelled by the test's own navigation, not from CORS. Chromium reports the same thing as `ERR_ABORTED`. A timed trace using in-app clicks showed no errors.
+- **Also found:** at 06:12 UTC, right after a sign-in, two Supabase requests stalled in Supabase's gateway for 60s and returned 504. Postgres logged nothing, and the slowest app query that day was under 0.5s. Server-side Supabase requests now give up after 15s and retry reads once (`41e9cea`). Middleware also no longer spends a Supabase auth call on every image and script.
+
+**5. Critical security patch** (`60a6f42`). next 15.5.20 carried 10 advisories, including unauthenticated remote code execution in the Image Optimization API when AVIF is served, which `next.config.ts` enables. Upgraded to next 15.5.25 and sharp 0.35.4; `npm audit --omit=dev` now reports 0. Non-breaking fixes to dev tooling went in separately (`cdce4d8`).
+
+**6. 20 foreign-key indexes** (migration 0034, `48d2429`) from the Supabase performance advisor. Additive, dry-run first, applied with Stefan's approval. The advisor now calls them "unused", which is expected for brand-new indexes on tiny tables.
+
+**Still open**
+- 32 RLS policies re-evaluate `auth.uid()` for every row (`auth_rls_initplan`). Negligible at ~50 members; rewrite as `(select auth.uid())` later, with a test that every access rule behaves the same.
+- Leaked-password protection is off in Supabase Auth (a dashboard toggle).
+- The 5 remaining dev-only advisories (vitest 2 / vite / esbuild) need a vitest major upgrade.
+- Commit `35354db` has its co-author trailer in the subject line (cosmetic).
+
 ## 2026-09-06 — The Open File shipped, then the landing page was reversed back to scrollcraft, and the auth pages finally got the design system
 
 Three merges to `main` in one day, all live on theplugai.xyz.

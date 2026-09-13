@@ -7,6 +7,8 @@ tags: [forming-paws, rbac, supabase, rls, kairo, retrospective]
 
 # Admin Console — Build Log
 
+> **Update 2026-09-13:** this is the 2026-08-26 retrospective. The console has been merged and live since 2026-09-11 (`f80836e`), gained the Overview dashboard on 2026-09-13, and now has two admins. The "not merged" line below is historical; see [[Status Log]] for the current state.
+
 Branch `feat/admin-console-role-system`, 9 commits, 18 files, +2,109 −44 vs `main`. **Not merged, and the migrations are not applied.** See [[#Where it stopped]].
 
 ## The arc
