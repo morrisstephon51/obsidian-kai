@@ -33,6 +33,23 @@ Stefan is unemployed, has **no transportation**, and is full time on this. Every
 - **Structure:** decide with Niquenya on Wednesday. Option A is one LLC with "Forming Paws" as an assumed name, about $270 in state fees. Option B is two LLCs, about $300 plus two annual reports.
 - **Follow-on work:** the Forming Paws site says "nonprofit" or "501(c)(3)" in 22 places across 10 files (/about, /donate, home, privacy, footer, FAQ, journey, and others). Update the copy once the entity type is settled, so the site stays honest.
 
+## Daily prep agent (cloud routine)
+
+Every day at 6:00am Chicago time (11:00 UTC; after Nov 1 it runs at 5:00am), a cloud agent emails you a **"Daily outreach brief"** by about 7am. **Reply to that email with what happened**, one line per business, for example "Niko's: no answer" or "Lady's: deposit paid". The next morning's run reads your reply.
+
+- **What it does:**
+  - finds 20 barbers, salons, and braiders with no website
+  - builds 3 site previews and publishes them as public links search engines are told not to index
+  - fills in the call list, texts, and follow-ups
+  - saves a dated "Website Outreach Tracker" sheet in Drive
+  - opens a pull request (PR) for theplugai.info/websites
+  - after Sep 16, once you reply with the business structure, opens a PR removing the nonprofit copy from Forming Paws
+- **What it never does:** contact a business, send anything to anyone but you, or merge a PR.
+- **When it stops:** at 3 paying clients, it sends a final report. Then pause it at https://claude.ai/code/routines/trig_01Fwen5EKwNu1HRUUMPZbH6J
+- **Where things live:**
+  - instructions: `docs/08-remote-outreach-plan.md` in the private ai-consulting-business repo
+  - previews: Vercel project `site-previews`
+
 ## This week
 
 - [ ] **Mon:** send the Forming Paws member survey (below).
