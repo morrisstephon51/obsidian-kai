@@ -1,10 +1,12 @@
 ---
 type: audit
 created: 2026-08-07
-status: pending-review
+status: partially-resolved
 ---
 
 # Vault Audit Report — 2026-08-07
+
+> **Status 2026-09-13:** Not consolidated yet. All ten duplicate sets below still exist, and they are not copies. A byte comparison showed every `02-PROJECTS` note is larger than its `03-NOTES` twin, and `Areas/Finance/Financial Goals.md` is larger than both of its twins, so merging them needs a manual read, not a delete. This report moved from the vault root to `05-MAPS/`.
 
 **Audit Scope:** Duplicate file detection and consolidation opportunity analysis
 **Vault Size:** ~216 files

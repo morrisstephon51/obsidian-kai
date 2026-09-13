@@ -3,7 +3,7 @@ agent: perplexity-agent
 display_name: "Perplexity"
 emoji: "🔭"
 role: "Real-Time Research · Citations"
-status: "running"
+status: "idle"
 last_run: "2026-08-12T23:18:13.257Z"
 current_task: null
 runs_completed: 225

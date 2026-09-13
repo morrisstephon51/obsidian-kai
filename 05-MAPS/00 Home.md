@@ -76,15 +76,15 @@
 
 | Folder | Purpose |
 |---|---|
-| [[02-PROJECTS/\|02-PROJECTS]] | Active work with a deadline or goal |
-| [[02-PROJECTS/\|Areas]] | Ongoing responsibilities (Dev, Finance) |
-| [[04-RESOURCES/\|Resources]] | Reference material, prompts, brand assets |
-| [[07-AI/\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
-| [[08-ARCHIVE/\|Archive]] | Completed or inactive material |
-| [[01-DAILY/\|01-DAILY]] | Day-by-day notes and reflections |
-| [[03-NOTES/\|03-NOTES]] | Permanent notes — one idea each, e.g. [[03-NOTES/two-track-rule\|the two-track rule]] |
-| [[05-MAPS/\|05-MAPS]] | Maps of content, audits, this page |
-| [[_ops/\|_ops]] | [[_ops/important-links\|Links registry]], trackers, templates |
+| [[_INDEX#02-PROJECTS/\|02-PROJECTS]] | Active work with a deadline or goal |
+| [[_INDEX#Areas/\|Areas]] | Ongoing responsibilities (Dev, Finance) |
+| [[_INDEX#04-RESOURCES/\|Resources]] | Reference material, prompts, brand assets |
+| [[_INDEX#07-AI/\|07-AI]] | Agent fleet, MUNDI Router, subagent registry |
+| [[_INDEX#08-ARCHIVE/\|Archive]] | Completed or inactive material |
+| [[_INDEX#01-DAILY/\|01-DAILY]] | Day-by-day notes and reflections |
+| [[_INDEX#03-NOTES/\|03-NOTES]] | Permanent notes — one idea each, e.g. [[03-NOTES/two-track-rule\|the two-track rule]] |
+| [[_INDEX#05-MAPS/\|05-MAPS]] | Maps of content, audits, this page |
+| [[_INDEX#_ops/\|_ops]] | [[_ops/important-links\|Links registry]], trackers, templates |
 
 ---
 

@@ -3,7 +3,7 @@ agent: gemini-agent
 display_name: "Gemini"
 emoji: "♊"
 role: "Long-Context / Multimodal Research Assistant"
-status: "running"
+status: "archived"
 last_run: "2026-07-08T07:51:05.599Z"
 current_task: null
 runs_completed: 0
