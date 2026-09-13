@@ -3,133 +3,175 @@
   "search": "",
   "showTags": true,
   "showAttachments": true,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "",
+      "query": "_ops",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "",
+      "query": "01-DAILY",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "",
+      "query": "Weekly Reviews",
       "color": {
         "a": 1,
         "rgb": 11657298
       }
     },
     {
-      "query": "",
+      "query": "02-PROJECTS",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "",
+      "query": "AI Consulting Business",
       "color": {
         "a": 1,
         "rgb": 5431473
       }
     },
     {
-      "query": "",
+      "query": "Career",
       "color": {
         "a": 1,
         "rgb": 5419488
       }
     },
     {
-      "query": "",
+      "query": "Development",
       "color": {
         "a": 1,
         "rgb": 5395168
       }
     },
     {
-      "query": "",
+      "query": "Education",
       "color": {
         "a": 1,
         "rgb": 11621088
       }
     },
     {
-      "query": "",
+      "query": "Finance",
       "color": {
         "a": 1,
         "rgb": 14701233
       }
     },
     {
-      "query": "",
+      "query": "Forming Paws",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "",
+      "query": "Learning",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "",
+      "query": "Personal Growth",
       "color": {
         "a": 1,
         "rgb": 11657298
       }
     },
     {
-      "query": "",
+      "query": "The Plug AI",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "",
+      "query": "03-NOTES",
       "color": {
         "a": 1,
         "rgb": 5431473
       }
     },
     {
-      "query": "",
+      "query": "04-RESOURCES",
       "color": {
         "a": 1,
         "rgb": 5419488
       }
     },
     {
-      "query": "",
+      "query": "Documents",
       "color": {
         "a": 1,
         "rgb": 5395168
+      }
+    },
+    {
+      "query": "Images",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "05-MAPS",
+      "color": {
+        "a": 1,
+        "rgb": 5395121
+      }
+    },
+    {
+      "query": "06-OUTPUTS",
+      "color": {
+        "a": 1,
+        "rgb": 5395026
+      }
+    },
+    {
+      "query": "07-AI",
+      "color": {
+        "a": 1,
+        "rgb": 5395026
+      }
+    },
+    {
+      "query": "Areas",
+      "color": {
+        "a": 1,
+        "rgb": 5395026
+      }
+    },
+    {
+      "query": "index",
+      "color": {
+        "a": 1,
+        "rgb": 5395026
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": false,
+  "textFadeMultiplier": -2.9,
+  "nodeSizeMultiplier": 1.07990901494754,
+  "lineSizeMultiplier": 1.59624918763346,
+  "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.013390147816978807,
+  "scale": 0.0078125,
   "close": false
 }
