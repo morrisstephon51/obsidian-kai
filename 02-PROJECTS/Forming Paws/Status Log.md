@@ -36,7 +36,7 @@ Verified on production in WebKit desktop, WebKit iPhone and Chromium: 39 checks 
 **Still open**
 - 32 RLS policies re-evaluate `auth.uid()` for every row (`auth_rls_initplan`). Negligible at ~50 members; rewrite as `(select auth.uid())` later, with a test that every access rule behaves the same.
 - Leaked-password protection is off in Supabase Auth (a dashboard toggle).
-- The 5 remaining dev-only advisories (vitest 2 / vite / esbuild) need a vitest major upgrade.
+- ~~The 5 remaining dev-only advisories (vitest 2 / vite / esbuild) need a vitest major upgrade.~~ **Fixed the same day** (`472a05b`): vitest 4.1.11, @vitejs/plugin-react 5.2.0 and vite 7.3.6. `npm audit` now reports 0 across all dependencies, all 280 tests pass unchanged, and no production dependency moved.
 - Commit `35354db` has its co-author trailer in the subject line (cosmetic).
 
 ## 2026-09-06 — The Open File shipped, then the landing page was reversed back to scrollcraft, and the auth pages finally got the design system
