@@ -3,3 +3,10 @@
 .remember/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Plugin settings can hold API keys and tokens, and they rewrite on every sync.
+# Git Sync's GitHub token was committed here on 2026-07-11; untracked 2026-09-13.
+.obsidian/plugins/*/data.json
+
+# Claudian conversation records: private, and they change every session.
+.claudian/sessions/
