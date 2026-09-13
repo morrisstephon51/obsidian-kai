@@ -1,8 +1,8 @@
 # CLAUDE.md — Obsidian Vault Instructions & Stefan's Full Context
 
-*Single source of truth. Consolidates vault instructions, operating context, and identity layer. Last updated: 2026-08-06.*
+*Single source of truth. Consolidates vault instructions, operating context, and identity layer. Last updated: 2026-09-13.*
 
-**Vault sync:** `~/Desktop/kai` is a git repo whose remote is **[obsidian-kai](https://github.com/morrisstephon51/obsidian-kai)** (private), auto-committing every few minutes via `git-obsi-sync`. The older `kai-obsidian-vault` repo is **superseded** — last push 2026-07-05. Both `obsidian-git` and `git-obsi-sync` plugins are enabled on purpose; if duplicate or conflicting commits ever appear, that overlap is the first thing to check.
+**Vault sync:** The vault lives at `~/kai`. It moved out of the iCloud-synced Desktop on 2026-09-13, and `~/Desktop/kai` is a link to it, so old paths still work. It is a git repo whose remote is **[obsidian-kai](https://github.com/morrisstephon51/obsidian-kai)** (private). `git-obsi-sync` commits 3 seconds after each edit while Obsidian is open (hardcoded: its "Sync debounce" setting is never read); `obsidian-git` pulls and pushes every 10 minutes. Both plugins are enabled on purpose; if duplicate or conflicting commits appear, that overlap is the first thing to check. Plugin `data.json` files and `.claudian/sessions/` are gitignored because they hold tokens and private conversation records. The older `kai-obsidian-vault` repo is **superseded** (last push 2026-07-05).
 
 ---
 
@@ -46,19 +46,19 @@ This vault is Stefan's second brain. Goal: connection, synthesis, and better out
 
 **Name:** Stefan. Goes by Stef.
 **Location:** Chicago area (south suburban Cook County)
-**Day job:** BigHeart Health — Training Development & Design. The funding bridge, not the destination.
+**Employment:** Unemployed (confirmed 2026-09-13). BigHeart Health is a former employer; resignation effective 2026-07-14. He is available full time, income is urgent, and he has no transportation, so work has to happen by phone, email, video, or online.
 **Primary mission:** Founder of **The Plug AI** — AI literacy for faith communities, community health workers, and first-gen students in south suburban Cook County.
 **Education:** Pursuing B.S. Computer Science (expected 2028). Certifications: Google IT Support, IBM IT Support, Google UX Design, Python (Syracuse).
 
 **Active tracks:**
 - **Track 1 — The Plug AI:** Brand, PRD, entity-path analysis, and Kresge Foundation LOI are done. Kresge Fluxx portal live (username: The_Plug_AI). Site live at [theplugai.info](https://theplugai.info); content-hardening pass complete 2026-07-13. Blocked on fiscal sponsor / 501(c)(3) partner for the Illinois "Eliminate the Digital Divide" grant (up to $75K). Kenneth Vasser's church is the live option — need legal name, address, pastor confirmation, workshop date before applying. Full detail: [[02-PROJECTS/The Plug AI/project-overview|project overview]].
-- **Track 2 — Everything else:** BigHeart (funds Track 1), **Forming Paws** (dog breeding matchmaking — **the full Next.js app is live at [theplugai.xyz](https://theplugai.xyz)** as of 2026-08-11: accounts, health-doc verification, browse, matching, owner chat. GitHub Pages retired; the old "local-only by design" rule is dead. Repo public. "Puppy Power" is the crowdfunding name for the same product), content automation tooling. Real and managed — don't expand Track 2 without naming the tradeoff.
+- **Track 2 — Everything else:** **Forming Paws** (dog breeding matchmaking — **the full Next.js app is live at [theplugai.xyz](https://theplugai.xyz)** as of 2026-08-11: accounts, health-doc verification, browse, matching, owner chat. GitHub Pages retired; the old "local-only by design" rule is dead. Repo public. "Puppy Power" is the crowdfunding name for the same product), content automation tooling. Real and managed — don't expand Track 2 without naming the tradeoff.
 - **Track 3 — AI Implementation Consulting (for-profit):** Dual-niche — law-firm intake automation + small-business apps/sites. Built out at `~/ai-consulting-business/` on 2026-07-17, not yet launched. **Is** backed up to a private GitHub repo ([ai-consulting-business](https://github.com/morrisstephon51/ai-consulting-business), last push 2026-08-06) — the older "not committed to git" note is obsolete. Separate from Plug AI and BigHeart; don't conflate funding, branding, or docs. Full detail: [[02-PROJECTS/AI Consulting Business/project-overview|project overview]].
 
 **Governance layer:** The **OpenClaw AI Organization** plan (owner: Kairo) sits above the agent fleet — 30+ docs at `~/clawd/AI-Organization/`. Phase 2 live and launch-ready on the Claude path (ADR-008); one blocker reopened 2026-08-09 — the OpenAI/ChatGPT leg is `credit_balance_exhausted` (NON-BLOCKING: code-gen defaults to Claude/OAuth, OpenAI activates via `--override gpt-4o-mini` once funded). **Formal Track 1 execution is gated on Oct 13**, after Phases 2–4 complete.
 
 **What's settled — don't relitigate:**
-- The security-vs-freedom conflict is over. Plug AI is the priority. BigHeart is instrumental.
+- Plug AI is the priority. BigHeart employment ended 2026-07-14, so near-term income now ranks ahead of slow money (grants, sponsorship).
 - Workstream sprawl (6–7 simultaneous initiatives) is the diagnosed bottleneck. Two-track system exists to fix it.
 - He doesn't need more opportunities found. He needs execution on chosen ones.
 - All Track 2 items get named explicitly here when discovered — don't let a project stay invisible.
@@ -76,15 +76,14 @@ This vault is Stefan's second brain. Goal: connection, synthesis, and better out
 - **Content:** Faith-community angle is best-performing LinkedIn content by a wide margin.
 - **Known risk:** Church access (MOFEC, All Nations, Faith Mission, Holy City) was built through BigHeart relationships. Approaching those churches about Plug AI without disclosing BigHeart is professional exposure. Two paths: (1) fold Plug AI into BigHeart as a formal internal initiative, or (2) build proof-of-concept with churches that have zero BigHeart overlap.
 
-### BigHeart Health
+### BigHeart Health (former employer, resignation effective 2026-07-14)
 - "My Health My Power" initiative — AI-assisted outreach across four church partnerships.
-- Stefan built and pitched a content automation machine (videos, flyers, social, training materials) to leadership — seeking title change to "Digital Content and AI Systems Specialist" plus comp adjustment.
+- Stefan built and pitched a content automation machine (videos, flyers, social, training materials) to leadership. It is prior work he can show as proof.
 
 ### Forming Paws (Track 2)
 Health-first nonprofit platform for documented, responsible dog breeding. Chicago, IL, built on $0 capital.
-- **Public site:** [theplugai.xyz](https://theplugai.xyz) — GitHub Pages static site + `/join.html` signup. This is the shareable link.
-- **Repo:** [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws) — public. Static site on `gh-pages`, Next.js app on `main`.
-- **The real app is local-only** at `~/forming-paws` — Next.js 15 + Supabase (`wyzcnkdonbdykidmcxvx`). Owner accounts, dog profiles, health-doc verification with admin review, geolocation `/browse`, mutual-match `/matches`. Migrations at 0018. Slice 1 complete. Unhosted deliberately per the 2026-07-22 decision — **don't propose deploys unless Stefan reopens it.**
+- **Live app:** [theplugai.xyz](https://theplugai.xyz) runs the Next.js 15 + Supabase (`wyzcnkdonbdykidmcxvx`) app from `~/forming-paws`, live since 2026-08-11. GitHub Pages is retired and the 2026-07-22 local-only decision is reversed. Owner accounts, dog profiles, health-doc verification with admin review, `/browse`, `/matches`, owner chat, and the `/admin/dogs` moderation console (merged 2026-09-11).
+- **Repo:** [morrisstephon51/forming-paws](https://github.com/morrisstephon51/forming-paws) (public). App on `main`.
 - **Recurring bug pattern:** PostgREST embedded-selects get silently RLS-filtered by an unrelated table. Has bitten three times. Any new query joining through `dogs` for a non-owner viewer must go through `dogs_browsable`, not the base table.
 
 ### Tools Built
@@ -125,7 +124,7 @@ Scripts: `~/clawd/agents/<name>-agent/run.js` | State: `07-AI/agents/<name>/stat
 3. **Don't ask for hand-holding on bugs.** Given a bug report, logs, or a failing test — just fix it.
 4. **Prove it works before calling it done.** Run it, check output, diff behavior.
 5. **Full autonomy on repos.** No standing approval gate. Stefan will course-correct if needed.
-6. **Two-track discipline.** If a task doesn't serve Plug AI or the BigHeart bridge, flag it as Track 2 before going deep.
+6. **Two-track discipline.** If a task doesn't serve Plug AI or near-term income, flag it as Track 2 before going deep.
 7. **Four-voice council lens:** Weigh ideas through — RAZOR (harsh critic, exposes flaws), VAULT (cautious strategist, risk-first), PULSE (cuts through Stefan's own bias, advocates for what he actually needs), FORGE (builder — ships working solutions). Take positions, don't hedge.
 
 ---
@@ -156,7 +155,7 @@ Over-analysis paralysis · Isolation · Attraction to too many opportunities · 
 
 | Conflict | Status |
 |----------|--------|
-| Security vs Freedom | **Resolved** — BigHeart funds The Plug AI; choice is made |
+| Security vs Freedom | **Reopened 2026-09-13** — the resolution assumed BigHeart funded The Plug AI; that job ended 2026-07-14 |
 | Helping vs Wealth | Active — The Plug AI attempts to hold both |
 | Learning vs Executing | Active — main bottleneck; two-track system is the fix |
 | Focus vs Sprawl | Active — critical pattern to watch |
@@ -179,3 +178,5 @@ Healthcare ops (Mount Sinai Hospital), education tech (Apollo After Schools), cl
 *Updated: 2026-08-06. Consolidated from CLAUDE.md + context.md + me.md. Canonical copy lives at `~/Desktop/kai/09-SYSTEM/CLAUDE.md`. The separate context.md at `~/Desktop/Context/` remains authoritative for the multi-agent system — this file is the Obsidian vault copy.*
 
 **2026-08-06 refresh:** added Track 3 (AI consulting), the OpenClaw governance gate, the corrected Forming Paws status (site live, app local-only), the 2026-08-03 broken-supervisor correction, gemini-agent's archival, and the vault's remote change. Live-verified against `gh`, Vercel, DNS, and HTTP — see [[_ops/important-links|Important Links]] and [[09-SYSTEM/Command Center|Command Center]].
+
+**2026-09-13 refresh:** corrected employment (unemployed; BigHeart ended 2026-07-14), aligned the Forming Paws section with the live app, and rewrote the vault sync paragraph (vault moved to `~/kai`, found that Git Sync ignores its debounce setting, token-bearing plugin settings untracked).
