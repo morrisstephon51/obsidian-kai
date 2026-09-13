@@ -32,7 +32,7 @@ Track 2 (per the [[03-NOTES/two-track-rule|two-track rule]], everything besides 
 - Anti-mill: 1 litter/dog/12mo, breeding age gates, education acknowledgment, community reporting, rescue/adoption cross-promoted
 
 ## Operating Constraint
-Stefan has ~30 min/day for this. The agent system carries nearly all execution — his time goes to approvals and irreversible/paid decisions only.
+**Updated 2026-09-13:** Stefan is unemployed and available full time. The old ~30 min/day constraint no longer applies. Income is now the priority, so paid work and revenue come before new features.
 
 ## Milestones
 - [x] Phase 0 — Discovery interview → Alignment Brief
@@ -92,7 +92,7 @@ The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.
 
 ## Risks
 - Agent team lost its Gemini provider entirely — `gemini-agent` was **archived** to `~/clawd/agents/_archived/` after every call returned HTTP 429 with `limit: 0` (the Google Cloud project had zero free-tier quota; needed a billing decision, not a code fix). ChatGPT provider still not built. Subagent work routes through Claude
-- 30 min/day constraint means scope creep is the biggest execution risk — stay disciplined about what Phase 2 actually needs for an MVP
+- (Superseded 2026-09-13) The 30 min/day constraint is gone. The risk now is building features instead of selling
 
 ## Resources to Gather
 - OpenAI API key (for the ChatGPT provider agent, not yet built)

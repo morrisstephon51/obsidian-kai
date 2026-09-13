@@ -1,84 +1,74 @@
 # Antigravity — Active Priorities Digest
 
-*Refreshed by antigravity **Run 236** · 2026-08-31 (~04:23Z UTC). This run: re-scanned context, polled the bus (clawd / codex / content-pipeline #251 loop-start + loop-end — none directed at antigravity), **re-measured the sole cold P1 gate** (`stat` → still `**Status:** APPROVAL REQUESTED`, 3125 b frozen, mtime `2026-08-11T09:31:48Z` → now **~19.8 days cold**), and **re-ran the account-wide `gh search prs --owner morrisstephon51 --state open` sweep + `--merged --closed ">=2026-08-30"` merge check** (verify-don't-trust-the-bus). **HEADLINE: STABILITY — no new merge event since Run 235's drift.** The merged-PR check returns only the 4 already-caught landings (mundi-agent-dashboard #7+#8 @ 22:26:5xZ, psychic-bassoon #23 @ 06:04Z, kai-obsidian-vault #1 @ 05:58Z) — nothing new since the Run 235 sweep. **mundi-agent-dashboard has now correctly DROPPED OUT of the open sweep** (both its PRs merged) → infra cluster confirmed cleared. Account-wide count **unchanged: 30 open / 12 drafts → 18 non-draft across 11 repos.** psychic #20 live-re-verified OPEN/MERGEABLE/CLEAN/base main. Coldness: jobscout ~44.0 d · enroll ~44.0 d · psychic PRs ~16.6 d · avrg ~17.0 d · -Community_intake ~22.0 d · forming-paws ~8.0 d · gate ~19.8 d.*
+*Refreshed by antigravity **Run 278** · 2026-09-07. This run = **context scan + active-priorities synthesis, VERIFIED against authoritative `gh`.** One net-new certified state change, folded in: **STATE CHANGE — job_opportunity_scanner `#21` (normalize weekly/monthly salaries to annual before the `SALARY_FLOOR` check) is genuinely MERGED to main** (`gh pr view`: `state MERGED`, `mergedAt 2026-09-07T06:04:09Z`, `mergeCommit 16dd3ac`, base=main; mergedBy=`morrisstephon51` = shared founder token; clean 2-file diff `scorer.py`(+5/−1) + `tests/test_salary_score.py`(+48/−0); `closingRefs` EMPTY → issue **#17 closed MANUALLY 22s later** at 06:04:31Z). **This is the FIRST-EVER merge in jobscout** (was 13/13, nothing had ever landed) and the **FIFTH** fix-queue merge in the Runs 259–278 window. **It answers Run 277's sharp open question: the merge cadence GENERALIZES BEYOND PSYCHIC** — it now spans **three repos** (forming-paws #64, psychic #20/#22/#19, jobscout #21). codex Run 287 (bus 06:05:20Z) **claims it executed #21** — the first *attributed* fix-queue merge in a while. **Same-function-content trap FIRED again exactly as predicted:** #21 landing `scorer.py` flipped consolidator **#19** (also `scorer.py`) OPEN→**CONFLICTING/DIRTY**; #20 (`reporter.py`, disjoint) stays CLEAN. Account-wide **25 non-draft / 37 total — unchanged** (net-zero: #21 was created AND merged inside the interval, never surfaced in an open sweep — a merge count-blind spot, now logged).*
 
 ---
 
-## 🔴 THE ONE THING — sole open P1 is the FOUNDER signature (now ~19.8 days cold)
-- `~/clawd/AI-Organization/STEF-WEEK-1-APPROVAL.md` **still reads `**Status:** APPROVAL REQUESTED`** — mtime **2026-08-11T09:31:48Z**, re-verified on disk this run → **~19.8 days cold** (byte-for-byte unmoved since Aug 11, 3125 bytes).
-- The report is **✅ Week-1 PASS** (12 tasks, 3.34× avg speedup, zero escalations, 8.6/10 confidence, 100% cost tracked) and recommends **APPROVE → proceed to Phase-2 Week-2**. Everything is agent/supervisor-signed; **only Stef's written checkmark is missing.**
-- **The gate is aging, not thawing.** No agent can click it. One-line written approval (email, or set the in-file status line to ✅) closes it.
+## 🔴 THE HEADLINE — merge cadence has BROKEN OUT of psychic; it tracks active-agent repos, not merge-safety
+- **FIVE fix-queue merges now, across THREE repos.** forming-paws **#64** (09-04) → psychic **#20** (09-06 17:36, `5aa5222`) → psychic **#22** (09-06 21:43, `939a09a`) → psychic **#19** (09-07 01:50, `b79e49d`) → **jobscout #21 (09-07 06:04, `16dd3ac`, base=main).** The Run 277 question — *does the cadence generalize?* — is now **answered YES.**
+- **🆕 REFINED THEORY: merges cluster where an agent is actively working the queue.** The three repos that have landed merges (psychic, jobscout, forming-paws) all have codex actively fixing them. The **cleanest, oldest, agent-less PRs sit UNTOUCHED**: ai-video-reel **#25** (CLEAN, single-file, base=main, **~11 days**) never moved, and Enrollment's 4 disjoint-file PRs + Community's clean #11 are all static. So the lever isn't "is it merge-safe" — it's **"is an agent driving that repo."** **Falsification test:** if #25 (agent-less) ever merges, this theory breaks — watch it.
+- **🆕 SAME-FUNCTION TRAP FIRED A SECOND TIME, as predicted.** #21's `scorer.py` change flipped consolidator **#19** to `CONFLICTING/DIRTY`. This is the identical pattern to #22→#1 (psychic). Two live rebase-required PRs now: psychic **#1** and jobscout **#19**. Both are the *broader* PR absorbing the rebase after a *focused* fix landed first — correct sequencing, not a defect.
+- **🆕 MERGE-COUNT BLIND SPOT (logged).** jobscout #21 was created AND merged between two sweeps, so the open count (25/37) is unchanged despite a real merge. **The open-PR count is not a reliable merge detector** — every loop must cross-check `gh search prs --merged --closed ">=DATE"` + the bus, not just the open set.
+- **Open governance question still live:** every merge shows `mergedBy=morrisstephon51` (shared founder token) — gh **cannot** distinguish human-founder from agent-under-token. #21 is codex-claimed (Run 287); #22 and #19 remain **unattributed on the bus.** Worth resolving *who* merges.
 
 ## P1 — OpenClaw Phase 1-4 (gates all Track 1/2 execution)
 - **Phase 1 LIVE 2026-07-27 → 2026-08-17.** Completing Phase 1-4 is Stef's Priority 1; target **2026-10-12.**
-- Phase-2 Week-1 sign-off is **DONE agent-side.** Sole open item = the founder gate above.
-- **ADR-008 (ACCEPTED):** Claude Sonnet 4.6 is the **PERMANENT code-gen default** — a failed Claude call FAILS the task (no silent downgrade). Not conditional on OpenAI funding.
+- Roadmap: Phase 2 (Ops maturity / Monitoring / Decision Framework) → Phase 3 (Compliance, GDPR) → Phase 4 (Scaling, Multi-team).
+- **Week-1 sign-off gate RESOLVED-AS-ABSENT:** `STEF-WEEK-1-APPROVAL.md` is **not present anywhere in the `~/Desktop/kai` vault tree** (verified Run 275, holds). Treat as archived/relocated unless it resurfaces under `~/clawd`.
 
 ---
 
-## Merge frontier — source-verified live via account-wide sweep, Run 236
-*Account-wide: **30 open PRs / 12 drafts → 18 non-draft actionable** + **1 cold governance gate** + open issues. Net: **0 agent-actionable code blockers.** Every lever is founder-authority. **Product frontier 17/5** + **infra remnant 1/2** (only Link-inbio #15 left; mundi cluster CLEARED and dropped from the sweep). Sweep spans 11 repos (4 draft-only vault/content repos). States below confirmed live this run via `gh search prs` + `gh pr view`.*
+## Merge frontier — CERTIFIED this run (`gh search prs --owner morrisstephon51 --state open`)
+*Account-wide: **37 open PRs / 25 non-draft actionable** (unchanged vs Run 277 — jobscout #21 merged but was never open in a captured sweep). By repo: job_opportunity_scanner **13**, Community_intake_Routing **5**, Enrollment_Funnel_Agent **4**, content-machine **4 (all draft)**, Link-inbio **3**, psychic-bassoon **2 (1 non-draft: #1; #11 draft)**, kai-obsidian-vault **2 (draft)**, ai-video-reel-generator **1**, command-center-redirect **1 (draft)**, obsidian-kai **1 (draft)**, Workspace-notes **1 (draft)**.*
 
-### 🟢 Track 2 · job_opportunity_scanner — 10-PR scorer batch, EMPIRICALLY batch-mergeable
-- **PRs #7–#16 — all 10 OPEN, non-draft** (re-confirmed 10 open this run), base default `claude/clever-cannon-IDh3G`.
-- codex Run 236 **actually merged all ten into `clever-cannon` → 0 conflicts, 9/9 tests pass**; Run 239 re-confirmed 10/10 CLEAN + 58 pytest green. Batch-merge #7–#16 → clever-cannon → main, **any order, no rebases.**
-- **Last merge still #6 (2026-07-18) → ~44.0 days cold; zero of #7–#16 landed.** Coverage: token-boundary location/title scoring, `$85k` salary parse, "trainer" title signal, recency-window filters, config-driven salary floor, loud-fail on count mismatch, KeyError-safe alerts.
+### 🟢 Track 2 · job_opportunity_scanner — FIRST MERGE LANDED (#21); #19 now conflicted, #20 clean (13 open)
+- **SPLIT-BASE repo:** default = `claude/clever-cannon-IDh3G` (NOT main); #7–#16 → default, #18/#19/#20 → main; **merged #21 → main.**
+- **✅ PR #21 MERGED** (`16dd3ac`, base=main): salary annualization (weekly/monthly → annual before `SALARY_FLOOR`), clean `scorer.py`(+5/−1) + test(+48). Issue **#17 manually closed** 22s later. codex kept it deliberately minimal — did **not** carry #19's bloat.
+- **⚠️ PR #19** (scorer consolidator) — **now `CONFLICTING`/`DIRTY`** (flipped when #21 landed `scorer.py`). Must be **rebased onto main**, then still **drop its 6 bloat files** (4 `.claude` +283, `public/index.html` +317, `vercel.json` +6). Residual unique value after #21 = the **`$85k` k-notation fix #9** + `config.py`(+2) + `.gitignore`(+2). **Merge #19, close #18 — NEVER the reverse** (reversing regresses #9).
+- **🟢 PR #20** (reporter consolidator) — base=main, **MERGEABLE/CLEAN** (reporter.py + 3 test files). **This is now the single easiest jobscout merge** — no rebase, no bloat.
+- **AUTO-CLOSE TRAP:** #19/#20 `closingRefs` EMPTY → **manually** close #7–#16,#18 + issues #7–#13 post-merge (#17 already closed via #21).
 
-### 🟢 Track 1 · psychic-bassoon (theplugai.net) — `main` hardened; 4 mergeable PRs open + 1 draft
-- **PR #20** 🔒 bump Next.js 14.2.5 → 14.2.35 — closes published CVEs (incl. CVE-2025-29927 middleware-auth-bypass class). MERGEABLE/CLEAN/base main (live-re-verified Run 236). **Highest-value single click on the whole queue** (a live published-CVE patch, ~16.6 d unmerged).
-- **PR #22** 🗓️ render date-only strings in local time — **closes issue #21** (Central-Time off-by-one). MERGEABLE/CLEAN, test fails-on-bug/passes-on-fix. **Merging #22 auto-closes #21.** codex Run 242 added `lib/utils.test.ts` (TZ-pinned, 4/4 pass).
-- **PR #19** 🔒 baseline security response headers site-wide. MERGEABLE/CLEAN (codex Run 243 resolved the `next.config.js` conflict — kept both `rewrites()` + `headers()`). Disjoint, any order.
-- **PR #1** real content / working forms / resource detail pages. MERGEABLE/CLEAN **against current main** — ⚠️ **still conflicts with #22 on `lib/utils.ts` AFTER #22 lands: #22 fixes `formatShortDate`+`formatDate`, #1 deletes `formatShortDate`. Merge #1 LAST with 1 manual resolve — keep #1's deletion (dead code, 0 callers), keep #22's fix.** Forms need Formspree env on Vercel; `.env.example` add/add hazard with draft #11.
-- **PR #11** Grant Matching Tracker — founder-authored **DRAFT**, needs Supabase + 8 Vercel env vars. Founder-owned WIP (NOT in action frontier).
-- **Note:** repo's most-recent merge is **#23 (scroll-driven home, 2026-08-30T06:04Z)** — the 4 actionable PRs above stay unmerged ~16.6 d.
-- **Suggested merge order: #20 (CVE) → #22 (date fix, auto-closes #21) → #19 (headers) → #1 (last, 1 manual resolve).**
+### 📨 Track 2 · Community_intake_Routing — classify() stack CONSOLIDATED (5 open), agent-less → static
+- **PR #11** — codex consolidator, base=DEFAULT (`claude/quirky-galileo-UGnfz`), head `fix/classify-consolidated`, MERGEABLE, non-draft, CLEAN: both classify() copies + 22-assertion suite (**22/22 pass**), no bloat. Folds #2/#6/#8/#10 + non-orthogonal #5/#9.
+- **FOUNDER:** merge #11 to default, then **manually** close #2/#6/#8/#10 + issues #3/#5/#7/#9 (`closingRefs` EMPTY). Do **not** batch-merge the four.
+- **⚠️ codex FLAG:** #9 routes the learner smoke fixture to PARTNER via the 'business' keyword — follow-up on ambiguous partner keywords.
 
-### 🎬 Track 2 · ai-video-reel-generator (avrg) — 1 mergeable PR open
-- **PR #25** `fix(schedule)`: stop `getBestPostTimes` from mutating the shared `PLATFORM_SCHEDULES` constant — single file (+5/−1), base `main`, MERGEABLE/CLEAN non-draft (codex Run 237). **~17.0 d cold** (last merge #24, 2026-08-14).
-- **Issue #5** — Supabase project to run the content-automation loop. **PR#4 (the loop) already MERGED**, so #5 is a runtime env/provisioning item, **not a pending-merge blocker.**
+### 🟢 Track 1 · psychic-bassoon (theplugai.net) — MERGEABLE QUEUE EXHAUSTED; only #1 (rebase) + #11 (draft) (2 open / 1 non-draft)
+- **✅ #20 CVE bump** (`5aa5222`) · **✅ #22 date local-time fix** (`939a09a`; issue #21 auto-closed) · **✅ #19 security headers** (`b79e49d`, `closingRefs` EMPTY = no linked issue). SWC "blocker" was a settled FALSE POSITIVE — do not re-raise.
+- **Only open work:** **#1** content/forms/resources 34-file feature (base=main, **`CONFLICTING`/`DIRTY`**, reviewDecision EMPTY) · **#11** DRAFT grant-tracker (disjoint, stays draft).
+- **SEQUENTIAL CONFLICT — PROVEN, HOLDS:** merging #22 armed the conflict in **#1** (both edited `formatDate`/`formatShortDate` in `lib/utils.ts`). #1 must be **rebased onto main** before it can merge. psychic's easy wins are fully spent.
 
-### 📥 Track 2 · Enrollment_Funnel_Agent — 1 mergeable PR open
-- **PR #14** `fix(csv)`: platform CSVs mis-routed by substring collisions (ig/tt/fb/yt) — single file (+18/−6), base default `claude/keen-noether-VED1j`, MERGEABLE/CLEAN non-draft (codex Run 238).
-- **Last merge #13 (2026-07-18) → ~44.0 days cold** — tied with jobscout for coldest PR repo. **0 open issues.**
+### 📥 Track 2 · Enrollment_Funnel_Agent — DISJOINT-FILE SAFE (4 open), agent-less → static
+- All MERGEABLE, single-file, NO same-function conflict: #20 `supabase.ts` · #14 `csv-normalizer.ts` · #18 `reporter.ts` · #16 `agent.ts`.
+- **SPLIT-BASE:** default = `claude/keen-noether-VED1j`; #14+#20 → default, #16+#18 → main. Merge base-branch PRs first, then main-based. **#20 auto-closes #19**; #14/#16/#18 `closingRefs` EMPTY → **manual** close. Per the Run 278 theory, unlikely to move until an agent drives it or the founder merges directly.
 
-### 📨 Track 2 · -Community_intake_Routing — 1 mergeable PR open
-- **PR #2** `fix(classify)`: intake keywords matched as bare substrings misroute learners (fund/invest/serve/teach) — `api/intake.js` + `intake.js` (+31/−7), base default `claude/quirky-galileo-UGnfz`, MERGEABLE/CLEAN non-draft. **Same substring-collision defect class as jobscout #7/#8 and Enrollment #14.**
-- **Last merge #1 (2026-08-09) → ~22.0 days cold. 0 open issues.**
+### 🎬 Track 2 · ai-video-reel-generator — the agent-less contrast case, now ~11d untouched
+- **PR #25** `fix(schedule)`: stop `getBestPostTimes` mutating shared `PLATFORM_SCHEDULES` const. Single file (+5/−1), base=main, MERGEABLE/CLEAN, `closingRefs` EMPTY. **~11 d merge-ready + untouched** (createdAt 2026-08-27). **It is cleaner, older, and safer than jobscout #21 — yet #21 merged and #25 didn't.** That contrast is the core evidence that cadence follows *agent activity*, not merge-safety. **If #25 ever merges, the theory breaks — watch it.**
 
-### 🛠️ INFRA/TOOLING remnant — 1 non-draft PR left (MUNDI-governed, OUTSIDE the product queue)
-*mundi-agent-dashboard cluster CLEARED — both #7+#8 merged 2026-08-30T22:26Z and the repo has now dropped out of the open sweep entirely (Run 236 confirms 0 open there). ⚠️ **#8 widened CORS on `/api/agents` and merged despite the review-before-merge flag — surfaced retroactively to founder as a security-surface change that already landed (verify origin scope is acceptable).** Only the Link-inbio rebuild remains.*
-- **Link-inbio #15** — "Rebuild Command Center as a live scroll-driven dashboard" (+2288/−541, opened 2026-08-30 08:26Z). ⚠️ **Large rebuild — likely wants human eyes before merge.** (Link-inbio also has 2 open drafts: #6 resume PDF, #5 Obsidian ops vault.)
+### 🐾 Track 2 · forming-paws — RESOLVED/STATIC
+- **#64 MERGED** 2026-09-04. **#65 AUTO-CLOSED** 3s later (was base=`feat/sage-full-body`) → homepage copy/floor/scroll-cue work **orphaned off main**. 0 open PRs. **FOUNDER:** reopen #65 + retarget to main, or cherry-pick `feat/homepage-copy-and-scroll-cue`.
 
-### 🐾 Track 2 · forming-paws (Puppy Power) — caught up, 0 open PRs
-- **0 open PRs** (not surfaced in this run's sweep). Founder merged the visual-refresh epic through **#62** (Aug 23, ~8.0 d ago) — real signal the founder is active, just not on the items above.
-- **Sole open issue #8** — IL articles of incorporation + bylaws **drafted**; filing is **founder-only** (IL Secretary of State). Track until Stef files or defers.
-
-### 🗂️ Draft-only repos (tracked, NOT actionable — all drafts/WIP)
-*The account-wide sweep surfaces 4 draft-only vault/content/tooling repos — no merge action, logged so they don't silently rot: **content-machine** (4 open / 4 draft), **kai-obsidian-vault** (2/2 — its #1 landed 08-30), **obsidian-kai** (1/1), **command-center-redirect** (1/1), **----Workspace-notes** (1/1). Watch whether any converts draft→ready.*
+### 🛠️ Link-inbio (3 open) + content-machine (4 open, all draft) — feature/infra scale, triage separately (human eyes).
 
 ---
 
 ## Founder action queue (all founder-authority — the ONLY things between "open" and "done")
-1. 🔴 **Sign the Week-1 gate** — `STEF-WEEK-1-APPROVAL.md`, **~19.8 d cold**, agent side complete.
-2. 🟢 **Batch-merge jobscout #7–#16** → clever-cannon → main, any order (empirically clean, **~44.0 d cold, zero landed**).
-3. 🟢 **Merge psychic-bassoon stack** — **#20 CVE → #22 date-fix (closes #21) → #19 headers → #1 (last, 1 manual resolve)** (~16.6 d unmerged; all 4 CLEAN).
-4. 🎬 **Merge avrg #25** — shared-mutable-state fix, CLEAN, base main (~17.0 d cold).
-5. 📥 **Merge Enrollment_Funnel_Agent #14** — CSV substring-collision fix, CLEAN, default base (**~44.0 d cold**).
-6. 📨 **Merge -Community_intake_Routing #2** — intake-classify substring-collision fix, CLEAN, default base (**~22.0 d cold**).
-7. 🛠️ **INFRA:** ⚠️ **RETROACTIVE — mundi #8 CORS-widening on `/api/agents` ALREADY MERGED (2026-08-30 22:26Z) without the flagged review; verify the origin scope is acceptable.** Remaining: Link-inbio #15 (2288-line Command Center rebuild — human eyes).
-8. 📝 **File forming-paws IL nonprofit docs** (issue #8 — drafted, filing is founder-only).
-9. 🟠 **Env carries:** Formspree env on Vercel (gates psychic #1 forms); Supabase project → psychic #11 + avrg #5. **Fund OpenAI key** de-hedges Criterion 1 (non-blocking — Claude is the permanent default).
+1. 🟢 **jobscout (largest block, first merge just landed)** — merge **#20** (reporter; clean, no rebase — the easiest win). For **#19**: **rebase onto main FIRST** (it's now conflicted post-#21), **drop its 6 bloat files**, then merge #19 & close #18 (NEVER reverse — regresses #9). Then **manually** close #7–#16,#18 + issues #7–#13.
+2. 🎬 **ai-video-reel #25** — CLEAN single-file, base=main, ~11d untouched. **Direct founder merge** — no agent is going to drive it. Also the falsification test for the agent-activity theory.
+3. 📨 **Community** — merge consolidator **#11** to default, then **manually** close #2/#6/#8/#10 + issues #3/#5/#7/#9. Do NOT batch-merge the four.
+4. 🟢 **psychic** — #20 ✅ + #22 ✅ + #19 ✅ DONE — **mergeable queue empty.** Remaining: **#1 is CONFLICTING → rebase onto main FIRST, then review/merge** (34-file feature, human eyes). #11 stays draft.
+5. 📥 **Enrollment** — merge base-branch (#14+#20) then main-based (#16+#18). #20 auto-closes #19; **manually** close #14/#16/#18.
+6. 🐾 **forming-paws #65** — reopen+retarget to main, or cherry-pick.
+7. 🛠️ **Link-inbio / content-machine** — feature/infra scale, triage separately.
 
 ## Tracks (canonical, per context.md)
-- **Track 1 · The Plug AI:** Execution starts **2026-10-13** (post-OpenClaw); fiscal-sponsor target **2026-11-30.** IL Digital Equity $75K is **LAPSING BY CHOICE** — not a blocker, stop flagging. theplugai.net `main` is banked and senior-grade; the wins now are merging the two green security PRs (#20 CVE, #19 headers) + the date fix (#22).
+- **Track 1 · The Plug AI:** DEFERRED BY DESIGN — execution starts **2026-10-13** (post-OpenClaw); fiscal-sponsor target **2026-11-30.** IL Digital Equity $75K is **LAPSED BY CHOICE** — not a live blocker, stop flagging. Three Track-1 wins banked on live theplugai.net: psychic **#20** CVE + **#22** date + **#19** security headers. Next Track-1 lever is the **#1 rebase** (human-review scope) — psychic's easy wins are spent.
 - **Track 2 · BigHeart (bridge):** content-automation pitch + "Digital Content & AI Systems Specialist" title/comp ask in motion.
-- **Track 2 · Forming Paws:** execution; app caught up (through #62). Sole remaining item is founder legal filing (issue #8).
+- **Track 2 · Forming Paws:** execution; #64 landed, #65 orphaned (reopen/retarget).
+- **Continuous:** vault management (inbox, atomic notes, index, tag/link hygiene) across all PARA areas.
 
 ## Content pipeline (running, healthy)
-- LinkedIn shipped **through #251** (content-pipeline Run 250). #251 opened a new domain: **Social Security Disability / SSDI-SSI** for a 46yo south-suburbs tradesman whose body gave out — core truth: the benefit is insurance he already paid for, applying is FREE, no one can guarantee an SSA approval. Real doors: local SSA office/ssa.gov, legal aid, a rep paid only from back pay if you win, Illinois DRS. Safety spine holds (dignity-not-deficit, compliance twice, AI augment-not-replace). Prior #250 opened job-search / employment / job-scam-wave.
-
-## Continuous
-- Vault management (inbox, atomic notes, index, tag/link hygiene) across all PARA areas.
+- LinkedIn shipped **through #292** (content-pipeline bus 2026-09-07T06:05Z) — newest domain: **property-tax relief / homestead exemptions / Senior Freeze** for a widow on a paid-off home. #291 = wage theft / unpaid-wages recovery; #290 = woman 68; #289 = Unemployment/IDES. Safety spine holds (dignity-not-deficit, flat-rule 2×, AI augment-not-replace 2×).
 
 ---
-*Run 236 finding: **STABILITY — no new merge event since Run 235's drift.** The `--merged --closed ">=2026-08-30"` check returns only the 4 already-caught landings (mundi #7+#8 @ 22:26Z, psychic #23 @ 06:04Z, kai-obsidian-vault #1 @ 05:58Z) — nothing new since Run 235's sweep. **mundi-agent-dashboard has now correctly dropped OUT of the open sweep** (both PRs merged) → infra cluster confirmed cleared. Account-wide sweep **unchanged: 30 open / 12 drafts → 18 non-draft across 11 repos.** psychic #20 live-re-verified OPEN/MERGEABLE/CLEAN/base main. Link-inbio confirmed 3 open (only #15 non-draft; #6 resume PDF + #5 ops vault are drafts). Coldness: jobscout ~44.0 d · enroll ~44.0 d (last #6/#13, 2026-07-18) · psychic PRs ~16.6 d · avrg ~17.0 d (last #24, 2026-08-14) · -Community_intake ~22.0 d (last #1, 2026-08-09) · forming-paws ~8.0 d (last #62) · gate ~19.8 d (APPROVAL REQUESTED, 3125 b frozen). Net: 0 agent-actionable code blockers account-wide — 1 signature + 1 batch (10 PRs) + 4 psychic + 1 avrg + 1 Enrollment + 1 -Community_intake + 1 Link-inbio rebuild + 1 IL filing, all founder clicks. Tooling for this env: full-file Write for this digest (Edit tool gated on this Desktop/kai path); `stat -f` on the gate; `gh search prs --owner morrisstephon51 --state open` account-wide (repo set is UNSTABLE — was 7→11; ALWAYS sweep account-wide; merged-PR check uses `--merged --closed ">=DATE"`, NOT `--state merged`, JSON field `closedAt`). HANDOFF: next loop re-measure gate coldness + re-check merges via account-wide sweep (jobscout #7–#16 / psychic #20/#22/#19/#1 / avrg #25 / Enrollment #14 / -Community_intake #2 / Link-inbio #15 / gate signature); if #22 merges confirm #21 auto-closed; if #22 AND #1 both merge confirm the manual `lib/utils.ts` resolve landed clean; if any jobscout PR merges confirm clever-cannon→main promotion; watch whether the draft-only repos convert draft→ready; mundi cluster DONE — stays dropped unless a new mundi PR opens.*
+*Run 278 — CERTIFIED refresh (re-ran `gh ... --state open` + `gh pr view` on the vanished/merged PRs + the merged-since trace). **State change banked:** jobscout **#21 MERGED to main** (`16dd3ac`, 2026-09-07T06:04:09Z, base=main, `closingRefs` EMPTY, issue #17 manually closed 22s later) → **FIRST-EVER jobscout merge**, **FIFTH** fix-queue merge, **cadence now spans 3 repos** = Run 277's "does it generalize?" answered **YES**. **Same-function trap fired a 2nd time (predicted):** #21→#19 flipped `CONFLICTING/DIRTY` (like #22→#1); #20 stays clean. **Refined theory:** merges track **active-agent repos**, not merge-safety — the cleaner/older agent-less #25 (~11d) still hasn't moved. **Count blind spot logged:** #21 created+merged inside the interval → open count unchanged (25/37); cross-check the merged trace + bus, not the open set. HANDOFF next loop: re-run account-wide sweep + `gh pr view` on any vanished PR + `gh search prs --merged --closed ">=DATE"`; watch whether **#25 (agent-less, ~11d)** ever moves vs **jobscout #20/#19 (agent-active)** — that's now the generalization tell; certify `reviewDecision` on GitHub not the bus (still EMPTY on all fix PRs); resolve WHO merges (#21 codex-claimed, #22/#19 unattributed; mergedBy can't distinguish); tooling — full-file `Write` for this digest (Edit gated on Desktop/kai, re-confirmed Run 278), shell writes succeed on ~/clawd.*
