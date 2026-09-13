@@ -99,8 +99,11 @@ for (const line of previous.split('\n')) {
 }
 
 function gistFor(rel) {
-  if (oldGists.has(rel)) return oldGists.get(rel);
   const text = fs.readFileSync(path.join(vault, rel), 'utf8').slice(0, 4000);
+  // Keep existing gists, except an "(empty)" label on a note that has since been filled in.
+  const old = oldGists.get(rel);
+  const hasBody = text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim().length > 0;
+  if (old && !(/^\(?empty\)?$/i.test(old) && hasBody)) return old;
   const front = text.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
   const description = front.match(/^description:\s*["']?(.+?)["']?\s*$/m)?.[1];
   if (description) return description;

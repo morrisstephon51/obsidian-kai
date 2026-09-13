@@ -2,6 +2,7 @@
 created: 2026-07-23
 updated: 2026-09-13
 type: pointer
+description: Pointer to Stefan's profile in 09-SYSTEM/CLAUDE.md
 status: active
 tags: []
 ---

@@ -5,7 +5,7 @@ updated: 2026-09-13
 
 # OpenClaw AI Organization
 
-The governance docs live in one place: `~/clawd/AI-Organization/` (56 docs, versioned in the `~/clawd` git repo). Read them there.
+The governance docs live in one place: `~/clawd/AI-Organization/` (versioned in the `~/clawd` git repo). Read them there.
 
 This folder used to hold copies. They were removed on 2026-09-13 because they had drifted:
 
