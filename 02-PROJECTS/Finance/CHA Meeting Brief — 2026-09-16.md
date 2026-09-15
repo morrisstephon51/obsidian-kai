@@ -61,3 +61,6 @@ Forming Paws will not pursue 501(c)(3) status. The Plug AI earns through paid se
 
 ## 7. Next 30 days
 Entity, EIN, and license; 3 website clients; survey results and the fee decision; Section 3 registration.
+
+---
+*Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/Finance/Income Plan — 2026-09-13|Income Plan (Sep 13)]] · [[02-PROJECTS/Finance/index|Finance Hub]]*

@@ -90,3 +90,6 @@ Subject: 4 quick questions about Forming Paws
 - "Free website" offers
 - Building Forming Paws features before anyone has paid
 - Paid tools when a free one works
+
+---
+*Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/Finance/CHA Meeting Brief — 2026-09-16|CHA Meeting Brief (Sep 16)]] · [[02-PROJECTS/Finance/index|Finance Hub]]*
