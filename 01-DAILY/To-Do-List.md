@@ -49,6 +49,7 @@ related:
     - [ ] Source attorney emails (likely by calling receptionists)
 
     ## 🚀 The Plug AI
+    _→ [[02-PROJECTS/The Plug AI Progress|Progress Log]] · [[02-PROJECTS/The Plug AI/project-overview|Project Overview]]_
     - [ ] Execute Phase 3 Week 1 (compliance monitor, cost anomaly, escalation automation)
       - [ ] Execute Phase 3 Week 2 (validation, Phase 2 sign-off)
       - [ ] Run Phase 2 re-verification (audit compliance before Oct 13)
@@ -56,6 +57,7 @@ related:
       - [ ] Oct 13 launch readiness audit
 
       ## 💰 Income Plan — this week
+      _→ [[02-PROJECTS/Finance/Income Plan — 2026-09-13|Income Plan]] · [[02-PROJECTS/Finance/CHA Meeting Brief — 2026-09-16|CHA Meeting Brief (Sep 16)]]_
       - [ ] Mon: send the Forming Paws member survey (from founder@theplugai.info)
       - [ ] Mon–Tue: build foundation — services page at theplugai.info/websites, one sender identity, free Cal.com link, $175 Stripe deposit link, free Google Voice number
       - [ ] Mon–Tue: text 30 people the referral ask - [ ] Tue: review the CHA brief
@@ -64,6 +66,19 @@ related:
       - [ ] After entity type is settled: update Forming Paws site copy (removes "nonprofit"/501(c)(3) in 22 places across 10 files)
 
       ## 📱 Devices
+      _→ [[09-SYSTEM/Claude Code + Obsidian Master Guide|Claude Code + Obsidian Master Guide]]_
       - [ ] Finish iPad/iPhone Obsidian sync setup (GitHub PAT + git plugin on mobile)
 
+---
 
+## Related Notes
+- [[02-PROJECTS/Forming Paws/Chicago Outreach Kit|🐾 Forming Paws — Chicago Outreach Kit]]
+- [[02-PROJECTS/Forming Paws/project-overview|🐾 Forming Paws — Project Overview]]
+- [[02-PROJECTS/ECC Staffing/Website Build Notes|💼 ECC Staffing — Website Build Notes]]
+- [[02-PROJECTS/ECC Staffing/Website Strategy|💼 ECC Staffing — Website Strategy]]
+- [[02-PROJECTS/AI Consulting Business/project-overview|🤖 AI Consulting — Project Overview]]
+- [[02-PROJECTS/The Plug AI Progress|🚀 The Plug AI — Progress Log]]
+- [[02-PROJECTS/The Plug AI/project-overview|🚀 The Plug AI — Project Overview]]
+- [[02-PROJECTS/Finance/Income Plan — 2026-09-13|💰 Income Plan — Sep 13]]
+- [[02-PROJECTS/Finance/CHA Meeting Brief — 2026-09-16|💰 CHA Meeting Brief — Sep 16]]
+- [[01-DAILY/Progress Dashboard|📊 Progress Dashboard]]
