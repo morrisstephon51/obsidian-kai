@@ -72,3 +72,6 @@ Rule: **join, participate for a week, then post** — cold-posting a link gets d
 - [ ] Join 3 of the Facebook groups above; comment on a few posts, don't pitch yet (20 min)
 - [ ] Day 7+: post Email/post 2 in the group where you're most active (10 min)
 - [ ] Forward me any vet replies — I'll draft the follow-ups and the partnership one-pager
+
+---
+*Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/Forming Paws/project-overview|Forming Paws Project Overview]]*
