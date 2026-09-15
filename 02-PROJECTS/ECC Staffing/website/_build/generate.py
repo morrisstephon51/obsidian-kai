@@ -43,7 +43,7 @@ def pillars():
     </div>'''
 
 def form(kind):
-    """kind: talent | apply | contact — all deliver to info@eccstaffing.com."""
+    """kind: talent | apply | contact. All deliver to info@eccstaffing.com."""
     common = (f'<input type="hidden" name="_next" value="{SITE}/thanks/{kind}/">'
               '<input type="hidden" name="_template" value="table">'
               '<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">')
@@ -82,10 +82,10 @@ def form(kind):
             <option value="technology">Technology</option>
           </select></div>
       </div>
-      <div><label for="a-resume">Resume (optional — no resume yet? That&rsquo;s fine.)</label>
+      <div><label for="a-resume">Resume (optional, and no resume yet is fine)</label>
       <input id="a-resume" name="attachment" type="file" accept=".pdf,.doc,.docx,.txt,.rtf"></div>
       <button class="btn gold" type="submit">Apply Now</button>
-      <p class="fine">Our service is always free to candidates — employers pay us, never you.</p>
+      <p class="fine">Our service is always free to candidates. Employers pay us, never you.</p>
     </form>'''
     return f'''<form class="lead-form" action="https://formsubmit.co/{EMAIL}" method="POST">
       <input type="hidden" name="_subject" value="[Contact] New message from eccstaffing.com">{common}
@@ -155,7 +155,7 @@ def shell(path, title, desc, body, *, band=True, current="", head_extra=""):
 </div></div>
 <header class="site"><div class="wrap">
   <a class="brand" href="/">
-    <img src="/assets/img/logo.png" alt="Elite Career Compass logo — a compass rose and quill over an open book" width="46" height="57">
+    <img src="/assets/img/logo.png" alt="Elite Career Compass logo: a compass rose and quill over an open book" width="46" height="57">
     <span class="bn">Elite Career Compass<span class="bt">Staffing &amp; Recruiting</span></span>
   </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
@@ -256,7 +256,7 @@ written.append(shell("/", "Elite Career Compass | Staffing & Recruiting",
     <a class="card linked" href="/industries/healthcare/"><h3 class="mt0">Healthcare</h3><p>Credentialed clinical and support staff, screened for compliance from day one.</p><span class="more">Healthcare staffing &rarr;</span></a>
     <a class="card linked" href="/industries/administrative/"><h3 class="mt0">Administrative</h3><p>Front-office and operations professionals who keep the business moving.</p><span class="more">Administrative staffing &rarr;</span></a>
     <a class="card linked" href="/industries/light-industrial/"><h3 class="mt0">Light Industrial</h3><p>Reliable warehouse, production, and logistics talent for every shift.</p><span class="more">Light industrial staffing &rarr;</span></a>
-    <a class="card linked" href="/industries/finance-accounting/"><h3 class="mt0">Finance &amp; Accounting</h3><p>Accountants, analysts, and finance leads &mdash; from close crunch to permanent hires.</p><span class="more">Finance staffing &rarr;</span></a>
+    <a class="card linked" href="/industries/finance-accounting/"><h3 class="mt0">Finance &amp; Accounting</h3><p>Accountants, analysts, and finance leads, from close crunch to permanent hires.</p><span class="more">Finance staffing &rarr;</span></a>
     <a class="card linked" href="/industries/technology/"><h3 class="mt0">Technology</h3><p>Engineers and IT professionals matched on stack, seniority, and team fit.</p><span class="more">Technology staffing &rarr;</span></a>
   </div>
 </div></section>
@@ -269,7 +269,7 @@ written.append(shell("/clients/", "Staffing Solutions for Employers | Elite Care
 <section class="hero short"><div class="wrap">
   {eyebrow("For Clients")}
   <h1>Staffing built on clarity, not volume</h1>
-  <p class="lead">You don&rsquo;t need a stack of resumes. You need the right person, vetted, and ready &mdash; with a recruiter who stays engaged well past day one.</p>
+  <p class="lead">You don&rsquo;t need a stack of resumes. You need the right person, vetted and ready, with a recruiter who stays engaged well past day one.</p>
   <div class="ctas"><a class="btn gold" href="/request-talent/">Request Talent</a><a class="btn ghost-dark" href="tel:{PHONE_TEL}">Call {PHONE}</a></div>
 </div></section>
 
@@ -278,11 +278,11 @@ written.append(shell("/clients/", "Staffing Solutions for Employers | Elite Care
 <section class="band alt"><div class="wrap">
   {eyebrow("Engagement models")}
   <h2>Three ways to work with us</h2>
-  <p>Every engagement starts with a discovery conversation about your roadmap &mdash; then we match the model to your risk tolerance and timeline.</p>
+  <p>Every engagement starts with a discovery conversation about your roadmap. Then we match the model to your risk tolerance and timeline.</p>
   <div class="grid c3" style="margin-top:26px">
-    <a class="card linked" href="/clients/contract-staffing/"><h3 class="mt0">Contract Staffing</h3><p>Vetted professionals on our payroll for surges, projects, and coverage &mdash; flexibility without the hiring admin.</p><span class="more">How contract works &rarr;</span></a>
+    <a class="card linked" href="/clients/contract-staffing/"><h3 class="mt0">Contract Staffing</h3><p>Vetted professionals on our payroll for surges, projects, and coverage. You get flexibility without the hiring admin.</p><span class="more">How contract works &rarr;</span></a>
     <a class="card linked" href="/clients/contract-to-hire/"><h3 class="mt0">Contract-to-Hire</h3><p>Work together first, commit when the fit is proven. The lowest-risk path to a permanent hire.</p><span class="more">How contract-to-hire works &rarr;</span></a>
-    <a class="card linked" href="/clients/direct-placement/"><h3 class="mt0">Direct Placement</h3><p>A retained-quality search for permanent roles &mdash; benchmarked, screened, and guaranteed by our process.</p><span class="more">How direct placement works &rarr;</span></a>
+    <a class="card linked" href="/clients/direct-placement/"><h3 class="mt0">Direct Placement</h3><p>A retained-quality search for permanent roles: benchmarked, screened, and guaranteed by our process.</p><span class="more">How direct placement works &rarr;</span></a>
   </div>
 </div></section>
 
@@ -292,7 +292,7 @@ written.append(shell("/clients/", "Staffing Solutions for Employers | Elite Care
     <h2>The ECC process</h2>
     <ol class="steps">
       <li><h3>Discovery conversation</h3><p>We map the role to your roadmap: the outcomes it owns, the team it joins, the market it hires from.</p></li>
-      <li><h3>A qualified slate in 48 hours</h3><p>Interviewed, screened, and reference-checked candidates &mdash; with compensation benchmarks, not guesses.</p></li>
+      <li><h3>A qualified slate in 48 hours</h3><p>Interviewed, screened, and reference-checked candidates, with compensation benchmarks instead of guesses.</p></li>
       <li><h3>Placement and follow-through</h3><p>Your dedicated recruiter stays with both sides well past day one. That&rsquo;s how retention reaches 92%.</p></li>
     </ol>
   </div>
@@ -300,7 +300,7 @@ written.append(shell("/clients/", "Staffing Solutions for Employers | Elite Care
     {eyebrow("Why one recruiter matters")}
     <h2>1:1, not a queue</h2>
     <p>Every search gets one dedicated recruiter who learns your business once and carries that context through every conversation. No hand-offs, no re-explaining, no generic req list.</p>
-    <p>That focus is why our first slate averages 48 hours &mdash; and why the people we place are still there a year later.</p>
+    <p>That focus is why our first slate averages 48 hours, and why the people we place are still there a year later.</p>
     <a class="btn dark" href="/request-talent/">Request Talent</a>
   </div>
 </div></div></section>
@@ -322,7 +322,7 @@ def service_page(slug, name, title, desc, lead, use_when, process_extra, risk):
     <ul class="checklist">{use_when}</ul>
     <h2 style="margin-top:1.2em">How it works</h2>
     <ol class="steps">
-      <li><h3>Discovery conversation</h3><p>We map the role to your roadmap &mdash; outcomes, team, market.</p></li>
+      <li><h3>Discovery conversation</h3><p>We map the role to your roadmap: outcomes, team, market.</p></li>
       <li><h3>Qualified slate in 48 hours</h3><p>Interviewed, screened, reference-checked, benchmarked.</p></li>
       {process_extra}
     </ol>
@@ -338,8 +338,8 @@ def service_page(slug, name, title, desc, lead, use_when, process_extra, risk):
 
 written.append(service_page("contract-staffing", "Contract Staffing",
   "Contract staffing that flexes with your workload",
-  "Contract staffing from Elite Career Compass: vetted professionals on our payroll for surges, projects, and coverage — without the hiring admin.",
-  "Vetted professionals on our payroll, on your team &mdash; for surges, projects, leaves, and seasonal demand.",
+  "Contract staffing from Elite Career Compass: vetted professionals on our payroll for surges, projects, and coverage, without the hiring admin.",
+  "Vetted professionals on our payroll, working on your team through surges, projects, leaves, and seasonal demand.",
   "<li>Workload is up but headcount is capped</li><li>A project needs skills you don&rsquo;t keep on staff</li><li>Coverage for leave or turnover, starting fast</li><li>You want output now and options later</li>",
   "<li><h3>Start, supported</h3><p>We handle payroll and the employment admin; your recruiter checks in with both sides through the assignment.</p></li>",
   "Minimal. Contractors are on our payroll, engagements flex with your demand, and you&rsquo;re never paying for a bench you don&rsquo;t need."))
@@ -348,17 +348,17 @@ written.append(service_page("contract-to-hire", "Contract-to-Hire",
   "Contract-to-hire: prove the fit before you commit",
   "Contract-to-hire staffing from Elite Career Compass: work together first, convert when the fit is proven. The lowest-risk path to a permanent hire.",
   "Work together first. Convert when the fit is proven. The lowest-risk path to a permanent hire.",
-  "<li>The role is permanent but the budget or certainty isn&rsquo;t &mdash; yet</li><li>Culture fit matters as much as the skills list</li><li>A past bad hire made the team cautious</li><li>You want to see real work, not interview performance</li>",
-  "<li><h3>Work together</h3><p>The candidate joins on contract; your recruiter gathers feedback from both sides at set milestones.</p></li><li><h3>Convert with confidence</h3><p>When it&rsquo;s working, conversion is simple and pre-agreed &mdash; no renegotiation surprises.</p></li>",
+  "<li>The role is permanent but the budget or certainty isn&rsquo;t there yet</li><li>Culture fit matters as much as the skills list</li><li>A past bad hire made the team cautious</li><li>You want to see real work, not interview performance</li>",
+  "<li><h3>Work together</h3><p>The candidate joins on contract; your recruiter gathers feedback from both sides at set milestones.</p></li><li><h3>Convert with confidence</h3><p>When it&rsquo;s working, conversion is simple and pre-agreed. No renegotiation surprises.</p></li>",
   "You evaluate real performance on real work before extending an offer. Most of the risk of a permanent hire is spent before you commit."))
 
 written.append(service_page("direct-placement", "Direct Placement",
   "Direct placement search for permanent roles",
-  "Direct placement recruiting from Elite Career Compass: a benchmarked, screened permanent-hire search with a dedicated recruiter — no placement, no fee.",
-  "A focused search for the permanent hire your roadmap depends on &mdash; benchmarked, screened, and delivered by one dedicated recruiter.",
+  "Direct placement recruiting from Elite Career Compass: a benchmarked, screened permanent-hire search with a dedicated recruiter. No placement, no fee.",
+  "A focused search for the permanent hire your roadmap depends on. Benchmarked, screened, and delivered by one dedicated recruiter.",
   "<li>A permanent role that&rsquo;s core to the roadmap</li><li>A confidential search or a hard-to-find profile</li><li>Compensation needs market data, not guesswork</li><li>Your team doesn&rsquo;t have time to run a real search</li>",
-  "<li><h3>Offer and land</h3><p>We manage offers with real compensation benchmarks and stay through onboarding &mdash; 92% of our placements are still in seat past one year.</p></li>",
-  "No placement, no fee. You pay when the right person accepts &mdash; and our follow-through past day one is why they stay."))
+  "<li><h3>Offer and land</h3><p>We manage offers with real compensation benchmarks and stay through onboarding. That&rsquo;s why 92% of our placements are still in seat past one year.</p></li>",
+  "No placement, no fee. You pay when the right person accepts, and our follow-through past day one is why they stay."))
 
 # ---- Industry pages
 def industry_page(slug, name, title, desc, lead, points, roles):
@@ -374,7 +374,7 @@ def industry_page(slug, name, title, desc, lead, points, roles):
   <div>
     <h2>What we screen for</h2>
     <ul class="checklist">{points}</ul>
-    <p>Contract, contract-to-hire, and direct placement &mdash; matched to how your team actually hires.</p>
+    <p>Contract, contract-to-hire, or direct placement, matched to how your team actually hires.</p>
   </div>
   <div>
     <h2>Roles we place</h2>
@@ -387,7 +387,7 @@ def industry_page(slug, name, title, desc, lead, points, roles):
 written.append(industry_page("healthcare", "Healthcare",
   "Healthcare staffing with compliance built in",
   "Healthcare staffing from Elite Career Compass: credentialed clinical and support professionals, screened for licensure and compliance before you ever see them.",
-  "Credentialed professionals for clinical and support roles &mdash; licensure verified and compliance screened before a resume ever reaches you.",
+  "Credentialed professionals for clinical and support roles. Licensure is verified and compliance screened before a resume ever reaches you.",
   "<li>Active licensure and certifications, verified</li><li>Immunization and background requirements met up front</li><li>Experience matched to your care setting and patient volume</li><li>Reliability references from clinical supervisors</li>",
   "<li>Medical assistants and patient care staff</li><li>Front-office, intake, and billing coordinators</li><li>Medical records and administrative support</li><li>Allied health and clinic operations roles</li>"))
 
@@ -395,13 +395,13 @@ written.append(industry_page("administrative", "Administrative",
   "Administrative professionals who run the office",
   "Administrative staffing from Elite Career Compass: executive assistants, office managers, and coordinators screened on the software and pace your office runs on.",
   "The front office is your first impression and your operational backbone. We staff it with people screened on the software, pace, and polish your business runs on.",
-  "<li>Proficiency on your actual stack &mdash; scheduling, CRM, office suites</li><li>Communication tested in writing and on the phone</li><li>Discretion and judgment references for executive support</li><li>Typing, data accuracy, and multi-tasking benchmarks</li>",
+  "<li>Proficiency on your actual software: scheduling, CRM, office suites</li><li>Communication tested in writing and on the phone</li><li>Discretion and judgment references for executive support</li><li>Typing, data accuracy, and multi-tasking benchmarks</li>",
   "<li>Executive and administrative assistants</li><li>Office managers and coordinators</li><li>Receptionists and front-desk staff</li><li>Data entry and records specialists</li>"))
 
 written.append(industry_page("light-industrial", "Light Industrial",
   "Light industrial staffing that shows up",
   "Light industrial staffing from Elite Career Compass: dependable warehouse, production, and logistics workers, safety-screened for every shift.",
-  "Every unfilled shift costs you throughput. We place dependable warehouse, production, and logistics workers &mdash; safety-screened and ready to work.",
+  "Every unfilled shift costs you throughput. We place dependable warehouse, production, and logistics workers who are safety-screened and ready to work.",
   "<li>Safety training and equipment certifications verified</li><li>Attendance and reliability references checked</li><li>Physical requirements and shift fit confirmed honestly</li><li>Forklift and machine operation validated where required</li>",
   "<li>Warehouse associates and pickers/packers</li><li>Machine operators and assemblers</li><li>Forklift operators and material handlers</li><li>Shipping, receiving, and inventory staff</li>"))
 
@@ -409,14 +409,14 @@ written.append(industry_page("finance-accounting", "Finance & Accounting",
   "Finance &amp; accounting talent, benchmarked to market",
   "Finance and accounting staffing from Elite Career Compass: accountants, analysts, and finance leads for the close, the audit, and the permanent seat.",
   "From close crunch to a permanent controller, we place finance professionals vetted on the systems, standards, and deadlines your numbers depend on.",
-  "<li>Systems experience verified &mdash; ERP, GL, reporting tools</li><li>Technical screening against the actual work of the role</li><li>Confidentiality and controls awareness referenced</li><li>Compensation benchmarked with current market data</li>",
+  "<li>Systems experience verified (ERP, GL, reporting tools)</li><li>Technical screening against the actual work of the role</li><li>Confidentiality and controls awareness referenced</li><li>Compensation benchmarked with current market data</li>",
   "<li>Staff and senior accountants</li><li>AP/AR specialists and payroll</li><li>Financial analysts and FP&amp;A</li><li>Controllers and accounting managers</li>"))
 
 written.append(industry_page("technology", "Technology",
   "Technology hires matched on stack and team fit",
   "Technology staffing from Elite Career Compass: engineers and IT professionals matched on stack, seniority, and how your team actually works.",
   "A resume keyword match isn&rsquo;t a fit. We match engineers and IT professionals on stack, seniority, and how your team actually builds.",
-  "<li>Hands-on screening against your stack, not buzzwords</li><li>Seniority calibrated to the work, not the title</li><li>Team-fit signals from real references</li><li>Contract, contract-to-hire, and direct &mdash; matched to project risk</li>",
+  "<li>Hands-on screening against your stack, not buzzwords</li><li>Seniority calibrated to the work, not the title</li><li>Team-fit signals from real references</li><li>Contract, contract-to-hire, or direct, matched to project risk</li>",
   "<li>Software engineers and developers</li><li>IT support and systems administrators</li><li>QA, data, and analytics roles</li><li>Project and product coordinators</li>"))
 
 # ---- Request Talent
@@ -433,9 +433,9 @@ written.append(shell("/request-talent/", "Request Talent | Elite Career Compass"
     {form("talent")}
   </div>
   <div>
-    <div class="promise"><span aria-hidden="true">&#128337;</span><p><strong>A recruiter responds within one business day</strong> &mdash; and your first qualified slate averages 48 hours.</p></div>
+    <div class="promise"><span aria-hidden="true">&#128337;</span><p><strong>A recruiter responds within one business day.</strong> Your first qualified slate averages 48 hours.</p></div>
     <div style="margin-top:22px">{stats_bar()}</div>
-    <p style="margin-top:22px">Not sure which engagement model fits? Start with the <a href="/clients/">clients overview</a> or just describe the need above &mdash; matching the model is our job, not yours.</p>
+    <p style="margin-top:22px">Not sure which engagement model fits? Start with the <a href="/clients/">clients overview</a> or just describe the need above. Matching the model is our job.</p>
   </div>
 </div></div></section>
 ''', band=False, current="clients"))
@@ -447,14 +447,14 @@ written.append(shell("/applicants/", "For Applicants | Elite Career Compass",
 <section class="hero short"><div class="wrap">
   {eyebrow("For Applicants")}
   <h1>A clear bearing on your next move</h1>
-  <p class="lead">You&rsquo;re not a resume in a pile here. One recruiter, real conversations, honest answers about pay and fit &mdash; and it never costs you a thing.</p>
+  <p class="lead">You&rsquo;re not a resume in a pile here. One recruiter, real conversations, honest answers about pay and fit. And it never costs you a thing.</p>
   <div class="ctas"><a class="btn gold" href="/apply/">Apply Now</a><a class="btn ghost-dark" href="/applicants/open-roles/">See Open Roles</a></div>
 </div></section>
 <section class="band"><div class="wrap">
   <div class="grid c3">
-    <div class="card"><h3 class="mt0">Always free to you</h3><p>Employers pay our fee &mdash; never you. Your pay is your pay.</p></div>
+    <div class="card"><h3 class="mt0">Always free to you</h3><p>Employers pay our fee, never you. Your pay is your pay.</p></div>
     <div class="card"><h3 class="mt0">Roles you won&rsquo;t find posted</h3><p>Most of our placements are never advertised. Applying puts you in the room.</p></div>
-    <div class="card"><h3 class="mt0">A human who stays</h3><p>Your recruiter sticks with you past day one &mdash; through the assignment and on to what&rsquo;s next.</p></div>
+    <div class="card"><h3 class="mt0">A human who stays</h3><p>Your recruiter sticks with you past day one, through the assignment and on to what&rsquo;s next.</p></div>
   </div>
 </div></section>
 <section class="band alt"><div class="wrap"><div class="split">
@@ -462,9 +462,9 @@ written.append(shell("/applicants/", "For Applicants | Elite Career Compass",
     {eyebrow("Three steps")}
     <h2>How it works</h2>
     <ol class="steps">
-      <li><h3>Apply in about 2 minutes</h3><p>Name, contact, field of work. Resume optional &mdash; no resume yet is fine.</p></li>
+      <li><h3>Apply in about 2 minutes</h3><p>Name, contact, field of work. Resume optional. No resume yet is fine.</p></li>
       <li><h3>Talk with your recruiter</h3><p>A real conversation within one business day: what you want, what you&rsquo;re great at, what pay looks like.</p></li>
-      <li><h3>Get placed &mdash; and stay supported</h3><p>Contract, contract-to-hire, or direct. Your recruiter stays with you well past day one.</p></li>
+      <li><h3>Get placed and stay supported</h3><p>Contract, contract-to-hire, or direct. Your recruiter stays with you well past day one.</p></li>
     </ol>
     <a class="btn dark" href="/applicants/how-it-works/">More about the process</a>
   </div>
@@ -496,10 +496,10 @@ written.append(shell("/applicants/how-it-works/", "How It Works for Applicants |
 <section class="band"><div class="wrap"><div class="split">
   <div>
     <ol class="steps">
-      <li><h3>Apply in about 2 minutes</h3><p>The form asks for your name, contact, and field of work. A resume helps but isn&rsquo;t required &mdash; plenty of great candidates start without one.</p></li>
-      <li><h3>Hear back within one business day</h3><p>A dedicated recruiter &mdash; one person, not a rotation &mdash; calls to talk about what you want, what you&rsquo;re strong at, and what pay honestly looks like in your market.</p></li>
+      <li><h3>Apply in about 2 minutes</h3><p>The form asks for your name, contact, and field of work. A resume helps but isn&rsquo;t required. Plenty of great candidates start without one.</p></li>
+      <li><h3>Hear back within one business day</h3><p>A dedicated recruiter (one person, not a rotation) calls to talk about what you want, what you&rsquo;re strong at, and what pay honestly looks like in your market.</p></li>
       <li><h3>Interview for real matches</h3><p>We only put you forward for roles we&rsquo;d take seriously ourselves, with straight answers on pay, schedule, and start date before you say yes.</p></li>
-      <li><h3>Start work, stay supported</h3><p>Your recruiter checks in past day one and stays your advocate &mdash; on this assignment and the next move after it.</p></li>
+      <li><h3>Start work, stay supported</h3><p>Your recruiter checks in past day one and stays your advocate on this assignment and the next move after it.</p></li>
     </ol>
   </div>
   <div>
@@ -507,7 +507,7 @@ written.append(shell("/applicants/how-it-works/", "How It Works for Applicants |
     <h3>Does this cost me anything?</h3>
     <p>No. Employers pay our fee, never you. Your pay is your pay.</p>
     <h3>Is staffing just dead-end temp work?</h3>
-    <p>Contract-to-hire is one of the most reliable doors into a permanent role &mdash; you prove yourself on the job instead of in an interview.</p>
+    <p>Contract-to-hire is one of the most reliable doors into a permanent role. You prove yourself on the job instead of in an interview.</p>
     <h3>Will I actually hear back?</h3>
     <p>Within one business day. If we can&rsquo;t help yet, we say so instead of going quiet.</p>
     <a class="btn gold" href="/apply/">Apply Now</a>
@@ -517,19 +517,19 @@ written.append(shell("/applicants/how-it-works/", "How It Works for Applicants |
 
 # ---- Open Roles
 written.append(shell("/applicants/open-roles/", "Open Roles | Elite Career Compass",
-  "Browse the fields Elite Career Compass places in — healthcare, administrative, light industrial, finance, and technology — and apply in about two minutes.",
+  "Browse the fields Elite Career Compass places in (healthcare, administrative, light industrial, finance, and technology) and apply in about two minutes.",
   f'''
 <section class="hero short"><div class="wrap">
   <p class="crumbs" style="color:var(--on-dark-muted)"><a href="/applicants/" style="color:var(--on-dark-muted)">For Applicants</a> / Open Roles</p>
   {eyebrow("For Applicants")}
   <h1>Open Roles</h1>
-  <p class="lead">Most of our placements are never posted publicly &mdash; clients bring us searches directly. The fastest way in is to apply.</p>
+  <p class="lead">Most of our placements are never posted publicly. Clients bring us searches directly. The fastest way in is to apply.</p>
 </div></section>
 <section class="band"><div class="wrap">
   <div class="roles-empty">
     <h2>New searches open every week</h2>
-    <p style="margin-left:auto;margin-right:auto">Public postings appear here as clients approve them. Don&rsquo;t wait on a listing &mdash; when you apply, your recruiter matches you against every open search, posted or not.</p>
-    <a class="btn gold" href="/apply/">Apply Now &mdash; it takes about 2 minutes</a>
+    <p style="margin-left:auto;margin-right:auto">Public postings appear here as clients approve them. Don&rsquo;t wait on a listing. When you apply, your recruiter matches you against every open search, posted or not.</p>
+    <a class="btn gold" href="/apply/">Apply Now (about 2 minutes)</a>
   </div>
   <h2 style="margin-top:48px">Pick your field to get started</h2>
   <div class="grid c3" style="margin-top:20px">
@@ -544,7 +544,7 @@ written.append(shell("/applicants/open-roles/", "Open Roles | Elite Career Compa
 
 # ---- Apply
 written.append(shell("/apply/", "Apply Now | Elite Career Compass",
-  "Apply in about two minutes — always free to candidates. A dedicated recruiter calls you back within one business day.",
+  "Apply in about two minutes. Always free to candidates. A dedicated recruiter calls you back within one business day.",
   f'''
 <section class="hero short"><div class="wrap">
   {eyebrow("For Applicants")}
@@ -558,7 +558,7 @@ written.append(shell("/apply/", "Apply Now | Elite Career Compass",
     <h3 style="margin-top:26px">What happens next</h3>
     <ul class="checklist">
       <li>A real conversation about what you want and what pay looks like</li>
-      <li>Matching against every open search &mdash; posted or not</li>
+      <li>Matching against every open search, posted or not</li>
       <li>Straight answers on pay, schedule, and start date before you commit</li>
     </ul>
     <p>Curious about the full process? Read <a href="/applicants/how-it-works/">how it works</a>.</p>
@@ -568,7 +568,7 @@ written.append(shell("/apply/", "Apply Now | Elite Career Compass",
 
 # ---- About
 written.append(shell("/about/", "About ECC | Elite Career Compass",
-  "Why Elite Career Compass exists: a people-first staffing and recruiting partner built on direction, knowledge, and trust — clarity, not volume.",
+  "Why Elite Career Compass exists: a people-first staffing and recruiting partner built on direction, knowledge, and trust.",
   f'''
 <section class="hero short"><div class="wrap">
   {eyebrow("About ECC")}
@@ -579,7 +579,7 @@ written.append(shell("/about/", "About ECC | Elite Career Compass",
   <div>
     <h2>People-first, on purpose</h2>
     <p>Volume staffing treats candidates as inventory and clients as order numbers. We built ECC on the opposite premise: one dedicated recruiter per search, a discovery conversation before any resume moves, and follow-through that lasts well past day one.</p>
-    <p>That&rsquo;s not a slogan &mdash; it&rsquo;s the operating model behind our numbers: first qualified slates in an average of 48 hours, and 92% of placements still in seat past one year.</p>
+    <p>This is how we actually operate, and it shows in our numbers: first qualified slates in an average of 48 hours, and 92% of placements still in seat past one year.</p>
     <h2>What we stand on</h2>
     <p><strong>Direction.</strong> Search strategy shaped around your roadmap, not a generic req list.<br>
     <strong>Knowledge.</strong> Market data, compensation benchmarks, and screening rigor on every search.<br>
@@ -612,15 +612,15 @@ written.append(shell("/about/results/", "Results | Elite Career Compass",
   <div class="split" style="margin-top:44px">
     <div>
       <h2>What the numbers mean</h2>
-      <p><strong>48 hours to a first qualified slate</strong> &mdash; not 48 hours to resumes. Every candidate on a slate has been interviewed, screened, and reference-checked before you see them.</p>
-      <p><strong>92% retention past one year</strong> is the number we&rsquo;re proudest of. Fast placements are easy; placements that last mean the match was right &mdash; for both sides.</p>
+      <p><strong>48 hours to a first qualified slate</strong> means vetted candidates, not a pile of resumes. Every candidate on a slate has been interviewed, screened, and reference-checked before you see them.</p>
+      <p><strong>92% retention past one year</strong> is the number we&rsquo;re proudest of. Fast placements are easy; placements that last mean the match was right for both sides.</p>
       <p><strong>1:1</strong> means one dedicated recruiter owns your search end to end. Context never gets lost in a hand-off.</p>
     </div>
     <div>
       <h2>Client &amp; candidate stories</h2>
-      <p>We&rsquo;re collecting stories from the employers and professionals we&rsquo;ve placed &mdash; with real names attached, because anonymous praise isn&rsquo;t proof. They&rsquo;ll appear here as they&rsquo;re approved.</p>
+      <p>We&rsquo;re collecting stories from the employers and professionals we&rsquo;ve placed, with real names attached, because anonymous praise isn&rsquo;t proof. They&rsquo;ll appear here as they&rsquo;re approved.</p>
       <p>Worked with us? We&rsquo;d love to feature yours: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-      <!-- TESTIMONIAL TEMPLATE — copy per approved story:
+      <!-- Testimonial template (copy once per approved story):
       <blockquote class="card">
         <p>&ldquo;Quote.&rdquo;</p>
         <footer><strong>Full Name</strong>, Title, Company</footer>
@@ -638,14 +638,14 @@ written.append(shell("/insights/", "Insights | Elite Career Compass",
 <section class="hero short"><div class="wrap">
   {eyebrow("Insights")}
   <h1>Clarity, in writing</h1>
-  <p class="lead">Short, useful reads for both sides of the table &mdash; no fluff, no jargon.</p>
+  <p class="lead">Short, useful reads for employers and job seekers.</p>
 </div></section>
 <section class="band"><div class="wrap">
   <div class="grid c2">
     <a class="card linked" href="/insights/contract-to-hire-vs-direct-placement/">
       <p class="eyebrow">For Clients</p>
       <h3 class="mt0">Contract-to-hire vs. direct placement: which fits your risk?</h3>
-      <p>The two paths to a permanent hire &mdash; and how to pick based on certainty, budget, and how badly a mis-hire would hurt.</p>
+      <p>The two paths to a permanent hire, and how to pick based on certainty, budget, and how badly a mis-hire would hurt.</p>
       <span class="more">Read the guide &rarr;</span>
     </a>
     <a class="card linked" href="/insights/how-to-work-with-a-recruiter/">
@@ -679,16 +679,16 @@ written.append(shell("/insights/contract-to-hire-vs-direct-placement/",
     eyebrow=eyebrow("For Clients"),
     h1="Contract-to-hire vs. direct placement: which fits your risk?",
     body='''
-<p>Both paths end in a permanent hire. The difference is when you commit &mdash; and what you know at that moment.</p>
+<p>Both paths end in a permanent hire. The difference is when you commit, and what you know at that moment.</p>
 <h2>Direct placement: commit on evidence gathered up front</h2>
 <p>In a direct placement search, the vetting happens before the offer: structured interviews, reference checks, compensation benchmarks, and a recruiter who has screened for the real work of the role. You commit on day one, on strong but indirect evidence.</p>
-<p>Choose it when the role is well-defined, the budget is certain, and speed to a committed hire matters &mdash; senior roles, confidential searches, and roles where asking someone to start on contract would shrink your candidate pool.</p>
+<p>Choose it when the role is well-defined, the budget is certain, and speed to a committed hire matters. Think senior roles, confidential searches, and roles where asking someone to start on contract would shrink your candidate pool.</p>
 <h2>Contract-to-hire: commit on evidence from the job itself</h2>
-<p>Contract-to-hire moves the decision after weeks of real work. You see actual output, actual collaboration, actual reliability &mdash; and the candidate sees the real job too. Conversion terms are agreed before the start, so there&rsquo;s no renegotiation cliff.</p>
+<p>Contract-to-hire moves the decision after weeks of real work. You see actual output, actual collaboration, actual reliability. The candidate sees the real job too. Conversion terms are agreed before the start, so there&rsquo;s no renegotiation cliff.</p>
 <p>Choose it when certainty is the constraint: a new role you&rsquo;re still shaping, a team recovering from a mis-hire, or a budget that opens next quarter but work that starts now.</p>
 <h2>A simple rule of thumb</h2>
-<p>Ask what a mis-hire would cost you &mdash; in money, momentum, and team trust. The higher that cost and the fuzzier the role, the more contract-to-hire earns its keep. The clearer the role and the more competitive the talent market, the more direct placement wins.</p>
-<p>And if you&rsquo;re not sure, that&rsquo;s literally our job: describe the need, and we&rsquo;ll recommend the model &mdash; not the other way around.</p>''',
+<p>Ask what a mis-hire would cost you in money, momentum, and team trust. The higher that cost and the fuzzier the role, the more contract-to-hire earns its keep. The clearer the role and the more competitive the talent market, the more direct placement wins.</p>
+<p>And if you&rsquo;re not sure, that&rsquo;s literally our job: describe the need, and we&rsquo;ll recommend the model.</p>''',
     cta='<a class="btn dark" href="/request-talent/">Request Talent</a>'),
   current="insights"))
 
@@ -700,20 +700,20 @@ written.append(shell("/insights/how-to-work-with-a-recruiter/",
     eyebrow=eyebrow("For Applicants"),
     h1="How to work with a recruiter (without getting ghosted)",
     body='''
-<p>A good recruiter is a free advocate with access to jobs that never get posted. A bad one is a black hole with a LinkedIn account. Here&rsquo;s how to tell the difference &mdash; and get the most from the good ones.</p>
+<p>A good recruiter is a free advocate with access to jobs that never get posted. A bad one is a black hole with a LinkedIn account. Here&rsquo;s how to tell the difference and get the most from the good ones.</p>
 <h2>First, know how the money works</h2>
-<p>The employer pays the recruiting fee. Always. If anyone asks <em>you</em> to pay to be placed, walk away &mdash; that&rsquo;s not how legitimate staffing works. Your pay is your pay.</p>
+<p>The employer pays the recruiting fee. Always. If anyone asks <em>you</em> to pay to be placed, walk away. Legitimate staffing doesn&rsquo;t work that way. Your pay is your pay.</p>
 <h2>Questions to ask in the first call</h2>
 <ul>
-<li><strong>&ldquo;Will I work with you specifically?&rdquo;</strong> One consistent recruiter beats a rotating queue &mdash; context is everything.</li>
+<li><strong>&ldquo;Will I work with you specifically?&rdquo;</strong> One consistent recruiter beats a rotating queue because context matters.</li>
 <li><strong>&ldquo;What&rsquo;s the actual pay range?&rdquo;</strong> A straight answer is a green flag. &ldquo;Competitive&rdquo; is not an answer.</li>
-<li><strong>&ldquo;When will I hear back &mdash; either way?&rdquo;</strong> Good recruiters give a timeframe and keep it, including for a no.</li>
+<li><strong>&ldquo;When will I hear back, either way?&rdquo;</strong> Good recruiters give a timeframe and keep it, including for a no.</li>
 <li><strong>&ldquo;Is this contract, contract-to-hire, or direct?&rdquo;</strong> Each is fine; not knowing which is not.</li>
 </ul>
 <h2>How to be the candidate recruiters fight for</h2>
-<p>Be reachable, be honest about what you want (including pay), and tell your recruiter about every other process you&rsquo;re in. None of that hurts you &mdash; it lets them move faster and negotiate better on your behalf.</p>
+<p>Be reachable, be honest about what you want (including pay), and tell your recruiter about every other process you&rsquo;re in. None of that hurts you. It lets them move faster and negotiate better on your behalf.</p>
 <h2>The red flags</h2>
-<p>Vague answers on pay. Pressure to accept on the spot. Radio silence after an interview they arranged. Any fee, ever. If you hit two of these, find a better advocate &mdash; they exist, and they cost you nothing.</p>''',
+<p>Vague answers on pay. Pressure to accept on the spot. Radio silence after an interview they arranged. Any fee, ever. If you hit two of these, find a better advocate. Good ones exist, and they cost you nothing.</p>''',
     cta='<a class="btn gold" href="/apply/">Apply Now</a>'),
   current="insights"))
 
@@ -755,7 +755,7 @@ def thanks(kind, h1, msg, links):
 </div></section>''', band=False)
 
 written.append(thanks("talent", "Your request is in",
-  "A dedicated recruiter will respond within one business day &mdash; and your first qualified slate averages 48 hours. Need us sooner? Call " + PHONE + ".",
+  "A dedicated recruiter will respond within one business day, and your first qualified slate averages 48 hours. Need us sooner? Call " + PHONE + ".",
   '<a class="btn gold" href="/clients/">Explore engagement models</a><a class="btn ghost-dark" href="/about/results/">See our results</a>'))
 written.append(thanks("apply", "Application received",
   "Your recruiter will call within one business day. In the meantime, see how the process works so you know exactly what to expect.",
@@ -772,7 +772,7 @@ written.append(shell("/privacy/", "Privacy Policy | Elite Career Compass",
   f'''
 <section class="hero short"><div class="wrap">{eyebrow("Legal")}<h1>Privacy Policy</h1></div></section>
 <section class="band"><div class="wrap"><div class="prose">
-<p>Elite Career Compass LLC (&ldquo;ECC,&rdquo; &ldquo;we&rdquo;) collects the information you submit through this site &mdash; such as your name, contact details, and resume &mdash; solely to provide staffing and recruiting services: responding to your inquiry, matching candidates with roles, and communicating with you about them.</p>
+<p>Elite Career Compass LLC (&ldquo;ECC,&rdquo; &ldquo;we&rdquo;) collects the information you submit through this site (such as your name, contact details, and resume) solely to provide staffing and recruiting services: responding to your inquiry, matching candidates with roles, and communicating with you about them.</p>
 <p>We do not sell your personal information. We share it only as needed to provide our services (for example, presenting a candidate&rsquo;s profile to a hiring client with the candidate&rsquo;s knowledge) or as required by law.</p>
 <p>Form submissions from this site are delivered to <a href="mailto:{EMAIL}">{EMAIL}</a>. To ask what information we hold about you, or to request correction or deletion, email us at that address.</p>
 {LEGAL_NOTE}
@@ -793,8 +793,8 @@ written.append(shell("/accessibility/", "Accessibility | Elite Career Compass",
   f'''
 <section class="hero short"><div class="wrap">{eyebrow("Accessibility")}<h1>Accessibility</h1></div></section>
 <section class="band"><div class="wrap"><div class="prose">
-<p>We want everyone to be able to use this site &mdash; including people using screen readers, keyboard navigation, or magnification. The site is built with semantic headings, labeled forms, visible focus states, and color contrast aimed at WCAG&nbsp;2.1&nbsp;AA.</p>
-<p>If anything on this site is hard for you to use, tell us and we&rsquo;ll fix it: <a href="mailto:{EMAIL}">{EMAIL}</a> or <a href="tel:{PHONE_TEL}">{PHONE}</a>. If a form is a barrier, you can complete any request &mdash; hiring, applying, or general &mdash; entirely by phone or email.</p>
+<p>We want everyone to be able to use this site, including people using screen readers, keyboard navigation, or magnification. The site is built with semantic headings, labeled forms, visible focus states, and color contrast aimed at WCAG&nbsp;2.1&nbsp;AA.</p>
+<p>If anything on this site is hard for you to use, tell us and we&rsquo;ll fix it: <a href="mailto:{EMAIL}">{EMAIL}</a> or <a href="tel:{PHONE_TEL}">{PHONE}</a>. If a form is a barrier, you can complete any request (hiring, applying, or general) entirely by phone or email.</p>
 </div></div></section>''', band=False))
 
 # ---- 404 (flat file for host config)
@@ -804,7 +804,7 @@ written.append(shell("/404.html", "Page Not Found | Elite Career Compass",
 <section class="hero short"><div class="wrap">
   {eyebrow("404")}
   <h1>Off the map</h1>
-  <p class="lead">That page doesn&rsquo;t exist &mdash; but your bearing is easy to recover.</p>
+  <p class="lead">That page doesn&rsquo;t exist, but your bearing is easy to recover.</p>
   <div class="ctas">
     <a class="btn gold" href="/request-talent/">Request Talent</a>
     <a class="btn ghost-dark" href="/apply/">Apply Now</a>
@@ -819,11 +819,11 @@ written.append(shell("/admin/", "Owner Console | Elite Career Compass",
 <section class="hero short"><div class="wrap">
   {eyebrow("Owner console")}
   <h1>Manage eccstaffing.com</h1>
-  <p class="lead">Every platform that runs this site, in one place. Each link below goes to that platform&rsquo;s own secure sign-in &mdash; this page stores no passwords and grants no access by itself.</p>
+  <p class="lead">Every platform that runs this site, in one place. Each link below goes to that platform&rsquo;s own secure sign-in. This page stores no passwords and grants no access by itself.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
-  <div class="note"><strong>Keep this page private.</strong> It isn&rsquo;t linked from the site and is excluded from search engines, but the real protection is at your host: enable password protection (Deployment Protection on Vercel, password protection on Netlify, or HTTP basic auth) for <code>/admin/</code> &mdash; or simply bookmark the platform links and delete this page.</div>
+  <div class="note"><strong>Keep this page private.</strong> It isn&rsquo;t linked from the site and is excluded from search engines, but the real protection is at your host: enable password protection (Deployment Protection on Vercel, password protection on Netlify, or HTTP basic auth) for <code>/admin/</code>, or simply bookmark the platform links and delete this page.</div>
 
   <h2 style="margin-top:34px">Sign in to your platforms</h2>
   <div class="grid c3" style="margin-top:20px">
@@ -831,7 +831,7 @@ written.append(shell("/admin/", "Owner Console | Elite Career Compass",
     <a class="card linked" href="https://formsubmit.co/" rel="noopener"><h3 class="mt0">Form delivery</h3><p>FormSubmit relays the three site forms to your inbox. Manage or reset the connection for info@eccstaffing.com here.</p><span class="more">Open FormSubmit &rarr;</span></a>
     <a class="card linked" href="https://vercel.com/login" rel="noopener"><h3 class="mt0">Hosting &amp; deploys</h3><p>Where the site is served. Redeploy, view traffic, set the custom domain, and turn on password protection for this page.</p><span class="more">Open hosting dashboard &rarr;</span></a>
     <a class="card linked" href="https://search.google.com/search-console" rel="noopener"><h3 class="mt0">Google Search Console</h3><p>How the site appears in Google. Submit <code>/sitemap.xml</code> once after launch, then watch queries and indexing here.</p><span class="more">Open Search Console &rarr;</span></a>
-    <a class="card linked" href="https://business.google.com/" rel="noopener"><h3 class="mt0">Google Business Profile</h3><p>Your listing on Google Maps and local search &mdash; and where client reviews accumulate. Decide the Texas/Austin geo question here.</p><span class="more">Open Business Profile &rarr;</span></a>
+    <a class="card linked" href="https://business.google.com/" rel="noopener"><h3 class="mt0">Google Business Profile</h3><p>Your listing on Google Maps and local search, and where client reviews accumulate. Decide the Texas/Austin geo question here.</p><span class="more">Open Business Profile &rarr;</span></a>
     <a class="card linked" href="https://www.linkedin.com/company/setup/new/" rel="noopener"><h3 class="mt0">LinkedIn</h3><p>The channel where staffing clients actually look. Keep the company page pointing at eccstaffing.com.</p><span class="more">Open LinkedIn &rarr;</span></a>
   </div>
 
@@ -841,14 +841,14 @@ written.append(shell("/admin/", "Owner Console | Elite Career Compass",
       <h3>Routine tasks</h3>
       <ul class="checklist">
         <li><strong>Test the forms monthly:</strong> submit <a href="/request-talent/">Request Talent</a>, <a href="/apply/">Apply</a>, and <a href="/contact/">Contact</a>, and confirm each lands at info@eccstaffing.com</li>
-        <li><strong>Answer within the promise:</strong> the site tells clients one business day and candidates one business day &mdash; the inbox SLA is the brand</li>
+        <li><strong>Answer within the promise:</strong> the site tells clients one business day and candidates one business day, so inbox response time is the brand</li>
         <li><strong>Add real proof as it arrives:</strong> approved testimonials go into <a href="/about/results/">Results</a> (template is in the page&rsquo;s HTML comments)</li>
         <li><strong>Post roles when public:</strong> real openings replace the &ldquo;apply anyway&rdquo; state on <a href="/applicants/open-roles/">Open Roles</a></li>
       </ul>
     </div>
     <div>
       <h3>Editing pages</h3>
-      <p>The site is plain HTML &mdash; any developer (or Claude) can edit it. Source of truth lives in the project repo; <code>_build/generate.py</code> regenerates every page and <code>_build/audit.py</code> re-verifies links, email routing, and accessibility before deploying.</p>
+      <p>The site is plain HTML, so any web developer can edit it. Source of truth lives in the project repo; <code>_build/generate.py</code> regenerates every page and <code>_build/audit.py</code> re-verifies links, email routing, and accessibility before deploying.</p>
       <h3>Launch checklist</h3>
       <ul class="checklist">
         <li>info@eccstaffing.com mailbox live and monitored</li>
