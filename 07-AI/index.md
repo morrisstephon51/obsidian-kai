@@ -16,7 +16,7 @@ Master index for all AI-related work, agents, and generated outputs.
 | Category | Purpose | Files |
 |---|---|---|
 | **[[agents/index\|Agent Fleet]]** | 8 supervisor agents + command center | `agents/` |
-| **[[Registry\|Agent Registry]]** | Master status & configuration | `Registry.md` |
+| **[[Agent Registry - Master Status\|Agent Registry]]** | Master status & configuration | `Agent Registry - Master Status.md` |
 | **[[Skills Inventory\|Skills Inventory]]** | 12 personal Claude Code skills, incl. `/ultimate` | `~/.claude/skills/` |
 | **Content Pipeline** | LinkedIn posts, marketing outputs | `agents/content-pipeline/` |
 | **Copilot Prompts** | Custom Claude prompts for this vault | `copilot-custom-prompts/` |
@@ -99,7 +99,7 @@ Each agent has a `state.md` file tracking:
 - **Config:** API keys, model, parameters
 - **Output:** Recent results or logs
 
-See [[Registry|Agent Registry]] for master state dashboard.
+See [[Agent Registry - Master Status|Agent Registry]] for master state dashboard.
 
 ---
 
@@ -183,10 +183,10 @@ Open `chatroom/feed.md` for real-time output
 
 ## 📚 Related
 
-- [[../02-PROJECTS|Active Projects]] — Where agent work lands
+- [[02-PROJECTS/index|Active Projects]] — Where agent work lands
 - [[../05-MAPS/Command Center|Command Center]] — Stefan's master dashboard
 - [[../09-SYSTEM/CLAUDE.md|CLAUDE.md]] — Full agent system architecture
-- [[Registry|Agent Registry]] — Master registry & configuration
+- [[Agent Registry - Master Status|Agent Registry]] — Master registry & configuration
 - [[agents/index|Agents Hub]] — Detailed agent documentation
 
 ---

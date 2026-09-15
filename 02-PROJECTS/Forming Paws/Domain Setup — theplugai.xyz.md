@@ -43,4 +43,5 @@ Delete any pre-existing A or CNAME on `@` (registrars often park one there). Lea
 - [x] DNS records added (verified 2026-08-04: all four A records + www CNAME correct)
 - [x] Custom domain saved in GitHub Pages settings
 - [ ] HTTPS enforced ← last remaining step: Settings → Pages → tick "Enforce HTTPS" (cert already issued; http currently serves without redirect)
+  - Needs Stefan: requires manually ticking "Enforce HTTPS" in GitHub Pages settings — an external UI action outside this repo's files, so the maintenance agent can't complete it (reviewed 2026-09-15).
 - [x] Claude verified live: landing, join, demo, assets, waitlist API, and old-URL redirects (QR keeps working) — see Status Log 2026-08-04

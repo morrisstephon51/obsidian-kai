@@ -13,7 +13,7 @@ Branch `feat/admin-console-role-system`, 9 commits, 18 files, +2,109 −44 vs `m
 
 ## The arc
 
-Stefan asked for "an admin panel and console for administrators" plus "a page for posting and selling puppies," and asked that the [[OpenClaw AI Organization|AI Organization]] be the thing that did it. Both halves of that turned out to need correcting before any code was written.
+Stefan asked for "an admin panel and console for administrators" plus "a page for posting and selling puppies," and asked that the [[09-SYSTEM/OpenClaw-AI-Org/index|AI Organization]] be the thing that did it. Both halves of that turned out to need correcting before any code was written.
 
 | Step | Outcome |
 |---|---|
@@ -136,4 +136,4 @@ Plan 2 (puppy listings) is unwritten and needs one decision at the top: listing 
 
 Also deferred deliberately: **admin dog management.** `dogs_select_own` restricts SELECT to `owner_id = auth.uid()`, so an admin cannot see another member's dogs at all. That needs its own migration and its own privacy conversation.
 
-Related: [[Status Log]] · [[project-overview]] · [[Design System]] · [[OpenClaw AI Organization]]
+Related: [[Status Log]] · [[project-overview]] · [[Design System]] · [[09-SYSTEM/OpenClaw-AI-Org/index|OpenClaw AI Organization]]
