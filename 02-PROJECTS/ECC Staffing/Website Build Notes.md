@@ -52,3 +52,22 @@ The link is private until shared — open it and use the page's share menu to se
 
 ---
 *Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/ECC Staffing/Website Strategy|Website Strategy]]*
+
+## Addendum: Client review prep (2026-09-15)
+
+**Review:** Tue Sep 15, 8:30pm CT, video call, Stefan screen-sharing.
+
+**Live-site facts (checked 2026-09-15):** current eccstaffing.com runs on Lovable (IP 185.158.133.1), now 5 pages (Home, Clients, Applicants, Insights, About), no /contact, no forms. Misspelled `info@eccstsffing.com` is still in the footer of every page, and that typo domain is unregistered. Registrar + DNS: Hover (paid through 2027-07-04). Email: Google Workspace (`MX 1 smtp.google.com`). No SPF, no DKIM, DMARC `p=none`. Record TTL 300.
+
+**Copy pass:** em dashes cut from 74 to 1 (the client's own verbatim hero line kept). "(or Claude)" removed from /admin/. generate.py regenerated; audit.py passes 29/29; Playwright check 28 pages x 5 widths (1440 to 320px), 0 problems.
+
+**Preview:** Cloudflare Pages project `ecc-staffing` (https://ecc-staffing.pages.dev), uploaded via dashboard from `~/Desktop/ecc-staffing-preview`. Built with noindex header + disallow-all robots, forms show a "not connected yet" note, /admin/ excluded. The Aug 31 claude.ai preview link was already sent to the client; turn off its sharing after tonight.
+
+**Hosting facts (verified 2026-09-15):** Vercel Hobby forbids commercial use (Pro $20/mo). Cloudflare Pages is free, but an apex domain requires moving DNS to Cloudflare (copy MX/verification/DMARC exactly first). Netlify works with DNS kept at Hover (free with a credit cap that pauses sites, or $9/mo). Lovable needs a paid plan (from $25/mo) to keep a custom domain.
+
+**Docs (Stefan's Google Drive):**
+- Launch plan (client-facing): https://docs.google.com/document/d/1Rm4Ayme3pm3JlnMSsCjIsFEojmEoPLYF3dk5Qoy6iCw/edit
+- Change requests sheet: https://docs.google.com/spreadsheets/d/1_rYdfjCanMu2Lz1SgirmCtoBy-20YAC8yqdq5xwyCNM/edit
+- Review talk track (private): https://docs.google.com/document/d/1nEA_KsLGPbKQ7VUwW2iSaeimBVxc-4U5WCf2ZnkSMQE/edit
+
+**Tooling note:** `wrangler login` can't finish from Claude's sandbox (the OAuth callback to localhost is blocked). Use a dashboard upload or a CLOUDFLARE_API_TOKEN.
