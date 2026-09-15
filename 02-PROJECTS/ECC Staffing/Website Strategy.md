@@ -1,4 +1,4 @@
-# Elite Career Compass LLC — Complete Website Strategy
+	 # Elite Career Compass LLC — Complete Website Strategy
 
 **Prepared:** 2026-08-31 · **Site:** eccstaffing.com · **Brand:** Elite Career Compass LLC (ECC), Staffing & Recruiting
 **Status:** ✅ Built and audited — see [[Website Build Notes]] and the `website/` folder (28 pages, deploy-ready).
