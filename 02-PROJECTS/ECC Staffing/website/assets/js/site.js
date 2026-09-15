@@ -1,4 +1,4 @@
-// Elite Career Compass — site behavior
+// Elite Career Compass - site behavior
 (function () {
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('nav.primary');
