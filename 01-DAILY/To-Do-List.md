@@ -39,5 +39,12 @@
       ## 💰 Income Plan — this week
       - [ ] Mon: send the Forming Paws member survey (from founder@theplugai.info)
       - [ ] Mon–Tue: build foundation — services page at theplugai.info/websites, one sender identity, free Cal.com link, $175 Stripe deposit link, free Google Voice number
-      - [ ] Mon–Tue: text 30 people the referral ask
+      - [ ] Mon–Tue: text 30 people the referral ask - [ ] Tue: review the CHA brief
+    - [ ] Wed (Sep 16): CHA meeting w/ Niquenya — leave with answers on structure, license, Section 3 timing, voucher income impact
+      - [ ] Wed–Fri: preview-first calls, 20/day
+      - [ ] After entity type is settled: update Forming Paws site copy (removes "nonprofit"/501(c)(3) in 22 places across 10 files)
+
+      ## 📱 Devices
+      - [ ] Finish iPad/iPhone Obsidian sync setup (GitHub PAT + git plugin on mobile)
+
 
