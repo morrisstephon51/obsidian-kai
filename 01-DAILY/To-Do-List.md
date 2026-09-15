@@ -1,4 +1,20 @@
- # My To-Do-List  —  Action Items -things only I can do
+---
+type: todo
+updated: 2026-09-15
+tags:
+  - daily
+  - tasks
+related:
+  - "[[02-PROJECTS/Forming Paws/Chicago Outreach Kit]]"
+  - "[[02-PROJECTS/Forming Paws/project-overview]]"
+  - "[[02-PROJECTS/ECC Staffing/Website Build Notes]]"
+  - "[[02-PROJECTS/ECC Staffing/Website Strategy]]"
+  - "[[02-PROJECTS/AI Consulting Business/project-overview]]"
+  - "[[02-PROJECTS/The Plug AI Progress]]"
+  - "[[02-PROJECTS/Finance/Income Plan — 2026-09-13]]"
+  - "[[02-PROJECTS/Finance/CHA Meeting Brief — 2026-09-16]]"
+---
+# My To-Do-List  —  Action Items -things only I can do
     Updated 2026-09-15
 
       ## ✅ Done
