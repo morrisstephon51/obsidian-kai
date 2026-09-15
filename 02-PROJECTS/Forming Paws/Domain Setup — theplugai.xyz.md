@@ -42,5 +42,5 @@ Delete any pre-existing A or CNAME on `@` (registrars often park one there). Lea
 - [x] Domain purchased (2026-08-03)
 - [x] DNS records added (verified 2026-08-04: all four A records + www CNAME correct)
 - [x] Custom domain saved in GitHub Pages settings
-- [ ] HTTPS enforced ← last remaining step: Settings → Pages → tick "Enforce HTTPS" (cert already issued; http currently serves without redirect)
+- [x] HTTPS enforced (2026-09-15: set `https_enforced=true` via GitHub Pages API; verified http://theplugai.xyz 308-redirects to https, https serves 200)
 - [x] Claude verified live: landing, join, demo, assets, waitlist API, and old-URL redirects (QR keeps working) — see Status Log 2026-08-04
