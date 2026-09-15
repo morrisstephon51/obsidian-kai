@@ -61,3 +61,5 @@ Before rebuilding anything here, check `~/ai-consulting-business/` for current s
 ---
 
 *Created 2026-08-06 from session memory + live filesystem verification. The project itself dates to 2026-07-17.*
+
+*Backlinks: [[01-DAILY/To-Do-List|To-Do-List]]*
