@@ -19,4 +19,11 @@
       ## 💼 ECC Staffing — launch (site is built & audited; these are yours)
       - [ ] Confirm info@eccstaffing.com mailbox exists and is monitored (assign an SLA owner)
       - [ ] Deploy website/ to the host at the domain root, over HTTPS
-      - [ ] Submit each of the 3 forms from the live domain; click FormSubmit's activation email at info@; confirm delivery incl. resume attachment
+      - [ ] Submit each of the 3 forms from the live domain; click FormSubmit's activation email at info@; confirm delivery incl. resume attachment - [ ] Point host 404 handling at /404.html
+      - [ ] Have counsel review the /privacy/ and /terms/ drafts
+      - [ ] (Phase 2) real testimonials, client logos, team photos, live roles, Google Business Profile decision
+
+      ## 🤖 AI Consulting Business
+      - [ ] Add Perplexity API key (claude mcp add perplexity --env PERPLEXITY_API_KEY=...)
+      - [ ] Authorize the Gmail MCP connector via claude.ai connector settings
+
