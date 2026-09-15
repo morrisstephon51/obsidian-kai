@@ -49,3 +49,6 @@ Complete static rebuild of eccstaffing.com implementing the strategy — 28 page
 Shareable preview of the full site (all 29 pages, navigable, forms disabled):
 **https://claude.ai/code/artifact/9779ff0d-5c23-4490-a754-49679eb266a4**
 The link is private until shared — open it and use the page's share menu to send it to the client. Regenerate after edits with `python3 _build/preview.py` and republish. (Direct Vercel deployment was attempted but the Vercel–GitHub integration doesn't have access to this repo; linking it in the Vercel dashboard would enable auto-deploy from `02-PROJECTS/ECC Staffing/website/`.)
+
+---
+*Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/ECC Staffing/Website Strategy|Website Strategy]]*
