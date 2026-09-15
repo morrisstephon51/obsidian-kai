@@ -254,7 +254,8 @@ However:
 - [ ] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
 - [ ] Fix Archive/ paths
 - [ ] Fix relative path depths (../../../../ corrections)
-- [ ] Test all links in Home and Core Relationships Map
+- [x] Test all links in Home and Core Relationships Map
+  - (done 2026-09-15: verified by automated link-check — every `[[wikilink]]` in `00 Home.md` and `Core Relationships Map.md` resolves to an existing file; the only unresolved token, `[[Core Foundation]]`, sits inside a fenced ASCII diagram, not a live link. Verified by link-check, not manually in the Obsidian app. Original Phase 1 fixes were completed 2026-07-23 — see [[Vault Repair - Completion Report 2026-07-23]].)
 
 ### Phase 2: Add Frontmatter (2-3 hours)
 
