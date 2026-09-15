@@ -25,5 +25,19 @@
 
       ## 🤖 AI Consulting Business
       - [ ] Add Perplexity API key (claude mcp add perplexity --env PERPLEXITY_API_KEY=...)
-      - [ ] Authorize the Gmail MCP connector via claude.ai connector settings
+      - [ ] Authorize the Gmail MCP connector via claude.ai connector settings - [ ] Verify the Cook County law-firm ranking against live Google reviews
+    - [ ] Build the empty Niche-2 (small business) prospect list
+    - [ ] Source attorney emails (likely by calling receptionists)
+
+    ## 🚀 The Plug AI
+    - [ ] Execute Phase 3 Week 1 (compliance monitor, cost anomaly, escalation automation)
+      - [ ] Execute Phase 3 Week 2 (validation, Phase 2 sign-off)
+      - [ ] Run Phase 2 re-verification (audit compliance before Oct 13)
+      - [ ] Get Stef's Phase 2 sign-off (approval gate — Sep 15)
+      - [ ] Oct 13 launch readiness audit
+
+      ## 💰 Income Plan — this week
+      - [ ] Mon: send the Forming Paws member survey (from founder@theplugai.info)
+      - [ ] Mon–Tue: build foundation — services page at theplugai.info/websites, one sender identity, free Cal.com link, $175 Stripe deposit link, free Google Voice number
+      - [ ] Mon–Tue: text 30 people the referral ask
 
