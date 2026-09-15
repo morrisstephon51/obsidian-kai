@@ -21,6 +21,7 @@ related:
       - [x] Forming Paws — Enforce HTTPS on theplugai.xyz (completed 2026-09-15)
 
       ## 🐾 Forming Paws — Chicago Outreach (this week, ~90 min)
+      _→ [[02-PROJECTS/Forming Paws/Chicago Outreach Kit|Chicago Outreach Kit]] · [[02-PROJECTS/Forming Paws/project-overview|Project Overview]]_
       - [ ] Send Email 1 (vet partnership) to the 5 clinics below
       - [ ] Join 3 of the Chicago Facebook dog groups; comment for a week — DON'T pitch yet
       - [ ] Day 7+: post Email 2 in the group where you're most active
@@ -33,6 +34,7 @@ related:
       - [ ] West Loop Veterinary Care — **info@westloopvet.com** · (312) 421-2275
 
       ## 💼 ECC Staffing — launch (site is built & audited; these are yours)
+      _→ [[02-PROJECTS/ECC Staffing/Website Build Notes|Website Build Notes]] · [[02-PROJECTS/ECC Staffing/Website Strategy|Website Strategy]]_
       - [ ] Confirm info@eccstaffing.com mailbox exists and is monitored (assign an SLA owner)
       - [ ] Deploy website/ to the host at the domain root, over HTTPS
       - [ ] Submit each of the 3 forms from the live domain; click FormSubmit's activation email at info@; confirm delivery incl. resume attachment - [ ] Point host 404 handling at /404.html
@@ -40,6 +42,7 @@ related:
       - [ ] (Phase 2) real testimonials, client logos, team photos, live roles, Google Business Profile decision
 
       ## 🤖 AI Consulting Business
+      _→ [[02-PROJECTS/AI Consulting Business/project-overview|Project Overview]]_
       - [ ] Add Perplexity API key (claude mcp add perplexity --env PERPLEXITY_API_KEY=...)
       - [ ] Authorize the Gmail MCP connector via claude.ai connector settings - [ ] Verify the Cook County law-firm ranking against live Google reviews
     - [ ] Build the empty Niche-2 (small business) prospect list
