@@ -61,7 +61,7 @@ The link is private until shared — open it and use the page's share menu to se
 
 **Copy pass:** em dashes cut from 74 to 1 (the client's own verbatim hero line kept). "(or Claude)" removed from /admin/. generate.py regenerated; audit.py passes 29/29; Playwright check 28 pages x 5 widths (1440 to 320px), 0 problems.
 
-**Preview:** Cloudflare Pages project `ecc-staffing` (https://ecc-staffing.pages.dev), uploaded via dashboard from `~/Desktop/ecc-staffing-preview`. Built with noindex header + disallow-all robots, forms show a "not connected yet" note, /admin/ excluded. The Aug 31 claude.ai preview link was already sent to the client; turn off its sharing after tonight.
+**Preview:** Cloudflare Workers (assets upload) (https://soft-cloud-48db.morrisstephon51.workers.dev), uploaded via dashboard from `~/Desktop/ecc-staffing-preview`. Built with noindex header + disallow-all robots, forms show a "not connected yet" note, /admin/ excluded. The Aug 31 claude.ai preview link was already sent to the client; turn off its sharing after tonight.
 
 **Hosting facts (verified 2026-09-15):** Vercel Hobby forbids commercial use (Pro $20/mo). Cloudflare Pages is free, but an apex domain requires moving DNS to Cloudflare (copy MX/verification/DMARC exactly first). Netlify works with DNS kept at Hover (free with a credit cap that pauses sites, or $9/mo). Lovable needs a paid plan (from $25/mo) to keep a custom domain.
 
