@@ -52,7 +52,7 @@ related:
     _→ [[02-PROJECTS/The Plug AI Progress|Progress Log]] · [[02-PROJECTS/The Plug AI/project-overview|Project Overview]]_
     - [ ] Execute Phase 3 Week 1 (compliance monitor, cost anomaly, escalation automation)
       - [ ] Execute Phase 3 Week 2 (validation, Phase 2 sign-off)
-      - [ ] Run Phase 2 pulled up over here cause I got the issue with the email down already to and I'm listening though so keep re-verification (audit compliance before Oct 13)
+      - [ ] Run Phase 2 re-verification (audit compliance before Oct 13)
       - [ ] Get Stef's Phase 2 sign-off (approval gate — Sep 15)
       - [ ] Oct 13 launch readiness audit
 
