@@ -1,4 +1,4 @@
-# ECC Website — Build Notes
+One of the days I want is this to be very easy to you I'm not sure maybe I'm not sure if we need like the industries# ECC Website — Build Notes
 
 **Built:** 2026-08-31 · **Location:** [[Website Strategy]] → `website/` folder in this project
 **Status:** Built, audited (3 passes), ready to deploy. Pre-launch checklist below.
