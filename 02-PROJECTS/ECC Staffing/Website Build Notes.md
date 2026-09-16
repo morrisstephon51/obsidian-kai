@@ -67,7 +67,7 @@ The link is private until shared — open it and use the page's share menu to se
 
 **Docs (Stefan's Google Drive):**
 - Launch plan (client-facing): https://docs.google.com/document/d/1Rm4Ayme3pm3JlnMSsCjIsFEojmEoPLYF3dk5Qoy6iCw/edit
-- Change requests sheet: https://docs.google.com/spreadsheets/d/1_rYdfjCanMu2Lz1SgirmCtoBy-20YAC8yqdq5xwyCNM/edit
-- Review talk track (private): https://docs.google.com/document/d/1nEA_KsLGPbKQ7VUwW2iSaeimBVxc-4U5WCf2ZnkSMQE/edit
+- Change requests sheet: https://docs.google.com/spreadsheets/d/1aj77_95cDzdh5d3bs0HlwGlMH_oFmgkJRBXVfK55W4E/edit
+- Review talk track (private): https://docs.google.com/document/d/1O43mrKOK4w_vw0d8RTmb0KQ_HCQihugz_saau3XR2bM/edit
 
 **Tooling note:** `wrangler login` can't finish from Claude's sandbox (the OAuth callback to localhost is blocked). Use a dashboard upload or a CLOUDFLARE_API_TOKEN.
