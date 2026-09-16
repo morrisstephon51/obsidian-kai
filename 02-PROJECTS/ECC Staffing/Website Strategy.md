@@ -1,4 +1,4 @@
-No conversion path so the footer email was misspelled I got the single page site the NAV shows clients applicant insights about ECC but there are no separate pages	    # Elite Career Compass LLC — Complete Website Strategy
+No conversion path so the footer email was misspelled I got the single page site the NAV shows clients applicant insights about ECC but there are no separate pages wait hold on but yeah I'm sure it's the DNS record like this thing is still talking	    # Elite Career Compass LLC — Complete Website Strategy
 
 **Prepared:** 2026-08-31 · **Site:** eccstaffing.com · **Brand:** Elite Career Compass LLC (ECC), Staffing & Recruiting
 **Status:** ✅ Built and audited — see [[Website Build Notes]] and the `website/` folder (28 pages, deploy-ready).
