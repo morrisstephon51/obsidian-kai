@@ -67,7 +67,7 @@ related:
 
       ## 📱 Devices
       _→ [[09-SYSTEM/Claude Code + Obsidian Master Guide|Claude Code + Obsidian Master Guide]]_
-      - [ ] Finish iPad/iPhone Obsidian sync setup (GitHub PAT + git plugin on mobile)
+      - [ ] Finish iPad/iPhone I like I like claude I use claude I use perplexity I use I don't use ChatGPT that's cliché but and then it's always I mean claude is really the platform for developers because they have like a whole back in Obsidian sync setup (GitHub PAT + git plugin on mobile)
 
 ---
 
