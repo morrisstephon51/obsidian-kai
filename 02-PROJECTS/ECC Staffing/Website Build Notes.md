@@ -68,6 +68,8 @@ The link is private until shared — open it and use the page's share menu to se
 **Docs (Stefan's Google Drive):**
 - Launch plan (client-facing): https://docs.google.com/document/d/1Rm4Ayme3pm3JlnMSsCjIsFEojmEoPLYF3dk5Qoy6iCw/edit
 - Change requests sheet: https://docs.google.com/spreadsheets/d/1aj77_95cDzdh5d3bs0HlwGlMH_oFmgkJRBXVfK55W4E/edit
-- Review talk track (private): https://docs.google.com/document/d/1XuqzagjhcSUy3sS9pPZzoyCFchFXBt8rsDFZctvyBuM/edit
+- Review talk track (private): https://docs.google.com/document/d/1zU4HyJ4aPNPGh7Zugxv0AyeJJz6euRKmyRu9M27f_ng/edit
 
 **Tooling note:** `wrangler login` can't finish from Claude's sandbox (the OAuth callback to localhost is blocked). Use a dashboard upload or a CLOUDFLARE_API_TOKEN.
+
+**Pricing (agreed 2026-09-15):** build $2,400 regular / **$240 family rate** (90% off), paid $80/mo for 3 months; care $150/mo regular / **$39/mo family rate**. Months 1-3 total $119/mo, then $39/mo. Unlinked pricing page at `/proposal/` exists in the preview build only (not in `website/`, so it never ships to the live site). Pricing doc: https://docs.google.com/document/d/1fIjuRppi9e217YKFzZVQngiayRq0PGOk-6meAOmTWVQ/edit
