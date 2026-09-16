@@ -1,4 +1,4 @@
- see what I'm looking at# ECC Website — Build Notes
+ you can pretty much summarize everything that's under this task and for# ECC Website — Build Notes
 
 **Built:** 2026-08-31 · **Location:** [[Website Strategy]] → `website/` folder in this project
 **Status:** Built, audited (3 passes), ready to deploy. Pre-launch checklist below.
