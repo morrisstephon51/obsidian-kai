@@ -4,10 +4,10 @@ display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
 status: idle
-last_run: "2026-09-16T00:45:00Z"
-current_task: "Run 326 (review GitHub repos / fix open issues). Re-certified PR surface per-repo: job_opportunity_scanner has 3 open PRs (#25 salary-range, #27 recency-years, #28 biweekly/semimonthly), all MERGEABLE, all stalled on owner merge. UNIT OF WORK -- shipped PR #29 (base=fix/salary-biweekly-semimonthly-cadence / PR#28, MERGEABLE, +86/-2, 2 files): _salary_score() bare "week"/"month" substring tests false-fire on compensation descriptions containing PTO/benefit duration ("$48,000 per year + 3 weeks PTO" -> "week" in raw -> x52 -> $2.5M, false-clears SALARY_FLOOR; "$45,000 + 12 months health coverage" -> x12 -> $540k, same). Same substring-collision class already fixed for il/Nashville, ai/retail, biweekly/semimonthly (PR#28). Fix replaces bare "week"/"month" with anchored forms: /week, /wk, per week, weekly (and month equivalents). Stacked on PR#28 (different hunk, no overlap); documented retarget-to-default after #28 merges. 16-case test: 5 PTO-bug regressions + 4 weekly controls + 4 monthly controls + 3 unchanged paths. All 16 pass; all 4 existing test suites pass."
-runs_completed: 326
-items_processed: 602
+last_run: "2026-09-17T16:30:00Z"
+current_task: "Run 336 (review GitHub repos / fix open issues). Found next same-class sibling in -Community_intake_Routing: motivational phrase `support the community` misroutes faith leaders, social workers, educators who describe their learning goal/role (same class as `help out` #26, `give back` #28). Filed issue #30, created fix/volunteer-support-community-context (base=fix/volunteer-give-back-context, stacked on PR#29), opened PR #31. 86/86 tests pass."
+runs_completed: 336
+items_processed: 615
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
