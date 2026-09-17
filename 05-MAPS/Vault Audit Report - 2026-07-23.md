@@ -247,21 +247,31 @@ However:
 
 ### Phase 1: Fix Broken Links (1-2 hours)
 
-- [ ] Fix `[[00 Home.md]]` → `[[05-MAPS/00 Home.md]]`
-- [ ] Fix `[[me.md]]` references
-- [ ] Fix all `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]` replacements
-- [ ] Fix `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]`
-- [ ] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
-- [ ] Fix Archive/ paths
-- [ ] Fix relative path depths (../../../../ corrections)
+- [x] Fix `[[00 Home.md]]` → `[[05-MAPS/00 Home.md]]`
+  - (done 2026-09-17: confirmed all Phase 1 link fixes completed per [[Vault Repair - Completion Report 2026-07-23]]; last remaining instance in `09-SYSTEM/Claude Code + Obsidian Master Guide.md` fixed by automated link-check.)
+- [x] Fix `[[me.md]]` references
+  - (done 2026-09-17: remaining references in Master Guide are inside quoted prompt examples, not live wikilinks — no action needed.)
+- [x] Fix all `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]` replacements
+  - (done 2026-07-23: confirmed by [[Vault Repair - Completion Report 2026-07-23]].)
+- [x] Fix `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]`
+  - (done 2026-07-23: confirmed by [[Vault Repair - Completion Report 2026-07-23]].)
+- [x] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
+  - (done 2026-07-23: confirmed by [[Vault Repair - Completion Report 2026-07-23]].)
+- [x] Fix Archive/ paths
+  - (done 2026-07-23: confirmed by [[Vault Repair - Completion Report 2026-07-23]].)
+- [x] Fix relative path depths (../../../../ corrections)
+  - (done 2026-07-23: confirmed by [[Vault Repair - Completion Report 2026-07-23]].)
 - [x] Test all links in Home and Core Relationships Map
   - (done 2026-09-15: verified by automated link-check — every `[[wikilink]]` in `00 Home.md` and `Core Relationships Map.md` resolves to an existing file; the only unresolved token, `[[Core Foundation]]`, sits inside a fenced ASCII diagram, not a live link. Verified by link-check, not manually in the Obsidian app. Original Phase 1 fixes were completed 2026-07-23 — see [[Vault Repair - Completion Report 2026-07-23]].)
 
 ### Phase 2: Add Frontmatter (2-3 hours)
 
-- [ ] Add frontmatter to 34 files in 03-NOTES/ directory
-- [ ] Add frontmatter to 3 files in 01-DAILY/
+- [x] Add frontmatter to 34 files in 03-NOTES/ directory
+  - (done 2026-09-17: prior runs added frontmatter to all 03-NOTES files; `Personal Knowledge Base.md` was the last remaining file — fixed this run.)
+- [x] Add frontmatter to 3 files in 01-DAILY/
+  - (done 2026-09-17: verified all non-template 01-DAILY files have frontmatter. Only `Weekly Reviews/Untitled.md` is empty and unfilled — flagged for Stefan.)
 - [ ] Add frontmatter to 2 files in 08-ARCHIVE/
+  - Needs Stefan: automated maintenance agent skips 08-ARCHIVE; Stefan should confirm if archival files need frontmatter.
 - [ ] Add frontmatter to system and resource files
 
 **Use template:**
@@ -283,14 +293,16 @@ tags: []
 
 ### Phase 4: Organize 07-AI (1 hour)
 
-- [ ] Create 07-AI/index.md with directory map
+- [x] Create 07-AI/index.md with directory map
+  - (done 2026-09-17: `07-AI/index.md` already exists — `🤖 AI Systems` hub, created 2026-07-23.)
 - [ ] Add frontmatter to all generated content files
 - [ ] Link agent state files to central registry
 - [ ] Archive or document inactive agent experiments
 
 ### Phase 5: Review Orphaned Notes (30 min)
 
-- [ ] Decide what to do with June daily notes
+- [x] Decide what to do with June daily notes
+  - (done 2026-09-17: June notes are already in `01-DAILY/archived/` — `2026-06-08.md` and `2026-06-13.md`.)
 - [ ] Link July 17 note if active
 - [ ] Confirm templates are marked as such
 

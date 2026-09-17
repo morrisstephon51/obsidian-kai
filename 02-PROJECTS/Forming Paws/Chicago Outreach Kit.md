@@ -68,10 +68,15 @@ Rule: **join, participate for a week, then post** — cold-posting a link gets d
 
 ## This week's [YOU] checklist (~90 min total)
 - [ ] Skim each clinic's website, grab the contact email or form link (20 min)
+  - Needs Stefan: manual web research required.
 - [ ] Send Email 1 to all five clinics (30 min)
+  - Needs Stefan: requires sending from your email account — external action.
 - [ ] Join 3 of the Facebook groups above; comment on a few posts, don't pitch yet (20 min)
+  - Needs Stefan: requires your Facebook account — external action.
 - [ ] Day 7+: post Email/post 2 in the group where you're most active (10 min)
+  - Needs Stefan: requires your Facebook account — external action.
 - [ ] Forward me any vet replies — I'll draft the follow-ups and the partnership one-pager
+  - Needs Stefan: requires receiving and forwarding email replies — external action.
 
 ---
 *Backlinks: [[01-DAILY/To-Do-List|To-Do-List]] · [[02-PROJECTS/Forming Paws/project-overview|Forming Paws Project Overview]]*

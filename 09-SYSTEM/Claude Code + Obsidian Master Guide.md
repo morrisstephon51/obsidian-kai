@@ -677,7 +677,7 @@ and it should link to [[me.md]], [[career-goals]], and [[long-term-goals]].
 ## Resources
 
 ### Internal (in your vault)
-- [[00 Home.md]] — Your vault entrance
+- [[05-MAPS/00 Home.md|00 Home]] — Your vault entrance
 - [[me]] — Your personal profile
 - [[02-PROJECTS/]] — Active work
 - [[02-PROJECTS/]] — Ongoing responsibilities

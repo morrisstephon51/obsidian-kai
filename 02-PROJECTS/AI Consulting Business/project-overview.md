@@ -47,10 +47,15 @@ Was git-initialized with **zero commits and no remote** — everything existed o
 ## Open blockers
 - [x] ~~Back it up~~ — done 2026-08-06
 - [ ] **Perplexity MCP not added** — needs API key: `claude mcp add perplexity --env PERPLEXITY_API_KEY=... -- npx -y @perplexity-ai/mcp-server`
+  - Needs Stefan: requires your Perplexity API key to complete.
 - [ ] **Gmail MCP connector not authorized** — blocks any autonomous Touch-1 sending. Authorize via claude.ai connector settings
+  - Needs Stefan: requires OAuth authorization via claude.ai settings — external UI action.
 - [ ] **Law firm ranking unverified** — current Tier 1/2/3 is a first-pass web-search ranking by firm size/tenure, not checked against live Google review patterns
+  - Needs Stefan: requires live Google review research to validate ranking tiers.
 - [ ] **Niche 2 prospect list empty** — needs the same hyperlocal sourcing pass the law firms got
+  - Needs Stefan: requires manual research to source local small-business prospects.
 - [ ] **Attorney emails need sourcing** — likely by calling the receptionist
+  - Needs Stefan: requires phone calls to law firm receptionists.
 
 ## Outreach mechanics
 Three-touch sequence: no-pitch observation email → 60-second phone script → value-drop follow-up email. Optimal first-call time identified as **Wed 10:15am**.

@@ -30,10 +30,15 @@ Complete static rebuild of eccstaffing.com implementing the strategy — 28 page
 ## Pre-launch checklist (needs a human)
 
 - [ ] Confirm `info@eccstaffing.com` mailbox exists and is monitored (SLA owner assigned)
+  - Needs Stefan: requires verifying email provider setup and assigning an SLA owner — external action.
 - [ ] Deploy `website/` (minus `_build/`) to the host at the domain root, HTTPS
+  - Needs Stefan: requires hosting account access and deployment — external action.
 - [ ] Submit each of the 3 forms once from the live domain; click FormSubmit's one-time activation email at info@; confirm delivery incl. resume attachment
+  - Needs Stefan: requires the site to be live first, then manual form submission and email click.
 - [ ] Point host 404 handling at `/404.html`
+  - Needs Stefan: requires hosting dashboard access — external action.
 - [ ] Have counsel review `/privacy/` and `/terms/` drafts (flagged in-page)
+  - Needs Stefan: requires engaging legal counsel — external action.
 - [ ] Optional now / Phase 2: real testimonials into `/about/results/` (template in HTML comment), client logos, team photos, live role listings with JobPosting schema, Google Business Profile decision (Texas geo layer)
 
 ## Editing

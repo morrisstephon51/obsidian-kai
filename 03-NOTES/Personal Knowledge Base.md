@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: note
+status: active
+tags: []
+---
+
 # Personal Knowledge Base
 
 The home page for Stefan's PKB. This vault was built from patterns, statements, and recurring behaviors observed across many conversations with Claude. Every note is tagged with a Status (Fact / Inference / Hypothesis) and Confidence level. Read [[The Person Behind the Questions]] first if you want the unfiltered take.

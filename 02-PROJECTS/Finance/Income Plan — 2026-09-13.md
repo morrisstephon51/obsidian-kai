@@ -53,11 +53,17 @@ Every day at 6:00am Chicago time (11:00 UTC; after Nov 1 it runs at 5:00am), a c
 ## This week
 
 - [ ] **Mon:** send the Forming Paws member survey (below).
+  - Needs Stefan: requires sending email from founder@theplugai.info — external action, past due (Mon Sep 15).
 - [ ] **Mon to Tue:** build the foundation from the outreach plan: services page at theplugai.info/websites, one sender identity, free Cal.com booking link, $175 Stripe deposit link, free Google Voice number.
+  - Needs Stefan: requires deploying/configuring external services — past due (Mon–Tue Sep 15–16).
 - [ ] **Mon to Tue:** text 30 people the referral ask.
+  - Needs Stefan: requires personal outreach via phone — past due (Mon–Tue Sep 15–16).
 - [ ] **Tue:** review the CHA brief (Google Doc "Business Readiness Update — Stephon Morris — CHA WORC — Sept 16, 2026", vault copy [[CHA Meeting Brief — 2026-09-16]]).
+  - Needs Stefan: personal review of Google Doc — past due (Tue Sep 16).
 - [ ] **Wed:** CHA meeting. Leave with an answer on the structure, the license, Section 3 timing, and how income affects the voucher.
+  - Needs Stefan: in-person/call meeting today (Wed Sep 17) — cannot be completed via file edits.
 - [ ] **Wed to Fri:** start preview-first calls, 20 a day.
+  - Needs Stefan: requires personal phone outreach — cannot be completed via file edits.
 
 ## Forming Paws member survey (draft, send from founder@theplugai.info)
 
