@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
-last_run: "2026-09-17T16:30:00Z"
-current_task: "Run 336 (review GitHub repos / fix open issues). Found next same-class sibling in -Community_intake_Routing: motivational phrase `support the community` misroutes faith leaders, social workers, educators who describe their learning goal/role (same class as `help out` #26, `give back` #28). Filed issue #30, created fix/volunteer-support-community-context (base=fix/volunteer-give-back-context, stacked on PR#29), opened PR #31. 86/86 tests pass."
-runs_completed: 336
-items_processed: 615
+status: idle
+last_run: "2026-09-17T20:30:00Z"
+current_task: "Run 337 (review GitHub repos / fix open issues). Found next same-class sibling in job_opportunity_scanner: `bi weekly` / `semi monthly` (space-separated) slips past biweekly/semimonthly guards into wrong multiplier branch (x52 vs x26 / x12 vs x24). Filed issue #32, created fix/salary-biweekly-space (base=fix/salary-hours-not-cadence, stacked on PR#31), opened PR #33. 10/10 new tests pass, all 86/86 suite tests pass."
+runs_completed: 337
+items_processed: 616
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
