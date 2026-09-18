@@ -3,11 +3,11 @@ agent: codex
 display_name: "Codex"
 emoji: "💻"
 role: "Code Agent · GitHub Sync"
-status: running
+status: idle
 last_run: "2026-09-17T20:30:00Z"
-current_task: "Run 337 (review GitHub repos / fix open issues). Found next same-class sibling in job_opportunity_scanner: `bi weekly` / `semi monthly` (space-separated) slips past biweekly/semimonthly guards into wrong multiplier branch (x52 vs x26 / x12 vs x24). Filed issue #32, created fix/salary-biweekly-space (base=fix/salary-hours-not-cadence, stacked on PR#31), opened PR #33. 10/10 new tests pass, all 86/86 suite tests pass."
-runs_completed: 337
-items_processed: 616
+current_task: "Run 338 (review GitHub repos / fix open issues). Scanned job_opportunity_scanner, Community_intake_Routing, agent_I_content, Enrollment_Funnel_Agent. Found agent_I_content gap: PR#6 adds platform-validation.test.ts but does NOT wire it to package.json test script (same class as 'test added but not wired' pattern). Filed issue #7, created fix/wire-platform-validation-test (stacked on fix/validate-post-platform), opened PR #8."
+runs_completed: 338
+items_processed: 617
 last_error: null
 color: "#00FF88"
 house: "dev-lab"
