@@ -3,8 +3,8 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "📹"
 role: "Content Automation · The Plug AI"
-status: running
+status: idle
 last_run: "2026-09-17T00:00:00Z"
-runs_completed: 342
-items_processed: 342
-current_task: "Generated LinkedIn post #342 -- WHOLLY NEW DOMAIN: ILLINOIS CHILD CARE ASSISTANCE PROGRAM (CCAP) -- centered on MARCUS, 38, Blue Island, single father of 2 (Jerome 7, Amara 4), forklift operator, declining 5am shift upgrade because child care math does not work. Deacon Raymond Men Fellowship breakfast at First Corinthian Missionary Baptist Blue Island. Real resources: ABE abe.illinois.gov, IDHS 1-800-843-6154, FCRC Markham 708-210-3000, CCR&R/INCCRRA, 211 Illinois, IL Legal Aid Online, CARPLS 312-738-9200. Scam spine: enrollment fee mill, unlicensed provider credential fraud, phishing call targeting CCAP case number. Certified wholly new domain. Alternated to MAN 38. The Plug is in."
+runs_completed: 343
+items_processed: 343
+current_task: "Generated LinkedIn post #343 -- WHOLLY NEW DOMAIN: FREE TAX PREPARATION / VITA / EARNED INCOME TAX CREDIT (EITC) -- centered on DARIUS, 34, Calumet City, CNA, twin 8-year-olds (Maya and Malik), has paid strip-mall preparer /year for 6 years while receiving <25% of actual refund via RAL trap. Sister Gloria, Finance Ministry, First Pilgrim Baptist Calumet City. Resources: IRS VITA (IRS.gov/vita), AARP Tax-Aide, IRS Free File, CEDA 312-795-8858, 211, IRS Taxpayer Advocate 1-877-777-4778, IP PIN (IRS.gov/ippin), EITC Assistant. Scam spine: RAL trap, ghost preparer/no PTIN, IRS arrest impersonator, tax identity theft/IP PIN. Certified wholly new domain -- zero prior VITA/EITC posts. Alternated to MAN 34. The Plug is in."
