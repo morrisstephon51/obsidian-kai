@@ -2,7 +2,7 @@
 type: hub
 category: command-center
 created: 2026-07-04
-last-updated: 2026-08-30
+last-updated: 2026-09-22
 ---
 
 # 🎛️ Command Center
@@ -11,6 +11,8 @@ last-updated: 2026-08-30
 
 ← [[05-MAPS/00 Home|Home]]
 
+> **2026-09-22 update.** TypeScript infrastructure completed for 3 web projects (see [[09-SYSTEM/TypeScript-Web-Projects|TypeScript Web Projects]]). Stefan's Portfolio is now a full Next.js 15 + React 19 + TypeScript app (replaces pure HTML). Command Center rebuilt as interactive Vite + TypeScript dashboard (replaces static redirect). Link-inbio TypeScript enhanced. All ready for production.
+>
 > **2026-08-30 refresh.** Re-verified against live sources again — `gh repo list`, `gh pr view`, GitHub Pages API, and HTTP/TLS checks on every URL. Two things fixed since 2026-08-06: PR #23 was actually already merged (the 307 was never a loop, just an unfollowed redirect), and this page had a live self-contradiction — telling you to delete `community-intake-routing` in Open Items while its own table three sections up says 'do not delete.' The delete instruction is gone; the table was right. `theplugai.online` HTTPS root cause is now identified (below) but the fix itself needs a human in the GitHub UI or interactive `gh` session — auto mode declined it as a live-domain change.
 >
 > **2026-08-06 refresh.** This page had drifted a month behind reality. Everything below was re-verified against live sources — `gh repo list`, Vercel's project list, DNS resolution, and HTTP checks on every URL — not copied forward. Statuses that turned out to be wrong are called out inline so the correction is visible rather than silent.
