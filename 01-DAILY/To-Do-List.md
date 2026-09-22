@@ -41,6 +41,15 @@ related:
       - [ ] Have counsel review the /privacy/ and /terms/ drafts
       - [ ] (Phase 2) real testimonials, client logos, team photos, live roles, Google Business Profile decision
 
+      ## 💰 Grants — CHA referrals (deadlines are real)
+      _→ [[02-PROJECTS/Finance/Grants/index|Grant tracker]] · drafts are written, these are the parts only you can do_
+      - [ ] **By Sep 30:** join NASE on the **Annual $120** plan (monthly = 90-day wait, kills the October round), record membership number
+      - [ ] **By Sep 30, 11:59pm ET:** submit Freed Fellowship ($19) — answers ready in [[02-PROJECTS/Finance/Grants/Freed Fellowship — September 2026|Freed draft]]
+      - [ ] **By Sep 30:** submit NASE Growth Grant ($4,000) — pack ready in [[02-PROJECTS/Finance/Grants/NASE Growth Grant — Application Pack|NASE pack]]; needs vendor quotes + a photo
+      - [ ] **By Oct 31:** Galaxy Grant 5-minute form ([[02-PROJECTS/Finance/Grants/Galaxy Grant — Entry|entry fields]])
+      - [ ] Confirm the [CONFIRM] values (exact LLC names, formation dates, address, DOB, startup costs paid)
+      - [ ] Ask Niquenya: review the NASE statement of grant use, and how grant income affects voucher recertification
+
       ## 🤖 AI Consulting Business
       _→ [[02-PROJECTS/AI Consulting Business/project-overview|Project Overview]]_
       - [ ] Add Perplexity API key (claude mcp add perplexity --env PERPLEXITY_API_KEY=...)

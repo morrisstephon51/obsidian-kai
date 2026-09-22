@@ -15,10 +15,11 @@ Contains real member email addresses. This vault syncs to a private repo —
 keep it that way.
 
 <!-- members:start -->
-_14 members · 4 need a nudge · synced 2026-09-17_
+_15 members · 4 need a nudge · synced 2026-09-21_
 
 | Joined | Name | Email | Status | Dogs | Last seen |
 | --- | --- | --- | --- | --- | --- |
+| 2026-09-19 | Niesha Brassfield  | yisraelhebrew51@gmail.com | ✅ active | 2 | 2026-09-19 |
 | 2026-09-13 | Corry Moore | himecofriendly@icloud.com | ⚠️ never confirmed | 0 | — |
 | 2026-09-08 | Annabella Rodriguez | aiflores1114@gmail.com | · signed in, no dog yet | 0 | 2026-09-08 |
 | 2026-09-06 | Cory Agee | coryagee@gmail.com | ⚠️ never confirmed | 0 | — |

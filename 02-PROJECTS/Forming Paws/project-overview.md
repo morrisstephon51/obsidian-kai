@@ -11,6 +11,9 @@ tags:
 
 # Project — Forming Paws
 
+> [!warning] Entity status corrected 2026-09-20
+> This page still describes a 501(c)(3) structure. That is out of date. Forming Paws went **for-profit** on 2026-09-13 and an Illinois LLC was filed in September 2026. See [[02-PROJECTS/Finance/Income Plan — 2026-09-13|Income Plan]] and [[02-PROJECTS/Finance/Grants/index|Grants]]. The site copy still says nonprofit in 22 places across 10 files and still needs the pass.
+
 ## Goal
 A health-first, safety-first nonprofit platform facilitating documented, responsible dog breeding — launching in Chicago, IL, on $0 capital. Dogs only at MVP; data model built extensible so other species can be added later without a rework.
 

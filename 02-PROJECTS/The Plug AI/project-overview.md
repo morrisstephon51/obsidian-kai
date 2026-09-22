@@ -11,6 +11,9 @@ tags:
 
 # Project — The Plug AI
 
+> [!warning] Entity status corrected 2026-09-20
+> This page is tagged nonprofit. The Plug AI now earns through **paid services** as an Illinois LLC filed in September 2026. The nonprofit-partner grant track (Kresge, Illinois Digital Divide) still runs separately through a 501(c)(3) partner. See [[02-PROJECTS/Finance/Income Plan — 2026-09-13|Income Plan]] and [[02-PROJECTS/Finance/Grants/index|Grants]].
+
 ← [[09-SYSTEM/Command Center|Command Center]] · [[02-PROJECTS/index|Projects]] · [[02-PROJECTS/The Plug AI Progress|Progress Log]]
 
 **Track 1 — the critical path.** Anything that doesn't serve Plug AI funding or launch gets flagged as Track 2 before going deep.
