@@ -235,7 +235,7 @@ tags: []
 ## _ops/
 - _ops/daily-template.md — Daily Operations Template (2026-07-23)
 - _ops/grant-research-log.md — Grant Research Log (2026-07-23)
-- _ops/important-links.md — Important Links Registry (2026-08-30)
+- _ops/important-links.md — Important Links Registry (2026-09-22)
 - _ops/link-health-checker.md — Link Health Checker (2026-07-23)
 - _ops/master-tracker.md — Master Tracker (2026-07-23)
 

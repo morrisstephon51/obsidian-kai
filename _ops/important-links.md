@@ -2,13 +2,15 @@
 type: operations
 category: links-registry
 created: 2026-06-13
-last-checked: 2026-08-30
-last-audit: 2026-08-30
+last-checked: 2026-09-22
+last-audit: 2026-09-22
 ---
 
 # Important Links Registry
 
 > For the full cross-linked hub see **[[09-SYSTEM/Command Center|Command Center]]**. This page is the quick-reference table for all live sites, repos, and consoles.
+
+**2026-09-22 update**: Three web projects upgraded to modern TypeScript infrastructure — see [[09-SYSTEM/TypeScript-Web-Projects|TypeScript Web Projects]] for details.
 
 **Every status below was verified live on 2026-08-11** — HTTP status, redirect target, `server:` header, page title, DNS resolution, `gh repo list`, and the Vercel project list. Nothing is carried over from the previous pass.
 
@@ -23,9 +25,9 @@ last-audit: 2026-08-30
 | 1 | **Forming Paws** | [theplugai.xyz](https://theplugai.xyz) | [forming-paws.vercel.app](https://forming-paws.vercel.app) | [forming-paws](https://github.com/morrisstephon51/forming-paws) | **The real app** — accounts, dog profiles, health verification, browse, matching, chat | 🟢 Live on Vercel |
 | 2 | **The Plug AI** | [theplugai.info](https://theplugai.info) | [psychic-bassoon-psi.vercel.app](https://psychic-bassoon-psi.vercel.app) | [psychic-bassoon](https://github.com/morrisstephon51/psychic-bassoon) | AI literacy platform | 🟢 Live |
 | 3 | **MUNDI Agent Dashboard** | [theplugai.live](https://theplugai.live) | [agent-world-olive.vercel.app](https://agent-world-olive.vercel.app) | [mundi-agent-dashboard](https://github.com/morrisstephon51/mundi-agent-dashboard) *(private)* | Agent fleet control panel | 🟢 Live |
-| 4 | **Stefan's Portfolio** | [theplugai.life](https://theplugai.life) | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan-Portfolio](https://github.com/morrisstephon51/Stefan-Portfolio) | Personal portfolio / resume | 🟢 Live |
-| 5 | **Link-in-Bio** | [theplugai.net](https://theplugai.net) | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | Main link aggregator | 🟢 Live (GitHub Pages) |
-| 6 | **Command Center (public)** | [theplugai.online](http://theplugai.online) | [github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [command-center-redirect](https://github.com/morrisstephon51/command-center-redirect) | PIN-locked hub | ⚠️ **HTTP only — HTTPS still broken** |
+| 4 | **Stefan's Portfolio** | [theplugai.life](https://theplugai.life) | [stefan-portfolio-eight.vercel.app](https://stefan-portfolio-eight.vercel.app) | [Stefan-Portfolio](https://github.com/morrisstephon51/Stefan-Portfolio) | Next.js 15 + React 19 + TypeScript (2026-09-22) | 🟢 Live on Vercel |
+| 5 | **Link-in-Bio** | [theplugai.net](https://theplugai.net) | [morrisstephon51.github.io/Link-inbio](https://morrisstephon51.github.io/Link-inbio/) | [Link-inbio](https://github.com/morrisstephon51/Link-inbio) | TypeScript agents + static site (2026-09-22) | 🟢 Live (GitHub Pages) |
+| 6 | **Command Center** | [theplugai.online](https://theplugai.online) | [github.io/Link-inbio/dashboard.html](https://morrisstephon51.github.io/Link-inbio/dashboard.html) | [command-center-redirect](https://github.com/morrisstephon51/command-center-redirect) | Vite + TypeScript dashboard (2026-09-22) | 🟢 Live (GitHub Pages) — HTTPS broken |
 | 7 | **Community Intake & Routing** | — | [community-intake-routing.vercel.app](https://community-intake-routing.vercel.app) | [-Community_intake_Routing](https://github.com/morrisstephon51/-Community_intake_Routing) | "Join The Plug AI Community" signup | 🟢 **Live** — was wrongly logged 404 |
 | 8 | **AI Content Engine** | — | [ai-video-reel-generator.vercel.app](https://ai-video-reel-generator.vercel.app) | [ai-video-reel-generator](https://github.com/morrisstephon51/ai-video-reel-generator) | Video reel / content builder | 🟢 **Live** — was wrongly logged as a redirect loop |
 | 9 | **Content Machine** | — | [content-machine-wine.vercel.app](https://content-machine-wine.vercel.app) | [content-machine](https://github.com/morrisstephon51/content-machine) *(private, archived)* | Autonomous marketing engine | 🟢 Live (legacy) |
