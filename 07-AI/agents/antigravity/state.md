@@ -3,11 +3,11 @@ agent: antigravity
 display_name: "Antigravity"
 emoji: "🚀"
 role: "General Agent · Explorer"
-status: running
-last_run: "2026-09-22T11:33:51Z"
-current_task: "Run 348: Context scan. context.md (mtime 2026-07-29) + world.md (mtime 2026-07-23) RE-STAT confirmed STATIC (8+ wks) => ACTIVE-PRIORITIES DIGEST current. Bus: 6 unread since R346 (clawd R372, codex R360, content-pipeline #364/#365 + loop-starts), NONE directed to antigravity, ZERO routing owed -- all peers self-running, all open PRs await OWNER merge. Live account-wide sweep = 44 non-draft PRs (independently corroborates clawd R372 raw 37->44), up from R347 digest 37. DELTAS since R347, ALL LIVE-CERTIFIED via gh not bus-trusted: (a) ai-video-reel #29 CLOSED-without-merge (state=CLOSED, mergedAt=null, mergeCommit=null => superseded by superset #27, NOT merged) => aivr held 2->1; #27 now SOLE aivr PR (OPEN/non-draft/MERGEABLE/base=main/closingRefs=[26]). (b) agent_I_content #9 NEW root-cause glob test-runner (OPEN/non-draft/MERGEABLE/base=claude-eloquent-edison-aF7yG==default GOOD-CITIZEN/closingRefs=[7]) kills the add/add package.json test-script conflict across #2->#4 + #6->#8 stacks. (c) Community_intake +2 (#37/#38, #38 = terminal tower-superset held for owner). (d) job_opportunity_scanner +5 (#54/#56/#58/#60/#61, #61 = terminal tower-superset held for owner). STILL 0 MERGES since R320 -- CONFIRMED live via #29 closed-not-merged; defer-to-owner posture DURABLE. Founder held fix-queue ~43 (44 non-draft minus Link-inbio #15 build PR). Carryover held for owner per codex R360: agent_I_content #9 + JobScout #61 + Community #38 (all terminal-superset consolidations). [[jobscout-scorer-substring-collision-hotspot]] [[keyword-bag-tower-is-cross-repo]]"
-runs_completed: 348
-items_processed: 1296
+status: idle
+last_run: "2026-09-22T15:40:00Z"
+current_task: "Run 349: Context scan. context.md (mtime 2026-07-29) + world.md (mtime 2026-07-23) RE-STAT confirmed STILL STATIC (8+ wks) => ACTIVE-PRIORITIES DIGEST current. Bus: 4 unread since R348 (codex R361, clawd R373, content-pipeline #366 + loop-starts), NONE directed to antigravity, ZERO routing owed -- all peers self-running, all held PRs await OWNER merge. Live account-wide sweep = 44 non-draft PRs (10 drafts, 54 total), EXACTLY matching R348 digest of 44 => fix-queue STABLE at 43 held (44 minus Link-inbio #15 build PR). ZERO deltas in the PR surface since R348. STILL 0 MERGES since R320 -- defer-to-owner posture DURABLE. ONE live change since R348, LIVE-CERTIFIED via gh pr view: codex R361 folded ai-video-reel issue #28 (persona-delete deadlock) INTO existing PR#27 rather than filing a redundant PR ([[agent-repos-bug-may-be-fixed-in-open-pr]] pattern) -- PR#27 now closingRefs=[26,28] POPULATED (was [26]), OPEN/non-draft/MERGEABLE/base=main/reviewDecision=EMPTY => on merge auto-closes BOTH #26+#28; closingRefs populated corroborates base==default; reviewDecision EMPTY re-confirms REVIEW-NOT-REGISTERING. aivr fix queue collapsed 2->1 (#27 alone, closing 2 issues). Founder held fix-queue ~43. Carryover held for owner per codex R360/R361: agent_I_content #9 + JobScout #61 + Community #38 + aivr #27. [[keyword-bag-tower-is-cross-repo]] [[gh-search-prs-omits-repos]] [[agent-repos-bug-may-be-fixed-in-open-pr]]"
+runs_completed: 349
+items_processed: 1300
 last_error: null
 color: "#F4B942"
 house: "launchpad"
