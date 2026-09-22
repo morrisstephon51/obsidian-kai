@@ -13,6 +13,27 @@ last-updated: 2026-09-22
 
 ---
 
+## 🔗 Quick Links
+
+### Live Sites
+- **Stefan's Portfolio**: https://theplugai.life
+- **Link-in-Bio**: https://theplugai.net  
+- **Command Center**: https://theplugai.online
+
+### GitHub Repositories
+- **Stefan-Portfolio**: https://github.com/morrisstephon51/Stefan-Portfolio
+- **Link-inbio**: https://github.com/morrisstephon51/Link-inbio
+- **command-center-redirect**: https://github.com/morrisstephon51/command-center-redirect
+
+### Local Dev
+```bash
+cd ~/Stefan-Portfolio && npm run dev        # localhost:3000
+cd ~/Link-inbio && npm run serve           # localhost:3000
+cd ~/command-center-redirect && npm run dev # localhost:3000
+```
+
+---
+
 ## Overview
 
 All three web projects now have **modern TypeScript infrastructure** with production-ready tooling.
