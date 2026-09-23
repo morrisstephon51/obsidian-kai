@@ -106,6 +106,8 @@ The repo **is** public on GitHub: [morrisstephon51/forming-paws](https://github.
 - [[Status Log]] — dated progress log with live links (newest first)
 - [[Execution Plan]] — the committed roadmap (mirror of repo PLAN.md)
 - [[Chicago Outreach Kit]] — vet targets, breed groups, ready-to-send scripts
+- [[02-PROJECTS/Forming Paws/Members|Members]] — member list and status
+- [[02-PROJECTS/Forming Paws/Content/index|Content Index]] — weekly promo reels and email scripts
 - [[09-SYSTEM/Command Center|Command Center]] — agent fleet status this project depends on
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
 - [[_ops/important-links|Important Links]] — verified live status of every URL

@@ -55,7 +55,7 @@ This area houses your understanding of yourself: who you are, what drives you, y
 
 ## 🎓 Personal Reflections
 
-- [[Journal]] — Reflections and growth notes
+- [[01-DAILY/index|Daily Notes]] — Reflections and growth notes
 - [[Internal Conflicts]] — Tensions to resolve
 - [[Personal Evolution]] — Your trajectory
 

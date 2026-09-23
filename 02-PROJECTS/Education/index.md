@@ -22,9 +22,9 @@ This area tracks your educational goals, progress toward degree completion, and 
 
 ## 🎯 Major Goals
 
-- [[Education Goals]] — Degree completion and knowledge acquisition
-- [[Degree Progress]] — Timeline and milestones
-- [[Learning Path]] — What to focus on
+- [[02-PROJECTS/Education/Education Goals|Education Goals]] — Degree completion and knowledge acquisition
+- [[02-PROJECTS/Education/Writing Analytically/Ch 2 — Reading Analytically|Ch 2 — Reading Analytically]] — Active reading notes (add more chapters here)
+- [[02-PROJECTS/Learning/index|Learning Hub]] — Skills, tools, and focus areas
 
 ---
 

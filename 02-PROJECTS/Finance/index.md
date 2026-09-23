@@ -22,9 +22,9 @@ This area covers financial goals, income strategies, debt management, and path t
 
 ## 🎯 Financial Goals
 
-- [[Financial Goals]] — Independence timeline and strategy
-- [[Income Strategy]] — Building multiple streams
-- [[Savings Goals]] — Capital accumulation
+- [[02-PROJECTS/Finance/Financial Goals|Financial Goals]] — Independence timeline and strategy
+- [[02-PROJECTS/Finance/Income Plan — 2026-09-13|Income Plan]] — Building multiple income streams
+- [[02-PROJECTS/Finance/Grants/index|Grants]] — Active grant applications and funding
 
 ---
 
