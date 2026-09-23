@@ -16,7 +16,7 @@ This area covers your career direction, opportunities, professional growth, and 
 
 **Core mission:** Build capabilities and credentials that enable meaningful work and financial independence.
 
-**Related to:** [[me]] (master profile), [[Education/index|Education]], [[Finance/index|Finance]]
+**Related to:** [[03-NOTES/Identity/me|me]] (master profile), [[Education/index|Education]], [[Finance/index|Finance]]
 
 ---
 

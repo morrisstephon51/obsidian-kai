@@ -16,7 +16,7 @@ This area tracks your educational goals, progress toward degree completion, and 
 
 **Key goal:** Complete bachelor's degree to unlock career and income opportunities.
 
-**Related to:** [[me]] (master profile), [[Career Goals]]
+**Related to:** [[03-NOTES/Identity/me|me]] (master profile), [[Career Goals]]
 
 ---
 

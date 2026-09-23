@@ -2,7 +2,7 @@
 type: atomic-note
 category: assets
 created: 2026-06-12
-related: [[me]], [[../Career/Competitive Advantages]], [[../Education/Education Goals]]
+related: [[03-NOTES/Identity/me|me]], [[../Career/Competitive Advantages]], [[../Education/Education Goals]]
 ---
 
 # Skills

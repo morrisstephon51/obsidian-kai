@@ -14,7 +14,7 @@ Your technical skills, projects, and builder capabilities.
 
 This area covers technical development: coding skills, projects, tools, and technical problem-solving.
 
-**Related to:** [[me]] (master profile), [[Career/index|Career]]
+**Related to:** [[03-NOTES/Identity/me|me]] (master profile), [[Career/index|Career]]
 
 ---
 

@@ -2,7 +2,7 @@
 type: atomic-note
 category: psychology
 created: 2026-06-12
-related: [[me]], [[Decision-Making Style]], [[Problem-Solving Style]]
+related: [[03-NOTES/Identity/me|me]], [[Decision-Making Style]], [[Problem-Solving Style]]
 ---
 
 # Thinking Patterns

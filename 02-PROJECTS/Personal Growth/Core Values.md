@@ -2,7 +2,7 @@
 type: atomic-note
 category: psychology
 created: 2026-06-12
-related: [[me]], [[Life Vision]], [[Motivations]]
+related: [[03-NOTES/Identity/me|me]], [[Life Vision]], [[Motivations]]
 ---
 
 # Core Values

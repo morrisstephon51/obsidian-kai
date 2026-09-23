@@ -2,7 +2,7 @@
 type: atomic-note
 category: assets
 created: 2026-06-12
-related: [[me]], [[../Personal Growth/Strengths]], [[../../Areas/Development/Skills]]
+related: [[03-NOTES/Identity/me|me]], [[../Personal Growth/Strengths]], [[../../Areas/Development/Skills]]
 ---
 
 # Competitive Advantages

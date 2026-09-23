@@ -23,7 +23,7 @@ Tell me exactly what you want, with clear file paths and content:
 Create a new file at "Areas/Career/Project Ideas.md" with:
 - Title: [X]
 - Sections: [X], [X], [X]
-- Links to: [[Career Goals]], [[me]]
+- Links to: [[Career Goals]], [[03-NOTES/Identity/me|me]]
 ```
 
 **What I'll do:**

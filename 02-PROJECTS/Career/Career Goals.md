@@ -2,7 +2,7 @@
 type: atomic-note
 category: goals
 created: 2026-06-12
-related: [[me]], [[Education Goals]], [[Financial Goals]], [[../index|Career Hub]]
+related: [[03-NOTES/Identity/me|me]], [[Education Goals]], [[Financial Goals]], [[../index|Career Hub]]
 ---
 
 # Career Goals

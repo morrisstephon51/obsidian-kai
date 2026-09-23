@@ -2,7 +2,7 @@
 type: atomic-note
 category: psychology
 created: 2026-06-12
-related: [[me]], [[Strengths]], [[Blind Spots]]
+related: [[03-NOTES/Identity/me|me]], [[Strengths]], [[Blind Spots]]
 ---
 
 # Weaknesses

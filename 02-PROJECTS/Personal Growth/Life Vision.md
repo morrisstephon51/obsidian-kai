@@ -2,7 +2,7 @@
 type: atomic-note
 category: psychology
 created: 2026-06-12
-related: [[me]], [[Core Values]], [[Long-Term Goals]]
+related: [[03-NOTES/Identity/me|me]], [[Core Values]], [[Long-Term Goals]]
 ---
 
 # Life Vision

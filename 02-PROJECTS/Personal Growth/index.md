@@ -14,7 +14,7 @@ Your ongoing practice of self-awareness, values alignment, and psychological dev
 
 This area houses your understanding of yourself: who you are, what drives you, your patterns, strengths, and opportunities for growth.
 
-**Related to:** [[me]] (master profile)
+**Related to:** [[03-NOTES/Identity/me|me]] (master profile)
 
 ---
 
@@ -73,4 +73,4 @@ Last reviewed: 2026-06-12
 
 ---
 
-See also: [[00 Home|Home]] | [[me|Personal Profile]]
+See also: [[00 Home|Home]] | [[03-NOTES/Identity/me|Personal Profile]]

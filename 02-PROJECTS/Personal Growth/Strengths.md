@@ -2,7 +2,7 @@
 type: atomic-note
 category: psychology
 created: 2026-06-12
-related: [[me]], [[Competitive Advantages]], [[Skills]]
+related: [[03-NOTES/Identity/me|me]], [[Competitive Advantages]], [[Skills]]
 ---
 
 # Strengths

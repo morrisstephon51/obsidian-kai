@@ -16,7 +16,7 @@ This area covers financial goals, income strategies, debt management, and path t
 
 **Core mission:** Escape financial constraints and build sustainable independence.
 
-**Related to:** [[me]] (master profile), [[Career/index|Career]], [[Education/index|Education]]
+**Related to:** [[03-NOTES/Identity/me|me]] (master profile), [[Career/index|Career]], [[Education/index|Education]]
 
 ---
 
