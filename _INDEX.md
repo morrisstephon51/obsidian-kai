@@ -1,12 +1,12 @@
 ---
 created: 2026-07-23
-updated: 2026-09-22
+updated: 2026-09-23
 type: note
 status: active
 tags: []
 ---
 
-# Vault index — built 2026-09-22
+# Vault index — built 2026-09-23
 <!-- FOR AI AGENTS: read this file first, then open only the note you need. Check freshness: node _ops/build-index.mjs --check. Rebuild: node _ops/build-index.mjs. Format: path — gist (modified). Generated folders are collapsed to one line. -->
 
 ## 01-DAILY/
@@ -18,7 +18,6 @@ tags: []
 - 01-DAILY/TEMPLATE-Weekly-Review.md — 📊 Weekly Review — Week of [DATE] (2026-07-23)
 - 01-DAILY/To-Do-List.md — My To-Do-List  —  Action Items -things only I can do (2026-09-20)
 - 01-DAILY/Weekly Reviews/index.md — 📊 Weekly Reviews (2026-07-23)
-- 01-DAILY/Weekly Reviews/Untitled.md (2026-09-15)
 
 ## 02-PROJECTS/
 - 02-PROJECTS/_project-template/decisions.md — Decisions — {{project}} (2026-07-23)
@@ -65,6 +64,7 @@ tags: []
 - 02-PROJECTS/Forming Paws/Roadmap — Deploy and Five Slices.md — Forming Paws — Roadmap: Deploy & Five Slices (2026-08-17)
 - 02-PROJECTS/Forming Paws/Status Log.md — dated progress log, newest first; FIRST MEMBER 2026-08-04 (2026-09-13)
 - 02-PROJECTS/Forming Paws/Visual Refresh — Build Log.md (2026-08-22)
+- 02-PROJECTS/Forming\ Paws/Business\ Plan\ —\ Grant\ Applications.md — Business Plan — Forming Paws (For-Profit) (2026-09-23)
 - 02-PROJECTS/index.md — 🚀 Projects (2026-07-23)
 - 02-PROJECTS/Learning/Claude Code Guide.md — 📚 Claude Code Guide (2026-07-23)
 - 02-PROJECTS/Learning/index.md — 📚 Learning (2026-07-23)
@@ -158,26 +158,26 @@ tags: []
 - 07-AI/agents/aeos/state.md — Aeos — Strategic Signal Supervisor (2026-08-11)
 - 07-AI/agents/aexis/state.md — Aexis — Execution Intelligence Supervisor (2026-08-11)
 - 07-AI/agents/antigravity/PRIORITIES.md — Antigravity — Active Priorities Digest (2026-09-07)
-- 07-AI/agents/antigravity/state.md — Loop Rules (2026-09-22)
+- 07-AI/agents/antigravity/state.md — Loop Rules (2026-09-23)
 - 07-AI/agents/architect/state.md — Architect — General-Purpose System Design Supervisor (2026-08-25)
 - 07-AI/agents/builder/results/ — 2 generated files, newest 2026-08-11 (collapsed; list the folder to see them)
 - 07-AI/agents/builder/state.md — Builder (2026-08-11)
 - 07-AI/agents/clawd/FRONTIER-CORRECTION-run253.md — Frontier Correction — clawd Run 253 (2026-08-28T17:19Z) (2026-08-28)
 - 07-AI/agents/clawd/FRONTIER-CORRECTION-run254.md — Frontier Correction — clawd Run 254 (2026-08-29) (2026-08-29)
 - 07-AI/agents/clawd/FRONTIER-CORRECTION-run255.md — Frontier Correction — clawd Run 255 (2026-08-29T19:38Z) (2026-08-29)
-- 07-AI/agents/clawd/state.md — Loop Rules (inherited by all agents — copy this block to every agent) (2026-09-22)
+- 07-AI/agents/clawd/state.md — Loop Rules (inherited by all agents — copy this block to every agent) (2026-09-23)
 - 07-AI/agents/codex/MERGE-READINESS-2026-08-28.md — Merge-Readiness Audit — codex Run 239 (2026-08-28) (2026-08-28)
 - 07-AI/agents/codex/MERGE-RUNBOOK-2026-09-15.md — Codex Merge Runbook — 2026-09-15 (Run 322) (2026-09-15)
 - 07-AI/agents/codex/MERGE-TRIAGE-2026-09-05.md — Codex Merge Triage — 2026-09-05 (Run 280) (2026-09-06)
 - 07-AI/agents/codex/MERGE-TRIAGE-2026-09-13.md — Codex Merge Triage — 2026-09-13 (Run 312) (2026-09-13)
 - 07-AI/agents/codex/pr-review-merge-guide.md — PR Review & Merge-Order Guide — ACCOUNT-WIDE (2026-08-17)
-- 07-AI/agents/codex/state.md — Loop Rules (2026-09-22)
+- 07-AI/agents/codex/state.md — Loop Rules (2026-09-23)
 - 07-AI/agents/community-intake/state.md — Loop Rules (2026-07-23)
-- 07-AI/agents/content-pipeline/output/ — 261 generated files, newest 2026-09-22 (collapsed; list the folder to see them)
+- 07-AI/agents/content-pipeline/output/ — 266 generated files, newest 2026-09-23 (collapsed; list the folder to see them)
 - 07-AI/agents/content-pipeline/outputs/linkedin_2026-07-27_faith_trust.md — LinkedIn Post — Faith Community Trust Angle (2026-07-27)
 - 07-AI/agents/content-pipeline/outputs/linkedin-faith-community-2026-07-20.md (2026-07-23)
 - 07-AI/agents/content-pipeline/outputs/linkedin-faith-community-2026-07-24.md (2026-07-24)
-- 07-AI/agents/content-pipeline/state.md — Loop Rules (2026-09-22)
+- 07-AI/agents/content-pipeline/state.md — Loop Rules (2026-09-23)
 - 07-AI/agents/enrollment-funnel/state.md — Loop Rules (2026-07-23)
 - 07-AI/agents/gemini-agent/state.md — Loop Rules (2026-09-13)
 - 07-AI/agents/index.md — 🎯 Agent Fleet (2026-07-23)
@@ -186,7 +186,7 @@ tags: []
 - 07-AI/agents/perplexity-agent/results/ — 6 generated files, newest 2026-08-12 (collapsed; list the folder to see them)
 - 07-AI/agents/perplexity-agent/state.md — Loop Rules (2026-09-13)
 - 07-AI/agents/tools/state.md — Loop Start: read context.md, me.md, check bus, read world.md, read state.md (2026-07-23)
-- 07-AI/chatroom/feed.md — Agent Chatroom Feed (2026-09-22)
+- 07-AI/chatroom/feed.md — Agent Chatroom Feed (2026-09-23)
 - 07-AI/context/world.md — Agent World — Shared Context (2026-07-23)
 - 07-AI/copilot-custom-prompts/Clip Web Page.md — Based on the web page content provided in the context (from Obsidian Web Clipper or Web Vi (2026-07-23)
 - 07-AI/copilot-custom-prompts/Clip YouTube Transcript.md — Based on the YouTube video information and transcript provided in the context, generate a  (2026-07-23)
