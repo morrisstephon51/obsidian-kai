@@ -6,7 +6,7 @@ tags:
   - plug-ai
   - forming-paws
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # Grants — CHA WORC referrals, September 2026
@@ -24,6 +24,12 @@ Niquenya Fulbright (CHA WORC, Resident Owned Business Advisor) sent three opport
 | [[Galaxy Grant — Entry\|Galaxy Grant]] | $2,500 | Oct 31 | Free | 5 minutes | Either |
 
 **Total out of pocket to apply for all three: $139.**
+
+---
+
+## Master Documents
+
+- **[[../Forming Paws/Business Plan - Grant Applications|Business Plan — Grant Applications]]** (2026-09-23) — comprehensive business plan for all three grants, covers market opportunity ($2M TAM, 100k+ Chicago metro), revenue model ($33k/month steady state), go-to-market strategy, financial projections, and funding use breakdown
 
 ## The two decisions that matter
 
