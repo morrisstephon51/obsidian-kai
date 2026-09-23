@@ -1,7 +1,8 @@
 ---
 type: study-notes
-course: Business 1600
-topic: Courts, Jurisdiction, and Venue
+course: BUS 1600 — Legal Environment of Business
+textbook: The Legal Environment of Business (eText)
+topic: The Judiciary — Courts, Jurisdiction, and Venue
 created: 2026-09-23
 tags: [school, business-1600, business-law, study-notes, terms]
 ---
