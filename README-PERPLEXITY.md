@@ -1,3 +1,4 @@
+ 
  # Obsidian Vault - Perplexity Access Guide
 
 **Public GitHub**: https://github.com/morrisstephon51/obsidian-kai  
