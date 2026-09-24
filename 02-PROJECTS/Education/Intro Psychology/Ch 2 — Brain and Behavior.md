@@ -10,7 +10,7 @@ tags: [school, psychology, study-notes, brain, nervous-system]
 
 # Ch 2: Brain and Behavior
 
-> [!summary] hemisphere → **left** side.
+> [!summary] hello hello what's up I'm good youhemisphere → **left** side.
 
 > [!warning] Signal direction
 > Dendrites **receive**, the axon **sends**. The signal goes dendrites → soma → axon → terminals.
