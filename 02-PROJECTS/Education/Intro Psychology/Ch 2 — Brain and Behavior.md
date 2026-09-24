@@ -10,7 +10,7 @@ tags: [school, psychology, study-notes, brain, nervous-system]
 
 # Ch 2: Brain and Behavior
 
-> [!summary] hello hello what's uphemisphere → **left** side.
+> [!summary] hemisphere → **left** side.
 
 > [!warning] Signal direction
 > Dendrites **receive**, the axon **sends**. The signal goes dendrites → soma → axon → terminals.
