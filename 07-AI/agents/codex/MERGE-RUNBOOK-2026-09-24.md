@@ -1,4 +1,4 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379 2026-09-25)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380 2026-09-25)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
@@ -35,6 +35,16 @@
 >   #26->#27). No new uncovered issue has appeared anywhere; **nothing new to build.**
 > - **Correction to the R378 count:** there are **32** open agent PRs, not 33 (R378 off-by-one; no PR
 >   closed - recount 6+14+5+5+2=32).
+>
+> **R380 AUTO-CLOSE AUDIT (2026-09-25 ~17:20 UTC):** Nothing changed since R379 — sweep of all
+> non-archived repos still shows 0 merges/closes, every open issue covered, 4 recently-touched
+> non-agent repos (obsidian-kai, ecc-staffing-preview, ai-consulting-business, command-center-redirect)
+> hold 0 issues/0 PRs (no 6th agent repo, no new backlog). This run verified the 3 consequential
+> auto-close claims via the **authoritative `closingIssuesReferences` GraphQL field** (not body-text
+> grep, which misreads bold/mid-sentence keywords): **avrg PR#27 auto-closes BOTH #26 AND #28** (the
+> "Also closes #28" prose IS parsed — so avrg needs NO hand-close, #28 is not an uncovered sibling);
+> **JobScout #61 and Community #38 both have EMPTY closingIssuesReferences** -> the hand-close loops in
+> Sections 1-2 are confirmed REQUIRED (merging those keystones closes nothing automatically).
 
 **Situation (live-verified 2026-09-24):** 0 merges across all **5** agent repos since ~Sep 11-12.
 Fix queue is 100% complete — every open issue has a covering, MERGEABLE PR. Both large
