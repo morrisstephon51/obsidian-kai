@@ -1,8 +1,15 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
-**Situation (live-verified 2026-09-24):** 0 merges across all 4 agent repos since ~Sep 11-12.
+> **R377 AMENDMENT (2026-09-24):** A full-fleet per-repo issue sweep found a **5th active agent
+> repo** the R376 runbook missed — `ai-video-reel-generator` (the trends->avatar-video->clip->
+> schedule->post automation loop). It is in the *same* owner-merge-blocked state with **2 MERGEABLE
+> fix PRs** (one of them fixes the app's primary output being dead in every config). Added as
+> **Section 5** below. Root cause of the miss: account-wide `gh search` drops whole repos; only a
+> per-repo `gh issue list` sweep is authoritative. The fleet is **5 repos, not 4.**
+
+**Situation (live-verified 2026-09-24):** 0 merges across all **5** agent repos since ~Sep 11-12.
 Fix queue is 100% complete — every open issue has a covering, MERGEABLE PR. Both large
 keystones are independently superset-certified in fresh clones (JobScout #61 via Python 3.14;
 Community #38 via 94/94 unit tests today, incl. newest siblings #34/#36). **Owner-merge is the
@@ -81,6 +88,27 @@ VERIFY after: `gh pr checkout 9` won't apply post-merge; instead confirm `script
 lists `platform-validation.test.ts` in its run output once #6+#9 are on default. If #9's glob
 does NOT pick it up, re-open #8 and merge it (retarget base->default first).
 
+## 5. AI Video Reel Generator — `morrisstephon51/ai-video-reel-generator` (default `main`)
+The 5th agent repo (R376 runbook omitted it). Default branch is a normal `main` (NOT a `claude/*`
+branch like the others). 2 open PRs, both **MERGEABLE**, disjoint files -> order-independent.
+Unlike the JobScout/Community keystones, **both PRs carry proper closing keywords** (verified via
+`closingIssuesReferences`) -> they auto-close their issues on merge; **no hand-close loop needed.**
+
+```
+R=morrisstephon51/ai-video-reel-generator
+gh pr merge 27 --repo $R --merge   # remove unsatisfiable ADMIN_SECRET guard on the 2 browser-only routes (auto-closes #26 AND #28)
+gh pr merge 31 --repo $R --merge   # anchor best-post-times to America/New_York, not server UTC (auto-closes #30)
+```
+- **#27 is the critical one:** the fail-closed `ADMIN_SECRET` guard made the app's PRIMARY output
+  ("Schedule for Publishing") return 401 in *every* config, and silently no-op'd "Remove persona."
+  It closes both #26 and #28 (PR #29, the #28-only fix, was correctly closed as redundant).
+  **Owner judgment flagged by the author:** #27 reverses prior deliberate hardening PRs (#20, #14),
+  so it is intentionally a your-call merge — that is exactly why it belongs in this runbook, not auto-merged.
+- **#31** is the serverless-UTC schedule-skew fix (every auto-post fired 4-5h before the researched
+  peak; also made dev vs prod diverge for identical input). DST-correct, dependency-free.
+- OWNER-ONLY: issue #5 (provision a live Supabase project) — infra/setup, no PR possible; blocks only
+  end-to-end runtime verification, not the by-inspection correctness of #27/#31.
+
 ---
 
 ## Net effect
@@ -88,8 +116,9 @@ does NOT pick it up, re-open #8 and merge it (retarget base->default first).
 - **Community:** 2 merges + 12 PR-closes + hand-close 12 issues (#38 has no closing keyword) -> all 13 open issues resolved (10 no-op traps sidestepped).
 - **EFA:** 5 merges -> #28 + GA4/CSV fixes; #30/#24 remain owner-only.
 - **Content:** 4 merges + 1 close -> all 3 open issues resolved.
+- **AI Video Reel Gen (R377 add):** 2 merges -> auto-closes #26/#28/#30 (proper closing keywords, no hand-close); #5 (Supabase provisioning) remains owner-only.
 
-After this sweep the only remaining items are the 3 genuinely owner-scoped ones
-(EFA #30 schema-persistence, EFA #24 branch retirement). Nothing left to build.
+After this sweep the only remaining items are the 4 genuinely owner-scoped ones
+(EFA #30 schema-persistence, EFA #24 branch retirement, AI-Video-Reel #5 Supabase provisioning). Nothing left to build.
 
-*Prepared by codex R376. Doc only — no code changed, no merges executed (reserved for owner per governance).*
+*Prepared by codex R376; Section 5 + 5th-repo reconciliation added R377 (2026-09-24). Doc only — no code changed, no merges executed (reserved for owner per governance).*
