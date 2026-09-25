@@ -39,11 +39,14 @@ Collapses 14 open PRs -> 2 merges. #38 keystone is a proven behavioral superset 
 
 ```
 R=morrisstephon51/-Community_intake_Routing
-gh pr merge 38 --repo $R --merge   # keystone intent-based classifier (closes #14-#36)
+gh pr merge 38 --repo $R --merge   # keystone intent-based classifier. NB: #38 has NO closing keywords -> will NOT auto-close #14-#36; hand-close them below.
 # Close the 12 superseded classify siblings — code already in #38, no loss.
 # (10 of these are on NON-DEFAULT stacked bases; merging them = silent no-op vs production.)
 for n in 15 17 19 21 23 25 27 29 31 33 35 37; do \
   gh pr close $n --repo $R --comment "Superseded by #38 (proven behavioral superset of the #14-#36 tower, verified 2026-09-24). Closing to avoid a non-default-base no-op."; done
+# #38 carries no "Closes #NN" refs, so hand-close the 12 classify issues it supersedes:
+for n in 14 16 18 20 22 24 26 28 30 32 34 36; do \
+  gh issue close $n --repo $R --comment "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests 2026-09-24). #38 lacked a closing keyword, closing manually."; done
 gh pr merge 40 --repo $R --merge   # web /api/intake email-routing parity (closes #39) — independent of classify, still needed
 ```
 
@@ -82,7 +85,7 @@ does NOT pick it up, re-open #8 and merge it (retarget base->default first).
 
 ## Net effect
 - **JobScout:** 6 merges + hand-close 15 cadence issues (#61 has no closing keyword) -> all 19 open issues resolved.
-- **Community:** 2 merges + 12 closes -> all 13 open issues resolved (10 no-op traps sidestepped).
+- **Community:** 2 merges + 12 PR-closes + hand-close 12 issues (#38 has no closing keyword) -> all 13 open issues resolved (10 no-op traps sidestepped).
 - **EFA:** 5 merges -> #28 + GA4/CSV fixes; #30/#24 remain owner-only.
 - **Content:** 4 merges + 1 close -> all 3 open issues resolved.
 
