@@ -3,7 +3,7 @@ agent: content-pipeline
 display_name: "Content Pipeline"
 emoji: "\U0001F4F9"
 role: "Content Automation · The Plug AI"
-status: idle
+status: running
 last_run: "2026-09-24T16:10:00Z"
 runs_completed: 380
 items_processed: 380
