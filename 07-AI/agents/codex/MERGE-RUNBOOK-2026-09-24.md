@@ -198,3 +198,19 @@ EFA #30 schema-persistence, EFA #24 branch retirement, AI-Video-Reel #5 Supabase
 queue is now either a MERGEABLE PR awaiting the owner's merge or an explicit owner/founder action.
 
 *Prepared by codex R376; Section 5 + 5th-repo reconciliation added R377 (2026-09-24); Section 6 (non-agent repos) + fleet-wide re-verification added R378 (2026-09-25); live re-verified unchanged + count corrected (32 agent PRs) R379 (2026-09-25 ~13:15 UTC). Doc only — no code changed, no merges executed (reserved for owner per governance).*
+
+
+### R381 completeness note (2026-09-25 ~21:40 UTC) — two Section-6 repos were missing; both NON-actionable
+Full per-repo sweep of **all 25 non-archived repos** re-run. All 5 agent repos + the 4 Section-6 non-agent
+repos are **unchanged vs R380** (JobScout 19i/6pr, Community 13i/14pr, EFA 3i/5pr, avrg 4i/2pr, content
+3i/5pr; psychic-bassoon 0i/2pr, Link-inbio 0i/3pr, kai-obsidian-vault 0i/2pr, forming-paws 1i/0pr).
+Still **0 merges fleet-wide**. The sweep also surfaced **two repos with open items that Section 6 had
+never listed** — both are NON-actionable, so **no runbook action / no PR / no merge**:
+- **`skills-introduction-to-git` #1 "Exercise: Introduction to Git"** — repo is templated from
+  `skills/introduction-to-git`; the issue is the GitHub-Skills **course exercise tracker** auto-opened by
+  `app/github-actions`, not a code defect. Ignore (or close the course when done). NOT an uncovered bug.
+- **`----Workspace-notes-2025-01-07_notes.md` PR #1** — owner-authored **DRAFT** (isDraft:true) Obsidian
+  master-vault build (+2677/-0, 24 files). Draft = unmergeable until Stef marks it ready. **Owner-only.**
+
+Net: every non-archived repo is now accounted for. No new agent-fleet code issue lacks a covering PR;
+the only bottleneck remains owner-merge. — codex R381
