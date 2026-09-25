@@ -1,4 +1,4 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378 2026-09-25)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379 2026-09-25)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
@@ -17,6 +17,24 @@
 > runbook never listed (one open since **Jun 13**, older than any agent PR). Added as **Section 6**.
 > Same root cause as the R377 miss: account-wide search hides whole repos. One of the 7 (Link-inbio
 > #6) is a stale empty-diff PR flagged to **CLOSE**, not merge.
+
+> **R379 LIVE RE-VERIFICATION (2026-09-25 ~13:15 UTC):** Re-ran the authoritative per-repo sweep
+> across all 24 non-archived repos. **Nothing has changed since R378 this morning — this runbook is
+> still 100% accurate; execute it as written.** Confirmed live:
+> - **Still 0 merges/closes fleet-wide.** No PR merged or closed in the last 2 days; last-merged SHAs
+>   unchanged (JobScout #24 @09-11, Community #13 @09-12, EFA #23 @09-11, avrg #25 @09-10). Owner-merge
+>   remains the sole bottleneck.
+> - **All open PRs still MERGEABLE:** 32 agent PRs (JobScout 6, Community 14, EFA 5, content 5, avrg 2)
+>   + 7 non-agent PRs = 39, every one `MERGEABLE`. Stacked-base map holds exactly — Community's 10
+>   `fix/*` non-default bases (#17/#19/#21/#25/#27/#29/#31/#33/#35/#37) and content #4/#8 confirmed.
+> - **Section 6 currency holds:** psychic #1 (+7800/-53) / #25 / Link-inbio #5 / #15 / kai-vault #3 all
+>   `behind_by:0`; Link-inbio **#6 still +0/-0, behind 13 -> CLOSE** (stale, confirmed); kai-vault #2
+>   behind 7 but CLEAN (still "confirm current" before merge).
+> - **Fix queue still 100% covered:** spot-proved on JobScout (the deepest, 19 open issues) - every
+>   issue maps to a covering PR (#66->#67, #64->#65, #62->#63, cadence tower #30-#59 -> keystone #61,
+>   #26->#27). No new uncovered issue has appeared anywhere; **nothing new to build.**
+> - **Correction to the R378 count:** there are **32** open agent PRs, not 33 (R378 off-by-one; no PR
+>   closed - recount 6+14+5+5+2=32).
 
 **Situation (live-verified 2026-09-24):** 0 merges across all **5** agent repos since ~Sep 11-12.
 Fix queue is 100% complete — every open issue has a covering, MERGEABLE PR. Both large
@@ -169,4 +187,4 @@ EFA #30 schema-persistence, EFA #24 branch retirement, AI-Video-Reel #5 Supabase
 `forming-paws #8` (Stef's IL-SOS not-for-profit filing). Nothing left to build — the entire fleet-wide
 queue is now either a MERGEABLE PR awaiting the owner's merge or an explicit owner/founder action.
 
-*Prepared by codex R376; Section 5 + 5th-repo reconciliation added R377 (2026-09-24); Section 6 (non-agent repos) + fleet-wide re-verification added R378 (2026-09-25). Doc only — no code changed, no merges executed (reserved for owner per governance).*
+*Prepared by codex R376; Section 5 + 5th-repo reconciliation added R377 (2026-09-24); Section 6 (non-agent repos) + fleet-wide re-verification added R378 (2026-09-25); live re-verified unchanged + count corrected (32 agent PRs) R379 (2026-09-25 ~13:15 UTC). Doc only — no code changed, no merges executed (reserved for owner per governance).*
