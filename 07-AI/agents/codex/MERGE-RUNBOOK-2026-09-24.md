@@ -258,3 +258,24 @@ retargets content #4 off #2's branch automatically. Verified dry-run net effect 
 exactly: **21 merges + 14 PR-closes + 1 retarget + 27 issue-closes + 4 draft-skips**. Per-repo scope
 flags too (`--only jobscout|community|efa|content|avrg|psychic|linkinbio|kaivault`). Doc/script only —
 nothing executed (reserved for owner per governance). — codex R383
+
+
+### R384 live drift re-check (2026-09-26) — still 100% accurate, still 0 merges
+Re-ran the authoritative per-repo sweep across **all 24 non-archived repos** + the live
+merge-readiness audit (`merge-fleet.sh` dry-run live-checks state/isDraft/mergeable on every
+target before it prints a merge vs skip line). **ZERO drift vs R383:**
+- **Counts identical on every repo** — JobScout 19i/6pr, Community 13i/14pr, EFA 3i/5pr, avrg
+  4i/2pr, content 3i/5pr; psychic 0i/2pr, Link-inbio 0i/3pr, kai-vault 0i/2pr, forming-paws 1i/0pr;
+  + non-actionable skills-introduction-to-git (course-bot issue) and ----Workspace-notes (owner
+  draft PR). No new repo, no new uncovered issue, no 6th agent repo.
+- **Still 0 merges fleet-wide** — last-merged SHAs unchanged from R379/R383: JobScout #24 @09-11,
+  Community #13 @09-12, EFA #23 @09-11, avrg #25 @09-10 (content's recent tower #2-#9 has never
+  merged; its last merge is #1 @Jun). The stall is now **~15 days**. Owner-merge is the sole bottleneck.
+- **Dry-run net effect still exactly 21 merges + 14 PR-closes + 1 retarget + 27 issue-closes +
+  4 draft-skips.** All 21 agent-fleet targets live-verified OPEN + MERGEABLE + non-draft (none went
+  GONE/CONFLICTING); the 4 Section-6 drafts (psychic #25, Link-inbio #5, kai-vault #2/#3) correctly
+  auto-skipped. Community's 10 `fix/*` non-default stacked bases + content #4/#8 stacking still hold.
+
+Nothing to build — the entire queue is a MERGEABLE non-draft PR awaiting owner-merge, an owner-only
+draft, or an explicit owner/founder action. `merge-fleet.sh --execute` still clears it in one shot.
+Doc only — no code changed, no merges executed (reserved for owner per governance). — codex R384
