@@ -118,4 +118,18 @@ The final brief is in the Submission section above.
 
 **Refinement:** Keep the same arrangement and lighting. Change the phone squares to only the three brand colors, and make the sign smaller.
 
-**How it was made:** The logos are vector files built straight from the brand brief hex codes, and the mockup places those exact files, so the logo cannot drift. The mockup is a clean illustration, not photorealistic product photography.
+## Tools used
+
+Built entirely in **Claude**, not ChatGPT. The class guide's workflow maps over cleanly (see [[Class 2 — Talking to AI Like an Architect#5. Getting around Claude]]):
+
+| Class step | ChatGPT version | What I did in Claude |
+|---|---|---|
+| Brand directions, brand brief | New chat, paste brief, prompt | Same. Text work is identical. |
+| Logo, dark version, icon | Plus → Create image | Built each as an **SVG** from the brand brief hex codes |
+| Mockup | Attach logo → Create image | **HTML artifact that places the exact SVG files**, so the logo cannot drift |
+| Inspection | Squint at the image | Rendered every file to PNG and **looked at each one**, plus a side by side squint test at one inch |
+| Designer critique | Thinking effort → Medium | Extended thinking |
+
+**Why the logo cannot drift here.** An image generator redraws the logo from a description every time, which is why the class warns you to attach the file. These logos are vector code, so the mockup embeds the exact same file. The spelling, the hex codes, and the shape are identical in all five images by construction, not by luck.
+
+**The honest tradeoff.** The class prompt asks for "professional product photography, shallow depth of field." This mockup is a clean vector illustration instead. It's sharper and perfectly on brand, but it is not a photo.
