@@ -20,7 +20,7 @@
 #     ./merge-fleet.sh --execute --only jobscout   # run one repo section only
 #
 # Sections: jobscout | community | efa | content | avrg | psychic | linkinbio | kaivault
-# Requires: gh (authenticated), python3 (only for the audit table; not required to merge).
+# Requires: gh (authenticated). No other dependencies.
 #
 set -uo pipefail
 
@@ -48,14 +48,15 @@ run()  { # echo + (maybe) execute
 want() { [ -z "$ONLY" ] || [ "$ONLY" = "$1" ]; }
 
 # ready <repo> <pr>  ->  prints one of: READY | DRAFT | UNMERGEABLE:<state> | GONE
+# Uses gh's built-in --jq (gojq) so booleans render lowercase true/false.
 # Polls up to 3x because GitHub briefly reports mergeable=UNKNOWN right after a merge.
 ready() {
-  local R="$1" n="$2" try js draft mrg
+  local R="$1" n="$2" try line state draft mrg
   for try in 1 2 3; do
-    js=$(gh pr view "$n" -R "$R" --json isDraft,mergeable,state 2>/dev/null) || { echo "GONE"; return; }
-    [ "$(printf '%s' "$js" | gh_jq '.state')" = "OPEN" ] || { echo "GONE"; return; }
-    draft=$(printf '%s' "$js" | gh_jq '.isDraft')
-    mrg=$(printf '%s' "$js" | gh_jq '.mergeable')
+    line=$(gh pr view "$n" -R "$R" --json isDraft,mergeable,state \
+             --jq '"\(.state)|\(.isDraft)|\(.mergeable)"' 2>/dev/null) || { echo "GONE"; return; }
+    IFS='|' read -r state draft mrg <<<"$line"
+    [ "$state" = "OPEN" ] || { echo "GONE"; return; }
     [ "$draft" = "true" ] && { echo "DRAFT"; return; }
     case "$mrg" in
       MERGEABLE) echo "READY"; return ;;
@@ -65,7 +66,6 @@ ready() {
   done
   echo "UNMERGEABLE:UNKNOWN"
 }
-gh_jq() { python3 -c 'import sys,json;d=json.load(sys.stdin);k=sys.argv[1].lstrip(".");print(d.get(k,""))' "$1"; }
 
 # merge_ready <repo> <pr> <note>   — merge only if live-verified READY
 merge_ready() {

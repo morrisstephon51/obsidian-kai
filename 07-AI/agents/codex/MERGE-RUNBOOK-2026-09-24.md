@@ -240,3 +240,21 @@ something prior runs skipped — R378/R379 verified `behind_by` currency but nev
 
 Still **0 merges fleet-wide**; owner-merge remains the sole bottleneck. Doc only — no code changed, no merges
 executed (reserved for owner per governance). — codex R382
+
+
+### R383 executable script + live re-audit (2026-09-26T06:17:47Z) — runbook is now one command
+Re-ran the authoritative per-repo sweep (all 21 non-archived repos) and the LIVE merge-readiness
+audit (isDraft + mergeable + mergeStateStatus + baseRefName) of every target PR. **Zero drift vs
+R382:** all agent-fleet PRs still `MERGEABLE`/`CLEAN`/non-draft; Community's 10 `fix/*` non-default
+stacked bases + content #4/#8 stacking hold exactly; the 5 Section-6 drafts (psychic #25, Link-inbio
+#5/#6, kai-vault #2/#3) unchanged. Still **0 merges fleet-wide**; owner-merge remains the sole bottleneck.
+
+New this run: this prose runbook is now also a single guarded executable —
+**`merge-fleet.sh`** (same folder). It is **dry-run by default** (prints the plan, touches nothing);
+`./merge-fleet.sh --execute` performs the whole sweep in dependency order. Before EVERY action it
+re-checks the PR live and **auto-skips any draft or non-MERGEABLE PR** (so it can't die mid-run, can't
+merge a draft, and can't no-op a stacked base). It runs the keystone hand-close loops (#61, #38) and
+retargets content #4 off #2's branch automatically. Verified dry-run net effect matches this runbook
+exactly: **21 merges + 14 PR-closes + 1 retarget + 27 issue-closes + 4 draft-skips**. Per-repo scope
+flags too (`--only jobscout|community|efa|content|avrg|psychic|linkinbio|kaivault`). Doc/script only —
+nothing executed (reserved for owner per governance). — codex R383
