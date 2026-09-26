@@ -1,4 +1,4 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380 2026-09-25)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380, Section-6 draft-state corrected R382 2026-09-25)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
@@ -155,23 +155,24 @@ rule): behind=0 means the branch still fits `main` today.
 **6a. psychic-bassoon** (AI-consulting / services website) — default `main`
 ```
 R=morrisstephon51/psychic-bassoon
-gh pr merge 1  --repo $R --merge   # real content + working forms + resource detail pages (34 files, +7800; open since Jun 13, ahead 17 / behind 0 = still current)
-gh pr merge 25 --repo $R --merge   # add /websites services page (+297; behind 0)  [merge #1 first, then re-check #25]
+gh pr merge 1  --repo $R --merge   # real content + working forms + resource detail pages (34 files, +7800; open since Jun 13, ahead 17 / behind 0) — NON-draft, merge-ready
+# gh pr merge 25 --repo $R --merge # BLOCKED (R382): #25 is a DRAFT (isDraft:true) -> `gh pr merge` fails "Pull request is in draft state". OWNER-ONLY: "Mark ready for review" first, then merge. (add /websites services page, +297; behind 0)
 ```
 
 **6b. Link-inbio** (link-in-bio site) — default `main`
 ```
 R=morrisstephon51/Link-inbio
-gh pr merge 5  --repo $R --merge   # Obsidian ops vault: domain registry / tracker / grant log (behind 0)
-gh pr merge 15 --repo $R --merge   # rebuild Command Center as live scroll dashboard (+2288/-541; behind 0)
-gh pr close 6  --repo $R --comment "Empty diff (+0/-0), 13 commits behind a diverged main -> the condensed-resume PDF is already on main or was abandoned, and the fellowship deadline it targeted has passed. Closing as stale."
+gh pr merge 15 --repo $R --merge   # rebuild Command Center as live scroll dashboard (+2288/-541; behind 0) — NON-draft, merge-ready
+# gh pr merge 5 --repo $R --merge  # BLOCKED (R382): #5 is a DRAFT (isDraft:true) -> merge fails. OWNER-ONLY: "Mark ready for review" first. (Obsidian ops vault: domain registry / tracker / grant log; behind 0)
+gh pr close 6  --repo $R --comment "Empty diff (+0/-0), 13 commits behind a diverged main -> the condensed-resume PDF is already on main or was abandoned, and the fellowship deadline it targeted has passed. Closing as stale."   # #6 is also a DRAFT; closing a draft is fine
 ```
 
 **6c. kai-obsidian-vault** (vault docs) — default `main`
 ```
 R=morrisstephon51/kai-obsidian-vault
-gh pr merge 3 --repo $R --merge    # record theplugai.info scroll-homepage deployment in vault docs (+3/-3; behind 0)
-gh pr merge 2 --repo $R --merge    # CHA Resident Business Owner Program business plan (+129; behind 7 but still CLEAN — confirm the plan is current before merging)
+# BLOCKED (R382): BOTH PRs are DRAFTS (isDraft:true) -> neither can be merged with `gh pr merge` (fails "Pull request is in draft state"). OWNER-ONLY: "Mark ready for review" first.
+# gh pr merge 3 --repo $R --merge  # DRAFT: record theplugai.info scroll-homepage deployment in vault docs (+3/-3; behind 0)
+# gh pr merge 2 --repo $R --merge  # DRAFT: CHA Resident Business Owner Program business plan (+129; behind 7 — also confirm current before marking ready)
 ```
 
 **Also owner-action, NOT a merge:** `forming-paws` **#8** is a founder-action tracking issue — the
@@ -190,12 +191,14 @@ Stef files; nothing here is a merge.
 - **EFA:** 5 merges -> #28 + GA4/CSV fixes; #30/#24 remain owner-only.
 - **Content:** 4 merges + 1 close -> all 3 open issues resolved.
 - **AI Video Reel Gen (R377 add):** 2 merges -> auto-closes #26/#28/#30 (proper closing keywords, no hand-close); #5 (Supabase provisioning) remains owner-only.
-- **Non-agent repos (R378 add):** psychic-bassoon 2 merges (#1, #25); Link-inbio 2 merges (#5, #15) + 1 stale-close (#6); kai-obsidian-vault 2 merges (#2, #3) = **6 merges + 1 close**. `forming-paws #8` is founder-action (IL-SOS filing), not a merge.
+- **Non-agent repos (R378 add; R382 draft-state correction):** psychic-bassoon **1 merge (#1)** — #25 is a DRAFT (owner-only); Link-inbio **1 merge (#15)** + 1 stale-close (#6, itself a draft) — #5 is a DRAFT (owner-only); kai-obsidian-vault **0 merges** — BOTH #2 and #3 are DRAFTS (owner-only). Executable Section-6 total is **2 merges + 1 close**, NOT 6+1: the other 4 draft PRs need the owner to "Mark ready for review" first. `forming-paws #8` is founder-action (IL-SOS filing), not a merge.
 
 After this sweep (agent fleet + Section 6) the only remaining items are genuinely owner/founder-scoped:
-EFA #30 schema-persistence, EFA #24 branch retirement, AI-Video-Reel #5 Supabase provisioning, and
-`forming-paws #8` (Stef's IL-SOS not-for-profit filing). Nothing left to build — the entire fleet-wide
-queue is now either a MERGEABLE PR awaiting the owner's merge or an explicit owner/founder action.
+EFA #30 schema-persistence, EFA #24 branch retirement, AI-Video-Reel #5 Supabase provisioning,
+`forming-paws #8` (Stef's IL-SOS not-for-profit filing), and the **4 Section-6 DRAFT PRs** (psychic #25,
+Link-inbio #5, kai-vault #2 + #3) which stay owner-only until Stef marks each "Ready for review."
+Nothing left to build — the entire fleet-wide queue is now either a MERGEABLE non-draft PR awaiting the
+owner's merge, an owner-only draft, or an explicit owner/founder action.
 
 *Prepared by codex R376; Section 5 + 5th-repo reconciliation added R377 (2026-09-24); Section 6 (non-agent repos) + fleet-wide re-verification added R378 (2026-09-25); live re-verified unchanged + count corrected (32 agent PRs) R379 (2026-09-25 ~13:15 UTC). Doc only — no code changed, no merges executed (reserved for owner per governance).*
 
@@ -214,3 +217,26 @@ never listed** — both are NON-actionable, so **no runbook action / no PR / no 
 
 Net: every non-archived repo is now accounted for. No new agent-fleet code issue lacks a covering PR;
 the only bottleneck remains owner-merge. — codex R381
+
+
+### R382 Section-6 draft-state correction (2026-09-25 ~22:10 UTC) — 4 merge commands would have failed
+Ran a **live merge-readiness audit** of every runbook-target PR (`mergeable` + `mergeStateStatus` + `isDraft`),
+something prior runs skipped — R378/R379 verified `behind_by` currency but never `isDraft`. Findings:
+
+- **Agent fleet (Sections 1-5) all clear:** all 32 agent PRs (JobScout 6, Community 14, EFA 5, content 5,
+  avrg 2) are `MERGEABLE`/`CLEAN`, `isDraft:false`, no conflict drift after ~2 weeks. Sections 1-5 execute
+  as written. JobScout issue->PR coverage re-proven 100% live (#66->#67, #64->#65, #62->#63, #26->#27,
+  cadence tower #30-#59 -> keystone #61). Community non-default stacked bases hold exactly (10 on `fix/*`:
+  #17/#19/#21/#25/#27/#29/#31/#33/#35/#37; only #40/#38/#23/#15 on default). content #4/#8 stacked as noted.
+- **Section 6 defect fixed:** 5 of Section 6's 6 `gh pr merge` commands targeted **DRAFT** PRs and would have
+  died on `"Pull request is in draft state"`:
+  - psychic-bassoon **#25 = DRAFT** (only #1 is merge-ready)
+  - Link-inbio **#5 = DRAFT** and **#6 = DRAFT** (only #15 is merge-ready; #6 still the stale-close target)
+  - kai-obsidian-vault **#2 = DRAFT** and **#3 = DRAFT** (NEITHER merge-ready)
+  All four content-drafts are the owner's own editorial WIP (business plan, resume PDF, ops vault, deployment
+  record) -> correctly **owner-only** per the classify-by-draft-state lesson. Command blocks 6a/6b/6c now
+  comment out the draft merges with an OWNER-ONLY "Mark ready for review first" note; Net effect corrected
+  from "6 merges + 1 close" to **2 executable merges (#1, #15) + 1 close (#6)**.
+
+Still **0 merges fleet-wide**; owner-merge remains the sole bottleneck. Doc only — no code changed, no merges
+executed (reserved for owner per governance). — codex R382
