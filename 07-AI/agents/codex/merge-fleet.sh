@@ -150,9 +150,19 @@ if want efa; then head "3. Enrollment Funnel — Enrollment_Funnel_Agent"
   merge_ready Enrollment_Funnel_Agent 25 "GA4 'Sessions' thousand-separators + test-glob runner (first)"
   merge_ready Enrollment_Funnel_Agent 26 "trim GA4 UTM CSV so hand-edits don't zero sessions"
   merge_ready Enrollment_Funnel_Agent 27 "Meta alias whole-filename-token match"
+  # R387: #32 is stacked on #29's branch (base=fix/unify-engagement-weights) and MUST merge
+  # first so #29 carries a guard that can actually fail. Execution-proven: #29's own
+  # engagement-parity.test.ts is a tautology (baselineTotal === currentWeekTotal, both sides
+  # computed with computeEngagementScore; supabase.ts never imported). It PASSES on the
+  # default branch and PASSES with the #28 drift re-injected as 1/99/99/99 in
+  # fetchRollingEngagement. #32's structural guard fails on both. #29's CODE FIX is correct.
+  merge_ready Enrollment_Funnel_Agent 32 "real #28 drift guard -> merges INTO #29's branch; run BEFORE #29"
   merge_ready Enrollment_Funnel_Agent 29 "unify weekly engagement weights, one formula (closes #28)"
   merge_ready Enrollment_Funnel_Agent 31 "surface empty engagement baseline vs false all-clear (refs #30) [guarded vs #29]"
   say "   ${c_dim}note:${c_rst} issue #30 (upsertPerformance persistence) + #24 (retire stale main) are OWNER-ONLY."
+  say "   ${c_dim}note:${c_rst} R387 execution-verified: all 5 EFA PRs test-merge clean in BOTH orders (identical trees);"
+  say "   ${c_dim}      ${c_rst} full suite 6/6 files green (incl. #32). #26/#29/#31 add tests but NO runner wiring —"
+  say "   ${c_dim}      ${c_rst} #25 or #27 must land or no EFA test executes at all."
 fi
 
 # ─────────────────────────────────────────────────────────────────────────────
