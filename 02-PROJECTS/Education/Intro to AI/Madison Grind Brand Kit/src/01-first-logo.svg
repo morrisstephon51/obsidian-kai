@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000"><rect width="1000" height="1000" fill="#FFFFFF"/>
+  <rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(-90 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(-60 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(-30 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(0 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(30 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(60 500 430)"/><rect x="494" y="170" width="12" height="70" rx="6" fill="#F26B3A" transform="rotate(90 500 430)"/>
+  <circle cx="500" cy="430" r="190" fill="#F26B3A"/>
+  <text x="500" y="480" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Arial Rounded MT', Arial, sans-serif" font-size="104" fill="#1F2A44" textLength="820" lengthAdjust="spacingAndGlyphs">MADISON GRIND</text>
+  <path d="M170 700 h60 v-70 h50 v70 h40 v-120 h60 v120 h50 v-90 h45 v90 h60 v-150 h55 v150 h45 v-80 h50 v80 h60 v-110 h50 v110 h35" fill="none" stroke="#1F2A44" stroke-width="10" stroke-linejoin="round"/>
+</svg>

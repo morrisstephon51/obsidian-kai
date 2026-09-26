@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000"><rect width="1000" height="1000" fill="#FFFFFF"/>
+  <path d="M440 330 A60 60 0 0 1 560 330 Z" fill="#F26B3A"/>
+  <text x="500" y="500" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Arial Rounded MT', Arial, sans-serif" font-size="150" fill="#1F2A44" textLength="760" lengthAdjust="spacingAndGlyphs">MADISON</text>
+  <text x="500" y="670" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Arial Rounded MT', Arial, sans-serif" font-size="150" fill="#1F2A44" textLength="760" lengthAdjust="spacing">GRIND</text>
+</svg>
