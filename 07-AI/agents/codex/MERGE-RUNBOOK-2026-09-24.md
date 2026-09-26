@@ -343,3 +343,69 @@ lossy if #38 is not really a superset.
 - Fleet sweep re-run across all 23 non-archived repos: **ZERO drift vs R385** (JobScout 19i/6pr, Community
   13i/14pr, EFA 3i/5pr, avrg 4i/2pr, content 3i/5pr; psychic 0i/2pr, Link-inbio 0i/3pr, kai-vault 0i/2pr,
   forming-paws 1i/0pr). Owner-merge remains the sole bottleneck. -- codex R386
+
+---
+
+## R387 addendum (2026-09-26) — EFA queue execution-verified; a NEW failure class: the tautological guard
+
+R386 execution-proved the Community Intake keystone. R387 did the same for the **last large
+un-executed queue, Enrollment_Funnel_Agent** (3 issues / 5 PRs), in a fresh clone with a real
+`npm install`.
+
+**Merge safety — clean.**
+- Order `#25 → #26 → #27 → #29 → #31` **and the exact reverse**: every merge clean, no conflicts.
+- `git diff` between the two resulting trees is **empty** — order does not matter.
+- `#25` and `#27` both add the *identical* `test/*.test.ts` glob line to `package.json`; git
+  resolves identical additions without an add/add conflict. This is the **fixed** form of the
+  testless-repo conflict class — contrast `agent_I_content`, where siblings hand-wired
+  divergent `test` lines.
+- Full suite on the merged tree: **6/6 files, exit 0** — `baseline-visibility` ✓,
+  `detect-platform` 13/13, `engagement-parity` ✓, `engagement-weight-drift` ✓,
+  `enrollment-csv` 6/6, `sessions` 10/10.
+
+**NEW FAILURE CLASS — a guard that is wired, runs, is green, and can never fail.**
+
+Prior classes were *test added but not wired to the runner* (invisible) and *open-PR tests
+codify a gap* (contested). This one is worse because it is invisible in the opposite
+direction: it reports success.
+
+`test/engagement-parity.test.ts`, shipped by **PR #29** as the regression guard for issue #28:
+
+```ts
+const baselineTotal    = week.reduce((s, p) => s + computeEngagementScore(p), 0)
+const currentWeekTotal = week.reduce((s, p) => s + computeEngagementScore(p), 0)
+assert.equal(baselineTotal, currentWeekTotal, 'baseline and current-week must share one formula')
+```
+
+Both sides call `computeEngagementScore` — it is `x === x`. The file **never imports
+`supabase.ts`**, the module that actually held the duplicated weights. Measured:
+
+| tree | `engagement-parity` | `engagement-weight-drift` (#32) |
+|---|---|---|
+| default branch, pre-fix (`supabase.ts:174` duplicates the weights) | **PASSES** | FAILS — names both sites |
+| #29 head (fixed) | passes | passes |
+| #29 head + drift re-injected (`1/99/99/99` in `fetchRollingEngagement`) | **PASSES** | FAILS |
+
+**The #29 code fix is correct and still merges.** Only its guard is unenforceable.
+
+**Detection method — mutation testing, and it must be the default from here.**
+Counting passing assertions cannot distinguish a real guard from a tautology. Two cheap checks:
+1. **Run the PR's test file against the DEFAULT branch.** A regression guard for a bug that
+   still exists there MUST fail. If it passes, it is a no-op. (Watch for a false negative:
+   copying `node_modules` between trees broke `tsx` and made all five files "fail" for the
+   wrong reason — always re-`npm install` in the baseline tree and sanity-check the runner.)
+2. **Re-inject the bug into the fixed tree** and confirm the guard goes red.
+
+**Shipped:** PR **#32** (`test/engagement-weight-drift.test.ts`), based on
+`fix/unify-engagement-weights` so it hardens #29 in place. Because #28 is a *duplication* bug,
+the guard asserts the structural invariant — the weight arithmetic must exist at exactly one
+site, that site must be `scorer.ts`, and `supabase.ts` + `agent.ts` must both route through
+`computeEngagementScore`. No `package.json` change, so no add/add conflict; the glob runner
+picks it up. Plus an evidence comment on #29.
+
+**Merge-order consequence — `merge-fleet.sh` updated:** `#32` now merges immediately **before**
+`#29` (it merges *into* #29's branch). Dry-run is now **22 merges** / 14 PR-closes / 1 retarget
+/ 27 issue-closes / 4 draft-skips.
+
+**Also flagged:** `#26`, `#29` and `#31` add test files but **no runner wiring** — `#25` or
+`#27` must land or no EFA test executes at all.
