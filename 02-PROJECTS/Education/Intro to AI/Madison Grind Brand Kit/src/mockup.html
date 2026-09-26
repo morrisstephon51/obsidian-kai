@@ -1,0 +1,55 @@
+<html><head><style>
+*{box-sizing:border-box}
+body{margin:0;width:1600px;height:1000px;overflow:hidden;position:relative;
+ background:radial-gradient(ellipse at 18% 8%, #FFFDF8 0%, #F6EDE2 45%, #E9DDCF 100%);}
+.table{position:absolute;left:0;right:0;bottom:0;height:430px;
+ background:linear-gradient(180deg,#EFE6DA 0%,#E3D7C8 100%);border-top:1px solid #d8cbbb}
+.window{position:absolute;left:-60px;top:-40px;width:900px;height:620px;
+ background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 180px,transparent 180px 200px);
+ filter:blur(28px);opacity:.8}
+.shadow{filter:drop-shadow(18px 22px 18px rgba(60,40,20,.22))}
+/* sign */
+.sign{position:absolute;left:170px;top:250px;width:430px}
+.board{width:430px;height:430px;border-radius:26px;background:#1F2A44;overflow:hidden;
+ border:14px solid #2a365a;box-shadow:inset 0 0 0 2px rgba(255,255,255,.06)}
+.board img{width:100%;height:100%;display:block;transform:scale(1.18)}
+.legs{position:relative;height:140px}
+.legs:before,.legs:after{content:"";position:absolute;top:-6px;width:16px;height:150px;background:#2a365a;border-radius:6px}
+.legs:before{left:70px;transform:rotate(8deg)}.legs:after{right:70px;transform:rotate(-8deg)}
+/* cup */
+.cup{position:absolute;left:690px;top:330px;width:300px;height:420px}
+.lid{position:absolute;left:-12px;top:0;width:324px;height:46px;border-radius:14px 14px 8px 8px;background:#1F2A44}
+.lid:after{content:"";position:absolute;left:18px;right:18px;top:-18px;height:24px;border-radius:12px 12px 4px 4px;background:#2a365a}
+.body{position:absolute;top:40px;left:0;width:300px;height:380px;
+ clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);
+ background:linear-gradient(90deg,#e9e4dc 0%,#ffffff 30%,#ffffff 55%,#e6dfd5 100%)}
+.body img{position:absolute;left:10px;top:55px;width:280px}
+.band{position:absolute;left:0;right:0;bottom:36px;height:10px;background:#F26B3A;opacity:.9}
+/* phone */
+.phone{position:absolute;left:1080px;top:150px;width:330px;height:680px;border-radius:52px;background:#111;padding:16px;transform:rotate(4deg)}
+.screen{width:100%;height:100%;border-radius:38px;background:#FFF4E6;overflow:hidden;position:relative}
+.cover{height:170px;background:#F26B3A}
+.avatar{position:absolute;left:24px;top:110px;width:120px;height:120px;border-radius:50%;border:6px solid #FFF4E6;overflow:hidden;background:#1F2A44}
+.avatar img{width:100%;height:100%}
+.name{position:absolute;left:26px;top:246px;font:700 24px 'Arial Rounded MT Bold',Arial;color:#1F2A44;letter-spacing:1px}
+.bar{position:absolute;left:26px;height:12px;border-radius:6px;background:#1F2A44;opacity:.18}
+.grid{position:absolute;left:14px;right:14px;top:360px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.grid div{aspect-ratio:1;border-radius:6px}
+</style></head><body>
+<div class="window"></div>
+<div class="table"></div>
+<div class="sign shadow"><div class="board"><img src="03-dark-version.svg"></div><div class="legs"></div></div>
+<div class="cup shadow"><div class="lid"></div><div class="body"><img src="logo-clear.svg"><div class="band"></div></div></div>
+<div class="phone shadow"><div class="screen">
+  <div class="cover"></div>
+  <div class="avatar"><img src="04-icon.svg"></div>
+  <div class="name">MADISON GRIND</div>
+  <div class="bar" style="top:290px;width:190px"></div>
+  <div class="bar" style="top:314px;width:140px"></div>
+  <div class="grid">
+    <div style="background:#1F2A44"></div><div style="background:#F26B3A"></div><div style="background:#e8dccb"></div>
+    <div style="background:#F26B3A"></div><div style="background:#e8dccb"></div><div style="background:#1F2A44"></div>
+    <div style="background:#e8dccb"></div><div style="background:#1F2A44"></div><div style="background:#F26B3A"></div>
+  </div>
+</div></div>
+</body></html>
