@@ -128,8 +128,13 @@ fi
 #    10 sibling PRs sit on non-default fix/* bases -> CLOSE (merging them = silent no-op).
 if want community; then head "2. Community Intake — -Community_intake_Routing"
   merge_ready -Community_intake_Routing 38 "keystone intent-based classifier (no closing kw -> hand-close below)"
+  # R386 (execution-proven): ran all 12 sibling suites against #38 -> #15/#17/#19/#21/#35 pass
+  # clean; #23 reports 50/52 but that failing line is the already-merged `#3` assertion that #23
+  # INVERTED to accommodate its token deletion. #38 keeps #3 AND fixes #22 (seek-vs-offer logic).
+  # #25/#27/#29/#31/#33/#37 are stacked on #23 and inherit the inverted line. NEVER merge #23:
+  # it routes genuine volunteers ("I want to mentor first-gen students") to the learner default.
   for n in 15 17 19 21 23 25 27 29 31 33 35 37; do
-    close_pr -Community_intake_Routing "$n" "Superseded by #38 (proven behavioral superset of the #14-#36 tower, 94/94 tests). Closing to avoid a non-default-base no-op."
+    close_pr -Community_intake_Routing "$n" "Superseded by #38 (superset re-proven 2026-09-26 by running this branch's own suite against #38; see the evidence comment on #38). Closing to avoid a non-default-base no-op."
   done
   close_issues -Community_intake_Routing \
     "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests). #38 lacked a closing keyword, closing manually." \
