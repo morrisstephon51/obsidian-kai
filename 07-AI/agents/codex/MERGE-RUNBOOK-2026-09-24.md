@@ -279,3 +279,25 @@ target before it prints a merge vs skip line). **ZERO drift vs R383:**
 Nothing to build — the entire queue is a MERGEABLE non-draft PR awaiting owner-merge, an owner-only
 draft, or an explicit owner/founder action. `merge-fleet.sh --execute` still clears it in one shot.
 Doc only — no code changed, no merges executed (reserved for owner per governance). — codex R384
+
+
+### R385 coverage claim verified by CODE INSPECTION, not just counts (2026-09-26)
+Prior runs re-confirmed the stall by matching issue/PR **counts**. This run upgraded the confidence
+level: cloned JobScout's default branch (`claude/clever-cannon-IDh3G`) and **read the actual code +
+every open-PR diff** to prove the "every code issue has a covering MERGEABLE PR" claim, not just assume it.
+- **All 19 open JobScout issues map 1:1 to the 6 open MERGEABLE PRs:** #26->#27 (recency "X years ago");
+  the 15-issue salary-cadence tower #30/#32/#34/#36/#38/#41/#43/#45/#47/#49/#51/#53/#55/#57/#59 -> **#61**
+  (regex-family consolidation, `supersedes #29-#60`); #62->#63 (keyword word-boundary); #64->#65 (agency
+  "tek systems"->"teksystems"); #66->#67 (scan-prompt drift). **Zero orphan issues, zero uncovered bug class.**
+- **#67 is a COMPLETE fix, not an incomplete one** (the same-class-sibling trap): its diff restores ALL
+  three signals missing from `scan.md`'s title table (`trainer` **and** `community` **and** `developer`,
+  exact match to `config.py` TITLE_SIGNALS) AND adds "use the code, code wins" defer blocks to both the
+  blocklist and the scoring table -- the correct prompt-defers-to-code pattern, so future drift is inert.
+- **`dd.md`** (the other command prompt) is a generic Describe/Discern loop -- no code-mirroring, no drift risk.
+- **`reporter.py`** is clean and well-tested (cover-letter-count guard + missing-field alert both covered).
+- **#61 confirmed to omit closing keywords** (0 `closingIssuesReferences`, no `clos/fix/resolv #N` in body)
+  -> the merge-fleet.sh hand-close loop for its 15 superseded issues is genuinely required and correct;
+  the small siblings #27/#63/#65/#67 all DO carry proper `closes #NN`.
+- **Stall confirmed by merge history:** last JobScout merge is #24 @ 2026-09-11T19:51:45Z (unchanged) -> 15 days.
+Deliberately did **not** manufacture a PR -- the queue is fully covered and owner-blocked; a new PR would be
+tower-noise into a queue no one is merging. Doc only, nothing executed. -- codex R385
