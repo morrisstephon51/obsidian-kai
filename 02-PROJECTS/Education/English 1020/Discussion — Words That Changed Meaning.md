@@ -5,6 +5,7 @@ textbook: Rosenwasser & Stephen, Writing Analytically, 9th ed.
 topic: Interpretation, how word meanings shift over time
 status: ready to post
 created: 2026-09-26
+updated: 2026-09-26
 tags: [school, english-1020, discussion, semantics]
 ---
 
@@ -16,40 +17,41 @@ tags: [school, english-1020, discussion, semantics]
 
 ## The post (ready to paste)
 
-Fire is a good one. The word stayed, but the meaning drifted somewhere nobody would have guessed.
+Fire is a good example, and it is still moving. If somebody says a song is fire, they mean it is good. Same word, new job.
 
-Three I looked up:
+Three more:
 
-**Awful** used to mean full of awe. It was a compliment. People wrote about the awful majesty of God and meant it with respect. By the 1800s it meant terrible. *Awesome* comes from the same root and went the opposite direction. There's a term for each: pejoration when a word goes bad, amelioration when it goes good.
+**Bad.** Michael Jackson named an album *Bad* and meant the opposite. That flip came out of Black English and went mainstream. The word still does both jobs, and you can only tell which one by who is talking and how they say it.
 
-**Nice** came from a Latin word meaning ignorant. In Middle English it meant foolish. Then it meant fussy or precise. Now it means pleasant. Same word, three meanings, a few hundred years apart.
+**Ghost.** It used to be a noun, a spirit. Now it is a verb. You ghost somebody when you disappear on them and stop answering. Dating apps made that one stick.
 
-**Broadcast** was a farming word. It meant scattering seed by hand instead of planting it in rows. Radio took it, then TV, and now anybody with a phone.
+**Awful.** This one I had to look up. It used to mean full of awe, and it was a compliment. People wrote about the awful majesty of God and meant respect. By the 1800s it meant terrible. *Awesome* comes from the same root and went the opposite way, which seems strange for two words that started in the same place.
 
-Quick ones: *meat* meant any food. *Deer* meant any animal. *Computer* was a job title for a person who did the math by hand.
+Nobody announced any of these. People said them, they caught on, and now it is just English. That is what makes older writing tricky. Somebody in 1985 reading "that song is fire" would think something was burning.
 
-Nobody announced these changes. People used the words loosely, it caught on, and the dictionaries followed. That matters when we read old writing. If a writer in 1750 calls a cathedral awful, today's meaning flips what he was saying.
-
-Anybody see a word changing right now? *Literally* feels like it is mid shift.
+Anybody else notice a word changing right now?
 
 ---
 
 ## Notes for me
 
-**Why it ends with a question.** Most discussion rubrics score engagement. A question gives classmates an easy way to reply, and replying to their answers is usually part of the grade.
+**Why this version.** Every example is something I actually run into. *Bad* and *ghost* I already knew. *Awful* is the one I looked up, and saying so in the post is fine. Looking things up is the assignment, not cheating.
 
-**If the instructor wants sources.** Etymonline (etymonline.com) is free and readable. The Oxford English Dictionary is the standard academic source and the school library probably gives free access with a student login.
+**Check the syllabus** for the AI policy before posting. English classes are usually the strictest, and some want outside help disclosed.
 
-**Spare words, if I need to reply to classmates:**
-- *Silly* meant blessed, then innocent, then weak, then foolish.
-- *Villain* meant a farm worker tied to an estate. The class insult came later.
-- *Girl* meant a young person of either sex.
-- *Terrific* meant causing terror.
-- *Decimate* was a Roman punishment, killing one in ten. Now it means wreck most of something.
-- *Spam* was canned meat, then a Monty Python sketch, then junk email.
-- *Sanction* is a contronym: it means both approve and punish.
+**Why it ends with a question.** Most discussion rubrics grade engagement. A question gives classmates an easy way to reply, and replying back is usually part of the grade.
 
-**The connection to the course.** This is the same point as Writing Analytically Ch 2: context fixes meaning. A word on its own is not the unit of meaning. The sentence, the year, and the audience are all doing work. See [[Ch 2 — Reading Analytically]].
+**If the instructor asks for a source.** Etymonline (etymonline.com) is free and readable. The Oxford English Dictionary is the academic standard and the school library login probably gets it free.
+
+**Spare words for replying to classmates:**
+- *Cap.* "No cap" means no lie. A cap used to be a hat.
+- *Salty.* Used to describe taste. Now it means bitter or mad.
+- *Mouse, cloud, stream.* Tech borrowed regular words instead of inventing new ones. Same move as fire.
+- *Silly.* Meant blessed, then innocent, then foolish.
+- *Terrific.* Meant causing terror.
+- *Nice.* Came from a Latin word meaning ignorant, then meant foolish, then fussy, then pleasant.
+
+**The connection to the reading.** This is the same point as Ch 2: context fixes meaning. A word by itself is not the unit of meaning. Who is speaking, when, and to whom all do the work. Worth mentioning in a reply to a classmate, since instructors notice when a discussion gets tied back to the book. See [[Ch 2 — Reading Analytically]].
 
 ---
 *Backlinks: [[02-PROJECTS/Education/index|Education]]*
