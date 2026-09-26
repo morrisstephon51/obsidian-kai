@@ -77,32 +77,43 @@ A **brand identity** is what lets someone recognize a business **before they rea
 | Habit | Why |
 |---|---|
 | **Paste the briefs first**, business brief then brand brief, at the start of every new chat | The AI starts every new chat knowing nothing |
-| **Shift + Enter** for a new line; **Enter alone sends** | So you can stack briefs and the job in one message |
+| **Shift + Enter** for a new line; **Enter alone sends** | So you can stack the briefs and the job in one message |
 | **Refine in the same conversation.** Say what to keep and what to fix. | A new chat throws away all the context |
-| **Attach the image as context** (Plus → Add photos & files) | Without the file, the AI redraws the logo from words and it **drifts** |
+| **Attach the image as context** (paperclip, or drag the file into the message) | Without the file, the AI redraws the logo from words and it **drifts** |
 | **Inspect before you react**: spelling, element count, colors, background, limits, one inch squint test | "A beautiful wrong answer is still wrong. It's just wearing a nicer jacket." |
 | **Catch invented facts**: founding year, owner, organic beans | If it isn't in the brief, it isn't a fact about the shop. Refine it out. |
-| **Match thinking effort to the job**: making = **Instant**, judging = **Medium** | Slide it back to Instant when you're done |
-| **Copy with the Copy icon** (first icon under a response) | Clean text into your file |
+| **Match thinking effort to the job**: making = normal, judging = **extended thinking on** | A critique is slow work. Turn it back off when you're done. |
+| **Copy with the Copy button** (under a response) | Clean text into your file |
 
 ---
 
-## 5. Getting around ChatGPT
+## 5. Getting around Claude
+
+> [!note] The class guide is written for ChatGPT. This is the same workflow in Claude.
+> The five pieces, the briefs, and the inspection habits don't change. Only the buttons do.
 
 | Where | What | Used for |
 |---|---|---|
 | Left sidebar | **New chat** | A fresh chat for each step: brand brief, logo, mockup |
-| Left sidebar | **Recents** | Reopen any class chat and keep refining |
-| Left sidebar | **Library** | Every image you've generated |
-| Center | **Ask ChatGPT box** | Paste briefs → Shift+Enter → the job |
-| Left of composer | **Plus → Create image** | Adds the blue *Create image* label (logo, variations, mockup) |
-| Left of composer | **Plus → Add photos & files** | Attach the approved logo before the mockup |
-| Right of composer | **Instant** (thinking effort slider) | Instant / Medium / High. Medium for the critique. |
-| Right of composer | **Arrow** | Send |
-| Under a response | **Icon row** | First icon = Copy |
-| On an image | **Hover** | Download. Save with a clear file name. |
+| Left sidebar | **Chat history** | Reopen any chat and keep refining (ChatGPT calls this Recents) |
+| Left sidebar | **Projects** | Keep both briefs in a project so every new chat already has them |
+| Center | **Message box** | Paste briefs → Shift+Enter → the job |
+| Left of composer | **Paperclip / drag and drop** | Attach the approved logo before the mockup |
+| Above composer | **Extended thinking** toggle | Turn on for the designer critique, off for making |
+| Above composer | **Model picker** | Opus for judgment work, Sonnet for speed |
+| Under a response | **Copy button** | Copy the brand brief into your text file |
+| In a response | **Artifact panel** | Where the logo opens. Download from the panel. |
 
----
+> [!warning] The one real difference: there is no Create image button
+> ChatGPT makes a raster image from a description. Claude builds the logo as **code** (an SVG artifact) and you download it from the artifact panel.
+>
+> **Why that's better for a logo:**
+> - **Vector, not pixels.** It stays sharp at any size, from a one inch cup to a storefront sign.
+> - **Exact hex codes.** The colors are literally the ones from your brand brief, so they can't drift.
+> - **The spelling can't break.** The name is real text, not drawn letters, so MADISON GRIND is spelled right every time.
+> - **Refinements are surgical.** "Make the sun smaller" changes one number instead of redrawing the whole logo.
+>
+> **What you give up:** photorealism. A photo-style mockup of a real cup on a real table is something an image generator does better.
 
 ## 6. The workflow step by step
 
@@ -110,7 +121,7 @@ A **brand identity** is what lets someone recognize a business **before they rea
 > Madison Grind Coffee Company is a fictional coffee shop on Madison Street in downtown Chicago, in the Loop, steps from Generations College. Our customers are college students, faculty, and nearby office workers. We open at six thirty in the morning on weekdays. We serve espresso drinks, drip coffee, tea, and simple pastries. Our personality is warm, quick, and a little witty, like a friend who works behind the counter. Prices are fair for students. We are not fancy, we are not corporate, and we never use hype.
 
 ### Step 1: Three directions → brand brief
-**New chat.** Paste business brief → Shift+Enter → ask for **three brand directions** in a table (Direction Name, Personality in Three Words, Color Palette, Logo Concept). No beans, no steam, nothing like a national chain.
+**New chat.** Paste the business brief → Shift+Enter → ask for **three brand directions** in a table (Direction Name, Personality in Three Words, Color Palette, Logo Concept). No beans, no steam, nothing like a national chain.
 
 **Inspect:** 3 rows × 4 columns in order? Directions actually different? Any brown? Any beans or steam?
 **Choose by asking:** Which would a tired student walk toward at 6:45 am? Which fits on a cup? Which prints small?
@@ -122,7 +133,7 @@ A **brand identity** is what lets someone recognize a business **before they rea
 **Refine**, then **Copy** the final brief into your text file under the business brief.
 
 ### Step 2: Logo → logo family
-**New chat.** Paste both briefs → **Plus → Create image** → logo prompt (lettering plus one shape, three colors only, flat, no gradients or shadows, centered on white, spelled exactly, no beans/steam/cups).
+**New chat.** Paste both briefs → ask for the logo **as an SVG artifact** (lettering plus one shape, three colors only using the exact hex codes, flat, no gradients or shadows, centered on white, spelled exactly, no beans/steam/cups).
 
 > [!check] Logo inspection checklist
 > - [ ] Spelled **MADISON GRIND**, every letter
@@ -141,10 +152,10 @@ A **brand identity** is what lets someone recognize a business **before they rea
 
 **Check:** dark = same logo, only recolored. Icon = recognizable from across the room.
 
-**Optional critique:** slide effort to **Medium**, ask it to act as an experienced brand designer: three specific risks (small size readability, confusion with existing brands, personality match) plus one recommendation. "Be honest. Do not flatter." Then slide back to **Instant**.
+**Optional critique:** turn on **extended thinking**, ask it to act as an experienced brand designer: three specific risks (small size readability, confusion with existing brands, personality match) plus one recommendation. "Be honest. Do not flatter." Then turn it back off.
 
 ### Step 3: Mockup
-**New chat.** Paste both briefs → **Plus → Add photos & files → attach final logo** → **Plus → Create image** → mockup prompt (cup, small storefront sign, phone with social profile; soft morning light; don't alter the logo; no text except MADISON GRIND).
+**New chat.** Paste both briefs → **attach your final logo file** → ask for the mockup **as an HTML artifact that places the attached logo file**, not a redrawing of it → mockup prompt (cup, small storefront sign, phone with social profile; soft morning light; don't alter the logo; no text except MADISON GRIND).
 
 **Inspect:** is it *your* logo, or did it drift? Spelled right everywhere? Extra text? Neighborhood campus shop, or luxury lobby?
 
@@ -162,7 +173,7 @@ A **brand identity** is what lets someone recognize a business **before they rea
 - **No invented facts.** Refine them out.
 - **MADISON GRIND** spelled exactly on every image. "If it is wrong, it is not done."
 - Refine in the **same** chat. **Attach** the logo file before the mockup.
-- Thinking effort back to **Instant** after using it
+- Extended thinking back **off** after the critique
 
 **Submit, in this order:** final brand brief (text) → first and final logo side by side + one sentence on what changed and why → dark version and icon → final mockup.
 
@@ -182,9 +193,9 @@ A **brand identity** is what lets someone recognize a business **before they rea
 ## Before Class 3
 
 - [ ] Submit the Brand Kit
-- [ ] Keep **both briefs** in your text file (you paste them one last time in Class 3)
+- [ ] Keep **both briefs** in your text file (you paste them one last time in Class 3). In Claude, a **Project** does the same job: drop the briefs in once and every chat in it starts with them.
 - [ ] Look at logos on cups, signs, and your phone. Ask the **one inch question**: would I still recognize it small?
-- **Next class:** the **Remember** pillar, Personalization and Memory. A new chat will already know Madison Grind without you explaining it.
+- **Next class:** the **Remember** pillar, Personalization and Memory. A new chat will already know Madison Grind without you explaining it. Claude's version of this is **Projects** (shared context for every chat inside it) and **memory**.
 
 ---
 
@@ -214,8 +225,8 @@ A **brand identity** is what lets someone recognize a business **before they rea
 > [!question]- 8. The AI's brand brief says "Founded in 1998 by a local family." What do you do?
 > It's an invented fact that isn't in the business brief. Refine it out.
 
-> [!question]- 9. When should you use Medium thinking effort instead of Instant?
-> For judging tasks like the designer critique. Making is fast (Instant), judging is slow (Medium). Slide it back afterward.
+> [!question]- 9. When should you turn extended thinking on?
+> For judging tasks like the designer critique. Making is fast, judging is slow. Turn it back off afterward.
 
 > [!question]- 10. What is the assignment actually graded on?
 > The quality of your request and whether your refinement fixed a real problem you found by inspecting. Not how pretty the logo is.
