@@ -1,10 +1,10 @@
 ---
 type: study-notes
-course: Writing (Module 3, Week 3)
+course: ENG 1020
 textbook: Rosenwasser & Stephen, Writing Analytically, 9th ed.
 chapter: 2
 created: 2026-09-22
-tags: [school, writing-analytically, study-notes]
+tags: [school, english-1020, writing-analytically, study-notes]
 ---
 
 # Ch 2: Reading Analytically
