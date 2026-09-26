@@ -79,6 +79,14 @@ scorer.py is fully farmed — do NOT open more per-token cadence PRs.
 
 ## 2. Community Intake — `morrisstephon51/-Community_intake_Routing` (default `claude/quirky-galileo-UGnfz`)
 Collapses 14 open PRs -> 2 merges. #38 keystone is a proven behavioral superset of the entire
+> **R386 precision note:** the "superset" proof is 11/12, not 12/12 -- and the 12th is a keystone WIN.
+> Running sibling **#23**'s own suite against #38 reports **50/52**. Do NOT read that as a keystone
+> regression: the failing line is the already-merged `#3` assertion (`'I want to teach and mentor
+> students'` -> volunteer) that **#23 inverted in place** to `learner` because its token-deletion fix
+> couldn't satisfy it. #38 keeps `#3` AND fixes #22 via seek-vs-offer direction logic. #25/#27/#29/#31/
+> #33/#37 are stacked on #23 and inherit the inverted line. Merging #23 would silently route genuine
+> volunteers ("I want to mentor first-gen students") to the learner default. **Close #23, never merge it.**
+> Evidence posted as comments on PR #38 and PR #23 (2026-09-26).
 #14-#36 classify tower (verified today, both `intake.js` + `api/intake.js` copies).
 
 ```
@@ -301,3 +309,37 @@ every open-PR diff** to prove the "every code issue has a covering MERGEABLE PR"
 - **Stall confirmed by merge history:** last JobScout merge is #24 @ 2026-09-11T19:51:45Z (unchanged) -> 15 days.
 Deliberately did **not** manufacture a PR -- the queue is fully covered and owner-blocked; a new PR would be
 tower-noise into a queue no one is merging. Doc only, nothing executed. -- codex R385
+
+### R386 keystone superset PROVEN BY EXECUTION of the tower's own tests (2026-09-26)
+R385 upgraded JobScout from count-parity to code-inspection parity. This run did the same for the
+**largest un-inspected queue (Community Intake, 13i/14pr)** -- and went one step further than inspection:
+checked out **all 12 superseded sibling branches' own test files** and *ran* them against keystone #38's
+`intake.js` + `api/intake.js` in a fresh clone. This matters because Section 2 **closes** 12 PRs, which is
+lossy if #38 is not really a superset.
+- **Result: #15 48/48, #17 56/56, #19 62/62, #21 70/70, #35 78/78 -- clean passes.** #25/#27/#29/#31/#33/#37
+  pass everything except one inherited case. **#23: 50/52.**
+- **The single divergence is #38 being correct.** #23 could not satisfy the merged `#3` assertion
+  (`test/classify.test.mjs:28-29` on default: `'I want to teach and mentor students'` -> `volunteer`), so it
+  **flipped that line to `learner`** and relabeled it an intentional `#22` false-negative. Measured:
+  | input (intent) | default (live) | PR #23 | keystone #38 |
+  |---|---|---|---|
+  | `I want to teach and mentor students` (offer) | volunteer OK | **learner WRONG** | volunteer OK |
+  | `I want to mentor first-gen students on AI tools` (offer) | volunteer OK | **learner WRONG** | volunteer OK |
+  | `I need a mentor to help me learn AI` (seek) | volunteer WRONG (#22) | learner OK | learner OK |
+  | `Teach me how to use AI for my church` (seek) | volunteer WRONG (#22) | learner OK | learner OK |
+- **So the tower is worse than useless, it is harmful:** merging #23 (or the six stacked on it) drops genuine
+  volunteers who offer to teach/mentor -- the exact population The Plug AI wants in the volunteer inbox.
+  Section 2's "close 12, merge #38" plan is **confirmed correct and now execution-proven.**
+- **#38's own suite: 94/94 unit + 3/3 smoke.** CLI `intake.js` and serverless `api/intake.js` agreed on every
+  probe -> **no twin drift** (the duplicated-logic hazard) in the keystone.
+- **Hand-close set audited fleetwide.** Wrote a closing-keyword coverage audit over every open issue x every
+  open PR **body** (titles do NOT auto-close): JobScout 4 auto / 15 keyword-less; Community 4 auto / 9
+  keyword-less; EFA 1 auto; avrg 3 auto; content 3 auto / 0 keyword-less. `merge-fleet.sh`'s Community loop
+  correctly closes **14 16 18** 20..36 -- `#14/#16/#18` DO have body keywords but in PRs **#15/#17/#19 that get
+  CLOSED, not merged**, so their keywords never fire and the hand-close is required. Verified present.
+- **avrg "#27+#31 auto-close" claim re-verified true:** #27's body carries `Fixes #26` *and* an appended
+  `Also closes #28`, and its diff really does drop the `ADMIN_SECRET` guard from `persona` DELETE -- so #28 is a
+  covered duplicate, not an orphan. Only avrg #5 (owner Supabase setup) stays open. No new PR warranted.
+- Fleet sweep re-run across all 23 non-archived repos: **ZERO drift vs R385** (JobScout 19i/6pr, Community
+  13i/14pr, EFA 3i/5pr, avrg 4i/2pr, content 3i/5pr; psychic 0i/2pr, Link-inbio 0i/3pr, kai-vault 0i/2pr,
+  forming-paws 1i/0pr). Owner-merge remains the sole bottleneck. -- codex R386
