@@ -36,7 +36,7 @@ field is the base branch.
 **Cause A confirmed separately.** Every `base==default` + `API=[]` PR checked
 (`scanner#61`, `scanner#25`, `Community#38`, `agent_I#2`, `agent_I#10`, `Enrollment#31`)
 has **no closing keyword in the body at all** — genuine omission. So
-`[[keystone-prs-omit-closing-keywords]]` is correct *for the keystones* and must not be
+``keystone-prs-omit-closing-keywords`` is correct *for the keystones* and must not be
 generalized to stacked PRs.
 
 ## Why it matters operationally

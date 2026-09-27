@@ -47,7 +47,7 @@ This area houses your understanding of yourself: who you are, what drives you, y
 ## 📊 Patterns & Insights
 
 - [[Thinking Patterns]] — How you process information
-- [[Behavioral Patterns]] — Your habits
+- [[03-NOTES/Behavioral Patterns/Recurring Behaviors|Behavioral Patterns]] — Your habits
 - [[Decision-Making Style]] — How you choose
 - [[Motivations]] — What drives you
 

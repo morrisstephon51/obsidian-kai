@@ -354,9 +354,9 @@ grep ERROR 07-AI/chatroom/feed.md | tail -10
 ## 📚 Related
 
 - [[index|07-AI Index]] — Navigation hub
-- [[Reference|Agent Reference]] — API docs
-- [[../09-SYSTEM/CLAUDE.md|CLAUDE.md]] — Full system architecture
-- [[../05-MAPS/Command Center|Command Center]] — Stefan's master dashboard
+- Agent Reference — API docs
+- [[09-SYSTEM/CLAUDE.md|CLAUDE.md]] — Full system architecture
+- [[09-SYSTEM/Command Center|Command Center]] — Stefan's master dashboard
 
 ---
 
