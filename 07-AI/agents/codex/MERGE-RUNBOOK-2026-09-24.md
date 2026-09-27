@@ -1,4 +1,4 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380, Section-6 draft-state corrected R382 2026-09-25, JobScout #69 added R390 2026-09-27)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380, Section-6 draft-state corrected R382 2026-09-25, JobScout #69 added R390 2026-09-27, agent-II section 5b added R392 2026-09-27)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
@@ -212,6 +212,39 @@ gh pr merge 31 --repo $R --merge   # anchor best-post-times to America/New_York,
 - OWNER-ONLY: issue #5 (provision a live Supabase project) — infra/setup, no PR possible; blocks only
   end-to-end runtime verification, not the by-inspection correctness of #27/#31.
 
+## 5b. Grant Agent — `morrisstephon51/agent-II` (default `claude/nifty-bohr-AhrsA`) (R391/R392 add)
+The **6th** agent repo. It was missed for 390 runs because it showed `PRs=0, ISSUES=0` and that read as
+"clean" — it actually meant "never audited". Same fleet architecture as the others
+(config/scraper/scorer/report/alerts/models + a `main.py` CLI with a `--cron` installer), no tests and
+no CI until these PRs. Both PRs are based on the **default** branch and both carry a body closing
+keyword (`closingIssuesReferences` verified `[2]` and `[4]`) -> they auto-close on merge;
+**no hand-close loop needed.**
+
+```
+R=morrisstephon51/agent-II
+gh pr merge 3 --repo $R --merge   # HTML scraper: 403/404 error page is not content (auto-closes #2)
+gh pr merge 5 --repo $R --merge   # scorer: validate Claude's response shape (auto-closes #4)
+```
+- **#3 (R391)** — `_html_scrape` returned `r.text` without checking `r.status_code`. Servers answer
+  403/404 with a *full HTML error page*, so the caller's `if not html:` guard could never fire on an
+  HTTP error. Measured live: `fallback_url` fired for **0 of 4** HTML targets (inert config), and every
+  dead source **fabricated a grant out of the error page's own text** — observed
+  `"Error 404 — Woods Fund Chicago … Page not found"` — which then reached the *billed* Claude scorer,
+  the report table with a dead link, and potentially a deadline-alert email. Also a **discovery win**:
+  once the guard made `fallback_url` reachable, Woods Fund Chicago `/grantmaking/` returned real content.
+- **#5 (R392)** — `score_grants` wraps the API call in `try/except` with a `_placeholder_scores`
+  fallback, but consumed the parsed JSON *outside* that block. Measured against the real scorer:
+  a wrapped array, a missing `"index"`, and a non-numeric `fit_score` each **crash the run after the
+  API is billed and before the report is written** (so a cron run produces no report and no alert,
+  with only a traceback in `grant_agent.log`); `"index": "0"` instead of `0` produces **no error at all**
+  and silently discards every score, rendering a complete-looking report where all grants are 5/10.
+- Order is preference, not a dependency: disjoint files (`scraper.py` vs `scorer.py`), and the shared
+  test scaffolding is **byte-identical** in both PRs so it add/add-merges cleanly. Test-merged in both
+  orders — no conflict, scorer suite green in the merged tree either way.
+- **NOT fixed, stated as a known limitation in #2:** `google.org` and the `grants.gov` URL return
+  HTTP 200 but are a philanthropy landing page and a JS-rendered search shell. A status check cannot
+  detect those and content validation would risk dropping genuine grants — owner call on the targets.
+
 ## 6. Non-agent repos — also owner-merge-blocked (R378 add)
 These are Stef's own **personal / business / vault** repos (default branch `main`), so what goes
 live is entirely the owner's editorial call — even more than the agent fixes. 7 stranded PRs, all
@@ -257,6 +290,7 @@ Stef files; nothing here is a merge.
 - **EFA:** 5 merges -> #28 + GA4/CSV fixes; #30/#24 remain owner-only.
 - **Content:** 4 merges + 1 close -> all 3 open issues resolved.
 - **AI Video Reel Gen (R377 add):** 2 merges -> auto-closes #26/#28/#30 (proper closing keywords, no hand-close); #5 (Supabase provisioning) remains owner-only.
+- **Grant Agent / agent-II (R391/R392 add):** 2 merges -> auto-closes #2 and #4 (proper closing keywords, no hand-close). Takes `merge-fleet.sh` from 24 to **26** merges; the issue-close counter stays at **27** because neither PR needs a hand-close.
 - **Non-agent repos (R378 add; R382 draft-state correction):** psychic-bassoon **1 merge (#1)** — #25 is a DRAFT (owner-only); Link-inbio **1 merge (#15)** + 1 stale-close (#6, itself a draft) — #5 is a DRAFT (owner-only); kai-obsidian-vault **0 merges** — BOTH #2 and #3 are DRAFTS (owner-only). Executable Section-6 total is **2 merges + 1 close**, NOT 6+1: the other 4 draft PRs need the owner to "Mark ready for review" first. `forming-paws #8` is founder-action (IL-SOS filing), not a merge.
 
 After this sweep (agent fleet + Section 6) the only remaining items are genuinely owner/founder-scoped:
