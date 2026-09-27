@@ -466,3 +466,69 @@ picks it up. Plus an evidence comment on #29.
 
 **Also flagged:** `#26`, `#29` and `#31` add test files but **no runner wiring** — `#25` or
 `#27` must land or no EFA test executes at all.
+
+
+---
+
+## R389 addendum (2026-09-27) — the unconditional-follow-up audit R388 asked for
+
+R388 patched ONE gate by hand (`agent_I_content` #8, held unless #9 reaches MERGED) and left a
+carryover: *"Audit the script for other unconditional close_pr calls that assume a prior merge
+landed."* Done. **The same bug class was present at 39x the scale**, on the two biggest keystones.
+
+### What was wrong
+
+`merge_ready` downgrades an unmergeable PR to a `[skip]` and keeps going. Three follow-up blocks
+then executed **unconditionally**, each asserting in its GitHub comment that a keystone had landed:
+
+| Block | Actions | Comment it posts | Gated before R389? |
+|---|---|---|---|
+| JobScout hand-closes | 15 issues (#30–#59) | "Fixed by #61" | **no** |
+| Community sibling closes | 12 PRs (#15–#37) | "Superseded by #38" | **no** |
+| Community hand-closes | 12 issues (#14–#36) | "Fixed by #38" | **no** |
+
+The Community pair is the worst of the three: those 12 PRs are the *only other* fixes for those 12
+issues, so closing them as superseded while #38 is absent **erases the entire fix surface for that
+repo** and leaves 12 issues marked fixed. And it is silent — the summary still prints
+`Issues closed: 27`.
+
+### Proven, not asserted
+
+Built a stateful fake-`gh` harness (`/tmp/ghsim`) that reproduces the live dry run exactly
+(23/14/1/27/4), then forced each keystone UNMERGEABLE and diffed the unpatched vs patched script:
+
+| Scenario | UNPATCHED (merges/prClose/issClose) | PATCHED |
+|---|---|---|
+| A — all keystones merge | 23 / 14 / 27 | **23 / 14 / 27** (identical: no-op on the happy path) |
+| B — #61 + #38 unmergeable | 21 / **14 / 27** ← fired anyway | 21 / **2 / 0** + 2 `[HOLD]` |
+| C — #9 unresolvable | 22 / 13 / 27, 1 hold | 22 / 13 / 27, 1 hold (R388 gate preserved) |
+| D — #32 unmergeable | 22 / 14 / 27 | 22 / 14 / 27 + `[WARN]` (does not block a real fix) |
+
+Also verified **idempotent**: a second `--execute` pass issues 0 mutating actions and does not
+spuriously HOLD. Behaviour changes in scenario B only.
+
+### The fix
+
+- **`require_merged <repo> <pr> <what>`** — shared gate. In `--execute` it demands `state == MERGED`.
+  In dry-run there is no merge to observe, so it **predicts from live mergeability** rather than
+  assuming success; otherwise the dry run would promise 27 issue-closes that `--execute` would
+  correctly refuse. Now wraps all three blocks above *and* R388's #8 case (one helper, four sites).
+- **`warn_unless_merged`** — for a dependency where holding would be worse than proceeding. EFA #29
+  carries the real code fix for #28 and auto-closes it, so blocking #29 because its guard #32
+  skipped would withhold a correct fix. Warns loudly instead, telling the owner #28 will close with
+  only the tautological `engagement-parity.test.ts` behind it.
+- **`retarget`** now checks state first (no longer fires or counts against a non-OPEN PR).
+
+### Net effect on the owner's plan: UNCHANGED — still 23 merges / 14 PR-closes / 1 retarget /
+### 27 issue-closes / 4 draft-skips. The gates only engage when something has already gone wrong.
+
+### Two surface facts confirmed this run
+
+- **A closing keyword in the TITLE does not auto-close.** `agent_I_content` #8 is titled
+  "…(closes #7)" but its `closingIssuesReferences` is **empty**; #9 carries the real `closes=[7]`.
+  Harmless here because the plan merges #9 and closes #8 — but the inverse ordering would have
+  orphaned issue #7. Verify closing refs via the API field, never by reading a title.
+- **Every open issue fleetwide still has a covering MERGEABLE PR or is owner-only** (JobScout #26←#27
+  and content #7←#9 were the two that looked unaccounted for; both are covered). Zero new fix PRs
+  warranted. Live sweep: 41 open PRs across the 9 active repos, 0 unmergeable, 5 drafts — of which
+  only 4 are draft-*skips*, because Link-inbio #6 is a draft being **closed** as stale, not merged.
