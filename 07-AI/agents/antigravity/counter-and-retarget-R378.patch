@@ -1,5 +1,5 @@
---- mf389.sh	2026-09-27 07:12:48
-+++ mf377fix.sh	2026-09-27 07:15:56
+--- merge-fleet.sh
++++ merge-fleet.sh
 @@ -36,17 +36,23 @@
    esac
  done
@@ -68,7 +68,7 @@
      else say "   ${c_dim}[skip]${c_rst} issue #$n already $st."; fi
    done
  }
-@@ -294,8 +307,19 @@
+@@ -301,8 +314,26 @@
  #    #9's glob runner supersedes #8's hand-wired package.json -> close #8.
  if want content; then head "4. Content Pipeline — agent_I_content"
    merge_ready agent_I_content 2 "enforce CAPTION_LIMITS in code"
@@ -77,9 +77,16 @@
 +  # R377: #4's base is LIVE-CONFIRMED to be #2's head (fix/enforce-caption-char-limits),
 +  # so merging #4 before the retarget lands puts its commits on a NON-DEFAULT branch --
 +  # a silent no-op vs default -- while #4 reads MERGED and leaves the open-PR sweep.
-+  # (#4's closingIssuesReferences is [] despite the "(closes #3)" prose, so issue #3
-+  # survives as the only remaining record. That is the ONLY thing that makes this
-+  # recoverable, and it is not a property to rely on.)
++  # R378 CORRECTION to the R377 comment that stood here: #4's closingIssuesReferences
++  # is [] NOT because the closing keyword is mere prose -- #4's BODY carries a valid
++  # "Fixes #3." -- but because GitHub only populates that field for PRs targeting the
++  # DEFAULT branch, and #4 targets #2's head. Two consequences the old comment inverted:
++  #   retarget SUCCEEDS -> the base becomes default, "Fixes #3." re-arms, and issue #3
++  #     AUTO-CLOSES on merge. #3 is NOT a surviving record on this path.
++  #   retarget FAILS     -> #4 merges to a branch #2 already vacated (line above merges
++  #     #2 to default FIRST), so the fix never reaches default AND #3 never auto-closes
++  #     AND #3 is absent from the 27-item hand-close loop -> the plan silently needed 28.
++  # So this gate is load-bearing for the ISSUE ledger, not only for the code landing.
 +  if retarget agent_I_content 4 "claude/eloquent-edison-aF7yG"; then
 +    merge_ready agent_I_content 4 "enforce topic-derived hashtags + hashtag-filter.test.ts (closes #3)"
 +  else
@@ -90,7 +97,7 @@
    merge_ready agent_I_content 6 "validate post.platform before insert (closes #5) — brings platform-validation.test.ts"
    resolve_test_line_conflict agent_I_content 9 "fix/test-runner-glob-union" "claude/eloquent-edison-aF7yG"
    merge_ready agent_I_content 9 "glob test runner scripts/run-tests.ts (auto-discovers all *.test.ts)"
-@@ -343,6 +367,7 @@
+@@ -350,6 +381,7 @@
  say "   PRs retargeted:  $RETARGETED"
  say "   Issues closed:   $ISSUES_CLOSED"
  say "   Skipped (draft/unmergeable/gone): $SKIPPED"
