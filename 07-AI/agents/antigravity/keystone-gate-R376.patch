@@ -1,0 +1,70 @@
+--- /tmp/mf-snapshot-R376.sh	2026-09-27 02:42:26
++++ mf-fixed.sh	2026-09-27 02:45:58
+@@ -72,13 +72,23 @@
+   local R="$OWNER/$1" n="$2" note="$3" st
+   st=$(ready "$R" "$n")
+   case "$st" in
+-    READY) run "gh pr merge $n --repo $R --merge   # $note"; [ "$DRY" -eq 0 ] && MERGED=$((MERGED+1)) || MERGED=$((MERGED+1)) ;;
++    READY) if run "gh pr merge $n --repo $R --merge   # $note"; then MERGED=$((MERGED+1));
++           else say "   ${c_red}[FAILED]${c_rst} gh pr merge #$n exited nonzero (branch protection / required checks / network) -> NOT counted as merged. $note"; SKIPPED=$((SKIPPED+1)); fi ;;
+     DRAFT) say "   ${c_yel}[skip]${c_rst} #$n is a DRAFT -> OWNER-ONLY (Mark ready for review first). $note"; SKIPPED=$((SKIPPED+1)) ;;
+     GONE)  say "   ${c_dim}[skip]${c_rst} #$n already merged/closed (not open). $note"; ;;
+     *)     say "   ${c_red}[skip]${c_rst} #$n is $st -> author must rebase on new default before merging. $note"; SKIPPED=$((SKIPPED+1)) ;;
+   esac
+ }
+ 
++# keystone_landed <repo> <pr> — R376: a supersession-close is only safe if the superseding
++# PR actually MERGED. Mirrors the #9 -> #8 gate codex added in R388, applied to the two
++# KEYSTONES, where the blast radius is 39 closes instead of 1. Dry-run passes through so the
++# certified dry-run tuple (23/14/1/27/4) is unchanged.
++keystone_landed() {
++  [ "$DRY" -eq 1 ] && return 0
++  [ "$(gh pr view "$2" -R "$OWNER/$1" --json state --jq .state 2>/dev/null)" = "MERGED" ]
++}
++
+ # close_pr <repo> <pr> <comment>
+ close_pr() {
+   local R="$OWNER/$1" n="$2" cmt="$3" st
+@@ -177,9 +187,14 @@
+   merge_ready job_opportunity_scanner 27 "recency: 'X years ago' past MAX_DAYS_OLD (closes #26)"
+   merge_ready job_opportunity_scanner 65 "AGENCY_BLOCKLIST 'TEKsystems' one-word match (closes #64)"
+   merge_ready job_opportunity_scanner 67 "sync /scan prompt to scorer/config, restore 'trainer' (closes #66)"
+-  close_issues job_opportunity_scanner \
+-    "Fixed by #61 (anchored salary/cadence regex families; superset-proven in a fresh Python 3.14 clone). #61 lacked a closing keyword, closing manually." \
+-    30 32 34 36 38 41 43 45 47 49 51 53 55 57 59
++  if keystone_landed job_opportunity_scanner 61; then
++    close_issues job_opportunity_scanner \
++      "Fixed by #61 (anchored salary/cadence regex families; superset-proven in a fresh Python 3.14 clone). #61 lacked a closing keyword, closing manually." \
++      30 32 34 36 38 41 43 45 47 49 51 53 55 57 59
++  else
++    say "   ${c_red}[HOLD]${c_rst} #61 did not merge -> keeping all 15 superseded issues OPEN (closing them now would erase the only record of 15 live bugs)."
++    SKIPPED=$((SKIPPED+1))
++  fi
+ fi
+ 
+ # ─────────────────────────────────────────────────────────────────────────────
+@@ -193,12 +208,18 @@
+   # INVERTED to accommodate its token deletion. #38 keeps #3 AND fixes #22 (seek-vs-offer logic).
+   # #25/#27/#29/#31/#33/#37 are stacked on #23 and inherit the inverted line. NEVER merge #23:
+   # it routes genuine volunteers ("I want to mentor first-gen students") to the learner default.
+-  for n in 15 17 19 21 23 25 27 29 31 33 35 37; do
+-    close_pr -Community_intake_Routing "$n" "Superseded by #38 (superset re-proven 2026-09-26 by running this branch's own suite against #38; see the evidence comment on #38). Closing to avoid a non-default-base no-op."
+-  done
+-  close_issues -Community_intake_Routing \
+-    "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests). #38 lacked a closing keyword, closing manually." \
+-    14 16 18 20 22 24 26 28 30 32 34 36
++  if keystone_landed -Community_intake_Routing 38; then
++    for n in 15 17 19 21 23 25 27 29 31 33 35 37; do
++      close_pr -Community_intake_Routing "$n" "Superseded by #38 (superset re-proven 2026-09-26 by running this branch's own suite against #38; see the evidence comment on #38). Closing to avoid a non-default-base no-op."
++    done
++    close_issues -Community_intake_Routing \
++      "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests). #38 lacked a closing keyword, closing manually." \
++      14 16 18 20 22 24 26 28 30 32 34 36
++  else
++    say "   ${c_red}[HOLD]${c_rst} #38 did not merge -> keeping all 12 tower PRs and 12 issues OPEN."
++    say "   ${c_dim}       ${c_rst} Closing them without #38 would leave the repo with NO classifier fix and NO open record of the bugs."
++    SKIPPED=$((SKIPPED+1))
++  fi
+   merge_ready -Community_intake_Routing 40 "web /api/intake email-routing parity (closes #39) — independent of classify"
+ fi
+ 
