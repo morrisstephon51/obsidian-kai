@@ -231,6 +231,13 @@ if want jobscout; then head "1. JobScout — job_opportunity_scanner"
   merge_ready job_opportunity_scanner 27 "recency: 'X years ago' past MAX_DAYS_OLD (closes #26)"
   merge_ready job_opportunity_scanner 65 "AGENCY_BLOCKLIST 'TEKsystems' one-word match (closes #64)"
   merge_ready job_opportunity_scanner 67 "sync /scan prompt to scorer/config, restore 'trainer' (closes #66)"
+  # R390: residual site of the same #66 class -- #67 reconciled the prompt's SCORING copies
+  # (Step 3 filter, Step 4 table) but not its QUERY list. 2 of 8 config.SEARCH_KEYWORDS
+  # ("EdTech coordinator", "learning experience designer") appeared nowhere in the prompt, so
+  # they were scored but never searched. Order-independent: test-merged live against all six
+  # siblings in BOTH orders, scan.md auto-merges (#67 = Steps 3-4, #69 = Steps 1-2), 16/16
+  # test files exit 0 either way. Auto-closes #68 via a body keyword -- no hand-close needed.
+  merge_ready job_opportunity_scanner 69 "/scan issues one query per config.SEARCH_KEYWORDS (closes #68) [disjoint from #67]"
   # GATED (R389): these 15 issues are closed as "Fixed by #61" -- only true if #61 landed.
   if require_merged job_opportunity_scanner 61 "the 15 hand-closes for issues #30-#59"; then
     close_issues job_opportunity_scanner \
