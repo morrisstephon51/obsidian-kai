@@ -1,0 +1,100 @@
+--- mf389.sh	2026-09-27 07:12:48
++++ mf377fix.sh	2026-09-27 07:15:56
+@@ -36,17 +36,23 @@
+   esac
+ done
+ 
+-MERGED=0; CLOSED=0; RETARGETED=0; ISSUES_CLOSED=0; SKIPPED=0
++MERGED=0; CLOSED=0; RETARGETED=0; ISSUES_CLOSED=0; SKIPPED=0; FAILED=0
+ 
+ c_grn=$'\033[32m'; c_yel=$'\033[33m'; c_red=$'\033[31m'; c_dim=$'\033[2m'; c_rst=$'\033[0m'
+ say()  { printf '%s\n' "$*"; }
+ head() { printf '\n%s== %s ==%s\n' "$c_dim" "$*" "$c_rst"; }
++# R377: run() returns eval's exit status in --execute mode (and printf's 0 in DRY mode).
++# EVERY caller must branch on it: `if run "..."; then <count>; else failed "..."; fi`.
++# Incrementing a counter on the line AFTER run() counts a FAILED command as done.
+ run()  { # echo + (maybe) execute
+   if [ "$DRY" -eq 1 ]; then printf '   %s[dry]%s %s\n' "$c_dim" "$c_rst" "$*";
+   else printf '   %s[run]%s %s\n' "$c_grn" "$c_rst" "$*"; eval "$@"; fi
+ }
+ want() { [ -z "$ONLY" ] || [ "$ONLY" = "$1" ]; }
+ 
++# failed <what>  — the command errored; do NOT count it as done.
++failed() { say "   ${c_red}[FAILED]${c_rst} $*"; FAILED=$((FAILED+1)); }
++
+ # ready <repo> <pr>  ->  prints one of: READY | DRAFT | UNMERGEABLE:<state> | GONE
+ # Uses gh's built-in --jq (gojq) so booleans render lowercase true/false.
+ # Polls up to 3x because GitHub briefly reports mergeable=UNKNOWN right after a merge.
+@@ -72,7 +78,8 @@
+   local R="$OWNER/$1" n="$2" note="$3" st
+   st=$(ready "$R" "$n")
+   case "$st" in
+-    READY) run "gh pr merge $n --repo $R --merge   # $note"; [ "$DRY" -eq 0 ] && MERGED=$((MERGED+1)) || MERGED=$((MERGED+1)) ;;
++    READY) if run "gh pr merge $n --repo $R --merge   # $note"; then MERGED=$((MERGED+1));
++           else failed "gh pr merge #$n exited nonzero (branch protection / required checks / network) -> NOT counted as merged. $note"; fi ;;
+     DRAFT) say "   ${c_yel}[skip]${c_rst} #$n is a DRAFT -> OWNER-ONLY (Mark ready for review first). $note"; SKIPPED=$((SKIPPED+1)) ;;
+     GONE)  say "   ${c_dim}[skip]${c_rst} #$n already merged/closed (not open). $note"; ;;
+     *)     say "   ${c_red}[skip]${c_rst} #$n is $st -> author must rebase on new default before merging. $note"; SKIPPED=$((SKIPPED+1)) ;;
+@@ -83,7 +90,9 @@
+ close_pr() {
+   local R="$OWNER/$1" n="$2" cmt="$3" st
+   st=$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+-  if [ "$st" = "OPEN" ]; then run "gh pr close $n --repo $R --comment \"$cmt\""; CLOSED=$((CLOSED+1));
++  if [ "$st" = "OPEN" ]; then
++    if run "gh pr close $n --repo $R --comment \"$cmt\""; then CLOSED=$((CLOSED+1));
++    else failed "gh pr close #$n ($R) exited nonzero -> PR is STILL OPEN and NOT counted as closed."; fi
+   else say "   ${c_dim}[skip]${c_rst} PR #$n already $st."; fi
+ }
+ 
+@@ -92,7 +101,9 @@
+   local R="$OWNER/$1" n="$2" base="$3" st
+   st=$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+   if [ "$st" != "OPEN" ]; then say "   ${c_dim}[skip]${c_rst} PR #$n is $st -> nothing to retarget."; return 0; fi
+-  run "gh pr edit $n --repo $R --base $base"; RETARGETED=$((RETARGETED+1))
++  if run "gh pr edit $n --repo $R --base $base"; then RETARGETED=$((RETARGETED+1)); return 0; fi
++  failed "gh pr edit #$n --base $base exited nonzero -> #$n STILL targets its old base."
++  return 1
+ }
+ 
+ # close_issues <repo> <comment> <n...>
+@@ -100,7 +111,9 @@
+   local R="$OWNER/$1"; shift; local cmt="$1"; shift
+   for n in "$@"; do
+     st=$(gh issue view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+-    if [ "$st" = "OPEN" ]; then run "gh issue close $n --repo $R --comment \"$cmt\""; ISSUES_CLOSED=$((ISSUES_CLOSED+1));
++    if [ "$st" = "OPEN" ]; then
++      if run "gh issue close $n --repo $R --comment \"$cmt\""; then ISSUES_CLOSED=$((ISSUES_CLOSED+1));
++      else failed "gh issue close #$n ($R) exited nonzero -> issue is STILL OPEN. The keystone hand-close is MANDATORY (keystones ship with closingIssuesReferences=[]), so re-run this section."; fi
+     else say "   ${c_dim}[skip]${c_rst} issue #$n already $st."; fi
+   done
+ }
+@@ -294,8 +307,19 @@
+ #    #9's glob runner supersedes #8's hand-wired package.json -> close #8.
+ if want content; then head "4. Content Pipeline — agent_I_content"
+   merge_ready agent_I_content 2 "enforce CAPTION_LIMITS in code"
+-  retarget    agent_I_content 4 "claude/eloquent-edison-aF7yG"
+-  merge_ready agent_I_content 4 "enforce topic-derived hashtags + hashtag-filter.test.ts (closes #3)"
++  # R377: #4's base is LIVE-CONFIRMED to be #2's head (fix/enforce-caption-char-limits),
++  # so merging #4 before the retarget lands puts its commits on a NON-DEFAULT branch --
++  # a silent no-op vs default -- while #4 reads MERGED and leaves the open-PR sweep.
++  # (#4's closingIssuesReferences is [] despite the "(closes #3)" prose, so issue #3
++  # survives as the only remaining record. That is the ONLY thing that makes this
++  # recoverable, and it is not a property to rely on.)
++  if retarget agent_I_content 4 "claude/eloquent-edison-aF7yG"; then
++    merge_ready agent_I_content 4 "enforce topic-derived hashtags + hashtag-filter.test.ts (closes #3)"
++  else
++    say "   ${c_red}[HOLD]${c_rst} NOT merging #4 -- it still targets #2's head branch, not the default branch."
++    say "   ${c_dim}         ${c_rst} Merging it there would mark #4 MERGED while the hashtag fix never reaches default."
++    SKIPPED=$((SKIPPED+1))
++  fi
+   merge_ready agent_I_content 6 "validate post.platform before insert (closes #5) — brings platform-validation.test.ts"
+   resolve_test_line_conflict agent_I_content 9 "fix/test-runner-glob-union" "claude/eloquent-edison-aF7yG"
+   merge_ready agent_I_content 9 "glob test runner scripts/run-tests.ts (auto-discovers all *.test.ts)"
+@@ -343,6 +367,7 @@
+ say "   PRs retargeted:  $RETARGETED"
+ say "   Issues closed:   $ISSUES_CLOSED"
+ say "   Skipped (draft/unmergeable/gone): $SKIPPED"
++[ "$FAILED" -gt 0 ] && say "   ${c_red}Commands that FAILED (NOT done, re-run): $FAILED${c_rst}"
+ if [ "$DRY" -eq 1 ]; then
+   say ""
+   say "${c_yel}This was a DRY RUN.${c_rst} Re-run with ${c_grn}--execute${c_rst} to perform these actions."

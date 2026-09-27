@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Fake gh for merge-fleet.sh COUNTER-INTEGRITY certification. Touches NOTHING on GitHub.
+# v2 (R377): adds FAKE_CLOSE_ISSUE_FAIL / FAKE_CLOSE_PR_FAIL / FAKE_EDIT_FAIL so the
+# three non-merge mutating verbs can fail the way `gh pr merge` already could in v1.
+LOG="${FAKE_LOG:-/tmp/mf377/actions.log}"; STATE="${FAKE_STATE:-/tmp/mf377/state.db}"
+sub="$1"; obj="$2"
+num=""; for a in "$@"; do case "$a" in [0-9]|[0-9][0-9]|[0-9][0-9][0-9]) num="$a"; break;; esac; done
+key="$num"
+case "$sub $obj" in
+  "pr view")
+    if printf '%s\n' "$@" | grep -q 'isDraft'; then
+      if grep -qx "MERGED:$key" "$STATE" 2>/dev/null; then echo "MERGED|false|MERGEABLE"
+      elif [ "$num" = "${FAKE_CONFLICT_PR:-}" ]; then echo "OPEN|false|CONFLICTING"
+      elif [ "$num" = "${FAKE_DRAFT_PR:-}" ]; then echo "OPEN|true|MERGEABLE"
+      else echo "OPEN|false|MERGEABLE"; fi
+    else
+      if grep -qx "MERGED:$key" "$STATE" 2>/dev/null; then echo "MERGED"; else echo "OPEN"; fi
+    fi ;;
+  "issue view") echo "OPEN" ;;
+  "pr merge")
+    if [ "$num" = "${FAKE_MERGE_FAIL:-}" ]; then echo "GraphQL: Protected branch / required checks failing" >&2; exit 1; fi
+    echo "MERGE pr=$num" >>"$LOG"; echo "MERGED:$num" >>"$STATE" ;;
+  "pr close")
+    if [ "$num" = "${FAKE_CLOSE_PR_FAIL:-}" ]; then echo "HTTP 403: Resource not accessible / write denied" >&2; exit 1; fi
+    echo "CLOSE-PR pr=$num" >>"$LOG" ;;
+  "issue close")
+    if [ "$num" = "${FAKE_CLOSE_ISSUE_FAIL:-}" ]; then echo "HTTP 502: Bad gateway" >&2; exit 1; fi
+    echo "CLOSE-ISSUE issue=$num" >>"$LOG" ;;
+  "pr edit")
+    if [ "$num" = "${FAKE_EDIT_FAIL:-}" ]; then echo "GraphQL: Base branch was modified / cannot change base" >&2; exit 1; fi
+    echo "RETARGET pr=$num" >>"$LOG" ;;
+esac
+exit 0

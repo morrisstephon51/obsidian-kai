@@ -1,3 +1,7 @@
+# SUPERSEDED by counter-and-retarget-R377.patch -- DO NOT APPLY THIS ONE.
+# R376b fixed the MERGED counter only. R377 found the SAME unconditional-increment
+# shape at FOUR sites (merge_ready / close_pr / retarget / close_issues), so this
+# patch was an incomplete fix of its own bug class. Kept only as a record.
 --- mf389.sh	2026-09-27 02:53:37
 +++ mf389-fixed.sh	2026-09-27 02:54:02
 @@ -72,7 +72,8 @@
