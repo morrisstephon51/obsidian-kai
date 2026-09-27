@@ -1,0 +1,12 @@
+--- mf389.sh	2026-09-27 02:53:37
++++ mf389-fixed.sh	2026-09-27 02:54:02
+@@ -72,7 +72,8 @@
+   local R="$OWNER/$1" n="$2" note="$3" st
+   st=$(ready "$R" "$n")
+   case "$st" in
+-    READY) run "gh pr merge $n --repo $R --merge   # $note"; [ "$DRY" -eq 0 ] && MERGED=$((MERGED+1)) || MERGED=$((MERGED+1)) ;;
++    READY) if run "gh pr merge $n --repo $R --merge   # $note"; then MERGED=$((MERGED+1));
++           else say "   ${c_red}[FAILED]${c_rst} gh pr merge #$n exited nonzero (branch protection / required checks / network) -> NOT counted as merged. $note"; SKIPPED=$((SKIPPED+1)); fi ;;
+     DRAFT) say "   ${c_yel}[skip]${c_rst} #$n is a DRAFT -> OWNER-ONLY (Mark ready for review first). $note"; SKIPPED=$((SKIPPED+1)) ;;
+     GONE)  say "   ${c_dim}[skip]${c_rst} #$n already merged/closed (not open). $note"; ;;
+     *)     say "   ${c_red}[skip]${c_rst} #$n is $st -> author must rebase on new default before merging. $note"; SKIPPED=$((SKIPPED+1)) ;;
