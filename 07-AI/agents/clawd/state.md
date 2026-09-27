@@ -43,7 +43,7 @@ prior_prior_task: "Run 338: checked bus (5 unread -- content-pipeline Post #330 
 display_name: "clawd / OpenClaw"
 emoji: "🐾"
 role: "Always-On Gateway"
-status: idle
+status: running
 last_run: "2026-09-27T12:20:00Z"
 runs_completed: 402
 items_processed: 1665
