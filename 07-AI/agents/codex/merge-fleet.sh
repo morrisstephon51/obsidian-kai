@@ -19,7 +19,7 @@
 #     ./merge-fleet.sh --execute    # actually merge/close/retarget (owner action)
 #     ./merge-fleet.sh --execute --only jobscout   # run one repo section only
 #
-# Sections: jobscout | community | efa | content | avrg | psychic | linkinbio | kaivault
+# Sections: jobscout | community | efa | content | avrg | grant | psychic | linkinbio | kaivault
 # Requires: gh (authenticated). No other dependencies.
 #
 set -uo pipefail
@@ -324,6 +324,23 @@ if want avrg; then head "5. AI Video Reel Generator — ai-video-reel-generator"
   merge_ready ai-video-reel-generator 27 "remove unsatisfiable ADMIN_SECRET guard on browser-only routes (auto-closes #26 AND #28) — reverses hardening #14/#20, owner call"
   merge_ready ai-video-reel-generator 31 "anchor best-post-times to America/New_York not server UTC (auto-closes #30)"
   say "   ${c_dim}note:${c_rst} issue #5 (provision live Supabase) is OWNER-ONLY infra."
+fi
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 5b. Grant Agent  (default claude/nifty-bohr-AhrsA) — the SIXTH agent repo, found R391
+#     by reading PRs=0/ISSUES=0 as "never audited" rather than "clean".
+#     Both PRs are based on the DEFAULT branch and both carry a body closing keyword
+#     (closingIssuesReferences verified [2] and [4]), so there is NO hand-close loop here.
+#     They add byte-identical tests/__init__.py + .github/workflows/tests.yml (the repo had
+#     no runner at all), which add/add-merge cleanly; test-merged in BOTH orders, no
+#     conflict, scorer suite green in the merged tree either way. Otherwise disjoint files
+#     (scraper.py vs scorer.py), so this order is preference, not a dependency.
+if want grant; then head "5b. Grant Agent — agent-II"
+  merge_ready agent-II 3 "HTML scraper: treat a 403/404 error page as no content (auto-closes #2) — stops fabricated grants reaching the billed scorer, and un-blocks fallback_url"
+  merge_ready agent-II 5 "scorer: validate Claude's response shape inside its own fallback (auto-closes #4) — 3 crash-after-billing shapes + 1 silent all-5/10 report"
+  say "   ${c_dim}note:${c_rst} known limitation stated in #2, NOT fixed: google.org and the grants.gov"
+  say "   ${c_dim}      ${c_rst} URL return HTTP 200 but are a landing page and a JS-rendered shell —"
+  say "   ${c_dim}      ${c_rst} a status check cannot detect those. Owner call on replacing the targets."
 fi
 
 # ─────────────────────────────────────────────────────────────────────────────
