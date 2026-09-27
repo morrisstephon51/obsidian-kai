@@ -72,7 +72,7 @@ Your desired future: the life you're working toward.
 
 Built on: [[Core Values]]
 
-Enabled by: [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]] + [[../Education/Education Goals|Education Goals]] + [[../../Areas/Development/Skills|Skills Development]]
+Enabled by: [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]] + [[../Education/Education Goals|Education Goals]] + [[02-PROJECTS/Development/Skills|Skills Development]]
 
 Expressed through: [[../../02-PROJECTS/index|Projects]]
 

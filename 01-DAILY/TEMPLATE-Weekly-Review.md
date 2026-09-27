@@ -11,7 +11,7 @@ created: 2026-06-13
 
 ## 📈 Progress Across Goals
 
-### [[../../Areas/Career/Career Goals|Career Goals]]
+### [[02-PROJECTS/Career/Career Goals|Career Goals]]
 - **This week:** [What happened in career?]
 - **Progress toward goal:** [% or description]
 - **Supporting project:** [[../../Projects/The Plug AI Progress|The Plug AI]]
@@ -24,7 +24,7 @@ created: 2026-06-13
 - **Status:** 🟢 On track / 🟡 Needs adjustment / 🔴 Blocked
 - **Next week focus:** [What's next]
 
-### [[../../Areas/Education/Education Goals|Education Goals]]
+### [[02-PROJECTS/Education/Education Goals|Education Goals]]
 - **This week:** [Learning, degree progress?]
 - **Progress:** [Specific metrics or milestones]
 - **Status:** 🟢 On track / 🟡 Needs adjustment / 🔴 Blocked
@@ -81,7 +81,7 @@ created: 2026-06-13
 
 **Insights that shape bigger understanding:**
 
-### Does this change my view of [[../../Areas/Personal Growth/Life Vision|Life Vision]]?
+### Does this change my view of [[02-PROJECTS/Personal Growth/Life Vision|Life Vision]]?
 - [What did you learn about what you really want?]
 - [Does vision still feel right?]
 - [Any refinements needed?]
@@ -91,12 +91,12 @@ created: 2026-06-13
 - [Should they be added to Opportunities hub?]
 - [Evaluation: Values ✅? Goals ✅? Strengths ✅?]
 
-### Revealed [[../../Areas/Personal Growth/Strengths|Strengths]] or [[../../Areas/Personal Growth/Weaknesses|Weaknesses]]?
+### Revealed [[02-PROJECTS/Personal Growth/Strengths|Strengths]] or [[02-PROJECTS/Personal Growth/Weaknesses|Weaknesses]]?
 - [What did you notice about yourself?]
 - [How does this refine self-knowledge?]
-- [Updates to [[me|Personal Profile]]?]
+- [Updates to [[03-NOTES/Identity/me|Personal Profile]]?]
 
-### Shift in [[../../Areas/Personal Growth/Motivations|Motivations]]?
+### Shift in [[02-PROJECTS/Personal Growth/Motivations|Motivations]]?
 - [What energized you this week?]
 - [What drained you?]
 - [Does this affect goal priorities?]
@@ -128,7 +128,7 @@ created: 2026-06-13
 **This review feeds:**
 - [[../../Progress Dashboard|Progress Dashboard]] — Update area status
 - [[../../Core Relationships Map|Core Relationships Map]] — See how insights cascade
-- [[../../Areas/Personal Growth/Life Vision|Life Vision]] — Refined vision statement
+- [[02-PROJECTS/Personal Growth/Life Vision|Life Vision]] — Refined vision statement
 
 **Related:**
 - [[../index|Weekly Reviews Hub]]

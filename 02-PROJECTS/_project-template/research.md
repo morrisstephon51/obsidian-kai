@@ -9,8 +9,8 @@ updated:
 Notes, links, and source material relevant to this project.
 
 ## Key Sources
-- [[Resource Note]] — what it contributes
-- [[Resource Note]] — what it contributes
+- Resource Note — what it contributes
+- Resource Note — what it contributes
 
 ## Key Findings
 - 

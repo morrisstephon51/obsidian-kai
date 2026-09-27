@@ -93,7 +93,7 @@ Every goal and project flows from these values:
 **Freedom** → [[../Career/Career Goals|Career Goals]] + [[../Finance/Financial Goals|Financial Goals]]
 - Independence requires both career growth and financial stability
 
-**Competence** → [[../../Areas/Development/Skills|Development]] + [[../Education/Education Goals|Education Goals]]
+**Competence** → [[02-PROJECTS/Development/Skills|Development]] + [[../Education/Education Goals|Education Goals]]
 - Mastery requires both formal learning and practice
 
 **Truth** → All decisions
@@ -105,7 +105,7 @@ Every goal and project flows from these values:
 **Helping Others** → [[../../02-PROJECTS/The Plug AI Progress|The Plug AI]]
 - Help others, especially underserved communities
 
-**Continuous Learning** → [[../Education/Education Goals|Education Goals]] + [[../../Areas/Development/Skills|Development]]
+**Continuous Learning** → [[../Education/Education Goals|Education Goals]] + [[02-PROJECTS/Development/Skills|Development]]
 - Continuous growth in all areas
 
 ### How to Use This

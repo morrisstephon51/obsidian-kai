@@ -184,7 +184,7 @@ Open `chatroom/feed.md` for real-time output
 ## 📚 Related
 
 - [[02-PROJECTS/index|Active Projects]] — Where agent work lands
-- [[../05-MAPS/Command Center|Command Center]] — Stefan's master dashboard
+- [[09-SYSTEM/Command Center|Command Center]] — Stefan's master dashboard
 - [[../09-SYSTEM/CLAUDE.md|CLAUDE.md]] — Full agent system architecture
 - [[Agent Registry - Master Status|Agent Registry]] — Master registry & configuration
 - [[agents/index|Agents Hub]] — Detailed agent documentation

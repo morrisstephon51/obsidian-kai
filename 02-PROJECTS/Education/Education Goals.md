@@ -199,7 +199,7 @@ Weekly Progress (tracking momentum)
 - [[Financial Goals|Financial Goals]] — Increases earning potential
 
 **Skills & development:**
-- [[../../Areas/Development/Skills|Skills]] — Build while pursuing degree
+- [[02-PROJECTS/Development/Skills|Skills]] — Build while pursuing degree
 - [[../../Areas/Development/index|Development]] — Technical growth in parallel
 
 **In action:**
@@ -223,7 +223,7 @@ Weekly Progress (tracking momentum)
 - Credential enables advancement paths
 - Opens consulting/entrepreneurship opportunities
 
-**Skills Development:** [[../../Areas/Career/Competitive Advantages|Competitive Advantages]]
+**Skills Development:** [[02-PROJECTS/Career/Competitive Advantages|Competitive Advantages]]
 - Formal education complements practical skill-building
 - B.S. Computer Science supports technical depth
 - Creates foundation for competitive career positioning

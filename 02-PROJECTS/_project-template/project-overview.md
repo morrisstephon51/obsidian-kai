@@ -27,4 +27,4 @@ Why now? What does this unlock?
 - 
 
 ## Related Vault Notes
-- [[Related Note]] — why it's relevant
+- Related Note — why it's relevant

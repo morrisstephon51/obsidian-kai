@@ -131,9 +131,9 @@ Supports: Financial Goals, Competitive Advantages
 - [[../Personal Growth/Strengths|Strengths]] — Leverages your strengths
 
 **Skills built:**
-- [[../../Areas/Development/Skills|Skills]] — Technical capabilities acquired
+- [[02-PROJECTS/Development/Skills|Skills]] — Technical capabilities acquired
 - [[../../Areas/Development/index|Development Area]] — Overall development strategy
-- [[../../Areas/Career/Competitive Advantages|Competitive Advantages]] — Differentiates you
+- [[02-PROJECTS/Career/Competitive Advantages|Competitive Advantages]] — Differentiates you
 
 **In action:**
 - [[../../Areas/Career/index|Career Hub]] — Career strategy

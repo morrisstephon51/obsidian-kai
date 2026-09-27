@@ -406,13 +406,13 @@ Full inventory of every custom Claude Code subagent file at `~/.claude/agents/`.
 
 MUNDI Router's `subagents.json` auto-seeds all 233 from this directory and tags them by keyword matching — that's a heuristic pass, not verified capability testing. None of the 233 have been individually confirmed to work end-to-end; only the 7 primary agents in `registry.json` have a verified real invocation path (see [[07-AI/MUNDI System Reference|MUNDI System Reference]]).
 
-**How to apply:** when picking a subagent for a task, treat this list as a menu of *available personas*, not a roster of *battle-tested* agents. Re-run [[auditing-agents]] periodically to catch drift between this file and `~/.claude/agents/`.
+**How to apply:** when picking a subagent for a task, treat this list as a menu of *available personas*, not a roster of *battle-tested* agents. Re-run `auditing-agents` periodically to catch drift between this file and `~/.claude/agents/`.
 
 ---
 
 ## Related
 - [[09-SYSTEM/Command Center|Command Center]]
 - [[07-AI/MUNDI System Reference|MUNDI System Reference]]
-- [[auditing-agents]]
+- `auditing-agents`
 
 *Generated 2026-07-04 from `~/.claude/agents/*.md` (233 files).*
