@@ -126,12 +126,69 @@ gh pr merge 2 --repo $R --merge          # enforce CAPTION_LIMITS in code
 gh pr edit  4 --repo $R --base claude/eloquent-edison-aF7yG   # retarget off #2's branch to default
 gh pr merge 4 --repo $R --merge          # enforce topic-derived hashtags + hashtag-filter.test.ts (closes #3) — DO NOT close, unique code
 gh pr merge 6 --repo $R --merge          # validate post.platform before insert (closes #5) — brings platform-validation.test.ts
+# --- #9 CONFLICTS HERE. Resolve first (R388, verified by test-merge). ---
+git clone --branch fix/test-runner-glob-union https://github.com/$R.git /tmp/glob && cd /tmp/glob
+git merge origin/claude/eloquent-edison-aF7yG     # conflicts on package.json "test"
+#   keep OURS: "test": "ts-node scripts/run-tests.ts"
+git add package.json && git commit && git push
 gh pr merge 9 --repo $R --merge          # glob test runner scripts/run-tests.ts (auto-discovers all *.test.ts)
 gh pr close 8 --repo $R --comment "Superseded by #9: the glob runner auto-discovers platform-validation.test.ts (added by #6). #8 only hand-wired package.json, now redundant."
+gh pr merge 10 --repo $R --merge         # pipeline-wiring.test.ts — MERGE LAST, asserts #2+#4+#6 are all wired
 ```
-VERIFY after: `gh pr checkout 9` won't apply post-merge; instead confirm `scripts/run-tests.ts`
-lists `platform-validation.test.ts` in its run output once #6+#9 are on default. If #9's glob
-does NOT pick it up, re-open #8 and merge it (retarget base->default first).
+
+### R388 — the section did not merge as written, and the failure was silent
+
+`#2 -> #4 -> #6` merge clean; **`#9` then hits `CONFLICT (content): package.json`.**
+Default has no `"test"` key and #2/#4/#8/#9 each ADD it with a DIVERGENT value, so the
+**set** conflicts even though every PR reads MERGEABLE against its own base. (#4 absorbs
+#2's line cleanly only because it is stacked on #2's branch.) Contrast EFA #25/#27, which
+add *byte-identical* lines and merge silently — same class, opposite outcome.
+
+**The cascade was the real hazard.** `merge_ready` would have skipped a conflicting #9,
+but the next line closed #8 unconditionally: #9 skipped -> package.json keeps #4's
+enumerated line -> #8 closed as "superseded" -> `platform-validation.test.ts` lands on
+default **with no runner at all**, suite still green on the two files it knows about. The
+exact bug class the section exists to fix, caused by the runbook.
+
+`merge-fleet.sh` now (a) auto-resolves via `resolve_test_line_conflict` (aborts unless
+`package.json` is the only conflict; asserts the resolved value is the glob line) and
+(b) gates #8's closure on #9 reaching `MERGED`, else `[HOLD]`.
+
+> Resolver gotcha: merging the base **into** the PR branch inverts which side is "ours"
+> versus the obvious local test. The first cut kept the enumerated line. Only the
+> post-resolve assertion caught it — keep that assert.
+
+VERIFIED after resolution: `npm install && npm test` -> **4/4 files, 30/30 assertions.**
+The glob DOES discover `platform-validation.test.ts`, so #8 is genuinely redundant.
+
+### R388 — NEW PR #10: the guards are real, but none of them checks the wiring
+
+Mutation-tested all three guards per the R387 rule. All pass: each goes red when its bug
+is re-injected AND red against the default branch. **No tautology here** — every suite
+imports the real module under fix.
+
+But all three test the exported helper *in isolation*. Replacing the three call sites with
+arity/type-identical no-ops — helpers left defined, exported, byte-identical — gives a
+clean `tsc --noEmit` and:
+
+| suite | wired | **call sites unhooked** |
+|---|---|---|
+| caption-limit | 7/7 OK | 7/7 OK **blind** |
+| hashtag-filter | 9/9 OK | 9/9 OK **blind** |
+| platform-validation | 8/8 OK | 8/8 OK **blind** |
+| **pipeline-wiring (#10)** | 6/6 OK | **6/6 FAIL — catches it** |
+
+Every symptom returns (over-limit captions persisted, `#fyp` in `text_outputs`,
+`durationInFrames` dropped) and the suite reports green. Not hypothetical: **issue #3 was
+itself a wiring bug** — `topicWords` was computed in `generateContent` and never used.
+
+PR #10 drives the real entrypoints through injected fakes (stub Anthropic client;
+monkeypatched `createClient`) and asserts on output. No `package.json` change -> no
+add/add conflict; #9's glob auto-wires it. **Merge LAST.**
+
+**Generalized rule (extends R387):** mutation-testing the HELPER is necessary but not
+sufficient. Also unhook the CALL SITE — if the suite stays green, the fix is only as
+durable as the next refactor.
 
 ## 5. AI Video Reel Generator — `morrisstephon51/ai-video-reel-generator` (default `main`)
 The 5th agent repo (R376 runbook omitted it). Default branch is a normal `main` (NOT a `claude/*`
