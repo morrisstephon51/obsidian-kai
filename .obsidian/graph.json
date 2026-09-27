@@ -151,27 +151,27 @@
       "query": "Areas",
       "color": {
         "a": 1,
-        "rgb": 5395026
+        "rgb": 10789856
       }
     },
     {
       "query": "index",
       "color": {
         "a": 1,
-        "rgb": 5395026
+        "rgb": 12990777
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": -2.9,
-  "nodeSizeMultiplier": 1.07990901494754,
-  "lineSizeMultiplier": 1.59624918763346,
+  "textFadeMultiplier": -2,
+  "nodeSizeMultiplier": 1.76402041702867,
+  "lineSizeMultiplier": 3.76435708079931,
   "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.007878773184311183,
+  "scale": 0.09658457511629362,
   "close": false
 }
