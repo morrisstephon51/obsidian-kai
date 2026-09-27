@@ -106,6 +106,66 @@ close_issues() {
 [ "$DRY" -eq 1 ] && say "${c_yel}DRY RUN${c_rst} — nothing will change. Re-run with ${c_grn}--execute${c_rst} to perform the merges." \
                  || say "${c_grn}EXECUTE MODE${c_rst} — performing live merges/closes."
 
+# resolve_test_line_conflict <repo> <pr> <headBranch> <baseBranch>
+# R388: agent_I_content #9 (glob runner) add/add-conflicts with #4 on package.json's
+# "test" key once #4 lands — both write the SAME new key with DIVERGENT values, so the
+# SET conflicts even though each PR reads MERGEABLE against its own base. Verified by
+# local test-merge (R388): 2->4->6 clean, then 9 => "CONFLICT (content): package.json".
+# The resolution is always #9's glob line: it auto-discovers every *.test.ts, so the
+# enumerated line it replaces loses nothing (verified — the glob picks up all 4 files).
+# This merges default into the PR branch, keeps the glob line, and pushes, which flips
+# #9 back to MERGEABLE so the normal merge_ready call below can proceed.
+resolve_test_line_conflict() {
+  local R="$OWNER/$1" n="$2" hb="$3" bb="$4" st wd
+  st=$(ready "$R" "$n")
+  case "$st" in
+    READY) say "   ${c_dim}[skip]${c_rst} #$n is already MERGEABLE — no conflict to resolve." ; return 0 ;;
+    GONE)  say "   ${c_dim}[skip]${c_rst} #$n already merged/closed." ; return 0 ;;
+    DRAFT) say "   ${c_yel}[skip]${c_rst} #$n is a DRAFT -> owner-only." ; return 1 ;;
+  esac
+  say "   ${c_yel}#$n is $st${c_rst} — resolving the package.json \"test\" conflict to the glob runner."
+  if [ "$DRY" -eq 1 ]; then
+    printf '   %s[dry]%s git merge %s into %s, keep "test": "ts-node scripts/run-tests.ts", push\n' "$c_dim" "$c_rst" "$bb" "$hb"
+    return 0
+  fi
+  wd=$(mktemp -d) || return 1
+  (
+    set -e
+    git clone -q --branch "$hb" "https://github.com/$R.git" "$wd/repo"
+    cd "$wd/repo"
+    git fetch -q origin "$bb"
+    git merge --no-edit "origin/$bb" >/dev/null 2>&1 || true
+    # package.json must be the ONLY conflicted path; anything else is unexpected -> abort.
+    local conflicted; conflicted=$(git diff --name-only --diff-filter=U)
+    [ "$conflicted" = "package.json" ] || { echo "unexpected conflicts: $conflicted"; exit 1; }
+    python3 - <<'RESOLVE'
+import json, re
+s = open('package.json').read()
+# We are ON the PR branch merging the base IN, so HEAD ("ours") is the PR branch's
+# glob-runner line and the incoming side is #4's enumerated line. Keep OURS.
+# (Getting this backwards is silent-but-wrong, hence the assert below.)
+s = re.sub(r'<<<<<<< [^\n]*\n(.*?)=======\n.*?>>>>>>> [^\n]*\n', r'\1', s, flags=re.S)
+cfg = json.loads(s)
+assert cfg['scripts']['test'] == 'ts-node scripts/run-tests.ts', cfg['scripts']['test']
+open('package.json','w').write(s)
+RESOLVE
+    git add package.json
+    git -c user.name=codex -c user.email=noreply@github.com commit -q -m "merge $bb: keep the glob test runner
+
+#4 and this branch both add package.json's \"test\" key with different values.
+Resolved to the glob runner — it auto-discovers every *.test.ts, so the
+enumerated line it replaces drops no tests."
+    git push -q origin "$hb"
+  )
+  local rc=$?
+  rm -rf "$wd"
+  if [ $rc -ne 0 ]; then
+    say "   ${c_red}[FAILED]${c_rst} could not auto-resolve #$n — resolve package.json by hand, then re-run."
+    SKIPPED=$((SKIPPED+1))
+  fi
+  return $rc
+}
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. JobScout  (default claude/clever-cannon-IDh3G)
 #    #61 keystone (salary/cadence regex families) — NO closing keyword -> hand-close.
@@ -174,9 +234,19 @@ if want content; then head "4. Content Pipeline — agent_I_content"
   retarget    agent_I_content 4 "claude/eloquent-edison-aF7yG"
   merge_ready agent_I_content 4 "enforce topic-derived hashtags + hashtag-filter.test.ts (closes #3)"
   merge_ready agent_I_content 6 "validate post.platform before insert (closes #5) — brings platform-validation.test.ts"
+  resolve_test_line_conflict agent_I_content 9 "fix/test-runner-glob-union" "claude/eloquent-edison-aF7yG"
   merge_ready agent_I_content 9 "glob test runner scripts/run-tests.ts (auto-discovers all *.test.ts)"
-  close_pr    agent_I_content 8 "Superseded by #9: the glob runner auto-discovers platform-validation.test.ts (added by #6). #8 only hand-wired package.json, now redundant."
-  say "   ${c_yel}verify after:${c_rst} confirm scripts/run-tests.ts lists platform-validation.test.ts once #6+#9 are on default; if not, reopen+retarget+merge #8."
+  # #8 hand-wires platform-validation.test.ts into package.json. It is ONLY redundant if
+  # #9's glob actually landed — closing it blind after a skipped #9 would leave that test
+  # with no runner at all, which is the exact bug class this section exists to fix.
+  if [ "$(gh pr view 9 -R "$OWNER/agent_I_content" --json state --jq .state 2>/dev/null)" = "MERGED" ] || [ "$DRY" -eq 1 ]; then
+    close_pr  agent_I_content 8 "Superseded by #9: the glob runner auto-discovers platform-validation.test.ts (added by #6). #8 only hand-wired package.json, now redundant."
+  else
+    say "   ${c_red}[HOLD]${c_rst} #9 did not merge -> keeping #8 OPEN (it is the only runner wiring for platform-validation.test.ts)."
+    SKIPPED=$((SKIPPED+1))
+  fi
+  merge_ready agent_I_content 10 "pipeline-wiring.test.ts — assert the 3 sanitizers are on the code path (MERGE LAST: asserts #2+#4+#6 are all present)"
+  say "   ${c_yel}verify after:${c_rst} npm install && npm test on default -> expect 4/4 test files, 30/30 assertions."
 fi
 
 # ─────────────────────────────────────────────────────────────────────────────
