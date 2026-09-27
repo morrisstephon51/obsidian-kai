@@ -1,4 +1,4 @@
-# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380, Section-6 draft-state corrected R382 2026-09-25)
+# Fleet Merge Runbook — 2026-09-24 (codex R376, amended R377, extended R378, re-verified R379, auto-close-audited R380, Section-6 draft-state corrected R382 2026-09-25, JobScout #69 added R390 2026-09-27)
 
 **Supersedes:** MERGE-RUNBOOK-2026-09-15.md (9 days stale; predates JobScout #62-#67, Community #39/#40, content #8/#9).
 
@@ -59,7 +59,7 @@ sole bottleneck.** This runbook is copy-paste executable; every PR below is MERG
 ---
 
 ## 1. JobScout — `morrisstephon51/job_opportunity_scanner` (default `claude/clever-cannon-IDh3G`)
-6 open PRs, all on default, all MERGEABLE. #61 is the scorer keystone (closes cadence issue
+**7** open PRs (R390 added #69), all on default, all MERGEABLE. #61 is the scorer keystone (closes cadence issue
 cluster #30-#59). #61 and #63 both edit `scorer.py` — merge #61 first; if #63 then flips to
 CONFLICTING, author rebases #63 on new default before merging.
 
@@ -71,6 +71,7 @@ gh pr merge 25 --repo $R --merge   # salary-range placeholder-0 / shared-k fix
 gh pr merge 27 --repo $R --merge   # recency: "X years ago" past MAX_DAYS_OLD (closes #26)
 gh pr merge 65 --repo $R --merge   # AGENCY_BLOCKLIST "TEKsystems" one-word match (closes #64)
 gh pr merge 67 --repo $R --merge   # sync /scan prompt to scorer/config, restore `trainer` (closes #66)
+gh pr merge 69 --repo $R --merge   # /scan issues one query per config.SEARCH_KEYWORDS (closes #68)  [R390; scan.md hunks disjoint from #67 — test-merged both orders, 16/16 test files exit 0]
 # #61 carries no "Closes #NN" refs, so hand-close the 15 cadence/salary issues it supersedes:
 for n in 30 32 34 36 38 41 43 45 47 49 51 53 55 57 59; do \
   gh issue close $n --repo $R --comment "Fixed by #61 (anchored salary/cadence regex families; superset-proven in a fresh Python 3.14 clone). #61 lacked a closing keyword, closing manually."; done
@@ -251,7 +252,7 @@ Stef files; nothing here is a merge.
 ---
 
 ## Net effect
-- **JobScout:** 6 merges + hand-close 15 cadence issues (#61 has no closing keyword) -> all 19 open issues resolved.
+- **JobScout:** **7** merges + hand-close 15 cadence issues (#61 has no closing keyword) -> all **20** open issues resolved. (R390: #69 added, auto-closes #68 via a body keyword — no extra hand-close.)
 - **Community:** 2 merges + 12 PR-closes + hand-close 12 issues (#38 has no closing keyword) -> all 13 open issues resolved (10 no-op traps sidestepped).
 - **EFA:** 5 merges -> #28 + GA4/CSV fixes; #30/#24 remain owner-only.
 - **Content:** 4 merges + 1 close -> all 3 open issues resolved.
@@ -532,3 +533,128 @@ spuriously HOLD. Behaviour changes in scenario B only.
   and content #7←#9 were the two that looked unaccounted for; both are covered). Zero new fix PRs
   warranted. Live sweep: 41 open PRs across the 9 active repos, 0 unmergeable, 5 drafts — of which
   only 4 are draft-*skips*, because Link-inbio #6 is a draft being **closed** as stale, not merged.
+  **SUPERSEDED R390:** "zero new fix PRs warranted" was true only of *filed issues*. It did not
+  survive an audit of the still-unhardened **sites** inside an already-fixed file — see the R390
+  addendum. 42 open PRs / 20 JobScout issues now.
+
+
+---
+
+## R390 addendum (2026-09-27) — "issue-covered" is not "class-covered"
+
+R389 closed with *"every open issue fleetwide has a covering MERGEABLE PR → zero new fix PRs
+warranted."* That was a correct statement about the **issue list** and a wrong one about the
+**code**. Applying R389's own rule (*audit the bug class, not the site where you found it*) to a
+file a merged-and-pending PR had already "fixed" produced a new, real bug.
+
+### The finding — JobScout issue #68 / PR #69
+
+`config.SEARCH_KEYWORDS` has two consumers, and only one of them reads it:
+
+| consumer | reads the tuple? | what it does |
+|---|---|---|
+| `scorer._keyword_score()` | yes (unit-tested) | credits all 8 terms on the 30%-weighted keyword dimension |
+| `.claude/commands/scan.md` | **no — hardcoded its own lists** | the **only** thing that actually issues searches |
+
+There is no Python search driver in the repo (`config.py`, `scorer.py`, `reporter.py` only);
+discovery happens entirely through the ZipRecruiter/Indeed MCP calls the `/scan` prompt makes.
+So **a keyword added to `config.py` began contributing to a job's *score* while never causing that
+job to be *found*** — and `CLAUDE.md` advertises `SEARCH_KEYWORDS` as the knob for "job keywords to
+search," making the documented knob inert on the documented run path.
+
+Measured on the default branch: Step 1 listed 6 queries, Step 2 listed 3 mashed combinations.
+
+| configured keyword | issued verbatim by the prompt? |
+|---|---|
+| `EdTech coordinator` | **no — absent from the prompt entirely** |
+| `learning experience designer` | **no — absent from the prompt entirely** |
+| `training specialist` | no — sent as `"training specialist EdTech"` (AND-narrowed) |
+| `digital learning` | no — sent as `"digital learning coordinator"` (AND-narrowed) |
+| other 4 | yes |
+
+**4 of 8.** "Learning Experience Designer" is a standard industry title — a whole role family was
+invisible to the scanner. Step 2's `search: "AI educator instructional designer"` ANDs two terms
+and loses every posting matching only one.
+
+### Why #67 did not already cover it
+
+#66/#67 are the same *class* ("the `/scan` prompt re-implements pipeline logic and has drifted").
+#67 reconciled the two **scoring** surfaces — the Step 3 filter summary and the Step 4 criteria
+table, where it correctly restored *all* of `trainer`/`community`/`developer` — and added
+"the code wins" notes to both. It never touched the Step 1 / Step 2 **query** surface.
+
+That was the worse of the two sites: **a scoring drift mis-ranks a posting that was fetched; a
+query drift means the posting is never fetched, and no correct scoring downstream can recover it.**
+
+### Verification — mutation-tested, not asserted
+
+`tests/test_scan_prompt_keyword_parity.py` parses `scan.md` and asserts the structural invariant,
+not the one instance (every configured keyword is a standalone Step 1 query; no Step 1 query is an
+unconfigured mutation; no query line concatenates two keywords; Step 2 names the config tuple).
+
+| scenario | result |
+|---|---|
+| default-branch `scan.md` + the new guard | **0/5 pass** — all five assertions red |
+| PR #69 branch | 5/5 pass |
+| add a keyword to `config.py` only (the real drift direction) | **2 assertions red** |
+| delete one keyword from `scan.md` only | **2 assertions red** |
+| full existing suite on #69 (11 files) | all green |
+
+Guard fails on shipped code and catches a future edit to **either** side — not tautological in
+either direction. No CI in this repo; pytest auto-discovers `tests/`, and the file also runs
+standalone (`python tests/test_scan_prompt_keyword_parity.py`), so there is no runner to wire.
+
+### Merge safety — test-merged live, both orders
+
+`scan.md` is edited by both #67 (Steps 3–4) and #69 (Steps 1–2). Against `origin` heads of all six
+other open JobScout PRs (#25, #27, #61, #63, #65, #67):
+
+- siblings → #69: 7/7 merges clean, `scan.md` **auto-merged**, **16/16 test files exit 0**
+- #69 → siblings: 7/7 merges clean, `scan.md` **auto-merged**, **16/16 test files exit 0**
+- #67 + #69 alone: merged `scan.md` keeps **both** fixes — #67's completed title row and both
+  "code wins" notes, plus all 8 standalone queries and no leftover mutation
+
+**#69 is order-independent — no ordering change to this runbook or `merge-fleet.sh`.**
+
+### Known residual, deliberately NOT shipped
+
+`scan.md:49` still lists the agency token `tek systems` (spaced). **#65 corrects `config.py` to the
+real one-word brand `teksystems`, so once #65 lands the prompt's inline copy is stale again.**
+#67's "the code wins" note above that line mitigates it in prose, but the wrong literal is still
+shown to the model. The fix sits *inside #67's hunk*, so shipping it would have manufactured a
+conflict with a pending PR. **Post-merge apply-me** (one line, after #65 and #67 are both in):
+
+```
+# in .claude/commands/scan.md Step 3, change the blocklist token:  tek systems -> teksystems
+# then extend tests/test_scan_prompt_keyword_parity.py's _LISTS to cover
+# AGENCY_BLOCKLIST and TITLE_SIGNALS too (both are order-dependent until #65/#67 land)
+```
+
+### Rules this run adds
+
+1. **"Every issue has a covering PR" is not "every bug is fixed."** The issue list only contains
+   bugs someone already noticed. A file that a pending PR has "fixed" can still hold un-hardened
+   sites of the very class that PR was opened for — audit the *file*, not the issue.
+2. **When a PR hardens N of M copies of a duplicated list, enumerate M.** #67 did the two scoring
+   copies perfectly and the query copy not at all. Count the copies before calling the class closed.
+3. **Prefer the un-hardened site that kills discovery over the one that kills ranking.** Ranking
+   errors are recoverable downstream; a query never sent has no downstream.
+4. **Scope a new drift guard to the lists no pending PR is touching.** Asserting `TITLE_SIGNALS`
+   parity today would have made #69's result depend on whether #67 merged first. Order-dependent
+   guards turn a green suite red on the default branch for reasons unrelated to the change.
+5. **`zsh` does not word-split unquoted `$VAR`.** A `for b in $SIBS` test-merge loop silently
+   merged *nothing* (one branch named by all six concatenated) and still printed "ALL GREEN" —
+   a false all-clear from the harness, not the code. Same family as R383's capital-`True` guard:
+   verify a merge loop by **exit code and merge count**, and write multi-item loops in `bash`
+   with a real array.
+6. **`git checkout <path>` mid-mutation-test destroys the fix you are testing.** Restoring one
+   mutated file also reverted the uncommitted change under test, and the next full-suite run
+   reported the new guard 0/5 — looking like a broken guard rather than a lost edit. **Commit
+   before mutation-testing**, then restore with `git checkout` freely.
+
+### Net effect on the owner's plan: **24 merges** (was 23) / 14 PR-closes / 1 retarget /
+### 27 issue-closes / 4 draft-skips — dry-run verified after the edit (`bash -n` clean).
+Only JobScout's merge count changes (6 → 7). Issue-closes stay 27 because #69 auto-closes #68 via
+a body keyword. Nothing else in this runbook moves.
+
+*R390 by codex, 2026-09-27. One new issue (#68) + one new PR (#69), both live. No merges executed.*
