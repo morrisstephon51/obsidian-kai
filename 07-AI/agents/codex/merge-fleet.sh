@@ -89,7 +89,9 @@ close_pr() {
 
 # retarget <repo> <pr> <base>
 retarget() {
-  local R="$OWNER/$1" n="$2" base="$3"
+  local R="$OWNER/$1" n="$2" base="$3" st
+  st=$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+  if [ "$st" != "OPEN" ]; then say "   ${c_dim}[skip]${c_rst} PR #$n is $st -> nothing to retarget."; return 0; fi
   run "gh pr edit $n --repo $R --base $base"; RETARGETED=$((RETARGETED+1))
 }
 
@@ -101,6 +103,58 @@ close_issues() {
     if [ "$st" = "OPEN" ]; then run "gh issue close $n --repo $R --comment \"$cmt\""; ISSUES_CLOSED=$((ISSUES_CLOSED+1));
     else say "   ${c_dim}[skip]${c_rst} issue #$n already $st."; fi
   done
+}
+
+# require_merged <repo> <pr> <what-depends-on-it>   -> 0 = proceed, 1 = HOLD
+# R389: EVERY "fixed by X" / "superseded by X" follow-up must be GATED on X actually
+# landing. R388 found this on agent_I_content #9/#8 and patched that ONE site inline;
+# the audit it asked for found the same class at 39x the scale -- JobScout's 15 hand-closes
+# and Community's 12 PR-closes + 12 issue-closes were ALL unconditional, so a keystone that
+# merge_ready turned into a [skip] left 39 actions marking work DONE with no covering code
+# on default. Harness-proven: with #61 and #38 forced UNMERGEABLE the unpatched script
+# merged 21/23 and still fired all 39.
+# In EXECUTE mode the gate is the real thing: state must be MERGED.
+# In DRY mode there is no merge to observe, so it PREDICTS from live mergeability rather
+# than assuming success -- otherwise the dry run would promise 27 issue-closes that the
+# execute run would correctly refuse.
+require_merged() {
+  local R="$OWNER/$1" n="$2" what="$3" st why
+  if [ "$DRY" -eq 1 ]; then
+    st=$(ready "$R" "$n")
+    [ "$st" = "READY" ] && return 0
+    if [ "$st" = "GONE" ]; then
+      [ "$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo '?')" = "MERGED" ] && return 0
+      why="is already closed WITHOUT merging"
+    else
+      why="will not merge ($st)"
+    fi
+  else
+    st=$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+    [ "$st" = "MERGED" ] && return 0
+    why="did not merge (state=$st)"
+  fi
+  say "   ${c_red}[HOLD]${c_rst} #$n $why -> SKIPPING $what."
+  say "   ${c_dim}         ${c_rst} Doing it anyway would mark that work DONE with no covering code on default."
+  SKIPPED=$((SKIPPED+1))
+  return 1
+}
+
+# warn_unless_merged <repo> <pr> <consequence>
+# For a dependency where holding the follow-up would be WORSE than proceeding: EFA #29
+# carries the real code fix for #28 and auto-closes it via a closing keyword, so blocking
+# #29 because its guard (#32) skipped would withhold a correct fix. Warn loudly instead.
+warn_unless_merged() {
+  local R="$OWNER/$1" n="$2" consequence="$3" st
+  # NB: written as if/else on purpose. `A && { ...; } || { ...; }` also runs the ||
+  # branch whenever the && body merely returns false, which is not the intent here.
+  if [ "$DRY" -eq 1 ]; then
+    st=$(ready "$R" "$n")
+    [ "$st" = "READY" ] && return 0
+  else
+    st=$(gh pr view "$n" -R "$R" --json state --jq '.state' 2>/dev/null || echo GONE)
+    [ "$st" = "MERGED" ] && return 0
+  fi
+  say "   ${c_yel}[WARN]${c_rst} #$n did not land -> $consequence"
 }
 
 [ "$DRY" -eq 1 ] && say "${c_yel}DRY RUN${c_rst} — nothing will change. Re-run with ${c_grn}--execute${c_rst} to perform the merges." \
@@ -177,9 +231,12 @@ if want jobscout; then head "1. JobScout — job_opportunity_scanner"
   merge_ready job_opportunity_scanner 27 "recency: 'X years ago' past MAX_DAYS_OLD (closes #26)"
   merge_ready job_opportunity_scanner 65 "AGENCY_BLOCKLIST 'TEKsystems' one-word match (closes #64)"
   merge_ready job_opportunity_scanner 67 "sync /scan prompt to scorer/config, restore 'trainer' (closes #66)"
-  close_issues job_opportunity_scanner \
-    "Fixed by #61 (anchored salary/cadence regex families; superset-proven in a fresh Python 3.14 clone). #61 lacked a closing keyword, closing manually." \
-    30 32 34 36 38 41 43 45 47 49 51 53 55 57 59
+  # GATED (R389): these 15 issues are closed as "Fixed by #61" -- only true if #61 landed.
+  if require_merged job_opportunity_scanner 61 "the 15 hand-closes for issues #30-#59"; then
+    close_issues job_opportunity_scanner \
+      "Fixed by #61 (anchored salary/cadence regex families; superset-proven in a fresh Python 3.14 clone). #61 lacked a closing keyword, closing manually." \
+      30 32 34 36 38 41 43 45 47 49 51 53 55 57 59
+  fi
 fi
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -193,12 +250,17 @@ if want community; then head "2. Community Intake — -Community_intake_Routing"
   # INVERTED to accommodate its token deletion. #38 keeps #3 AND fixes #22 (seek-vs-offer logic).
   # #25/#27/#29/#31/#33/#37 are stacked on #23 and inherit the inverted line. NEVER merge #23:
   # it routes genuine volunteers ("I want to mentor first-gen students") to the learner default.
-  for n in 15 17 19 21 23 25 27 29 31 33 35 37; do
-    close_pr -Community_intake_Routing "$n" "Superseded by #38 (superset re-proven 2026-09-26 by running this branch's own suite against #38; see the evidence comment on #38). Closing to avoid a non-default-base no-op."
-  done
-  close_issues -Community_intake_Routing \
-    "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests). #38 lacked a closing keyword, closing manually." \
-    14 16 18 20 22 24 26 28 30 32 34 36
+  # GATED (R389): the highest-stakes dependency in the whole script. These 12 PRs are the
+  # ONLY other fixes for these 12 issues -- closing them as "superseded" while #38 is absent
+  # erases the entire fix surface for this repo and leaves 12 issues closed as fixed.
+  if require_merged -Community_intake_Routing 38 "the 12 sibling PR-closes AND the 12 issue hand-closes"; then
+    for n in 15 17 19 21 23 25 27 29 31 33 35 37; do
+      close_pr -Community_intake_Routing "$n" "Superseded by #38 (superset re-proven 2026-09-26 by running this branch's own suite against #38; see the evidence comment on #38). Closing to avoid a non-default-base no-op."
+    done
+    close_issues -Community_intake_Routing \
+      "Fixed by #38 (intent-based classifier; proven behavioral superset of the #14-#36 tower, 94/94 tests). #38 lacked a closing keyword, closing manually." \
+      14 16 18 20 22 24 26 28 30 32 34 36
+  fi
   merge_ready -Community_intake_Routing 40 "web /api/intake email-routing parity (closes #39) — independent of classify"
 fi
 
@@ -217,6 +279,7 @@ if want efa; then head "3. Enrollment Funnel — Enrollment_Funnel_Agent"
   # default branch and PASSES with the #28 drift re-injected as 1/99/99/99 in
   # fetchRollingEngagement. #32's structural guard fails on both. #29's CODE FIX is correct.
   merge_ready Enrollment_Funnel_Agent 32 "real #28 drift guard -> merges INTO #29's branch; run BEFORE #29"
+  warn_unless_merged Enrollment_Funnel_Agent 32 "merging #29 below will auto-close issue #28 via its closing keyword, leaving ONLY #29's tautological engagement-parity.test.ts as the guard (it passes with the #28 drift re-injected). #29's code fix is correct, so it still merges -- but reopen #28 or rebase #32 afterwards."
   merge_ready Enrollment_Funnel_Agent 29 "unify weekly engagement weights, one formula (closes #28)"
   merge_ready Enrollment_Funnel_Agent 31 "surface empty engagement baseline vs false all-clear (refs #30) [guarded vs #29]"
   say "   ${c_dim}note:${c_rst} issue #30 (upsertPerformance persistence) + #24 (retire stale main) are OWNER-ONLY."
@@ -239,11 +302,10 @@ if want content; then head "4. Content Pipeline — agent_I_content"
   # #8 hand-wires platform-validation.test.ts into package.json. It is ONLY redundant if
   # #9's glob actually landed — closing it blind after a skipped #9 would leave that test
   # with no runner at all, which is the exact bug class this section exists to fix.
-  if [ "$(gh pr view 9 -R "$OWNER/agent_I_content" --json state --jq .state 2>/dev/null)" = "MERGED" ] || [ "$DRY" -eq 1 ]; then
+  # R388 gated this inline; R389 folds it into the shared require_merged helper so the
+  # dry run also predicts the HOLD instead of assuming #9 lands.
+  if require_merged agent_I_content 9 "closing #8 (the only runner wiring for platform-validation.test.ts)"; then
     close_pr  agent_I_content 8 "Superseded by #9: the glob runner auto-discovers platform-validation.test.ts (added by #6). #8 only hand-wired package.json, now redundant."
-  else
-    say "   ${c_red}[HOLD]${c_rst} #9 did not merge -> keeping #8 OPEN (it is the only runner wiring for platform-validation.test.ts)."
-    SKIPPED=$((SKIPPED+1))
   fi
   merge_ready agent_I_content 10 "pipeline-wiring.test.ts — assert the 3 sanitizers are on the code path (MERGE LAST: asserts #2+#4+#6 are all present)"
   say "   ${c_yel}verify after:${c_rst} npm install && npm test on default -> expect 4/4 test files, 30/30 assertions."
