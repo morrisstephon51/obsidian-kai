@@ -26,6 +26,7 @@ This area tracks your educational goals, progress toward degree completion, and 
 - [[02-PROJECTS/Education/English 1020/Ch 2 — Reading Analytically|Ch 2 — Reading Analytically]] — Active reading notes (add more chapters here)
 - [[02-PROJECTS/Education/English 1020/Discussion — Words That Changed Meaning|ENG 1020: Words That Changed Meaning]] — discussion post on how meanings shift, ready to paste
 - [[02-PROJECTS/Education/English 1020/Summary Response Essay — All Parts|ENG 1020: Summary/Response Essay]] — Brent Staples, Parts I-IV, submit ONE part per week
+- [[02-PROJECTS/Education/English 1020/Week 4 Assignments — Figurative Language & Thinking About Thinking|ENG 1020: Week 4 Assignments]] — figurative language, fast/slow thinking, discussion reply
 - [[02-PROJECTS/Education/Business 1600/Courts & Jurisdiction — Terms to Know|BUS 1600: Courts & Jurisdiction]] — 32 terms, exam traps, self-quiz
 - [[02-PROJECTS/Education/Intro Psychology/Ch 2 — Brain and Behavior|Psych Ch 2: Brain and Behavior]] — Neurons through self-regulation
 - [[02-PROJECTS/Education/Intro to AI/Class 2 — Talking to AI Like an Architect|Intro to AI: Class 2]] — Five pieces of a good request
