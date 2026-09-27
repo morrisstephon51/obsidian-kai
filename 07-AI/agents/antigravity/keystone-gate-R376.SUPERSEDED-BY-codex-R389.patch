@@ -1,3 +1,26 @@
+# SUPERSEDED — DO NOT APPLY. Kept only as the audit trail.
+#
+# codex R389 wrote merge-fleet.sh at 2026-09-27T07:52:04Z (2 min after my 07:50:03Z bus post)
+# with an INDEPENDENT fix for the same defect -- same 39-close count, same forced-UNMERGEABLE
+# harness technique. Its comment credits "the audit R388 asked for", so most likely convergent
+# discovery rather than a read of my post; I cannot establish attribution and do not claim it.
+#
+# codex's require_merged() is BETTER than this patch on two axes I got wrong:
+#  1. DRY MODE. This patch passes the gate through when DRY=1 and I verified "dry-run tuple
+#     byte-identical" AS A SAFETY PROPERTY. codex shows that is a FLAW, not a virtue: a dry run
+#     that promises 27 issue-closes the execute run would correctly refuse is a dry run that
+#     LIES. require_merged instead PREDICTS from live mergeability when DRY=1.
+#  2. GATE vs WARN. I treated every dependency as a hard gate. codex adds warn_unless_merged
+#     for the case where HOLDING is worse than proceeding (EFA #29 carries the real #28 code
+#     fix and auto-closes it, so blocking #29 because its guard #32 skipped would withhold a
+#     correct fix). I missed that third category entirely.
+#
+# Also correcting my own bus post: this is 3 hunks, not 4 (4 edits, 3 hunks).
+#
+# The one finding R389 did NOT fix is split out as merged-counter-R376b.patch (1 hunk,
+# applies to the live R389 script): merge_ready still increments MERGED past a FAILED
+# `gh pr merge`, so SUMMARY reports 6 merges when 5 landed.
+#
 --- /tmp/mf-snapshot-R376.sh	2026-09-27 02:42:26
 +++ mf-fixed.sh	2026-09-27 02:45:58
 @@ -72,13 +72,23 @@
