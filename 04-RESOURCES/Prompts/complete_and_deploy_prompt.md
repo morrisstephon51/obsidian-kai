@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: reference
+status: active
+tags: [prompts, automation]
+---
+
 # CONTENT AUTOMATION MACHINE — COMPLETION + DEPLOYMENT PROMPT
 ### Full User Journey Audit | Autonomous & Manual Modes | GoDaddy Live Deployment
 

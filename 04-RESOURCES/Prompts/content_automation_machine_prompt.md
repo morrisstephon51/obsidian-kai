@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: reference
+status: active
+tags: [prompts, automation]
+---
+
 # CONTENT AUTOMATION MACHINE — CLAUDE CODE MASTER PROMPT
 ### Zero New Subscriptions Edition | Video-First | Everything In-App
 

@@ -85,7 +85,7 @@ Monthly: Update [[Progress Dashboard|Progress Dashboard]]
 
 ## 📅 Recent Reviews
 
-[Links to recent weekly reviews will appear here]
+- [[2026-07-17]] — Daily ops: PlugAI PR #1 shipped, resume created, vault auto-sync enabled
 
 ---
 

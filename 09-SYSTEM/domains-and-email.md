@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: reference
+status: active
+tags: [system, domains, email]
+---
+
 # Domains & Email — Stephon Morris
 
 ## Primary Email Account

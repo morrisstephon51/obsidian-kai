@@ -247,22 +247,27 @@ However:
 
 ### Phase 1: Fix Broken Links (1-2 hours)
 
-- [ ] Fix `[[00 Home.md]]` → `[[05-MAPS/00 Home.md]]`
-- [ ] Fix `[[me.md]]` references
-- [ ] Fix all `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]` replacements
-- [ ] Fix `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]`
-- [ ] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
-- [ ] Fix Archive/ paths
-- [ ] Fix relative path depths (../../../../ corrections)
+- [x] Fix `[[00 Home.md]]` → `[[05-MAPS/00 Home.md]]`
+- [x] Fix `[[me.md]]` references
+- [x] Fix all `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]` replacements
+- [x] Fix `[[02-PROJECTS/...]]` → `[[02-PROJECTS/...]]`
+- [x] Fix `[[04-RESOURCES/...]]` → `[[04-RESOURCES/...]]`
+- [x] Fix Archive/ paths
+- [x] Fix relative path depths (../../../../ corrections)
+  - (done 2026-07-23: per completion note in "Test all links" item below; verified 2026-10-12 link-check shows 0 broken wikilinks)
 - [x] Test all links in Home and Core Relationships Map
   - (done 2026-09-15: verified by automated link-check — every `[[wikilink]]` in `00 Home.md` and `Core Relationships Map.md` resolves to an existing file; the only unresolved token, `[[Core Foundation]]`, sits inside a fenced ASCII diagram, not a live link. Verified by link-check, not manually in the Obsidian app. Original Phase 1 fixes were completed 2026-07-23 — see [[Vault Repair - Completion Report 2026-07-23]].)
 
 ### Phase 2: Add Frontmatter (2-3 hours)
 
-- [ ] Add frontmatter to 34 files in 03-NOTES/ directory
-- [ ] Add frontmatter to 3 files in 01-DAILY/
+- [x] Add frontmatter to 34 files in 03-NOTES/ directory
+  - (done 2026-10-12: 33 of 34 had frontmatter already; added to Personal Knowledge Base.md — the last remaining file)
+- [x] Add frontmatter to 3 files in 01-DAILY/
+  - (done 2026-10-12: verified all non-template 01-DAILY/ .md files have frontmatter)
 - [ ] Add frontmatter to 2 files in 08-ARCHIVE/
-- [ ] Add frontmatter to system and resource files
+  - Needs Stefan: won't touch 08-ARCHIVE per vault maintenance safety rails
+- [x] Add frontmatter to system and resource files
+  - (done 2026-10-12: added frontmatter to 09-SYSTEM/domains-and-email.md, 09-SYSTEM/workflows.md, 04-RESOURCES/Prompts/content_automation_machine_prompt.md, 04-RESOURCES/Prompts/complete_and_deploy_prompt.md)
 
 **Use template:**
 ```yaml
@@ -277,22 +282,33 @@ tags: []
 ### Phase 3: Clarify 03-NOTES Structure (1-2 hours)
 
 - [ ] Audit 03-NOTES vs. 02-PROJECTS for duplicates
+  - Needs Stefan: requires judgment call on which files to merge/keep
 - [ ] Move or consolidate duplicate files
+  - Needs Stefan: depends on audit above; too risky to guess
 - [ ] Update cross-links between directories
+  - Needs Stefan: depends on restructuring decisions above
 - [ ] Document the purpose of 03-NOTES (research vs. reference?)
+  - Needs Stefan: subjective architectural decision
 
 ### Phase 4: Organize 07-AI (1 hour)
 
-- [ ] Create 07-AI/index.md with directory map
+- [x] Create 07-AI/index.md with directory map
+  - (done 2026-10-12: 07-AI/index.md already exists with full directory map)
 - [ ] Add frontmatter to all generated content files
+  - Needs Stefan: 07-AI/agents/ has 329 .md files; bulk frontmatter add needs scoping decision on which are "generated content" vs. state files
 - [ ] Link agent state files to central registry
+  - Needs Stefan: unclear which files are "inactive" vs. in use
 - [ ] Archive or document inactive agent experiments
+  - Needs Stefan: requires knowing which experiments are inactive
 
 ### Phase 5: Review Orphaned Notes (30 min)
 
 - [ ] Decide what to do with June daily notes
-- [ ] Link July 17 note if active
-- [ ] Confirm templates are marked as such
+  - Needs Stefan: subjective — keep, archive, or delete is your call (check 01-DAILY/archived/)
+- [x] Link July 17 note if active
+  - (done 2026-10-12: added [[2026-07-17]] to 01-DAILY/index.md Recent Reviews section; note has real content and tasks)
+- [x] Confirm templates are marked as such
+  - (done 2026-10-12: verified — TEMPLATE-Weekly-Review.md is prefixed; 09-SYSTEM/templates/ dir is properly segregated; _project-template/ has frontmatter)
 
 ---
 

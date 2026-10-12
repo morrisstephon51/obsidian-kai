@@ -1,3 +1,10 @@
+---
+created: 2026-07-23
+type: reference
+status: active
+tags: [system, workflows]
+---
+
 # Vault Workflows
 
 12 repeatable prompts and processes. Copy the prompt, adjust the context, run it.
