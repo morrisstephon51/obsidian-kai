@@ -4,7 +4,7 @@ project: Forming Paws
 tags:
   - forming-paws
   - content
-updated: 2026-10-12
+updated: 2026-11-02
 ---
 
 # 🐾 Forming Paws — Content Index
@@ -26,6 +26,9 @@ Weekly promo reels and outreach emails. Each file contains the reel script, capt
 | 2026-09-28 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-09-28\|Week of Sep 28]] | In production |
 | 2026-10-05 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-10-05\|Week of Oct 5]] | In production |
 | 2026-10-12 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-10-12\|Week of Oct 12]] | In production |
+| 2026-10-19 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-10-19\|Week of Oct 19]] | In production |
+| 2026-10-26 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-10-26\|Week of Oct 26]] | In production |
+| 2026-11-02 | [[02-PROJECTS/Forming Paws/Content/promo-reel-2026-11-02\|Week of Nov 2]] | In production |
 
 ---
 
