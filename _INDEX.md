@@ -1,12 +1,12 @@
 ---
 created: 2026-07-23
-updated: 2026-11-09
+updated: 2026-11-16
 type: note
 status: active
 tags: []
 ---
 
-# Vault index — built 2026-11-09
+# Vault index — built 2026-11-16
 <!-- FOR AI AGENTS: read this file first, then open only the note you need. Check freshness: node _ops/build-index.mjs --check. Rebuild: node _ops/build-index.mjs. Format: path — gist (modified). Generated folders are collapsed to one line. -->
 
 ## 01-DAILY/
@@ -57,7 +57,7 @@ tags: []
 - 02-PROJECTS/Forming Paws/Admin Console — Build Log.md (2026-11-09)
 - 02-PROJECTS/Forming Paws/Business Plan - Grant Applications.md — Business Plan - Forming Paws (For-Profit) (2026-11-09)
 - 02-PROJECTS/Forming Paws/Chicago Outreach Kit.md — vet targets, breed groups, outreach scripts (2026-11-09)
-- 02-PROJECTS/Forming Paws/Content/index.md — 🐾 Forming Paws — Content Index (2026-11-09)
+- 02-PROJECTS/Forming Paws/Content/index.md — 🐾 Forming Paws — Content Index (2026-11-16)
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-08-17.md — Weekly Promo Reel + Email — 2026-08-17 (2026-11-09)
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-08-24.md — Weekly Promo Reel + Email — 2026-08-24 (2026-11-09)
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-08-31.md — Weekly promo reel and email, 2026-08-31 (2026-11-09)
@@ -71,6 +71,7 @@ tags: []
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-10-26.md — Weekly promo reel and email, 2026-10-26 (2026-11-09)
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-11-02.md — Weekly promo reel and email, 2026-11-02 (2026-11-09)
 - 02-PROJECTS/Forming Paws/Content/promo-reel-2026-11-09.md — Weekly promo reel and email, 2026-11-09 (2026-11-09)
+- 02-PROJECTS/Forming Paws/Content/promo-reel-2026-11-16.md — Weekly promo reel and email, 2026-11-16 (2026-11-16)
 - 02-PROJECTS/Forming Paws/Design Handoff — Brand System.md — tokens, rules, applied state; for the main-branch session (2026-11-09)
 - 02-PROJECTS/Forming Paws/Design System.md — Forming Paws — Design System (2026-11-09)
 - 02-PROJECTS/Forming Paws/Domain Setup — theplugai.xyz.md — domain LIVE; only HTTPS-enforce click remains (2026-11-09)
